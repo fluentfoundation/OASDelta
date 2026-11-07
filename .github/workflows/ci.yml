@@ -54,7 +54,7 @@ jobs:
 
       - name: Golden comparisons (NativeAOT binary)
         shell: bash
-        run: tools/check_golden.sh out/${{ matrix.exe }}
+        run: bash tools/check_golden.sh out/${{ matrix.exe }}
 
       - name: Upload test results
         if: always()

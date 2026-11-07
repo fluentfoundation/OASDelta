@@ -1,0 +1,168 @@
+name: Release
+
+# Push a tag like v1.2.0 (or v1.2.0-rc.1 for a pre-release) to build NativeAOT binaries for every platform, check each
+# against the golden outputs, and publish them as a GitHub Release with checksums and build-provenance attestations.
+#
+# Pull requests that touch the release pipeline, and manual runs, do everything except publish (a dry run).
+
+on:
+  push:
+    tags: ["v*"]
+  pull_request:
+    paths:
+      - .github/workflows/release.yml
+      - src/OasDelta/OasDelta.csproj
+      - tools/check_golden.sh
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+jobs:
+  version:
+    name: Version
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.v.outputs.version }}
+      prerelease: ${{ steps.v.outputs.prerelease }}
+      publish: ${{ steps.v.outputs.publish }}
+    steps:
+      - id: v
+        shell: bash
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
+            version="${GITHUB_REF#refs/tags/v}"
+            publish=true
+          else
+            version="0.0.0-ci.${GITHUB_RUN_NUMBER}"
+            publish=false
+          fi
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
+            echo "::error::'$version' is not a semantic version (expected a tag like v1.2.0 or v1.2.0-rc.1)"; exit 1
+          fi
+          [[ "$version" == *-* ]] && prerelease=true || prerelease=false
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "prerelease=$prerelease" >> "$GITHUB_OUTPUT"
+          echo "publish=$publish" >> "$GITHUB_OUTPUT"
+          echo "Version **$version** (pre-release: $prerelease, publish: $publish)" >> "$GITHUB_STEP_SUMMARY"
+
+  build:
+    name: Build ${{ matrix.rid }}
+    needs: version
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Linux binaries are built on Ubuntu 24.04 so they run on glibc 2.39 and later.
+          - { rid: linux-x64,   os: ubuntu-24.04,     goos: linux,   arch: amd64, exe: oasdelta,     ext: tar.gz }
+          - { rid: linux-arm64, os: ubuntu-24.04-arm, goos: linux,   arch: arm64, exe: oasdelta,     ext: tar.gz }
+          - { rid: win-x64,     os: windows-latest,   goos: windows, arch: amd64, exe: oasdelta.exe, ext: zip }
+          - { rid: win-arm64,   os: windows-11-arm,   goos: windows, arch: arm64, exe: oasdelta.exe, ext: zip }
+          - { rid: osx-x64,     os: macos-15-intel,   goos: darwin,  arch: amd64, exe: oasdelta,     ext: tar.gz }
+          - { rid: osx-arm64,   os: macos-latest,     goos: darwin,  arch: arm64, exe: oasdelta,     ext: tar.gz }
+    env:
+      VERSION: ${{ needs.version.outputs.version }}
+      ARCHIVE: oasdelta_${{ needs.version.outputs.version }}_${{ matrix.goos }}_${{ matrix.arch }}.${{ matrix.ext }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Publish NativeAOT
+        run: dotnet publish src/OasDelta -c Release -r ${{ matrix.rid }} -o out -p:Version=${{ env.VERSION }}
+
+      - name: Check version
+        shell: bash
+        run: |
+          actual=$(out/${{ matrix.exe }} --version)
+          echo "$actual"
+          [ "$actual" == "oasdelta version $VERSION" ] || { echo "::error::expected 'oasdelta version $VERSION'"; exit 1; }
+
+      - name: Golden comparisons
+        shell: bash
+        run: bash tools/check_golden.sh out/${{ matrix.exe }}
+
+      - name: Package (tar.gz)
+        if: matrix.ext == 'tar.gz'
+        shell: bash
+        run: |
+          mkdir -p stage dist
+          cp out/${{ matrix.exe }} LICENSE README.md stage/
+          tar -C stage -czf "dist/$ARCHIVE" .
+
+      - name: Package (zip)
+        if: matrix.ext == 'zip'
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force stage, dist | Out-Null
+          Copy-Item out/${{ matrix.exe }}, LICENSE, README.md stage/
+          Compress-Archive -Path stage/* -DestinationPath "dist/$env:ARCHIVE"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: release-${{ matrix.rid }}
+          path: dist/${{ env.ARCHIVE }}
+          if-no-files-found: error
+
+  publish:
+    name: Publish release
+    needs: [version, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # create the release
+      id-token: write # sign the provenance attestation
+      attestations: write
+    env:
+      VERSION: ${{ needs.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: release-*
+          path: dist
+          merge-multiple: true
+
+      - name: Checksums
+        working-directory: dist
+        run: |
+          sha256sum oasdelta_* > checksums.txt
+          cat checksums.txt
+          { echo '```'; cat checksums.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Attest build provenance
+        if: needs.version.outputs.publish == 'true'
+        uses: actions/attest-build-provenance@v4
+        with:
+          subject-path: dist/oasdelta_*
+
+      - name: Create GitHub release
+        if: needs.version.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          flags=()
+          [ "${{ needs.version.outputs.prerelease }}" == "true" ] && flags+=(--prerelease)
+          gh release create "$TAG" dist/* \
+            --verify-tag \
+            --title "OasDelta $VERSION" \
+            --generate-notes \
+            "${flags[@]}"
+
+      - name: Dry run
+        if: needs.version.outputs.publish != 'true'
+        run: |
+          echo "Dry run: would publish these files as OasDelta $VERSION" | tee -a "$GITHUB_STEP_SUMMARY"
+          ls -l dist | tee -a "$GITHUB_STEP_SUMMARY"

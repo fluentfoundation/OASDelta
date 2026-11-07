@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Text;
 using OasDelta.Checker;
 using OasDelta.Diff;
@@ -37,7 +38,9 @@ public sealed class Context(TextWriter stdout, TextWriter stderr)
 public static class Cli
 {
     public const string Name = "oasdelta";
-    public const string Version = "1.0.0";
+    /// <summary>The build's version (dotnet publish -p:Version=...), without the "+commit" suffix the SDK appends.</summary>
+    public static readonly string Version =
+        typeof(Cli).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion.Split('+')[0] ?? "dev";
     private const int GeneralExecutionErr = 100;
 
     private const string SpecHelp = @"

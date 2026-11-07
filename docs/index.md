@@ -24,8 +24,8 @@ features:
     details: "Argument-compatible with oasdiff: <code>alias oasdiff=oasdelta</code> keeps your scripts, config files and CI checks working, with the same exit codes."
   - title: Byte-for-byte output
     details: Every command and format is checked against the Go binary over the upstream test corpus, 1,239 golden comparisons on every commit, on Linux and Windows.
-  - title: Built for speed
-    details: NativeAOT start-up, a tuned GC compiled into the binary and allocation-light parsing. Benchmarks run in CI against the official oasdiff release.
+  - title: Faster than oasdiff
+    details: NativeAOT start-up, a tuned GC compiled into the binary and allocation-light parsing. CI benchmarks every command on small and large specs, on Linux and Windows, against the official oasdiff release.
   - title: One self-contained file
     details: About 10 MB with no runtime to install. Builds for Linux, Windows and macOS on x64 and Arm64.
 ---

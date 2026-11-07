@@ -59,6 +59,7 @@ site reads; put it in `docs/data/benchmarks/` and run `npm run dev` in `docs/` t
   tie.
 - The large inputs are synthetic. They are built to exercise every stage of the pipeline, but your API's shape may
   favour one implementation more or less.
-- Memory is a trade-off, not a free win: .NET's GC is tuned here for throughput on a short-lived process (see
+- Memory is a trade-off, not a free win. oasdelta peaks lower on small specs and on large YAML, but on large JSON
+  oasdiff's peak is usually lower. .NET's GC is tuned here for throughput on a short-lived process (see
   [Why C# and .NET](/why-dotnet#garbage-collection-tuned-for-a-batch-process)), so check the memory view before
   running oasdelta in a tight container.

@@ -1,0 +1,395 @@
+{
+  "meta": {
+    "label": "Windows",
+    "os": "Windows 2025Server",
+    "arch": "AMD64",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "cpu_count": 4,
+    "go_version": "oasdiff version 1.35.0",
+    "cs_version": "oasdelta version 1.0.0",
+    "go_binary_mb": 18.9,
+    "cs_binary_mb": 9.8,
+    "runs": 15,
+    "warmup": 3,
+    "date": "2026-11-07T15:04:27+00:00",
+    "commit": "5be1d57c5d70da64366dd830e4e4323d16f50430",
+    "run_url": "https://github.com/fluentfoundation/OASDelta/actions/runs/42384472704"
+  },
+  "results": [
+    {
+      "input": "small",
+      "input_title": "Small YAML (openapi-test1 \u2192 test3, 10 KB)",
+      "input_bytes": 16044,
+      "command": "diff",
+      "go": {
+        "median_ms": 37.01,
+        "mean_ms": 38.25,
+        "min_ms": 33.53,
+        "stddev_ms": 4.12,
+        "peak_mb": 20.2,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 16.87,
+        "mean_ms": 17.02,
+        "min_ms": 16.13,
+        "stddev_ms": 0.66,
+        "peak_mb": 12.7,
+        "exit_code": 0
+      },
+      "speedup": 2.19,
+      "memory_ratio": 1.59,
+      "identical": true
+    },
+    {
+      "input": "small",
+      "input_title": "Small YAML (openapi-test1 \u2192 test3, 10 KB)",
+      "input_bytes": 16044,
+      "command": "summary",
+      "go": {
+        "median_ms": 32.87,
+        "mean_ms": 33.25,
+        "min_ms": 29.58,
+        "stddev_ms": 2.68,
+        "peak_mb": 18.9,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 15.93,
+        "mean_ms": 16.06,
+        "min_ms": 15.54,
+        "stddev_ms": 0.56,
+        "peak_mb": 12.3,
+        "exit_code": 0
+      },
+      "speedup": 2.06,
+      "memory_ratio": 1.54,
+      "identical": true
+    },
+    {
+      "input": "small",
+      "input_title": "Small YAML (openapi-test1 \u2192 test3, 10 KB)",
+      "input_bytes": 16044,
+      "command": "breaking",
+      "go": {
+        "median_ms": 33.88,
+        "mean_ms": 34.47,
+        "min_ms": 32.42,
+        "stddev_ms": 1.96,
+        "peak_mb": 19.8,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 17.15,
+        "mean_ms": 17.37,
+        "min_ms": 16.7,
+        "stddev_ms": 0.55,
+        "peak_mb": 13.7,
+        "exit_code": 0
+      },
+      "speedup": 1.98,
+      "memory_ratio": 1.45,
+      "identical": true
+    },
+    {
+      "input": "small",
+      "input_title": "Small YAML (openapi-test1 \u2192 test3, 10 KB)",
+      "input_bytes": 16044,
+      "command": "changelog -f json",
+      "go": {
+        "median_ms": 34.64,
+        "mean_ms": 35.0,
+        "min_ms": 32.38,
+        "stddev_ms": 1.72,
+        "peak_mb": 20.1,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 17.64,
+        "mean_ms": 17.82,
+        "min_ms": 17.2,
+        "stddev_ms": 0.54,
+        "peak_mb": 14.1,
+        "exit_code": 0
+      },
+      "speedup": 1.96,
+      "memory_ratio": 1.43,
+      "identical": true
+    },
+    {
+      "input": "small",
+      "input_title": "Small YAML (openapi-test1 \u2192 test3, 10 KB)",
+      "input_bytes": 16044,
+      "command": "changelog -f html",
+      "go": {
+        "median_ms": 35.29,
+        "mean_ms": 35.48,
+        "min_ms": 33.62,
+        "stddev_ms": 1.12,
+        "peak_mb": 20.2,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 17.79,
+        "mean_ms": 17.97,
+        "min_ms": 17.15,
+        "stddev_ms": 0.84,
+        "peak_mb": 14.4,
+        "exit_code": 0
+      },
+      "speedup": 1.98,
+      "memory_ratio": 1.4,
+      "identical": true
+    },
+    {
+      "input": "large-yaml",
+      "input_title": "Large YAML (synthetic, ~1.5 MB)",
+      "input_bytes": 2930934,
+      "command": "diff",
+      "go": {
+        "median_ms": 1957.48,
+        "mean_ms": 1958.71,
+        "min_ms": 1914.06,
+        "stddev_ms": 34.84,
+        "peak_mb": 318.3,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 670.48,
+        "mean_ms": 671.12,
+        "min_ms": 649.82,
+        "stddev_ms": 12.08,
+        "peak_mb": 202.3,
+        "exit_code": 0
+      },
+      "speedup": 2.92,
+      "memory_ratio": 1.57,
+      "identical": true
+    },
+    {
+      "input": "large-yaml",
+      "input_title": "Large YAML (synthetic, ~1.5 MB)",
+      "input_bytes": 2930934,
+      "command": "summary",
+      "go": {
+        "median_ms": 1735.37,
+        "mean_ms": 1729.47,
+        "min_ms": 1662.72,
+        "stddev_ms": 33.35,
+        "peak_mb": 307.2,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 629.35,
+        "mean_ms": 631.73,
+        "min_ms": 607.73,
+        "stddev_ms": 12.6,
+        "peak_mb": 180.3,
+        "exit_code": 0
+      },
+      "speedup": 2.76,
+      "memory_ratio": 1.7,
+      "identical": true
+    },
+    {
+      "input": "large-yaml",
+      "input_title": "Large YAML (synthetic, ~1.5 MB)",
+      "input_bytes": 2930934,
+      "command": "breaking",
+      "go": {
+        "median_ms": 1783.7,
+        "mean_ms": 1769.48,
+        "min_ms": 1703.26,
+        "stddev_ms": 40.22,
+        "peak_mb": 298.3,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 757.46,
+        "mean_ms": 757.41,
+        "min_ms": 733.91,
+        "stddev_ms": 16.51,
+        "peak_mb": 208.9,
+        "exit_code": 0
+      },
+      "speedup": 2.35,
+      "memory_ratio": 1.43,
+      "identical": true
+    },
+    {
+      "input": "large-yaml",
+      "input_title": "Large YAML (synthetic, ~1.5 MB)",
+      "input_bytes": 2930934,
+      "command": "changelog -f json",
+      "go": {
+        "median_ms": 1908.38,
+        "mean_ms": 1903.8,
+        "min_ms": 1744.29,
+        "stddev_ms": 140.44,
+        "peak_mb": 293.8,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 804.79,
+        "mean_ms": 794.0,
+        "min_ms": 729.16,
+        "stddev_ms": 29.99,
+        "peak_mb": 209.2,
+        "exit_code": 0
+      },
+      "speedup": 2.37,
+      "memory_ratio": 1.4,
+      "identical": true
+    },
+    {
+      "input": "large-yaml",
+      "input_title": "Large YAML (synthetic, ~1.5 MB)",
+      "input_bytes": 2930934,
+      "command": "changelog -f html",
+      "go": {
+        "median_ms": 1799.36,
+        "mean_ms": 1876.1,
+        "min_ms": 1676.35,
+        "stddev_ms": 154.04,
+        "peak_mb": 311.5,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 769.26,
+        "mean_ms": 775.45,
+        "min_ms": 729.35,
+        "stddev_ms": 31.38,
+        "peak_mb": 209.2,
+        "exit_code": 0
+      },
+      "speedup": 2.34,
+      "memory_ratio": 1.49,
+      "identical": true
+    },
+    {
+      "input": "large-json",
+      "input_title": "Large JSON (synthetic, ~1.1 MB)",
+      "input_bytes": 2129664,
+      "command": "diff",
+      "go": {
+        "median_ms": 943.13,
+        "mean_ms": 941.69,
+        "min_ms": 908.83,
+        "stddev_ms": 16.76,
+        "peak_mb": 228.5,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 446.18,
+        "mean_ms": 446.69,
+        "min_ms": 430.04,
+        "stddev_ms": 13.07,
+        "peak_mb": 229.6,
+        "exit_code": 0
+      },
+      "speedup": 2.11,
+      "memory_ratio": 1.0,
+      "identical": true
+    },
+    {
+      "input": "large-json",
+      "input_title": "Large JSON (synthetic, ~1.1 MB)",
+      "input_bytes": 2129664,
+      "command": "summary",
+      "go": {
+        "median_ms": 740.44,
+        "mean_ms": 741.03,
+        "min_ms": 719.41,
+        "stddev_ms": 10.59,
+        "peak_mb": 102.4,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 295.7,
+        "mean_ms": 295.65,
+        "min_ms": 283.74,
+        "stddev_ms": 7.28,
+        "peak_mb": 206.2,
+        "exit_code": 0
+      },
+      "speedup": 2.5,
+      "memory_ratio": 0.5,
+      "identical": true
+    },
+    {
+      "input": "large-json",
+      "input_title": "Large JSON (synthetic, ~1.1 MB)",
+      "input_bytes": 2129664,
+      "command": "breaking",
+      "go": {
+        "median_ms": 803.6,
+        "mean_ms": 803.36,
+        "min_ms": 777.18,
+        "stddev_ms": 10.8,
+        "peak_mb": 108.5,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 470.38,
+        "mean_ms": 469.28,
+        "min_ms": 456.92,
+        "stddev_ms": 7.26,
+        "peak_mb": 230.4,
+        "exit_code": 0
+      },
+      "speedup": 1.71,
+      "memory_ratio": 0.47,
+      "identical": true
+    },
+    {
+      "input": "large-json",
+      "input_title": "Large JSON (synthetic, ~1.1 MB)",
+      "input_bytes": 2129664,
+      "command": "changelog -f json",
+      "go": {
+        "median_ms": 795.76,
+        "mean_ms": 798.93,
+        "min_ms": 784.96,
+        "stddev_ms": 10.45,
+        "peak_mb": 111.2,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 471.69,
+        "mean_ms": 472.33,
+        "min_ms": 465.03,
+        "stddev_ms": 5.7,
+        "peak_mb": 230.8,
+        "exit_code": 0
+      },
+      "speedup": 1.69,
+      "memory_ratio": 0.48,
+      "identical": true
+    },
+    {
+      "input": "large-json",
+      "input_title": "Large JSON (synthetic, ~1.1 MB)",
+      "input_bytes": 2129664,
+      "command": "changelog -f html",
+      "go": {
+        "median_ms": 795.89,
+        "mean_ms": 800.88,
+        "min_ms": 773.05,
+        "stddev_ms": 24.87,
+        "peak_mb": 114.9,
+        "exit_code": 0
+      },
+      "cs": {
+        "median_ms": 462.5,
+        "mean_ms": 468.62,
+        "min_ms": 451.94,
+        "stddev_ms": 15.27,
+        "peak_mb": 230.8,
+        "exit_code": 0
+      },
+      "speedup": 1.72,
+      "memory_ratio": 0.5,
+      "identical": true
+    }
+  ]
+}

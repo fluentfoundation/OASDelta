@@ -48,7 +48,8 @@ check_slug() {
 
 while IFS='|' read -r slug args; do
   [[ -z "$slug" || "$slug" == \#* ]] && continue
-  while (( $(jobs -rp | wc -l) >= JOBS )); do wait -n; done
+  # poll rather than `wait -n`: macOS ships bash 3.2, which doesn't have it
+  while [ "$(jobs -rp | wc -l)" -ge "$JOBS" ]; do sleep 0.2; done
   check_slug "$slug" "$args" &
 done < "$ROOT/tools/golden-commands.txt"
 wait
@@ -59,7 +60,8 @@ rm -rf "$RESULTS"
 total=$(find "$ROOT/tests/golden" -name "*.out" | wc -l | tr -d " ")
 IDS=$(grep -oE '"[a-z0-9-]+";$' "$ROOT/src/OasDelta/Checker/Generated/RuleIds.g.cs" | tr -d '";' | sort -u)
 rules=$(grep -c . <<< "$IDS")
-fired=$(cat "$ROOT"/tests/golden/*/*.out | grep -oE '"id": ?"[a-z0-9-]+"' | sed -E 's/.*"([a-z0-9-]+)"$/\1/' | sort -u | grep -cxFf <(echo "$IDS"))
+# grep -r, not cat with a glob: ~10k paths exceed the argument-length limit on macOS
+fired=$(grep -rhoE '"id": ?"[a-z0-9-]+"' --include='*.out' "$ROOT/tests/golden" | sed -E 's/.*"([a-z0-9-]+)"$/\1/' | sort -u | grep -cxFf <(echo "$IDS"))
 floor=$(tr -d '[:space:]' < "$ROOT/tests/rule-coverage-floor.txt")
 known=$(grep -c . <<< "$KNOWN" || true)
 echo "golden: pass=$pass fail=$fail of $total in $sets sets; rules firing: $fired of $rules (floor $floor); known cases: $known"

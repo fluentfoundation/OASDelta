@@ -39,7 +39,8 @@ while IFS='|' read -r slug args; do
   if [ "$ONLY" != "  " ]; then
     case "$ONLY" in *" $slug "*) rm -rf "$ROOT/tests/golden/$slug" ;; *) continue ;; esac
   fi
-  while (( $(jobs -rp | wc -l) >= JOBS )); do wait -n; done
+  # poll rather than `wait -n`: macOS ships bash 3.2, which doesn't have it
+  while [ "$(jobs -rp | wc -l)" -ge "$JOBS" ]; do sleep 0.2; done
   gen_slug "$slug" "$args" &
 done < "$ROOT/tools/golden-commands.txt"
 wait

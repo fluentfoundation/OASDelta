@@ -4,9 +4,20 @@ OasDelta compares two OpenAPI descriptions and reports what changed and which ch
 port of [oasdiff](https://github.com/oasdiff/oasdiff), targets .NET 10, and compiles to a single self-contained
 NativeAOT executable, `oasdelta`, with no runtime dependency.
 
+## Install as a .NET tool
+
+```sh
+dotnet tool install --global OasDelta        # installs the `oasdelta` command
+dnx OasDelta breaking base.yaml revision.yaml  # or run it once without installing (.NET 10 SDK)
+```
+
+The [OasDelta package](https://www.nuget.org/packages/OasDelta) is a platform-specific tool: the SDK downloads the
+NativeAOT build for your OS and CPU (Linux, Windows or macOS, on x64 or Arm64), so the tool runs without the .NET
+runtime. Update with `dotnet tool update --global OasDelta`.
+
 ## Download a release
 
-Each [GitHub release](https://github.com/fluentfoundation/OASDelta/releases) has a ready-to-run binary for:
+If you don't have the .NET SDK, each [GitHub release](https://github.com/fluentfoundation/OASDelta/releases) has a ready-to-run binary for:
 
 | | x64 | Arm64 |
 |---|---|---|

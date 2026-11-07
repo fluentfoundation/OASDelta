@@ -1,7 +1,8 @@
 name: Release
 
 # Push a tag like v1.2.0 (or v1.2.0-rc.1 for a pre-release) to build NativeAOT binaries for every platform, check each
-# against the golden outputs, and publish them as a GitHub Release with checksums and build-provenance attestations.
+# against the golden outputs, and publish them as a GitHub Release with checksums and build-provenance attestations,
+# then push the OasDelta .NET tool (one native package per platform + a top-level package) to nuget.org.
 #
 # Pull requests that touch the release pipeline, and manual runs, do everything except publish (a dry run).
 
@@ -12,6 +13,7 @@ on:
     paths:
       - .github/workflows/release.yml
       - src/OasDelta/OasDelta.csproj
+      - src/OasDelta/Package/**
       - tools/check_golden.sh
   workflow_dispatch:
 
@@ -115,6 +117,15 @@ jobs:
           path: dist/${{ env.ARCHIVE }}
           if-no-files-found: error
 
+      - name: Pack NuGet tool package (OasDelta.${{ matrix.rid }})
+        run: dotnet pack src/OasDelta -c Release -r ${{ matrix.rid }} -p:Version=${{ env.VERSION }} -o nupkg
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: nuget-${{ matrix.rid }}
+          path: nupkg/*.nupkg
+          if-no-files-found: error
+
   publish:
     name: Publish release
     needs: [version, build]
@@ -166,3 +177,80 @@ jobs:
         run: |
           echo "Dry run: would publish these files as OasDelta $VERSION" | tee -a "$GITHUB_STEP_SUMMARY"
           ls -l dist | tee -a "$GITHUB_STEP_SUMMARY"
+
+  nuget-pack:
+    name: NuGet packages
+    needs: [version, build]
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ needs.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Collect the per-platform packages
+        uses: actions/download-artifact@v8
+        with:
+          pattern: nuget-*
+          path: nupkg
+          merge-multiple: true
+
+      - name: Pack the top-level tool package (OasDelta)
+        run: dotnet pack src/OasDelta -c Release -p:Version=$VERSION -o nupkg
+
+      - name: Install the tool from these packages and run it
+        run: |
+          ls -l nupkg
+          [ "$(ls nupkg/*.nupkg | wc -l)" -eq 7 ] || { echo "::error::expected 7 packages (OasDelta + 6 platforms)"; exit 1; }
+          dotnet tool install OasDelta --version "$VERSION" --tool-path "$RUNNER_TEMP/tool" --add-source "$PWD/nupkg"
+          actual=$("$RUNNER_TEMP/tool/oasdelta" --version)
+          echo "$actual"
+          [ "$actual" == "oasdelta version $VERSION" ] || { echo "::error::expected 'oasdelta version $VERSION'"; exit 1; }
+          cd tests/fixtures && "$RUNNER_TEMP/tool/oasdelta" breaking openapi-test1.yaml openapi-test3.yaml > /dev/null
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: nuget-packages
+          path: nupkg/*.nupkg
+          if-no-files-found: error
+
+  nuget-push:
+    name: Push to nuget.org
+    needs: [version, publish, nuget-pack]
+    if: needs.version.outputs.publish == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: nuget
+      url: https://www.nuget.org/packages/OasDelta/${{ needs.version.outputs.version }}
+    permissions:
+      id-token: write # NuGet Trusted Publishing: exchange the OIDC token for a short-lived API key
+    env:
+      VERSION: ${{ needs.version.outputs.version }}
+    steps:
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: nuget-packages
+          path: nupkg
+
+      - name: Log in to nuget.org (Trusted Publishing)
+        id: login
+        uses: NuGet/login@v1
+        with:
+          user: ${{ vars.NUGET_USER }}
+
+      - name: Push
+        env:
+          NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+        run: |
+          push() { dotnet nuget push "$1" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate; }
+          top="nupkg/OasDelta.$VERSION.nupkg"
+          # platform packages first, so the top-level package never points at packages that are not there yet
+          for f in nupkg/*.nupkg; do [ "$f" == "$top" ] || push "$f"; done
+          push "$top"

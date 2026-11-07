@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/books/{bookId}":{"operations":{"modified":{"GET":{"parameters":{"modified":{"header":{"bookid":{"schema":{"properties":{"modified":{"name":{"enum":{"enumAdded":true,"added":["VALUE_1","VALUE_2","VALUE_3"]}}}}}}}}}}}}}}}}

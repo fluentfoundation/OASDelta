@@ -1,0 +1,100 @@
+- id: response-mediatype-became-not-enum
+  text: removed the enum constraint from the response schema `text/plain` for the response status `200`
+  comment: The server may now return any value of the schema's type, including values the previous enum excluded, so a client written against it may not handle the response.
+  level: 3
+  operation: PUT
+  operationId: setMode
+  path: /mode
+  section: paths
+  baseSource:
+    file: ./checker/enum_removed_entirely_base.yaml
+    line: 56
+    column: 38
+  fingerprint: f2507f47104a
+- id: response-property-became-not-enum
+  text: removed the enum constraint from the `status` response property for the response status `200`
+  comment: The server may now return any value of the property's type, including values the previous enum excluded, so a client written against it may not handle the response.
+  level: 3
+  operation: POST
+  operationId: createPet
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./checker/enum_removed_entirely_base.yaml
+    line: 41
+    column: 42
+  fingerprint: 782d84adafc6
+- id: request-body-became-not-enum
+  text: removed the enum constraint from the request body
+  level: 1
+  operation: PUT
+  operationId: setMode
+  path: /mode
+  section: paths
+  baseSource:
+    file: ./checker/enum_removed_entirely_base.yaml
+    line: 50
+    column: 36
+  fingerprint: b7ce0516fc30
+- id: request-parameter-became-not-enum
+  text: removed the enum constraint from the `query` request parameter `status`
+  level: 1
+  operation: GET
+  operationId: listPets
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./checker/enum_removed_entirely_base.yaml
+    line: 10
+    column: 34
+  fingerprint: e41845bcfe82
+- id: request-parameter-property-became-not-enum
+  text: removed the enum constraint from the property `origin` of the `query` request parameter `filter`
+  level: 1
+  operation: GET
+  operationId: listPets
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./checker/enum_removed_entirely_base.yaml
+    line: 18
+    column: 38
+  fingerprint: 633a0c95ceef
+- id: request-property-became-not-enum
+  text: removed the enum constraint from the request property `kind`
+  level: 1
+  operation: POST
+  operationId: createPet
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./checker/enum_removed_entirely_base.yaml
+    line: 32
+    column: 54
+  fingerprint: b7925c76450d
+- id: request-property-became-not-enum
+  text: removed the enum constraint from the request property `status`
+  level: 1
+  operation: POST
+  operationId: createPet
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./checker/enum_removed_entirely_base.yaml
+    line: 31
+    column: 40
+  fingerprint: 341a27fa5416
+- id: response-property-became-not-enum
+  text: removed the enum constraint from the `secret` response property for the response status `200`
+  comment: The property is write-only, so it never appears in responses and this change cannot invalidate one.
+  level: 1
+  operation: POST
+  operationId: createPet
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./checker/enum_removed_entirely_base.yaml
+    line: 42
+    column: 59
+  fingerprint: d8d2eeccab74
+

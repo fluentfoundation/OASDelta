@@ -1,0 +1,10 @@
+2 alterações: 1 error, 0 warning, 1 info
+error	[response-body-media-type-schema-removed] em ./checker/media_type_schema_degenerate_none.yaml
+	em API POST /items
+		o esquema foi removido do tipo de mídia `application/json` da resposta com o status `200`
+
+info	[request-body-media-type-schema-removed] em ./checker/media_type_schema_degenerate_none.yaml
+	em API POST /items
+		o esquema foi removido do tipo de mídia `application/json` do corpo da requisição
+
+

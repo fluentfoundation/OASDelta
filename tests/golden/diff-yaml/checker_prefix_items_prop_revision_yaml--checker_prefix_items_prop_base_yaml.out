@@ -1,0 +1,59 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    details:
+                                                        prefixItems:
+                                                            deleted:
+                                                                - index: 0
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            details:
+                                                                prefixItems:
+                                                                    deleted:
+                                                                        - index: 0
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        details:
+                                            prefixItems:
+                                                deleted:
+                                                    - index: 0
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                details:
+                                                    prefixItems:
+                                                        deleted:
+                                                            - index: 0
+

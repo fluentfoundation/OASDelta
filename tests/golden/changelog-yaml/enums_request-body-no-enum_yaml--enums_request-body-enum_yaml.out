@@ -1,0 +1,13 @@
+- id: request-body-became-enum
+  text: request body was restricted to a list of enum values
+  level: 3
+  operation: GET
+  operationId: getTest
+  path: /api/v2/changeOfRequestFieldValueTiedToEnumTest
+  section: paths
+  revisionSource:
+    file: ./enums/request-body-enum.yaml
+    line: 23
+    column: 15
+  fingerprint: 6fec6b538608
+

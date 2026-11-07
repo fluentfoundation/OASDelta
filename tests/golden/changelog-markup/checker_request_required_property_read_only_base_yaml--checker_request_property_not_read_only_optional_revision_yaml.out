@@ -1,0 +1,14 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+-  the request optional property `id` became not read-only
+-  the request property `id` became optional
+
+
+
+
+
+

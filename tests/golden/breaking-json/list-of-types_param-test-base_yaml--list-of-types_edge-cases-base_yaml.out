@@ -1,0 +1,1 @@
+[{"id":"api-path-removed-without-deprecation","text":"api path removed without deprecation","level":3,"operation":"GET","path":"/test","section":"paths","baseSource":{"file":"./list-of-types/param-test-base.yaml","line":7,"column":5,"endLine":18,"endColumn":31},"fingerprint":"fb4dcd167904"}]

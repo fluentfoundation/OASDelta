@@ -1,0 +1,21 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /api/test1
+-  added the new optional `header` request parameter `x-newrequestheaderparam`
+
+
+### GET /api/test2
+-  added the new optional `query` request parameter `newQueryParam`
+
+
+### GET /api/test3
+-  added the new optional `cookie` request parameter `csrf-token`
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+[{"id":"request-body-dependent-required-added","text":"the request body dependentRequired was added: when `name` is present, `email` are required","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","revisionSource":{"file":"./checker/dependent_required_revision.yaml","line":19,"column":15},"fingerprint":"cb319c1bc916"}]

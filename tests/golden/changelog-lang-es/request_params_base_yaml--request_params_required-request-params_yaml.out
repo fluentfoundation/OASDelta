@@ -1,0 +1,46 @@
+11 cambios: 4 error, 0 warning, 7 info
+error	[new-required-request-default-parameter-to-existing-path] en ./request_params/required-request-params.yaml
+	en API GET /api/test1
+		agregado el nuevo parámetro `query` de solicitud requerido `version` a todas las operaciones del path
+
+error	[new-required-request-default-parameter-to-existing-path] en ./request_params/required-request-params.yaml
+	en API POST /api/test1
+		agregado el nuevo parámetro `query` de solicitud requerido `version` a todas las operaciones del path
+
+error	[new-required-request-default-parameter-to-existing-path] en ./request_params/required-request-params.yaml
+	en API GET /api/test2
+		agregado el nuevo parámetro `query` de solicitud requerido `id` a todas las operaciones del path
+
+error	[new-required-request-default-parameter-to-existing-path] en ./request_params/required-request-params.yaml
+	en API GET /api/test3
+		agregado el nuevo parámetro `header` de solicitud requerido `if-none-match` a todas las operaciones del path
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[new-optional-request-default-parameter-to-existing-path] en ./request_params/required-request-params.yaml
+	en API GET /api/test1
+		agregado el nuevo parámetro `query` de solicitud opcional `optionalQueryParam` a todas las operaciones del path
+
+info	[new-optional-request-parameter] en ./request_params/required-request-params.yaml
+	en API GET /api/test1
+		agregado el nuevo parámetro `header` de solicitud opcional `x-newrequestheaderparam`
+
+info	[new-optional-request-default-parameter-to-existing-path] en ./request_params/required-request-params.yaml
+	en API POST /api/test1
+		agregado el nuevo parámetro `query` de solicitud opcional `optionalQueryParam` a todas las operaciones del path
+
+info	[new-optional-request-default-parameter-to-existing-path] en ./request_params/required-request-params.yaml
+	en API GET /api/test2
+		agregado el nuevo parámetro `header` de solicitud opcional `optionalheaderparam` a todas las operaciones del path
+
+info	[new-optional-request-parameter] en ./request_params/required-request-params.yaml
+	en API GET /api/test2
+		agregado el nuevo parámetro `query` de solicitud opcional `newQueryParam`
+
+info	[new-optional-request-parameter] en ./request_params/required-request-params.yaml
+	en API GET /api/test3
+		agregado el nuevo parámetro `cookie` de solicitud opcional `csrf-token`
+
+

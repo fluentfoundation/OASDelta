@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="10" errors="0" failures="10" name="OASDiff">
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `oneOf[#/components/schemas/Cat]/petType`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `oneOf[#/components/schemas/Dog]/petType`</failure>
+    </testcase>
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `oneOf[#/components/schemas/Cat]/petType2`</failure>
+    </testcase>
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name2`</failure>
+    </testcase>
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name2`</failure>
+    </testcase>
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `oneOf[#/components/schemas/Dog]/petType2`</failure>
+    </testcase>
+    <testcase name="request-body-discriminator-property-name-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">request discriminator property name changed from `petType` to `petType2`</failure>
+    </testcase>
+    <testcase name="request-property-discriminator-property-name-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">request discriminator property name changed for `oneOf[#/components/schemas/Dog]/breed` request property from `name` to `name2`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

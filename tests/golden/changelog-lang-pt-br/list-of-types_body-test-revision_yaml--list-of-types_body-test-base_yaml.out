@@ -1,0 +1,10 @@
+2 alterações: 0 error, 0 warning, 2 info
+info	[request-body-list-of-types-widened] em ./list-of-types/body-test-base.yaml
+	em API POST /test
+		lista de tipos do corpo da requisição foi expandida adicionando tipos `string and integer` ao tipo de mídia `application/json`
+
+info	[response-body-list-of-types-narrowed] em ./list-of-types/body-test-base.yaml
+	em API POST /test
+		lista de tipos do corpo da resposta foi restringida removendo tipos `integer` do tipo de mídia `application/json` da resposta `200`
+
+

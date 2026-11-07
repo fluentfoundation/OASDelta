@@ -1,0 +1,3 @@
+::notice title=response-body-discriminator-added,file=./checker/response_property_discriminator_added_revision.yaml,line=18,col=17::in API POST /pets added response discriminator for the response status `200`
+::notice title=response-property-discriminator-added,file=./checker/response_property_discriminator_added_revision.yaml,line=38,col=11::in API POST /pets added discriminator to `oneOf[#/components/schemas/Dog]/breed` response property for the response status `200`
+

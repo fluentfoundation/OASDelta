@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="13" errors="0" failures="13" name="OASDiff">
+    <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api path removed without deprecation</failure>
+    </testcase>
+    <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api path removed without deprecation</failure>
+    </testcase>
+    <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api path removed without deprecation</failure>
+    </testcase>
+    <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api path removed without deprecation</failure>
+    </testcase>
+    <testcase name="api-global-security-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the security scheme `bearerAuth` was removed from the API</failure>
+    </testcase>
+    <testcase name="api-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the schema `network-policies`</failure>
+    </testcase>
+    <testcase name="api-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the schema `rules`</failure>
+    </testcase>
+    <testcase name="api-security-component-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `AccessToken` was removed</failure>
+    </testcase>
+    <testcase name="api-security-component-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `OAuth` was removed</failure>
+    </testcase>
+    <testcase name="api-security-component-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `bearerAuth` was removed</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

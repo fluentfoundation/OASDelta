@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[request-parameter-property-enum-value-added] em ./checker/request_parameter_property_enum_value_updated_base.yaml
+	em API GET /test
+		valor `value-b` do enum adicionado à propriedade `origin` do parâmetro de requisição do tipo `query` e nome `filter`
+
+

@@ -1,0 +1,3 @@
+::error title=response-body-type-changed,file=./checker/response_schema_type_changed_revision.yaml,line=29,col=7::in API POST /api/v1.0/groups the response's body `type` changed from `string` to `object` for status `200`
+::notice title=response-optional-property-added,file=./checker/response_schema_type_changed_revision.yaml,line=31,col=9::in API POST /api/v1.0/groups added the optional property `data` to the response with the `200` status
+

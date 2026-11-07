@@ -1,0 +1,31 @@
+# API Changelog 2.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /api/{domain}/{project}/badges/security-score
+-  endpoint added
+
+
+### GET /api/{domain}/{project}/install-command
+-  endpoint added
+
+
+### POST /register
+-  endpoint added
+
+
+
+
+## Components
+-  the component security scheme `AccessToken` was added
+-  the component security scheme `OAuth` was added
+-  the component security scheme `bearerAuth` was added
+
+
+## Security
+-  the security scheme `bearerAuth` was added to the API
+
+
+
+

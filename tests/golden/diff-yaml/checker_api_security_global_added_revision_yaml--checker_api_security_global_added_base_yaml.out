@@ -1,0 +1,8 @@
+security:
+    deleted:
+        - index: 0
+          schemes:
+            petstore_auth:
+                - write:pets
+                - read:pets
+

@@ -1,0 +1,2 @@
+::error title=request-parameter-became-enum,file=./enums/request-parameter-op-enum.yaml,line=17,col=13::in API GET /books/{bookId} the `path` request parameter `bookId` was restricted to a list of enum values
+

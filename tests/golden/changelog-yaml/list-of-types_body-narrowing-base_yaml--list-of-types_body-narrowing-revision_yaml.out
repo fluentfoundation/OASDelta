@@ -1,0 +1,28 @@
+- id: request-body-list-of-types-narrowed
+  text: request body list-of-types was narrowed by removing types `array and string` from media type `application/json`
+  level: 3
+  operation: POST
+  path: /test
+  section: paths
+  revisionSource:
+    file: ./list-of-types/body-narrowing-revision.yaml
+    line: 12
+    column: 15
+  fingerprint: 71b186f0477e
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: response-body-list-of-types-narrowed
+  text: response body list-of-types was narrowed by removing types `integer and boolean` from media type `application/json` of response `200`
+  level: 1
+  operation: POST
+  path: /test
+  section: paths
+  revisionSource:
+    file: ./list-of-types/body-narrowing-revision.yaml
+    line: 19
+    column: 17
+  fingerprint: b9bde1dc1455
+

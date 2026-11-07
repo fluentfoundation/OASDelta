@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="new-optional-request-parameter" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `header` request parameter `x-newrequestheaderparam`</failure>
+    </testcase>
+    <testcase name="new-optional-request-parameter" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `query` request parameter `newQueryParam`</failure>
+    </testcase>
+    <testcase name="new-optional-request-parameter" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `cookie` request parameter `csrf-token`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

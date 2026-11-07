@@ -1,0 +1,22 @@
+5 cambios: 2 error, 0 warning, 3 info
+error	[request-body-any-of-removed] en ./checker/request_body_any_of_media_type_revision.yaml
+	en API POST /pets
+		`#/components/schemas/Cat` fue removido de la lista `anyOf` del cuerpo de solicitud (media type: application/json)
+
+error	[request-body-any-of-removed] en ./checker/request_body_any_of_media_type_revision.yaml
+	en API POST /pets
+		`#/components/schemas/Cat` fue removido de la lista `anyOf` del cuerpo de solicitud (media type: application/xml)
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[request-body-any-of-added] en ./checker/request_body_any_of_media_type_revision.yaml
+	en API POST /pets
+		`#/components/schemas/Rabbit` fue agregado a la lista `anyOf` del cuerpo de solicitud (media type: application/json)
+
+info	[request-body-any-of-added] en ./checker/request_body_any_of_media_type_revision.yaml
+	en API POST /pets
+		`#/components/schemas/Rabbit` fue agregado a la lista `anyOf` del cuerpo de solicitud (media type: application/xml)
+
+

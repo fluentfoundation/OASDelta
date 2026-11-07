@@ -1,0 +1,18 @@
+4 cambios: 3 error, 0 warning, 1 info
+error	[response-body-one-of-added] en ./checker/response_property_one_of_added_revision.yaml
+	en API GET /pets
+		`#/components/schemas/Rabbit` fue agregado a la lista `oneOf` del cuerpo de respuesta para el estado `200`
+
+error	[response-property-one-of-added] en ./checker/response_property_one_of_added_revision.yaml
+	en API GET /pets
+		`#/components/schemas/Breed3` fue agregado a la lista `oneOf` de la propiedad de respuesta `oneOf[#/components/schemas/Dog]/breed` para el estado `200`
+
+error	[response-property-one-of-added] en ./checker/response_property_one_of_added_revision.yaml
+	en API GET /pets
+		`subschema #2: Dark brown types` fue agregado a la lista `oneOf` de la propiedad de respuesta `oneOf[#/components/schemas/Fox]/breed` para el estado `200`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /test
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Property 'AnyOf' changed
+            - Schemas added: subschema #2: Title 3
+            - Schemas deleted: subschema #2: Title 2
+
+

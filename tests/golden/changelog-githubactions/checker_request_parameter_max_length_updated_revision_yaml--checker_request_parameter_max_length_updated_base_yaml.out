@@ -1,0 +1,2 @@
+::error title=request-parameter-max-length-decreased,file=./checker/request_parameter_max_length_updated_base.yaml,line=13,col=13::in API POST /test for the `query` request parameter `category`, the maxLength was decreased from `15` to `10`
+

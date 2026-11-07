@@ -1,0 +1,22 @@
+5 changes: 2 error, 0 warning, 3 info
+error	[request-body-dependent-required-changed] at ./checker/dependent_required_changed_revision.yaml
+	in API POST /products
+		the request body dependentRequired for `name` was updated: `phone added`
+
+error	[response-body-dependent-required-changed] at ./checker/dependent_required_changed_revision.yaml
+	in API POST /products
+		the response body dependentRequired for `name` was updated for the status `200`: `phone added`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[new-optional-request-property] at ./checker/dependent_required_changed_revision.yaml
+	in API POST /products
+		added the new optional request property `phone`
+
+info	[response-optional-property-added] at ./checker/dependent_required_changed_revision.yaml
+	in API POST /products
+		added the optional property `phone` to the response with the `200` status
+
+

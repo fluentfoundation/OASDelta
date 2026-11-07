@@ -1,0 +1,18 @@
+8 changes: 2 error, 0 warning, 6 info
+error at ./checker/enum_removed_entirely_revision.yaml, in API PUT /mode removed the enum constraint from the response schema `text/plain` for the response status `200` [response-mediatype-became-not-enum]. The server may now return any value of the schema's type, including values the previous enum excluded, so a client written against it may not handle the response.
+
+error at ./checker/enum_removed_entirely_revision.yaml, in API POST /pets removed the enum constraint from the `status` response property for the response status `200` [response-property-became-not-enum]. The server may now return any value of the property's type, including values the previous enum excluded, so a client written against it may not handle the response.
+
+info at ./checker/enum_removed_entirely_revision.yaml, in API PUT /mode removed the enum constraint from the request body [request-body-became-not-enum]. 
+
+info at ./checker/enum_removed_entirely_revision.yaml, in API GET /pets removed the enum constraint from the `query` request parameter `status` [request-parameter-became-not-enum]. 
+
+info at ./checker/enum_removed_entirely_revision.yaml, in API GET /pets removed the enum constraint from the property `origin` of the `query` request parameter `filter` [request-parameter-property-became-not-enum]. 
+
+info at ./checker/enum_removed_entirely_revision.yaml, in API POST /pets removed the enum constraint from the request property `kind` [request-property-became-not-enum]. 
+
+info at ./checker/enum_removed_entirely_revision.yaml, in API POST /pets removed the enum constraint from the request property `status` [request-property-became-not-enum]. 
+
+info at ./checker/enum_removed_entirely_revision.yaml, in API POST /pets removed the enum constraint from the `secret` response property for the response status `200` [response-property-became-not-enum]. The property is write-only, so it never appears in responses and this change cannot invalidate one.
+
+

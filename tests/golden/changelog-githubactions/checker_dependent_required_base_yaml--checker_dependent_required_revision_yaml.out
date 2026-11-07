@@ -1,0 +1,4 @@
+::error title=request-body-dependent-required-added,file=./checker/dependent_required_revision.yaml,line=19,col=15::in API POST /products the request body dependentRequired was added: when `name` is present, `email` are required
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-body-dependent-required-added,file=./checker/dependent_required_revision.yaml,line=34,col=17::in API POST /products the response body dependentRequired was added for the status `200`: when `name` is present, `email` are required
+

@@ -1,0 +1,1 @@
+[{"id":"response-property-list-of-types-widened","text":"response property `data` list-of-types was widened by adding types `number and boolean` to media type `application/json` of response `200`","level":3,"operation":"GET","path":"/api","section":"paths","fingerprint":"57a09803b9b5"}]

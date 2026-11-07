@@ -1,0 +1,12 @@
+- id: request-property-became-required
+  text: 'the request property `anyOf[subschema #1]/id` became required'
+  level: 3
+  operation: POST
+  path: /test
+  section: paths
+  revisionSource:
+    file: ./required-properties/anyOf2.yaml
+    line: 15
+    column: 19
+  fingerprint: 3082165ebf5f
+

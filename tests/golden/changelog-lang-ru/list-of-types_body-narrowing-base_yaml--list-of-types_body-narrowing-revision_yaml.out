@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[request-body-list-of-types-narrowed] в ./list-of-types/body-narrowing-revision.yaml
+	в API POST /test
+		список типов тела запроса был сужен удалением типов `array and string` из медиа-типа `application/json`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-body-list-of-types-narrowed] в ./list-of-types/body-narrowing-revision.yaml
+	в API POST /test
+		список типов тела ответа был сужен удалением типов `integer and boolean` из медиа-типа `application/json` ответа `200`
+
+

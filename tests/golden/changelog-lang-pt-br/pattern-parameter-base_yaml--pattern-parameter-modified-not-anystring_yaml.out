@@ -1,0 +1,7 @@
+1 alterações: 0 error, 1 warning, 0 info
+warning	[request-parameter-pattern-changed] em ./pattern-parameter-modified-not-anystring.yaml
+	em API GET /api/v1.0/groups/{groupId}
+		alterado o padrão do parâmetro de requisição do tipo `path` e nome `groupId` de `[0-9a-f]+` para `[0-9]+`
+		Este é um aviso porque é difícil analisar automaticamente se o novo padrão é um superconjunto do padrão anterior (por exemplo, alterado de '[0-9]+' para '[0-9]*')
+
+

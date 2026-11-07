@@ -1,0 +1,14 @@
+3 changes: 3 error, 0 warning, 0 info
+error	[response-body-else-removed] at ./checker/if_added_base.yaml
+	in API POST /products
+		removed 'else' subschema from the response body for the status `200`
+
+error	[response-body-if-removed] at ./checker/if_added_base.yaml
+	in API POST /products
+		removed 'if' subschema from the response body for the status `200`
+
+error	[response-body-then-removed] at ./checker/if_added_base.yaml
+	in API POST /products
+		removed 'then' subschema from the response body for the status `200`
+
+

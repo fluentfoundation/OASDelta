@@ -1,0 +1,38 @@
+9 cambios: 2 error, 0 warning, 7 info
+error	[new-required-request-property] en ./checker/sub_schema_added_property_revision.yaml
+	en API POST /products
+		agregada la nueva propiedad de solicitud requerida `data/else/newField`
+
+error	[new-required-request-property] en ./checker/sub_schema_added_property_revision.yaml
+	en API POST /products
+		agregada la nueva propiedad de solicitud requerida `data/then/newField`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[new-optional-request-property] en ./checker/sub_schema_added_property_revision.yaml
+	en API POST /products
+		agregada la nueva propiedad de solicitud opcional `data/contains/newField`
+
+info	[new-optional-request-property] en ./checker/sub_schema_added_property_revision.yaml
+	en API POST /products
+		agregada la nueva propiedad de solicitud opcional `data/contentSchema/newField`
+
+info	[new-optional-request-property] en ./checker/sub_schema_added_property_revision.yaml
+	en API POST /products
+		agregada la nueva propiedad de solicitud opcional `data/dependentSchemas[name]/newField`
+
+info	[new-optional-request-property] en ./checker/sub_schema_added_property_revision.yaml
+	en API POST /products
+		agregada la nueva propiedad de solicitud opcional `data/patternProperties[^x-]/newField`
+
+info	[new-optional-request-property] en ./checker/sub_schema_added_property_revision.yaml
+	en API POST /products
+		agregada la nueva propiedad de solicitud opcional `data/prefixItems[subschema #1]/newField`
+
+info	[new-optional-request-property] en ./checker/sub_schema_added_property_revision.yaml
+	en API POST /products
+		agregada la nueva propiedad de solicitud opcional `data/unevaluatedProperties/newField`
+
+

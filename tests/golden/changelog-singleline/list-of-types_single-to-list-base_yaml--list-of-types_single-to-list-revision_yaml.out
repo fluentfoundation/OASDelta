@@ -1,0 +1,8 @@
+3 changes: 2 error, 0 warning, 1 info
+error at ./list-of-types/single-to-list-revision.yaml, in API GET /test response property `id` list-of-types was widened by adding types `integer` to media type `application/json` of response `200` [response-property-list-of-types-widened]. 
+
+error at ./list-of-types/single-to-list-revision.yaml, in API GET /test response property `status` list-of-types was widened by adding types `number` to media type `application/json` of response `200` [response-property-list-of-types-widened]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

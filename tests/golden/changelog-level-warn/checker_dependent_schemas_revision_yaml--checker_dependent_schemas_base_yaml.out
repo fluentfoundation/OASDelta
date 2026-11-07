@@ -1,0 +1,1 @@
+[{"id":"response-body-dependent-schema-removed","text":"removed the dependent schema `name` from the response body for the status `200`","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","baseSource":{"file":"./checker/dependent_schemas_revision.yaml","line":33,"column":19,"endLine":36,"endColumn":37},"fingerprint":"203d50c39775"}]

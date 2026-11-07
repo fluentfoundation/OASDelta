@@ -1,0 +1,14 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+-  the `created` response's property default value changed from `2020-01-01T00:00:00Z` to `2020-02-01T00:00:00Z` for the status `200`
+-  the `enabled` response's property default value changed from `false` to `true` for the status `200`
+
+
+
+
+
+

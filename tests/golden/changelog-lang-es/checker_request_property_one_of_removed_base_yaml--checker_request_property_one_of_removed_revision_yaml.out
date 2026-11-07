@@ -1,0 +1,22 @@
+5 cambios: 2 error, 0 warning, 3 info
+error	[request-body-one-of-removed] en ./checker/request_property_one_of_removed_revision.yaml
+	en API POST /pets
+		`#/components/schemas/Rabbit` fue removido de la lista `oneOf` del cuerpo de solicitud
+
+error	[request-property-one-of-removed] en ./checker/request_property_one_of_removed_revision.yaml
+	en API POST /pets
+		`#/components/schemas/Breed3` fue removido de la lista `oneOf` de la propiedad de solicitud `oneOf[#/components/schemas/Dog]/breed`
+
+info	[api-schema-removed]
+	en components/schemas
+		removido el esquema `Breed3`
+
+info	[api-schema-removed]
+	en components/schemas
+		removido el esquema `Rabbit`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

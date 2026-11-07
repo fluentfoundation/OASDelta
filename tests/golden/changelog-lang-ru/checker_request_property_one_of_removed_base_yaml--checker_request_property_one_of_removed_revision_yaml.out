@@ -1,0 +1,22 @@
+5 изменений: 2 error, 0 warning, 3 info
+error	[request-body-one-of-removed] в ./checker/request_property_one_of_removed_revision.yaml
+	в API POST /pets
+		удалён `#/components/schemas/Rabbit` из списка `oneOf` тела запроса
+
+error	[request-property-one-of-removed] в ./checker/request_property_one_of_removed_revision.yaml
+	в API POST /pets
+		удалён `#/components/schemas/Breed3` из списка `oneOf` свойства запроса `oneOf[#/components/schemas/Dog]/breed`
+
+info	[api-schema-removed]
+	в components/schemas
+		удалена схема `Breed3`
+
+info	[api-schema-removed]
+	в components/schemas
+		удалена схема `Rabbit`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

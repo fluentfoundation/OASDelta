@@ -1,0 +1,17 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /accounts
+-  the `customerId` response's property pattern `^[0-9]+$` was added for the status `200` (shared schema: `Id`, also at `ownerId`, `userId`)
+
+
+### GET /orders
+-  the `customerId` response's property pattern `^[0-9]+$` was added for the status `200` (shared schema: `Id`, also at `userId`)
+
+
+
+
+
+

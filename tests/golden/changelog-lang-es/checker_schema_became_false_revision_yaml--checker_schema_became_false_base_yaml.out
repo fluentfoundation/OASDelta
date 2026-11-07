@@ -1,0 +1,14 @@
+3 cambios: 0 error, 0 warning, 3 info
+info	[request-parameter-schema-became-not-false] en ./checker/schema_became_false_base.yaml
+	en API POST /items
+		el esquema del parámetro de solicitud `query` `filter` ya no es `false` y vuelve a aceptar valores
+
+info	[request-property-schema-became-not-false] en ./checker/schema_became_false_base.yaml
+	en API POST /items
+		el esquema de la propiedad de solicitud `name` ya no es `false` y vuelve a aceptar valores
+
+info	[response-body-schema-became-not-false] en ./checker/schema_became_false_base.yaml
+	en API POST /items
+		el esquema del cuerpo de respuesta ya no es `false` y vuelve a permitir cuerpos de respuesta
+
+

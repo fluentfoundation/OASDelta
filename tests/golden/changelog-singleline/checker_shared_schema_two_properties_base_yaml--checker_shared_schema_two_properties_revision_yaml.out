@@ -1,0 +1,6 @@
+2 changes: 0 error, 0 warning, 2 info
+info at ./checker/shared_schema_two_properties_revision.yaml, in API GET /accounts the `customerId` response's property pattern `^[0-9]+$` was added for the status `200` (shared schema: `Id`, also at `ownerId`, `userId`) [response-property-pattern-added]. 
+
+info at ./checker/shared_schema_two_properties_revision.yaml, in API GET /orders the `customerId` response's property pattern `^[0-9]+$` was added for the status `200` (shared schema: `Id`, also at `userId`) [response-property-pattern-added]. 
+
+

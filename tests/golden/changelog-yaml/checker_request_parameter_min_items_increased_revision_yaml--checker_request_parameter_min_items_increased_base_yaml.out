@@ -1,0 +1,17 @@
+- id: request-parameter-min-items-decreased
+  text: for the `query` request parameter `category`, the minItems was decreased from `3` to `2`
+  level: 1
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups
+  section: paths
+  baseSource:
+    file: ./checker/request_parameter_min_items_increased_revision.yaml
+    line: 26
+    column: 13
+  revisionSource:
+    file: ./checker/request_parameter_min_items_increased_base.yaml
+    line: 26
+    column: 13
+  fingerprint: 9ce46b500bd3
+

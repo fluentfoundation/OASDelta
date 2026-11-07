@@ -1,0 +1,20 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: removed the request property `data/contains/newField`
+- :warning: removed the request property `data/contentSchema/newField`
+- :warning: removed the request property `data/dependentSchemas[name]/newField`
+- :warning: removed the request property `data/else/newField`
+- :warning: removed the request property `data/patternProperties[^x-]/newField`
+- :warning: removed the request property `data/prefixItems[subschema #1]/newField`
+- :warning: removed the request property `data/then/newField`
+- :warning: removed the request property `data/unevaluatedProperties/newField`
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+::notice title=api-global-security-added,file=openapi-test701.yaml,line=18,col=1::in API   the security scheme `bearerAuth` was added to the API
+::notice title=api-security-component-added,file=openapi-test701.yaml,line=238,col=5::in API   the component security scheme `AccessToken` was added
+::notice title=api-security-component-added,file=openapi-test701.yaml,line=241,col=5::in API   the component security scheme `OAuth` was added
+::notice title=api-security-component-added,file=openapi-test701.yaml,line=234,col=5::in API   the component security scheme `bearerAuth` was added
+::notice title=endpoint-added,file=openapi-test701.yaml,line=33,col=5::in API GET /api/{domain}/{project}/badges/security-score endpoint added
+::notice title=endpoint-added,file=openapi-test701.yaml,line=132,col=5::in API GET /api/{domain}/{project}/install-command endpoint added
+::notice title=endpoint-added,file=openapi-test701.yaml,line=175,col=5::in API POST /register endpoint added
+

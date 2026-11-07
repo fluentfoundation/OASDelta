@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[request-parameter-property-list-of-types-widened] em ./list-of-types/param-property-base.yaml
+	em API GET /test
+		lista de tipos da propriedade `mode` do parâmetro `query` `filter` da requisição foi expandida adicionando tipos `integer and boolean`
+
+

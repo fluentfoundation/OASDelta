@@ -1,0 +1,38 @@
+9 изменений: 2 error, 0 warning, 7 info
+error	[new-required-request-property] в ./checker/sub_schema_added_property_revision.yaml
+	в API POST /products
+		добавлено новое обязательное поле запроса `data/else/newField`
+
+error	[new-required-request-property] в ./checker/sub_schema_added_property_revision.yaml
+	в API POST /products
+		добавлено новое обязательное поле запроса `data/then/newField`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[new-optional-request-property] в ./checker/sub_schema_added_property_revision.yaml
+	в API POST /products
+		добавлено новое необязательное поле запроса `data/contains/newField`
+
+info	[new-optional-request-property] в ./checker/sub_schema_added_property_revision.yaml
+	в API POST /products
+		добавлено новое необязательное поле запроса `data/contentSchema/newField`
+
+info	[new-optional-request-property] в ./checker/sub_schema_added_property_revision.yaml
+	в API POST /products
+		добавлено новое необязательное поле запроса `data/dependentSchemas[name]/newField`
+
+info	[new-optional-request-property] в ./checker/sub_schema_added_property_revision.yaml
+	в API POST /products
+		добавлено новое необязательное поле запроса `data/patternProperties[^x-]/newField`
+
+info	[new-optional-request-property] в ./checker/sub_schema_added_property_revision.yaml
+	в API POST /products
+		добавлено новое необязательное поле запроса `data/prefixItems[subschema #1]/newField`
+
+info	[new-optional-request-property] в ./checker/sub_schema_added_property_revision.yaml
+	в API POST /products
+		добавлено новое необязательное поле запроса `data/unevaluatedProperties/newField`
+
+

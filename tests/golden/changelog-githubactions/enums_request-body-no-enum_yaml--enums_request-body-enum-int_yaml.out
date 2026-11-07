@@ -1,0 +1,3 @@
+::error title=request-body-became-enum,file=./enums/request-body-enum-int.yaml,line=23,col=15::in API GET /api/v2/changeOfRequestFieldValueTiedToEnumTest request body was restricted to a list of enum values
+::error title=request-body-type-changed,file=./enums/request-body-enum-int.yaml,line=21,col=15::in API GET /api/v2/changeOfRequestFieldValueTiedToEnumTest the request's body `type` changed from `string` to `int`
+

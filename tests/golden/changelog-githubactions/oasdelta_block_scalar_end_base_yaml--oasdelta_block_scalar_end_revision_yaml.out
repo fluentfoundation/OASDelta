@@ -1,0 +1,4 @@
+::notice title=new-optional-request-property,file=./oasdelta/block_scalar_end_revision.yaml,line=16,col=17::in API POST /budgets added the new optional request property `expires_at`
+::notice title=new-optional-request-property,file=./oasdelta/block_scalar_end_revision.yaml,line=25,col=17::in API POST /budgets added the new optional request property `partial_success`
+::notice title=new-optional-request-property,file=./oasdelta/block_scalar_end_revision.yaml,line=30,col=17::in API POST /budgets added the new optional request property `strict`
+

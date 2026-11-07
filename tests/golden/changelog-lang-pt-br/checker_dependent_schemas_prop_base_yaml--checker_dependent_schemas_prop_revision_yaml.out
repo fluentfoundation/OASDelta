@@ -1,0 +1,14 @@
+3 alterações: 1 error, 0 warning, 2 info
+error	[request-property-dependent-schema-added] em ./checker/dependent_schemas_prop_revision.yaml
+	em API POST /products
+		adicionado o esquema dependente `name` à propriedade de requisição `details`
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+info	[response-property-dependent-schema-added] em ./checker/dependent_schemas_prop_revision.yaml
+	em API POST /products
+		adicionado o esquema dependente `name` à propriedade de resposta `details` para o status `200`
+
+

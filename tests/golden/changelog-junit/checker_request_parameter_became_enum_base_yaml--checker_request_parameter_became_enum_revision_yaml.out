@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-parameter-became-enum" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `path` request parameter `groupId` was restricted to a list of enum values</failure>
+    </testcase>
+    <testcase name="request-parameter-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `path` request parameter `groupId`, the `type` was changed from `string` to `integer`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

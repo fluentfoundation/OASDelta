@@ -1,0 +1,16 @@
+7 changes: 3 error, 0 warning, 4 info
+error at ./checker/if_added_prop_revision.yaml, in API POST /products added 'else' subschema to the request property `details` [request-property-else-added]. 
+
+error at ./checker/if_added_prop_revision.yaml, in API POST /products added 'if' subschema to the request property `details` [request-property-if-added]. 
+
+error at ./checker/if_added_prop_revision.yaml, in API POST /products added 'then' subschema to the request property `details` [request-property-then-added]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./checker/if_added_prop_revision.yaml, in API POST /products added 'else' subschema to the `details` response property for the status `200` [response-property-else-added]. 
+
+info at ./checker/if_added_prop_revision.yaml, in API POST /products added 'if' subschema to the `details` response property for the status `200` [response-property-if-added]. 
+
+info at ./checker/if_added_prop_revision.yaml, in API POST /products added 'then' subschema to the `details` response property for the status `200` [response-property-then-added]. 
+
+

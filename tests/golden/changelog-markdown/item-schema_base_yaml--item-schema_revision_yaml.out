@@ -1,0 +1,26 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /drop
+- :warning: added an item schema to the media type `application/jsonl` of the request body
+- :warning: removed the item schema from the media type `application/jsonl` for the response with the status `200`, leaving the body with no schema
+
+
+### GET /events
+-  removed the `deleted` enum value from the `kind` response property for the response status `200` (item schema)
+
+
+### POST /ingest
+- :warning: the request property `weight` became required (item schema)
+
+
+### GET /keep
+- :warning: removed the item schema from the media type `application/jsonl` for the response with the status `200`
+
+
+
+
+
+

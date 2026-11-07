@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /api/v2/changeOfRequestFieldValueTiedToEnumTest
+- :warning: request body was restricted to a list of enum values
+
+
+
+
+
+

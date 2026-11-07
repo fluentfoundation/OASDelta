@@ -1,0 +1,10 @@
+2 changes: 0 error, 0 warning, 2 info
+info	[response-property-became-required] at ./checker/response_property_became_optional_base.yaml
+	in API POST /api/v1.0/groups
+		the response property `data/name` became required for the status `200`
+
+info	[response-required-property-added] at ./checker/response_property_became_optional_base.yaml
+	in API POST /api/v1.0/groups
+		added the required property `location` to the response with the `200` status
+
+

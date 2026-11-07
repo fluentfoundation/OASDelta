@@ -1,0 +1,25 @@
+- id: request-property-became-nullable
+  text: the request property `optionalEnum` became nullable
+  level: 1
+  operation: POST
+  operationId: testOp
+  path: /test
+  section: paths
+  fingerprint: 0c4e14a18e62
+- id: request-property-became-nullable
+  text: the request property `optionalPrimitive` became nullable
+  level: 1
+  operation: POST
+  operationId: testOp
+  path: /test
+  section: paths
+  fingerprint: abd811bf0f95
+- id: request-property-became-nullable
+  text: the request property `optionalRef` became nullable
+  level: 1
+  operation: POST
+  operationId: testOp
+  path: /test
+  section: paths
+  fingerprint: dd1929d7ee35
+

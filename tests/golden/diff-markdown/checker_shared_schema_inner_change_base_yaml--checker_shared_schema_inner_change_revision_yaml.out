@@ -1,0 +1,25 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /example
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: left
+              - Properties changed
+                - Modified property: id
+                  - Type changed from 'string' to 'integer'
+            - Modified property: right
+              - Properties changed
+                - Modified property: id
+                  - Type changed from 'string' to 'integer'
+
+

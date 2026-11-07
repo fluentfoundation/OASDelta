@@ -1,0 +1,13 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /test
+- :warning: added the pattern `^\w+$` to the request property `name`
+
+
+
+
+
+

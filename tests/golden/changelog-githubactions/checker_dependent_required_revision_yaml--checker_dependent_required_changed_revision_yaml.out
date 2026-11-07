@@ -1,0 +1,6 @@
+::error title=request-body-dependent-required-changed,file=./checker/dependent_required_changed_revision.yaml,line=21,col=15::in API POST /products the request body dependentRequired for `name` was updated: `phone added`
+::error title=response-body-dependent-required-changed,file=./checker/dependent_required_changed_revision.yaml,line=39,col=17::in API POST /products the response body dependentRequired for `name` was updated for the status `200`: `phone added`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=new-optional-request-property,file=./checker/dependent_required_changed_revision.yaml,line=19,col=17::in API POST /products added the new optional request property `phone`
+::notice title=response-optional-property-added,file=./checker/dependent_required_changed_revision.yaml,line=37,col=19::in API POST /products added the optional property `phone` to the response with the `200` status
+

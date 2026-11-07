@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/api/v2/changeOfResponseFieldValueTiedToEnumTest":{"operations":{"modified":{"GET":{"responses":{"modified":{"200":{"content":{"modified":{"application/json":{"schema":{"enum":{"deleted":["VALUE_3"]}}}}}}}}}}}}}}}

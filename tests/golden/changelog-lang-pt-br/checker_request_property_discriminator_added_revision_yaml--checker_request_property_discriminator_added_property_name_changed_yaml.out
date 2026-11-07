@@ -1,0 +1,42 @@
+10 alterações: 0 error, 4 warning, 6 info
+warning	[request-property-removed] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade de requisição `oneOf[#/components/schemas/Cat]/petType` foi removida
+
+warning	[request-property-removed] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade de requisição `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name` foi removida
+
+warning	[request-property-removed] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade de requisição `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name` foi removida
+
+warning	[request-property-removed] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade de requisição `oneOf[#/components/schemas/Dog]/petType` foi removida
+
+info	[new-optional-request-property] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		adicionada a nova propriedade de requisição opcional `oneOf[#/components/schemas/Cat]/petType2`
+
+info	[new-optional-request-property] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		adicionada a nova propriedade de requisição opcional `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name2`
+
+info	[new-optional-request-property] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		adicionada a nova propriedade de requisição opcional `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name2`
+
+info	[new-optional-request-property] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		adicionada a nova propriedade de requisição opcional `oneOf[#/components/schemas/Dog]/petType2`
+
+info	[request-body-discriminator-property-name-changed] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		o nome da propriedade do discriminador de requisição foi alterado de `petType` para `petType2`
+
+info	[request-property-discriminator-property-name-changed] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		o nome da propriedade do discriminador foi alterado para a propriedade de requisição `oneOf[#/components/schemas/Dog]/breed` de `name` para `name2`
+
+

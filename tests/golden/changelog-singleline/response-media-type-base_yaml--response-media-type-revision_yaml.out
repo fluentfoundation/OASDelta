@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./response-media-type-revision.yaml, in API GET /products removed the media type `application/json` for the response with the status `200` [response-media-type-removed]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

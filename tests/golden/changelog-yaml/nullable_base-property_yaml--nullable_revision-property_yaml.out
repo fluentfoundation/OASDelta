@@ -1,0 +1,17 @@
+- id: response-property-became-nullable
+  text: the response property `name` became nullable for the status `201`
+  level: 3
+  operation: POST
+  path: /payments/{id}
+  section: paths
+  revisionSource:
+    file: ./nullable/revision-property.yaml
+    line: 18
+    column: 21
+  fingerprint: fc34530938a7
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+

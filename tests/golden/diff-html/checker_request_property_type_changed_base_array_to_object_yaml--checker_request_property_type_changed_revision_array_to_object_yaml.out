@@ -1,0 +1,89 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-2">Modified Endpoints: 2</h3>
+<hr>
+<p>POST /dogs</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: colors
+<ul>
+<li>Type changed from 'array' to 'object'</li>
+<li>Items changed
+<ul>
+<li>Schema deleted</li>
+</ul>
+</li>
+<li>Required changed
+<ul>
+<li>New required property: blue</li>
+<li>New required property: green</li>
+<li>New required property: red</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>New property: blue</li>
+<li>New property: green</li>
+<li>New property: red</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>POST /pets</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'array' to 'object'</li>
+<li>Items changed
+<ul>
+<li>Schema deleted</li>
+</ul>
+</li>
+<li>Required changed
+<ul>
+<li>New required property: data</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>New property: data</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

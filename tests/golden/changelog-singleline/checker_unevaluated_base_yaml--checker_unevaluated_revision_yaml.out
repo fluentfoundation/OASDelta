@@ -1,0 +1,12 @@
+5 changes: 2 error, 0 warning, 3 info
+error at ./checker/unevaluated_revision.yaml, in API POST /products added 'unevaluatedItems' constraint to the request body [request-body-unevaluated-items-added]. 
+
+error at ./checker/unevaluated_revision.yaml, in API POST /products added 'unevaluatedProperties' constraint to the request body [request-body-unevaluated-properties-added]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./checker/unevaluated_revision.yaml, in API POST /products added 'unevaluatedItems' constraint to the response body for the status `200` [response-body-unevaluated-items-added]. 
+
+info at ./checker/unevaluated_revision.yaml, in API POST /products added 'unevaluatedProperties' constraint to the response body for the status `200` [response-body-unevaluated-properties-added]. 
+
+

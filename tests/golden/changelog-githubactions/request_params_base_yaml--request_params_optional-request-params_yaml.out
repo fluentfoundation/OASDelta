@@ -1,0 +1,4 @@
+::notice title=new-optional-request-parameter,file=./request_params/optional-request-params.yaml,line=10,col=11::in API GET /api/test1 added the new optional `header` request parameter `x-newrequestheaderparam`
+::notice title=new-optional-request-parameter,file=./request_params/optional-request-params.yaml,line=27,col=11::in API GET /api/test2 added the new optional `query` request parameter `newQueryParam`
+::notice title=new-optional-request-parameter,file=./request_params/optional-request-params.yaml,line=40,col=11::in API GET /api/test3 added the new optional `cookie` request parameter `csrf-token`
+

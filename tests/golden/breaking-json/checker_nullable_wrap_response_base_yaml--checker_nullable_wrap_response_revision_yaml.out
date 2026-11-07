@@ -1,0 +1,1 @@
+[{"id":"response-property-became-nullable","text":"the response property `status` became nullable for the status `200`","level":3,"operation":"GET","operationId":"testOp","path":"/test","section":"paths","fingerprint":"5b0959a90f2c"}]

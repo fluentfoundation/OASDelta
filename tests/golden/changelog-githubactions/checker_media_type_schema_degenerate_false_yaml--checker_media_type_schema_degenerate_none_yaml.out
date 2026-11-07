@@ -1,0 +1,3 @@
+::error title=response-body-media-type-schema-removed,file=./checker/media_type_schema_degenerate_none.yaml::in API POST /items removed the schema from the media type `application/json` for the response with the status `200`
+::notice title=request-body-media-type-schema-removed,file=./checker/media_type_schema_degenerate_none.yaml::in API POST /items removed the schema from the media type `application/json` of the request body
+

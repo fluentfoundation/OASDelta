@@ -1,0 +1,19 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /pets
+-  removed `#/components/schemas/Rabbit` from the request body `allOf` list
+-  removed `#/components/schemas/Breed3` from the `allOf[#/components/schemas/Dog]/breed` request property `allOf` list
+
+
+
+
+## Components
+-  removed the schema `Breed3`
+-  removed the schema `Rabbit`
+
+
+
+

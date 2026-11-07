@@ -1,0 +1,1 @@
+[{"id":"response-media-type-removed","text":"removed the media type `application/json` for the response with the status `200`","level":3,"operation":"GET","path":"/products","section":"paths","baseSource":{"file":"./response-media-type-base.yaml","line":35,"column":13,"endLine":37,"endColumn":56},"fingerprint":"12f81b56e73b"}]

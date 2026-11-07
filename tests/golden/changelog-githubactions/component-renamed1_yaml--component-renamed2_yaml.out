@@ -1,0 +1,3 @@
+::notice title=api-schema-removed::in API   removed the schema `Old`
+::notice title=response-optional-property-added,file=./component-renamed2.yaml,line=22,col=9::in API GET /example added the optional property `extra` to the response with the `200` status
+

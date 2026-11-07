@@ -1,0 +1,17 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /subscribe
+- :warning: the endpoint no longer allows anonymous access and now only accepts `petstore_auth: [read:pets, write:pets]`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

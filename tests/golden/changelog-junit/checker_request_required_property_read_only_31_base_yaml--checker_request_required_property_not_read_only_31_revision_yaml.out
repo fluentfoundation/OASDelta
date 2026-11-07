@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="request-required-property-became-not-read-only-in-openapi-31" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request required property `id` became not read-only</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

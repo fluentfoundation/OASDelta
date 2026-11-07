@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /register
+- Responses changed
+  - Modified response: default
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: respenum
+              - New enum values: [QWE]
+            - Modified property: respenum2
+              - Properties changed
+                - Modified property: respenum3
+                  - New enum values: [TER2]
+
+

@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /test:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    name:
+                                                        pattern:
+                                                            from: ""
+                                                            to: ^\w+$
+endpoints:
+    modified:
+        ?   method: POST
+            path: /test
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        name:
+                                            pattern:
+                                                from: ""
+                                                to: ^\w+$
+components:
+    schemas:
+        modified:
+            TestRequest:
+                properties:
+                    modified:
+                        name:
+                            pattern:
+                                from: ""
+                                to: ^\w+$
+

@@ -1,0 +1,16 @@
+# API Changelog 0.1 vs. 0.1
+
+
+## API Changes
+
+### GET /books/{bookId}
+- :warning: the `bookid` request header's property `name` was restricted to a list of enum values
+-  added the enum value `VALUE_1` to the property `name` of the `header` request parameter `bookid`
+-  added the enum value `VALUE_2` to the property `name` of the `header` request parameter `bookid`
+-  added the enum value `VALUE_3` to the property `name` of the `header` request parameter `bookid`
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+### New Endpoints: 2
+--------------------
+QUERY /new  
+MOVE /search  
+
+### Deleted Endpoints: 3
+------------------------
+LOCK /gone  
+QUERY /gone  
+PURGE /search  
+
+### Modified Endpoints: 2
+-------------------------
+COPY /search
+- Deprecated changed from false to true
+
+QUERY /search
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Properties changed
+          - Modified property: term
+            - Type changed from 'string' to 'integer'
+- Responses changed
+  - Deleted response: 418
+
+

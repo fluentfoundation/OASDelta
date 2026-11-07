@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./checker/request_property_became_nullable_revision.yaml, in API POST /products the request property `name` became nullable [request-property-became-nullable]. 
+
+

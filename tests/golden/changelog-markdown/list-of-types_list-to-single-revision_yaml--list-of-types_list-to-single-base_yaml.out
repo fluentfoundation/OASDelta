@@ -1,0 +1,14 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /test
+-  request property `userId` list-of-types was widened by adding types `string` to media type `application/json`
+-  request property `value` list-of-types was widened by adding types `number and boolean` to media type `application/json`
+
+
+
+
+
+

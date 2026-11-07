@@ -1,0 +1,2 @@
+::notice title=request-parameter-min-decreased,file=./checker/request_parameter_min_increased_base.yaml,line=24,col=13::in API POST /api/v1.0/groups for the `path` request parameter `groupId`, the min was decreased from `10.00` to `1.00`
+

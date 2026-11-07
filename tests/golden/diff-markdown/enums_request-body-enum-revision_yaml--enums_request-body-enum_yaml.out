@@ -1,0 +1,16 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /api/v2/changeOfRequestFieldValueTiedToEnumTest
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - New enum values: [VALUE_3]
+
+

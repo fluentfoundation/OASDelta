@@ -1,0 +1,28 @@
+### New Endpoints: 2
+--------------------
+GET /resource/new  
+GET /resource/newest  
+
+### Deleted Endpoints: 4
+------------------------
+GET /api/{domain}/{project}/badges/security-score  
+GET /api/{domain}/{project}/install-command  
+POST /register  
+POST /subscribe  
+
+### Modified Endpoints: None
+----------------------------
+Other Changes
+-------------
+Extensions changed
+- Deleted extension: x-extension-test
+- Deleted extension: x-extension-test2
+
+Version changed from '3.0.3' to '3.0.0'
+Security Requirements changed
+- Deleted security requirements: bearerAuth
+
+Servers changed
+- Deleted server: tufin.com
+
+

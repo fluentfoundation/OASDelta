@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="api-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the schema `Old`</failure>
+    </testcase>
+    <testcase name="response-optional-property-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the optional property `extra` to the response with the `200` status</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

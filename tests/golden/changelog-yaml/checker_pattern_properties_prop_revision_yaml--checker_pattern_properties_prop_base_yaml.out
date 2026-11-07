@@ -1,0 +1,34 @@
+- id: response-property-pattern-property-removed
+  text: removed the pattern property `^x-` from the `details` response property for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/pattern_properties_prop_revision.yaml
+    line: 31
+    column: 23
+    endLine: 32
+    endColumn: 37
+  fingerprint: 7c04843b3136
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-property-pattern-property-removed
+  text: removed the pattern property `^x-` from the `details` request property
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/pattern_properties_prop_revision.yaml
+    line: 18
+    column: 21
+    endLine: 19
+    endColumn: 35
+  fingerprint: 8ab59496838d
+

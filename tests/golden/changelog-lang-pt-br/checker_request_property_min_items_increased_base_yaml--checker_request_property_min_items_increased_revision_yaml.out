@@ -1,0 +1,6 @@
+1 alterações: 1 error, 0 warning, 0 info
+error	[request-body-min-items-increased] em ./checker/request_property_min_items_increased_revision.yaml
+	em API POST /products
+		o número mínimo de itens do corpo da requisição foi aumentado para `20`
+
+

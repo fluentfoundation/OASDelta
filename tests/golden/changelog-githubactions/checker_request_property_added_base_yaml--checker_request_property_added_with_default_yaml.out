@@ -1,0 +1,3 @@
+::error title=new-required-request-property-with-default,file=./checker/request_property_added_with_default.yaml,line=17,col=17::in API POST /products added the new required request property `description` with a default value
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

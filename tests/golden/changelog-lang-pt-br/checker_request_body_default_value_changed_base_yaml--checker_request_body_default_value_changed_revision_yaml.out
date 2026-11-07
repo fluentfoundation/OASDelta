@@ -1,0 +1,14 @@
+3 alterações: 1 error, 0 warning, 2 info
+error	[request-body-media-type-removed] em ./checker/request_body_default_value_changed_revision.yaml
+	em API POST /products
+		o tipo de mídia `application/json` foi removido do corpo da requisição
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+info	[request-body-default-value-changed] em ./checker/request_body_default_value_changed_revision.yaml
+	em API POST /products
+		o valor padrão do corpo da requisição `text/plain` foi alterado de `Default` para `NewDefault`
+
+

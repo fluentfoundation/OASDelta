@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-body-schema-became-not-false] en ./checker/schema_became_false_claims_base.yaml
+	en API POST /t
+		el esquema del cuerpo de solicitud ya no es `false` y vuelve a aceptar cuerpos de solicitud
+
+

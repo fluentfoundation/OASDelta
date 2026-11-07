@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="7" errors="0" failures="7" name="OASDiff">
+    <testcase name="request-property-content-encoding-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `details/data` request property contentEncoding changed from `base64` to `quoted-printable`</failure>
+    </testcase>
+    <testcase name="request-property-content-media-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `details/data` request property contentMediaType changed from `application/json` to `text/plain`</failure>
+    </testcase>
+    <testcase name="request-property-content-schema-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added 'contentSchema' to the request property `details/data`</failure>
+    </testcase>
+    <testcase name="response-property-content-encoding-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `details/data` response property contentEncoding changed from `base64` to `quoted-printable` for the status `200`</failure>
+    </testcase>
+    <testcase name="response-property-content-media-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `details/data` response property contentMediaType changed from `application/json` to `text/plain` for the status `200`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="response-property-content-schema-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added 'contentSchema' to the `details/data` response property for the status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

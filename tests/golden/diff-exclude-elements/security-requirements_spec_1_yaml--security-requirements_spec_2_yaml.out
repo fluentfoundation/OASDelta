@@ -1,0 +1,1 @@
+{"security":{"modified":[{"base":{"index":0,"schemes":{"petstore_auth":["write:pets","read:pets"]}},"revision":{"index":0,"schemes":{"petstore_auth":["write:pets"]}},"scopes":{"petstore_auth":{"deleted":["read:pets"]}}}]}}

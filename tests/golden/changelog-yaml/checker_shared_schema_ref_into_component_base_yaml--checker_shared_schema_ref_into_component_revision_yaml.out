@@ -1,0 +1,20 @@
+- id: response-optional-property-added
+  text: 'added the optional property `left/extra` to the response with the `200` status (shared schema: `Holder`, also at `right/extra`)'
+  sharedSchema:
+    name: Holder
+    properties:
+        - left/extra
+        - right/extra
+    count: 2
+  level: 1
+  operation: GET
+  path: /example
+  section: paths
+  revisionSource:
+    file: ./checker/shared_schema_ref_into_component_revision.yaml
+    line: 30
+    column: 13
+    endLine: 31
+    endColumn: 27
+  fingerprint: 1486c6ead10c
+

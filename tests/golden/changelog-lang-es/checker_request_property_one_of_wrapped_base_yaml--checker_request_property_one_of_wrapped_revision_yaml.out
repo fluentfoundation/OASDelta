@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-body-wrapped-in-one-of] en ./checker/request_property_one_of_wrapped_revision.yaml
+	en API POST /example
+		el cuerpo de solicitud se reestructuró en un `oneOf`, por lo que una carga útil que antes era válida podría dejar de aceptarse
+
+

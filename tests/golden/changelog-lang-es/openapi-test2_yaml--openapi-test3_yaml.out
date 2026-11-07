@@ -1,0 +1,74 @@
+17 cambios: 6 error, 2 warning, 9 info
+error	[new-required-request-parameter] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		agregado el nuevo parámetro `header` de solicitud requerido `x-auth-name`
+
+error	[request-parameter-max-length-set] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		para el parámetro `query` de solicitud `token`, maxLength fue establecido en `30`
+		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+
+error	[request-parameter-pattern-added] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		agregado el patrón `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` al parámetro `query` de solicitud `token`
+		Este es un cambio crítico porque agregar una restricción de patrón a un parámetro previamente sin restricciones rechazará valores que anteriormente eran aceptados, rompiendo clientes existentes
+
+error	[request-parameter-type-changed] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		para el parámetro `path` de solicitud `domain`, el `type/format` fue cambiado de `integer/non-negative integer` a `string/hyphen-separated list`
+
+error	[request-parameter-type-changed] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		para el parámetro `query` de solicitud `token`, el `type/format` fue cambiado de `any` a `string/uuid`
+
+error	[api-removed-without-deprecation] en openapi-test2.yaml
+	en API POST /api/{domain}/{project}/badges/security-score
+		api removida sin deprecación
+
+warning	[request-parameter-pattern-changed] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		cambiado el patrón del parámetro `path` de solicitud `domain` de `^(?:\d+)$` a `^(?:([a-z]+-)*([a-z]+)?)$`
+		Esta es una advertencia porque agregar o cambiar un patrón puede restringir los valores aceptados y romper clientes existentes. Para cambios de patrón, es difícil analizar automáticamente si el nuevo patrón es un superconjunto del patrón anterior (ej. cambiado de '[0-9]+' a '[0-9]*')
+
+warning	[request-parameter-removed] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		eliminado el parámetro `query` de solicitud `filter`
+		Esto es una advertencia porque algunas aplicaciones pueden devolver un error al recibir un parámetro que no esperan. Se recomienda deprecar el parámetro primero.
+
+info	[api-security-component-added]
+	en components/securitySchemes
+		el esquema de seguridad `OAuth` fue agregado
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.1`
+
+info	[api-operation-id-added] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		id de operación de api `GetSecurityScore` fue agregado
+
+info	[request-parameter-min-unset] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		para el parámetro `path` de solicitud `domain`, el valor min fue removido de `7.00`
+
+info	[request-parameter-pattern-removed] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		removido el patrón `^(?:[\w-./:]+)$` del parámetro `query` de solicitud `image`
+
+info	[request-parameter-type-generalized] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		para el parámetro `query` de solicitud `image`, el `type/format` fue ampliado de `string/general string` a `any`
+
+info	[endpoint-added] en openapi-test3.yaml
+	en API GET /api/{domain}/{project}/install-command
+		endpoint agregado
+
+info	[endpoint-added] en openapi-test3.yaml
+	en API POST /register
+		endpoint agregado
+
+info	[endpoint-added] en openapi-test3.yaml
+	en API POST /subscribe
+		endpoint agregado
+
+

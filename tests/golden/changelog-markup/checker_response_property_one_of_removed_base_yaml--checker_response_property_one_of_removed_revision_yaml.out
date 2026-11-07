@@ -1,0 +1,20 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /pets
+-  removed `#/components/schemas/Rabbit` from the response body `oneOf` list for the response status `200`
+-  removed `#/components/schemas/Breed3` from the `oneOf[#/components/schemas/Dog]/breed` response property `oneOf` list for the response status `200`
+-  removed `subschema #2: Dark brown types` from the `oneOf[#/components/schemas/Fox]/breed` response property `oneOf` list for the response status `200`
+
+
+
+
+## Components
+-  removed the schema `Breed3`
+-  removed the schema `Rabbit`
+
+
+
+

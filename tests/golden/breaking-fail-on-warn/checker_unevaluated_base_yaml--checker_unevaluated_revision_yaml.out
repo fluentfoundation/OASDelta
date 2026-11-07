@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[request-body-unevaluated-items-added] at ./checker/unevaluated_revision.yaml
+	in API POST /products
+		added 'unevaluatedItems' constraint to the request body
+
+error	[request-body-unevaluated-properties-added] at ./checker/unevaluated_revision.yaml
+	in API POST /products
+		added 'unevaluatedProperties' constraint to the request body
+
+

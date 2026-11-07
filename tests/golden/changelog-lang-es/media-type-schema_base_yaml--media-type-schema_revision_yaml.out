@@ -1,0 +1,14 @@
+3 cambios: 1 error, 0 warning, 2 info
+error	[request-body-media-type-schema-added] en ./media-type-schema/revision.yaml
+	en API POST /test
+		agregado un esquema al tipo de media `application/json` del cuerpo de solicitud
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[response-body-media-type-schema-added] en ./media-type-schema/revision.yaml
+	en API POST /test
+		agregado un esquema al tipo de media `application/json` de la respuesta con estado `200`
+
+

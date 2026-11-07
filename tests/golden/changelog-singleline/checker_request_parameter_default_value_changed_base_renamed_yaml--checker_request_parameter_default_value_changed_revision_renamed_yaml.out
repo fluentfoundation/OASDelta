@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./checker/request_parameter_default_value_changed_revision_renamed.yaml, in API POST /api/v1.0/groups/{group_id} for the `path` request parameter `group_id`, default value was changed from `2` to `1` [request-parameter-default-value-changed]. 
+
+

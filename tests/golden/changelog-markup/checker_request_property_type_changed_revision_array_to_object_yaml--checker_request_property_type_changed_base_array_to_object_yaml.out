@@ -1,0 +1,25 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /dogs
+- :warning: the `colors` request property `type` changed from `object` to `array<integer>`
+- :warning: removed the request property `colors/blue`
+- :warning: removed the request property `colors/green`
+- :warning: removed the request property `colors/red`
+
+
+### POST /pets
+- :warning: the request's body `type` changed from `object` to `array<object>`
+- :warning: removed the request property `data`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

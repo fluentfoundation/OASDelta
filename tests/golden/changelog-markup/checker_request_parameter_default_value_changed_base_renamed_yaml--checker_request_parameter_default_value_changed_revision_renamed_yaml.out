@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups/{group_id}
+-  for the `path` request parameter `group_id`, default value was changed from `2` to `1`
+
+
+
+
+
+

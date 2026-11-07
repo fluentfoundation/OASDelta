@@ -1,0 +1,8 @@
+3 changes: 2 error, 0 warning, 1 info
+error at ./checker/nullable_type_array_param_revision.yaml, in API GET /t the `query` request parameter `q` became not nullable [request-parameter-became-not-nullable]. 
+
+error at ./checker/nullable_type_array_param_revision.yaml, in API GET /t the `tag` property of the `query` request parameter `filter` became not nullable [request-parameter-property-became-not-nullable]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

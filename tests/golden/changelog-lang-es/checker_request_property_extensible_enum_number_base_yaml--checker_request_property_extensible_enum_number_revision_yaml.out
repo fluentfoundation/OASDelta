@@ -1,0 +1,10 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[request-property-x-extensible-enum-value-removed] en ./checker/request_property_extensible_enum_number_revision.yaml
+	en API POST /pets
+		removido el valor x-extensible-enum `3` de la propiedad de solicitud `name`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

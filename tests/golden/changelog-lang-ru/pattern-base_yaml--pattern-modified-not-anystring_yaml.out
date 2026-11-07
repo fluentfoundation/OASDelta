@@ -1,0 +1,15 @@
+3 изменений: 0 error, 2 warning, 1 info
+warning	[response-property-pattern-changed] в ./pattern-modified-not-anystring.yaml
+	в API POST /api/v1.0/groups
+		у свойства `created` для ответа со статусом `^[a-z]+$` изменился паттерн с `.+` на `200`
+
+warning	[response-property-pattern-changed] в ./pattern-modified-not-anystring.yaml
+	в API GET /api/v1.0/groups/{groupId}
+		у свойства `created` для ответа со статусом `^[a-z]+$` изменился паттерн с `.+` на `200`
+
+info	[request-property-pattern-changed] в ./pattern-modified-not-anystring.yaml
+	в API POST /api/v1.0/groups
+		изменён pattern у поля запроса `created` со значения `^[a-z]+$` на значение `.+`
+		Свойство доступно только для чтения, поэтому оно не встречается в запросах, и это изменение не может сделать запрос недействительным.
+
+

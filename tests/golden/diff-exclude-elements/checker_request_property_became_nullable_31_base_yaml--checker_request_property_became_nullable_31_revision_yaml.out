@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/products":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"properties":{"modified":{"name":{"type":{"added":["null"]}}}}}}}}},"responses":{"modified":{"200":{"content":{"modified":{"application/json":{"schema":{"properties":{"modified":{"status":{"type":{"added":["null"]}}}}}}}}}}}}}}}}}}

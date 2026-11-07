@@ -1,0 +1,5 @@
+::error title=response-success-status-removed,file=./attributes/revision.yaml::in API GET /partner-api/test/another-method removed the success response with the status `200`
+::error title=response-success-status-removed,file=./attributes/revision.yaml::in API GET /partner-api/test/some-method removed the success response with the status `200`
+::notice title=response-success-status-added,file=./attributes/revision.yaml,line=23,col=9::in API GET /partner-api/test/another-method added the success response with the status `201`
+::notice title=response-success-status-added,file=./attributes/revision.yaml,line=13,col=9::in API GET /partner-api/test/some-method added the success response with the status `201`
+

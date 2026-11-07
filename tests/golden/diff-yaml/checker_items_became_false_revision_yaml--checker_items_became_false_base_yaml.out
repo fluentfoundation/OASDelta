@@ -1,0 +1,49 @@
+paths:
+    modified:
+        /items:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            items:
+                                                schemaDeleted: true
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            tags:
+                                                                items:
+                                                                    schemaDeleted: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                items:
+                                    schemaDeleted: true
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                tags:
+                                                    items:
+                                                        schemaDeleted: true
+

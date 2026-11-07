@@ -1,0 +1,6 @@
+::error title=request-body-max-contains-decreased,file=./checker/contains_min_max_base.yaml,line=19,col=15::in API POST /products the request body maxContains was decreased from `6` to `5`
+::error title=response-body-min-contains-decreased,file=./checker/contains_min_max_base.yaml,line=31,col=17::in API POST /products the response body minContains was decreased from `2` to `1` for the status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-body-min-contains-decreased,file=./checker/contains_min_max_base.yaml,line=18,col=15::in API POST /products the request body minContains was decreased from `2` to `1`
+::notice title=response-body-max-contains-decreased,file=./checker/contains_min_max_base.yaml,line=32,col=17::in API POST /products the response body maxContains was decreased from `6` to `5` for the status `200`
+

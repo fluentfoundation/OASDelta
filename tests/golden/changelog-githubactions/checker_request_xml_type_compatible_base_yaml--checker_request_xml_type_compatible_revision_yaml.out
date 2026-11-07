@@ -1,0 +1,2 @@
+::notice title=request-body-type-compatible,file=./checker/request_xml_type_compatible_revision.yaml,line=13,col=15::in API POST /api/v1.0/groups the request's body `type` changed from `object` to `string` (backward compatible)
+

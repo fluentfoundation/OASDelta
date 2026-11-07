@@ -1,0 +1,18 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+- :warning: the `created` response's property pattern `^[a-z]+$` was removed for the status `200`
+-  removed the pattern `^[a-z]+$` from the request property `created`
+
+
+### GET /api/v1.0/groups/{groupId}
+- :warning: the `created` response's property pattern `^[a-z]+$` was removed for the status `200`
+
+
+
+
+
+

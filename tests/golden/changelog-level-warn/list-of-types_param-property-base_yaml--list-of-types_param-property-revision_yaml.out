@@ -1,0 +1,1 @@
+[{"id":"request-parameter-property-list-of-types-narrowed","text":"property `mode` of `query` request parameter `filter` list-of-types was narrowed by removing types `integer and boolean`","level":3,"operation":"GET","path":"/test","section":"paths","revisionSource":{"file":"./list-of-types/param-property-revision.yaml","line":15,"column":17},"fingerprint":"767b627fb59f"}]

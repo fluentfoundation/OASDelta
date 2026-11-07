@@ -1,0 +1,30 @@
+7 изменений: 3 error, 0 warning, 4 info
+error	[request-body-else-added] в ./checker/if_added_revision.yaml
+	в API POST /products
+		добавлена подсхема 'else' в тело запроса
+
+error	[request-body-if-added] в ./checker/if_added_revision.yaml
+	в API POST /products
+		добавлена подсхема 'if' в тело запроса
+
+error	[request-body-then-added] в ./checker/if_added_revision.yaml
+	в API POST /products
+		добавлена подсхема 'then' в тело запроса
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-body-else-added] в ./checker/if_added_revision.yaml
+	в API POST /products
+		добавлена подсхема 'else' в тело ответа для статуса `200`
+
+info	[response-body-if-added] в ./checker/if_added_revision.yaml
+	в API POST /products
+		добавлена подсхема 'if' в тело ответа для статуса `200`
+
+info	[response-body-then-added] в ./checker/if_added_revision.yaml
+	в API POST /products
+		добавлена подсхема 'then' в тело ответа для статуса `200`
+
+

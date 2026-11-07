@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/groups":{"operations":{"modified":{"GET":{"parameters":{"modified":{"query":{"filters":{"schema":{"properties":{"modified":{"groupId":{"type":{"added":["number"],"deleted":["integer"]}}}}}}}}}}}}}}},"components":{"schemas":{"modified":{"GroupFilters":{"properties":{"modified":{"groupId":{"type":{"added":["number"],"deleted":["integer"]}}}}}}}}}

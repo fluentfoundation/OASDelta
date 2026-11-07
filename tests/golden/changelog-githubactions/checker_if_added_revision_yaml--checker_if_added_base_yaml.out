@@ -1,0 +1,8 @@
+::error title=response-body-else-removed,file=./checker/if_added_base.yaml::in API POST /products removed 'else' subschema from the response body for the status `200`
+::error title=response-body-if-removed,file=./checker/if_added_base.yaml::in API POST /products removed 'if' subschema from the response body for the status `200`
+::error title=response-body-then-removed,file=./checker/if_added_base.yaml::in API POST /products removed 'then' subschema from the response body for the status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-body-else-removed,file=./checker/if_added_base.yaml::in API POST /products removed 'else' subschema from the request body
+::notice title=request-body-if-removed,file=./checker/if_added_base.yaml::in API POST /products removed 'if' subschema from the request body
+::notice title=request-body-then-removed,file=./checker/if_added_base.yaml::in API POST /products removed 'then' subschema from the request body
+

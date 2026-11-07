@@ -1,0 +1,4 @@
+1 changes: 0 error, 1 warning, 0 info
+warning at ./checker/allof_unchanged_sibling_revision.yaml, in API POST /items the `wrapper` request property's maxLength was decreased to `5` [request-property-max-length-decreased]. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+
+

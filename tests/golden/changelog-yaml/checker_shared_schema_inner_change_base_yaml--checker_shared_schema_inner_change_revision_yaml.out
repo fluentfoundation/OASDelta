@@ -1,0 +1,27 @@
+- id: response-property-type-changed
+  text: 'the `left/id` response''s property `type` changed from `string` to `integer` for status `200` (shared schema: `Shared`, also at `right/id`)'
+  sharedSchema:
+    name: Shared
+    properties:
+        - left/id
+        - right/id
+    count: 2
+  level: 3
+  operation: GET
+  path: /example
+  section: paths
+  baseSource:
+    file: ./checker/shared_schema_inner_change_base.yaml
+    line: 26
+    column: 11
+  revisionSource:
+    file: ./checker/shared_schema_inner_change_revision.yaml
+    line: 26
+    column: 11
+  fingerprint: 3ba02c94f450
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+

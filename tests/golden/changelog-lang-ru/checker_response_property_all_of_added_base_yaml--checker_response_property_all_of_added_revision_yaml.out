@@ -1,0 +1,12 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[response-body-all-of-added] в ./checker/response_property_all_of_added_revision.yaml
+	в API GET /pets
+		добавлено `#/components/schemas/Rabbit` в список `allOf` тела ответа для статуса ответа `200`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[response-property-all-of-added] в ./checker/response_property_all_of_added_revision.yaml
+	в API GET /pets
+		добавлено `#/components/schemas/Breed3` в список `allOf` свойства ответа `allOf[#/components/schemas/Dog]/breed` для статуса ответа `200`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

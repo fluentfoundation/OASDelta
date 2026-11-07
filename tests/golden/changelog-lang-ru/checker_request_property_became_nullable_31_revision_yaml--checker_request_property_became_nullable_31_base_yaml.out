@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[request-property-became-not-nullable] в ./checker/request_property_became_nullable_31_base.yaml
+	в API POST /products
+		свойство запроса `name` стало недействительным
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-property-became-not-nullable] в ./checker/request_property_became_nullable_31_base.yaml
+	в API POST /products
+		поле ответа `status` стало необнуляемым для ответа со статусом `200`
+
+

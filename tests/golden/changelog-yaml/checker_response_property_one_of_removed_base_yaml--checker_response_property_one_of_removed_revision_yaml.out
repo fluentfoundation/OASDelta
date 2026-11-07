@@ -1,0 +1,65 @@
+- id: api-schema-removed
+  text: removed the schema `Breed3`
+  level: 1
+  section: components
+  baseSource:
+    file: ./checker/response_property_one_of_removed_base.yaml
+    line: 45
+    column: 5
+    endLine: 49
+    endColumn: 23
+  fingerprint: 6185830be922
+- id: api-schema-removed
+  text: removed the schema `Rabbit`
+  level: 1
+  section: components
+  baseSource:
+    file: ./checker/response_property_one_of_removed_base.yaml
+    line: 57
+    column: 5
+    endLine: 61
+    endColumn: 23
+  fingerprint: 38d7bb97ed1b
+- id: response-body-one-of-removed
+  text: removed `#/components/schemas/Rabbit` from the response body `oneOf` list for the response status `200`
+  level: 1
+  operation: GET
+  operationId: listPets
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./checker/response_property_one_of_removed_base.yaml
+    line: 18
+    column: 21
+    endLine: 18
+    endColumn: 56
+  fingerprint: 16cb7f434d05
+- id: response-property-one-of-removed
+  text: removed `#/components/schemas/Breed3` from the `oneOf[#/components/schemas/Dog]/breed` response property `oneOf` list for the response status `200`
+  level: 1
+  operation: GET
+  operationId: listPets
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./checker/response_property_one_of_removed_base.yaml
+    line: 33
+    column: 15
+    endLine: 33
+    endColumn: 50
+  fingerprint: 1ce070fed147
+- id: response-property-one-of-removed
+  text: 'removed `subschema #2: Dark brown types` from the `oneOf[#/components/schemas/Fox]/breed` response property `oneOf` list for the response status `200`'
+  level: 1
+  operation: GET
+  operationId: listPets
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./checker/response_property_one_of_removed_base.yaml
+    line: 75
+    column: 15
+    endLine: 79
+    endColumn: 27
+  fingerprint: 0addcc90b345
+

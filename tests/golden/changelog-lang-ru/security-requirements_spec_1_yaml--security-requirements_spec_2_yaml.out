@@ -1,0 +1,7 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[api-security-scope-removed] в ./security-requirements/spec_2.yaml
+	в API POST /subscribe
+		из схемы безопасности эндпоинта `read:pets` была удалена область безопасности `petstore_auth`
+		Этот эндпоинт наследует требования безопасности верхнего уровня API.
+
+

@@ -1,0 +1,19 @@
+4 changes: 2 error, 1 warning, 1 info
+error	[response-property-became-optional] at ./x-of/revision.json
+	in API GET /api/anyOf/path
+		the response property `anyOf[#/components/schemas/ProblemSchema]/changedProperty` became optional for the status `200`
+
+error	[response-property-became-optional] at ./x-of/revision.json
+	in API GET /api/oneOf/path
+		the response property `oneOf[#/components/schemas/ProblemSchema]/changedProperty` became optional for the status `200`
+
+warning	[response-property-became-optional] at ./x-of/revision.json
+	in API GET /api/allOf/path
+		the response property `allOf[#/components/schemas/ProblemSchema]/changedProperty` became optional for the status `200`
+		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `0.0.1`
+
+

@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/payments/{id}":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"properties":{"modified":{"name":{"enum":{"enumAdded":true,"added":["VALUE_1","VALUE_2","VALUE_3"]}}}}}}}}}}}}}}}}

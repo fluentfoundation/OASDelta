@@ -1,0 +1,40 @@
+- id: api-path-removed-without-deprecation
+  text: api path removed without deprecation
+  level: 3
+  operation: GET
+  path: /health
+  section: paths
+  baseSource:
+    file: openapi-test6.yaml
+    line: 7
+    column: 5
+    endLine: 11
+    endColumn: 33
+  fingerprint: 2441359cef10
+- id: api-path-removed-without-deprecation
+  text: api path removed without deprecation
+  level: 3
+  operation: GET
+  path: /health/live
+  section: paths
+  baseSource:
+    file: openapi-test6.yaml
+    line: 13
+    column: 5
+    endLine: 17
+    endColumn: 33
+  fingerprint: a60aa31d3c5f
+- id: api-path-removed-without-deprecation
+  text: api path removed without deprecation
+  level: 3
+  operation: GET
+  path: /health/ready
+  section: paths
+  baseSource:
+    file: openapi-test6.yaml
+    line: 19
+    column: 5
+    endLine: 23
+    endColumn: 33
+  fingerprint: 4ce9502d79e0
+

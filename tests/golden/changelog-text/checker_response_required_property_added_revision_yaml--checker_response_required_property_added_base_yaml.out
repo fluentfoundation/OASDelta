@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[response-required-property-removed] at ./checker/response_required_property_added_base.yaml
+	in API POST /api/v1.0/groups
+		removed the required property `data/new` from the response with the `200` status
+
+

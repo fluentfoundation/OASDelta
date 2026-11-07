@@ -1,0 +1,25 @@
+- id: response-body-discriminator-added
+  text: added response discriminator for the response status `200`
+  level: 1
+  operation: POST
+  operationId: updatePets
+  path: /pets
+  section: paths
+  revisionSource:
+    file: ./checker/response_property_discriminator_added_revision.yaml
+    line: 18
+    column: 17
+  fingerprint: 8002ba1cccc3
+- id: response-property-discriminator-added
+  text: added discriminator to `oneOf[#/components/schemas/Dog]/breed` response property for the response status `200`
+  level: 1
+  operation: POST
+  operationId: updatePets
+  path: /pets
+  section: paths
+  revisionSource:
+    file: ./checker/response_property_discriminator_added_revision.yaml
+    line: 38
+    column: 11
+  fingerprint: ed470f885a65
+

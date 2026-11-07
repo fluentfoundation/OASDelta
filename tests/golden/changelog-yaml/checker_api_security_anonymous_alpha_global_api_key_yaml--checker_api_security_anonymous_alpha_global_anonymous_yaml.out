@@ -1,0 +1,11 @@
+- id: api-global-security-removed
+  text: the security scheme `apiKey` was removed from the API
+  comment: No endpoint inherits the API's top-level security requirements, so this change affects no client.
+  level: 1
+  section: security
+  baseSource:
+    file: ./checker/api_security_anonymous_alpha_global_api_key.yaml
+    line: 5
+    column: 1
+  fingerprint: 8ca5c90fe842
+

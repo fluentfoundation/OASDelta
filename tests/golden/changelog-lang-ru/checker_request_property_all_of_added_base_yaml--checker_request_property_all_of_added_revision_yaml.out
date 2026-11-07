@@ -1,0 +1,12 @@
+2 изменений: 0 error, 2 warning, 0 info
+warning	[request-body-all-of-added] в ./checker/request_property_all_of_added_revision.yaml
+	в API POST /pets
+		добавлено `#/components/schemas/Rabbit` в список `allOf` тела запроса
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+warning	[request-property-all-of-added] в ./checker/request_property_all_of_added_revision.yaml
+	в API POST /pets
+		добавлено `#/components/schemas/Breed3` в список `allOf` свойства запроса `allOf[#/components/schemas/Dog]/breed`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

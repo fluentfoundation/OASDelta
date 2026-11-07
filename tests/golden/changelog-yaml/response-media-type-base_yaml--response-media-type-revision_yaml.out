@@ -1,0 +1,19 @@
+- id: response-media-type-removed
+  text: removed the media type `application/json` for the response with the status `200`
+  level: 3
+  operation: GET
+  path: /products
+  section: paths
+  baseSource:
+    file: ./response-media-type-base.yaml
+    line: 35
+    column: 13
+    endLine: 37
+    endColumn: 56
+  fingerprint: 12f81b56e73b
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+

@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./checker/request_parameter_property_type_changed_base_num.yaml, in API GET /groups for the `query` request parameter `filters`, the `type` of property `groupId` was narrowed from `string` to `number` [request-parameter-property-type-specialized]. 
+
+

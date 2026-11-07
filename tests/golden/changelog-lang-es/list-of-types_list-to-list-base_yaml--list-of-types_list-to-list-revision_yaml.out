@@ -1,0 +1,14 @@
+3 cambios: 1 error, 0 warning, 2 info
+error	[response-property-list-of-types-widened] en ./list-of-types/list-to-list-revision.yaml
+	en API GET /api
+		lista de tipos de la propiedad `data` de respuesta fue ampliada agregando tipos `number and boolean` al tipo de media `application/json` de la respuesta `200`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[response-property-list-of-types-narrowed] en ./list-of-types/list-to-list-revision.yaml
+	en API GET /api
+		lista de tipos de la propiedad `metadata` de respuesta fue reducida removiendo tipos `object` del tipo de media `application/json` de la respuesta `200`
+
+

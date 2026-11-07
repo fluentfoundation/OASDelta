@@ -1,0 +1,135 @@
+<h3 id="new-endpoints-1">New Endpoints: 1</h3>
+<hr>
+<p>POST /api/{domain}/{project}/badges/security-score</p>
+<h3 id="deleted-endpoints-3">Deleted Endpoints: 3</h3>
+<hr>
+<p>GET /api/{domain}/{project}/install-command<br>
+POST /register<br>
+POST /subscribe</p>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>GET /api/{domain}/{project}/badges/security-score</p>
+<ul>
+<li>Extensions changed
+<ul>
+<li>Deleted extension: x-beta</li>
+<li>Deleted extension: x-extension-test</li>
+</ul>
+</li>
+<li>Tags changed from 'security' to ''</li>
+<li>OperationID changed from 'GetSecurityScores' to ''</li>
+<li>Deleted header param: user</li>
+<li>Deleted header param: x-auth-name</li>
+<li>Deleted cookie param: test</li>
+<li>Modified path param: domain
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'string' to 'integer'</li>
+<li>Format changed from 'hyphen-separated list' to 'non-negative integer'</li>
+<li>Description changed from 'Hyphen-separated list of lowercase string' to 'Non-negative integers (including zero)'</li>
+<li>Example changed from 'generic-bank' to '100'</li>
+<li>Min changed from null to 7</li>
+<li>Pattern changed from '^(?:([a-z]+-)*([a-z]+)?)$' to '^(?:\d+)$'</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified query param: filter
+<ul>
+<li>Extensions changed
+<ul>
+<li>Deleted extension: x-extension-test</li>
+</ul>
+</li>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Extensions changed
+<ul>
+<li>Deleted extension: x-extension-test</li>
+</ul>
+</li>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: color
+<ul>
+<li>Type changed from 'string' to 'number'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified query param: image
+<ul>
+<li>Explode changed from null to true</li>
+<li>Schema changed
+<ul>
+<li>Extensions changed
+<ul>
+<li>Deleted extension: x-extension-test</li>
+</ul>
+</li>
+<li>Description changed from 'alphanumeric' to 'alphanumeric with underscore, dash, period, slash and colon'</li>
+</ul>
+</li>
+<li>Examples changed
+<ul>
+<li>Deleted example: 0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified query param: token
+<ul>
+<li>Schema changed
+<ul>
+<li>Property 'AnyOf' changed
+<ul>
+<li>Schemas added: subschema #1, subschema #2</li>
+</ul>
+</li>
+<li>Type changed from 'string' to ''</li>
+<li>Format changed from 'uuid' to ''</li>
+<li>Description changed from 'RFC 4122 UUID' to ''</li>
+<li>Example changed from '26734565-dbcc-449a-a370-0beaaf04b0e8' to null</li>
+<li>MaxLength changed from 29 to null</li>
+<li>Pattern changed from '^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$' to ''</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>New response: default</li>
+<li>Deleted response: 200</li>
+<li>Deleted response: 201</li>
+<li>Deleted response: 400</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-changes">Other Changes</h2>
+<p>Extensions changed</p>
+<ul>
+<li>Deleted extension: x-extension-test</li>
+<li>Deleted extension: x-extension-test2</li>
+</ul>
+<p>Security Requirements changed</p>
+<ul>
+<li>Deleted security requirements: bearerAuth</li>
+</ul>
+<p>Servers changed</p>
+<ul>
+<li>Deleted server: tufin.com</li>
+</ul>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="response-success-status-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the success response with the status `200`</failure>
+    </testcase>
+    <testcase name="response-success-status-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the success response with the status `200`</failure>
+    </testcase>
+    <testcase name="response-success-status-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the success response with the status `201`</failure>
+    </testcase>
+    <testcase name="response-success-status-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the success response with the status `201`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

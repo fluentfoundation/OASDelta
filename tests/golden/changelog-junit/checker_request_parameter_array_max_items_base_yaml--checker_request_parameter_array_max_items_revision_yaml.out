@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-parameter-max-items-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `ids`, the maxItems was decreased from `50` to `10`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

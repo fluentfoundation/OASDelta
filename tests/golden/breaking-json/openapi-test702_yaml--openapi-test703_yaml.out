@@ -1,0 +1,1 @@
+[{"id":"request-parameter-enum-value-removed","text":"removed the enum value `removed-value` from the `path` request parameter `domain`","level":3,"operation":"GET","path":"/api/{domain}/{project}/install-command","section":"paths","baseSource":{"file":"openapi-test702.yaml","line":150,"column":13},"fingerprint":"96d908990b32"}]

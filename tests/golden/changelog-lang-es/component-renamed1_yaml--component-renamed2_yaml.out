@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[api-schema-removed]
+	en components/schemas
+		removido el esquema `Old`
+
+info	[response-optional-property-added] en ./component-renamed2.yaml
+	en API GET /example
+		agregada la propiedad opcional `extra` a la respuesta con estado `200`
+
+

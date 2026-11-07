@@ -1,0 +1,13 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+-  the response's body `type` changed from `string` to `object` for status `200` (backward compatible)
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    details:
+                                                        propertyNames:
+                                                            schemaDeleted: true
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            details:
+                                                                propertyNames:
+                                                                    schemaDeleted: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        details:
+                                            propertyNames:
+                                                schemaDeleted: true
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                details:
+                                                    propertyNames:
+                                                        schemaDeleted: true
+

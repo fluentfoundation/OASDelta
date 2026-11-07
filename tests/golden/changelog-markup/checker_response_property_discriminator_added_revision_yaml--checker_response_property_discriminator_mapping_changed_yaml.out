@@ -1,0 +1,17 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /pets
+-  added `cats` mapping keys to the response discriminator for the response status `200`
+-  removed `cat` mapping keys from the response discriminator for the response status `200`
+-  added `breed1Code` discriminator mapping keys to the `oneOf[#/components/schemas/Dog]/breed` response property for the response status `200`
+-  mapped value for discriminator key `breed2` changed from `#/components/schemas/Breed2` to `#/components/schemas/Breed3` for `oneOf[#/components/schemas/Dog]/breed` response property for the response status `200`
+-  removed `breed1` discriminator mapping keys from the `oneOf[#/components/schemas/Dog]/breed` response property for the response status `200`
+
+
+
+
+
+

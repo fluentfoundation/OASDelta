@@ -1,0 +1,10 @@
+2 alterações: 0 error, 0 warning, 2 info
+info	[request-property-list-of-types-widened] em ./list-of-types/list-to-single-base.yaml
+	em API POST /test
+		lista de tipos da propriedade `userId` da requisição foi expandida adicionando tipos `string` ao tipo de mídia `application/json`
+
+info	[request-property-list-of-types-widened] em ./list-of-types/list-to-single-base.yaml
+	em API POST /test
+		lista de tipos da propriedade `value` da requisição foi expandida adicionando tipos `number and boolean` ao tipo de mídia `application/json`
+
+

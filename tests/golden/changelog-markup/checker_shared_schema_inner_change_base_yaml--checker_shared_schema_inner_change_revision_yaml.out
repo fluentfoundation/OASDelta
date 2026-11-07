@@ -1,0 +1,17 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /example
+- :warning: the `left/id` response's property `type` changed from `string` to `integer` for status `200` (shared schema: `Shared`, also at `right/id`)
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

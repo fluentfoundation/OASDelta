@@ -1,0 +1,15 @@
+3 cambios: 0 error, 0 warning, 3 info
+info	[request-property-pattern-added] en ./pattern-base-recursive.yaml
+	en API POST /api/v1.0/groups
+		agregado el patrón `^[a-z]+$` a la propiedad de solicitud `data/created`
+		La propiedad es de solo lectura, por lo que nunca aparece en las solicitudes y este cambio no puede invalidar ninguna.
+
+info	[response-property-pattern-added] en ./pattern-base-recursive.yaml
+	en API POST /api/v1.0/groups
+		el patrón `data/created` fue agregado a la propiedad de respuesta `^[a-z]+$` para el estado `200`
+
+info	[response-property-pattern-added] en ./pattern-base-recursive.yaml
+	en API GET /api/v1.0/groups/{groupId}
+		el patrón `data/created` fue agregado a la propiedad de respuesta `^[a-z]+$` para el estado `200`
+
+

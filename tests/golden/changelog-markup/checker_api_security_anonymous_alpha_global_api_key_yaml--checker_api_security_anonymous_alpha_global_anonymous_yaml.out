@@ -1,0 +1,10 @@
+# API Changelog 1 vs. 1
+
+
+
+## Security
+-  the security scheme `apiKey` was removed from the API
+
+
+
+

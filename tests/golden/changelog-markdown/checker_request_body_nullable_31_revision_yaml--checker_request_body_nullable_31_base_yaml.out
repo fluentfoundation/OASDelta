@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the request's body became not nullable
+-  the response's body became not nullable
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

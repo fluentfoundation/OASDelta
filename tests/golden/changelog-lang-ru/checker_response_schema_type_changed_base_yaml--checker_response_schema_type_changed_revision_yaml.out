@@ -1,0 +1,10 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[response-body-type-changed] в ./checker/response_schema_type_changed_revision.yaml
+	в API POST /api/v1.0/groups
+		`type` тела ответа изменён с `string` на `object` для статуса `200`
+
+info	[response-optional-property-added] в ./checker/response_schema_type_changed_revision.yaml
+	в API POST /api/v1.0/groups
+		добавлено необязательное свойство `data` в ответе со статусом `200`
+
+

@@ -1,0 +1,13 @@
+- id: response-mediatype-enum-value-removed
+  text: response schema `application/json` enum value removed `VALUE_3`
+  level: 1
+  operation: GET
+  operationId: getTest
+  path: /api/v2/changeOfResponseFieldValueTiedToEnumTest
+  section: paths
+  baseSource:
+    file: ./enums/response-enum.yaml
+    line: 27
+    column: 19
+  fingerprint: 2ab6fdfb430b
+

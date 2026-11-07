@@ -1,0 +1,62 @@
+- id: request-body-media-type-item-schema-added
+  text: added an item schema to the media type `application/jsonl` of the request body
+  level: 3
+  operation: POST
+  path: /drop
+  section: paths
+  revisionSource:
+    file: ./item-schema/revision.yaml
+    line: 42
+    column: 11
+    endLine: 46
+    endColumn: 27
+  fingerprint: 71d6754b92e8
+- id: response-body-media-type-item-schema-removed-untyped
+  text: removed the item schema from the media type `application/jsonl` for the response with the status `200`, leaving the body with no schema
+  level: 3
+  operation: POST
+  path: /drop
+  section: paths
+  baseSource:
+    file: ./item-schema/base.yaml
+    line: 49
+    column: 13
+    endLine: 51
+    endColumn: 29
+  fingerprint: 6ef1ea325f64
+- id: request-property-became-required
+  text: the request property `weight` became required (item schema)
+  level: 3
+  operation: POST
+  path: /ingest
+  section: paths
+  revisionSource:
+    file: ./item-schema/revision.yaml
+    line: 29
+    column: 32
+  fingerprint: 71cd6c44936d
+- id: response-body-media-type-item-schema-removed
+  text: removed the item schema from the media type `application/jsonl` for the response with the status `200`
+  level: 3
+  operation: GET
+  path: /keep
+  section: paths
+  baseSource:
+    file: ./item-schema/base.yaml
+    line: 58
+    column: 13
+    endLine: 62
+    endColumn: 29
+  fingerprint: e51fa2099375
+- id: response-property-enum-value-removed
+  text: removed the `deleted` enum value from the `kind` response property for the response status `200` (item schema)
+  level: 1
+  operation: GET
+  path: /events
+  section: paths
+  baseSource:
+    file: ./item-schema/base.yaml
+    line: 21
+    column: 46
+  fingerprint: b0529edd9e22
+

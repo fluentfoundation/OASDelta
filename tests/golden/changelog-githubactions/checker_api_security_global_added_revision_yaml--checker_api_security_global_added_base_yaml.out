@@ -1,0 +1,2 @@
+::notice title=api-security-anonymous-access-added,file=./checker/api_security_global_added_base.yaml::in API POST /subscribe the endpoint now allows anonymous access
+

@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[request-body-dependent-schema-added] в ./checker/dependent_schemas_revision.yaml
+	в API POST /products
+		добавлена зависимая схема `name` в тело запроса
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-body-dependent-schema-added] в ./checker/dependent_schemas_revision.yaml
+	в API POST /products
+		добавлена зависимая схема `name` в тело ответа для статуса `200`
+
+

@@ -1,0 +1,14 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /api/v1.0/groups
+- Modified query param: category
+  - Schema changed
+    - MinItems changed from 2 to 3
+
+

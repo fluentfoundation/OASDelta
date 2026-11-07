@@ -1,0 +1,14 @@
+3 изменений: 2 error, 0 warning, 1 info
+error	[response-property-list-of-types-widened] в ./list-of-types/single-to-list-revision.yaml
+	в API GET /test
+		список типов свойства `id` ответа был расширен добавлением типов `integer` к медиа-типу `application/json` ответа `200`
+
+error	[response-property-list-of-types-widened] в ./list-of-types/single-to-list-revision.yaml
+	в API GET /test
+		список типов свойства `status` ответа был расширен добавлением типов `number` к медиа-типу `application/json` ответа `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

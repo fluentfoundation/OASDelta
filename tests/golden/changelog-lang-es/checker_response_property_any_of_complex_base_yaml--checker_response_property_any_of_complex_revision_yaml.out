@@ -1,0 +1,22 @@
+5 cambios: 4 error, 0 warning, 1 info
+error	[response-body-any-of-added] en ./checker/response_property_any_of_complex_revision.yaml
+	en API GET /pets
+		`#/components/schemas/Fox` fue agregado a la lista `anyOf` del cuerpo de respuesta para el estado `200`
+
+error	[response-property-type-changed] en ./checker/response_property_any_of_complex_revision.yaml
+	en API GET /pets
+		el `anyOf[#/components/schemas/Dog]/breed/anyOf[#/components/schemas/Breed2]/name` de la propiedad de respuesta `type` fue cambiado de `string` a `number` para el estado `200`
+
+error	[response-property-type-changed] en ./checker/response_property_any_of_complex_revision.yaml
+	en API GET /pets
+		el `anyOf[subschema #3: Rabbit]/` de la propiedad de respuesta `type` fue cambiado de `string` a `number` para el estado `200`
+
+error	[response-property-type-changed] en ./checker/response_property_any_of_complex_revision.yaml
+	en API GET /pets
+		el `anyOf[subschema #4 -> subschema #5]/` de la propiedad de respuesta `type` fue cambiado de `string` a `number` para el estado `200`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

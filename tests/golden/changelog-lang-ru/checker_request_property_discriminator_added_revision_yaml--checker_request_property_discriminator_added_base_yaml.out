@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[request-body-discriminator-removed] в ./checker/request_property_discriminator_added_base.yaml
+	в API POST /pets
+		удален дискриминатор запроса
+
+info	[request-property-discriminator-removed] в ./checker/request_property_discriminator_added_base.yaml
+	в API POST /pets
+		удален дискриминатор из свойства запроса `oneOf[#/components/schemas/Dog]/breed`
+
+

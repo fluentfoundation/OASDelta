@@ -1,0 +1,17 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /payments/{id}
+- :warning: the response property `name/name` became nullable for the status `201`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

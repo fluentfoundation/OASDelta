@@ -3,7 +3,7 @@
 OpenAPI diff and breaking-change detection. OasDelta is a C# port of [oasdiff](https://github.com/oasdiff/oasdiff), compiled to a native executable with .NET NativeAOT. Install it as a .NET tool and no .NET runtime is needed to run it.
 
 - **Drop-in for oasdiff.** Same commands, flags, config files and exit codes: `alias oasdiff=oasdelta`.
-- **Byte-for-byte output.** Checked against the Go binary over the upstream test corpus (1,253 comparisons) on every platform it ships for.
+- **Byte-for-byte output.** Checked against the Go binary over the upstream test corpus (10,131 comparisons) on every platform it ships for.
 - **Fast.** Benchmarked in CI against the official oasdiff release: [latest results](https://fluentfoundation.github.io/OASDelta/benchmarks).
 
 ## Install

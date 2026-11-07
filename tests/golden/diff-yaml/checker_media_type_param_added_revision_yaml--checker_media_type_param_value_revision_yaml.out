@@ -1,0 +1,67 @@
+paths:
+    modified:
+        /api/v1.0/groups:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-16:
+                                                name:
+                                                    name:
+                                                        from: application/json; charset=utf-8
+                                                        to: application/json; charset=utf-16
+                                                    parameters:
+                                                        modified:
+                                                            charset:
+                                                                from: utf-8
+                                                                to: utf-16
+                                "409":
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-16:
+                                                name:
+                                                    name:
+                                                        from: application/json; charset=utf-8
+                                                        to: application/json; charset=utf-16
+                                                    parameters:
+                                                        modified:
+                                                            charset:
+                                                                from: utf-8
+                                                                to: utf-16
+endpoints:
+    modified:
+        ?   method: POST
+            path: /api/v1.0/groups
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json; charset=utf-16:
+                                    name:
+                                        name:
+                                            from: application/json; charset=utf-8
+                                            to: application/json; charset=utf-16
+                                        parameters:
+                                            modified:
+                                                charset:
+                                                    from: utf-8
+                                                    to: utf-16
+                    "409":
+                        content:
+                            modified:
+                                application/json; charset=utf-16:
+                                    name:
+                                        name:
+                                            from: application/json; charset=utf-8
+                                            to: application/json; charset=utf-16
+                                        parameters:
+                                            modified:
+                                                charset:
+                                                    from: utf-8
+                                                    to: utf-16
+

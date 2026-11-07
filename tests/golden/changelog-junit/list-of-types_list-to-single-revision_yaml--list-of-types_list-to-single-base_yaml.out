@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-property-list-of-types-widened" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">request property `userId` list-of-types was widened by adding types `string` to media type `application/json`</failure>
+    </testcase>
+    <testcase name="request-property-list-of-types-widened" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">request property `value` list-of-types was widened by adding types `number and boolean` to media type `application/json`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

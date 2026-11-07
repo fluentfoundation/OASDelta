@@ -1,0 +1,14 @@
+3 changes: 1 error, 0 warning, 2 info
+error	[request-parameter-enum-value-removed] at openapi-test703.yaml
+	in API GET /api/{domain}/{project}/install-command
+		removed the enum value `removed-value` from the `path` request parameter `domain`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[response-media-type-added] at openapi-test703.yaml
+	in API POST /register
+		added the media type `application/json` for the response with the status `default`
+
+

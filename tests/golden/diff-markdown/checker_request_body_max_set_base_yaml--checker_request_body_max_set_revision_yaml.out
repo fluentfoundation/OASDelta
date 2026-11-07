@@ -1,0 +1,16 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /pets
+- Request body changed
+  - Content changed
+    - Modified media type: text/plain
+      - Schema changed
+        - Max changed from null to 15
+
+

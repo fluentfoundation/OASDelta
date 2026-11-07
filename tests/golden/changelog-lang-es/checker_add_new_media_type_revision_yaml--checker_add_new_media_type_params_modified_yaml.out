@@ -1,0 +1,7 @@
+1 cambios: 0 error, 1 warning, 0 info
+warning	[response-media-type-name-changed] en ./checker/add_new_media_type_params_modified.yaml
+	en API POST /api/v1.0/groups
+		el tipo de media `application/json` fue cambiado a `application/problem+json;q=1` para el estado de respuesta `200`
+		Esta es una advertencia porque oasdiff no puede saber qué restringe el parámetro de tipo de medio modificado. Añadir uno restringe lo que el servidor puede devolver, eliminarlo lo amplía, y cambiar su valor puede dejar a un cliente sin poder leer la respuesta.
+
+

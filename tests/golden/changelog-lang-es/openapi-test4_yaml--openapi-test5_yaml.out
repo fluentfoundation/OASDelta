@@ -1,0 +1,30 @@
+7 cambios: 2 error, 0 warning, 5 info
+error	[api-path-removed-without-deprecation] en openapi-test4.yaml
+	en API GET /prefix/api/{domain}/{project}/badges/security-score
+		ruta de api removida sin deprecación
+
+error	[api-path-removed-without-deprecation] en openapi-test4.yaml
+	en API POST /prefix/api/{domain}/{project}/badges/security-score
+		ruta de api removida sin deprecación
+
+info	[api-major-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión mayor no aumentó, de `1.0.0` a `1.0.1`
+
+info	[api-security-component-added]
+	en components/securitySchemes
+		el esquema de seguridad `AccessToken` fue agregado
+
+info	[api-security-component-added]
+	en components/securitySchemes
+		el esquema de seguridad `bearerAuth` fue agregado
+
+info	[endpoint-added] en openapi-test5.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		endpoint agregado
+
+info	[endpoint-added] en openapi-test5.yaml
+	en API GET /api/{domain}/{project}/install-command
+		endpoint agregado
+
+

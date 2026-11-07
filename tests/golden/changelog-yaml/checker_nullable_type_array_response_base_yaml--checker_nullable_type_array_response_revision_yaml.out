@@ -1,0 +1,8 @@
+- id: response-property-became-not-nullable
+  text: the response property `p` became not nullable for the status `200`
+  level: 1
+  operation: GET
+  path: /t
+  section: paths
+  fingerprint: 15b32f834b55
+

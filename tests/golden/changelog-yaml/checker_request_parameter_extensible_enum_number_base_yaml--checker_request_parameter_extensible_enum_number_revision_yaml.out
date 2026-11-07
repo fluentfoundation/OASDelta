@@ -1,0 +1,13 @@
+- id: request-parameter-x-extensible-enum-value-removed
+  text: removed the x-extensible-enum value `2` from the `path` request parameter `groupId`
+  level: 3
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups
+  section: paths
+  baseSource:
+    file: ./checker/request_parameter_extensible_enum_number_base.yaml
+    line: 26
+    column: 15
+  fingerprint: 5329401db953
+

@@ -1,0 +1,34 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /products
+- Modified query param: limit
+  - Schema changed
+    - ExclusiveMin changed from 5 to 0
+    - ExclusiveMax changed from 50 to 100
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - ExclusiveMin changed from 5 to 0
+        - ExclusiveMax changed from 50 to 100
+        - Properties changed
+          - Modified property: price
+            - ExclusiveMin changed from 10 to 0
+            - ExclusiveMax changed from 500 to 1000
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - ExclusiveMax changed from 200 to 100
+          - Properties changed
+            - Modified property: price
+              - ExclusiveMax changed from 2000 to 1000
+
+

@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./checker/response_property_all_of_inline_added_revision.yaml, in API GET /pets added `subschema #3` to the response body `allOf` list for the response status `200` [response-body-all-of-added]. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+
+

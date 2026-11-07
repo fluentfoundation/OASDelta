@@ -1,0 +1,78 @@
+- id: response-property-contains-removed
+  text: removed 'contains' constraint from the `tags` response property for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 35
+    column: 21
+  fingerprint: 5b3b0c6e216e
+- id: response-property-max-contains-unset
+  text: the `tags` response property's maxContains was unset from `3` for the response status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 38
+    column: 21
+  fingerprint: 7b06086b365a
+- id: response-property-min-contains-unset
+  text: the `tags` response property's minContains was unset from `1` for the response status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 37
+    column: 21
+  fingerprint: 6380ef54d417
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-property-contains-removed
+  text: removed 'contains' constraint from the request property `tags`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 19
+    column: 19
+  fingerprint: 928ec932ca3e
+- id: request-property-max-contains-unset
+  text: the `tags` request property's maxContains was unset from `3`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 22
+    column: 19
+  fingerprint: caf836e81e29
+- id: request-property-min-contains-unset
+  text: the `tags` request property's minContains was unset from `1`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 21
+    column: 19
+  fingerprint: 07332fc3143d
+

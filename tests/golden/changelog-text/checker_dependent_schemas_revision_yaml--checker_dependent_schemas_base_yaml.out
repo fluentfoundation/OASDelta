@@ -1,0 +1,14 @@
+3 changes: 1 error, 0 warning, 2 info
+error	[response-body-dependent-schema-removed] at ./checker/dependent_schemas_base.yaml
+	in API POST /products
+		removed the dependent schema `name` from the response body for the status `200`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[request-body-dependent-schema-removed] at ./checker/dependent_schemas_base.yaml
+	in API POST /products
+		removed the dependent schema `name` from the request body
+
+

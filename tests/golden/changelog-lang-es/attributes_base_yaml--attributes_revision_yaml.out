@@ -1,0 +1,18 @@
+4 cambios: 2 error, 0 warning, 2 info
+error	[response-success-status-removed] en ./attributes/revision.yaml
+	en API GET /partner-api/test/another-method
+		removido el estado de respuesta exitosa `200`
+
+error	[response-success-status-removed] en ./attributes/revision.yaml
+	en API GET /partner-api/test/some-method
+		removido el estado de respuesta exitosa `200`
+
+info	[response-success-status-added] en ./attributes/revision.yaml
+	en API GET /partner-api/test/another-method
+		agregado el estado de respuesta exitosa `201`
+
+info	[response-success-status-added] en ./attributes/revision.yaml
+	en API GET /partner-api/test/some-method
+		agregado el estado de respuesta exitosa `201`
+
+

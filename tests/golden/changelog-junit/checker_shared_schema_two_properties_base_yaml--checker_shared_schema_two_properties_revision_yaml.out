@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-property-pattern-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `customerId` response's property pattern `^[0-9]+$` was added for the status `200` (shared schema: `Id`, also at `ownerId`, `userId`)</failure>
+    </testcase>
+    <testcase name="response-property-pattern-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `customerId` response's property pattern `^[0-9]+$` was added for the status `200` (shared schema: `Id`, also at `userId`)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

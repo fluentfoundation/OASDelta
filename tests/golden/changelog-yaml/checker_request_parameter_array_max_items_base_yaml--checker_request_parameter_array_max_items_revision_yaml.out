@@ -1,0 +1,22 @@
+- id: request-parameter-max-items-decreased
+  text: for the `query` request parameter `ids`, the maxItems was decreased from `50` to `10`
+  level: 3
+  operation: GET
+  operationId: testOperation
+  path: /test
+  section: paths
+  baseSource:
+    file: ./checker/request_parameter_array_max_items_base.yaml
+    line: 14
+    column: 13
+  revisionSource:
+    file: ./checker/request_parameter_array_max_items_revision.yaml
+    line: 14
+    column: 13
+  fingerprint: e679fadfed77
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+

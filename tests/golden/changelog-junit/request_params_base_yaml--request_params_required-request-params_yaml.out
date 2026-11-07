@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="11" errors="0" failures="11" name="OASDiff">
+    <testcase name="new-required-request-default-parameter-to-existing-path" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new required `query` request parameter `version` to all path's operations</failure>
+    </testcase>
+    <testcase name="new-required-request-default-parameter-to-existing-path" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new required `query` request parameter `version` to all path's operations</failure>
+    </testcase>
+    <testcase name="new-required-request-default-parameter-to-existing-path" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new required `query` request parameter `id` to all path's operations</failure>
+    </testcase>
+    <testcase name="new-required-request-default-parameter-to-existing-path" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new required `header` request parameter `if-none-match` to all path's operations</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="new-optional-request-default-parameter-to-existing-path" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `query` request parameter `optionalQueryParam` to all path's operations</failure>
+    </testcase>
+    <testcase name="new-optional-request-parameter" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `header` request parameter `x-newrequestheaderparam`</failure>
+    </testcase>
+    <testcase name="new-optional-request-default-parameter-to-existing-path" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `query` request parameter `optionalQueryParam` to all path's operations</failure>
+    </testcase>
+    <testcase name="new-optional-request-default-parameter-to-existing-path" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `header` request parameter `optionalheaderparam` to all path's operations</failure>
+    </testcase>
+    <testcase name="new-optional-request-parameter" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `query` request parameter `newQueryParam`</failure>
+    </testcase>
+    <testcase name="new-optional-request-parameter" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `cookie` request parameter `csrf-token`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

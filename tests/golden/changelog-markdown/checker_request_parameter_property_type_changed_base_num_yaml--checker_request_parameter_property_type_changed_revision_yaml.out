@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /groups
+- :warning: for the `query` request parameter `filters`, the `type` of property `groupId` was changed from `number` to `string`
+
+
+
+
+
+

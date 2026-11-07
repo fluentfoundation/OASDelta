@@ -1,0 +1,37 @@
+8 изменений: 2 error, 0 warning, 6 info
+error	[response-mediatype-became-not-enum] в ./checker/enum_removed_entirely_revision.yaml
+	в API PUT /mode
+		удалено ограничение enum схемы ответа `text/plain` для статуса ответа `200`
+		Сервер теперь может вернуть любое значение типа схемы, включая значения, которые исключал прежний enum, поэтому клиент, написанный по нему, может не обработать ответ.
+
+error	[response-property-became-not-enum] в ./checker/enum_removed_entirely_revision.yaml
+	в API POST /pets
+		удалено ограничение enum из свойства ответа `status` для статуса ответа `200`
+		Сервер теперь может вернуть любое значение типа свойства, включая значения, которые исключал прежний enum, поэтому клиент, написанный по нему, может не обработать ответ.
+
+info	[request-body-became-not-enum] в ./checker/enum_removed_entirely_revision.yaml
+	в API PUT /mode
+		удалено ограничение enum тела запроса
+
+info	[request-parameter-became-not-enum] в ./checker/enum_removed_entirely_revision.yaml
+	в API GET /pets
+		удалено ограничение enum у `query` параметра запроса `status`
+
+info	[request-parameter-property-became-not-enum] в ./checker/enum_removed_entirely_revision.yaml
+	в API GET /pets
+		удалено ограничение enum из свойства `origin` `query` параметра запроса `filter`
+
+info	[request-property-became-not-enum] в ./checker/enum_removed_entirely_revision.yaml
+	в API POST /pets
+		удалено ограничение enum у поля запроса `kind`
+
+info	[request-property-became-not-enum] в ./checker/enum_removed_entirely_revision.yaml
+	в API POST /pets
+		удалено ограничение enum у поля запроса `status`
+
+info	[response-property-became-not-enum] в ./checker/enum_removed_entirely_revision.yaml
+	в API POST /pets
+		удалено ограничение enum из свойства ответа `secret` для статуса ответа `200`
+		Свойство доступно только для записи, поэтому оно не встречается в ответах, и это изменение не может сделать ответ недействительным.
+
+

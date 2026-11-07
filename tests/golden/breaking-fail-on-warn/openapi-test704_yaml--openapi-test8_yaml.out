@@ -1,0 +1,18 @@
+4 changes: 4 error, 0 warning, 0 info
+error	[api-path-removed-without-deprecation] at openapi-test704.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		api path removed without deprecation
+
+error	[api-path-removed-without-deprecation] at openapi-test704.yaml
+	in API GET /api/{domain}/{project}/install-command
+		api path removed without deprecation
+
+error	[api-path-removed-without-deprecation] at openapi-test704.yaml
+	in API POST /register
+		api path removed without deprecation
+
+error	[api-path-removed-without-deprecation] at openapi-test704.yaml
+	in API POST /subscribe
+		api path removed without deprecation
+
+

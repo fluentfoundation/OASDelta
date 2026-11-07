@@ -1,0 +1,4 @@
+::error title=response-property-enum-value-added,file=openapi-test704.yaml,line=250,col=25::in API POST /register added the new `QWE` enum value to the `respenum` response property for the response status `default`
+::error title=response-property-enum-value-added,file=openapi-test704.yaml,line=260,col=29::in API POST /register added the new `TER2` enum value to the `respenum2/respenum3` response property for the response status `default`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

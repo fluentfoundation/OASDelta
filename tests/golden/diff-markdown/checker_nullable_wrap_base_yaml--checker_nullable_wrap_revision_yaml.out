@@ -1,0 +1,32 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /test
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Properties changed
+          - Modified property: optionalEnum
+            - Property 'OneOf' changed
+              - Schemas added: #/components/schemas/SomeEnum, subschema #1
+            - Type changed from 'string' to ''
+            - Deleted enum values: [user serviceAccount]
+          - Modified property: optionalPrimitive
+            - Type changed from '' to 'null'
+          - Modified property: optionalRef
+            - Property 'OneOf' changed
+              - Schemas added: #/components/schemas/SomeObject, subschema #1
+            - Type changed from 'object' to ''
+            - Required changed
+              - Deleted required property: a
+            - Properties changed
+              - Deleted property: a
+              - Deleted property: c
+
+

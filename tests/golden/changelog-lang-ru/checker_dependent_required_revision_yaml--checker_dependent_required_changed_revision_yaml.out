@@ -1,0 +1,22 @@
+5 изменений: 2 error, 0 warning, 3 info
+error	[request-body-dependent-required-changed] в ./checker/dependent_required_changed_revision.yaml
+	в API POST /products
+		dependentRequired тела запроса для `name` был обновлён: `phone added`
+
+error	[response-body-dependent-required-changed] в ./checker/dependent_required_changed_revision.yaml
+	в API POST /products
+		dependentRequired тела ответа для `name` был обновлён для статуса `200`: `phone added`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[new-optional-request-property] в ./checker/dependent_required_changed_revision.yaml
+	в API POST /products
+		добавлено новое необязательное поле запроса `phone`
+
+info	[response-optional-property-added] в ./checker/dependent_required_changed_revision.yaml
+	в API POST /products
+		добавлено необязательное свойство `phone` в ответе со статусом `200`
+
+

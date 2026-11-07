@@ -1,0 +1,16 @@
+- id: response-property-became-optional
+  text: the response property `allOf[#/components/schemas/A]/id` became optional for the status `200`
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: GET
+  operationId: getX
+  path: /x
+  section: paths
+  baseSource:
+    file: ./checker/disclaimer_allof_base.yaml
+    line: 20
+    column: 18
+  fingerprint: cf9856d96eb1
+

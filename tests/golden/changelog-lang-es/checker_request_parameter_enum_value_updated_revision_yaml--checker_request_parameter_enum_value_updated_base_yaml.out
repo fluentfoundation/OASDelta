@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-parameter-enum-value-added] en ./checker/request_parameter_enum_value_updated_base.yaml
+	en API GET /test
+		agregado el nuevo valor enum `available` al parámetro `query` de solicitud `status`
+
+

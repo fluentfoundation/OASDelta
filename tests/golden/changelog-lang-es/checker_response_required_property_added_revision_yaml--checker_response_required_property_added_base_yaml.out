@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-required-property-removed] en ./checker/response_required_property_added_base.yaml
+	en API POST /api/v1.0/groups
+		removida la propiedad requerida `data/new` de la respuesta con estado `200`
+
+

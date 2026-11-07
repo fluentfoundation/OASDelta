@@ -1,0 +1,14 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /items
+- :warning: removed the schema from the media type `application/json` for the response with the status `200`
+-  removed the schema from the media type `application/json` of the request body
+
+
+
+
+
+

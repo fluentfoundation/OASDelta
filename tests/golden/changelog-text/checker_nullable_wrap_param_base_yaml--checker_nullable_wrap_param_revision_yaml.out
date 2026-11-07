@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[request-parameter-became-nullable] at ./checker/nullable_wrap_param_revision.yaml
+	in API GET /test
+		the `query` request parameter `kind` became nullable
+
+

@@ -1,0 +1,16 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /api/v1.0/groups
+- Modified query param: token
+  - Schema changed
+    - Type changed from 'string' to 'array'
+    - Items changed
+      - Schema added
+
+

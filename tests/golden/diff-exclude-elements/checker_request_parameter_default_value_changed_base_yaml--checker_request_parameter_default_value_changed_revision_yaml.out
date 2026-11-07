@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/api/v1.0/groups":{"operations":{"modified":{"POST":{"parameters":{"modified":{"query":{"category":{"schema":{"default":{"from":"default_category","to":"updated_category"}}}}}}}}}}}}}

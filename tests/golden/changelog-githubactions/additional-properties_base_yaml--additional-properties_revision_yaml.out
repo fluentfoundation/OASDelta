@@ -1,0 +1,2 @@
+::error title=response-property-type-changed,file=./additional-properties/revision.yaml,line=11,col=11::in API GET /value the `additionalProperties/property1` response's property `type` changed from `integer` to `string` for status `200`
+

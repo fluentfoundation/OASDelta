@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: removed the request property `description`
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+3 changes: 2 error, 1 warning, 0 info
+error	[new-required-request-property] at ./checker/not_revision.yaml
+	in API POST /products
+		added the new required request property `/not/added_prop`
+
+error	[request-property-max-length-decreased] at ./checker/not_revision.yaml
+	in API POST /products
+		the `/not/modified_prop` request property's maxLength was decreased to `5`
+
+warning	[request-property-removed] at ./checker/not_revision.yaml
+	in API POST /products
+		removed the request property `/not/removed_prop`
+
+

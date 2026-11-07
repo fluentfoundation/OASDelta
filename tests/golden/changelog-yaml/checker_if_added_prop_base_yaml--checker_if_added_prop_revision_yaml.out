@@ -1,0 +1,78 @@
+- id: request-property-else-added
+  text: added 'else' subschema to the request property `details`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_prop_revision.yaml
+    line: 24
+    column: 19
+  fingerprint: afe13cd5dcd3
+- id: request-property-if-added
+  text: added 'if' subschema to the request property `details`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_prop_revision.yaml
+    line: 17
+    column: 19
+  fingerprint: e56b053e07e5
+- id: request-property-then-added
+  text: added 'then' subschema to the request property `details`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_prop_revision.yaml
+    line: 21
+    column: 19
+  fingerprint: d7adaa4f0802
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: response-property-else-added
+  text: added 'else' subschema to the `details` response property for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_prop_revision.yaml
+    line: 45
+    column: 21
+  fingerprint: 16e24c834da1
+- id: response-property-if-added
+  text: added 'if' subschema to the `details` response property for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_prop_revision.yaml
+    line: 38
+    column: 21
+  fingerprint: 126e64736150
+- id: response-property-then-added
+  text: added 'then' subschema to the `details` response property for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_prop_revision.yaml
+    line: 42
+    column: 21
+  fingerprint: e4260d8bf43c
+

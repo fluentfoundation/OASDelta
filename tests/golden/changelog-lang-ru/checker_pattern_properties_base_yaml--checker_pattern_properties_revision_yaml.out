@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[request-body-pattern-property-added] в ./checker/pattern_properties_revision.yaml
+	в API POST /products
+		добавлено шаблонное свойство `^x-` в тело запроса
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-body-pattern-property-added] в ./checker/pattern_properties_revision.yaml
+	в API POST /products
+		добавлено шаблонное свойство `^x-` в тело ответа для статуса `200`
+
+

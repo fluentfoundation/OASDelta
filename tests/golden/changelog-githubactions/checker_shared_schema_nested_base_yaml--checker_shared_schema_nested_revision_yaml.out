@@ -1,0 +1,2 @@
+::notice title=response-property-pattern-added,file=./checker/shared_schema_nested_revision.yaml,line=34,col=11::in API GET /example the `p/a/id` response's property pattern `^[0-9]+$` was added for the status `200` (shared schema: `Inner`, also at `q/a/id`, `p/b/id` and 1 more)
+

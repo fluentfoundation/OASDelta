@@ -1,0 +1,8 @@
+::error title=request-body-exclusive-max-set,file=./checker/exclusive_min_max_set_revision.yaml,line=22,col=15::in API POST /products the request's body exclusiveMaximum was set to `100.00`
+::error title=request-body-exclusive-min-set,file=./checker/exclusive_min_max_set_revision.yaml,line=21,col=15::in API POST /products the request's body exclusiveMinimum was set to `0.00`
+::error title=request-parameter-exclusive-max-set,file=./checker/exclusive_min_max_set_revision.yaml,line=15,col=13::in API POST /products for the `query` request parameter `limit`, the exclusiveMaximum was set to `100.00`
+::error title=request-parameter-exclusive-min-set,file=./checker/exclusive_min_max_set_revision.yaml,line=14,col=13::in API POST /products for the `query` request parameter `limit`, the exclusiveMinimum was set to `0.00`
+::error title=request-property-exclusive-max-set,file=./checker/exclusive_min_max_set_revision.yaml,line=27,col=19::in API POST /products the `price` request property's exclusiveMaximum was set to `1000.00`
+::error title=request-property-exclusive-min-set,file=./checker/exclusive_min_max_set_revision.yaml,line=26,col=19::in API POST /products the `price` request property's exclusiveMinimum was set to `0.00`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

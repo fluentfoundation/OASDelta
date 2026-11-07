@@ -1,0 +1,4 @@
+::error title=request-body-dependent-schema-added,file=./checker/dependent_schemas_revision.yaml,line=18,col=17::in API POST /products added the dependent schema `name` to the request body
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-body-dependent-schema-added,file=./checker/dependent_schemas_revision.yaml,line=33,col=19::in API POST /products added the dependent schema `name` to the response body for the status `200`
+

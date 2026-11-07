@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./checker/request_body_media_type_updated_base.yaml, in API POST /api/v1.0/groups removed the media type `application/json` from the request body [request-body-media-type-removed]. 
+
+

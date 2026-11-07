@@ -1,0 +1,30 @@
+7 изменений: 5 error, 0 warning, 2 info
+error	[request-body-content-encoding-changed] в ./checker/content_schema_body_revision.yaml
+	в API POST /products
+		contentEncoding тела запроса изменился с `base64` на `quoted-printable`
+
+error	[request-body-content-media-type-changed] в ./checker/content_schema_body_revision.yaml
+	в API POST /products
+		contentMediaType тела запроса изменился с `application/json` на `text/plain`
+
+error	[request-body-content-schema-added] в ./checker/content_schema_body_revision.yaml
+	в API POST /products
+		добавлен 'contentSchema' в тело запроса
+
+error	[response-body-content-encoding-changed] в ./checker/content_schema_body_revision.yaml
+	в API POST /products
+		contentEncoding тела ответа изменился с `base64` на `quoted-printable` для статуса `200`
+
+error	[response-body-content-media-type-changed] в ./checker/content_schema_body_revision.yaml
+	в API POST /products
+		contentMediaType тела ответа изменился с `application/json` на `text/plain` для статуса `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-body-content-schema-added] в ./checker/content_schema_body_revision.yaml
+	в API POST /products
+		добавлен 'contentSchema' в тело ответа для статуса `200`
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="request-parameter-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new enum value `available` to the `query` request parameter `status`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

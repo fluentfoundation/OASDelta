@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[request-parameter-enum-value-added] en ./openapi-test702.yaml
+	en API GET /api/{domain}/{project}/install-command
+		agregado el nuevo valor enum `removed-value` al parámetro `path` de solicitud `domain`
+
+info	[endpoint-added] en ./openapi-test702.yaml
+	en API POST /subscribe
+		endpoint agregado
+
+

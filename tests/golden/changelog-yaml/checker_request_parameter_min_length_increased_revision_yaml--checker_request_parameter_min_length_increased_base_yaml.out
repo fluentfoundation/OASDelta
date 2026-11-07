@@ -1,0 +1,17 @@
+- id: request-parameter-min-length-decreased
+  text: for the `query` request parameter `name`, the minLength was decreased from `5` to `3`
+  level: 1
+  operation: POST
+  operationId: createTest
+  path: /test
+  section: paths
+  baseSource:
+    file: ./checker/request_parameter_min_length_increased_revision.yaml
+    line: 14
+    column: 13
+  revisionSource:
+    file: ./checker/request_parameter_min_length_increased_base.yaml
+    line: 14
+    column: 13
+  fingerprint: e09b17c894dd
+

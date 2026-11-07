@@ -1,0 +1,6 @@
+::error title=request-body-any-of-removed,file=./checker/request_body_any_of_media_type_revision.yaml::in API POST /pets removed `#/components/schemas/Cat` from the request body `anyOf` list (media type: application/json)
+::error title=request-body-any-of-removed,file=./checker/request_body_any_of_media_type_revision.yaml::in API POST /pets removed `#/components/schemas/Cat` from the request body `anyOf` list (media type: application/xml)
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-body-any-of-added,file=./checker/request_body_any_of_media_type_revision.yaml,line=16,col=19::in API POST /pets added `#/components/schemas/Rabbit` to the request body `anyOf` list (media type: application/json)
+::notice title=request-body-any-of-added,file=./checker/request_body_any_of_media_type_revision.yaml,line=21,col=19::in API POST /pets added `#/components/schemas/Rabbit` to the request body `anyOf` list (media type: application/xml)
+

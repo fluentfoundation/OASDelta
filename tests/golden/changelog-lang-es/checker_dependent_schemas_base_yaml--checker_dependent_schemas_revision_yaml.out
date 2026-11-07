@@ -1,0 +1,14 @@
+3 cambios: 1 error, 0 warning, 2 info
+error	[request-body-dependent-schema-added] en ./checker/dependent_schemas_revision.yaml
+	en API POST /products
+		agregado el esquema dependiente `name` al cuerpo de solicitud
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[response-body-dependent-schema-added] en ./checker/dependent_schemas_revision.yaml
+	en API POST /products
+		agregado el esquema dependiente `name` al cuerpo de respuesta para el estado `200`
+
+

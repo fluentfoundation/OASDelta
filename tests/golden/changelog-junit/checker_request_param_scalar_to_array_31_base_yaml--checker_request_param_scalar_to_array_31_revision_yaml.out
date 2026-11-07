@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-parameter-became-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `query` request parameter `token` became nullable</failure>
+    </testcase>
+    <testcase name="request-parameter-type-generalized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `token`, the `type` was widened from `string` to `array<string>, null`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

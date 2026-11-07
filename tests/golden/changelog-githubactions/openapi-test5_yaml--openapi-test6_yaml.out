@@ -1,0 +1,12 @@
+::error title=api-path-removed-without-deprecation,file=openapi-test5.yaml::in API GET /api/{domain}/{project}/badges/security-score api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test5.yaml::in API GET /api/{domain}/{project}/install-command api path removed without deprecation
+::notice title=api-schema-removed::in API   removed the schema `network-policies`
+::notice title=api-schema-removed::in API   removed the schema `requests`
+::notice title=api-schema-removed::in API   removed the schema `rules`
+::notice title=api-security-component-removed::in API   the component security scheme `AccessToken` was removed
+::notice title=api-security-component-removed::in API   the component security scheme `bearerAuth` was removed
+::notice title=api-version-decreased::in API   a breaking change was detected but the version decreased from `1.0.1` to `1.0.0`
+::notice title=endpoint-added,file=openapi-test6.yaml,line=7,col=5::in API GET /health endpoint added
+::notice title=endpoint-added,file=openapi-test6.yaml,line=13,col=5::in API GET /health/live endpoint added
+::notice title=endpoint-added,file=openapi-test6.yaml,line=19,col=5::in API GET /health/ready endpoint added
+

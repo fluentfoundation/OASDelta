@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            required:
+                                                stringsdiff:
+                                                    added:
+                                                        - description
+                                            properties:
+                                                added:
+                                                    - description
+                                                    - info
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                required:
+                                    stringsdiff:
+                                        added:
+                                            - description
+                                properties:
+                                    added:
+                                        - description
+                                        - info
+

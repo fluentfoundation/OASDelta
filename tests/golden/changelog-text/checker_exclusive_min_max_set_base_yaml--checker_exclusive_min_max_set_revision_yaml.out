@@ -1,0 +1,36 @@
+7 changes: 6 error, 0 warning, 1 info
+error	[request-body-exclusive-max-set] at ./checker/exclusive_min_max_set_revision.yaml
+	in API POST /products
+		the request's body exclusiveMaximum was set to `100.00`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error	[request-body-exclusive-min-set] at ./checker/exclusive_min_max_set_revision.yaml
+	in API POST /products
+		the request's body exclusiveMinimum was set to `0.00`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error	[request-parameter-exclusive-max-set] at ./checker/exclusive_min_max_set_revision.yaml
+	in API POST /products
+		for the `query` request parameter `limit`, the exclusiveMaximum was set to `100.00`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error	[request-parameter-exclusive-min-set] at ./checker/exclusive_min_max_set_revision.yaml
+	in API POST /products
+		for the `query` request parameter `limit`, the exclusiveMinimum was set to `0.00`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error	[request-property-exclusive-max-set] at ./checker/exclusive_min_max_set_revision.yaml
+	in API POST /products
+		the `price` request property's exclusiveMaximum was set to `1000.00`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error	[request-property-exclusive-min-set] at ./checker/exclusive_min_max_set_revision.yaml
+	in API POST /products
+		the `price` request property's exclusiveMinimum was set to `0.00`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+

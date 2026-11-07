@@ -1,0 +1,6 @@
+::error title=request-property-unevaluated-items-added,file=./checker/unevaluated_property_revision.yaml,line=20,col=19::in API POST /products added 'unevaluatedItems' constraint to the request property `meta`
+::error title=request-property-unevaluated-properties-added,file=./checker/unevaluated_property_revision.yaml,line=22,col=19::in API POST /products added 'unevaluatedProperties' constraint to the request property `meta`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-property-unevaluated-items-added,file=./checker/unevaluated_property_revision.yaml,line=37,col=21::in API POST /products added 'unevaluatedItems' constraint to the `meta` response property for the status `200`
+::notice title=response-property-unevaluated-properties-added,file=./checker/unevaluated_property_revision.yaml,line=39,col=21::in API POST /products added 'unevaluatedProperties' constraint to the `meta` response property for the status `200`
+

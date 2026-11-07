@@ -1,0 +1,8 @@
+::error title=request-property-content-encoding-changed,file=./checker/content_schema_prop_revision.yaml,line=21,col=23::in API POST /products the `details/data` request property contentEncoding changed from `base64` to `quoted-printable`
+::error title=request-property-content-media-type-changed,file=./checker/content_schema_prop_revision.yaml,line=20,col=23::in API POST /products the `details/data` request property contentMediaType changed from `application/json` to `text/plain`
+::error title=request-property-content-schema-added,file=./checker/content_schema_prop_revision.yaml,line=22,col=23::in API POST /products added 'contentSchema' to the request property `details/data`
+::error title=response-property-content-encoding-changed,file=./checker/content_schema_prop_revision.yaml,line=38,col=25::in API POST /products the `details/data` response property contentEncoding changed from `base64` to `quoted-printable` for the status `200`
+::error title=response-property-content-media-type-changed,file=./checker/content_schema_prop_revision.yaml,line=37,col=25::in API POST /products the `details/data` response property contentMediaType changed from `application/json` to `text/plain` for the status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-property-content-schema-added,file=./checker/content_schema_prop_revision.yaml,line=39,col=25::in API POST /products added 'contentSchema' to the `details/data` response property for the status `200`
+

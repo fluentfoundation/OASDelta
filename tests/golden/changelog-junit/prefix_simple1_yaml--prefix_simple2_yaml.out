@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
+    <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api path removed without deprecation</failure>
+    </testcase>
+    <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api path removed without deprecation</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

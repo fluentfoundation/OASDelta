@@ -1,0 +1,20 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /batch
+- :warning: the request's body minItems was set to `2`
+- :warning: the response's body minItems was unset from `2`
+
+
+### POST /items
+- :warning: for the `query` request parameter `ids`, the minItems was set to `3`
+- :warning: the `tags` request property's minItems was set to `3`
+- :warning: the `tags` response property's minItems was unset from `3` for the response status `200`
+
+
+
+
+
+

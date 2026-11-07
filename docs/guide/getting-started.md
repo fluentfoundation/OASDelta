@@ -47,7 +47,7 @@ cd OASDelta
 
 dotnet build -c Release                                      # JIT build: src/OasDelta/bin/Release/net10.0/oasdelta
 dotnet publish src/OasDelta -c Release -r linux-x64 -o out   # NativeAOT: out/oasdelta
-dotnet test                                                  # unit tests plus 1,253 golden comparisons
+dotnet test                                                  # unit tests plus 10,131 golden comparisons
 ```
 
 For other platforms use `-r win-x64`, `-r osx-arm64`, `-r linux-arm64` and so on. NativeAOT needs the platform

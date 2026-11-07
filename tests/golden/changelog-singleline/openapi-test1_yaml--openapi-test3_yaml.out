@@ -1,0 +1,54 @@
+26 changes: 4 error, 4 warning, 18 info
+error at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score removed the success response with the status `200` [response-success-status-removed]. 
+
+error at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score removed the success response with the status `201` [response-success-status-removed]. 
+
+error at openapi-test3.yaml, in API POST /register the endpoint scheme security `bearerAuth` was removed from the API [api-security-removed]. 
+
+error at openapi-test3.yaml, in API POST /register the security scope `write:pets` was added to the endpoint's security scheme `OAuth` [api-security-scope-added]. 
+
+warning at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score deleted the `cookie` request parameter `test` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score deleted the `header` request parameter `user` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score deleted the `query` request parameter `filter` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning at openapi-test3.yaml, in API GET /api/{domain}/{project}/install-command deleted the `header` request parameter `network-policies` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+info, in info a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1` [api-major-version-not-bumped]. 
+
+info, in components/schemas removed the schema `network-policies` [api-schema-removed]. 
+
+info, in components/schemas removed the schema `rules` [api-schema-removed]. 
+
+info, in components/securitySchemes the component security scheme `OAuth` oauth `authorizationCode` flow scope `admin` was added [api-security-component-oauth-scope-added]. 
+
+info, in components/securitySchemes the component security scheme `OAuth` oauth `authorizationCode` flow scope `accountWrite` was updated from `Allows account data to be written` to `Allows accounts data to be written` [api-security-component-oauth-scope-changed]. 
+
+info, in components/securitySchemes the component security scheme `AccessToken` was removed [api-security-component-removed]. 
+
+info, in components/securitySchemes the component security scheme `bearerAuth` was removed [api-security-component-removed]. 
+
+info at openapi-test1.yaml, in API GET /api/{domain}/{project}/badges/security-score api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore` [api-operation-id-removed]. 
+
+info at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score the endpoint now allows anonymous access [api-security-anonymous-access-added]. This endpoint inherits the API's top-level security requirements.
+
+info at openapi-test1.yaml, in API GET /api/{domain}/{project}/badges/security-score api tag `security` removed [api-tag-removed]. 
+
+info at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `token`, the maxLength was increased from `29` to `30` [request-parameter-max-length-increased]. 
+
+info at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image` [request-parameter-pattern-removed]. 
+
+info at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any` [request-parameter-type-generalized]. 
+
+info at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score removed the non-success response with the status `400` [response-non-success-status-removed]. 
+
+info at openapi-test3.yaml, in API GET /api/{domain}/{project}/install-command the endpoint now allows anonymous access [api-security-anonymous-access-added]. This endpoint inherits the API's top-level security requirements.
+
+info at openapi-test3.yaml, in API GET /api/{domain}/{project}/install-command added the new optional `header` request parameter `name` to all path's operations [new-optional-request-default-parameter-to-existing-path]. 
+
+info at openapi-test3.yaml, in API GET /api/{domain}/{project}/install-command added the new enum value `test1` to the `path` request parameter `project` [request-parameter-enum-value-added]. 
+
+info at openapi-test3.yaml, in API POST /subscribe the endpoint now allows anonymous access [api-security-anonymous-access-added]. This endpoint inherits the API's top-level security requirements.
+
+

@@ -1,0 +1,2 @@
+::error title=request-property-became-required,file=./required-properties/items2.yaml,line=16,col=21::in API POST /test the request property `items/id` became required
+

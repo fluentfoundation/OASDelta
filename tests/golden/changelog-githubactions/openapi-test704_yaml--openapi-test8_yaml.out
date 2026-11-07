@@ -1,0 +1,14 @@
+::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API GET /api/{domain}/{project}/badges/security-score api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API GET /api/{domain}/{project}/install-command api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API POST /register api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API POST /subscribe api path removed without deprecation
+::notice title=api-global-security-removed::in API   the security scheme `bearerAuth` was removed from the API
+::notice title=api-schema-removed::in API   removed the schema `network-policies`
+::notice title=api-schema-removed::in API   removed the schema `rules`
+::notice title=api-security-component-removed::in API   the component security scheme `AccessToken` was removed
+::notice title=api-security-component-removed::in API   the component security scheme `OAuth` was removed
+::notice title=api-security-component-removed::in API   the component security scheme `bearerAuth` was removed
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=endpoint-added,file=openapi-test8.yaml,line=7,col=5::in API GET /resource/new endpoint added
+::notice title=endpoint-added,file=openapi-test8.yaml,line=13,col=5::in API GET /resource/newest endpoint added
+

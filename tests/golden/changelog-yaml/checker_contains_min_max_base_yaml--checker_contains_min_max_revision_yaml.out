@@ -1,0 +1,70 @@
+- id: request-body-min-contains-increased
+  text: the request body minContains was increased from `1` to `2`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/contains_min_max_base.yaml
+    line: 18
+    column: 15
+  revisionSource:
+    file: ./checker/contains_min_max_revision.yaml
+    line: 18
+    column: 15
+  fingerprint: 6aba0ac0a8f5
+- id: response-body-max-contains-increased
+  text: the response body maxContains was increased from `5` to `6` for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/contains_min_max_base.yaml
+    line: 32
+    column: 17
+  revisionSource:
+    file: ./checker/contains_min_max_revision.yaml
+    line: 32
+    column: 17
+  fingerprint: 3a903a655182
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-body-max-contains-increased
+  text: the request body maxContains was increased from `5` to `6`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/contains_min_max_base.yaml
+    line: 19
+    column: 15
+  revisionSource:
+    file: ./checker/contains_min_max_revision.yaml
+    line: 19
+    column: 15
+  fingerprint: 4ea64a3ae772
+- id: response-body-min-contains-increased
+  text: the response body minContains was increased from `1` to `2` for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/contains_min_max_base.yaml
+    line: 31
+    column: 17
+  revisionSource:
+    file: ./checker/contains_min_max_revision.yaml
+    line: 31
+    column: 17
+  fingerprint: eda0bc237870
+

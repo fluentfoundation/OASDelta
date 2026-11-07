@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[request-body-discriminator-added] в ./checker/request_property_discriminator_added_revision.yaml
+	в API POST /pets
+		добавлен дискриминатор запроса
+
+info	[request-property-discriminator-added] в ./checker/request_property_discriminator_added_revision.yaml
+	в API POST /pets
+		добавлен дискриминатор к свойству запроса `oneOf[#/components/schemas/Dog]/breed`
+
+

@@ -1,0 +1,14 @@
+3 alterações: 1 error, 0 warning, 2 info
+error	[request-body-pattern-property-added] em ./checker/pattern_properties_revision.yaml
+	em API POST /products
+		adicionada a propriedade de padrão `^x-` ao corpo da requisição
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+info	[response-body-pattern-property-added] em ./checker/pattern_properties_revision.yaml
+	em API POST /products
+		adicionada a propriedade de padrão `^x-` ao corpo da resposta para o status `200`
+
+

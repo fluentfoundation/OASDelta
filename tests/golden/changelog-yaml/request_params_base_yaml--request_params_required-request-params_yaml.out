@@ -1,0 +1,144 @@
+- id: new-required-request-default-parameter-to-existing-path
+  text: added the new required `query` request parameter `version` to all path's operations
+  level: 3
+  operation: GET
+  operationId: getTest
+  path: /api/test1
+  section: paths
+  revisionSource:
+    file: ./request_params/required-request-params.yaml
+    line: 13
+    column: 9
+    endLine: 17
+    endColumn: 23
+  fingerprint: af841dbe0b3b
+- id: new-required-request-default-parameter-to-existing-path
+  text: added the new required `query` request parameter `version` to all path's operations
+  level: 3
+  operation: POST
+  path: /api/test1
+  section: paths
+  revisionSource:
+    file: ./request_params/required-request-params.yaml
+    line: 13
+    column: 9
+    endLine: 17
+    endColumn: 23
+  fingerprint: 6805e271a776
+- id: new-required-request-default-parameter-to-existing-path
+  text: added the new required `query` request parameter `id` to all path's operations
+  level: 3
+  operation: GET
+  operationId: getTest
+  path: /api/test2
+  section: paths
+  revisionSource:
+    file: ./request_params/required-request-params.yaml
+    line: 46
+    column: 9
+    endLine: 50
+    endColumn: 23
+  fingerprint: f47dbfb90631
+- id: new-required-request-default-parameter-to-existing-path
+  text: added the new required `header` request parameter `if-none-match` to all path's operations
+  level: 3
+  operation: GET
+  operationId: getTest
+  path: /api/test3
+  section: paths
+  revisionSource:
+    file: ./request_params/required-request-params.yaml
+    line: 70
+    column: 9
+    endLine: 72
+    endColumn: 23
+  fingerprint: ec75dc6f91b0
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: new-optional-request-default-parameter-to-existing-path
+  text: added the new optional `query` request parameter `optionalQueryParam` to all path's operations
+  level: 1
+  operation: GET
+  operationId: getTest
+  path: /api/test1
+  section: paths
+  revisionSource:
+    file: ./request_params/required-request-params.yaml
+    line: 18
+    column: 9
+    endLine: 22
+    endColumn: 23
+  fingerprint: 4da299bfdf29
+- id: new-optional-request-parameter
+  text: added the new optional `header` request parameter `x-newrequestheaderparam`
+  level: 1
+  operation: GET
+  operationId: getTest
+  path: /api/test1
+  section: paths
+  revisionSource:
+    file: ./request_params/required-request-params.yaml
+    line: 26
+    column: 11
+    endLine: 30
+    endColumn: 25
+  fingerprint: 365b07b5a4bb
+- id: new-optional-request-default-parameter-to-existing-path
+  text: added the new optional `query` request parameter `optionalQueryParam` to all path's operations
+  level: 1
+  operation: POST
+  path: /api/test1
+  section: paths
+  revisionSource:
+    file: ./request_params/required-request-params.yaml
+    line: 18
+    column: 9
+    endLine: 22
+    endColumn: 23
+  fingerprint: ef79a6912de3
+- id: new-optional-request-default-parameter-to-existing-path
+  text: added the new optional `header` request parameter `optionalheaderparam` to all path's operations
+  level: 1
+  operation: GET
+  operationId: getTest
+  path: /api/test2
+  section: paths
+  revisionSource:
+    file: ./request_params/required-request-params.yaml
+    line: 51
+    column: 9
+    endLine: 55
+    endColumn: 23
+  fingerprint: 997389809de4
+- id: new-optional-request-parameter
+  text: added the new optional `query` request parameter `newQueryParam`
+  level: 1
+  operation: GET
+  operationId: getTest
+  path: /api/test2
+  section: paths
+  revisionSource:
+    file: ./request_params/required-request-params.yaml
+    line: 59
+    column: 11
+    endLine: 63
+    endColumn: 25
+  fingerprint: fc9d66121299
+- id: new-optional-request-parameter
+  text: added the new optional `cookie` request parameter `csrf-token`
+  level: 1
+  operation: GET
+  operationId: getTest
+  path: /api/test3
+  section: paths
+  revisionSource:
+    file: ./request_params/required-request-params.yaml
+    line: 76
+    column: 11
+    endLine: 80
+    endColumn: 25
+  fingerprint: 8c1a6b83395a
+

@@ -1,0 +1,4 @@
+::error title=new-required-request-property,file=./checker/request_property_added_revision2.yaml,line=17,col=17::in API POST /products added the new required request property `description`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=new-optional-request-property,file=./checker/request_property_added_revision2.yaml,line=19,col=17::in API POST /products added the new optional request property `info`
+

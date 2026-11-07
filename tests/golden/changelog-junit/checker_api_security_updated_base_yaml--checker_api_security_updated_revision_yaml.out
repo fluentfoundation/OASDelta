@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="api-security-scope-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the security scope `read:pets` was removed from the endpoint's security scheme `petstore_auth`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

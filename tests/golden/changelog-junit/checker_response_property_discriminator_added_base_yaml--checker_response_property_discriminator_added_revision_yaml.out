@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-body-discriminator-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added response discriminator for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-discriminator-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added discriminator to `oneOf[#/components/schemas/Dog]/breed` response property for the response status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,17 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /test
+- :warning: `query` request parameter `filter` list-of-types was narrowed by removing types `integer and boolean`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

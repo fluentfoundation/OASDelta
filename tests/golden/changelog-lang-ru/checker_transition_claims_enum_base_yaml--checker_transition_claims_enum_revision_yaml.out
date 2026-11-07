@@ -1,0 +1,18 @@
+4 изменений: 2 error, 0 warning, 2 info
+error	[request-property-enum-value-removed] в ./checker/transition_claims_enum_revision.yaml
+	в API POST /test
+		удалено enum значение `alpha` у поля запроса `mode`
+
+error	[request-property-enum-value-removed] в ./checker/transition_claims_enum_revision.yaml
+	в API POST /test
+		удалено enum значение `beta` у поля запроса `mode`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-property-list-of-types-widened] в ./checker/transition_claims_enum_revision.yaml
+	в API POST /test
+		список типов свойства `mode` запроса был расширен добавлением типов `integer` к медиа-типу `application/json`
+
+

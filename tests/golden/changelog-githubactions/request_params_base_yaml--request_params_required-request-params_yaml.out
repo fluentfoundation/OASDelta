@@ -1,0 +1,12 @@
+::error title=new-required-request-default-parameter-to-existing-path,file=./request_params/required-request-params.yaml,line=13,col=9::in API GET /api/test1 added the new required `query` request parameter `version` to all path's operations
+::error title=new-required-request-default-parameter-to-existing-path,file=./request_params/required-request-params.yaml,line=13,col=9::in API POST /api/test1 added the new required `query` request parameter `version` to all path's operations
+::error title=new-required-request-default-parameter-to-existing-path,file=./request_params/required-request-params.yaml,line=46,col=9::in API GET /api/test2 added the new required `query` request parameter `id` to all path's operations
+::error title=new-required-request-default-parameter-to-existing-path,file=./request_params/required-request-params.yaml,line=70,col=9::in API GET /api/test3 added the new required `header` request parameter `if-none-match` to all path's operations
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=new-optional-request-default-parameter-to-existing-path,file=./request_params/required-request-params.yaml,line=18,col=9::in API GET /api/test1 added the new optional `query` request parameter `optionalQueryParam` to all path's operations
+::notice title=new-optional-request-parameter,file=./request_params/required-request-params.yaml,line=26,col=11::in API GET /api/test1 added the new optional `header` request parameter `x-newrequestheaderparam`
+::notice title=new-optional-request-default-parameter-to-existing-path,file=./request_params/required-request-params.yaml,line=18,col=9::in API POST /api/test1 added the new optional `query` request parameter `optionalQueryParam` to all path's operations
+::notice title=new-optional-request-default-parameter-to-existing-path,file=./request_params/required-request-params.yaml,line=51,col=9::in API GET /api/test2 added the new optional `header` request parameter `optionalheaderparam` to all path's operations
+::notice title=new-optional-request-parameter,file=./request_params/required-request-params.yaml,line=59,col=11::in API GET /api/test2 added the new optional `query` request parameter `newQueryParam`
+::notice title=new-optional-request-parameter,file=./request_params/required-request-params.yaml,line=76,col=11::in API GET /api/test3 added the new optional `cookie` request parameter `csrf-token`
+

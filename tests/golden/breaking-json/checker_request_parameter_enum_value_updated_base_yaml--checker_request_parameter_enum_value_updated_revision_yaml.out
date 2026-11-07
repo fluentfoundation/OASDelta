@@ -1,0 +1,1 @@
+[{"id":"request-parameter-enum-value-removed","text":"removed the enum value `available` from the `query` request parameter `status`","level":3,"operation":"GET","operationId":"getTest","path":"/test","section":"paths","baseSource":{"file":"./checker/request_parameter_enum_value_updated_base.yaml","line":15,"column":17},"fingerprint":"a4a5a16db35f"}]

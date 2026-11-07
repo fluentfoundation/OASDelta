@@ -1,0 +1,31 @@
+- id: response-body-type-changed
+  text: the response's body `type` changed from `string` to `object` for status `200`
+  level: 3
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups
+  section: paths
+  baseSource:
+    file: ./checker/response_schema_type_changed_base.yaml
+    line: 29
+    column: 7
+  revisionSource:
+    file: ./checker/response_schema_type_changed_revision.yaml
+    line: 29
+    column: 7
+  fingerprint: 02fc71b69967
+- id: response-optional-property-added
+  text: added the optional property `data` to the response with the `200` status
+  level: 1
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups
+  section: paths
+  revisionSource:
+    file: ./checker/response_schema_type_changed_revision.yaml
+    line: 31
+    column: 9
+    endLine: 45
+    endColumn: 19
+  fingerprint: fc582cf500cf
+

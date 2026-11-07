@@ -1,0 +1,20 @@
+9 changes: 2 error, 0 warning, 7 info
+error at ./checker/sub_schema_added_property_revision.yaml, in API POST /products added the new required request property `data/else/newField` [new-required-request-property]. 
+
+error at ./checker/sub_schema_added_property_revision.yaml, in API POST /products added the new required request property `data/then/newField` [new-required-request-property]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./checker/sub_schema_added_property_revision.yaml, in API POST /products added the new optional request property `data/contains/newField` [new-optional-request-property]. 
+
+info at ./checker/sub_schema_added_property_revision.yaml, in API POST /products added the new optional request property `data/contentSchema/newField` [new-optional-request-property]. 
+
+info at ./checker/sub_schema_added_property_revision.yaml, in API POST /products added the new optional request property `data/dependentSchemas[name]/newField` [new-optional-request-property]. 
+
+info at ./checker/sub_schema_added_property_revision.yaml, in API POST /products added the new optional request property `data/patternProperties[^x-]/newField` [new-optional-request-property]. 
+
+info at ./checker/sub_schema_added_property_revision.yaml, in API POST /products added the new optional request property `data/prefixItems[subschema #1]/newField` [new-optional-request-property]. 
+
+info at ./checker/sub_schema_added_property_revision.yaml, in API POST /products added the new optional request property `data/unevaluatedProperties/newField` [new-optional-request-property]. 
+
+

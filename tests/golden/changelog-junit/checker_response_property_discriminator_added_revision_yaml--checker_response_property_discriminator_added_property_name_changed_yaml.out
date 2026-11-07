@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="10" errors="0" failures="10" name="OASDiff">
+    <testcase name="response-body-discriminator-property-name-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">response discriminator property name changed from `petType` to `petType2` for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-optional-property-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the optional property `oneOf[#/components/schemas/Cat]/petType2` to the response with the `200` status</failure>
+    </testcase>
+    <testcase name="response-optional-property-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the optional property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name2` to the response with the `200` status</failure>
+    </testcase>
+    <testcase name="response-optional-property-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the optional property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name2` to the response with the `200` status</failure>
+    </testcase>
+    <testcase name="response-optional-property-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the optional property `oneOf[#/components/schemas/Dog]/petType2` to the response with the `200` status</failure>
+    </testcase>
+    <testcase name="response-optional-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the optional property `oneOf[#/components/schemas/Cat]/petType` from the response with the `200` status</failure>
+    </testcase>
+    <testcase name="response-optional-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the optional property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name` from the response with the `200` status</failure>
+    </testcase>
+    <testcase name="response-optional-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the optional property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name` from the response with the `200` status</failure>
+    </testcase>
+    <testcase name="response-optional-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the optional property `oneOf[#/components/schemas/Dog]/petType` from the response with the `200` status</failure>
+    </testcase>
+    <testcase name="response-property-discriminator-property-name-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">response discriminator property name changed for `oneOf[#/components/schemas/Dog]/breed` response property from `name` to `name2` for the response status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,12 @@
+- id: request-property-became-required
+  text: the request property `id/userId` became required
+  level: 3
+  operation: POST
+  path: /test
+  section: paths
+  revisionSource:
+    file: ./required-properties/nested-property2.yaml
+    line: 17
+    column: 21
+  fingerprint: a9f23dfbf21a
+

@@ -1,0 +1,107 @@
+paths:
+    modified:
+        /dogs:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    colors:
+                                                        type:
+                                                            added:
+                                                                - array
+                                                            deleted:
+                                                                - object
+                                                        items:
+                                                            schemaAdded: true
+                                                        required:
+                                                            stringsdiff:
+                                                                deleted:
+                                                                    - blue
+                                                                    - green
+                                                                    - red
+                                                        properties:
+                                                            deleted:
+                                                                - blue
+                                                                - green
+                                                                - red
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            type:
+                                                added:
+                                                    - array
+                                                deleted:
+                                                    - object
+                                            items:
+                                                schemaAdded: true
+                                            required:
+                                                stringsdiff:
+                                                    deleted:
+                                                        - data
+                                            properties:
+                                                deleted:
+                                                    - data
+endpoints:
+    modified:
+        ?   method: POST
+            path: /dogs
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        colors:
+                                            type:
+                                                added:
+                                                    - array
+                                                deleted:
+                                                    - object
+                                            items:
+                                                schemaAdded: true
+                                            required:
+                                                stringsdiff:
+                                                    deleted:
+                                                        - blue
+                                                        - green
+                                                        - red
+                                            properties:
+                                                deleted:
+                                                    - blue
+                                                    - green
+                                                    - red
+        ?   method: POST
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                type:
+                                    added:
+                                        - array
+                                    deleted:
+                                        - object
+                                items:
+                                    schemaAdded: true
+                                required:
+                                    stringsdiff:
+                                        deleted:
+                                            - data
+                                properties:
+                                    deleted:
+                                        - data
+

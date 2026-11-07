@@ -1,0 +1,6 @@
+::error title=request-body-min-items-set,file=./checker/min_items_set_revision.yaml,line=46,col=15::in API POST /batch the request's body minItems was set to `2`
+::error title=response-body-min-items-unset,file=./checker/min_items_set_revision.yaml::in API POST /batch the response's body minItems was unset from `2`
+::error title=request-parameter-min-items-set,file=./checker/min_items_set_revision.yaml,line=15,col=13::in API POST /items for the `query` request parameter `ids`, the minItems was set to `3`
+::error title=request-property-min-items-set,file=./checker/min_items_set_revision.yaml,line=25,col=19::in API POST /items the `tags` request property's minItems was set to `3`
+::error title=response-property-min-items-unset,file=./checker/min_items_set_revision.yaml::in API POST /items the `tags` response property's minItems was unset from `3` for the response status `200`
+

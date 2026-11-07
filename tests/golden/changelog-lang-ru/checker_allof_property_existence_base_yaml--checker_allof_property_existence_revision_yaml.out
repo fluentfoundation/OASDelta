@@ -1,0 +1,17 @@
+3 изменений: 0 error, 3 warning, 0 info
+warning	[new-required-request-property] в ./checker/allof_property_existence_revision.yaml
+	в API POST /items
+		добавлено новое обязательное поле запроса `wrapper/allOf[subschema #2]/added`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+warning	[request-property-removed] в ./checker/allof_property_existence_revision.yaml
+	в API POST /items
+		удалено поле запроса `wrapper/allOf[subschema #2]/drop`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+warning	[request-property-type-changed] в ./checker/allof_property_existence_revision.yaml
+	в API POST /items
+		у поля запроса `wrapper/allOf[subschema #2]/other` `type` изменён с `string` на `integer`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

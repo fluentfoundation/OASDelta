@@ -1,0 +1,25 @@
+<h3 id="new-endpoints-3">New Endpoints: 3</h3>
+<hr>
+<p>GET /api/{domain}/{project}/badges/security-score<br>
+GET /api/{domain}/{project}/install-command<br>
+POST /register</p>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-none">Modified Endpoints: None</h3>
+<hr>
+<h2 id="other-changes">Other Changes</h2>
+<p>Extensions changed</p>
+<ul>
+<li>New extension: x-extension-test</li>
+<li>New extension: x-extension-test2</li>
+</ul>
+<p>Version changed from '3.0.0' to '3.0.3'<br>
+Security Requirements changed</p>
+<ul>
+<li>New security requirements: bearerAuth</li>
+</ul>
+<p>Servers changed</p>
+<ul>
+<li>New server: tufin.com</li>
+</ul>
+

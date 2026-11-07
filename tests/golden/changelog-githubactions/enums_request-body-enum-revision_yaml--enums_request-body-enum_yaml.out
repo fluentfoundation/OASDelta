@@ -1,0 +1,2 @@
+::notice title=request-body-enum-value-added,file=./enums/request-body-enum.yaml,line=26,col=17::in API GET /api/v2/changeOfRequestFieldValueTiedToEnumTest request body enum value added `VALUE_3`
+

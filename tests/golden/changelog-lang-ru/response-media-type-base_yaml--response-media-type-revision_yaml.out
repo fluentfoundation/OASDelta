@@ -1,0 +1,10 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[response-media-type-removed] в ./response-media-type-revision.yaml
+	в API GET /products
+		удалён media type `application/json` для ответа со статусом `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

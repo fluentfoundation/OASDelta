@@ -1,0 +1,114 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-2">Modified Endpoints: 2</h3>
+<hr>
+<p>POST /batch</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>MinItems changed from 0 to 2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>MinItems changed from 2 to 0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>POST /items</p>
+<ul>
+<li>Modified query param: ids
+<ul>
+<li>Schema changed
+<ul>
+<li>MinItems changed from 0 to 3</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: tags
+<ul>
+<li>MinItems changed from 0 to 3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: tags
+<ul>
+<li>MinItems changed from 3 to 0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

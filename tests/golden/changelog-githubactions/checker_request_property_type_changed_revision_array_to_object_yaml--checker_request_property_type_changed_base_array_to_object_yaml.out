@@ -1,0 +1,8 @@
+::error title=request-property-type-changed,file=./checker/request_property_type_changed_base_array_to_object.yaml,line=42,col=19::in API POST /dogs the `colors` request property `type` changed from `object` to `array<integer>`
+::error title=request-body-type-changed,file=./checker/request_property_type_changed_base_array_to_object.yaml,line=15,col=15::in API POST /pets the request's body `type` changed from `object` to `array<object>`
+::warning title=request-property-removed,file=./checker/request_property_type_changed_base_array_to_object.yaml::in API POST /dogs removed the request property `colors/blue`
+::warning title=request-property-removed,file=./checker/request_property_type_changed_base_array_to_object.yaml::in API POST /dogs removed the request property `colors/green`
+::warning title=request-property-removed,file=./checker/request_property_type_changed_base_array_to_object.yaml::in API POST /dogs removed the request property `colors/red`
+::warning title=request-property-removed,file=./checker/request_property_type_changed_base_array_to_object.yaml::in API POST /pets removed the request property `data`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

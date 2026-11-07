@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/subscribe":{"operations":{"modified":{"POST":{"securityRequirements":{"modified":[{"base":{"index":0,"schemes":{"petstore_auth":["write:pets"]}},"revision":{"index":0,"schemes":{"petstore_auth":["write:pets","read:pets"]}},"scopes":{"petstore_auth":{"added":["read:pets"]}}}]}}}}}}}}

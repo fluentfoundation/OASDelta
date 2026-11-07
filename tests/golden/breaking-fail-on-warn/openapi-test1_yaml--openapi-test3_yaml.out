@@ -1,0 +1,38 @@
+8 changes: 4 error, 4 warning, 0 info
+error	[response-success-status-removed] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the success response with the status `200`
+
+error	[response-success-status-removed] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the success response with the status `201`
+
+error	[api-security-removed] at openapi-test3.yaml
+	in API POST /register
+		the endpoint scheme security `bearerAuth` was removed from the API
+
+error	[api-security-scope-added] at openapi-test3.yaml
+	in API POST /register
+		the security scope `write:pets` was added to the endpoint's security scheme `OAuth`
+
+warning	[request-parameter-removed] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `cookie` request parameter `test`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning	[request-parameter-removed] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `header` request parameter `user`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning	[request-parameter-removed] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `query` request parameter `filter`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning	[request-parameter-removed] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/install-command
+		deleted the `header` request parameter `network-policies`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+

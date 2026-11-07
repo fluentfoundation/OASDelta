@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
+    <testcase name="request-body-discriminator-mapping-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added `cats` mapping keys to the request discriminator</failure>
+    </testcase>
+    <testcase name="request-body-discriminator-mapping-deleted" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed `cat` mapping keys from the request discriminator</failure>
+    </testcase>
+    <testcase name="request-property-discriminator-mapping-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added `breed1Code` discriminator mapping keys to the `oneOf[#/components/schemas/Dog]/breed` request property</failure>
+    </testcase>
+    <testcase name="request-property-discriminator-mapping-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">mapped value for discriminator key `breed2` changed from `#/components/schemas/Breed2` to `#/components/schemas/Breed3` for `oneOf[#/components/schemas/Dog]/breed` request property</failure>
+    </testcase>
+    <testcase name="request-property-discriminator-mapping-deleted" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed `breed1` discriminator mapping keys from the `oneOf[#/components/schemas/Dog]/breed` request property</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

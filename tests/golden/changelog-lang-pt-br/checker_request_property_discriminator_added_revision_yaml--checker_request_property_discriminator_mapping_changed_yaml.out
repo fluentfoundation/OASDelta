@@ -1,0 +1,22 @@
+5 alterações: 0 error, 0 warning, 5 info
+info	[request-body-discriminator-mapping-added] em ./checker/request_property_discriminator_mapping_changed.yaml
+	em API POST /pets
+		chaves de mapeamento `cats` adicionadas ao discriminador de requisição
+
+info	[request-body-discriminator-mapping-deleted] em ./checker/request_property_discriminator_mapping_changed.yaml
+	em API POST /pets
+		chaves de mapeamento `cat` removidas do discriminador de requisição
+
+info	[request-property-discriminator-mapping-added] em ./checker/request_property_discriminator_mapping_changed.yaml
+	em API POST /pets
+		chaves de mapeamento `breed1Code` adicionadas ao discriminador da propriedade de requisição `oneOf[#/components/schemas/Dog]/breed`
+
+info	[request-property-discriminator-mapping-changed] em ./checker/request_property_discriminator_mapping_changed.yaml
+	em API POST /pets
+		o valor mapeado para a chave do discriminador `breed2` foi alterado de `#/components/schemas/Breed2` para `#/components/schemas/Breed3` para a propriedade de requisição `oneOf[#/components/schemas/Dog]/breed`
+
+info	[request-property-discriminator-mapping-deleted] em ./checker/request_property_discriminator_mapping_changed.yaml
+	em API POST /pets
+		chaves de mapeamento `breed1` removidas do discriminador da propriedade de requisição `oneOf[#/components/schemas/Dog]/breed`
+
+

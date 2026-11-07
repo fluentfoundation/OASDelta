@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[request-body-dependent-required-added] в ./checker/dependent_required_revision.yaml
+	в API POST /products
+		dependentRequired тела запроса был добавлен: когда присутствует `name`, требуются `email`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-body-dependent-required-added] в ./checker/dependent_required_revision.yaml
+	в API POST /products
+		dependentRequired тела ответа был добавлен для статуса `200`: когда присутствует `name`, требуются `email`
+
+

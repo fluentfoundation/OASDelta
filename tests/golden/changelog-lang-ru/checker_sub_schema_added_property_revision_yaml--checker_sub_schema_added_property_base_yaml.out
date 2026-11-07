@@ -1,0 +1,34 @@
+8 изменений: 0 error, 8 warning, 0 info
+warning	[request-property-removed] в ./checker/sub_schema_added_property_base.yaml
+	в API POST /products
+		удалено поле запроса `data/contains/newField`
+
+warning	[request-property-removed] в ./checker/sub_schema_added_property_base.yaml
+	в API POST /products
+		удалено поле запроса `data/contentSchema/newField`
+
+warning	[request-property-removed] в ./checker/sub_schema_added_property_base.yaml
+	в API POST /products
+		удалено поле запроса `data/dependentSchemas[name]/newField`
+
+warning	[request-property-removed] в ./checker/sub_schema_added_property_base.yaml
+	в API POST /products
+		удалено поле запроса `data/else/newField`
+
+warning	[request-property-removed] в ./checker/sub_schema_added_property_base.yaml
+	в API POST /products
+		удалено поле запроса `data/patternProperties[^x-]/newField`
+
+warning	[request-property-removed] в ./checker/sub_schema_added_property_base.yaml
+	в API POST /products
+		удалено поле запроса `data/prefixItems[subschema #1]/newField`
+
+warning	[request-property-removed] в ./checker/sub_schema_added_property_base.yaml
+	в API POST /products
+		удалено поле запроса `data/then/newField`
+
+warning	[request-property-removed] в ./checker/sub_schema_added_property_base.yaml
+	в API POST /products
+		удалено поле запроса `data/unevaluatedProperties/newField`
+
+

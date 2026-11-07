@@ -1,0 +1,37 @@
+8 alterações: 2 error, 0 warning, 6 info
+error	[response-mediatype-became-not-enum] em ./checker/enum_removed_entirely_revision.yaml
+	em API PUT /mode
+		restrição enum removida do esquema de resposta `text/plain` para o status `200`
+		O servidor agora pode retornar qualquer valor do tipo do esquema, incluindo valores que o enum anterior excluía, portanto um cliente escrito com base nele pode não tratar a resposta.
+
+error	[response-property-became-not-enum] em ./checker/enum_removed_entirely_revision.yaml
+	em API POST /pets
+		restrição enum removida da propriedade de resposta `status` para o status `200`
+		O servidor agora pode retornar qualquer valor do tipo da propriedade, incluindo valores que o enum anterior excluía, portanto um cliente escrito com base nele pode não tratar a resposta.
+
+info	[request-body-became-not-enum] em ./checker/enum_removed_entirely_revision.yaml
+	em API PUT /mode
+		restrição enum removida do corpo da requisição
+
+info	[request-parameter-became-not-enum] em ./checker/enum_removed_entirely_revision.yaml
+	em API GET /pets
+		restrição enum removida do parâmetro de requisição do tipo `query` e nome `status`
+
+info	[request-parameter-property-became-not-enum] em ./checker/enum_removed_entirely_revision.yaml
+	em API GET /pets
+		restrição enum removida da propriedade `origin` do parâmetro de requisição do tipo `query` e nome `filter`
+
+info	[request-property-became-not-enum] em ./checker/enum_removed_entirely_revision.yaml
+	em API POST /pets
+		restrição enum removida da propriedade de requisição `kind`
+
+info	[request-property-became-not-enum] em ./checker/enum_removed_entirely_revision.yaml
+	em API POST /pets
+		restrição enum removida da propriedade de requisição `status`
+
+info	[response-property-became-not-enum] em ./checker/enum_removed_entirely_revision.yaml
+	em API POST /pets
+		restrição enum removida da propriedade de resposta `secret` para o status `200`
+		A propriedade é somente escrita, portanto nunca aparece em respostas e esta mudança não pode invalidar nenhuma.
+
+

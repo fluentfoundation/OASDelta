@@ -1,0 +1,34 @@
+8 alterações: 0 error, 8 warning, 0 info
+warning	[request-property-removed] em ./checker/sub_schema_added_property_base.yaml
+	em API POST /products
+		a propriedade de requisição `data/contains/newField` foi removida
+
+warning	[request-property-removed] em ./checker/sub_schema_added_property_base.yaml
+	em API POST /products
+		a propriedade de requisição `data/contentSchema/newField` foi removida
+
+warning	[request-property-removed] em ./checker/sub_schema_added_property_base.yaml
+	em API POST /products
+		a propriedade de requisição `data/dependentSchemas[name]/newField` foi removida
+
+warning	[request-property-removed] em ./checker/sub_schema_added_property_base.yaml
+	em API POST /products
+		a propriedade de requisição `data/else/newField` foi removida
+
+warning	[request-property-removed] em ./checker/sub_schema_added_property_base.yaml
+	em API POST /products
+		a propriedade de requisição `data/patternProperties[^x-]/newField` foi removida
+
+warning	[request-property-removed] em ./checker/sub_schema_added_property_base.yaml
+	em API POST /products
+		a propriedade de requisição `data/prefixItems[subschema #1]/newField` foi removida
+
+warning	[request-property-removed] em ./checker/sub_schema_added_property_base.yaml
+	em API POST /products
+		a propriedade de requisição `data/then/newField` foi removida
+
+warning	[request-property-removed] em ./checker/sub_schema_added_property_base.yaml
+	em API POST /products
+		a propriedade de requisição `data/unevaluatedProperties/newField` foi removida
+
+

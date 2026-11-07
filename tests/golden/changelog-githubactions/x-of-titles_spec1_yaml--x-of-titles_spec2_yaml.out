@@ -1,0 +1,3 @@
+::error title=response-body-any-of-added,file=./x-of-titles/spec2.yaml,line=17,col=21::in API GET /test added `subschema #2: Title 3` to the response body `anyOf` list for the response status `200`
+::notice title=response-body-any-of-removed,file=./x-of-titles/spec2.yaml::in API GET /test removed `subschema #2: Title 2` from the response body `anyOf` list for the response status `200`
+

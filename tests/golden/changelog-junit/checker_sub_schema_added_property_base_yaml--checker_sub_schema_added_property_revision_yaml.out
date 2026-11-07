@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="9" errors="0" failures="9" name="OASDiff">
+    <testcase name="new-required-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new required request property `data/else/newField`</failure>
+    </testcase>
+    <testcase name="new-required-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new required request property `data/then/newField`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `data/contains/newField`</failure>
+    </testcase>
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `data/contentSchema/newField`</failure>
+    </testcase>
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `data/dependentSchemas[name]/newField`</failure>
+    </testcase>
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `data/patternProperties[^x-]/newField`</failure>
+    </testcase>
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `data/prefixItems[subschema #1]/newField`</failure>
+    </testcase>
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `data/unevaluatedProperties/newField`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

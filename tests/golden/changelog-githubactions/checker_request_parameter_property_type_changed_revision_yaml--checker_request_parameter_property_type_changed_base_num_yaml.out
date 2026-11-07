@@ -1,0 +1,2 @@
+::error title=request-parameter-property-type-specialized,file=./checker/request_parameter_property_type_changed_base_num.yaml,line=65,col=11::in API GET /groups for the `query` request parameter `filters`, the `type` of property `groupId` was narrowed from `string` to `number`
+

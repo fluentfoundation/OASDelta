@@ -1,0 +1,15 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /items
+- :warning: added the new required request property `wrapper/allOf[subschema #2]/added`
+- :warning: removed the request property `wrapper/allOf[subschema #2]/drop`
+- :warning: the `wrapper/allOf[subschema #2]/other` request property `type` changed from `string` to `integer`
+
+
+
+
+
+

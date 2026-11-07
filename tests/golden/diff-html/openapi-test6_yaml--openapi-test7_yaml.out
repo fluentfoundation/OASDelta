@@ -1,0 +1,10 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-3">Deleted Endpoints: 3</h3>
+<hr>
+<p>GET /health<br>
+GET /health/live<br>
+GET /health/ready</p>
+<h3 id="modified-endpoints-none">Modified Endpoints: None</h3>
+<hr>
+

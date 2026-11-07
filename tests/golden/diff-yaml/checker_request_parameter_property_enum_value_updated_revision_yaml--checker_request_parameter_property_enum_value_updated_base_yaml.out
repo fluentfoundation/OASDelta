@@ -1,0 +1,33 @@
+paths:
+    modified:
+        /test:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    filter:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    origin:
+                                                        enum:
+                                                            added:
+                                                                - value-b
+endpoints:
+    modified:
+        ?   method: GET
+            path: /test
+        :   parameters:
+                modified:
+                    query:
+                        filter:
+                            schema:
+                                properties:
+                                    modified:
+                                        origin:
+                                            enum:
+                                                added:
+                                                    - value-b
+

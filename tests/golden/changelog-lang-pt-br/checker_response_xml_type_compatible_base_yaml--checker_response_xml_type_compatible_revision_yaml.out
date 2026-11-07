@@ -1,0 +1,7 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[response-body-type-compatible] em ./checker/response_xml_type_compatible_revision.yaml
+	em API POST /api/v1.0/groups
+		o `type` do corpo da resposta mudou de `string` para `object` para o status `200` (retrocompatível)
+		Esta mudança é retrocompatível porque o tipo de mídia não é fortemente tipado (por exemplo XML), onde qualquer valor pode ser representado como texto, então o tipo não é imposto na transmissão. Com um tipo de mídia fortemente tipado como JSON a mesma mudança seria incompatível.
+
+

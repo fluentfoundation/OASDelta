@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./enums/request-body-enum.yaml, in API GET /api/v2/changeOfRequestFieldValueTiedToEnumTest request body enum value added `VALUE_3` [request-body-enum-value-added]. 
+
+

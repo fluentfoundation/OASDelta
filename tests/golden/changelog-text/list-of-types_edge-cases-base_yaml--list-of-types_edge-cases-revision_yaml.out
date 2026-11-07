@@ -1,0 +1,22 @@
+5 changes: 2 error, 0 warning, 3 info
+error	[response-property-list-of-types-widened] at ./list-of-types/edge-cases-revision.yaml
+	in API GET /edge
+		response property `mixedBoth` list-of-types was widened by adding types `number` to media type `application/json` of response `200`
+
+error	[response-property-one-of-added] at ./list-of-types/edge-cases-revision.yaml
+	in API GET /edge
+		added `subschema #1, subschema #2` to the `complexOneOf` response property `oneOf` list for the response status `200`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[response-property-one-of-removed] at ./list-of-types/edge-cases-revision.yaml
+	in API GET /edge
+		removed `subschema #1, subschema #2` from the `complexOneOf` response property `oneOf` list for the response status `200`
+
+info	[response-property-type-specialized] at ./list-of-types/edge-cases-revision.yaml
+	in API GET /edge
+		the `emptyOneOf` response's property `type` was narrowed from `any` to `string` for status `200`
+
+

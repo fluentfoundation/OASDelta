@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[response-body-discriminator-added] в ./checker/response_property_discriminator_added_revision.yaml
+	в API POST /pets
+		добавлен дискриминатор ответа для статуса ответа `200`
+
+info	[response-property-discriminator-added] в ./checker/response_property_discriminator_added_revision.yaml
+	в API POST /pets
+		добавлен дискриминатор к свойству ответа `oneOf[#/components/schemas/Dog]/breed` для статуса ответа `200`
+
+

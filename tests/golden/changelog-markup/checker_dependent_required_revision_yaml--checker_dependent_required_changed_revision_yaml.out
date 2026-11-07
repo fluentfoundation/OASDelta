@@ -1,0 +1,20 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the request body dependentRequired for `name` was updated: `phone added`
+- :warning: the response body dependentRequired for `name` was updated for the status `200`: `phone added`
+-  added the new optional request property `phone`
+-  added the optional property `phone` to the response with the `200` status
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

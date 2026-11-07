@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[response-optional-property-added] en ./checker/shared_schema_two_parents_revision.yaml
+	en API GET /example
+		agregada la propiedad opcional `first/shared/extra` a la respuesta con estado `200` (esquema compartido: `Shared`, también en `third/shared/extra`, `fourth/shared/extra` y 1 más)
+
+info	[response-property-pattern-added] en ./checker/shared_schema_two_parents_revision.yaml
+	en API GET /example
+		el patrón `first/shared/id` fue agregado a la propiedad de respuesta `^[0-9]+$` para el estado `200` (esquema compartido: `Shared`, también en `third/shared/id`, `fourth/shared/id` y 1 más)
+
+

@@ -1,0 +1,8 @@
+3 changes: 2 error, 0 warning, 1 info
+error at ./list-of-types/body-test-revision.yaml, in API POST /test request body list-of-types was narrowed by removing types `string and integer` from media type `application/json` [request-body-list-of-types-narrowed]. 
+
+error at ./list-of-types/body-test-revision.yaml, in API POST /test response body list-of-types was widened by adding types `integer` to media type `application/json` of response `200` [response-body-list-of-types-widened]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

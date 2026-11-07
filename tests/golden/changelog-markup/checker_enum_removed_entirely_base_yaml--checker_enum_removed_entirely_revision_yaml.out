@@ -1,0 +1,26 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### PUT /mode
+- :warning: removed the enum constraint from the response schema `text/plain` for the response status `200`
+-  removed the enum constraint from the request body
+
+
+### GET /pets
+-  removed the enum constraint from the `query` request parameter `status`
+-  removed the enum constraint from the property `origin` of the `query` request parameter `filter`
+
+
+### POST /pets
+- :warning: removed the enum constraint from the `status` response property for the response status `200`
+-  removed the enum constraint from the request property `kind`
+-  removed the enum constraint from the request property `status`
+-  removed the enum constraint from the `secret` response property for the response status `200`
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+::error title=request-parameter-x-extensible-enum-value-removed,file=./checker/request_parameter_extensible_enum_revision.yaml::in API POST /api/v1.0/groups removed the x-extensible-enum value `2` from the `path` request parameter `groupId`
+

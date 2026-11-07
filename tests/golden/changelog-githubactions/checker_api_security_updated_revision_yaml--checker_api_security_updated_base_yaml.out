@@ -1,0 +1,3 @@
+::error title=api-security-scope-added,file=./checker/api_security_updated_base.yaml,line=23,col=7::in API POST /subscribe the security scope `read:pets` was added to the endpoint's security scheme `petstore_auth`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

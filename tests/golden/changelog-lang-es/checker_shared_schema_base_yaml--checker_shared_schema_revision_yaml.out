@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-optional-property-added] en ./checker/shared_schema_revision.yaml
+	en API GET /example
+		agregada la propiedad opcional `left/extra` a la respuesta con estado `200` (esquema compartido: `Shared`, también en `right/extra`)
+
+

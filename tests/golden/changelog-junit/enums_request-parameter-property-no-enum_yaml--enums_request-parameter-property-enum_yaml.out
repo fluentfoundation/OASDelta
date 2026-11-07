@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="request-header-property-became-enum" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `bookid` request header's property `name` was restricted to a list of enum values</failure>
+    </testcase>
+    <testcase name="request-parameter-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the enum value `VALUE_1` to the property `name` of the `header` request parameter `bookid`</failure>
+    </testcase>
+    <testcase name="request-parameter-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the enum value `VALUE_2` to the property `name` of the `header` request parameter `bookid`</failure>
+    </testcase>
+    <testcase name="request-parameter-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the enum value `VALUE_3` to the property `name` of the `header` request parameter `bookid`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

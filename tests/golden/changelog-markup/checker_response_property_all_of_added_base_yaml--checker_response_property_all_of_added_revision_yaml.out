@@ -1,0 +1,14 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /pets
+-  added `#/components/schemas/Rabbit` to the response body `allOf` list for the response status `200`
+-  added `#/components/schemas/Breed3` to the `allOf[#/components/schemas/Dog]/breed` response property `allOf` list for the response status `200`
+
+
+
+
+
+

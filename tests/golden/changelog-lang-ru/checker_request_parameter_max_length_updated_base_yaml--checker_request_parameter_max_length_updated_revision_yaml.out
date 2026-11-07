@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[request-parameter-max-length-increased] в ./checker/request_parameter_max_length_updated_revision.yaml
+	в API POST /test
+		в `query` параметре запроса `category`, maxLength увеличен с `10` до `15`
+
+

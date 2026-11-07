@@ -1,0 +1,22 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /items
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Schema deleted
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Schema deleted
+
+

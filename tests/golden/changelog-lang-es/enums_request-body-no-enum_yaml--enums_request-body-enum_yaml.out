@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-body-became-enum] en ./enums/request-body-enum.yaml
+	en API GET /api/v2/changeOfRequestFieldValueTiedToEnumTest
+		el cuerpo de solicitud fue restringido a una lista de valores enum
+
+

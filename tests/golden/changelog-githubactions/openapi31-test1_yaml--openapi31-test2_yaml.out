@@ -1,0 +1,3 @@
+::error title=request-property-became-required,file=./openapi31-test2.yaml,line=27,col=11::in API POST webhook:newPet the request property `tag` became required
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

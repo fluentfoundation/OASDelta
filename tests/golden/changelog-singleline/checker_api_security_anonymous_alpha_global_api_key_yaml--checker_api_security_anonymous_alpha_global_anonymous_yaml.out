@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info, in security the security scheme `apiKey` was removed from the API [api-global-security-removed]. No endpoint inherits the API's top-level security requirements, so this change affects no client.
+
+

@@ -1,0 +1,18 @@
+8 changes: 4 error, 0 warning, 4 info
+error at ./oas32/base.yaml, in API LOCK /gone api path removed without deprecation [api-path-removed-without-deprecation]. 
+
+error at ./oas32/base.yaml, in API QUERY /gone api path removed without deprecation [api-path-removed-without-deprecation]. 
+
+error at ./oas32/base.yaml, in API PURGE /search api removed without deprecation [api-removed-without-deprecation]. 
+
+error at ./oas32/revision.yaml, in API QUERY /search the `term` request property `type` changed from `string` to `integer` [request-property-type-changed]. 
+
+info at ./oas32/revision.yaml, in API QUERY /new endpoint added [endpoint-added]. 
+
+info at ./oas32/revision.yaml, in API COPY /search endpoint deprecated [endpoint-deprecated]. 
+
+info at ./oas32/revision.yaml, in API MOVE /search endpoint added [endpoint-added]. 
+
+info at ./oas32/revision.yaml, in API QUERY /search removed the non-success response with the status `418` [response-non-success-status-removed]. 
+
+

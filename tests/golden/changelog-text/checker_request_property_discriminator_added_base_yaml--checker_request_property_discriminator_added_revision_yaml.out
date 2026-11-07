@@ -1,0 +1,10 @@
+2 changes: 0 error, 0 warning, 2 info
+info	[request-body-discriminator-added] at ./checker/request_property_discriminator_added_revision.yaml
+	in API POST /pets
+		added request discriminator
+
+info	[request-property-discriminator-added] at ./checker/request_property_discriminator_added_revision.yaml
+	in API POST /pets
+		added discriminator to `oneOf[#/components/schemas/Dog]/breed` request property
+
+

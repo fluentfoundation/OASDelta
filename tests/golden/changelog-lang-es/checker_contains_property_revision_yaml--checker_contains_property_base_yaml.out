@@ -1,0 +1,30 @@
+7 cambios: 3 error, 0 warning, 4 info
+error	[response-property-contains-removed] en ./checker/contains_property_base.yaml
+	en API POST /products
+		removida la restricción 'contains' de la propiedad de respuesta `tags` para el estado `200`
+
+error	[response-property-max-contains-unset] en ./checker/contains_property_base.yaml
+	en API POST /products
+		el valor maxContains de la propiedad de respuesta `tags` fue removido de `3` para el estado `200`
+
+error	[response-property-min-contains-unset] en ./checker/contains_property_base.yaml
+	en API POST /products
+		el valor minContains de la propiedad de respuesta `tags` fue removido de `1` para el estado `200`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[request-property-contains-removed] en ./checker/contains_property_base.yaml
+	en API POST /products
+		removida la restricción 'contains' de la propiedad de solicitud `tags`
+
+info	[request-property-max-contains-unset] en ./checker/contains_property_base.yaml
+	en API POST /products
+		el valor maxContains de la propiedad de solicitud `tags` fue removido de `3`
+
+info	[request-property-min-contains-unset] en ./checker/contains_property_base.yaml
+	en API POST /products
+		el valor minContains de la propiedad de solicitud `tags` fue removido de `1`
+
+

@@ -1,0 +1,80 @@
+- id: request-property-contains-added
+  text: added 'contains' constraint to the request property `tags`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 19
+    column: 19
+  fingerprint: ed3d4d5e2c90
+- id: request-property-max-contains-set
+  text: the `tags` request property's maxContains was set to `3`
+  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 22
+    column: 19
+  fingerprint: cc792af394ee
+- id: request-property-min-contains-set
+  text: the `tags` request property's minContains was set to `1`
+  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 21
+    column: 19
+  fingerprint: 60e7a03b0b18
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: response-property-contains-added
+  text: added 'contains' constraint to the `tags` response property for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 35
+    column: 21
+  fingerprint: fc240a718784
+- id: response-property-max-contains-set
+  text: the `tags` response property's maxContains was set to `3` for the response status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 38
+    column: 21
+  fingerprint: 8f8cfad3a111
+- id: response-property-min-contains-set
+  text: the `tags` response property's minContains was set to `1` for the response status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/contains_property_revision.yaml
+    line: 37
+    column: 21
+  fingerprint: 251a8963bd70
+

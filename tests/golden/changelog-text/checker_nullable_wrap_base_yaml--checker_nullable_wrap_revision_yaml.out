@@ -1,0 +1,14 @@
+3 changes: 0 error, 0 warning, 3 info
+info	[request-property-became-nullable] at ./checker/nullable_wrap_revision.yaml
+	in API POST /test
+		the request property `optionalEnum` became nullable
+
+info	[request-property-became-nullable] at ./checker/nullable_wrap_revision.yaml
+	in API POST /test
+		the request property `optionalPrimitive` became nullable
+
+info	[request-property-became-nullable] at ./checker/nullable_wrap_revision.yaml
+	in API POST /test
+		the request property `optionalRef` became nullable
+
+

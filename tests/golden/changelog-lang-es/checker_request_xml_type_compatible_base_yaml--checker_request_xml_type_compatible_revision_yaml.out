@@ -1,0 +1,7 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-body-type-compatible] en ./checker/request_xml_type_compatible_revision.yaml
+	en API POST /api/v1.0/groups
+		el `type` del cuerpo de solicitud cambió de `object` a `string` (retrocompatible)
+		Este cambio es retrocompatible porque el tipo de medio no es fuertemente tipado (por ejemplo XML), donde cualquier valor puede representarse como texto, por lo que el tipo no se impone en la transmisión. Con un tipo de medio fuertemente tipado como JSON el mismo cambio sería incompatible.
+
+

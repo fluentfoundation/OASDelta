@@ -1,0 +1,18 @@
+4 changes: 0 error, 4 warning, 0 info
+warning	[request-property-removed] at ./checker/request_property_discriminator_added_property_name_changed.yaml
+	in API POST /pets
+		removed the request property `oneOf[#/components/schemas/Cat]/petType`
+
+warning	[request-property-removed] at ./checker/request_property_discriminator_added_property_name_changed.yaml
+	in API POST /pets
+		removed the request property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name`
+
+warning	[request-property-removed] at ./checker/request_property_discriminator_added_property_name_changed.yaml
+	in API POST /pets
+		removed the request property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name`
+
+warning	[request-property-removed] at ./checker/request_property_discriminator_added_property_name_changed.yaml
+	in API POST /pets
+		removed the request property `oneOf[#/components/schemas/Dog]/petType`
+
+

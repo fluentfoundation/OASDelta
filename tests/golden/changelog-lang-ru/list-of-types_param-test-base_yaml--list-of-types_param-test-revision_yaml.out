@@ -1,0 +1,10 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[request-parameter-list-of-types-narrowed] в ./list-of-types/param-test-revision.yaml
+	в API GET /test
+		список типов `query` параметра запроса `filter` был сужен удалением типов `integer and boolean`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

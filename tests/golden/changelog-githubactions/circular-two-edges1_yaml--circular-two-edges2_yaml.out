@@ -1,0 +1,2 @@
+::notice title=response-optional-property-added,file=./circular-two-edges2.yaml,line=23,col=9::in API GET /tokens added the optional property `index` to the response with the `200` status
+

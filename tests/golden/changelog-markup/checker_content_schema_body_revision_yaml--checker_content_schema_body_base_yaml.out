@@ -1,0 +1,22 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the request body contentEncoding changed from `quoted-printable` to `base64`
+- :warning: the request body contentMediaType changed from `text/plain` to `application/json`
+- :warning: the response body contentEncoding changed from `quoted-printable` to `base64` for the status `200`
+- :warning: the response body contentMediaType changed from `text/plain` to `application/json` for the status `200`
+- :warning: removed 'contentSchema' from the response body for the status `200`
+-  removed 'contentSchema' from the request body
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

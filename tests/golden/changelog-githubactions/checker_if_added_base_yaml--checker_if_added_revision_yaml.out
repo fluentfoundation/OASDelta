@@ -1,0 +1,8 @@
+::error title=request-body-else-added,file=./checker/if_added_revision.yaml,line=24,col=15::in API POST /products added 'else' subschema to the request body
+::error title=request-body-if-added,file=./checker/if_added_revision.yaml,line=17,col=15::in API POST /products added 'if' subschema to the request body
+::error title=request-body-then-added,file=./checker/if_added_revision.yaml,line=21,col=15::in API POST /products added 'then' subschema to the request body
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-body-else-added,file=./checker/if_added_revision.yaml,line=45,col=17::in API POST /products added 'else' subschema to the response body for the status `200`
+::notice title=response-body-if-added,file=./checker/if_added_revision.yaml,line=38,col=17::in API POST /products added 'if' subschema to the response body for the status `200`
+::notice title=response-body-then-added,file=./checker/if_added_revision.yaml,line=42,col=17::in API POST /products added 'then' subschema to the response body for the status `200`
+

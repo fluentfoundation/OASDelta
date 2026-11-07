@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[request-parameter-max-length-increased] em ./checker/request_parameter_max_length_updated_revision.yaml
+	em API POST /test
+		no parâmetro de requisição do tipo `query` e nome `category` teve seu comprimento máximo aumentado de `10` para `15`
+
+

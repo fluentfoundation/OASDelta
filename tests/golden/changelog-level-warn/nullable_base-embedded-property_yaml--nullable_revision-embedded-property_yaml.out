@@ -1,0 +1,1 @@
+[{"id":"response-property-became-nullable","text":"the response property `name/name` became nullable for the status `201`","level":3,"operation":"POST","path":"/payments/{id}","section":"paths","revisionSource":{"file":"./nullable/revision-embedded-property.yaml","line":21,"column":25},"fingerprint":"01a9dbcfc04f"}]

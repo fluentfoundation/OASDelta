@@ -1,0 +1,8 @@
+3 changes: 1 error, 0 warning, 2 info
+error at ./list-of-types/param-test-base.yaml, in API GET /test api path removed without deprecation [api-path-removed-without-deprecation]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./list-of-types/edge-cases-base.yaml, in API GET /edge endpoint added [endpoint-added]. 
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-parameter-property-list-of-types-narrowed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">property `mode` of `query` request parameter `filter` list-of-types was narrowed by removing types `integer and boolean`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

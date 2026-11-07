@@ -1,0 +1,14 @@
+3 alterações: 1 error, 0 warning, 2 info
+error	[response-body-property-names-removed] em ./checker/property_names_base.yaml
+	em API POST /products
+		removida a restrição 'propertyNames' do corpo da resposta para o status `200`
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+info	[request-body-property-names-removed] em ./checker/property_names_base.yaml
+	em API POST /products
+		removida a restrição 'propertyNames' do corpo da requisição
+
+

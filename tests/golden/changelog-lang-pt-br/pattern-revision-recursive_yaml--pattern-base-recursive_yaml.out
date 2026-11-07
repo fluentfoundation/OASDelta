@@ -1,0 +1,15 @@
+3 alterações: 0 error, 0 warning, 3 info
+info	[request-property-pattern-added] em ./pattern-base-recursive.yaml
+	em API POST /api/v1.0/groups
+		adicionado o padrão `^[a-z]+$` à propriedade de requisição `data/created`
+		A propriedade é somente leitura, portanto nunca aparece em requisições e esta mudança não pode invalidar nenhuma.
+
+info	[response-property-pattern-added] em ./pattern-base-recursive.yaml
+	em API POST /api/v1.0/groups
+		o padrão `data/created` foi adicionado à propriedade de resposta `^[a-z]+$` para o status `200`
+
+info	[response-property-pattern-added] em ./pattern-base-recursive.yaml
+	em API GET /api/v1.0/groups/{groupId}
+		o padrão `data/created` foi adicionado à propriedade de resposta `^[a-z]+$` para o status `200`
+
+

@@ -1,0 +1,15 @@
+3 cambios: 0 error, 2 warning, 1 info
+warning	[response-property-pattern-changed] en ./pattern-modified-not-anystring.yaml
+	en API POST /api/v1.0/groups
+		el patrón de la propiedad de respuesta `created` fue cambiado de `^[a-z]+$` a `.+` para el estado `200`
+
+warning	[response-property-pattern-changed] en ./pattern-modified-not-anystring.yaml
+	en API GET /api/v1.0/groups/{groupId}
+		el patrón de la propiedad de respuesta `created` fue cambiado de `^[a-z]+$` a `.+` para el estado `200`
+
+info	[request-property-pattern-changed] en ./pattern-modified-not-anystring.yaml
+	en API POST /api/v1.0/groups
+		cambiado el patrón de la propiedad de solicitud `created` de `^[a-z]+$` a `.+`
+		La propiedad es de solo lectura, por lo que nunca aparece en las solicitudes y este cambio no puede invalidar ninguna.
+
+

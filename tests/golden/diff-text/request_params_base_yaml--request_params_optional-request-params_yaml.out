@@ -1,0 +1,18 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 3
+-------------------------
+GET /api/test1
+- New header param: x-newrequestheaderparam
+
+GET /api/test2
+- New query param: newQueryParam
+
+GET /api/test3
+- New cookie param: csrf-token
+
+

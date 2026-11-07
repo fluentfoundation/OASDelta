@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
+    <testcase name="request-body-min-items-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body minItems was set to `2`</failure>
+    </testcase>
+    <testcase name="response-body-min-items-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body minItems was unset from `2`</failure>
+    </testcase>
+    <testcase name="request-parameter-min-items-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `ids`, the minItems was set to `3`</failure>
+    </testcase>
+    <testcase name="request-property-min-items-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `tags` request property's minItems was set to `3`</failure>
+    </testcase>
+    <testcase name="response-property-min-items-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `tags` response property's minItems was unset from `3` for the response status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,1 @@
+[{"id":"request-parameter-pattern-removed","text":"removed the pattern `^\\w+$` from the `query` request parameter `category`","level":1,"operation":"POST","path":"/test","section":"paths","baseSource":{"file":"./checker/request_parameter_pattern_added_or_changed_base.yaml","line":14,"column":13},"fingerprint":"74173ffcf8a7"}]

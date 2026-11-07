@@ -1,0 +1,3 @@
+::warning title=request-property-prefix-items-removed,file=./checker/prefix_items_prop_base.yaml::in API POST /products removed `subschema #1` from the `details` request property 'prefixItems' list
+::warning title=response-property-prefix-items-removed,file=./checker/prefix_items_prop_base.yaml::in API POST /products removed `subschema #1` from the `details` response property 'prefixItems' list for the response status `200`
+

@@ -1,0 +1,150 @@
+- id: request-property-const-changed
+  text: the `kind` request property const value changed from `typeA` to `typeB`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/sub_schema_traversal_base.yaml
+    line: 21
+    column: 25
+  revisionSource:
+    file: ./checker/sub_schema_traversal_revision.yaml
+    line: 21
+    column: 25
+  fingerprint: 378efc0533fb
+- id: request-property-min-increased
+  text: the `data/then/value` request property's min was increased to `5.00`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/sub_schema_traversal_base.yaml
+    line: 26
+    column: 25
+  revisionSource:
+    file: ./checker/sub_schema_traversal_revision.yaml
+    line: 26
+    column: 25
+  fingerprint: b009e9cc2d29
+- id: request-property-min-length-increased
+  text: the `data/contains/` request property's minLength was increased from `1` to `3`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/sub_schema_traversal_base.yaml
+    line: 34
+    column: 21
+  revisionSource:
+    file: ./checker/sub_schema_traversal_revision.yaml
+    line: 34
+    column: 21
+  fingerprint: 1ced8d9f3d0f
+- id: request-property-min-length-increased
+  text: the `data/contentSchema/` request property's minLength was increased from `1` to `3`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/sub_schema_traversal_base.yaml
+    line: 49
+    column: 21
+  revisionSource:
+    file: ./checker/sub_schema_traversal_revision.yaml
+    line: 49
+    column: 21
+  fingerprint: 584fb1ee6739
+- id: request-property-min-length-increased
+  text: the `data/else/value` request property's minLength was increased from `1` to `3`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/sub_schema_traversal_base.yaml
+    line: 31
+    column: 25
+  revisionSource:
+    file: ./checker/sub_schema_traversal_revision.yaml
+    line: 31
+    column: 25
+  fingerprint: 6ccd301dca41
+- id: request-property-min-length-increased
+  text: 'the `data/prefixItems[subschema #1]/` request property''s minLength was increased from `1` to `3`'
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/sub_schema_traversal_base.yaml
+    line: 37
+    column: 23
+  revisionSource:
+    file: ./checker/sub_schema_traversal_revision.yaml
+    line: 37
+    column: 23
+  fingerprint: 3d4f00d73440
+- id: request-property-min-length-increased
+  text: the `data/propertyNames/` request property's minLength was increased from `1` to `3`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/sub_schema_traversal_base.yaml
+    line: 40
+    column: 21
+  revisionSource:
+    file: ./checker/sub_schema_traversal_revision.yaml
+    line: 40
+    column: 21
+  fingerprint: 71ecb818974e
+- id: request-property-min-length-increased
+  text: the `data/unevaluatedItems/` request property's minLength was increased from `1` to `3`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/sub_schema_traversal_base.yaml
+    line: 43
+    column: 21
+  revisionSource:
+    file: ./checker/sub_schema_traversal_revision.yaml
+    line: 43
+    column: 21
+  fingerprint: 12cdd7c15bbb
+- id: request-property-min-length-increased
+  text: the `data/unevaluatedProperties/` request property's minLength was increased from `1` to `3`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/sub_schema_traversal_base.yaml
+    line: 46
+    column: 21
+  revisionSource:
+    file: ./checker/sub_schema_traversal_revision.yaml
+    line: 46
+    column: 21
+  fingerprint: 5aa95e8c8d48
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+

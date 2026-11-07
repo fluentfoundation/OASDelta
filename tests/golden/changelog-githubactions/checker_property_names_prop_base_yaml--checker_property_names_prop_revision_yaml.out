@@ -1,0 +1,4 @@
+::error title=request-property-property-names-added,file=./checker/property_names_prop_revision.yaml,line=17,col=19::in API POST /products added 'propertyNames' constraint to the request property `details`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-property-property-names-added,file=./checker/property_names_prop_revision.yaml,line=29,col=21::in API POST /products added 'propertyNames' constraint to the `details` response property for the status `200`
+

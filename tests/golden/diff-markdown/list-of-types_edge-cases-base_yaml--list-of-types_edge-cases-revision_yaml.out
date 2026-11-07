@@ -1,0 +1,29 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /edge
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: complexOneOf
+              - Property 'OneOf' changed
+                - Schemas added: subschema #1, subschema #2
+                - Schemas deleted: subschema #1, subschema #2
+            - Modified property: emptyOneOf
+              - Type changed from '' to 'string'
+            - Modified property: mixedBoth
+              - Property 'OneOf' changed
+                - Schemas deleted: subschema #1
+              - Property 'AnyOf' changed
+                - Schemas added: subschema #1, subschema #2
+                - Schemas deleted: subschema #1
+
+

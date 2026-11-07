@@ -1,0 +1,8 @@
+3 changes: 1 error, 0 warning, 2 info
+error at ./simple1.yaml, in API GET /api/test api removed without deprecation [api-removed-without-deprecation]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./simple2.yaml, in API POST /api/test endpoint added [endpoint-added]. 
+
+

@@ -1,0 +1,32 @@
+7 cambios: 3 error, 0 warning, 4 info
+error	[request-property-contains-added] en ./checker/contains_property_revision.yaml
+	en API POST /products
+		agregada la restricción 'contains' a la propiedad de solicitud `tags`
+
+error	[request-property-max-contains-set] en ./checker/contains_property_revision.yaml
+	en API POST /products
+		el valor maxContains de la propiedad de solicitud `tags` fue establecido en `3`
+		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+
+error	[request-property-min-contains-set] en ./checker/contains_property_revision.yaml
+	en API POST /products
+		el valor minContains de la propiedad de solicitud `tags` fue establecido en `1`
+		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[response-property-contains-added] en ./checker/contains_property_revision.yaml
+	en API POST /products
+		agregada la restricción 'contains' a la propiedad de respuesta `tags` para el estado `200`
+
+info	[response-property-max-contains-set] en ./checker/contains_property_revision.yaml
+	en API POST /products
+		el valor maxContains de la propiedad de respuesta `tags` fue establecido en `3` para el estado `200`
+
+info	[response-property-min-contains-set] en ./checker/contains_property_revision.yaml
+	en API POST /products
+		el valor minContains de la propiedad de respuesta `tags` fue establecido en `1` para el estado `200`
+
+

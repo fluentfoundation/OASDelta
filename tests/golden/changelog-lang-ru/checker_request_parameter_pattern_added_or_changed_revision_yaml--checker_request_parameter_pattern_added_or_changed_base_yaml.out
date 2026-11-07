@@ -1,0 +1,7 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[request-parameter-pattern-added] в ./checker/request_parameter_pattern_added_or_changed_base.yaml
+	в API POST /test
+		добавлен pattern `^\w+$` у `query` параметра запроса `category`
+		Это критическое изменение, потому что добавление ограничения шаблона к ранее неограниченному параметру отклонит значения, которые ранее принимались, сломав существующих клиентов
+
+

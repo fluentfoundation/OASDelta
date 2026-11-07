@@ -1,0 +1,30 @@
+7 изменений: 5 error, 0 warning, 2 info
+error	[request-property-content-encoding-changed] в ./checker/content_schema_revision.yaml
+	в API POST /products
+		у поля запроса `data` contentEncoding изменился с `base64` на `quoted-printable`
+
+error	[request-property-content-media-type-changed] в ./checker/content_schema_revision.yaml
+	в API POST /products
+		у поля запроса `data` contentMediaType изменился с `application/json` на `text/plain`
+
+error	[request-property-content-schema-added] в ./checker/content_schema_revision.yaml
+	в API POST /products
+		добавлен 'contentSchema' в поле запроса `data`
+
+error	[response-property-content-encoding-changed] в ./checker/content_schema_revision.yaml
+	в API POST /products
+		у поля ответа `data` contentEncoding изменился с `base64` на `quoted-printable` для статуса `200`
+
+error	[response-property-content-media-type-changed] в ./checker/content_schema_revision.yaml
+	в API POST /products
+		у поля ответа `data` contentMediaType изменился с `application/json` на `text/plain` для статуса `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-property-content-schema-added] в ./checker/content_schema_revision.yaml
+	в API POST /products
+		добавлен 'contentSchema' в поле ответа `data` для статуса `200`
+
+

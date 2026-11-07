@@ -1,0 +1,2 @@
+::notice title=request-parameter-list-of-types-widened,file=./list-of-types/param-test-base.yaml::in API GET /test `query` request parameter `filter` list-of-types was widened by adding types `integer and boolean`
+

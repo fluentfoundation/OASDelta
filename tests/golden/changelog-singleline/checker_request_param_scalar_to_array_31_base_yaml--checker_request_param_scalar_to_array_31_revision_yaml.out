@@ -1,0 +1,6 @@
+2 changes: 0 error, 0 warning, 2 info
+info at ./checker/request_param_scalar_to_array_31_revision.yaml, in API POST /api/v1.0/groups the `query` request parameter `token` became nullable [request-parameter-became-nullable]. 
+
+info at ./checker/request_param_scalar_to_array_31_revision.yaml, in API POST /api/v1.0/groups for the `query` request parameter `token`, the `type` was widened from `string` to `array<string>, null` [request-parameter-type-generalized]. This parameter uses form/explode serialization, where a single value is a valid one-element array, so widening it to an array whose items still accept the previous values does not break existing clients.
+
+

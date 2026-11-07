@@ -1,0 +1,16 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /test
+-  the `header` request parameter `x-owner` became nullable
+-  the `header` request parameter `x-status` became nullable
+-  the `owner` property of the `header` request parameter `x-meta` became nullable
+-  the `status` property of the `header` request parameter `x-meta` became nullable
+
+
+
+
+
+

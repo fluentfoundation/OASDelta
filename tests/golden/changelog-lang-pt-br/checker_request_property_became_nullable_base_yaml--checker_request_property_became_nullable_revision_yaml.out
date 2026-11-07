@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[request-property-became-nullable] em ./checker/request_property_became_nullable_revision.yaml
+	em API POST /products
+		a propriedade de requisição `name` tornou-se anulável
+
+

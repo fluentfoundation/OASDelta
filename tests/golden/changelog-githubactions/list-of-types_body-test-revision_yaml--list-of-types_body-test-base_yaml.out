@@ -1,0 +1,3 @@
+::notice title=request-body-list-of-types-widened,file=./list-of-types/body-test-base.yaml::in API POST /test request body list-of-types was widened by adding types `string and integer` to media type `application/json`
+::notice title=response-body-list-of-types-narrowed,file=./list-of-types/body-test-base.yaml,line=22,col=17::in API POST /test response body list-of-types was narrowed by removing types `integer` from media type `application/json` of response `200`
+

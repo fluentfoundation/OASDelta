@@ -1,0 +1,22 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /items
+- :warning: added the pattern `^x` to the request property `name`
+- :warning: the `secret` request property `type` changed from `string` to `boolean`
+-  added the pattern `^x` to the request property `id`
+-  the `id` response's property pattern `^x` was added for the status `200`
+-  the `name` response's property pattern `^x` was added for the status `200`
+-  the `secret` response's property `type` changed from `string` to `boolean` for status `200`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

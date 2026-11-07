@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[api-removed-without-deprecation] в ./list-of-types/single-to-list-revision.yaml
+	в API GET /test
+		API удалён без deprecation
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[endpoint-added] в ./list-of-types/list-to-single-base.yaml
+	в API POST /test
+		эндпоинт добавлен
+
+

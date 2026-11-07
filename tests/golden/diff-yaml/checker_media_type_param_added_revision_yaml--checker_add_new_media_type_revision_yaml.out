@@ -1,0 +1,59 @@
+paths:
+    modified:
+        /api/v1.0/groups:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                name:
+                                                    name:
+                                                        from: application/json; charset=utf-8
+                                                        to: application/json
+                                                    parameters:
+                                                        deleted:
+                                                            - charset
+                                "409":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                name:
+                                                    name:
+                                                        from: application/json; charset=utf-8
+                                                        to: application/json
+                                                    parameters:
+                                                        deleted:
+                                                            - charset
+endpoints:
+    modified:
+        ?   method: POST
+            path: /api/v1.0/groups
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    name:
+                                        name:
+                                            from: application/json; charset=utf-8
+                                            to: application/json
+                                        parameters:
+                                            deleted:
+                                                - charset
+                    "409":
+                        content:
+                            modified:
+                                application/json:
+                                    name:
+                                        name:
+                                            from: application/json; charset=utf-8
+                                            to: application/json
+                                        parameters:
+                                            deleted:
+                                                - charset
+

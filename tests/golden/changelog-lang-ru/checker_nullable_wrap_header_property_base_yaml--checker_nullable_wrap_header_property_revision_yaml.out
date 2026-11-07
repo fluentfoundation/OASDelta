@@ -1,0 +1,18 @@
+4 изменений: 0 error, 0 warning, 4 info
+info	[request-parameter-became-nullable] в ./checker/nullable_wrap_header_property_revision.yaml
+	в API GET /test
+		параметр запроса `header` `x-owner` стал обнуляемым
+
+info	[request-parameter-became-nullable] в ./checker/nullable_wrap_header_property_revision.yaml
+	в API GET /test
+		параметр запроса `header` `x-status` стал обнуляемым
+
+info	[request-parameter-property-became-nullable] в ./checker/nullable_wrap_header_property_revision.yaml
+	в API GET /test
+		свойство `owner` параметра запроса `header` `x-meta` стало обнуляемым
+
+info	[request-parameter-property-became-nullable] в ./checker/nullable_wrap_header_property_revision.yaml
+	в API GET /test
+		свойство `status` параметра запроса `header` `x-meta` стало обнуляемым
+
+

@@ -1,0 +1,12 @@
+2 alterações: 0 error, 2 warning, 0 info
+warning	[request-property-prefix-items-added] em ./checker/prefix_items_prop_revision.yaml
+	em API POST /products
+		adicionado `subschema #1` à lista 'prefixItems' da propriedade de requisição `details`
+		Este é um aviso porque o oasdiff não consegue determinar se a mudança é incompatível. Uma posição do array não coberta por `prefixItems` é validada contra o esquema `items`: quando `items` está ausente a posição aceita qualquer valor, e quando `items` é `false` não permite valor algum, portanto esta mudança pode rejeitar arrays que antes eram válidos ou permitir arrays que antes não eram.
+
+warning	[response-property-prefix-items-added] em ./checker/prefix_items_prop_revision.yaml
+	em API POST /products
+		adicionado `subschema #1` à lista 'prefixItems' da propriedade de resposta `details` para o status de resposta `200`
+		Este é um aviso porque o oasdiff não consegue determinar se a mudança é incompatível. Uma posição do array não coberta por `prefixItems` é validada contra o esquema `items`: quando `items` está ausente a posição aceita qualquer valor, e quando `items` é `false` não permite valor algum, portanto esta mudança pode rejeitar arrays que antes eram válidos ou permitir arrays que antes não eram.
+
+

@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[api-operation-id-removed] в ./composed/base/spec1.yaml
+	в API GET /api/test
+		Идентификатор операции API `x` удален и заменен на ``
+
+

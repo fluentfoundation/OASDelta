@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[response-body-dependent-schema-removed] at ./checker/dependent_schemas_base.yaml
+	in API POST /products
+		removed the dependent schema `name` from the response body for the status `200`
+
+

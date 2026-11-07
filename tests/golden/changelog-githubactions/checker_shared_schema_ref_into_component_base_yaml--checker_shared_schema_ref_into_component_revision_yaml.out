@@ -1,0 +1,2 @@
+::notice title=response-optional-property-added,file=./checker/shared_schema_ref_into_component_revision.yaml,line=30,col=13::in API GET /example added the optional property `left/extra` to the response with the `200` status (shared schema: `Holder`, also at `right/extra`)
+

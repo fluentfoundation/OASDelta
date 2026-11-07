@@ -1,0 +1,1 @@
+[{"id":"request-body-list-of-types-narrowed","text":"request body list-of-types was narrowed by removing types `array and string` from media type `application/json`","level":3,"operation":"POST","path":"/test","section":"paths","revisionSource":{"file":"./list-of-types/body-narrowing-revision.yaml","line":12,"column":15},"fingerprint":"71b186f0477e"}]

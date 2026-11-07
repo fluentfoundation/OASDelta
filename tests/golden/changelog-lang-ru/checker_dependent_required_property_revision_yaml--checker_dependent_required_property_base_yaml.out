@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[response-property-dependent-required-removed] в ./checker/dependent_required_property_base.yaml
+	в API POST /products
+		у поля ответа `address` dependentRequired был удалён для статуса `200`: когда присутствовал `street`, требовались `city`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-property-dependent-required-removed] в ./checker/dependent_required_property_base.yaml
+	в API POST /products
+		у поля запроса `address` dependentRequired был удалён: когда присутствовал `street`, требовались `city`
+
+

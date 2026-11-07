@@ -1,0 +1,1 @@
+[{"id":"request-property-became-required","text":"the request property `tag` became required","level":3,"operation":"POST","path":"webhook:newPet","section":"paths","revisionSource":{"file":"./openapi31-test2.yaml","line":27,"column":11},"fingerprint":"63cd2d79f626"}]

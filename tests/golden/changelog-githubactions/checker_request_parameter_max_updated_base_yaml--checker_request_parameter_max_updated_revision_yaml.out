@@ -1,0 +1,2 @@
+::notice title=request-parameter-max-increased,file=./checker/request_parameter_max_updated_revision.yaml,line=26,col=13::in API POST /api/v1.0/groups for the `query` request parameter `category`, the max was increased from `5.00` to `10.00`
+

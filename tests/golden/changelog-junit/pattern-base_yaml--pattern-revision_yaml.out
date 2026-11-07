@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="response-property-pattern-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `created` response's property pattern `^[a-z]+$` was removed for the status `200`</failure>
+    </testcase>
+    <testcase name="response-property-pattern-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `created` response's property pattern `^[a-z]+$` was removed for the status `200`</failure>
+    </testcase>
+    <testcase name="request-property-pattern-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the pattern `^[a-z]+$` from the request property `created`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

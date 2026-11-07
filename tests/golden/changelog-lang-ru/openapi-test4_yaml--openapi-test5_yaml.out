@@ -1,0 +1,30 @@
+7 изменений: 2 error, 0 warning, 5 info
+error	[api-path-removed-without-deprecation] в openapi-test4.yaml
+	в API GET /prefix/api/{domain}/{project}/badges/security-score
+		API path удалён без процедуры deprecation
+
+error	[api-path-removed-without-deprecation] в openapi-test4.yaml
+	в API POST /prefix/api/{domain}/{project}/badges/security-score
+		API path удалён без процедуры deprecation
+
+info	[api-major-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но мажорная версия не увеличилась, с `1.0.0` до `1.0.1`
+
+info	[api-security-component-added]
+	в components/securitySchemes
+		компонент схемы безопасности `AccessToken` был добавлен
+
+info	[api-security-component-added]
+	в components/securitySchemes
+		компонент схемы безопасности `bearerAuth` был добавлен
+
+info	[endpoint-added] в openapi-test5.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		эндпоинт добавлен
+
+info	[endpoint-added] в openapi-test5.yaml
+	в API GET /api/{domain}/{project}/install-command
+		эндпоинт добавлен
+
+

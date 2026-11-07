@@ -1,0 +1,94 @@
+- id: request-body-content-encoding-changed
+  text: the request body contentEncoding changed from `base64` to `quoted-printable`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_body_base.yaml
+    line: 15
+    column: 15
+  revisionSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 15
+    column: 15
+  fingerprint: 1b223c0f2ad3
+- id: request-body-content-media-type-changed
+  text: the request body contentMediaType changed from `application/json` to `text/plain`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_body_base.yaml
+    line: 14
+    column: 15
+  revisionSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 14
+    column: 15
+  fingerprint: 4c7cf3148a89
+- id: request-body-content-schema-added
+  text: added 'contentSchema' to the request body
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 16
+    column: 15
+  fingerprint: a14ffb1ceb78
+- id: response-body-content-encoding-changed
+  text: the response body contentEncoding changed from `base64` to `quoted-printable` for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_body_base.yaml
+    line: 24
+    column: 17
+  revisionSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 26
+    column: 17
+  fingerprint: 0e6de6cc0b7c
+- id: response-body-content-media-type-changed
+  text: the response body contentMediaType changed from `application/json` to `text/plain` for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_body_base.yaml
+    line: 23
+    column: 17
+  revisionSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 25
+    column: 17
+  fingerprint: 9a0f77088fe3
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: response-body-content-schema-added
+  text: added 'contentSchema' to the response body for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 27
+    column: 17
+  fingerprint: 0f77429e1e83
+

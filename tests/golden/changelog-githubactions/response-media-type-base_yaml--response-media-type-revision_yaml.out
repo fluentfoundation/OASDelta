@@ -1,0 +1,3 @@
+::error title=response-media-type-removed,file=./response-media-type-revision.yaml::in API GET /products removed the media type `application/json` for the response with the status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

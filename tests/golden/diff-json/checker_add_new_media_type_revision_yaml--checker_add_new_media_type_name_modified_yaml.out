@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/api/v1.0/groups":{"operations":{"modified":{"POST":{"responses":{"modified":{"200":{"content":{"modified":{"application/problem+json":{"name":{"name":{"from":"application/json","to":"application/problem+json"},"subtype":{"from":"json","to":"problem"},"suffix":{"from":"","to":"json"}}}}}}}}}}}}}}}

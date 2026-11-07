@@ -1,0 +1,9 @@
+- id: request-body-became-nullable
+  text: the request's body became nullable
+  level: 1
+  operation: POST
+  operationId: testOp
+  path: /test
+  section: paths
+  fingerprint: 466c95c47663
+

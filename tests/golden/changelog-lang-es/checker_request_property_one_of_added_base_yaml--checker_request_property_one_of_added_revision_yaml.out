@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[request-body-one-of-added] en ./checker/request_property_one_of_added_revision.yaml
+	en API POST /pets
+		`#/components/schemas/Rabbit` fue agregado a la lista `oneOf` del cuerpo de solicitud
+
+info	[request-property-one-of-added] en ./checker/request_property_one_of_added_revision.yaml
+	en API POST /pets
+		`#/components/schemas/Breed3` fue agregado a la lista `oneOf` de la propiedad de solicitud `oneOf[#/components/schemas/Dog]/breed`
+
+

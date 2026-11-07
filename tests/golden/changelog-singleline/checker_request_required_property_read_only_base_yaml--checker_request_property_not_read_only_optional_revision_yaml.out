@@ -1,0 +1,6 @@
+2 changes: 0 error, 0 warning, 2 info
+info at ./checker/request_property_not_read_only_optional_revision.yaml, in API POST /api/v1.0/groups the request optional property `id` became not read-only [request-optional-property-became-not-read-only]. 
+
+info at ./checker/request_property_not_read_only_optional_revision.yaml, in API POST /api/v1.0/groups the request property `id` became optional [request-property-became-optional]. 
+
+

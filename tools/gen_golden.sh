@@ -1,29 +1,46 @@
-#!/bin/bash
-# Regenerates tests/golden from the upstream Go oasdiff (the oracle) over every fixture pair.
-# usage: tools/gen_golden.sh /path/to/go/oasdiff
+#!/usr/bin/env bash
+# Regenerates tests/golden from the upstream Go oasdiff (the oracle) over every fixture pair, for every
+# command/flag combination in tools/golden-commands.txt.
+# usage: tools/gen_golden.sh /path/to/go/oasdiff [JOBS] [SLUG...]
+#        With SLUGs, only those sets are regenerated; otherwise tests/golden is rebuilt from scratch.
 set -e
+# Git Bash on Windows rewrites POSIX-looking arguments (e.g. --prefix-revision /v2 -> C:/Program Files/Git/v2)
+# when it runs a Windows executable; turn that off. No effect elsewhere.
+export MSYS_NO_PATHCONV=1 MSYS2_ARG_CONV_EXCL="*"
+export LC_ALL=C   # pairs.sh pairs files by sort order; keep it locale-independent
 GO=${1:?path to the Go oasdiff binary}
+JOBS=${2:-8}
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
-cd "$ROOT/tests/fixtures"
-rm -rf "$ROOT/tests/golden"
-while IFS='|' read -r slug args; do
-  mkdir -p "$ROOT/tests/golden/$slug"
-  : > "$ROOT/tests/golden/$slug/exit-codes.txt"
+GO=$(cd "$(dirname "$GO")" && pwd)/$(basename "$GO")
+PAIRS=$("$ROOT/tools/pairs.sh")
+
+gen_slug() {
+  local slug=$1 args=$2 out="$ROOT/tests/golden/$1" seen=" "
+  mkdir -p "$out"
+  : > "$out/exit-codes.txt"
+  cd "$ROOT/tests/fixtures"
   while read -r b r; do
+    local name
     name=$(echo "$b--$r" | sed 's|\./||g; s|[/.]|_|g')
-    [ -e "$ROOT/tests/golden/$slug/$name.out" ] && continue   # a pair listed twice (with and without ./) is checked once
+    case "$seen" in *" $name "*) continue ;; esac   # a pair listed twice (with and without ./) is checked once
+    seen="$seen$name "
     set +e
-    $GO $args "$b" "$r" > "$ROOT/tests/golden/$slug/$name.out" 2>/dev/null
-    code=$?
+    # shellcheck disable=SC2086 # args are split on spaces by design
+    "$GO" $args "$b" "$r" > "$out/$name.out" 2>/dev/null
+    echo "$name $?" >> "$out/exit-codes.txt"
     set -e
-    echo "$name $code" >> "$ROOT/tests/golden/$slug/exit-codes.txt"
-  done < <("$ROOT/tools/pairs.sh")
-done <<'CMDS'
-diff-yaml|diff
-diff-json|diff -f json
-diff-text|diff -f text
-summary|summary
-changelog-json|changelog -f json
-changelog-markdown|changelog -f markdown
-breaking-text|breaking
-CMDS
+  done <<< "$PAIRS"
+}
+
+ONLY=" ${*:3} "
+if [ "$ONLY" == "  " ]; then rm -rf "$ROOT/tests/golden"; fi
+while IFS='|' read -r slug args; do
+  [[ -z "$slug" || "$slug" == \#* ]] && continue
+  if [ "$ONLY" != "  " ]; then
+    case "$ONLY" in *" $slug "*) rm -rf "$ROOT/tests/golden/$slug" ;; *) continue ;; esac
+  fi
+  while (( $(jobs -rp | wc -l) >= JOBS )); do wait -n; done
+  gen_slug "$slug" "$args" &
+done < "$ROOT/tools/golden-commands.txt"
+wait
+echo "$(find "$ROOT/tests/golden" -name '*.out' | wc -l) golden files in $(find "$ROOT/tests/golden" -mindepth 1 -maxdepth 1 -type d | wc -l) sets"

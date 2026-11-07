@@ -1,0 +1,10 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[request-property-became-required] в ./checker/shared_schema_request_required_revision.yaml
+	в API POST /example
+		поле запроса `left/id` стало обязательным (общая схема: `Shared`, также в `right`)
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

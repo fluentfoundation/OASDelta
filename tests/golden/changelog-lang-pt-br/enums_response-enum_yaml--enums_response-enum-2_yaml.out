@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[response-mediatype-enum-value-removed] em ./enums/response-enum-2.yaml
+	em API GET /api/v2/changeOfResponseFieldValueTiedToEnumTest
+		valor `application/json` do enum removido do esquema de resposta `VALUE_3`
+
+

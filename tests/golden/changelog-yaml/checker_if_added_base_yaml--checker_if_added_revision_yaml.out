@@ -1,0 +1,78 @@
+- id: request-body-else-added
+  text: added 'else' subschema to the request body
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_revision.yaml
+    line: 24
+    column: 15
+  fingerprint: 412ebe5f33c5
+- id: request-body-if-added
+  text: added 'if' subschema to the request body
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_revision.yaml
+    line: 17
+    column: 15
+  fingerprint: c6ba0a030470
+- id: request-body-then-added
+  text: added 'then' subschema to the request body
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_revision.yaml
+    line: 21
+    column: 15
+  fingerprint: 56ef63bfdf4a
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: response-body-else-added
+  text: added 'else' subschema to the response body for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_revision.yaml
+    line: 45
+    column: 17
+  fingerprint: 2dd26229ceba
+- id: response-body-if-added
+  text: added 'if' subschema to the response body for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_revision.yaml
+    line: 38
+    column: 17
+  fingerprint: 176a1b160652
+- id: response-body-then-added
+  text: added 'then' subschema to the response body for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/if_added_revision.yaml
+    line: 42
+    column: 17
+  fingerprint: ad6ad7cd8562
+

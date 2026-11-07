@@ -1,0 +1,22 @@
+5 alterações: 0 error, 0 warning, 5 info
+info	[response-body-discriminator-mapping-added] em ./checker/response_property_discriminator_mapping_changed.yaml
+	em API POST /pets
+		chaves de mapeamento `cats` adicionadas ao discriminador de resposta para o status `200`
+
+info	[response-body-discriminator-mapping-deleted] em ./checker/response_property_discriminator_mapping_changed.yaml
+	em API POST /pets
+		chaves de mapeamento `cat` removidas do discriminador de resposta para o status `200`
+
+info	[response-property-discriminator-mapping-added] em ./checker/response_property_discriminator_mapping_changed.yaml
+	em API POST /pets
+		chaves de mapeamento `breed1Code` adicionadas ao discriminador da propriedade de resposta `oneOf[#/components/schemas/Dog]/breed` para o status `200`
+
+info	[response-property-discriminator-mapping-changed] em ./checker/response_property_discriminator_mapping_changed.yaml
+	em API POST /pets
+		o valor mapeado para a chave do discriminador `breed2` foi alterado de `#/components/schemas/Breed2` para `#/components/schemas/Breed3` para a propriedade de resposta `oneOf[#/components/schemas/Dog]/breed` para o status `200`
+
+info	[response-property-discriminator-mapping-deleted] em ./checker/response_property_discriminator_mapping_changed.yaml
+	em API POST /pets
+		chaves de mapeamento `breed1` removidas do discriminador da propriedade de resposta `oneOf[#/components/schemas/Dog]/breed` para o status `200`
+
+

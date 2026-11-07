@@ -1,0 +1,7 @@
+1 изменений: 0 error, 1 warning, 0 info
+warning	[response-property-became-optional] в ./checker/disclaimer_nested_allof_revision.yaml
+	в API GET /x
+		поле ответа `p/allOf[#/components/schemas/A]/id` стало необязательным для ответа со статусом `200`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

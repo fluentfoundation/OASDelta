@@ -1,0 +1,2 @@
+::notice title=request-parameter-min-items-decreased,file=./checker/request_parameter_min_items_increased_base.yaml,line=26,col=13::in API POST /api/v1.0/groups for the `query` request parameter `category`, the minItems was decreased from `3` to `2`
+

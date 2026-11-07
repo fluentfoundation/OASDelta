@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /value
+- :warning: the `composite-property/additionalProperties/property1` response's property `type` changed from `integer` to `string` for status `200`
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-4">Deleted Endpoints: 4</h3>
+<hr>
+<p>GET /alpha-gone<br>
+DELETE /pets<br>
+PATCH /pets<br>
+GET /stable-gone</p>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>GET /pets</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Description changed from 'OK' to 'Pets'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

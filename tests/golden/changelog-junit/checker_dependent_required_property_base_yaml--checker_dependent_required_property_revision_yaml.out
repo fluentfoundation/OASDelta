@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="request-property-dependent-required-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `address` request property dependentRequired was added: when `street` is present, `city` are required</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="response-property-dependent-required-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `address` response property dependentRequired was added for the status `200`: when `street` is present, `city` are required</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

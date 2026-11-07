@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+- :warning: the `data/created` response's property pattern was changed from `^[a-z]+$` to `^(?:([a-z]+-)*([a-z]+)?)$` for the status `200`
+
+
+
+
+
+

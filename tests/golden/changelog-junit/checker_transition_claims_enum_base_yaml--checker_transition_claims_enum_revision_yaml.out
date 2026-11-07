@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="request-property-enum-value-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the enum value `alpha` of the request property `mode`</failure>
+    </testcase>
+    <testcase name="request-property-enum-value-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the enum value `beta` of the request property `mode`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="request-property-list-of-types-widened" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">request property `mode` list-of-types was widened by adding types `integer` to media type `application/json`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

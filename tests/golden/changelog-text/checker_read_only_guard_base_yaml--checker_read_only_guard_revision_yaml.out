@@ -1,0 +1,33 @@
+7 changes: 2 error, 0 warning, 5 info
+error	[request-property-pattern-added] at ./checker/read_only_guard_revision.yaml
+	in API POST /items
+		added the pattern `^x` to the request property `name`
+		This is a breaking change because adding a pattern restriction to a previously unrestricted parameter will reject values that were previously accepted, breaking existing clients
+
+error	[request-property-type-changed] at ./checker/read_only_guard_revision.yaml
+	in API POST /items
+		the `secret` request property `type` changed from `string` to `boolean`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[request-property-pattern-added] at ./checker/read_only_guard_revision.yaml
+	in API POST /items
+		added the pattern `^x` to the request property `id`
+		The property is read-only, so it never appears in requests and this change cannot invalidate one.
+
+info	[response-property-pattern-added] at ./checker/read_only_guard_revision.yaml
+	in API POST /items
+		the `id` response's property pattern `^x` was added for the status `200`
+
+info	[response-property-pattern-added] at ./checker/read_only_guard_revision.yaml
+	in API POST /items
+		the `name` response's property pattern `^x` was added for the status `200`
+
+info	[response-property-type-changed] at ./checker/read_only_guard_revision.yaml
+	in API POST /items
+		the `secret` response's property `type` changed from `string` to `boolean` for status `200`
+		The property is write-only, so it never appears in responses and this change cannot invalidate one.
+
+

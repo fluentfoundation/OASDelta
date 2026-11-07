@@ -1,0 +1,49 @@
+<h3 id="new-endpoints-2">New Endpoints: 2</h3>
+<hr>
+<p>QUERY /new<br>
+MOVE /search</p>
+<h3 id="deleted-endpoints-3">Deleted Endpoints: 3</h3>
+<hr>
+<p>LOCK /gone<br>
+QUERY /gone<br>
+PURGE /search</p>
+<h3 id="modified-endpoints-2">Modified Endpoints: 2</h3>
+<hr>
+<p>COPY /search</p>
+<ul>
+<li>Deprecated changed from false to true</li>
+</ul>
+<p>QUERY /search</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: term
+<ul>
+<li>Type changed from 'string' to 'integer'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Deleted response: 418</li>
+</ul>
+</li>
+</ul>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="7" errors="0" failures="7" name="OASDiff">
+    <testcase name="request-property-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `colors` request property `type` changed from `object` to `array<integer>`</failure>
+    </testcase>
+    <testcase name="request-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body `type` changed from `object` to `array<object>`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `colors/blue`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `colors/green`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `colors/red`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `data`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

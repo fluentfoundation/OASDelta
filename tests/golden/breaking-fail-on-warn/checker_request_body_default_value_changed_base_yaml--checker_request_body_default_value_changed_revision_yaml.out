@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-body-media-type-removed] at ./checker/request_body_default_value_changed_revision.yaml
+	in API POST /products
+		removed the media type `application/json` from the request body
+
+

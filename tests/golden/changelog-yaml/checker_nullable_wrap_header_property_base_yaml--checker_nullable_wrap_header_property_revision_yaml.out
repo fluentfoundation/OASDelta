@@ -1,0 +1,33 @@
+- id: request-parameter-became-nullable
+  text: the `header` request parameter `x-owner` became nullable
+  level: 1
+  operation: GET
+  operationId: testOp
+  path: /test
+  section: paths
+  fingerprint: 81bfede5ef7e
+- id: request-parameter-became-nullable
+  text: the `header` request parameter `x-status` became nullable
+  level: 1
+  operation: GET
+  operationId: testOp
+  path: /test
+  section: paths
+  fingerprint: 0cb7a7d9d13e
+- id: request-parameter-property-became-nullable
+  text: the `owner` property of the `header` request parameter `x-meta` became nullable
+  level: 1
+  operation: GET
+  operationId: testOp
+  path: /test
+  section: paths
+  fingerprint: 6e013e0117f2
+- id: request-parameter-property-became-nullable
+  text: the `status` property of the `header` request parameter `x-meta` became nullable
+  level: 1
+  operation: GET
+  operationId: testOp
+  path: /test
+  section: paths
+  fingerprint: 9cbda642e468
+

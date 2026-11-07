@@ -1,0 +1,10 @@
+2 изменений: 2 error, 0 warning, 0 info
+error	[request-parameter-became-enum] в ./checker/request_parameter_became_enum_revision.yaml
+	в API POST /api/v1.0/groups
+		заголовок запроса `path` поле `groupId` было ограничено списком значений перечисления
+
+error	[request-parameter-type-changed] в ./checker/request_parameter_became_enum_revision.yaml
+	в API POST /api/v1.0/groups
+		в параметре запроса `path` `groupId` `type` изменён с `string` на `integer`
+
+

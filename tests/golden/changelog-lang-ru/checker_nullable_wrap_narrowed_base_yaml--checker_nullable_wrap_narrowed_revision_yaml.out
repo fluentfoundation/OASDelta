@@ -1,0 +1,18 @@
+4 изменений: 2 error, 0 warning, 2 info
+error	[request-property-enum-value-removed] в ./checker/nullable_wrap_narrowed_revision.yaml
+	в API POST /test
+		удалено enum значение `serviceAccount` у поля запроса `optionalEnum`
+
+error	[request-property-enum-value-removed] в ./checker/nullable_wrap_narrowed_revision.yaml
+	в API POST /test
+		удалено enum значение `user` у поля запроса `optionalEnum`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-property-list-of-types-widened] в ./checker/nullable_wrap_narrowed_revision.yaml
+	в API POST /test
+		список типов свойства `optionalEnum` запроса был расширен добавлением типов `null` к медиа-типу `application/json`
+
+

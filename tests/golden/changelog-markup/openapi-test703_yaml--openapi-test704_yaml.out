@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /register
+- :warning: added the new `QWE` enum value to the `respenum` response property for the response status `default`
+- :warning: added the new `TER2` enum value to the `respenum2/respenum3` response property for the response status `default`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

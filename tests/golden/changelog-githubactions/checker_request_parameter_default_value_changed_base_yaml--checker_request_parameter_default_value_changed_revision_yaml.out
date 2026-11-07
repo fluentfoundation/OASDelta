@@ -1,0 +1,2 @@
+::notice title=request-parameter-default-value-changed,file=./checker/request_parameter_default_value_changed_revision.yaml,line=28,col=11::in API POST /api/v1.0/groups for the `query` request parameter `category`, default value was changed from `default_category` to `updated_category`
+

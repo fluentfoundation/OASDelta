@@ -1,0 +1,108 @@
+25 changes: 7 error, 4 warning, 14 info
+error	[request-parameter-min-set] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		for the `path` request parameter `domain`, the min was set to `7.00`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error	[request-parameter-type-changed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		for the `path` request parameter `domain`, the `type/format` was changed from `string/hyphen-separated list` to `integer/non-negative integer`
+
+error	[response-success-status-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the success response with the status `200`
+
+error	[response-success-status-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the success response with the status `201`
+
+error	[api-path-removed-without-deprecation] at ./openapi-test1.yaml
+	in API GET /api/{domain}/{project}/install-command
+		api path removed without deprecation
+
+error	[api-path-removed-without-deprecation] at ./openapi-test1.yaml
+	in API POST /register
+		api path removed without deprecation
+
+error	[api-path-removed-without-deprecation] at ./openapi-test1.yaml
+	in API POST /subscribe
+		api path removed without deprecation
+
+warning	[request-parameter-pattern-changed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		changed the pattern of the `path` request parameter `domain` from `^(?:([a-z]+-)*([a-z]+)?)$` to `^(?:\d+)$`
+		This is a warning because adding or changing a pattern may restrict the accepted values and break existing clients. For pattern changes, it is difficult to automatically analyze if the new pattern is a superset of the previous pattern (e.g. changed from '[0-9]+' to '[0-9]*')
+
+warning	[request-parameter-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `cookie` request parameter `test`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning	[request-parameter-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `header` request parameter `user`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning	[request-parameter-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `header` request parameter `x-auth-name`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+info	[api-major-version-not-bumped]
+	in info
+		a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`
+
+info	[api-schema-removed]
+	in components/schemas
+		removed the schema `network-policies`
+
+info	[api-schema-removed]
+	in components/schemas
+		removed the schema `rules`
+
+info	[api-security-component-removed]
+	in components/securitySchemes
+		the component security scheme `AccessToken` was removed
+
+info	[api-security-component-removed]
+	in components/securitySchemes
+		the component security scheme `OAuth` was removed
+
+info	[api-security-component-removed]
+	in components/securitySchemes
+		the component security scheme `bearerAuth` was removed
+
+info	[api-operation-id-removed] at ./openapi-test1.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		api operation id `GetSecurityScores` removed and replaced with ``
+
+info	[api-security-anonymous-access-added] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		the endpoint now allows anonymous access
+		This endpoint inherits the API's top-level security requirements.
+
+info	[api-tag-removed] at ./openapi-test1.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		api tag `security` removed
+
+info	[request-parameter-max-length-unset] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		for the `query` request parameter `token`, the maxLength was unset from `29`
+
+info	[request-parameter-pattern-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` from the `query` request parameter `token`
+
+info	[request-parameter-type-generalized] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		for the `query` request parameter `token`, the `type/format` was widened from `string/uuid` to `any`
+
+info	[response-non-success-status-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the non-success response with the status `400`
+
+info	[endpoint-added] at ./openapi-test2.yaml
+	in API POST /api/{domain}/{project}/badges/security-score
+		endpoint added
+
+

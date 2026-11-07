@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"properties":{"modified":{"age":{"type":{"added":["string"],"deleted":["integer"]},"format":{"from":"int32","to":"string"}}}}}}}}}}}}}}}}

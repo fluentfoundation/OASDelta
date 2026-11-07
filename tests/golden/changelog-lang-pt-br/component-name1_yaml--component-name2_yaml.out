@@ -1,0 +1,10 @@
+2 alterações: 0 error, 0 warning, 2 info
+info	[response-optional-property-added] em ./component-name2.yaml
+	em API GET /example
+		a propriedade opcional `inline/nickname` foi adicionada à resposta com o status `200`
+
+info	[response-optional-property-added] em ./component-name2.yaml
+	em API GET /example
+		a propriedade opcional `left/extra` foi adicionada à resposta com o status `200` (schema compartilhado: `Shared`, também em `right/extra`)
+
+

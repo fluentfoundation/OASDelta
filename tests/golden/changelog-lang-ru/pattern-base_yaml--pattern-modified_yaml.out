@@ -1,0 +1,14 @@
+3 изменений: 0 error, 2 warning, 1 info
+warning	[response-property-pattern-changed] в ./pattern-modified.yaml
+	в API POST /api/v1.0/groups
+		у свойства `created` для ответа со статусом `^[a-z]+$` изменился паттерн с `.*` на `200`
+
+warning	[response-property-pattern-changed] в ./pattern-modified.yaml
+	в API GET /api/v1.0/groups/{groupId}
+		у свойства `created` для ответа со статусом `^[a-z]+$` изменился паттерн с `.*` на `200`
+
+info	[request-property-pattern-generalized] в ./pattern-modified.yaml
+	в API POST /api/v1.0/groups
+		изменил шаблон поля запроса `created` со значения `^[a-z]+$` на более общее значение `.*`
+
+

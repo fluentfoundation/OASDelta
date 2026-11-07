@@ -1,0 +1,38 @@
+9 изменений: 8 error, 0 warning, 1 info
+error	[request-body-exclusive-max-decreased] в ./checker/exclusive_min_max_revision.yaml
+	в API POST /products
+		значение exclusiveMaximum у тела запроса уменьшено до `50.00`
+
+error	[request-body-exclusive-min-increased] в ./checker/exclusive_min_max_revision.yaml
+	в API POST /products
+		значение exclusiveMinimum у тела запроса увеличено до `5.00`
+
+error	[request-parameter-exclusive-max-decreased] в ./checker/exclusive_min_max_revision.yaml
+	в API POST /products
+		в `query` параметре запроса `limit`, exclusiveMaximum уменьшен с `100.00` до `50.00`
+
+error	[request-parameter-exclusive-min-increased] в ./checker/exclusive_min_max_revision.yaml
+	в API POST /products
+		в `query` параметре запроса `limit`, exclusiveMinimum увеличен с `0.00` до `5.00`
+
+error	[request-property-exclusive-max-decreased] в ./checker/exclusive_min_max_revision.yaml
+	в API POST /products
+		значение exclusiveMaximum у поля запроса `price` уменьшено до `500.00`
+
+error	[request-property-exclusive-min-increased] в ./checker/exclusive_min_max_revision.yaml
+	в API POST /products
+		у поля запроса `price`, увеличено значение exclusiveMinimum до `10.00`
+
+error	[response-body-exclusive-max-increased] в ./checker/exclusive_min_max_revision.yaml
+	в API POST /products
+		у тела ответа exclusiveMaximum увеличен с `100.00` до `200.00`
+
+error	[response-property-exclusive-max-increased] в ./checker/exclusive_min_max_revision.yaml
+	в API POST /products
+		у поля ответа `price` exclusiveMaximum увеличен с `1000.00` до `2000.00` для ответа со статусом `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

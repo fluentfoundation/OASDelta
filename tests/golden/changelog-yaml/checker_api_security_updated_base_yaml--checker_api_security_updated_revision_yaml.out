@@ -1,0 +1,12 @@
+- id: api-security-scope-removed
+  text: the security scope `read:pets` was removed from the endpoint's security scheme `petstore_auth`
+  level: 1
+  operation: POST
+  path: /subscribe
+  section: paths
+  baseSource:
+    file: ./checker/api_security_updated_base.yaml
+    line: 23
+    column: 7
+  fingerprint: 7174acb61955
+

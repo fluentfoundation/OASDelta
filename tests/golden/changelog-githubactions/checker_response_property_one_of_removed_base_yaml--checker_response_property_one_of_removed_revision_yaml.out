@@ -1,0 +1,6 @@
+::notice title=api-schema-removed::in API   removed the schema `Breed3`
+::notice title=api-schema-removed::in API   removed the schema `Rabbit`
+::notice title=response-body-one-of-removed,file=./checker/response_property_one_of_removed_revision.yaml::in API GET /pets removed `#/components/schemas/Rabbit` from the response body `oneOf` list for the response status `200`
+::notice title=response-property-one-of-removed,file=./checker/response_property_one_of_removed_revision.yaml::in API GET /pets removed `#/components/schemas/Breed3` from the `oneOf[#/components/schemas/Dog]/breed` response property `oneOf` list for the response status `200`
+::notice title=response-property-one-of-removed,file=./checker/response_property_one_of_removed_revision.yaml::in API GET /pets removed `subschema #2: Dark brown types` from the `oneOf[#/components/schemas/Fox]/breed` response property `oneOf` list for the response status `200`
+

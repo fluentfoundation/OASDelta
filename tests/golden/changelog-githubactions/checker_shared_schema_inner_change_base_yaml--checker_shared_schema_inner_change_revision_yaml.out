@@ -1,0 +1,3 @@
+::error title=response-property-type-changed,file=./checker/shared_schema_inner_change_revision.yaml,line=26,col=11::in API GET /example the `left/id` response's property `type` changed from `string` to `integer` for status `200` (shared schema: `Shared`, also at `right/id`)
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

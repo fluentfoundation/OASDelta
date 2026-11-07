@@ -1,0 +1,12 @@
+2 alterações: 0 error, 2 warning, 0 info
+warning	[request-body-all-of-added] em ./checker/request_property_all_of_added_revision.yaml
+	em API POST /pets
+		`#/components/schemas/Rabbit` foi adicionado à lista `allOf` do corpo da requisição
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+warning	[request-property-all-of-added] em ./checker/request_property_all_of_added_revision.yaml
+	em API POST /pets
+		`#/components/schemas/Breed3` foi adicionado à lista `allOf` da propriedade de requisição `allOf[#/components/schemas/Dog]/breed`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+

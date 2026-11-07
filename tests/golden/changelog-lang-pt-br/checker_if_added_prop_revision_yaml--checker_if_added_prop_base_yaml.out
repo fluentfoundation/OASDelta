@@ -1,0 +1,30 @@
+7 alterações: 3 error, 0 warning, 4 info
+error	[response-property-else-removed] em ./checker/if_added_prop_base.yaml
+	em API POST /products
+		removido o subesquema 'else' da propriedade de resposta `details` para o status `200`
+
+error	[response-property-if-removed] em ./checker/if_added_prop_base.yaml
+	em API POST /products
+		removido o subesquema 'if' da propriedade de resposta `details` para o status `200`
+
+error	[response-property-then-removed] em ./checker/if_added_prop_base.yaml
+	em API POST /products
+		removido o subesquema 'then' da propriedade de resposta `details` para o status `200`
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+info	[request-property-else-removed] em ./checker/if_added_prop_base.yaml
+	em API POST /products
+		removido o subesquema 'else' da propriedade de requisição `details`
+
+info	[request-property-if-removed] em ./checker/if_added_prop_base.yaml
+	em API POST /products
+		removido o subesquema 'if' da propriedade de requisição `details`
+
+info	[request-property-then-removed] em ./checker/if_added_prop_base.yaml
+	em API POST /products
+		removido o subesquema 'then' da propriedade de requisição `details`
+
+

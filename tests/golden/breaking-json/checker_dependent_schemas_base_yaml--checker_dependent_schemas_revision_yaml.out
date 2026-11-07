@@ -1,0 +1,1 @@
+[{"id":"request-body-dependent-schema-added","text":"added the dependent schema `name` to the request body","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","revisionSource":{"file":"./checker/dependent_schemas_revision.yaml","line":18,"column":17,"endLine":21,"endColumn":35},"fingerprint":"8ecf2434cfc5"}]

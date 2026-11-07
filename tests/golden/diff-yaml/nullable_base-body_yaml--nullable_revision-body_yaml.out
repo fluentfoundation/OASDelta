@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /payments/{id}:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    nullable:
+                                                        from: false
+                                                        to: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /payments/{id}
+        :   responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        nullable:
+                                            from: false
+                                            to: true
+

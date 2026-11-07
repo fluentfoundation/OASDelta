@@ -1,0 +1,1 @@
+[{"id":"api-security-anonymous-access-added","text":"the endpoint now allows anonymous access","comment":"This endpoint inherits the API's top-level security requirements.","level":1,"operation":"POST","path":"/subscribe","section":"paths","baseSource":{"file":"./checker/api_security_global_added_revision.yaml","line":5,"column":1},"fingerprint":"7dfcf8f2bb9c"}]

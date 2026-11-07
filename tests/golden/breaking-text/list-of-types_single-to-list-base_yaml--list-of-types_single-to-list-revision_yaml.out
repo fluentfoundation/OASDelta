@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[response-property-list-of-types-widened] at ./list-of-types/single-to-list-revision.yaml
+	in API GET /test
+		response property `id` list-of-types was widened by adding types `integer` to media type `application/json` of response `200`
+
+error	[response-property-list-of-types-widened] at ./list-of-types/single-to-list-revision.yaml
+	in API GET /test
+		response property `status` list-of-types was widened by adding types `number` to media type `application/json` of response `200`
+
+

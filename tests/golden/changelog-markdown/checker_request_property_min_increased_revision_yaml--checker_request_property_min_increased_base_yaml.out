@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /pets
+-  the `age` request property's min was decreased from `15.00` to `10.00`
+
+
+
+
+
+

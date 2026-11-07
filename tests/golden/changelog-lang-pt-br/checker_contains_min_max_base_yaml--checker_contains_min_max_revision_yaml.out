@@ -1,0 +1,22 @@
+5 alterações: 2 error, 0 warning, 3 info
+error	[request-body-min-contains-increased] em ./checker/contains_min_max_revision.yaml
+	em API POST /products
+		o minContains do corpo da requisição foi aumentado de `1` para `2`
+
+error	[response-body-max-contains-increased] em ./checker/contains_min_max_revision.yaml
+	em API POST /products
+		o maxContains do corpo da resposta foi aumentado de `5` para `6` para o status `200`
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+info	[request-body-max-contains-increased] em ./checker/contains_min_max_revision.yaml
+	em API POST /products
+		o maxContains do corpo da requisição foi aumentado de `5` para `6`
+
+info	[response-body-min-contains-increased] em ./checker/contains_min_max_revision.yaml
+	em API POST /products
+		o minContains do corpo da resposta foi aumentado de `1` para `2` para o status `200`
+
+

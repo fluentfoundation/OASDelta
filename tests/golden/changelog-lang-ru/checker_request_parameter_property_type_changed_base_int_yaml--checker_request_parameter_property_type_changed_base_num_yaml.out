@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[request-parameter-property-type-generalized] в ./checker/request_parameter_property_type_changed_base_num.yaml
+	в API GET /groups
+		в параметре запроса `query` `filters` `type` свойства `groupId` расширен с `integer` до `number`
+
+

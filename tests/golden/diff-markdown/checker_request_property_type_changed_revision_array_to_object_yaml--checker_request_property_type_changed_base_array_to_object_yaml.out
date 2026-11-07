@@ -1,0 +1,41 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+POST /dogs
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Properties changed
+          - Modified property: colors
+            - Type changed from 'object' to 'array'
+            - Items changed
+              - Schema added
+            - Required changed
+              - Deleted required property: blue
+              - Deleted required property: green
+              - Deleted required property: red
+            - Properties changed
+              - Deleted property: blue
+              - Deleted property: green
+              - Deleted property: red
+
+POST /pets
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Type changed from 'object' to 'array'
+        - Items changed
+          - Schema added
+        - Required changed
+          - Deleted required property: data
+        - Properties changed
+          - Deleted property: data
+
+

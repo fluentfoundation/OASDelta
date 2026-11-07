@@ -1,0 +1,2 @@
+::notice title=api-security-scope-removed,file=./security-requirements/spec_2.yaml::in API POST /subscribe the security scope `read:pets` was removed from the endpoint's security scheme `petstore_auth`
+

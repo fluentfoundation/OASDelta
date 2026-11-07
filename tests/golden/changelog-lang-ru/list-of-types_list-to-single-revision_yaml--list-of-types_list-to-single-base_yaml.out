@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[request-property-list-of-types-widened] в ./list-of-types/list-to-single-base.yaml
+	в API POST /test
+		список типов свойства `userId` запроса был расширен добавлением типов `string` к медиа-типу `application/json`
+
+info	[request-property-list-of-types-widened] в ./list-of-types/list-to-single-base.yaml
+	в API POST /test
+		список типов свойства `value` запроса был расширен добавлением типов `number and boolean` к медиа-типу `application/json`
+
+

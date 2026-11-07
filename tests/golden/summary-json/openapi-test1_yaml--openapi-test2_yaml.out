@@ -1,0 +1,1 @@
+{"diff":true,"details":{"endpoints":{"added":1,"deleted":3,"modified":1},"headers":{"deleted":3},"parameters":{"deleted":1},"paths":{"deleted":3,"modified":1},"requestBodies":{"deleted":1},"responses":{"deleted":1},"schemas":{"deleted":2},"security":{"deleted":1},"securitySchemes":{"deleted":3},"servers":{"deleted":1},"tags":{"deleted":2}}}

@@ -1,0 +1,1 @@
+[{"id":"request-parameter-list-of-types-widened","text":"`query` request parameter `filter` list-of-types was widened by adding types `integer and boolean`","level":1,"operation":"GET","path":"/test","section":"paths","baseSource":{"file":"./list-of-types/param-test-revision.yaml","line":12,"column":13},"fingerprint":"ba42266c02ee"}]

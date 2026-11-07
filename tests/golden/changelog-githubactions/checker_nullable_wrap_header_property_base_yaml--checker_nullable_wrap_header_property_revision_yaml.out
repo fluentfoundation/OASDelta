@@ -1,0 +1,5 @@
+::notice title=request-parameter-became-nullable,file=./checker/nullable_wrap_header_property_revision.yaml::in API GET /test the `header` request parameter `x-owner` became nullable
+::notice title=request-parameter-became-nullable,file=./checker/nullable_wrap_header_property_revision.yaml::in API GET /test the `header` request parameter `x-status` became nullable
+::notice title=request-parameter-property-became-nullable,file=./checker/nullable_wrap_header_property_revision.yaml::in API GET /test the `owner` property of the `header` request parameter `x-meta` became nullable
+::notice title=request-parameter-property-became-nullable,file=./checker/nullable_wrap_header_property_revision.yaml::in API GET /test the `status` property of the `header` request parameter `x-meta` became nullable
+

@@ -1,0 +1,1 @@
+[{"id":"response-non-success-status-removed","text":"removed the non-success response with the status `409`","level":1,"operation":"POST","operationId":"createOneGroup","path":"/api/v1.0/groups","section":"paths","baseSource":{"file":"./run_test/changelog_base.yaml","line":25,"column":9,"endLine":30,"endColumn":32},"fingerprint":"a2e00d622f11"}]

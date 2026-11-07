@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /pets
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Properties changed
+          - Modified property: pet
+            - Property 'AllOf' changed
+              - Schemas added: subschema #1: annotation-only subschema on a property
+
+

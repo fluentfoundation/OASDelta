@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-property-pattern-added] at ./checker/shared_schema_override_revision.yaml
+	in API GET /orders
+		the `billing/zip` response's property pattern `^[0-9]{5}$` was added for the status `200` (shared schema: `Address`, also at `shipping/zip`)
+
+

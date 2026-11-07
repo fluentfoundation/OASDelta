@@ -1,0 +1,79 @@
+paths:
+    modified:
+        /edge:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            complexOneOf:
+                                                                oneOf:
+                                                                    added:
+                                                                        - index: 0
+                                                                        - index: 1
+                                                                    deleted:
+                                                                        - index: 0
+                                                                        - index: 1
+                                                            emptyOneOf:
+                                                                type:
+                                                                    added:
+                                                                        - string
+                                                            mixedBoth:
+                                                                oneOf:
+                                                                    deleted:
+                                                                        - index: 0
+                                                                anyOf:
+                                                                    added:
+                                                                        - index: 0
+                                                                        - index: 1
+                                                                    deleted:
+                                                                        - index: 0
+                                                                listOfTypes:
+                                                                    added:
+                                                                        - number
+endpoints:
+    modified:
+        ?   method: GET
+            path: /edge
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                complexOneOf:
+                                                    oneOf:
+                                                        added:
+                                                            - index: 0
+                                                            - index: 1
+                                                        deleted:
+                                                            - index: 0
+                                                            - index: 1
+                                                emptyOneOf:
+                                                    type:
+                                                        added:
+                                                            - string
+                                                mixedBoth:
+                                                    oneOf:
+                                                        deleted:
+                                                            - index: 0
+                                                    anyOf:
+                                                        added:
+                                                            - index: 0
+                                                            - index: 1
+                                                        deleted:
+                                                            - index: 0
+                                                    listOfTypes:
+                                                        added:
+                                                            - number
+

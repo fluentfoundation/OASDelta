@@ -1,40 +1,78 @@
 #!/usr/bin/env bash
 # Runs a built oasdelta binary (typically the NativeAOT one) over every fixture pair and compares stdout and the exit
-# code with tests/golden, which tools/gen_golden.sh produced from the Go oasdiff. The xUnit golden tests do the same
-# in-process with the JIT build; this catches anything trimming or NativeAOT changes.
-# usage: tools/check_golden.sh /path/to/oasdelta
+# code with tests/golden, for every combination in tools/golden-commands.txt. The xUnit golden tests do the same
+# in-process with the JIT build; this catches anything trimming or NativeAOT changes. Cases listed in
+# tests/golden-known.txt are handled as that file describes. Writes a summary (with rule coverage) to
+# $GITHUB_STEP_SUMMARY when set.
+# usage: tools/check_golden.sh /path/to/oasdelta [JOBS]
 set -u
+# Git Bash on Windows rewrites POSIX-looking arguments (e.g. --prefix-revision /v2 -> C:/Program Files/Git/v2)
+# when it runs a Windows executable; turn that off. No effect elsewhere.
+export MSYS_NO_PATHCONV=1 MSYS2_ARG_CONV_EXCL="*"
 export LC_ALL=C   # pairs.sh pairs files by sort order; keep it locale-independent
 BIN=$(cd "$(dirname "${1:?path to the oasdelta binary}")" && pwd)/$(basename "$1")
+JOBS=${2:-4}
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
-cd "$ROOT/tests/fixtures"
-pass=0; fail=0
-for dir in "$ROOT"/tests/golden/*/; do
-  slug=$(basename "$dir")
-  case $slug in
-    diff-yaml) args="diff" ;;
-    diff-json) args="diff -f json" ;;
-    diff-text) args="diff -f text" ;;
-    summary) args="summary" ;;
-    changelog-json) args="changelog -f json" ;;
-    changelog-markdown) args="changelog -f markdown" ;;
-    breaking-text) args="breaking" ;;
-    *) echo "unknown golden set $slug"; exit 2 ;;
-  esac
-  seen=" "   # plain string, not an associative array: macOS ships bash 3.2
+PAIRS=$("$ROOT/tools/pairs.sh")
+KNOWN=$(grep -v '^#' "$ROOT/tests/golden-known.txt" | grep . || true)
+RESULTS=$(mktemp -d)
+
+check_slug() {
+  local slug=$1 args=$2 dir="$ROOT/tests/golden/$1" seen=" " pass=0 fail=0
+  cd "$ROOT/tests/fixtures"
   while read -r b r; do
+    local name golden expected_code actual expected kind
     name=$(echo "$b--$r" | sed 's|\./||g; s|[/.]|_|g')
     case "$seen" in *" $name "*) continue ;; esac
     seen="$seen$name "
     golden="$dir/$name.out"
     [ -f "$golden" ] || continue
     expected_code=$(awk -v n="$name" '$1 == n { print $2 }' "$dir/exit-codes.txt")
+    # shellcheck disable=SC2086 # args are split on spaces by design
     actual=$("$BIN" $args "$b" "$r" 2>/dev/null; echo "exit=$?")
     expected=$(cat "$golden"; echo "exit=$expected_code")
-    if [ "$actual" == "$expected" ]; then pass=$((pass+1)); else fail=$((fail+1)); echo "FAIL [$slug] $b $r"; fi
-  done < <("$ROOT/tools/pairs.sh")
-done
+    kind=$(awk -v s="$slug" -v n="$name" '$1 == s && $2 == n { print $3 }' <<< "$KNOWN")
+    if [ "$actual" == "$expected" ]; then
+      if [[ "$kind" == \#* ]]; then fail=$((fail+1)); echo "NOW MATCHES [$slug] $b $r: remove it from tests/golden-known.txt ($kind)"
+      else pass=$((pass+1)); fi
+    elif [ "$kind" == "unordered" ] && [ "$(sort <<< "$actual")" == "$(sort <<< "$expected")" ]; then
+      pass=$((pass+1))
+    elif [[ "$kind" == \#* ]]; then
+      pass=$((pass+1))   # a tracked bug: expected to differ
+    else
+      fail=$((fail+1)); echo "FAIL [$slug] $b $r"
+    fi
+  done <<< "$PAIRS"
+  echo "$pass $fail" > "$RESULTS/$slug"
+}
+
+while IFS='|' read -r slug args; do
+  [[ -z "$slug" || "$slug" == \#* ]] && continue
+  while (( $(jobs -rp | wc -l) >= JOBS )); do wait -n; done
+  check_slug "$slug" "$args" &
+done < "$ROOT/tools/golden-commands.txt"
+wait
+
+pass=0; fail=0; sets=0
+for f in "$RESULTS"/*; do read -r p q < "$f"; pass=$((pass+p)); fail=$((fail+q)); sets=$((sets+1)); done
+rm -rf "$RESULTS"
 total=$(find "$ROOT/tests/golden" -name "*.out" | wc -l | tr -d " ")
-echo "golden: pass=$pass fail=$fail of $total"
+IDS=$(grep -oE '"[a-z0-9-]+";$' "$ROOT/src/OasDelta/Checker/Generated/RuleIds.g.cs" | tr -d '";' | sort -u)
+rules=$(grep -c . <<< "$IDS")
+fired=$(cat "$ROOT"/tests/golden/*/*.out | grep -oE '"id": ?"[a-z0-9-]+"' | sed -E 's/.*"([a-z0-9-]+)"$/\1/' | sort -u | grep -cxFf <(echo "$IDS"))
+floor=$(tr -d '[:space:]' < "$ROOT/tests/rule-coverage-floor.txt")
+known=$(grep -c . <<< "$KNOWN" || true)
+echo "golden: pass=$pass fail=$fail of $total in $sets sets; rules firing: $fired of $rules (floor $floor); known cases: $known"
+if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+  {
+    echo "### Golden comparisons ($(basename "$BIN"))"
+    echo
+    echo "| Comparisons | Passed | Failed | Sets | Rules firing in goldens | Known cases |"
+    echo "|---:|---:|---:|---:|---:|---:|"
+    echo "| $total | $pass | $fail | $sets | $fired of $rules (floor $floor) | $known |"
+    echo
+  } >> "$GITHUB_STEP_SUMMARY"
+fi
 [ $((pass + fail)) -eq "$total" ] || { echo "only $((pass + fail)) of $total golden files were compared"; exit 1; }
+[ "$fired" -ge "$floor" ] || { echo "rule coverage dropped below the floor ($fired < $floor)"; exit 1; }
 [ "$fail" -eq 0 ]

@@ -1,0 +1,3 @@
+::notice title=request-property-list-of-types-widened,file=./list-of-types/list-to-single-base.yaml::in API POST /test request property `userId` list-of-types was widened by adding types `string` to media type `application/json`
+::notice title=request-property-list-of-types-widened,file=./list-of-types/list-to-single-base.yaml::in API POST /test request property `value` list-of-types was widened by adding types `number and boolean` to media type `application/json`
+

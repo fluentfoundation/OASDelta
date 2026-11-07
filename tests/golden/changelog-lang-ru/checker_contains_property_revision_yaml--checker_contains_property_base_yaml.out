@@ -1,0 +1,30 @@
+7 изменений: 3 error, 0 warning, 4 info
+error	[response-property-contains-removed] в ./checker/contains_property_base.yaml
+	в API POST /products
+		удалено ограничение 'contains' из поля ответа `tags` для статуса `200`
+
+error	[response-property-max-contains-unset] в ./checker/contains_property_base.yaml
+	в API POST /products
+		значение maxContains у поля ответа `tags` удалено, предыдущее значение - `3`, для ответа со статусом `200`
+
+error	[response-property-min-contains-unset] в ./checker/contains_property_base.yaml
+	в API POST /products
+		значение minContains у поля ответа `tags` удалено, предыдущее значение - `1`, для ответа со статусом `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-property-contains-removed] в ./checker/contains_property_base.yaml
+	в API POST /products
+		удалено ограничение 'contains' из поля запроса `tags`
+
+info	[request-property-max-contains-unset] в ./checker/contains_property_base.yaml
+	в API POST /products
+		значение maxContains у поля запроса `tags` удалено, предыдущее значение - `3`
+
+info	[request-property-min-contains-unset] в ./checker/contains_property_base.yaml
+	в API POST /products
+		значение minContains у поля запроса `tags` удалено, предыдущее значение - `1`
+
+

@@ -1,0 +1,113 @@
+26 alterações: 4 error, 4 warning, 18 info
+error	[response-success-status-removed] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		a resposta de sucesso com o status `200` foi removida
+
+error	[response-success-status-removed] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		a resposta de sucesso com o status `201` foi removida
+
+error	[api-security-removed] em openapi-test3.yaml
+	em API POST /register
+		o esquema de segurança `bearerAuth` foi removido do endpoint da api
+
+error	[api-security-scope-added] em openapi-test3.yaml
+	em API POST /register
+		o escopo de segurança `write:pets` foi adicionado ao esquema de segurança do endpoint `OAuth`
+
+warning	[request-parameter-removed] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		parâmetro de requisição do tipo `cookie` e nome `test` removido
+		Este é um aviso porque alguns aplicativos podem retornar um erro ao receber um parâmetro que não esperam. Recomenda-se depreciar o parâmetro primeiro.
+
+warning	[request-parameter-removed] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		parâmetro de requisição do tipo `header` e nome `user` removido
+		Este é um aviso porque alguns aplicativos podem retornar um erro ao receber um parâmetro que não esperam. Recomenda-se depreciar o parâmetro primeiro.
+
+warning	[request-parameter-removed] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		parâmetro de requisição do tipo `query` e nome `filter` removido
+		Este é um aviso porque alguns aplicativos podem retornar um erro ao receber um parâmetro que não esperam. Recomenda-se depreciar o parâmetro primeiro.
+
+warning	[request-parameter-removed] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/install-command
+		parâmetro de requisição do tipo `header` e nome `network-policies` removido
+		Este é um aviso porque alguns aplicativos podem retornar um erro ao receber um parâmetro que não esperam. Recomenda-se depreciar o parâmetro primeiro.
+
+info	[api-major-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão maior não aumentou, de `1.0.0` para `1.0.1`
+
+info	[api-schema-removed]
+	em components/schemas
+		esquema `network-policies` removido
+
+info	[api-schema-removed]
+	em components/schemas
+		esquema `rules` removido
+
+info	[api-security-component-oauth-scope-added]
+	em components/securitySchemes
+		no esquema de segurança `OAuth`, o fluxo OAuth `authorizationCode` adicionou o escopo `admin`
+
+info	[api-security-component-oauth-scope-changed]
+	em components/securitySchemes
+		no esquema de segurança `OAuth`, o escopo `authorizationCode` do fluxo OAuth `accountWrite` foi atualizado de `Allows account data to be written` para `Allows accounts data to be written`
+
+info	[api-security-component-removed]
+	em components/securitySchemes
+		o esquema de segurança `AccessToken` foi removido
+
+info	[api-security-component-removed]
+	em components/securitySchemes
+		o esquema de segurança `bearerAuth` foi removido
+
+info	[api-operation-id-removed] em openapi-test1.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		id de operação da api `GetSecurityScores` removido e substituído por `GetSecurityScore`
+
+info	[api-security-anonymous-access-added] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		o endpoint agora permite acesso anônimo
+		Este endpoint herda os requisitos de segurança de nível superior da API.
+
+info	[api-tag-removed] em openapi-test1.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		tag da api `security` removida
+
+info	[request-parameter-max-length-increased] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		no parâmetro de requisição do tipo `query` e nome `token` teve seu comprimento máximo aumentado de `29` para `30`
+
+info	[request-parameter-pattern-removed] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		removido o padrão `^(?:[\w-./:]+)$` do parâmetro de requisição do tipo `query` e nome `image`
+
+info	[request-parameter-type-generalized] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		no parâmetro de requisição do tipo `query` e nome `image`, o `type/format` foi expandido de `string/general string` para `any`
+
+info	[response-non-success-status-removed] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/badges/security-score
+		a resposta de não sucesso com o status `400` foi removida
+
+info	[api-security-anonymous-access-added] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/install-command
+		o endpoint agora permite acesso anônimo
+		Este endpoint herda os requisitos de segurança de nível superior da API.
+
+info	[new-optional-request-default-parameter-to-existing-path] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/install-command
+		o novo parâmetro opcional de requisição `header` foi adicionado a todas as operações do caminho%!(EXTRA string=`name`)
+
+info	[request-parameter-enum-value-added] em openapi-test3.yaml
+	em API GET /api/{domain}/{project}/install-command
+		valor `test1` do enum adicionado ao parâmetro de requisição do tipo `path` e nome `project`
+
+info	[api-security-anonymous-access-added] em openapi-test3.yaml
+	em API POST /subscribe
+		o endpoint agora permite acesso anônimo
+		Este endpoint herda os requisitos de segurança de nível superior da API.
+
+

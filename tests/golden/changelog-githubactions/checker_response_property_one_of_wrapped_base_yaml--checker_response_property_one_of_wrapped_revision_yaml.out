@@ -1,0 +1,2 @@
+::error title=response-body-wrapped-in-one-of,file=./checker/response_property_one_of_wrapped_revision.yaml::in API GET /example the response body was restructured into a oneOf, so a field that was previously guaranteed may no longer be present
+

@@ -1,0 +1,3 @@
+::notice title=response-optional-property-added,file=./component-name2.yaml,line=25,col=23::in API GET /example added the optional property `inline/nickname` to the response with the `200` status
+::notice title=response-optional-property-added,file=./component-name2.yaml,line=36,col=9::in API GET /example added the optional property `left/extra` to the response with the `200` status (shared schema: `Shared`, also at `right/extra`)
+

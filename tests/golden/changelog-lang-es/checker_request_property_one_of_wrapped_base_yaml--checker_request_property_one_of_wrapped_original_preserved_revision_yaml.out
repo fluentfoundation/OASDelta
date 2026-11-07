@@ -1,0 +1,7 @@
+1 cambios: 0 error, 1 warning, 0 info
+warning	[request-body-wrapped-in-one-of-original-preserved] en ./checker/request_property_one_of_wrapped_original_preserved_revision.yaml
+	en API POST /example
+		el cuerpo de solicitud se reestructuró en un `oneOf`, conservando el esquema original como una de las alternativas
+		Esta es una advertencia porque la especificación no indica si las alternativas se solapan. Una carga útil que coincida con más de una es rechazada por `oneOf`, por lo que una carga útil que antes era válida podría o no seguir aceptándose.
+
+

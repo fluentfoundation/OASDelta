@@ -1,0 +1,15 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /items
+-  the schema of the `query` request parameter `filter` is no longer `false` and accepts values again
+-  the schema of the request property `name` is no longer `false` and accepts values again
+-  the response body schema is no longer `false` and allows response bodies again
+
+
+
+
+
+

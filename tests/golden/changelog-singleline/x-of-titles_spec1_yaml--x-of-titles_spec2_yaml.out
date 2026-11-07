@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./x-of-titles/spec2.yaml, in API GET /test added `subschema #2: Title 3` to the response body `anyOf` list for the response status `200` [response-body-any-of-added]. 
+
+info at ./x-of-titles/spec2.yaml, in API GET /test removed `subschema #2: Title 2` from the response body `anyOf` list for the response status `200` [response-body-any-of-removed]. 
+
+

@@ -5,11 +5,16 @@ code as the Go binary.
 
 ## How it is checked
 
-- **Golden tests.** `tests/golden` holds the output of **oasdiff v1.35.0** for seven command/format combinations
-  (`diff` as yaml, json and text; `summary`; `changelog` as json and markdown; `breaking`). They cover every fixture
-  pair in the upstream test data plus a few of OasDelta's own: 179 pairs, 1,253 comparisons. `dotnet test`
-  replays them in process. CI replays them with the NativeAOT binary (`tools/check_golden.sh`) on Linux and Windows,
-  and the release workflow replays them on all six release platforms. All of them pass.
+- **Golden tests.** `tests/golden` holds the output of **oasdiff v1.35.0** for 33 command, format, language and
+  option combinations ([`tools/golden-commands.txt`](https://github.com/fluentfoundation/OASDelta/blob/main/tools/golden-commands.txt)):
+  every output format of `diff`, `summary`, `changelog` and `breaking`; `--lang` es, pt-br and ru; and option sets
+  such as `--level`, `--fail-on`, `--flatten-params`, `--include-path-params`, `--match-path`, `--prefix-revision`
+  and deprecation days. They run over 307 fixture pairs: the upstream test data paired by file name, plus the pairs
+  upstream's own checker tests compare (`tests/extra-pairs.txt`). That is 10,131 comparisons, in which 379 of the
+  617 checker rules fire. `dotnet test` replays them in process. CI replays them with the NativeAOT binary
+  (`tools/check_golden.sh`) on Linux and Windows, and the release workflow replays them on all six release
+  platforms. The few cases that are expected to differ are listed in `tests/golden-known.txt`, each with its
+  issue. CI fails if a listed case starts to match, so the list cannot go stale.
 - **Real-world parity.** [OASDelta-TestData](https://github.com/fluentfoundation/OASDelta-TestData) holds
   consecutive releases of the GitHub, Stripe, Kubernetes and European Patent Office APIs. Its weekly
   [parity report](https://github.com/fluentfoundation/OASDelta-TestData/actions/workflows/parity.yml) runs the

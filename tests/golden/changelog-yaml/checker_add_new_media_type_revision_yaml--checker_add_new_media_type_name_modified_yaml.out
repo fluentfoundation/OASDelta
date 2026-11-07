@@ -1,0 +1,21 @@
+- id: response-media-type-name-specialized
+  text: media type `application/json` was changed to a more specific media type `application/problem+json` for the response status `200`
+  level: 1
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups
+  section: paths
+  baseSource:
+    file: ./checker/add_new_media_type_revision.yaml
+    line: 21
+    column: 13
+    endLine: 23
+    endColumn: 55
+  revisionSource:
+    file: ./checker/add_new_media_type_name_modified.yaml
+    line: 21
+    column: 13
+    endLine: 23
+    endColumn: 55
+  fingerprint: 3d007f4dbee7
+

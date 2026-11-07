@@ -1,0 +1,6 @@
+::error title=request-body-min-contains-increased,file=./checker/contains_min_max_revision.yaml,line=18,col=15::in API POST /products the request body minContains was increased from `1` to `2`
+::error title=response-body-max-contains-increased,file=./checker/contains_min_max_revision.yaml,line=32,col=17::in API POST /products the response body maxContains was increased from `5` to `6` for the status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-body-max-contains-increased,file=./checker/contains_min_max_revision.yaml,line=19,col=15::in API POST /products the request body maxContains was increased from `5` to `6`
+::notice title=response-body-min-contains-increased,file=./checker/contains_min_max_revision.yaml,line=31,col=17::in API POST /products the response body minContains was increased from `1` to `2` for the status `200`
+

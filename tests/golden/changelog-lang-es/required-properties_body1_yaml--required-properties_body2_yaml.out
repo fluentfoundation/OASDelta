@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-property-became-required] en ./required-properties/body2.yaml
+	en API POST /test
+		la propiedad de solicitud `id` se volvió requerida
+
+

@@ -1,0 +1,7 @@
+1 cambios: 0 error, 1 warning, 0 info
+warning	[request-parameter-pattern-changed] en ./pattern-parameter-modified-not-anystring.yaml
+	en API GET /api/v1.0/groups/{groupId}
+		cambiado el patrón del parámetro `path` de solicitud `groupId` de `[0-9a-f]+` a `[0-9]+`
+		Esta es una advertencia porque agregar o cambiar un patrón puede restringir los valores aceptados y romper clientes existentes. Para cambios de patrón, es difícil analizar automáticamente si el nuevo patrón es un superconjunto del patrón anterior (ej. cambiado de '[0-9]+' a '[0-9]*')
+
+

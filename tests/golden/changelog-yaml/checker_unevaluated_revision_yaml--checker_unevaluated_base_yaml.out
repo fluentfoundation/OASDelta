@@ -1,0 +1,54 @@
+- id: response-body-unevaluated-items-removed
+  text: removed 'unevaluatedItems' constraint from the response body for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/unevaluated_revision.yaml
+    line: 31
+    column: 17
+  fingerprint: e7d022fba109
+- id: response-body-unevaluated-properties-removed
+  text: removed 'unevaluatedProperties' constraint from the response body for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/unevaluated_revision.yaml
+    line: 33
+    column: 17
+  fingerprint: 19f1b7b53abc
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-body-unevaluated-items-removed
+  text: removed 'unevaluatedItems' constraint from the request body
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/unevaluated_revision.yaml
+    line: 17
+    column: 15
+  fingerprint: "819234865178"
+- id: request-body-unevaluated-properties-removed
+  text: removed 'unevaluatedProperties' constraint from the request body
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/unevaluated_revision.yaml
+    line: 19
+    column: 15
+  fingerprint: 2b85b37aae42
+

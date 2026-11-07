@@ -1,0 +1,17 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /example
+-  added the optional property `extra` to the response with the `200` status
+
+
+
+
+## Components
+-  removed the schema `Old`
+
+
+
+

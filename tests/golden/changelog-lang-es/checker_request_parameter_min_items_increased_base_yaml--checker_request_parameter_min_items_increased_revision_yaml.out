@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-parameter-min-items-increased] en ./checker/request_parameter_min_items_increased_revision.yaml
+	en API POST /api/v1.0/groups
+		para el parámetro `query` de solicitud `category`, minItems fue aumentado de `2` a `3`
+
+

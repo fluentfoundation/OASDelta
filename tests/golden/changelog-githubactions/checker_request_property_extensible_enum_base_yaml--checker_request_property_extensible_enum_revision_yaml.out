@@ -1,0 +1,3 @@
+::error title=request-property-x-extensible-enum-value-removed,file=./checker/request_property_extensible_enum_revision.yaml::in API POST /pets removed the x-extensible-enum value `sold` of the request property `name`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

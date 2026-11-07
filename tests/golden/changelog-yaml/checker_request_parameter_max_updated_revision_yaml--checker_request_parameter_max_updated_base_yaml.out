@@ -1,0 +1,17 @@
+- id: request-parameter-max-decreased
+  text: for the `query` request parameter `category`, the max was decreased from `10.00` to `5.00`
+  level: 3
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups
+  section: paths
+  baseSource:
+    file: ./checker/request_parameter_max_updated_revision.yaml
+    line: 26
+    column: 13
+  revisionSource:
+    file: ./checker/request_parameter_max_updated_base.yaml
+    line: 26
+    column: 13
+  fingerprint: 2c61ec36b189
+

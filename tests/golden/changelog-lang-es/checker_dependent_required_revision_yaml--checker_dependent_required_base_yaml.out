@@ -1,0 +1,14 @@
+3 cambios: 1 error, 0 warning, 2 info
+error	[response-body-dependent-required-removed] en ./checker/dependent_required_base.yaml
+	en API POST /products
+		el dependentRequired del cuerpo de respuesta fue eliminado para el estado `200`: cuando `name` estaba presente, `email` eran obligatorios
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[request-body-dependent-required-removed] en ./checker/dependent_required_base.yaml
+	en API POST /products
+		el dependentRequired del cuerpo de solicitud fue eliminado: cuando `name` estaba presente, `email` eran obligatorios
+
+

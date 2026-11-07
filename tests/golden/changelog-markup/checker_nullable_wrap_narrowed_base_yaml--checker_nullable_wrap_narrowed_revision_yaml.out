@@ -1,0 +1,19 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /test
+- :warning: removed the enum value `serviceAccount` of the request property `optionalEnum`
+- :warning: removed the enum value `user` of the request property `optionalEnum`
+-  request property `optionalEnum` list-of-types was widened by adding types `null` to media type `application/json`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

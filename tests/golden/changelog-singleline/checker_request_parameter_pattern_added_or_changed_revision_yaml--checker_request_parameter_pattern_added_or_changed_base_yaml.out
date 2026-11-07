@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./checker/request_parameter_pattern_added_or_changed_base.yaml, in API POST /test added the pattern `^\w+$` to the `query` request parameter `category` [request-parameter-pattern-added]. This is a breaking change because adding a pattern restriction to a previously unrestricted parameter will reject values that were previously accepted, breaking existing clients
+
+

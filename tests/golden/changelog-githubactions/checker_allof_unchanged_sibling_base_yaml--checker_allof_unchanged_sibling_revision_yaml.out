@@ -1,0 +1,2 @@
+::warning title=request-property-max-length-decreased,file=./checker/allof_unchanged_sibling_revision.yaml,line=15,col=19::in API POST /items the `wrapper` request property's maxLength was decreased to `5`
+

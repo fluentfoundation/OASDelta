@@ -1,0 +1,73 @@
+paths:
+    modified:
+        /partner-api/test/another-method:
+            operations:
+                modified:
+                    GET:
+                        extensions:
+                            modified:
+                                x-test:
+                                    - oldValue: xyz
+                                      value: 123
+                                      op: replace
+                                      from: ""
+                                      path: /0
+                        responses:
+                            added:
+                                - "200"
+                            deleted:
+                                - "201"
+        /partner-api/test/some-method:
+            operations:
+                modified:
+                    GET:
+                        extensions:
+                            deleted:
+                                - x-test2
+                            modified:
+                                x-test:
+                                    - oldValue: abc
+                                      value: 123
+                                      op: add
+                                      from: ""
+                                      path: ""
+                        responses:
+                            added:
+                                - "200"
+                            deleted:
+                                - "201"
+endpoints:
+    modified:
+        ?   method: GET
+            path: /partner-api/test/another-method
+        :   extensions:
+                modified:
+                    x-test:
+                        - oldValue: xyz
+                          value: 123
+                          op: replace
+                          from: ""
+                          path: /0
+            responses:
+                added:
+                    - "200"
+                deleted:
+                    - "201"
+        ?   method: GET
+            path: /partner-api/test/some-method
+        :   extensions:
+                deleted:
+                    - x-test2
+                modified:
+                    x-test:
+                        - oldValue: abc
+                          value: 123
+                          op: add
+                          from: ""
+                          path: ""
+            responses:
+                added:
+                    - "200"
+                deleted:
+                    - "201"
+

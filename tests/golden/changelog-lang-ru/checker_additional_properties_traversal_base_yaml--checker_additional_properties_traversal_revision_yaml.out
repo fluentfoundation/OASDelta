@@ -1,0 +1,10 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[response-required-property-removed] в ./checker/additional_properties_traversal_revision.yaml
+	в API GET /entries
+		удалено обязательное поле ответа `additionalProperties/kind` из ответа со статусом `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

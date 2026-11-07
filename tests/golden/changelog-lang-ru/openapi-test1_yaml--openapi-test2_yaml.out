@@ -1,0 +1,108 @@
+25 изменений: 7 error, 4 warning, 14 info
+error	[request-parameter-min-set] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		в `path` параметре запроса `domain`, min установлен в `7.00`
+		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+
+error	[request-parameter-type-changed] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		в параметре запроса `path` `domain` `type/format` изменён с `string/hyphen-separated list` на `integer/non-negative integer`
+
+error	[response-success-status-removed] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удален успешный (2xx) статус ответа `200`
+
+error	[response-success-status-removed] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удален успешный (2xx) статус ответа `201`
+
+error	[api-path-removed-without-deprecation] в ./openapi-test1.yaml
+	в API GET /api/{domain}/{project}/install-command
+		API path удалён без процедуры deprecation
+
+error	[api-path-removed-without-deprecation] в ./openapi-test1.yaml
+	в API POST /register
+		API path удалён без процедуры deprecation
+
+error	[api-path-removed-without-deprecation] в ./openapi-test1.yaml
+	в API POST /subscribe
+		API path удалён без процедуры deprecation
+
+warning	[request-parameter-pattern-changed] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		изменён pattern у `path` параметра запроса `domain` со значения `^(?:([a-z]+-)*([a-z]+)?)$` на значение `^(?:\d+)$`
+		Это предупреждение, потому что сложно автоматически проанализировать, является ли новый шаблон надмножеством предыдущего шаблона (например, изменен с '[0-9]+' на '[0-9]*').
+
+warning	[request-parameter-removed] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удалён `cookie` параметр запроса `test`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+warning	[request-parameter-removed] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удалён `header` параметр запроса `user`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+warning	[request-parameter-removed] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удалён `header` параметр запроса `x-auth-name`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+info	[api-major-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но мажорная версия не увеличилась, с `1.0.0` до `1.0.1`
+
+info	[api-schema-removed]
+	в components/schemas
+		удалена схема `network-policies`
+
+info	[api-schema-removed]
+	в components/schemas
+		удалена схема `rules`
+
+info	[api-security-component-removed]
+	в components/securitySchemes
+		компонент схемы безопасности `AccessToken` был удален
+
+info	[api-security-component-removed]
+	в components/securitySchemes
+		компонент схемы безопасности `OAuth` был удален
+
+info	[api-security-component-removed]
+	в components/securitySchemes
+		компонент схемы безопасности `bearerAuth` был удален
+
+info	[api-operation-id-removed] в ./openapi-test1.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		Идентификатор операции API `GetSecurityScores` удален и заменен на ``
+
+info	[api-security-anonymous-access-added] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		эндпоинт теперь допускает анонимный доступ
+		Этот эндпоинт наследует требования безопасности верхнего уровня API.
+
+info	[api-tag-removed] в ./openapi-test1.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		Тег API `security` удален
+
+info	[request-parameter-max-length-unset] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		значение maxLength в `query` параметре запроса `token` удалено, предыдущее значение - `29`
+
+info	[request-parameter-pattern-removed] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удалён pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` у `query` параметра запроса `token`
+
+info	[request-parameter-type-generalized] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		в параметре запроса `query` `token` `type/format` расширен с `string/uuid` до `any`
+
+info	[response-non-success-status-removed] в ./openapi-test2.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удален неуспешный (не 2xx) статус ответа `400`
+
+info	[endpoint-added] в ./openapi-test2.yaml
+	в API POST /api/{domain}/{project}/badges/security-score
+		эндпоинт добавлен
+
+

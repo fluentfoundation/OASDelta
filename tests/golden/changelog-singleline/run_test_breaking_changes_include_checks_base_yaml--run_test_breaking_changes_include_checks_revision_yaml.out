@@ -1,0 +1,6 @@
+2 changes: 0 error, 0 warning, 2 info
+info at ./run_test/breaking_changes_include_checks_base.yaml, in API POST /api/v1.0/groups api tag `Group` removed [api-tag-removed]. 
+
+info at ./run_test/breaking_changes_include_checks_revision.yaml, in API POST /api/v1.0/groups removed the non-success response with the status `409` [response-non-success-status-removed]. 
+
+

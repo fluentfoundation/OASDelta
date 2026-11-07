@@ -1,0 +1,1 @@
+{"webhooks":{"modified":{"newPet":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"required":{"added":["tag"]}}}}}}}}}}}},"components":{"schemas":{"modified":{"Pet":{"required":{"added":["tag"]}}}}}}

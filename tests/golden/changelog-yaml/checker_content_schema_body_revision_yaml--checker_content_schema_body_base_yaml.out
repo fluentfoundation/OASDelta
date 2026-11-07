@@ -1,0 +1,94 @@
+- id: request-body-content-encoding-changed
+  text: the request body contentEncoding changed from `quoted-printable` to `base64`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 15
+    column: 15
+  revisionSource:
+    file: ./checker/content_schema_body_base.yaml
+    line: 15
+    column: 15
+  fingerprint: 320a7e9a7028
+- id: request-body-content-media-type-changed
+  text: the request body contentMediaType changed from `text/plain` to `application/json`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 14
+    column: 15
+  revisionSource:
+    file: ./checker/content_schema_body_base.yaml
+    line: 14
+    column: 15
+  fingerprint: 533b8411404e
+- id: response-body-content-encoding-changed
+  text: the response body contentEncoding changed from `quoted-printable` to `base64` for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 26
+    column: 17
+  revisionSource:
+    file: ./checker/content_schema_body_base.yaml
+    line: 24
+    column: 17
+  fingerprint: a293e4ecc4cd
+- id: response-body-content-media-type-changed
+  text: the response body contentMediaType changed from `text/plain` to `application/json` for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 25
+    column: 17
+  revisionSource:
+    file: ./checker/content_schema_body_base.yaml
+    line: 23
+    column: 17
+  fingerprint: 2ad25432270c
+- id: response-body-content-schema-removed
+  text: removed 'contentSchema' from the response body for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 27
+    column: 17
+  fingerprint: b1d2cbcb2e15
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-body-content-schema-removed
+  text: removed 'contentSchema' from the request body
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_body_revision.yaml
+    line: 16
+    column: 15
+  fingerprint: 3a0923490349
+

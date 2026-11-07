@@ -1,0 +1,30 @@
+7 cambios: 3 error, 0 warning, 4 info
+error	[response-body-else-removed] en ./checker/if_added_base.yaml
+	en API POST /products
+		removido el subesquema 'else' del cuerpo de respuesta para el estado `200`
+
+error	[response-body-if-removed] en ./checker/if_added_base.yaml
+	en API POST /products
+		removido el subesquema 'if' del cuerpo de respuesta para el estado `200`
+
+error	[response-body-then-removed] en ./checker/if_added_base.yaml
+	en API POST /products
+		removido el subesquema 'then' del cuerpo de respuesta para el estado `200`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[request-body-else-removed] en ./checker/if_added_base.yaml
+	en API POST /products
+		removido el subesquema 'else' del cuerpo de solicitud
+
+info	[request-body-if-removed] en ./checker/if_added_base.yaml
+	en API POST /products
+		removido el subesquema 'if' del cuerpo de solicitud
+
+info	[request-body-then-removed] en ./checker/if_added_base.yaml
+	en API POST /products
+		removido el subesquema 'then' del cuerpo de solicitud
+
+

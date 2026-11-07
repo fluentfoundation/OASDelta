@@ -1,0 +1,33 @@
+paths:
+    modified:
+        /books/{bookId}:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                path:
+                                    bookId:
+                                        schema:
+                                            enum:
+                                                enumAdded: true
+                                                added:
+                                                    - VALUE_1
+                                                    - VALUE_2
+                                                    - VALUE_3
+endpoints:
+    modified:
+        ?   method: GET
+            path: /books/{bookId}
+        :   parameters:
+                modified:
+                    path:
+                        bookId:
+                            schema:
+                                enum:
+                                    enumAdded: true
+                                    added:
+                                        - VALUE_1
+                                        - VALUE_2
+                                        - VALUE_3
+

@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /test:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    filter:
+                                        schema:
+                                            oneOf:
+                                                added:
+                                                    - index: 0
+                                                    - index: 1
+                                                    - index: 2
+                                            type:
+                                                deleted:
+                                                    - string
+                                            listOfTypes:
+                                                added:
+                                                    - integer
+                                                    - boolean
+endpoints:
+    modified:
+        ?   method: GET
+            path: /test
+        :   parameters:
+                modified:
+                    query:
+                        filter:
+                            schema:
+                                oneOf:
+                                    added:
+                                        - index: 0
+                                        - index: 1
+                                        - index: 2
+                                type:
+                                    deleted:
+                                        - string
+                                listOfTypes:
+                                    added:
+                                        - integer
+                                        - boolean
+

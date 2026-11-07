@@ -1,0 +1,2 @@
+::error title=request-body-removed,file=./checker/request_body_removed_revision.yaml::in API POST /api/v1.0/test removed the request body
+

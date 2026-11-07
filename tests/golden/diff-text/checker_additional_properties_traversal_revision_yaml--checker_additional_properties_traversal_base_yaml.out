@@ -1,0 +1,21 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /entries
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - AdditionalProperties changed
+            - Required changed
+              - New required property: kind
+            - Properties changed
+              - New property: kind
+
+

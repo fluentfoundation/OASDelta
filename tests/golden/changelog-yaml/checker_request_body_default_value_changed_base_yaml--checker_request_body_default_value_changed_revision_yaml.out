@@ -1,0 +1,36 @@
+- id: request-body-media-type-removed
+  text: removed the media type `application/json` from the request body
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/request_body_default_value_changed_base.yaml
+    line: 16
+    column: 11
+    endLine: 24
+    endColumn: 32
+  fingerprint: 393092ab7056
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-body-default-value-changed
+  text: the request body `text/plain` default value changed from `Default` to `NewDefault`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/request_body_default_value_changed_base.yaml
+    line: 15
+    column: 15
+  revisionSource:
+    file: ./checker/request_body_default_value_changed_revision.yaml
+    line: 15
+    column: 15
+  fingerprint: f829bb18bd24
+

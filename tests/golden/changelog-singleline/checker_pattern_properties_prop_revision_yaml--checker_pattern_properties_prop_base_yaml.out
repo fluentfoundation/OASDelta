@@ -1,0 +1,8 @@
+3 changes: 1 error, 0 warning, 2 info
+error at ./checker/pattern_properties_prop_base.yaml, in API POST /products removed the pattern property `^x-` from the `details` response property for the status `200` [response-property-pattern-property-removed]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./checker/pattern_properties_prop_base.yaml, in API POST /products removed the pattern property `^x-` from the `details` request property [request-property-pattern-property-removed]. 
+
+

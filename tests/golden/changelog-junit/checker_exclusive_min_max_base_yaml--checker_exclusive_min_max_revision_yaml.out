@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="9" errors="0" failures="9" name="OASDiff">
+    <testcase name="request-body-exclusive-max-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body exclusiveMaximum was decreased to `50.00`</failure>
+    </testcase>
+    <testcase name="request-body-exclusive-min-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body exclusiveMinimum was increased to `5.00`</failure>
+    </testcase>
+    <testcase name="request-parameter-exclusive-max-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `limit`, the exclusiveMaximum was decreased from `100.00` to `50.00`</failure>
+    </testcase>
+    <testcase name="request-parameter-exclusive-min-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `limit`, the exclusiveMinimum was increased from `0.00` to `5.00`</failure>
+    </testcase>
+    <testcase name="request-property-exclusive-max-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `price` request property's exclusiveMaximum was decreased to `500.00`</failure>
+    </testcase>
+    <testcase name="request-property-exclusive-min-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `price` request property's exclusiveMinimum was increased to `10.00`</failure>
+    </testcase>
+    <testcase name="response-body-exclusive-max-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body exclusiveMaximum was increased from `100.00` to `200.00`</failure>
+    </testcase>
+    <testcase name="response-property-exclusive-max-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `price` response property's exclusiveMaximum was increased from `1000.00` to `2000.00` for the response status `200`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

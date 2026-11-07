@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./checker/request_property_one_of_wrapped_revision.yaml, in API POST /example the request body was restructured into a oneOf, so a payload that was previously valid may no longer be accepted [request-body-wrapped-in-one-of]. 
+
+

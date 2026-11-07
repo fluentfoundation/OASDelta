@@ -1,0 +1,10 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[response-body-became-nullable] в ./nullable/revision-body.yaml
+	в API POST /payments/{id}
+		у тела ответа стало обнуляемым
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

@@ -1,0 +1,10 @@
+2 cambios: 2 error, 0 warning, 0 info
+error	[response-property-became-optional] en ./checker/response_property_became_optional_revision.yaml
+	en API POST /api/v1.0/groups
+		la propiedad de respuesta `data/name` se volvió opcional para el estado `200`
+
+error	[response-required-property-removed] en ./checker/response_property_became_optional_revision.yaml
+	en API POST /api/v1.0/groups
+		removida la propiedad requerida `location` de la respuesta con estado `200`
+
+

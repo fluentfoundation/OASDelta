@@ -1,0 +1,3 @@
+::error title=request-body-max-length-set,file=./checker/request_body_max_length_set_revision.yaml,line=14,col=15::in API POST /pets the request's body maxLength was set to `15`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

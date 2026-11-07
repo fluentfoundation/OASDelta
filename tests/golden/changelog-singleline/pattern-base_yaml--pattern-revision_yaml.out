@@ -1,0 +1,8 @@
+3 changes: 2 error, 0 warning, 1 info
+error at ./pattern-revision.yaml, in API POST /api/v1.0/groups the `created` response's property pattern `^[a-z]+$` was removed for the status `200` [response-property-pattern-removed]. 
+
+error at ./pattern-revision.yaml, in API GET /api/v1.0/groups/{groupId} the `created` response's property pattern `^[a-z]+$` was removed for the status `200` [response-property-pattern-removed]. 
+
+info at ./pattern-revision.yaml, in API POST /api/v1.0/groups removed the pattern `^[a-z]+$` from the request property `created` [request-property-pattern-removed]. 
+
+

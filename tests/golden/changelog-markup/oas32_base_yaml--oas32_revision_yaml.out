@@ -1,0 +1,38 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### LOCK /gone
+- :warning: api path removed without deprecation
+
+
+### QUERY /gone
+- :warning: api path removed without deprecation
+
+
+### QUERY /new
+-  endpoint added
+
+
+### COPY /search
+-  endpoint deprecated
+
+
+### MOVE /search
+-  endpoint added
+
+
+### PURGE /search
+- :warning: api removed without deprecation
+
+
+### QUERY /search
+- :warning: the `term` request property `type` changed from `string` to `integer`
+-  removed the non-success response with the status `418`
+
+
+
+
+
+

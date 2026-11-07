@@ -1,0 +1,19 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /partner-api/test/another-method
+- :warning: removed the success response with the status `201`
+-  added the success response with the status `200`
+
+
+### GET /partner-api/test/some-method
+- :warning: removed the success response with the status `201`
+-  added the success response with the status `200`
+
+
+
+
+
+

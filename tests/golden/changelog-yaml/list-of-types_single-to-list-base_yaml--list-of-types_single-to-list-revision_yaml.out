@@ -1,0 +1,28 @@
+- id: response-property-list-of-types-widened
+  text: response property `id` list-of-types was widened by adding types `integer` to media type `application/json` of response `200`
+  level: 3
+  operation: GET
+  path: /test
+  section: paths
+  baseSource:
+    file: ./list-of-types/single-to-list-base.yaml
+    line: 17
+    column: 21
+  fingerprint: 7960d4d3027d
+- id: response-property-list-of-types-widened
+  text: response property `status` list-of-types was widened by adding types `number` to media type `application/json` of response `200`
+  level: 3
+  operation: GET
+  path: /test
+  section: paths
+  baseSource:
+    file: ./list-of-types/single-to-list-base.yaml
+    line: 19
+    column: 21
+  fingerprint: 1d1ec1f06a2b
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+

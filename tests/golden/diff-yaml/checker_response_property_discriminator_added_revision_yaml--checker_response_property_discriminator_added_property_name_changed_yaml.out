@@ -1,0 +1,208 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    oneOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 0
+                                                                component: Dog
+                                                              revision:
+                                                                index: 0
+                                                                component: Dog
+                                                              diff:
+                                                                properties:
+                                                                    added:
+                                                                        - petType2
+                                                                    deleted:
+                                                                        - petType
+                                                                    modified:
+                                                                        breed:
+                                                                            oneOf:
+                                                                                modified:
+                                                                                    - base:
+                                                                                        index: 0
+                                                                                        component: Breed1
+                                                                                      revision:
+                                                                                        index: 0
+                                                                                        component: Breed1
+                                                                                      diff:
+                                                                                        properties:
+                                                                                            added:
+                                                                                                - name2
+                                                                                            deleted:
+                                                                                                - name
+                                                                                    - base:
+                                                                                        index: 1
+                                                                                        component: Breed2
+                                                                                      revision:
+                                                                                        index: 1
+                                                                                        component: Breed2
+                                                                                      diff:
+                                                                                        properties:
+                                                                                            added:
+                                                                                                - name2
+                                                                                            deleted:
+                                                                                                - name
+                                                                            discriminatorDiff:
+                                                                                propertyName:
+                                                                                    from: name
+                                                                                    to: name2
+                                                            - base:
+                                                                index: 1
+                                                                component: Cat
+                                                              revision:
+                                                                index: 1
+                                                                component: Cat
+                                                              diff:
+                                                                properties:
+                                                                    added:
+                                                                        - petType2
+                                                                    deleted:
+                                                                        - petType
+                                                    discriminatorDiff:
+                                                        propertyName:
+                                                            from: petType
+                                                            to: petType2
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        oneOf:
+                                            modified:
+                                                - base:
+                                                    index: 0
+                                                    component: Dog
+                                                  revision:
+                                                    index: 0
+                                                    component: Dog
+                                                  diff:
+                                                    properties:
+                                                        added:
+                                                            - petType2
+                                                        deleted:
+                                                            - petType
+                                                        modified:
+                                                            breed:
+                                                                oneOf:
+                                                                    modified:
+                                                                        - base:
+                                                                            index: 0
+                                                                            component: Breed1
+                                                                          revision:
+                                                                            index: 0
+                                                                            component: Breed1
+                                                                          diff:
+                                                                            properties:
+                                                                                added:
+                                                                                    - name2
+                                                                                deleted:
+                                                                                    - name
+                                                                        - base:
+                                                                            index: 1
+                                                                            component: Breed2
+                                                                          revision:
+                                                                            index: 1
+                                                                            component: Breed2
+                                                                          diff:
+                                                                            properties:
+                                                                                added:
+                                                                                    - name2
+                                                                                deleted:
+                                                                                    - name
+                                                                discriminatorDiff:
+                                                                    propertyName:
+                                                                        from: name
+                                                                        to: name2
+                                                - base:
+                                                    index: 1
+                                                    component: Cat
+                                                  revision:
+                                                    index: 1
+                                                    component: Cat
+                                                  diff:
+                                                    properties:
+                                                        added:
+                                                            - petType2
+                                                        deleted:
+                                                            - petType
+                                        discriminatorDiff:
+                                            propertyName:
+                                                from: petType
+                                                to: petType2
+components:
+    schemas:
+        modified:
+            Breed1:
+                properties:
+                    added:
+                        - name2
+                    deleted:
+                        - name
+            Breed2:
+                properties:
+                    added:
+                        - name2
+                    deleted:
+                        - name
+            Cat:
+                properties:
+                    added:
+                        - petType2
+                    deleted:
+                        - petType
+            Dog:
+                properties:
+                    added:
+                        - petType2
+                    deleted:
+                        - petType
+                    modified:
+                        breed:
+                            oneOf:
+                                modified:
+                                    - base:
+                                        index: 0
+                                        component: Breed1
+                                      revision:
+                                        index: 0
+                                        component: Breed1
+                                      diff:
+                                        properties:
+                                            added:
+                                                - name2
+                                            deleted:
+                                                - name
+                                    - base:
+                                        index: 1
+                                        component: Breed2
+                                      revision:
+                                        index: 1
+                                        component: Breed2
+                                      diff:
+                                        properties:
+                                            added:
+                                                - name2
+                                            deleted:
+                                                - name
+                            discriminatorDiff:
+                                propertyName:
+                                    from: name
+                                    to: name2
+

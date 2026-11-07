@@ -1,0 +1,22 @@
+5 изменений: 4 error, 0 warning, 1 info
+error	[response-body-exclusive-min-decreased] в ./checker/response_min_decreased_revision.yaml
+	в API POST /products
+		у тела ответа exclusiveMinimum уменьшено с `5.00` до `2.00`
+
+error	[response-body-min-decreased] в ./checker/response_min_decreased_revision.yaml
+	в API POST /products
+		у тела ответа min уменьшено с `10.00` до `5.00`
+
+error	[response-property-exclusive-min-decreased] в ./checker/response_min_decreased_revision.yaml
+	в API POST /products
+		для поля ответа `price` exclusiveMinimum уменьшен с `50.00` до `25.00` для ответа со статусом `200`
+
+error	[response-property-min-decreased] в ./checker/response_min_decreased_revision.yaml
+	в API POST /products
+		для поля ответа `price` min уменьшен с `100.00` до `50.00` для ответа со статусом `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

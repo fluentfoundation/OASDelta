@@ -1,0 +1,4 @@
+::error title=request-body-became-required,file=./checker/webhook_operation_revision.yaml,line=17,col=9::in API POST webhook:orderCreated request body became required
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=new-optional-request-property,file=./checker/webhook_operation_revision.yaml,line=25,col=17::in API POST webhook:orderCreated added the new optional request property `amount`
+

@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[response-property-default-value-changed] en ./checker/response_property_default_value_changed_revision.yaml
+	en API POST /api/v1.0/groups
+		el valor por defecto de la propiedad de respuesta `created` fue cambiado de `2020-01-01T00:00:00Z` a `2020-02-01T00:00:00Z` para el estado `200`
+
+info	[response-property-default-value-changed] en ./checker/response_property_default_value_changed_revision.yaml
+	en API POST /api/v1.0/groups
+		el valor por defecto de la propiedad de respuesta `enabled` fue cambiado de `false` a `true` para el estado `200`
+
+

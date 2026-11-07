@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[api-tag-removed] в ./run_test/breaking_changes_include_checks_base.yaml
+	в API POST /api/v1.0/groups
+		Тег API `Group` удален
+
+info	[response-non-success-status-removed] в ./run_test/breaking_changes_include_checks_revision.yaml
+	в API POST /api/v1.0/groups
+		удален неуспешный (не 2xx) статус ответа `409`
+
+

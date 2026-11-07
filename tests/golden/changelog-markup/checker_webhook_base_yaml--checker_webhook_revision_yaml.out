@@ -1,0 +1,15 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+
+## Components
+- :warning: webhook `orderDeleted` removed
+-  webhook `orderUpdated` added
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

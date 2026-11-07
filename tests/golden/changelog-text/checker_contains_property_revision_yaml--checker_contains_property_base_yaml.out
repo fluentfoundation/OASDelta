@@ -1,0 +1,30 @@
+7 changes: 3 error, 0 warning, 4 info
+error	[response-property-contains-removed] at ./checker/contains_property_base.yaml
+	in API POST /products
+		removed 'contains' constraint from the `tags` response property for the status `200`
+
+error	[response-property-max-contains-unset] at ./checker/contains_property_base.yaml
+	in API POST /products
+		the `tags` response property's maxContains was unset from `3` for the response status `200`
+
+error	[response-property-min-contains-unset] at ./checker/contains_property_base.yaml
+	in API POST /products
+		the `tags` response property's minContains was unset from `1` for the response status `200`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[request-property-contains-removed] at ./checker/contains_property_base.yaml
+	in API POST /products
+		removed 'contains' constraint from the request property `tags`
+
+info	[request-property-max-contains-unset] at ./checker/contains_property_base.yaml
+	in API POST /products
+		the `tags` request property's maxContains was unset from `3`
+
+info	[request-property-min-contains-unset] at ./checker/contains_property_base.yaml
+	in API POST /products
+		the `tags` request property's minContains was unset from `1`
+
+

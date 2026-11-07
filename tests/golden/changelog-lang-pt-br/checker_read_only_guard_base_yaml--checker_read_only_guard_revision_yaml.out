@@ -1,0 +1,33 @@
+7 alterações: 2 error, 0 warning, 5 info
+error	[request-property-pattern-added] em ./checker/read_only_guard_revision.yaml
+	em API POST /items
+		adicionado o padrão `^x` à propriedade de requisição `name`
+		Esta é uma alteração crítica porque adicionar uma restrição de padrão a um parâmetro anteriormente irrestrito rejeitará valores que eram aceitos anteriormente, quebrando clientes existentes
+
+error	[request-property-type-changed] em ./checker/read_only_guard_revision.yaml
+	em API POST /items
+		o `secret` da propriedade de requisição `type` foi alterado de `string` para `boolean`
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+info	[request-property-pattern-added] em ./checker/read_only_guard_revision.yaml
+	em API POST /items
+		adicionado o padrão `^x` à propriedade de requisição `id`
+		A propriedade é somente leitura, portanto nunca aparece em requisições e esta mudança não pode invalidar nenhuma.
+
+info	[response-property-pattern-added] em ./checker/read_only_guard_revision.yaml
+	em API POST /items
+		o padrão `id` foi adicionado à propriedade de resposta `^x` para o status `200`
+
+info	[response-property-pattern-added] em ./checker/read_only_guard_revision.yaml
+	em API POST /items
+		o padrão `name` foi adicionado à propriedade de resposta `^x` para o status `200`
+
+info	[response-property-type-changed] em ./checker/read_only_guard_revision.yaml
+	em API POST /items
+		o `secret` da propriedade de resposta `type` foi alterado de `string` para `boolean` para o status `200`
+		A propriedade é somente escrita, portanto nunca aparece em respostas e esta mudança não pode invalidar nenhuma.
+
+

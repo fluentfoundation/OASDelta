@@ -1,0 +1,27 @@
+- id: response-property-became-required
+  text: the response property `data/name` became required for the status `200`
+  level: 1
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups
+  section: paths
+  revisionSource:
+    file: ./checker/response_property_became_optional_base.yaml
+    line: 45
+    column: 15
+  fingerprint: 8c8cd6bd0f08
+- id: response-required-property-added
+  text: added the required property `location` to the response with the `200` status
+  level: 1
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups
+  section: paths
+  revisionSource:
+    file: ./checker/response_property_became_optional_base.yaml
+    line: 46
+    column: 9
+    endLine: 47
+    endColumn: 23
+  fingerprint: 1d925184b091
+

@@ -1,0 +1,4 @@
+::error title=request-property-became-not-nullable,file=./checker/request_property_became_nullable_31_base.yaml::in API POST /products the request property `name` became not nullable
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-property-became-not-nullable,file=./checker/request_property_became_nullable_31_base.yaml::in API POST /products the response property `status` became not nullable for the status `200`
+

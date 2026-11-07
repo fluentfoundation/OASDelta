@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the `address` request property dependentRequired for `street` was updated: `zip added`
+- :warning: the `address` response property dependentRequired for `street` was updated for the status `200`: `zip added`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

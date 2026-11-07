@@ -1,0 +1,4 @@
+::error title=api-removed-without-deprecation,file=./checker/clone_diff_base.yaml::in API PATCH /pets api removed without deprecation
+::error title=api-path-removed-without-deprecation,file=./checker/clone_diff_base.yaml::in API GET /stable-gone api path removed without deprecation
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

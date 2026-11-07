@@ -1,0 +1,7 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[api-security-scope-removed] en ./security-requirements/spec_2.yaml
+	en API POST /subscribe
+		el alcance de seguridad `read:pets` fue removido del esquema de seguridad del endpoint `petstore_auth`
+		Este endpoint hereda los requisitos de seguridad de nivel superior de la API.
+
+

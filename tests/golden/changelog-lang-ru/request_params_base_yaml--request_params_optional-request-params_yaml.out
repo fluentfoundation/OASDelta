@@ -1,0 +1,14 @@
+3 изменений: 0 error, 0 warning, 3 info
+info	[new-optional-request-parameter] в ./request_params/optional-request-params.yaml
+	в API GET /api/test1
+		добавлен новый необязательный `header` параметр зароса `x-newrequestheaderparam`
+
+info	[new-optional-request-parameter] в ./request_params/optional-request-params.yaml
+	в API GET /api/test2
+		добавлен новый необязательный `query` параметр зароса `newQueryParam`
+
+info	[new-optional-request-parameter] в ./request_params/optional-request-params.yaml
+	в API GET /api/test3
+		добавлен новый необязательный `cookie` параметр зароса `csrf-token`
+
+

@@ -1,0 +1,10 @@
+2 alterações: 1 error, 0 warning, 1 info
+error	[response-property-schema-became-not-false] em ./checker/items_became_false_base.yaml
+	em API POST /items
+		o esquema da propriedade de resposta `tags/items` não é mais `false` para o status `200` e volta a permitir valores
+
+info	[request-property-schema-became-not-false] em ./checker/items_became_false_base.yaml
+	em API POST /items
+		o esquema da propriedade de requisição `items` não é mais `false` e volta a aceitar valores
+
+

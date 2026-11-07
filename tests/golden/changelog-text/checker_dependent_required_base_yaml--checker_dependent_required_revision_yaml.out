@@ -1,0 +1,14 @@
+3 changes: 1 error, 0 warning, 2 info
+error	[request-body-dependent-required-added] at ./checker/dependent_required_revision.yaml
+	in API POST /products
+		the request body dependentRequired was added: when `name` is present, `email` are required
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[response-body-dependent-required-added] at ./checker/dependent_required_revision.yaml
+	in API POST /products
+		the response body dependentRequired was added for the status `200`: when `name` is present, `email` are required
+
+

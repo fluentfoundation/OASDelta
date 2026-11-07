@@ -1,0 +1,18 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+-  added the pattern `^[a-z]+$` to the request property `created`
+-  the `created` response's property pattern `^[a-z]+$` was added for the status `200`
+
+
+### GET /api/v1.0/groups/{groupId}
+-  the `created` response's property pattern `^[a-z]+$` was added for the status `200`
+
+
+
+
+
+

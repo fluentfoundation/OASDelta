@@ -1,0 +1,4 @@
+::error title=response-body-dependent-schema-removed,file=./checker/dependent_schemas_base.yaml::in API POST /products removed the dependent schema `name` from the response body for the status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-body-dependent-schema-removed,file=./checker/dependent_schemas_base.yaml::in API POST /products removed the dependent schema `name` from the request body
+

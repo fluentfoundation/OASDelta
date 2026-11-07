@@ -1,0 +1,15 @@
+- id: request-body-removed
+  text: removed the request body
+  level: 3
+  operation: POST
+  operationId: testOp
+  path: /api/v1.0/test
+  section: paths
+  baseSource:
+    file: ./checker/request_body_removed_base.yaml
+    line: 9
+    column: 7
+    endLine: 17
+    endColumn: 31
+  fingerprint: fefdb8d3e4e6
+

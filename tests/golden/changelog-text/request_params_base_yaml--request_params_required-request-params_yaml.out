@@ -1,0 +1,46 @@
+11 changes: 4 error, 0 warning, 7 info
+error	[new-required-request-default-parameter-to-existing-path] at ./request_params/required-request-params.yaml
+	in API GET /api/test1
+		added the new required `query` request parameter `version` to all path's operations
+
+error	[new-required-request-default-parameter-to-existing-path] at ./request_params/required-request-params.yaml
+	in API POST /api/test1
+		added the new required `query` request parameter `version` to all path's operations
+
+error	[new-required-request-default-parameter-to-existing-path] at ./request_params/required-request-params.yaml
+	in API GET /api/test2
+		added the new required `query` request parameter `id` to all path's operations
+
+error	[new-required-request-default-parameter-to-existing-path] at ./request_params/required-request-params.yaml
+	in API GET /api/test3
+		added the new required `header` request parameter `if-none-match` to all path's operations
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[new-optional-request-default-parameter-to-existing-path] at ./request_params/required-request-params.yaml
+	in API GET /api/test1
+		added the new optional `query` request parameter `optionalQueryParam` to all path's operations
+
+info	[new-optional-request-parameter] at ./request_params/required-request-params.yaml
+	in API GET /api/test1
+		added the new optional `header` request parameter `x-newrequestheaderparam`
+
+info	[new-optional-request-default-parameter-to-existing-path] at ./request_params/required-request-params.yaml
+	in API POST /api/test1
+		added the new optional `query` request parameter `optionalQueryParam` to all path's operations
+
+info	[new-optional-request-default-parameter-to-existing-path] at ./request_params/required-request-params.yaml
+	in API GET /api/test2
+		added the new optional `header` request parameter `optionalheaderparam` to all path's operations
+
+info	[new-optional-request-parameter] at ./request_params/required-request-params.yaml
+	in API GET /api/test2
+		added the new optional `query` request parameter `newQueryParam`
+
+info	[new-optional-request-parameter] at ./request_params/required-request-params.yaml
+	in API GET /api/test3
+		added the new optional `cookie` request parameter `csrf-token`
+
+

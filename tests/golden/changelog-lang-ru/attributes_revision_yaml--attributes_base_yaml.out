@@ -1,0 +1,18 @@
+4 изменений: 2 error, 0 warning, 2 info
+error	[response-success-status-removed] в ./attributes/base.yaml
+	в API GET /partner-api/test/another-method
+		удален успешный (2xx) статус ответа `201`
+
+error	[response-success-status-removed] в ./attributes/base.yaml
+	в API GET /partner-api/test/some-method
+		удален успешный (2xx) статус ответа `201`
+
+info	[response-success-status-added] в ./attributes/base.yaml
+	в API GET /partner-api/test/another-method
+		добавлен ответ об успехе со статусом `200`
+
+info	[response-success-status-added] в ./attributes/base.yaml
+	в API GET /partner-api/test/some-method
+		добавлен ответ об успехе со статусом `200`
+
+

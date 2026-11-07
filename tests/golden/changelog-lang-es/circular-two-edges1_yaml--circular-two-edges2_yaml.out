@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-optional-property-added] en ./circular-two-edges2.yaml
+	en API GET /tokens
+		agregada la propiedad opcional `index` a la respuesta con estado `200`
+
+

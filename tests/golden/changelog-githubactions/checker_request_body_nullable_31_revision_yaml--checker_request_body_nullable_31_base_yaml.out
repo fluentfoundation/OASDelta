@@ -1,0 +1,4 @@
+::error title=request-body-became-not-nullable,file=./checker/request_body_nullable_31_base.yaml::in API POST /products the request's body became not nullable
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-body-became-not-nullable,file=./checker/request_body_nullable_31_base.yaml::in API POST /products the response's body became not nullable
+

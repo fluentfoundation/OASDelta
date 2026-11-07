@@ -1,0 +1,19 @@
+4 изменений: 2 error, 1 warning, 1 info
+error	[response-property-became-optional] в ./x-of/revision.json
+	в API GET /api/anyOf/path
+		поле ответа `anyOf[#/components/schemas/ProblemSchema]/changedProperty` стало необязательным для ответа со статусом `200`
+
+error	[response-property-became-optional] в ./x-of/revision.json
+	в API GET /api/oneOf/path
+		поле ответа `oneOf[#/components/schemas/ProblemSchema]/changedProperty` стало необязательным для ответа со статусом `200`
+
+warning	[response-property-became-optional] в ./x-of/revision.json
+	в API GET /api/allOf/path
+		поле ответа `allOf[#/components/schemas/ProblemSchema]/changedProperty` стало необязательным для ответа со статусом `200`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `0.0.1`
+
+

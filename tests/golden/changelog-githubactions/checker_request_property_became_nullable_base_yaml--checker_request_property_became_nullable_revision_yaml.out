@@ -1,0 +1,2 @@
+::notice title=request-property-became-nullable,file=./checker/request_property_became_nullable_revision.yaml,line=17,col=19::in API POST /products the request property `name` became nullable
+

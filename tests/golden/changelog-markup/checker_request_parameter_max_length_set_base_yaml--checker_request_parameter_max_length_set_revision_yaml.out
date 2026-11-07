@@ -1,0 +1,13 @@
+# API Changelog 1.0 vs. 2.0
+
+
+## API Changes
+
+### POST /test
+- :warning: for the `query` request parameter `category`, the maxLength was set to `15`
+
+
+
+
+
+

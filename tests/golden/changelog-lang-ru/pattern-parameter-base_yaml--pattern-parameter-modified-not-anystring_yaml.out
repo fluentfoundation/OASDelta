@@ -1,0 +1,7 @@
+1 изменений: 0 error, 1 warning, 0 info
+warning	[request-parameter-pattern-changed] в ./pattern-parameter-modified-not-anystring.yaml
+	в API GET /api/v1.0/groups/{groupId}
+		изменён pattern у `path` параметра запроса `groupId` со значения `[0-9a-f]+` на значение `[0-9]+`
+		Это предупреждение, потому что сложно автоматически проанализировать, является ли новый шаблон надмножеством предыдущего шаблона (например, изменен с '[0-9]+' на '[0-9]*').
+
+

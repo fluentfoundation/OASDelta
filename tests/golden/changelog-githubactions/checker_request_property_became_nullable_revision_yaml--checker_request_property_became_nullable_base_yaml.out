@@ -1,0 +1,3 @@
+::error title=request-property-became-not-nullable,file=./checker/request_property_became_nullable_base.yaml::in API POST /products the request property `name` became not nullable
+::notice title=api-version-decreased::in API   a breaking change was detected but the version decreased from `2.0.0` to `1.0.0`
+

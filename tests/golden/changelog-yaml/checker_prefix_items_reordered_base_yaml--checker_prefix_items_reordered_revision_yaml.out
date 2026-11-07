@@ -1,0 +1,33 @@
+- id: request-property-type-changed
+  text: 'the `/prefixItems[subschema #1]/` request property `type` changed from `string` to `integer`'
+  level: 3
+  operation: POST
+  operationId: createItem
+  path: /items
+  section: paths
+  baseSource:
+    file: ./checker/prefix_items_reordered_base.yaml
+    line: 15
+    column: 19
+  revisionSource:
+    file: ./checker/prefix_items_reordered_revision.yaml
+    line: 15
+    column: 19
+  fingerprint: f65985c61e66
+- id: request-property-type-changed
+  text: 'the `/prefixItems[subschema #2]/` request property `type` changed from `integer` to `string`'
+  level: 3
+  operation: POST
+  operationId: createItem
+  path: /items
+  section: paths
+  baseSource:
+    file: ./checker/prefix_items_reordered_base.yaml
+    line: 16
+    column: 19
+  revisionSource:
+    file: ./checker/prefix_items_reordered_revision.yaml
+    line: 16
+    column: 19
+  fingerprint: eed3d25e5627
+

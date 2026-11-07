@@ -1,0 +1,9 @@
+::warning title=request-property-removed,file=./checker/sub_schema_added_property_base.yaml::in API POST /products removed the request property `data/contains/newField`
+::warning title=request-property-removed,file=./checker/sub_schema_added_property_base.yaml::in API POST /products removed the request property `data/contentSchema/newField`
+::warning title=request-property-removed,file=./checker/sub_schema_added_property_base.yaml::in API POST /products removed the request property `data/dependentSchemas[name]/newField`
+::warning title=request-property-removed,file=./checker/sub_schema_added_property_base.yaml::in API POST /products removed the request property `data/else/newField`
+::warning title=request-property-removed,file=./checker/sub_schema_added_property_base.yaml::in API POST /products removed the request property `data/patternProperties[^x-]/newField`
+::warning title=request-property-removed,file=./checker/sub_schema_added_property_base.yaml::in API POST /products removed the request property `data/prefixItems[subschema #1]/newField`
+::warning title=request-property-removed,file=./checker/sub_schema_added_property_base.yaml::in API POST /products removed the request property `data/then/newField`
+::warning title=request-property-removed,file=./checker/sub_schema_added_property_base.yaml::in API POST /products removed the request property `data/unevaluatedProperties/newField`
+

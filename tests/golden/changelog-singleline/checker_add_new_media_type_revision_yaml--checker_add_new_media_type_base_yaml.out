@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./checker/add_new_media_type_base.yaml, in API POST /api/v1.0/groups removed the media type `application/xml` for the response with the status `200` [response-media-type-removed]. 
+
+

@@ -1,0 +1,1 @@
+[{"id":"request-body-contains-added","text":"added 'contains' constraint to the request body","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","revisionSource":{"file":"./checker/contains_added_revision.yaml","line":16,"column":15},"fingerprint":"a8986818f134"}]

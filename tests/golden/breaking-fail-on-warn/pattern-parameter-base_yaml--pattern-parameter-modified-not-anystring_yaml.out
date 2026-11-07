@@ -1,0 +1,7 @@
+1 changes: 0 error, 1 warning, 0 info
+warning	[request-parameter-pattern-changed] at ./pattern-parameter-modified-not-anystring.yaml
+	in API GET /api/v1.0/groups/{groupId}
+		changed the pattern of the `path` request parameter `groupId` from `[0-9a-f]+` to `[0-9]+`
+		This is a warning because adding or changing a pattern may restrict the accepted values and break existing clients. For pattern changes, it is difficult to automatically analyze if the new pattern is a superset of the previous pattern (e.g. changed from '[0-9]+' to '[0-9]*')
+
+

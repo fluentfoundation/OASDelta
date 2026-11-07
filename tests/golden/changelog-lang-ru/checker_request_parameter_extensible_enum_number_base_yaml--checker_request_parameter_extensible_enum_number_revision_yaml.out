@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[request-parameter-x-extensible-enum-value-removed] в ./checker/request_parameter_extensible_enum_number_revision.yaml
+	в API POST /api/v1.0/groups
+		удалено из x-extensible-enum значение `2` у `path` параметра запроса `groupId`
+
+

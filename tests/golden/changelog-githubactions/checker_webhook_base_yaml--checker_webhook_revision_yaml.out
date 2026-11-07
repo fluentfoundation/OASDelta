@@ -1,0 +1,4 @@
+::error title=webhook-removed::in API   webhook `orderDeleted` removed
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=webhook-added,file=./checker/webhook_revision.yaml,line=27,col=3::in API   webhook `orderUpdated` added
+

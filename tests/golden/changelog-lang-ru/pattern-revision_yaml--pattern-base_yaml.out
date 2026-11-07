@@ -1,0 +1,15 @@
+3 изменений: 0 error, 0 warning, 3 info
+info	[request-property-pattern-added] в ./pattern-base.yaml
+	в API POST /api/v1.0/groups
+		добавлен pattern `^[a-z]+$` у поля запроса `created`
+		Свойство доступно только для чтения, поэтому оно не встречается в запросах, и это изменение не может сделать запрос недействительным.
+
+info	[response-property-pattern-added] в ./pattern-base.yaml
+	в API POST /api/v1.0/groups
+		у свойства `created` для ответа со статусом `^[a-z]+$` добавлен паттерн `200`
+
+info	[response-property-pattern-added] в ./pattern-base.yaml
+	в API GET /api/v1.0/groups/{groupId}
+		у свойства `created` для ответа со статусом `^[a-z]+$` добавлен паттерн `200`
+
+

@@ -1,0 +1,2 @@
+::warning title=request-parameter-pattern-changed,file=./pattern-parameter-modified-not-anystring.yaml,line=47,col=9::in API GET /api/v1.0/groups/{groupId} changed the pattern of the `path` request parameter `groupId` from `[0-9a-f]+` to `[0-9]+`
+

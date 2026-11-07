@@ -1,0 +1,94 @@
+- id: new-required-request-property
+  text: added the new required request property `colors/blue`
+  level: 3
+  operation: POST
+  operationId: addDog
+  path: /dogs
+  section: paths
+  revisionSource:
+    file: ./checker/request_property_type_changed_revision_array_to_object.yaml
+    line: 53
+    column: 21
+    endLine: 54
+    endColumn: 36
+  fingerprint: 0a6e92de55ac
+- id: new-required-request-property
+  text: added the new required request property `colors/green`
+  level: 3
+  operation: POST
+  operationId: addDog
+  path: /dogs
+  section: paths
+  revisionSource:
+    file: ./checker/request_property_type_changed_revision_array_to_object.yaml
+    line: 51
+    column: 21
+    endLine: 52
+    endColumn: 36
+  fingerprint: "604745140755"
+- id: new-required-request-property
+  text: added the new required request property `colors/red`
+  level: 3
+  operation: POST
+  operationId: addDog
+  path: /dogs
+  section: paths
+  revisionSource:
+    file: ./checker/request_property_type_changed_revision_array_to_object.yaml
+    line: 49
+    column: 21
+    endLine: 50
+    endColumn: 36
+  fingerprint: 95e448d6eff5
+- id: request-property-type-changed
+  text: the `colors` request property `type` changed from `array<integer>` to `object`
+  level: 3
+  operation: POST
+  operationId: addDog
+  path: /dogs
+  section: paths
+  baseSource:
+    file: ./checker/request_property_type_changed_base_array_to_object.yaml
+    line: 42
+    column: 19
+  revisionSource:
+    file: ./checker/request_property_type_changed_revision_array_to_object.yaml
+    line: 47
+    column: 19
+  fingerprint: 521d951d052c
+- id: new-required-request-property
+  text: added the new required request property `data`
+  level: 3
+  operation: POST
+  operationId: addPet
+  path: /pets
+  section: paths
+  revisionSource:
+    file: ./checker/request_property_type_changed_revision_array_to_object.yaml
+    line: 19
+    column: 17
+    endLine: 31
+    endColumn: 29
+  fingerprint: 723dabe03bd0
+- id: request-body-type-changed
+  text: the request's body `type` changed from `array<object>` to `object`
+  level: 3
+  operation: POST
+  operationId: addPet
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./checker/request_property_type_changed_base_array_to_object.yaml
+    line: 15
+    column: 15
+  revisionSource:
+    file: ./checker/request_property_type_changed_revision_array_to_object.yaml
+    line: 15
+    column: 15
+  fingerprint: 9872e326ef85
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+

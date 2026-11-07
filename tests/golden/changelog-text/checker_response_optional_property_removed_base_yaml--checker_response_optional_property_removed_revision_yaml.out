@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-optional-property-removed] at ./checker/response_optional_property_removed_revision.yaml
+	in API POST /api/v1.0/groups
+		removed the optional property `data/id` from the response with the `200` status
+
+

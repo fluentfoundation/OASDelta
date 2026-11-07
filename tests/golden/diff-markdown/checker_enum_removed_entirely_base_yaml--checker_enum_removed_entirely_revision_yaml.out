@@ -1,0 +1,53 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 3
+-------------------------
+PUT /mode
+- Request body changed
+  - Content changed
+    - Modified media type: text/plain
+      - Schema changed
+        - Deleted enum values: [fast slow]
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Deleted enum values: [fast slow]
+
+GET /pets
+- Modified query param: filter
+  - Schema changed
+    - Properties changed
+      - Modified property: origin
+        - Deleted enum values: [shelter breeder]
+- Modified query param: status
+  - Schema changed
+    - Deleted enum values: [available sold]
+
+POST /pets
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Properties changed
+          - Modified property: kind
+            - Deleted enum values: [cat dog]
+          - Modified property: status
+            - Deleted enum values: [available sold]
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: secret
+              - Deleted enum values: [a b]
+            - Modified property: status
+              - Deleted enum values: [available sold]
+
+

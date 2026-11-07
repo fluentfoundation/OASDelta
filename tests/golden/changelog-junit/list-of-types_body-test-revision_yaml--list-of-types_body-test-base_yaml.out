@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-body-list-of-types-widened" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">request body list-of-types was widened by adding types `string and integer` to media type `application/json`</failure>
+    </testcase>
+    <testcase name="response-body-list-of-types-narrowed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">response body list-of-types was narrowed by removing types `integer` from media type `application/json` of response `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,20 @@
+### New Endpoints: 2
+--------------------
+GET /prefix/api/{domain}/{project}/badges/security-score  
+POST /prefix/api/{domain}/{project}/badges/security-score  
+
+### Deleted Endpoints: 4
+------------------------
+GET /api/{domain}/{project}/badges/security-score  
+GET /api/{domain}/{project}/install-command  
+POST /register  
+POST /subscribe  
+
+### Modified Endpoints: None
+----------------------------
+Other Changes
+-------------
+Extensions changed
+- Deleted extension: x-extension-test2
+
+

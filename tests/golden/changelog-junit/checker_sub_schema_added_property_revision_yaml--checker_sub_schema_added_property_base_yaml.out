@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="8" errors="0" failures="8" name="OASDiff">
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `data/contains/newField`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `data/contentSchema/newField`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `data/dependentSchemas[name]/newField`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `data/else/newField`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `data/patternProperties[^x-]/newField`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `data/prefixItems[subschema #1]/newField`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `data/then/newField`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `data/unevaluatedProperties/newField`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

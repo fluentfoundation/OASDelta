@@ -1,0 +1,18 @@
+4 изменений: 1 error, 0 warning, 3 info
+error	[request-header-property-became-enum] в ./enums/request-parameter-property-enum.yaml
+	в API GET /books/{bookId}
+		свойство `bookid` заголовка запроса `name` было ограничено списком значений перечисления
+
+info	[request-parameter-property-enum-value-added] в ./enums/request-parameter-property-enum.yaml
+	в API GET /books/{bookId}
+		добавлено значение enum `VALUE_1` в свойство `name` `header` параметра запроса `bookid`
+
+info	[request-parameter-property-enum-value-added] в ./enums/request-parameter-property-enum.yaml
+	в API GET /books/{bookId}
+		добавлено значение enum `VALUE_2` в свойство `name` `header` параметра запроса `bookid`
+
+info	[request-parameter-property-enum-value-added] в ./enums/request-parameter-property-enum.yaml
+	в API GET /books/{bookId}
+		добавлено значение enum `VALUE_3` в свойство `name` `header` параметра запроса `bookid`
+
+

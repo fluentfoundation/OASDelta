@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+- :warning: removed the media type `application/json` from the request body
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+3 cambios: 0 error, 0 warning, 3 info
+info	[new-optional-request-parameter] en ./request_params/optional-request-params.yaml
+	en API GET /api/test1
+		agregado el nuevo parámetro `header` de solicitud opcional `x-newrequestheaderparam`
+
+info	[new-optional-request-parameter] en ./request_params/optional-request-params.yaml
+	en API GET /api/test2
+		agregado el nuevo parámetro `query` de solicitud opcional `newQueryParam`
+
+info	[new-optional-request-parameter] en ./request_params/optional-request-params.yaml
+	en API GET /api/test3
+		agregado el nuevo parámetro `cookie` de solicitud opcional `csrf-token`
+
+

@@ -84,7 +84,7 @@ public sealed class YamlEmitter
                 var keys = new List<string>(d.Count);
                 foreach (var k in d.Keys) keys.Add((string)k);
                 // yaml.v3 orders map keys "naturally" (digit runs compare numerically); encoding/json uses byte order
-                keys.Sort(yaml ? YamlKeyComparer.Instance : StringComparer.Ordinal);
+                keys.Sort(yaml ? YamlKeyComparer.Instance : Utf8OrdinalComparer.Instance);
                 var r = new OMap(keys.Count);
                 foreach (var k in keys) r.Add(k, Normalize(d[k], yaml));
                 return r;
@@ -103,12 +103,23 @@ public sealed class YamlEmitter
     {
         switch (v)
         {
-            case OMap m when m.Count > 0: EmitMapping(m, 0, false); _sb.Append('\n'); break;
-            case List<object?> l when l.Count > 0: EmitSequence(l, 0, false); _sb.Append('\n'); break;
+            case OMap m when m.Count > 0: EmitMapping(m, 0, false); Break(); break;
+            case List<object?> l when l.Count > 0: EmitSequence(l, 0, false); Break(); break;
             case OMap: _sb.Append("{}\n"); break;
             case List<object?>: _sb.Append("[]\n"); break;
-            default: EmitScalar(v, 0, false, false); _sb.Append('\n'); break;
+            default: EmitScalar(v, 0, false, false); Break(); break;
         }
+    }
+
+    // Set when a literal block ended with a line break other than \n (LS or PS), which go-yaml writes as is and treats
+    // as the end of the line: its next yaml_emitter_write_indent then adds no line break of its own.
+    private bool _lineEnded;
+
+    /// <summary>Starts a new line, unless the last literal block already ended one.</summary>
+    private void Break()
+    {
+        if (_lineEnded) _lineEnded = false;
+        else _sb.Append('\n');
     }
 
     private static int Inc(int indent) => Best * ((indent + Best) / Best);
@@ -122,13 +133,50 @@ public sealed class YamlEmitter
             Spill();
             if (!(first && inline))
             {
-                if (!AtStart) _sb.Append('\n');
+                if (!AtStart) Break();
                 _sb.Append(' ', indent);
             }
             first = false;
+            if (!IsSimpleKey(k)) { EmitExplicitKey(k, v, indent); continue; }
             EmitScalar(k, indent, true, false);
             _sb.Append(':');
             EmitValue(v, indent, false);
+        }
+    }
+
+    /// <summary>go-yaml v3.0.5 yaml_emitter_check_simple_key: a scalar key is written as a simple key ("k: v") only
+    /// when it has no line break (\r, \n, NEL, LS, PS) and is at most 128 bytes of UTF-8; otherwise the emitter uses an
+    /// explicit "? k" / ": v" pair.</summary>
+    private static bool IsSimpleKey(string k)
+    {
+        foreach (var ch in k) if (IsBreak(ch)) return false;
+        return k.Length <= 128 / 3 || Encoding.UTF8.GetByteCount(k) <= 128;
+    }
+
+    /// <summary>An explicit key in a block mapping whose keys start at column <paramref name="indent"/> (the "?" is
+    /// already positioned). go-yaml yaml_emitter_emit_block_mapping_key / _value with simple = false: the key and the
+    /// value are nodes at the next indentation level, and a block collection value starts on the ":" line, padded to
+    /// that level (the indicator counts as indentation).</summary>
+    private void EmitExplicitKey(string k, object? v, int indent)
+    {
+        int child = Inc(indent);
+        _sb.Append("? ");
+        EmitScalar(k, child, false, true);
+        Break();
+        _sb.Append(' ', indent).Append(':');
+        switch (v)
+        {
+            case OMap m when m.Count > 0:
+                _sb.Append(' ', child - indent - 1);
+                EmitMapping(m, child, true);
+                break;
+            case List<object?> l when l.Count > 0:
+                _sb.Append(' ', child - indent - 1);
+                EmitSequence(l, child, true);
+                break;
+            default:
+                EmitValue(v, indent, false);
+                break;
         }
     }
 
@@ -136,11 +184,13 @@ public sealed class YamlEmitter
     {
         foreach (var (k, v) in cm)
         {
-            _sb.Append('\n').Append(' ', indent).Append('?');
+            Break();
+            _sb.Append(' ', indent).Append('?');
             int ci = Inc(indent);
             _sb.Append(' ', ci - indent - 1);
             if (k is OMap km && km.Count > 0) EmitMapping(km, ci, true); else EmitScalar(k, ci, true, false);
-            _sb.Append('\n').Append(' ', indent).Append(':');
+            Break();
+            _sb.Append(' ', indent).Append(':');
             _sb.Append(' ', ci - indent - 1);
             if (v is OMap vm && vm.Count > 0) EmitMapping(vm, ci, true); else EmitScalar(v, ci, false, true);
         }
@@ -179,7 +229,7 @@ public sealed class YamlEmitter
             Spill();
             if (!(first && inline))
             {
-                if (!AtStart) _sb.Append('\n');
+                if (!AtStart) Break();
                 _sb.Append(' ', indent);
             }
             first = false;
@@ -204,11 +254,75 @@ public sealed class YamlEmitter
         }
     }
 
-    private static readonly System.Text.RegularExpressions.Regex TimestampRe = new(
-        @"^[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}(?:(?:[Tt][0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}(?:\.[0-9]{1,9})?(?:Z|[+-][0-9]{2}:[0-9]{2}))|(?: [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}(?:\.[0-9]{1,9})?))?$",
-        System.Text.RegularExpressions.RegexOptions.CultureInvariant);
+    /// <summary>go-yaml v3.0.5 resolve.go parseTimestamp: exactly four leading digits and a '-', then Go's time.Parse
+    /// with one of "2006-1-2T15:4:5.999999999Z07:00", the same with a lower-case 't', "2006-1-2 15:4:5.999999999" or
+    /// "2006-1-2". time.Parse rules that matter here: month, day, hour, minute and second take one or two digits;
+    /// hour &lt; 24, minute and second &lt; 60, month 1-12 and the day must exist in that month (leap years included);
+    /// the fraction accepts '.' or ',' and any number of digits, and may be left out; the zone is "Z" or +hh:mm or
+    /// -hh:mm with hh &lt;= 24 and mm &lt;= 60; nothing may follow.</summary>
+    private static bool LooksLikeTimestamp(string s)
+    {
+        if (s.Length < 5) return false;
+        for (int i = 0; i < 4; i++) if (!char.IsAsciiDigit(s[i])) return false;
+        if (s[4] != '-') return false;
+        return ParseGoTime(s, 'T') || ParseGoTime(s, 't') || ParseGoTime(s, ' ') || ParseGoTime(s, '\0');
+    }
 
-    private static bool LooksLikeTimestamp(string s) => s.Length >= 8 && char.IsAsciiDigit(s[0]) && TimestampRe.IsMatch(s);
+    // sep: 'T'/'t' for the RFC 3339 layouts, ' ' for the zoneless one, '\0' for the date-only one
+    private static bool ParseGoTime(string s, char sep)
+    {
+        int year = (s[0] - '0') * 1000 + (s[1] - '0') * 100 + (s[2] - '0') * 10 + (s[3] - '0');
+        int p = 4;
+        if (!Lit(s, ref p, '-') || !GetNum(s, ref p, out int month) || month is < 1 or > 12) return false;
+        if (!Lit(s, ref p, '-') || !GetNum(s, ref p, out int day)) return false;
+        if (sep != '\0')
+        {
+            if (!Lit(s, ref p, sep)) return false;
+            if (!GetNum(s, ref p, out int hour) || hour >= 24) return false;
+            if (!Lit(s, ref p, ':') || !GetNum(s, ref p, out int min) || min >= 60) return false;
+            if (!Lit(s, ref p, ':') || !GetNum(s, ref p, out int sec) || sec >= 60) return false;
+            // stdFracSecond9: optional, '.' or ',' followed by at least one digit, then every following digit
+            if (p + 1 < s.Length && s[p] is '.' or ',' && char.IsAsciiDigit(s[p + 1]))
+            {
+                p += 2;
+                while (p < s.Length && char.IsAsciiDigit(s[p])) p++;
+            }
+            if (sep != ' ')
+            {
+                // stdISO8601ColonTZ
+                if (p < s.Length && s[p] == 'Z') p++;
+                else
+                {
+                    if (s.Length - p < 6 || s[p + 3] != ':' || s[p] is not ('+' or '-')) return false;
+                    if (!char.IsAsciiDigit(s[p + 1]) || !char.IsAsciiDigit(s[p + 2]) || !char.IsAsciiDigit(s[p + 4]) || !char.IsAsciiDigit(s[p + 5])) return false;
+                    int hh = (s[p + 1] - '0') * 10 + (s[p + 2] - '0'), mm = (s[p + 4] - '0') * 10 + (s[p + 5] - '0');
+                    if (hh > 24 || mm > 60) return false;
+                    p += 6;
+                }
+            }
+        }
+        if (p != s.Length) return false;
+        bool leap = year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
+        int days = month == 2 ? (leap ? 29 : 28) : month is 4 or 6 or 9 or 11 ? 30 : 31;
+        return day >= 1 && day <= days;
+
+        static bool Lit(string s, ref int p, char c)
+        {
+            if (p >= s.Length || s[p] != c) return false;
+            p++;
+            return true;
+        }
+
+        // time.getnum(s, fixed: false): one or two digits
+        static bool GetNum(string s, ref int p, out int n)
+        {
+            n = 0;
+            if (p >= s.Length || !char.IsAsciiDigit(s[p])) return false;
+            n = s[p++] - '0';
+            if (p < s.Length && char.IsAsciiDigit(s[p])) n = n * 10 + (s[p++] - '0');
+            return true;
+        }
+    }
 
     private static bool IsOldBool(string s) => s is "y" or "Y" or "yes" or "Yes" or "YES" or "on" or "On" or "ON"
         or "n" or "N" or "no" or "No" or "NO" or "off" or "Off" or "OFF";
@@ -252,7 +366,7 @@ public sealed class YamlEmitter
         // plain requested; emitter may downgrade
         if (!a.BlockPlainAllowed || s.Length == 0)
         {
-            if (a.SingleQuotedAllowed) { WriteSingleQuoted(s); return; }
+            if (a.SingleQuotedAllowed) { WriteSingleQuoted(s, blockIndent); return; }
             WriteDoubleQuoted(s);
             return;
         }
@@ -267,6 +381,7 @@ public sealed class YamlEmitter
         c == 0x0A || (c >= 0x20 && c <= 0x7E) || (c >= 0xA0 && c <= 0xD7FF) || (c >= 0xE000 && c <= 0xFFFD && c != 0xFEFF);
     private static bool IsBreak(int c) => c is '\r' or '\n' or 0x85 or 0x2028 or 0x2029;
     private static bool IsSpace(int c) => c == ' ';
+    private static bool IsBlank(int c) => c is ' ' or '\t';
     private static bool IsBlankZ(int c) => c is ' ' or '\t' or 0 || IsBreak(c);
 
     private static Analysis Analyze(string s)
@@ -278,9 +393,11 @@ public sealed class YamlEmitter
         bool blockInd = false, flowInd = false, lineBreaks = false, special = false, tabs = false;
         bool leadingSpace = false, leadingBreak = false, trailingSpace = false, trailingBreak = false, breakSpace = false, spaceBreak = false;
         bool precededByWs = true, prevSpace = false, prevBreak = false;
-        if ((s.StartsWith("---", StringComparison.Ordinal) || s.StartsWith("...", StringComparison.Ordinal)) && (runes.Count == 3 || IsBlankZ(runes[3])))
+        // go-yaml checks only the first three bytes: "---a" and "...a" are not plain either
+        if (s.StartsWith("---", StringComparison.Ordinal) || s.StartsWith("...", StringComparison.Ordinal))
         { blockInd = true; flowInd = true; }
-        bool followedByWs = runes.Count <= 1 || IsBlankZ(runes[1]);
+        // followed_by_whitespace is is_blank (space or tab) or the end of the value; a line break does not count
+        bool followedByWs = runes.Count <= 1 || IsBlank(runes[1]);
         for (int i = 0; i < runes.Count; i++)
         {
             int c = runes[i];
@@ -328,7 +445,7 @@ public sealed class YamlEmitter
             }
             else { prevSpace = false; prevBreak = false; }
             precededByWs = IsBlankZ(c);
-            followedByWs = i + 2 >= runes.Count || IsBlankZ(runes[i + 2]);
+            followedByWs = i + 2 >= runes.Count || IsBlank(runes[i + 2]);
         }
         bool blockPlain = true, single = true, block = true;
         if (leadingSpace || leadingBreak || trailingSpace || trailingBreak) blockPlain = false;
@@ -343,20 +460,36 @@ public sealed class YamlEmitter
         return res;
     }
 
-    private void WriteSingleQuoted(string s)
+    /// <summary>go-yaml v3.0.5 yaml_emitter_write_single_quoted_scalar. The only line breaks a single-quoted scalar can
+    /// hold are LS and PS (\n picks a literal block, \r and NEL force double quotes); write_break writes them as is and
+    /// the next character starts an indented line.</summary>
+    private void WriteSingleQuoted(string s, int indent)
     {
         _sb.Append('\'');
-        foreach (var ch in s) { if (ch == '\'') _sb.Append("''"); else _sb.Append(ch); }
+        bool breaks = false;
+        foreach (var ch in s)
+        {
+            if (IsBreak(ch)) { _sb.Append(ch); breaks = true; continue; }
+            if (breaks) _sb.Append(' ', indent);
+            breaks = false;
+            if (ch == '\'') _sb.Append("''"); else _sb.Append(ch);
+        }
         _sb.Append('\'');
     }
+
+    private const char Bom = (char)0xFEFF;
 
     private void WriteDoubleQuoted(string s)
     {
         _sb.Append('"');
+        // go-yaml's is_bom(value, i) looks at the first three bytes of the value whatever i is, so when the value
+        // starts with a BOM every character is escaped (BOM then "a" gives the escapes uFEFF and x61): a go-yaml
+        // quirk, reproduced on purpose
+        bool bom = s.Length > 0 && s[0] == Bom;
         foreach (var r in s.EnumerateRunes())
         {
             int c = r.Value;
-            if (!IsPrintable(c) || c == 0xFEFF || IsBreak(c) || c == '"' || c == '\\')
+            if (bom || !IsPrintable(c) || IsBreak(c) || c == '"' || c == '\\')
             {
                 _sb.Append('\\');
                 switch (c)
@@ -388,20 +521,29 @@ public sealed class YamlEmitter
         _sb.Append('"');
     }
 
+    /// <summary>go-yaml v3.0.5 yaml_emitter_write_block_scalar_hints and yaml_emitter_write_literal_scalar. Every line
+    /// break counts (\r and NEL never get here, they rule out a block scalar, but LS and PS do): a leading space or
+    /// break adds the indentation indicator, the last two characters pick the chomping indicator, and a break other
+    /// than \n is written as is and then the next line is indented like after \n.</summary>
     private void WriteLiteral(string s, int indent)
     {
         _sb.Append('|');
-        if (s.Length > 0 && (s[0] == ' ' || s[0] == '\n')) _sb.Append(Best.ToString(CultureInfo.InvariantCulture));
-        // chomping
-        if (!s.EndsWith('\n')) _sb.Append('-');
-        else if (s.Length >= 2 && s[^2] == '\n') _sb.Append('+');
-        else if (s.Length == 1) _sb.Append('+');
-        var body = s.EndsWith('\n') ? s[..^1] : s;
-        foreach (var line in body.Split('\n'))
+        if (s.Length > 0 && (s[0] == ' ' || IsBreak(s[0]))) _sb.Append(Best.ToString(CultureInfo.InvariantCulture));
+        // chomping (no astral character is a break, so looking at UTF-16 units is enough)
+        if (s.Length == 0 || !IsBreak(s[^1])) _sb.Append('-');
+        else if (s.Length == 1 || IsBreak(s[^2])) _sb.Append('+');
+        _sb.Append('\n');
+        bool breaks = true;
+        foreach (var ch in s)
         {
-            _sb.Append('\n');
-            if (line.Length > 0) { _sb.Append(' ', indent); _sb.Append(line); }
+            if (IsBreak(ch)) { _sb.Append(ch); breaks = true; continue; }
+            if (breaks) _sb.Append(' ', indent);
+            _sb.Append(ch);
+            breaks = false;
         }
+        // the value's last line break ends the line; the caller's Break() starts the next one
+        if (s[^1] == '\n') _sb.Length--;
+        else if (IsBreak(s[^1])) _lineEnded = true;
     }
 }
 
@@ -453,7 +595,8 @@ public static class JsonEmitter
         {
             case null: sb.Append("null"); break;
             case bool b: sb.Append(b ? "true" : "false"); break;
-            case double d: sb.Append(Values.FormatJsonNumber(d)); break;
+            // encoding/json floatEncoder: strconv.AppendFloat keeps the sign of negative zero
+            case double d: sb.Append(d == 0 && double.IsNegative(d) ? "-0" : Values.FormatJsonNumber(d)); break;
             case long l: sb.Append(l.ToString(CultureInfo.InvariantCulture)); break;
             case int i: sb.Append(i.ToString(CultureInfo.InvariantCulture)); break;
             case ulong u: sb.Append(u.ToString(CultureInfo.InvariantCulture)); break;
@@ -509,6 +652,9 @@ public static class JsonEmitter
                 case '\n': sb.Append("\\n"); break;
                 case '\r': sb.Append("\\r"); break;
                 case '\t': sb.Append("\\t"); break;
+                // encoding/json appendString has short escapes for \b and \f since Go 1.22 (oasdiff 1.35.0 is built with 1.27)
+                case '\b': sb.Append("\\b"); break;
+                case '\f': sb.Append("\\f"); break;
                 case '<': sb.Append("\\u003c"); break;
                 case '>': sb.Append("\\u003e"); break;
                 case '&': sb.Append("\\u0026"); break;
@@ -521,6 +667,32 @@ public static class JsonEmitter
             }
         }
         sb.Append('"');
+    }
+}
+
+/// <summary>Go's string order (bytes of UTF-8, i.e. code points), which encoding/json uses for map keys. It differs
+/// from UTF-16 ordinal order only when a character beyond the BMP (a surrogate pair) meets one in U+E000..U+FFFF.</summary>
+public sealed class Utf8OrdinalComparer : IComparer<string>
+{
+    public static readonly Utf8OrdinalComparer Instance = new();
+
+    public int Compare(string? x, string? y)
+    {
+        if (ReferenceEquals(x, y)) return 0;
+        if (x is null) return -1;
+        if (y is null) return 1;
+        int n = Math.Min(x.Length, y.Length);
+        for (int i = 0; i < n; i++)
+        {
+            char a = x[i], b = y[i];
+            if (a == b) continue;
+            if (a >= 0xD800 && b >= 0xD800) return Fix(a) - Fix(b);
+            return a - b;
+        }
+        return x.Length - y.Length;
+
+        // move surrogates (U+D800..U+DFFF) above U+E000..U+FFFF
+        static int Fix(char c) => c >= 0xE000 ? c - 0x800 : c + 0x2000;
     }
 }
 

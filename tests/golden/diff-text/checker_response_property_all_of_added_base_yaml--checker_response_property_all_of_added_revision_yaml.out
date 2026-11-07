@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /pets
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Property 'AllOf' changed
+            - Schemas added: #/components/schemas/Rabbit
+            - Modified schema: #/components/schemas/Dog
+              - Properties changed
+                - Modified property: breed
+                  - Property 'AllOf' changed
+                    - Schemas added: #/components/schemas/Breed3
+
+

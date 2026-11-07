@@ -1,0 +1,59 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            minContains:
+                                                from: 1
+                                                to: 2
+                                            maxContains:
+                                                from: 5
+                                                to: 6
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    minContains:
+                                                        from: 1
+                                                        to: 2
+                                                    maxContains:
+                                                        from: 5
+                                                        to: 6
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                minContains:
+                                    from: 1
+                                    to: 2
+                                maxContains:
+                                    from: 5
+                                    to: 6
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        minContains:
+                                            from: 1
+                                            to: 2
+                                        maxContains:
+                                            from: 5
+                                            to: 6
+

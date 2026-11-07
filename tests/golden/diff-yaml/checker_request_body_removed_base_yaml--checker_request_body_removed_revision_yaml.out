@@ -1,0 +1,15 @@
+paths:
+    modified:
+        /api/v1.0/test:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            deleted: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /api/v1.0/test
+        :   requestBody:
+                deleted: true
+

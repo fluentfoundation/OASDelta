@@ -1,0 +1,68 @@
+paths:
+    modified:
+        /api/v1.0/groups:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            data:
+                                                                properties:
+                                                                    modified:
+                                                                        created:
+                                                                            default:
+                                                                                from: "2020-01-01T00:00:00Z"
+                                                                                to: "2020-02-01T00:00:00Z"
+                                                                        enabled:
+                                                                            default:
+                                                                                from: false
+                                                                                to: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /api/v1.0/groups
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                data:
+                                                    properties:
+                                                        modified:
+                                                            created:
+                                                                default:
+                                                                    from: "2020-01-01T00:00:00Z"
+                                                                    to: "2020-02-01T00:00:00Z"
+                                                            enabled:
+                                                                default:
+                                                                    from: false
+                                                                    to: true
+components:
+    schemas:
+        modified:
+            GroupView:
+                properties:
+                    modified:
+                        data:
+                            properties:
+                                modified:
+                                    created:
+                                        default:
+                                            from: "2020-01-01T00:00:00Z"
+                                            to: "2020-02-01T00:00:00Z"
+                                    enabled:
+                                        default:
+                                            from: false
+                                            to: true
+

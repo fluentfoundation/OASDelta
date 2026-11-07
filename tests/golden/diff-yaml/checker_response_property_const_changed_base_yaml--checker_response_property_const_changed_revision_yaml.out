@@ -1,0 +1,53 @@
+paths:
+    modified:
+        /api/v1.0/groups:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            status:
+                                                                const:
+                                                                    from: ok
+                                                                    to: success
+                                "404":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    const:
+                                                        from: NotFound
+                                                        to: Error
+endpoints:
+    modified:
+        ?   method: POST
+            path: /api/v1.0/groups
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                status:
+                                                    const:
+                                                        from: ok
+                                                        to: success
+                    "404":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        const:
+                                            from: NotFound
+                                            to: Error
+

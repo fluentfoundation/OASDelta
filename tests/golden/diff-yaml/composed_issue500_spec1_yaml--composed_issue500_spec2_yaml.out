@@ -1,0 +1,16 @@
+paths:
+    modified:
+        /test:
+            operations:
+                added:
+                    - POST
+                deleted:
+                    - GET
+endpoints:
+    added:
+        - method: POST
+          path: /test
+    deleted:
+        - method: GET
+          path: /test
+

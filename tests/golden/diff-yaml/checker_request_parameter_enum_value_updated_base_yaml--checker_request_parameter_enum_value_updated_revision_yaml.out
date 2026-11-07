@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /test:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    status:
+                                        schema:
+                                            enum:
+                                                deleted:
+                                                    - available
+endpoints:
+    modified:
+        ?   method: GET
+            path: /test
+        :   parameters:
+                modified:
+                    query:
+                        status:
+                            schema:
+                                enum:
+                                    deleted:
+                                        - available
+

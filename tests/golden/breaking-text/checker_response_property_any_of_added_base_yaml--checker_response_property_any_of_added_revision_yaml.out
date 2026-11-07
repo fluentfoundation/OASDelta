@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[response-body-any-of-added] at ./checker/response_property_any_of_added_revision.yaml
+	in API GET /pets
+		added `#/components/schemas/Rabbit` to the response body `anyOf` list for the response status `200`
+
+error	[response-property-any-of-added] at ./checker/response_property_any_of_added_revision.yaml
+	in API GET /pets
+		added `#/components/schemas/Breed3` to the `anyOf[#/components/schemas/Dog]/breed` response property `anyOf` list for the response status `200`
+
+

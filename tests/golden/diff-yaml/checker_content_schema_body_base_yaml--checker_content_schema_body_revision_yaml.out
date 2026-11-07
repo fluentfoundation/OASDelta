@@ -1,0 +1,67 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            contentMediaType:
+                                                from: application/json
+                                                to: text/plain
+                                            contentEncoding:
+                                                from: base64
+                                                to: quoted-printable
+                                            contentSchema:
+                                                schemaAdded: true
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    contentMediaType:
+                                                        from: application/json
+                                                        to: text/plain
+                                                    contentEncoding:
+                                                        from: base64
+                                                        to: quoted-printable
+                                                    contentSchema:
+                                                        schemaAdded: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                contentMediaType:
+                                    from: application/json
+                                    to: text/plain
+                                contentEncoding:
+                                    from: base64
+                                    to: quoted-printable
+                                contentSchema:
+                                    schemaAdded: true
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        contentMediaType:
+                                            from: application/json
+                                            to: text/plain
+                                        contentEncoding:
+                                            from: base64
+                                            to: quoted-printable
+                                        contentSchema:
+                                            schemaAdded: true
+

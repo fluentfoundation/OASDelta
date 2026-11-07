@@ -1,0 +1,1 @@
+{"paths":{"added":["/subscribe"],"modified":{"/api/{domain}/{project}/install-command":{"operations":{"modified":{"GET":{"parameters":{"modified":{"path":{"domain":{"schema":{"enum":{"added":["removed-value"]}}}}}}}}}}}}}

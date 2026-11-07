@@ -1,0 +1,127 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    data:
+                                                        prefixItems:
+                                                            modified:
+                                                                - base:
+                                                                    index: 0
+                                                                  revision:
+                                                                    index: 0
+                                                                  diff:
+                                                                    properties:
+                                                                        added:
+                                                                            - newField
+                                                        contains:
+                                                            properties:
+                                                                added:
+                                                                    - newField
+                                                        patternProperties:
+                                                            modified:
+                                                                ^x-:
+                                                                    properties:
+                                                                        added:
+                                                                            - newField
+                                                        dependentSchemas:
+                                                            modified:
+                                                                name:
+                                                                    properties:
+                                                                        added:
+                                                                            - newField
+                                                        unevaluatedProperties:
+                                                            properties:
+                                                                added:
+                                                                    - newField
+                                                        then:
+                                                            required:
+                                                                stringsdiff:
+                                                                    added:
+                                                                        - newField
+                                                            properties:
+                                                                added:
+                                                                    - newField
+                                                        else:
+                                                            required:
+                                                                stringsdiff:
+                                                                    added:
+                                                                        - newField
+                                                            properties:
+                                                                added:
+                                                                    - newField
+                                                        contentSchema:
+                                                            properties:
+                                                                added:
+                                                                    - newField
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        data:
+                                            prefixItems:
+                                                modified:
+                                                    - base:
+                                                        index: 0
+                                                      revision:
+                                                        index: 0
+                                                      diff:
+                                                        properties:
+                                                            added:
+                                                                - newField
+                                            contains:
+                                                properties:
+                                                    added:
+                                                        - newField
+                                            patternProperties:
+                                                modified:
+                                                    ^x-:
+                                                        properties:
+                                                            added:
+                                                                - newField
+                                            dependentSchemas:
+                                                modified:
+                                                    name:
+                                                        properties:
+                                                            added:
+                                                                - newField
+                                            unevaluatedProperties:
+                                                properties:
+                                                    added:
+                                                        - newField
+                                            then:
+                                                required:
+                                                    stringsdiff:
+                                                        added:
+                                                            - newField
+                                                properties:
+                                                    added:
+                                                        - newField
+                                            else:
+                                                required:
+                                                    stringsdiff:
+                                                        added:
+                                                            - newField
+                                                properties:
+                                                    added:
+                                                        - newField
+                                            contentSchema:
+                                                properties:
+                                                    added:
+                                                        - newField
+

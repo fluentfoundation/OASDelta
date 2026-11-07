@@ -1,0 +1,42 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+POST /batch
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - MinItems changed from 0 to 2
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - MinItems changed from 2 to 0
+
+POST /items
+- Modified query param: ids
+  - Schema changed
+    - MinItems changed from 0 to 3
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Properties changed
+          - Modified property: tags
+            - MinItems changed from 0 to 3
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: tags
+              - MinItems changed from 3 to 0
+
+

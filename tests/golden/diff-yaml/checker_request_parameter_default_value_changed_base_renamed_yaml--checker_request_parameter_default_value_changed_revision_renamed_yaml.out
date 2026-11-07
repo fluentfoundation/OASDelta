@@ -1,0 +1,33 @@
+paths:
+    modified:
+        /api/v1.0/groups/{group_id}:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                path:
+                                    group_id:
+                                        name:
+                                            from: group_id
+                                            to: groupId
+                                        schema:
+                                            default:
+                                                from: "2"
+                                                to: "1"
+endpoints:
+    modified:
+        ?   method: POST
+            path: /api/v1.0/groups/{group_id}
+        :   parameters:
+                modified:
+                    path:
+                        group_id:
+                            name:
+                                from: group_id
+                                to: groupId
+                            schema:
+                                default:
+                                    from: "2"
+                                    to: "1"
+

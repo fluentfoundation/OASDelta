@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[request-property-enum-value-removed] at ./checker/transition_claims_enum_revision.yaml
+	in API POST /test
+		removed the enum value `alpha` of the request property `mode`
+
+error	[request-property-enum-value-removed] at ./checker/transition_claims_enum_revision.yaml
+	in API POST /test
+		removed the enum value `beta` of the request property `mode`
+
+

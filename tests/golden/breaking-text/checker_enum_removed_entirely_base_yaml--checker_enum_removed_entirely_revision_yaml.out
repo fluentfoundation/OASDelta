@@ -1,0 +1,12 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[response-mediatype-became-not-enum] at ./checker/enum_removed_entirely_revision.yaml
+	in API PUT /mode
+		removed the enum constraint from the response schema `text/plain` for the response status `200`
+		The server may now return any value of the schema's type, including values the previous enum excluded, so a client written against it may not handle the response.
+
+error	[response-property-became-not-enum] at ./checker/enum_removed_entirely_revision.yaml
+	in API POST /pets
+		removed the enum constraint from the `status` response property for the response status `200`
+		The server may now return any value of the property's type, including values the previous enum excluded, so a client written against it may not handle the response.
+
+

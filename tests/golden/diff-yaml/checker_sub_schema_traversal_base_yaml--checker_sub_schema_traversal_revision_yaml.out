@@ -1,0 +1,129 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    data:
+                                                        prefixItems:
+                                                            modified:
+                                                                - base:
+                                                                    index: 0
+                                                                  revision:
+                                                                    index: 0
+                                                                  diff:
+                                                                    minLength:
+                                                                        from: 1
+                                                                        to: 3
+                                                        contains:
+                                                            minLength:
+                                                                from: 1
+                                                                to: 3
+                                                        propertyNames:
+                                                            minLength:
+                                                                from: 1
+                                                                to: 3
+                                                        unevaluatedItems:
+                                                            minLength:
+                                                                from: 1
+                                                                to: 3
+                                                        unevaluatedProperties:
+                                                            minLength:
+                                                                from: 1
+                                                                to: 3
+                                                        if:
+                                                            properties:
+                                                                modified:
+                                                                    kind:
+                                                                        const:
+                                                                            from: typeA
+                                                                            to: typeB
+                                                        then:
+                                                            properties:
+                                                                modified:
+                                                                    value:
+                                                                        min:
+                                                                            from: 0
+                                                                            to: 5
+                                                        else:
+                                                            properties:
+                                                                modified:
+                                                                    value:
+                                                                        minLength:
+                                                                            from: 1
+                                                                            to: 3
+                                                        contentSchema:
+                                                            minLength:
+                                                                from: 1
+                                                                to: 3
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        data:
+                                            prefixItems:
+                                                modified:
+                                                    - base:
+                                                        index: 0
+                                                      revision:
+                                                        index: 0
+                                                      diff:
+                                                        minLength:
+                                                            from: 1
+                                                            to: 3
+                                            contains:
+                                                minLength:
+                                                    from: 1
+                                                    to: 3
+                                            propertyNames:
+                                                minLength:
+                                                    from: 1
+                                                    to: 3
+                                            unevaluatedItems:
+                                                minLength:
+                                                    from: 1
+                                                    to: 3
+                                            unevaluatedProperties:
+                                                minLength:
+                                                    from: 1
+                                                    to: 3
+                                            if:
+                                                properties:
+                                                    modified:
+                                                        kind:
+                                                            const:
+                                                                from: typeA
+                                                                to: typeB
+                                            then:
+                                                properties:
+                                                    modified:
+                                                        value:
+                                                            min:
+                                                                from: 0
+                                                                to: 5
+                                            else:
+                                                properties:
+                                                    modified:
+                                                        value:
+                                                            minLength:
+                                                                from: 1
+                                                                to: 3
+                                            contentSchema:
+                                                minLength:
+                                                    from: 1
+                                                    to: 3
+

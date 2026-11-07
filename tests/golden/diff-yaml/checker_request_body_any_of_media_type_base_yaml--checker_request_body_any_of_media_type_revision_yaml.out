@@ -1,0 +1,53 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            anyOf:
+                                                added:
+                                                    - index: 1
+                                                      component: Rabbit
+                                                deleted:
+                                                    - index: 1
+                                                      component: Cat
+                                    application/xml:
+                                        schema:
+                                            anyOf:
+                                                added:
+                                                    - index: 1
+                                                      component: Rabbit
+                                                deleted:
+                                                    - index: 1
+                                                      component: Cat
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                anyOf:
+                                    added:
+                                        - index: 1
+                                          component: Rabbit
+                                    deleted:
+                                        - index: 1
+                                          component: Cat
+                        application/xml:
+                            schema:
+                                anyOf:
+                                    added:
+                                        - index: 1
+                                          component: Rabbit
+                                    deleted:
+                                        - index: 1
+                                          component: Cat
+

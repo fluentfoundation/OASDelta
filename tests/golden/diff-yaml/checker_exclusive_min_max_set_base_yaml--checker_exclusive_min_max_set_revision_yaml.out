@@ -1,0 +1,73 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                query:
+                                    limit:
+                                        schema:
+                                            exclusiveMin:
+                                                from: null
+                                                to: 0
+                                            exclusiveMax:
+                                                from: null
+                                                to: 100
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            exclusiveMin:
+                                                from: null
+                                                to: 0
+                                            exclusiveMax:
+                                                from: null
+                                                to: 100
+                                            properties:
+                                                modified:
+                                                    price:
+                                                        exclusiveMin:
+                                                            from: null
+                                                            to: 0
+                                                        exclusiveMax:
+                                                            from: null
+                                                            to: 1000
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   parameters:
+                modified:
+                    query:
+                        limit:
+                            schema:
+                                exclusiveMin:
+                                    from: null
+                                    to: 0
+                                exclusiveMax:
+                                    from: null
+                                    to: 100
+            requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                exclusiveMin:
+                                    from: null
+                                    to: 0
+                                exclusiveMax:
+                                    from: null
+                                    to: 100
+                                properties:
+                                    modified:
+                                        price:
+                                            exclusiveMin:
+                                                from: null
+                                                to: 0
+                                            exclusiveMax:
+                                                from: null
+                                                to: 1000
+

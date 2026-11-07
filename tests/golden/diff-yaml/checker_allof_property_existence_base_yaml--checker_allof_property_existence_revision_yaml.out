@@ -1,0 +1,73 @@
+paths:
+    modified:
+        /items:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    wrapper:
+                                                        allOf:
+                                                            modified:
+                                                                - base:
+                                                                    index: 1
+                                                                  revision:
+                                                                    index: 1
+                                                                  diff:
+                                                                    required:
+                                                                        stringsdiff:
+                                                                            added:
+                                                                                - added
+                                                                    properties:
+                                                                        added:
+                                                                            - added
+                                                                        deleted:
+                                                                            - drop
+                                                                        modified:
+                                                                            other:
+                                                                                type:
+                                                                                    added:
+                                                                                        - integer
+                                                                                    deleted:
+                                                                                        - string
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        wrapper:
+                                            allOf:
+                                                modified:
+                                                    - base:
+                                                        index: 1
+                                                      revision:
+                                                        index: 1
+                                                      diff:
+                                                        required:
+                                                            stringsdiff:
+                                                                added:
+                                                                    - added
+                                                        properties:
+                                                            added:
+                                                                - added
+                                                            deleted:
+                                                                - drop
+                                                            modified:
+                                                                other:
+                                                                    type:
+                                                                        added:
+                                                                            - integer
+                                                                        deleted:
+                                                                            - string
+

@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/products":{"operations":{"modified":{"POST":{"requestBody":{"content":{"deleted":["application/json"],"modified":{"text/plain":{"schema":{"const":{"from":"FixedValue","to":"NewFixedValue"}}}}}}}}}}}}}

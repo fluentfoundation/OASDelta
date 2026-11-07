@@ -1,0 +1,19 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /pets
+- :warning: added `#/components/schemas/Rabbit` to the response body `oneOf` list for the response status `200`
+- :warning: added `#/components/schemas/Breed3` to the `oneOf[#/components/schemas/Dog]/breed` response property `oneOf` list for the response status `200`
+- :warning: added `subschema #2: Dark brown types` to the `oneOf[#/components/schemas/Fox]/breed` response property `oneOf` list for the response status `200`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

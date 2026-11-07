@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[webhook-removed]
+	in components/webhooks
+		webhook `orderDeleted` removed
+
+

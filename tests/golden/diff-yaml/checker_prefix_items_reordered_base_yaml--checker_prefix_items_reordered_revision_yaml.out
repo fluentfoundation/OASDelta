@@ -1,0 +1,65 @@
+paths:
+    modified:
+        /items:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            prefixItems:
+                                                modified:
+                                                    - base:
+                                                        index: 0
+                                                      revision:
+                                                        index: 0
+                                                      diff:
+                                                        type:
+                                                            added:
+                                                                - integer
+                                                            deleted:
+                                                                - string
+                                                    - base:
+                                                        index: 1
+                                                      revision:
+                                                        index: 1
+                                                      diff:
+                                                        type:
+                                                            added:
+                                                                - string
+                                                            deleted:
+                                                                - integer
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                prefixItems:
+                                    modified:
+                                        - base:
+                                            index: 0
+                                          revision:
+                                            index: 0
+                                          diff:
+                                            type:
+                                                added:
+                                                    - integer
+                                                deleted:
+                                                    - string
+                                        - base:
+                                            index: 1
+                                          revision:
+                                            index: 1
+                                          diff:
+                                            type:
+                                                added:
+                                                    - string
+                                                deleted:
+                                                    - integer
+

@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            maxLength:
+                                                from: null
+                                                to: 15
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        text/plain:
+                            schema:
+                                maxLength:
+                                    from: null
+                                    to: 15
+

@@ -1,0 +1,31 @@
+info:
+    title:
+        from: Test Base API
+        to: Test Revision API
+paths:
+    modified:
+        /test:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                query:
+                                    name:
+                                        schema:
+                                            minLength:
+                                                from: 3
+                                                to: 5
+endpoints:
+    modified:
+        ?   method: POST
+            path: /test
+        :   parameters:
+                modified:
+                    query:
+                        name:
+                            schema:
+                                minLength:
+                                    from: 3
+                                    to: 5
+

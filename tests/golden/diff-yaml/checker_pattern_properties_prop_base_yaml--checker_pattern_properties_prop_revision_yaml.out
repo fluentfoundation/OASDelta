@@ -1,0 +1,59 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    details:
+                                                        patternProperties:
+                                                            added:
+                                                                - ^x-
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            details:
+                                                                patternProperties:
+                                                                    added:
+                                                                        - ^x-
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        details:
+                                            patternProperties:
+                                                added:
+                                                    - ^x-
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                details:
+                                                    patternProperties:
+                                                        added:
+                                                            - ^x-
+

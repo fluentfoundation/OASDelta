@@ -1,0 +1,68 @@
+paths:
+    modified:
+        /api/v1.0/groups:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    required:
+                                                        stringsdiff:
+                                                            deleted:
+                                                                - location
+                                                    properties:
+                                                        deleted:
+                                                            - location
+                                                        modified:
+                                                            data:
+                                                                required:
+                                                                    stringsdiff:
+                                                                        deleted:
+                                                                            - name
+endpoints:
+    modified:
+        ?   method: POST
+            path: /api/v1.0/groups
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        required:
+                                            stringsdiff:
+                                                deleted:
+                                                    - location
+                                        properties:
+                                            deleted:
+                                                - location
+                                            modified:
+                                                data:
+                                                    required:
+                                                        stringsdiff:
+                                                            deleted:
+                                                                - name
+components:
+    schemas:
+        modified:
+            GroupView:
+                required:
+                    stringsdiff:
+                        deleted:
+                            - location
+                properties:
+                    deleted:
+                        - location
+                    modified:
+                        data:
+                            required:
+                                stringsdiff:
+                                    deleted:
+                                        - name
+

@@ -1,0 +1,26 @@
+openapi: 3.0.1
+info:
+  title: Test API
+  version: v1
+paths:
+  /test:
+    parameters:
+      - in: header
+        name: X-Case
+        required: true
+        schema:
+          type: string
+    get:
+      tags:
+        - Test
+      parameters:
+        - in: header
+          name: X-Case      
+      responses:
+        "200":
+          description: Success
+          headers:
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+              description: Request limit per hour.

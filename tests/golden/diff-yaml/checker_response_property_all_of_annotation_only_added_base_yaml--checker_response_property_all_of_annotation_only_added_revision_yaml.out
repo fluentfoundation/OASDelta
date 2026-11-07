@@ -1,0 +1,33 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    allOf:
+                                                        added:
+                                                            - index: 0
+                                                              title: annotation-only subschema
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        allOf:
+                                            added:
+                                                - index: 0
+                                                  title: annotation-only subschema
+

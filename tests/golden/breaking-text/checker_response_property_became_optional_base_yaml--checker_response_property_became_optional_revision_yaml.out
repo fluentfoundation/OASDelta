@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[response-property-became-optional] at ./checker/response_property_became_optional_revision.yaml
+	in API POST /api/v1.0/groups
+		the response property `data/name` became optional for the status `200`
+
+error	[response-required-property-removed] at ./checker/response_property_became_optional_revision.yaml
+	in API POST /api/v1.0/groups
+		removed the required property `location` from the response with the `200` status
+
+

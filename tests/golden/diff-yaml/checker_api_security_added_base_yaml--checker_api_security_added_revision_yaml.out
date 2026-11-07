@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /subscribe:
+            operations:
+                modified:
+                    POST:
+                        securityRequirements:
+                            added:
+                                - index: 0
+                                  schemes:
+                                    petstore_auth:
+                                        - write:pets
+                                        - read:pets
+                            listAdded: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /subscribe
+        :   securityRequirements:
+                added:
+                    - index: 0
+                      schemes:
+                        petstore_auth:
+                            - write:pets
+                            - read:pets
+                listAdded: true
+

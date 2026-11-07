@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    allOf:
+                                                        added:
+                                                            - index: 2
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        allOf:
+                                            added:
+                                                - index: 2
+

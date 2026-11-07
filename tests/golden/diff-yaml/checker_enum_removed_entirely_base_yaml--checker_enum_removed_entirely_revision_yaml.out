@@ -1,0 +1,184 @@
+paths:
+    modified:
+        /mode:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            enum:
+                                                enumDeleted: true
+                                                deleted:
+                                                    - fast
+                                                    - slow
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    enum:
+                                                        enumDeleted: true
+                                                        deleted:
+                                                            - fast
+                                                            - slow
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    filter:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    origin:
+                                                        enum:
+                                                            enumDeleted: true
+                                                            deleted:
+                                                                - shelter
+                                                                - breeder
+                                    status:
+                                        schema:
+                                            enum:
+                                                enumDeleted: true
+                                                deleted:
+                                                    - available
+                                                    - sold
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    kind:
+                                                        enum:
+                                                            enumDeleted: true
+                                                            deleted:
+                                                                - cat
+                                                                - dog
+                                                    status:
+                                                        enum:
+                                                            enumDeleted: true
+                                                            deleted:
+                                                                - available
+                                                                - sold
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            secret:
+                                                                enum:
+                                                                    enumDeleted: true
+                                                                    deleted:
+                                                                        - a
+                                                                        - b
+                                                            status:
+                                                                enum:
+                                                                    enumDeleted: true
+                                                                    deleted:
+                                                                        - available
+                                                                        - sold
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /mode
+        :   requestBody:
+                content:
+                    modified:
+                        text/plain:
+                            schema:
+                                enum:
+                                    enumDeleted: true
+                                    deleted:
+                                        - fast
+                                        - slow
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        enum:
+                                            enumDeleted: true
+                                            deleted:
+                                                - fast
+                                                - slow
+        ?   method: GET
+            path: /pets
+        :   parameters:
+                modified:
+                    query:
+                        filter:
+                            schema:
+                                properties:
+                                    modified:
+                                        origin:
+                                            enum:
+                                                enumDeleted: true
+                                                deleted:
+                                                    - shelter
+                                                    - breeder
+                        status:
+                            schema:
+                                enum:
+                                    enumDeleted: true
+                                    deleted:
+                                        - available
+                                        - sold
+        ?   method: POST
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        kind:
+                                            enum:
+                                                enumDeleted: true
+                                                deleted:
+                                                    - cat
+                                                    - dog
+                                        status:
+                                            enum:
+                                                enumDeleted: true
+                                                deleted:
+                                                    - available
+                                                    - sold
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                secret:
+                                                    enum:
+                                                        enumDeleted: true
+                                                        deleted:
+                                                            - a
+                                                            - b
+                                                status:
+                                                    enum:
+                                                        enumDeleted: true
+                                                        deleted:
+                                                            - available
+                                                            - sold
+

@@ -1,0 +1,63 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    address:
+                                                        dependentRequired:
+                                                            added:
+                                                                street:
+                                                                    - city
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            address:
+                                                                dependentRequired:
+                                                                    added:
+                                                                        street:
+                                                                            - city
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        address:
+                                            dependentRequired:
+                                                added:
+                                                    street:
+                                                        - city
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                address:
+                                                    dependentRequired:
+                                                        added:
+                                                            street:
+                                                                - city
+

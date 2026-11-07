@@ -1,0 +1,79 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    tags:
+                                                        contains:
+                                                            schemaAdded: true
+                                                        minContains:
+                                                            from: null
+                                                            to: 1
+                                                        maxContains:
+                                                            from: null
+                                                            to: 3
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            tags:
+                                                                contains:
+                                                                    schemaAdded: true
+                                                                minContains:
+                                                                    from: null
+                                                                    to: 1
+                                                                maxContains:
+                                                                    from: null
+                                                                    to: 3
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        tags:
+                                            contains:
+                                                schemaAdded: true
+                                            minContains:
+                                                from: null
+                                                to: 1
+                                            maxContains:
+                                                from: null
+                                                to: 3
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                tags:
+                                                    contains:
+                                                        schemaAdded: true
+                                                    minContains:
+                                                        from: null
+                                                        to: 1
+                                                    maxContains:
+                                                        from: null
+                                                        to: 3
+

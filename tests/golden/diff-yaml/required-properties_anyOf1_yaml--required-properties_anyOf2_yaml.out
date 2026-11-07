@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /test:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            anyOf:
+                                                modified:
+                                                    - base:
+                                                        index: 0
+                                                      revision:
+                                                        index: 0
+                                                      diff:
+                                                        required:
+                                                            stringsdiff:
+                                                                added:
+                                                                    - id
+endpoints:
+    modified:
+        ?   method: POST
+            path: /test
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                anyOf:
+                                    modified:
+                                        - base:
+                                            index: 0
+                                          revision:
+                                            index: 0
+                                          diff:
+                                            required:
+                                                stringsdiff:
+                                                    added:
+                                                        - id
+

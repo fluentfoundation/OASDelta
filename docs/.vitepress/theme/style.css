@@ -1,0 +1,19 @@
+/* .NET purple as the brand colour */
+:root {
+  --vp-c-brand-1: #512bd4;
+  --vp-c-brand-2: #6a4ae0;
+  --vp-c-brand-3: #7c5fe6;
+  --vp-c-brand-soft: rgb(81 43 212 / 0.14);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #512bd4 20%, #2a78d6);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #512bd4 50%, #2a78d6 50%);
+  --vp-home-hero-image-filter: blur(56px);
+}
+
+.dark {
+  --vp-c-brand-1: #a08cf2;
+  --vp-c-brand-2: #8b74ee;
+  --vp-c-brand-3: #7c5fe6;
+  --vp-c-brand-soft: rgb(160 140 242 / 0.16);
+  --vp-home-hero-name-background: linear-gradient(120deg, #a08cf2 20%, #3987e5);
+}

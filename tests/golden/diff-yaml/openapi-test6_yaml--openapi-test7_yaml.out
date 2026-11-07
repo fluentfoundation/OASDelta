@@ -1,0 +1,18 @@
+info:
+    version:
+        from: 1.0.0
+        to: 2.0.0
+paths:
+    deleted:
+        - /health
+        - /health/live
+        - /health/ready
+endpoints:
+    deleted:
+        - method: GET
+          path: /health
+        - method: GET
+          path: /health/live
+        - method: GET
+          path: /health/ready
+

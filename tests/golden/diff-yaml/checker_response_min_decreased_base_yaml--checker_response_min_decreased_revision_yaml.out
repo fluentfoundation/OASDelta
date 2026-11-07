@@ -1,0 +1,55 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    exclusiveMin:
+                                                        from: 5
+                                                        to: 2
+                                                    min:
+                                                        from: 10
+                                                        to: 5
+                                                    properties:
+                                                        modified:
+                                                            price:
+                                                                exclusiveMin:
+                                                                    from: 50
+                                                                    to: 25
+                                                                min:
+                                                                    from: 100
+                                                                    to: 50
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        exclusiveMin:
+                                            from: 5
+                                            to: 2
+                                        min:
+                                            from: 10
+                                            to: 5
+                                        properties:
+                                            modified:
+                                                price:
+                                                    exclusiveMin:
+                                                        from: 50
+                                                        to: 25
+                                                    min:
+                                                        from: 100
+                                                        to: 50
+

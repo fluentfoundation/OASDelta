@@ -1,0 +1,47 @@
+# API Changelog 1.0.1 vs. 1.0.1
+
+
+## API Changes
+
+### GET /api/{domain}/{project}/badges/security-score
+- :warning: added the new required `header` request parameter `x-auth-name`
+- :warning: for the `query` request parameter `token`, the maxLength was set to `30`
+- :warning: added the pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` to the `query` request parameter `token`
+- :warning: for the `path` request parameter `domain`, the `type/format` was changed from `integer/non-negative integer` to `string/hyphen-separated list`
+- :warning: for the `query` request parameter `token`, the `type/format` was changed from `any` to `string/uuid`
+- :warning: changed the pattern of the `path` request parameter `domain` from `^(?:\d+)$` to `^(?:([a-z]+-)*([a-z]+)?)$`
+- :warning: deleted the `query` request parameter `filter`
+-  api operation id `GetSecurityScore` was added
+-  for the `path` request parameter `domain`, the min was unset from `7.00`
+-  removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image`
+-  for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any`
+
+
+### POST /api/{domain}/{project}/badges/security-score
+- :warning: api removed without deprecation
+
+
+### GET /api/{domain}/{project}/install-command
+-  endpoint added
+
+
+### POST /register
+-  endpoint added
+
+
+### POST /subscribe
+-  endpoint added
+
+
+
+
+## Components
+-  the component security scheme `OAuth` was added
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.1`
+
+
+
+

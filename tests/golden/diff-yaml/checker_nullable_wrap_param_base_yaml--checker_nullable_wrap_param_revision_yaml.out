@@ -1,0 +1,55 @@
+paths:
+    modified:
+        /test:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    kind:
+                                        schema:
+                                            oneOf:
+                                                added:
+                                                    - index: 0
+                                                    - index: 1
+                                            type:
+                                                deleted:
+                                                    - string
+                                            enum:
+                                                enumDeleted: true
+                                                deleted:
+                                                    - user
+                                                    - serviceAccount
+                                            listOfTypes:
+                                                added:
+                                                    - "null"
+                                            nullableWrapping:
+                                                nullabilityAdded: true
+endpoints:
+    modified:
+        ?   method: GET
+            path: /test
+        :   parameters:
+                modified:
+                    query:
+                        kind:
+                            schema:
+                                oneOf:
+                                    added:
+                                        - index: 0
+                                        - index: 1
+                                type:
+                                    deleted:
+                                        - string
+                                enum:
+                                    enumDeleted: true
+                                    deleted:
+                                        - user
+                                        - serviceAccount
+                                listOfTypes:
+                                    added:
+                                        - "null"
+                                nullableWrapping:
+                                    nullabilityAdded: true
+

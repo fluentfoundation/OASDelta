@@ -1,0 +1,14 @@
+3 changes: 3 error, 0 warning, 0 info
+error	[request-body-else-added] at ./checker/if_added_revision.yaml
+	in API POST /products
+		added 'else' subschema to the request body
+
+error	[request-body-if-added] at ./checker/if_added_revision.yaml
+	in API POST /products
+		added 'if' subschema to the request body
+
+error	[request-body-then-added] at ./checker/if_added_revision.yaml
+	in API POST /products
+		added 'then' subschema to the request body
+
+

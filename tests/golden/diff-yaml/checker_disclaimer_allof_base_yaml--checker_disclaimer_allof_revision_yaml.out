@@ -1,0 +1,59 @@
+paths:
+    modified:
+        /x:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    allOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 0
+                                                                component: A
+                                                              revision:
+                                                                index: 0
+                                                                component: A
+                                                              diff:
+                                                                required:
+                                                                    stringsdiff:
+                                                                        deleted:
+                                                                            - id
+endpoints:
+    modified:
+        ?   method: GET
+            path: /x
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        allOf:
+                                            modified:
+                                                - base:
+                                                    index: 0
+                                                    component: A
+                                                  revision:
+                                                    index: 0
+                                                    component: A
+                                                  diff:
+                                                    required:
+                                                        stringsdiff:
+                                                            deleted:
+                                                                - id
+components:
+    schemas:
+        modified:
+            A:
+                required:
+                    stringsdiff:
+                        deleted:
+                            - id
+

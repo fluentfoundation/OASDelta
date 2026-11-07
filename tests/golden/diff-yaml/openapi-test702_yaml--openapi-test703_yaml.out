@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /api/{domain}/{project}/install-command:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                path:
+                                    domain:
+                                        schema:
+                                            enum:
+                                                deleted:
+                                                    - removed-value
+        /register:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                default:
+                                    content:
+                                        added:
+                                            - application/json
+endpoints:
+    modified:
+        ?   method: GET
+            path: /api/{domain}/{project}/install-command
+        :   parameters:
+                modified:
+                    path:
+                        domain:
+                            schema:
+                                enum:
+                                    deleted:
+                                        - removed-value
+        ?   method: POST
+            path: /register
+        :   responses:
+                modified:
+                    default:
+                        content:
+                            added:
+                                - application/json
+

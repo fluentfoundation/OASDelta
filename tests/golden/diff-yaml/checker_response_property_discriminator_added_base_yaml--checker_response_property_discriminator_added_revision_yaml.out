@@ -1,0 +1,66 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    oneOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 0
+                                                                component: Dog
+                                                              revision:
+                                                                index: 0
+                                                                component: Dog
+                                                              diff:
+                                                                properties:
+                                                                    modified:
+                                                                        breed:
+                                                                            discriminatorDiff:
+                                                                                added: true
+                                                    discriminatorDiff:
+                                                        added: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        oneOf:
+                                            modified:
+                                                - base:
+                                                    index: 0
+                                                    component: Dog
+                                                  revision:
+                                                    index: 0
+                                                    component: Dog
+                                                  diff:
+                                                    properties:
+                                                        modified:
+                                                            breed:
+                                                                discriminatorDiff:
+                                                                    added: true
+                                        discriminatorDiff:
+                                            added: true
+components:
+    schemas:
+        modified:
+            Dog:
+                properties:
+                    modified:
+                        breed:
+                            discriminatorDiff:
+                                added: true
+

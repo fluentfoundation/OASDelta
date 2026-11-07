@@ -1,0 +1,1 @@
+{"info":{"title":{"from":"Test Base API","to":"Test Revision API"}},"paths":{"modified":{"/test":{"operations":{"modified":{"POST":{"parameters":{"modified":{"query":{"name":{"schema":{"minLength":{"from":3,"to":5}}}}}}}}}}}}}

@@ -1,0 +1,66 @@
+paths:
+    modified:
+        /example:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    left:
+                                                        required:
+                                                            stringsdiff:
+                                                                added:
+                                                                    - id
+                                                    right:
+                                                        required:
+                                                            stringsdiff:
+                                                                added:
+                                                                    - id
+endpoints:
+    modified:
+        ?   method: POST
+            path: /example
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        left:
+                                            required:
+                                                stringsdiff:
+                                                    added:
+                                                        - id
+                                        right:
+                                            required:
+                                                stringsdiff:
+                                                    added:
+                                                        - id
+components:
+    schemas:
+        modified:
+            Root:
+                properties:
+                    modified:
+                        left:
+                            required:
+                                stringsdiff:
+                                    added:
+                                        - id
+                        right:
+                            required:
+                                stringsdiff:
+                                    added:
+                                        - id
+            Shared:
+                required:
+                    stringsdiff:
+                        added:
+                            - id
+

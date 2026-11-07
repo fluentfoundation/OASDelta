@@ -1,0 +1,63 @@
+paths:
+    modified:
+        /example:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            left:
+                                                                properties:
+                                                                    added:
+                                                                        - extra
+                                                            right:
+                                                                properties:
+                                                                    added:
+                                                                        - extra
+endpoints:
+    modified:
+        ?   method: GET
+            path: /example
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                left:
+                                                    properties:
+                                                        added:
+                                                            - extra
+                                                right:
+                                                    properties:
+                                                        added:
+                                                            - extra
+components:
+    schemas:
+        modified:
+            Root:
+                properties:
+                    modified:
+                        left:
+                            properties:
+                                added:
+                                    - extra
+                        right:
+                            properties:
+                                added:
+                                    - extra
+            Shared:
+                properties:
+                    added:
+                        - extra
+

@@ -1,0 +1,18 @@
+webhooks:
+    modified:
+        orderCreated:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            required:
+                                from: false
+                                to: true
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                added:
+                                                    - amount
+

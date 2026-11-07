@@ -1,0 +1,23 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /pets
+- :warning: removed `#/components/schemas/Rabbit` from the request body `anyOf` list
+- :warning: removed `#/components/schemas/Breed3` from the `anyOf[#/components/schemas/Dog]/breed` request property `anyOf` list
+
+
+
+
+## Components
+-  removed the schema `Breed3`
+-  removed the schema `Rabbit`
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

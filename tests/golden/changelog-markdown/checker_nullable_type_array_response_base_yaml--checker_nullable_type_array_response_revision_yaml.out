@@ -1,0 +1,13 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /t
+-  the response property `p` became not nullable for the status `200`
+
+
+
+
+
+

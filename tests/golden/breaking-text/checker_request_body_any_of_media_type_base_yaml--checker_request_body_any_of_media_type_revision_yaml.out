@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[request-body-any-of-removed] at ./checker/request_body_any_of_media_type_revision.yaml
+	in API POST /pets
+		removed `#/components/schemas/Cat` from the request body `anyOf` list (media type: application/json)
+
+error	[request-body-any-of-removed] at ./checker/request_body_any_of_media_type_revision.yaml
+	in API POST /pets
+		removed `#/components/schemas/Cat` from the request body `anyOf` list (media type: application/xml)
+
+

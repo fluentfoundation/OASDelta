@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /users/{user_id}:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    role:
+                                                        title:
+                                                            from: Role
+                                                            to: ""
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /users/{user_id}
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        role:
+                                            title:
+                                                from: Role
+                                                to: ""
+components:
+    schemas:
+        added:
+            - UserRole
+        modified:
+            AdminUserUpdateRequest:
+                properties:
+                    modified:
+                        role:
+                            title:
+                                from: Role
+                                to: ""
+

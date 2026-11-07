@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    name:
+                                                        extensions:
+                                                            modified:
+                                                                x-extensible-enum:
+                                                                    - oldValue: 3
+                                                                      value: null
+                                                                      op: remove
+                                                                      from: ""
+                                                                      path: /2
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        name:
+                                            extensions:
+                                                modified:
+                                                    x-extensible-enum:
+                                                        - oldValue: 3
+                                                          value: null
+                                                          op: remove
+                                                          from: ""
+                                                          path: /2
+

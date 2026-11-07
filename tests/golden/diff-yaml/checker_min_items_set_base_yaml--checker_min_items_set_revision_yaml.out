@@ -1,0 +1,117 @@
+paths:
+    modified:
+        /batch:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            minItems:
+                                                from: 0
+                                                to: 2
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    minItems:
+                                                        from: 2
+                                                        to: 0
+        /items:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                query:
+                                    ids:
+                                        schema:
+                                            minItems:
+                                                from: 0
+                                                to: 3
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    tags:
+                                                        minItems:
+                                                            from: 0
+                                                            to: 3
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            tags:
+                                                                minItems:
+                                                                    from: 3
+                                                                    to: 0
+endpoints:
+    modified:
+        ?   method: POST
+            path: /batch
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                minItems:
+                                    from: 0
+                                    to: 2
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        minItems:
+                                            from: 2
+                                            to: 0
+        ?   method: POST
+            path: /items
+        :   parameters:
+                modified:
+                    query:
+                        ids:
+                            schema:
+                                minItems:
+                                    from: 0
+                                    to: 3
+            requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        tags:
+                                            minItems:
+                                                from: 0
+                                                to: 3
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                tags:
+                                                    minItems:
+                                                        from: 3
+                                                        to: 0
+

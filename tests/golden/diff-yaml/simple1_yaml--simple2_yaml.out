@@ -1,0 +1,16 @@
+paths:
+    modified:
+        /api/test:
+            operations:
+                added:
+                    - POST
+                deleted:
+                    - GET
+endpoints:
+    added:
+        - method: POST
+          path: /api/test
+    deleted:
+        - method: GET
+          path: /api/test
+

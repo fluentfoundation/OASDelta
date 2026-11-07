@@ -1,0 +1,20 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /api/{domain}/{project}/install-command
+- Modified path param: domain
+  - Schema changed
+    - Deleted enum values: [removed-value]
+
+POST /register
+- Responses changed
+  - Modified response: default
+    - Content changed
+      - New media type: application/json
+
+

@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[response-body-const-changed] at ./checker/response_property_const_changed_revision.yaml
+	in API POST /api/v1.0/groups
+		the response body `text/plain` const value changed from `NotFound` to `Error` for the status `404`
+
+error	[response-property-const-changed] at ./checker/response_property_const_changed_revision.yaml
+	in API POST /api/v1.0/groups
+		the `status` response property const value changed from `ok` to `success` for the status `200`
+
+

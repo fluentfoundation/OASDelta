@@ -1,0 +1,161 @@
+paths:
+    modified:
+        /example:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            first:
+                                                                properties:
+                                                                    modified:
+                                                                        shared:
+                                                                            properties:
+                                                                                added:
+                                                                                    - extra
+                                                                                modified:
+                                                                                    id:
+                                                                                        pattern:
+                                                                                            from: ""
+                                                                                            to: ^[0-9]+$
+                                                            fourth:
+                                                                properties:
+                                                                    modified:
+                                                                        shared:
+                                                                            properties:
+                                                                                added:
+                                                                                    - extra
+                                                                                modified:
+                                                                                    id:
+                                                                                        pattern:
+                                                                                            from: ""
+                                                                                            to: ^[0-9]+$
+                                                            second:
+                                                                properties:
+                                                                    modified:
+                                                                        shared:
+                                                                            properties:
+                                                                                added:
+                                                                                    - extra
+                                                                                modified:
+                                                                                    id:
+                                                                                        pattern:
+                                                                                            from: ""
+                                                                                            to: ^[0-9]+$
+                                                            third:
+                                                                properties:
+                                                                    modified:
+                                                                        shared:
+                                                                            properties:
+                                                                                added:
+                                                                                    - extra
+                                                                                modified:
+                                                                                    id:
+                                                                                        pattern:
+                                                                                            from: ""
+                                                                                            to: ^[0-9]+$
+endpoints:
+    modified:
+        ?   method: GET
+            path: /example
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                first:
+                                                    properties:
+                                                        modified:
+                                                            shared:
+                                                                properties:
+                                                                    added:
+                                                                        - extra
+                                                                    modified:
+                                                                        id:
+                                                                            pattern:
+                                                                                from: ""
+                                                                                to: ^[0-9]+$
+                                                fourth:
+                                                    properties:
+                                                        modified:
+                                                            shared:
+                                                                properties:
+                                                                    added:
+                                                                        - extra
+                                                                    modified:
+                                                                        id:
+                                                                            pattern:
+                                                                                from: ""
+                                                                                to: ^[0-9]+$
+                                                second:
+                                                    properties:
+                                                        modified:
+                                                            shared:
+                                                                properties:
+                                                                    added:
+                                                                        - extra
+                                                                    modified:
+                                                                        id:
+                                                                            pattern:
+                                                                                from: ""
+                                                                                to: ^[0-9]+$
+                                                third:
+                                                    properties:
+                                                        modified:
+                                                            shared:
+                                                                properties:
+                                                                    added:
+                                                                        - extra
+                                                                    modified:
+                                                                        id:
+                                                                            pattern:
+                                                                                from: ""
+                                                                                to: ^[0-9]+$
+components:
+    schemas:
+        modified:
+            First:
+                properties:
+                    modified:
+                        shared:
+                            properties:
+                                added:
+                                    - extra
+                                modified:
+                                    id:
+                                        pattern:
+                                            from: ""
+                                            to: ^[0-9]+$
+            Second:
+                properties:
+                    modified:
+                        shared:
+                            properties:
+                                added:
+                                    - extra
+                                modified:
+                                    id:
+                                        pattern:
+                                            from: ""
+                                            to: ^[0-9]+$
+            Shared:
+                properties:
+                    added:
+                        - extra
+                    modified:
+                        id:
+                            pattern:
+                                from: ""
+                                to: ^[0-9]+$
+

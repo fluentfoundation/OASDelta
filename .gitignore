@@ -1,0 +1,13 @@
+bin/
+obj/
+out/
+TestResults/
+*.swp
+*.user
+.vs/
+.idea/
+
+# docs
+node_modules/
+docs/.vitepress/dist/
+docs/.vitepress/cache/

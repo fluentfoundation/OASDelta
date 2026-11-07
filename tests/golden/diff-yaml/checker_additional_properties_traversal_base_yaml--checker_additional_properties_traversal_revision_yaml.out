@@ -1,0 +1,41 @@
+paths:
+    modified:
+        /entries:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    additionalProperties:
+                                                        required:
+                                                            stringsdiff:
+                                                                deleted:
+                                                                    - kind
+                                                        properties:
+                                                            deleted:
+                                                                - kind
+endpoints:
+    modified:
+        ?   method: GET
+            path: /entries
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        additionalProperties:
+                                            required:
+                                                stringsdiff:
+                                                    deleted:
+                                                        - kind
+                                            properties:
+                                                deleted:
+                                                    - kind
+

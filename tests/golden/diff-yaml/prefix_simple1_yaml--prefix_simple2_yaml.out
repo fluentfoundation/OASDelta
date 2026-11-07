@@ -1,0 +1,19 @@
+paths:
+    added:
+        - /tenant/api/test
+        - /tenant/api/test1
+    deleted:
+        - /api/test
+        - /api/test1
+endpoints:
+    added:
+        - method: GET
+          path: /tenant/api/test
+        - method: GET
+          path: /tenant/api/test1
+    deleted:
+        - method: GET
+          path: /api/test
+        - method: GET
+          path: /api/test1
+

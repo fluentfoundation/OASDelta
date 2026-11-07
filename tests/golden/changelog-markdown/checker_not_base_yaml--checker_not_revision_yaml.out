@@ -1,0 +1,19 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: added the new required request property `/not/added_prop`
+- :warning: the `/not/modified_prop` request property's maxLength was decreased to `5`
+- :warning: removed the request property `/not/removed_prop`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

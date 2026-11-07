@@ -1,0 +1,24 @@
+webhooks:
+    modified:
+        newPet:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            required:
+                                                stringsdiff:
+                                                    added:
+                                                        - tag
+components:
+    schemas:
+        modified:
+            Pet:
+                required:
+                    stringsdiff:
+                        added:
+                            - tag
+

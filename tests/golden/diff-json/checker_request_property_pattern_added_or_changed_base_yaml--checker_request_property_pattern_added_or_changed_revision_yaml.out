@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/test":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"properties":{"modified":{"name":{"pattern":{"from":"^\\w+$","to":""}}}}}}}}}}}}}}},"components":{"schemas":{"modified":{"TestRequest":{"properties":{"modified":{"name":{"pattern":{"from":"^\\w+$","to":""}}}}}}}}}

@@ -1,0 +1,51 @@
+11 changes: 7 error, 4 warning, 0 info
+error	[request-parameter-min-set] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		for the `path` request parameter `domain`, the min was set to `7.00`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error	[request-parameter-type-changed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		for the `path` request parameter `domain`, the `type/format` was changed from `string/hyphen-separated list` to `integer/non-negative integer`
+
+error	[response-success-status-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the success response with the status `200`
+
+error	[response-success-status-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the success response with the status `201`
+
+error	[api-path-removed-without-deprecation] at ./openapi-test1.yaml
+	in API GET /api/{domain}/{project}/install-command
+		api path removed without deprecation
+
+error	[api-path-removed-without-deprecation] at ./openapi-test1.yaml
+	in API POST /register
+		api path removed without deprecation
+
+error	[api-path-removed-without-deprecation] at ./openapi-test1.yaml
+	in API POST /subscribe
+		api path removed without deprecation
+
+warning	[request-parameter-pattern-changed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		changed the pattern of the `path` request parameter `domain` from `^(?:([a-z]+-)*([a-z]+)?)$` to `^(?:\d+)$`
+		This is a warning because adding or changing a pattern may restrict the accepted values and break existing clients. For pattern changes, it is difficult to automatically analyze if the new pattern is a superset of the previous pattern (e.g. changed from '[0-9]+' to '[0-9]*')
+
+warning	[request-parameter-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `cookie` request parameter `test`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning	[request-parameter-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `header` request parameter `user`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning	[request-parameter-removed] at ./openapi-test2.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `header` request parameter `x-auth-name`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+

@@ -1,0 +1,34 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /items
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Properties changed
+          - Modified property: id
+            - Pattern changed from '' to '^x'
+          - Modified property: name
+            - Pattern changed from '' to '^x'
+          - Modified property: secret
+            - Type changed from 'string' to 'boolean'
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: id
+              - Pattern changed from '' to '^x'
+            - Modified property: name
+              - Pattern changed from '' to '^x'
+            - Modified property: secret
+              - Type changed from 'string' to 'boolean'
+
+

@@ -1,0 +1,18 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: 4
+------------------------
+GET /alpha-gone  
+DELETE /pets  
+PATCH /pets  
+GET /stable-gone  
+
+### Modified Endpoints: 1
+-------------------------
+GET /pets
+- Responses changed
+  - Modified response: 200
+    - Description changed from 'OK' to 'Pets'
+
+

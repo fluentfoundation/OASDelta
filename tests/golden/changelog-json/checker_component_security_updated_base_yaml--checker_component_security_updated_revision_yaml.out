@@ -1,0 +1,1 @@
+[{"id":"api-security-component-added","text":"the component security scheme `BasicAuth` was added","level":1,"section":"components","revisionSource":{"file":"./checker/component_security_updated_revision.yaml","line":37,"column":5,"endLine":39,"endColumn":20},"fingerprint":"08012fd8a0da"}]

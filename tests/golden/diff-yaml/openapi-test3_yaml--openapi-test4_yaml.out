@@ -1,0 +1,59 @@
+extensions:
+    deleted:
+        - x-extension-test2
+info:
+    title:
+        from: Tufin1
+        to: Tufin
+    contact:
+        deleted: true
+    license:
+        deleted: true
+    version:
+        from: 1.0.1
+        to: 1.0.0
+paths:
+    added:
+        - /prefix/api/{domain}/{project}/badges/security-score
+    deleted:
+        - /api/{domain}/{project}/badges/security-score
+        - /api/{domain}/{project}/install-command
+        - /register
+        - /subscribe
+endpoints:
+    added:
+        - method: GET
+          path: /prefix/api/{domain}/{project}/badges/security-score
+        - method: POST
+          path: /prefix/api/{domain}/{project}/badges/security-score
+    deleted:
+        - method: GET
+          path: /api/{domain}/{project}/badges/security-score
+        - method: GET
+          path: /api/{domain}/{project}/install-command
+        - method: POST
+          path: /register
+        - method: POST
+          path: /subscribe
+tags:
+    deleted:
+        - reuven
+externalDocs:
+    deleted: true
+components:
+    requestBodies:
+        deleted:
+            - reuven
+    securitySchemes:
+        deleted:
+            - OAuth
+    examples:
+        deleted:
+            - a
+    links:
+        deleted:
+            - b
+    callbacks:
+        deleted:
+            - test
+

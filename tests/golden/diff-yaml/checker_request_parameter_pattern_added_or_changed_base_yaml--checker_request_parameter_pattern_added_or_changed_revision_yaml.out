@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /test:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                query:
+                                    category:
+                                        schema:
+                                            pattern:
+                                                from: ^\w+$
+                                                to: ""
+endpoints:
+    modified:
+        ?   method: POST
+            path: /test
+        :   parameters:
+                modified:
+                    query:
+                        category:
+                            schema:
+                                pattern:
+                                    from: ^\w+$
+                                    to: ""
+

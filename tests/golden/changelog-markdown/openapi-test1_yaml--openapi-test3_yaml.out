@@ -1,0 +1,53 @@
+# API Changelog 1.0.0 vs. 1.0.1
+
+
+## API Changes
+
+### GET /api/{domain}/{project}/badges/security-score
+- :warning: removed the success response with the status `200`
+- :warning: removed the success response with the status `201`
+- :warning: deleted the `cookie` request parameter `test`
+- :warning: deleted the `header` request parameter `user`
+- :warning: deleted the `query` request parameter `filter`
+-  api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
+-  the endpoint now allows anonymous access
+-  api tag `security` removed
+-  for the `query` request parameter `token`, the maxLength was increased from `29` to `30`
+-  removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image`
+-  for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any`
+-  removed the non-success response with the status `400`
+
+
+### GET /api/{domain}/{project}/install-command
+- :warning: deleted the `header` request parameter `network-policies`
+-  the endpoint now allows anonymous access
+-  added the new optional `header` request parameter `name` to all path's operations
+-  added the new enum value `test1` to the `path` request parameter `project`
+
+
+### POST /register
+- :warning: the endpoint scheme security `bearerAuth` was removed from the API
+- :warning: the security scope `write:pets` was added to the endpoint's security scheme `OAuth`
+
+
+### POST /subscribe
+-  the endpoint now allows anonymous access
+
+
+
+
+## Components
+-  removed the schema `network-policies`
+-  removed the schema `rules`
+-  the component security scheme `OAuth` oauth `authorizationCode` flow scope `admin` was added
+-  the component security scheme `OAuth` oauth `authorizationCode` flow scope `accountWrite` was updated from `Allows account data to be written` to `Allows accounts data to be written`
+-  the component security scheme `AccessToken` was removed
+-  the component security scheme `bearerAuth` was removed
+
+
+## Info
+-  a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`
+
+
+
+

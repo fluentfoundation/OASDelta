@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-parameter-enum-value-removed] at openapi-test703.yaml
+	in API GET /api/{domain}/{project}/install-command
+		removed the enum value `removed-value` from the `path` request parameter `domain`
+
+

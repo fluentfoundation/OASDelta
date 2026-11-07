@@ -1,0 +1,6 @@
+1 changes: 0 error, 1 warning, 0 info
+warning	[response-property-pattern-changed] at ./checker/response_pattern_added_or_changed_revision.yaml
+	in API POST /api/v1.0/groups
+		the `data/created` response's property pattern was changed from `^[a-z]+$` to `^(?:([a-z]+-)*([a-z]+)?)$` for the status `200`
+
+

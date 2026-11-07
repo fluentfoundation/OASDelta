@@ -1,0 +1,22 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the request's body exclusiveMaximum was set to `100.00`
+- :warning: the request's body exclusiveMinimum was set to `0.00`
+- :warning: for the `query` request parameter `limit`, the exclusiveMaximum was set to `100.00`
+- :warning: for the `query` request parameter `limit`, the exclusiveMinimum was set to `0.00`
+- :warning: the `price` request property's exclusiveMaximum was set to `1000.00`
+- :warning: the `price` request property's exclusiveMinimum was set to `0.00`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"properties":{"modified":{"pet":{"allOf":{"added":[{"index":0,"title":"annotation-only subschema on a property"}]}}}}}}}}}}}}}}}}

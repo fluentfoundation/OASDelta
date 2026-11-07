@@ -1,0 +1,77 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    anyOf:
+                                                        deleted:
+                                                            - index: 2
+                                                              component: Rabbit
+                                                        modified:
+                                                            - base:
+                                                                index: 0
+                                                                component: Dog
+                                                              revision:
+                                                                index: 0
+                                                                component: Dog
+                                                              diff:
+                                                                properties:
+                                                                    modified:
+                                                                        breed:
+                                                                            anyOf:
+                                                                                deleted:
+                                                                                    - index: 2
+                                                                                      component: Breed3
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        anyOf:
+                                            deleted:
+                                                - index: 2
+                                                  component: Rabbit
+                                            modified:
+                                                - base:
+                                                    index: 0
+                                                    component: Dog
+                                                  revision:
+                                                    index: 0
+                                                    component: Dog
+                                                  diff:
+                                                    properties:
+                                                        modified:
+                                                            breed:
+                                                                anyOf:
+                                                                    deleted:
+                                                                        - index: 2
+                                                                          component: Breed3
+components:
+    schemas:
+        deleted:
+            - Breed3
+            - Rabbit
+        modified:
+            Dog:
+                properties:
+                    modified:
+                        breed:
+                            anyOf:
+                                deleted:
+                                    - index: 2
+                                      component: Breed3
+

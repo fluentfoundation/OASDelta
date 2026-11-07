@@ -1,0 +1,243 @@
+extensions:
+    added:
+        - x-extension-test2
+info:
+    title:
+        from: Tufin
+        to: Tufin1
+    contact:
+        url:
+            from: ""
+            to: www.tufin.com
+    license:
+        added: true
+paths:
+    added:
+        - /api/{domain}/{project}/install-command
+        - /register
+        - /subscribe
+    modified:
+        /api/{domain}/{project}/badges/security-score:
+            operations:
+                deleted:
+                    - POST
+                modified:
+                    GET:
+                        extensions:
+                            added:
+                                - x-beta
+                        operationID:
+                            from: ""
+                            to: GetSecurityScore
+                        parameters:
+                            added:
+                                header:
+                                    - x-auth-name
+                            deleted:
+                                query:
+                                    - filter
+                            modified:
+                                path:
+                                    domain:
+                                        schema:
+                                            type:
+                                                added:
+                                                    - string
+                                                deleted:
+                                                    - integer
+                                            format:
+                                                from: non-negative integer
+                                                to: hyphen-separated list
+                                            description:
+                                                from: Non-negative integers (including zero)
+                                                to: Hyphen-separated list of lowercase string
+                                            example:
+                                                from: "100"
+                                                to: generic-bank
+                                            min:
+                                                from: 7
+                                                to: null
+                                            pattern:
+                                                from: ^(?:\d+)$
+                                                to: ^(?:([a-z]+-)*([a-z]+)?)$
+                                query:
+                                    image:
+                                        extensions:
+                                            added:
+                                                - x-extension-test
+                                        explode:
+                                            from: true
+                                            to: null
+                                        schema:
+                                            not:
+                                                schemaAdded: true
+                                            type:
+                                                deleted:
+                                                    - string
+                                            format:
+                                                from: general string
+                                                to: ""
+                                            description:
+                                                from: alphanumeric with underscore, dash, period, slash and colon
+                                                to: ""
+                                            example:
+                                                from: tufinim/generic-bank:cia-latest
+                                                to: null
+                                            pattern:
+                                                from: ^(?:[\w-./:]+)$
+                                                to: ""
+                                        examples:
+                                            added:
+                                                - "0"
+                                                - "1"
+                                    token:
+                                        schema:
+                                            anyOf:
+                                                deleted:
+                                                    - index: 0
+                                                    - index: 1
+                                            type:
+                                                added:
+                                                    - string
+                                            format:
+                                                from: ""
+                                                to: uuid
+                                            description:
+                                                from: ""
+                                                to: RFC 4122 UUID
+                                            example:
+                                                from: null
+                                                to: 26734565-dbcc-449a-a370-0beaaf04b0e7
+                                            maxLength:
+                                                from: null
+                                                to: 30
+                                            pattern:
+                                                from: ""
+                                                to: ^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$
+endpoints:
+    added:
+        - method: GET
+          path: /api/{domain}/{project}/install-command
+        - method: POST
+          path: /register
+        - method: POST
+          path: /subscribe
+    deleted:
+        - method: POST
+          path: /api/{domain}/{project}/badges/security-score
+    modified:
+        ?   method: GET
+            path: /api/{domain}/{project}/badges/security-score
+        :   extensions:
+                added:
+                    - x-beta
+            operationID:
+                from: ""
+                to: GetSecurityScore
+            parameters:
+                added:
+                    header:
+                        - x-auth-name
+                deleted:
+                    query:
+                        - filter
+                modified:
+                    path:
+                        domain:
+                            schema:
+                                type:
+                                    added:
+                                        - string
+                                    deleted:
+                                        - integer
+                                format:
+                                    from: non-negative integer
+                                    to: hyphen-separated list
+                                description:
+                                    from: Non-negative integers (including zero)
+                                    to: Hyphen-separated list of lowercase string
+                                example:
+                                    from: "100"
+                                    to: generic-bank
+                                min:
+                                    from: 7
+                                    to: null
+                                pattern:
+                                    from: ^(?:\d+)$
+                                    to: ^(?:([a-z]+-)*([a-z]+)?)$
+                    query:
+                        image:
+                            extensions:
+                                added:
+                                    - x-extension-test
+                            explode:
+                                from: true
+                                to: null
+                            schema:
+                                not:
+                                    schemaAdded: true
+                                type:
+                                    deleted:
+                                        - string
+                                format:
+                                    from: general string
+                                    to: ""
+                                description:
+                                    from: alphanumeric with underscore, dash, period, slash and colon
+                                    to: ""
+                                example:
+                                    from: tufinim/generic-bank:cia-latest
+                                    to: null
+                                pattern:
+                                    from: ^(?:[\w-./:]+)$
+                                    to: ""
+                            examples:
+                                added:
+                                    - "0"
+                                    - "1"
+                        token:
+                            schema:
+                                anyOf:
+                                    deleted:
+                                        - index: 0
+                                        - index: 1
+                                type:
+                                    added:
+                                        - string
+                                format:
+                                    from: ""
+                                    to: uuid
+                                description:
+                                    from: ""
+                                    to: RFC 4122 UUID
+                                example:
+                                    from: null
+                                    to: 26734565-dbcc-449a-a370-0beaaf04b0e7
+                                maxLength:
+                                    from: null
+                                    to: 30
+                                pattern:
+                                    from: ""
+                                    to: ^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$
+tags:
+    added:
+        - reuven
+externalDocs:
+    added: true
+components:
+    requestBodies:
+        added:
+            - reuven
+    securitySchemes:
+        added:
+            - OAuth
+    examples:
+        added:
+            - a
+    links:
+        added:
+            - b
+    callbacks:
+        added:
+            - test
+

@@ -1,0 +1,39 @@
+paths:
+    modified:
+        /x:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            allOf[fake]:
+                                                                required:
+                                                                    stringsdiff:
+                                                                        deleted:
+                                                                            - inner
+endpoints:
+    modified:
+        ?   method: GET
+            path: /x
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                allOf[fake]:
+                                                    required:
+                                                        stringsdiff:
+                                                            deleted:
+                                                                - inner
+

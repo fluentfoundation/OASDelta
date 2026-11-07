@@ -1,0 +1,59 @@
+paths:
+    modified:
+        /example:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            left:
+                                                                properties:
+                                                                    added:
+                                                                        - extra
+                                                            nested:
+                                                                format:
+                                                                    from: ""
+                                                                    to: uuid
+endpoints:
+    modified:
+        ?   method: GET
+            path: /example
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                left:
+                                                    properties:
+                                                        added:
+                                                            - extra
+                                                nested:
+                                                    format:
+                                                        from: ""
+                                                        to: uuid
+components:
+    schemas:
+        modified:
+            Holder:
+                properties:
+                    modified:
+                        inner:
+                            format:
+                                from: ""
+                                to: uuid
+            Shared:
+                properties:
+                    added:
+                        - extra
+

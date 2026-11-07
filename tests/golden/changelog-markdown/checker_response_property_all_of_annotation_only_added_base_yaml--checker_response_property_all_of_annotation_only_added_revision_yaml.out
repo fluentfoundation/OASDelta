@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /pets
+-  added annotation-only `subschema #1: annotation-only subschema` to the response body `allOf` list for the response status `200`
+
+
+
+
+
+

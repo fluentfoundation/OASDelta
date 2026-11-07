@@ -1,0 +1,32 @@
+paths:
+    added:
+        - /subscribe
+    modified:
+        /api/{domain}/{project}/install-command:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                path:
+                                    domain:
+                                        schema:
+                                            enum:
+                                                added:
+                                                    - removed-value
+endpoints:
+    added:
+        - method: POST
+          path: /subscribe
+    modified:
+        ?   method: GET
+            path: /api/{domain}/{project}/install-command
+        :   parameters:
+                modified:
+                    path:
+                        domain:
+                            schema:
+                                enum:
+                                    added:
+                                        - removed-value
+

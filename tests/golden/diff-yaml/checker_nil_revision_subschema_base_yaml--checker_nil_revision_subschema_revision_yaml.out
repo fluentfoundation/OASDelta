@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /test:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    foo:
+                                                        items:
+                                                            schemaDeleted: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /test
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        foo:
+                                            items:
+                                                schemaDeleted: true
+

@@ -1,0 +1,33 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    age:
+                                                        min:
+                                                            from: 10
+                                                            to: 15
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        age:
+                                            min:
+                                                from: 10
+                                                to: 15
+

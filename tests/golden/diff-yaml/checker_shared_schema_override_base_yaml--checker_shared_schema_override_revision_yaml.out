@@ -1,0 +1,67 @@
+paths:
+    modified:
+        /orders:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            billing:
+                                                                properties:
+                                                                    modified:
+                                                                        zip:
+                                                                            pattern:
+                                                                                from: ""
+                                                                                to: ^[0-9]{5}$
+                                                            shipping:
+                                                                properties:
+                                                                    modified:
+                                                                        zip:
+                                                                            pattern:
+                                                                                from: ""
+                                                                                to: ^[0-9]{5}$
+endpoints:
+    modified:
+        ?   method: GET
+            path: /orders
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                billing:
+                                                    properties:
+                                                        modified:
+                                                            zip:
+                                                                pattern:
+                                                                    from: ""
+                                                                    to: ^[0-9]{5}$
+                                                shipping:
+                                                    properties:
+                                                        modified:
+                                                            zip:
+                                                                pattern:
+                                                                    from: ""
+                                                                    to: ^[0-9]{5}$
+components:
+    schemas:
+        modified:
+            Address:
+                properties:
+                    modified:
+                        zip:
+                            pattern:
+                                from: ""
+                                to: ^[0-9]{5}$
+

@@ -1,0 +1,77 @@
+### New Endpoints: 1
+--------------------
+POST /api/{domain}/{project}/badges/security-score  
+
+### Deleted Endpoints: 3
+------------------------
+GET /api/{domain}/{project}/install-command  
+POST /register  
+POST /subscribe  
+
+### Modified Endpoints: 1
+-------------------------
+GET /api/{domain}/{project}/badges/security-score
+- Extensions changed
+  - Deleted extension: x-beta
+  - Deleted extension: x-extension-test
+- Tags changed from 'security' to ''
+- OperationID changed from 'GetSecurityScores' to ''
+- Deleted header param: user
+- Deleted header param: x-auth-name
+- Deleted cookie param: test
+- Modified path param: domain
+  - Schema changed
+    - Type changed from 'string' to 'integer'
+    - Format changed from 'hyphen-separated list' to 'non-negative integer'
+    - Description changed from 'Hyphen-separated list of lowercase string' to 'Non-negative integers (including zero)'
+    - Example changed from 'generic-bank' to '100'
+    - Min changed from null to 7
+    - Pattern changed from '^(?:([a-z]+-)*([a-z]+)?)$' to '^(?:\d+)$'
+- Modified query param: filter
+  - Extensions changed
+    - Deleted extension: x-extension-test
+  - Content changed
+    - Modified media type: application/json
+      - Extensions changed
+        - Deleted extension: x-extension-test
+      - Schema changed
+        - Properties changed
+          - Modified property: color
+            - Type changed from 'string' to 'number'
+- Modified query param: image
+  - Explode changed from null to true
+  - Schema changed
+    - Extensions changed
+      - Deleted extension: x-extension-test
+    - Description changed from 'alphanumeric' to 'alphanumeric with underscore, dash, period, slash and colon'
+  - Examples changed
+    - Deleted example: 0
+- Modified query param: token
+  - Schema changed
+    - Property 'AnyOf' changed
+      - Schemas added: subschema #1, subschema #2
+    - Type changed from 'string' to ''
+    - Format changed from 'uuid' to ''
+    - Description changed from 'RFC 4122 UUID' to ''
+    - Example changed from '26734565-dbcc-449a-a370-0beaaf04b0e8' to null
+    - MaxLength changed from 29 to null
+    - Pattern changed from '^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$' to ''
+- Responses changed
+  - New response: default
+  - Deleted response: 200
+  - Deleted response: 201
+  - Deleted response: 400
+
+Other Changes
+-------------
+Extensions changed
+- Deleted extension: x-extension-test
+- Deleted extension: x-extension-test2
+
+Security Requirements changed
+- Deleted security requirements: bearerAuth
+
+Servers changed
+- Deleted server: tufin.com
+
+

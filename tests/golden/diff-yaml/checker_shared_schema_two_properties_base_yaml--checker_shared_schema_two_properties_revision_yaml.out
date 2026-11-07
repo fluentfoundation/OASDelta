@@ -1,0 +1,100 @@
+paths:
+    modified:
+        /accounts:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            customerId:
+                                                                pattern:
+                                                                    from: ""
+                                                                    to: ^[0-9]+$
+                                                            ownerId:
+                                                                pattern:
+                                                                    from: ""
+                                                                    to: ^[0-9]+$
+                                                            userId:
+                                                                pattern:
+                                                                    from: ""
+                                                                    to: ^[0-9]+$
+        /orders:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            customerId:
+                                                                pattern:
+                                                                    from: ""
+                                                                    to: ^[0-9]+$
+                                                            userId:
+                                                                pattern:
+                                                                    from: ""
+                                                                    to: ^[0-9]+$
+endpoints:
+    modified:
+        ?   method: GET
+            path: /accounts
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                customerId:
+                                                    pattern:
+                                                        from: ""
+                                                        to: ^[0-9]+$
+                                                ownerId:
+                                                    pattern:
+                                                        from: ""
+                                                        to: ^[0-9]+$
+                                                userId:
+                                                    pattern:
+                                                        from: ""
+                                                        to: ^[0-9]+$
+        ?   method: GET
+            path: /orders
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                customerId:
+                                                    pattern:
+                                                        from: ""
+                                                        to: ^[0-9]+$
+                                                userId:
+                                                    pattern:
+                                                        from: ""
+                                                        to: ^[0-9]+$
+components:
+    schemas:
+        modified:
+            Id:
+                pattern:
+                    from: ""
+                    to: ^[0-9]+$
+

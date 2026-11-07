@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /t:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            p:
+                                                                type:
+                                                                    deleted:
+                                                                        - "null"
+endpoints:
+    modified:
+        ?   method: GET
+            path: /t
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                p:
+                                                    type:
+                                                        deleted:
+                                                            - "null"
+

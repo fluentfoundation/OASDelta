@@ -1,0 +1,20 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /pets
+- :warning: removed `#/components/schemas/Cat` from the request body `anyOf` list (media type: application/json)
+- :warning: removed `#/components/schemas/Cat` from the request body `anyOf` list (media type: application/xml)
+-  added `#/components/schemas/Rabbit` to the request body `anyOf` list (media type: application/json)
+-  added `#/components/schemas/Rabbit` to the request body `anyOf` list (media type: application/xml)
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

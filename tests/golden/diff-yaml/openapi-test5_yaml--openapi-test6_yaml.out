@@ -1,0 +1,53 @@
+openAPI:
+    from: 3.0.3
+    to: 3.0.0
+info:
+    title:
+        from: Tufin1
+        to: Test API
+    contact:
+        deleted: true
+    license:
+        deleted: true
+    version:
+        from: 1.0.1
+        to: 1.0.0
+paths:
+    added:
+        - /health
+        - /health/live
+        - /health/ready
+    deleted:
+        - /api/{domain}/{project}/badges/security-score
+        - /api/{domain}/{project}/install-command
+endpoints:
+    added:
+        - method: GET
+          path: /health
+        - method: GET
+          path: /health/live
+        - method: GET
+          path: /health/ready
+    deleted:
+        - method: GET
+          path: /api/{domain}/{project}/badges/security-score
+        - method: GET
+          path: /api/{domain}/{project}/install-command
+components:
+    schemas:
+        deleted:
+            - network-policies
+            - requests
+            - rules
+    headers:
+        deleted:
+            - test
+            - testc
+    responses:
+        deleted:
+            - default
+    securitySchemes:
+        deleted:
+            - AccessToken
+            - bearerAuth
+

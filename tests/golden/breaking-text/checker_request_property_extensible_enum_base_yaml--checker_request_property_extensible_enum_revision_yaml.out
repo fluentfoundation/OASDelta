@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-property-x-extensible-enum-value-removed] at ./checker/request_property_extensible_enum_revision.yaml
+	in API POST /pets
+		removed the x-extensible-enum value `sold` of the request property `name`
+
+

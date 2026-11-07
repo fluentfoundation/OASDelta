@@ -1,0 +1,25 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the `kind` request property const value changed from `typeA` to `typeB`
+- :warning: the `data/then/value` request property's min was increased to `5.00`
+- :warning: the `data/contains` request property's minLength was increased from `1` to `3`
+- :warning: the `data/contentSchema` request property's minLength was increased from `1` to `3`
+- :warning: the `data/else/value` request property's minLength was increased from `1` to `3`
+- :warning: the `data/prefixItems[subschema #1]` request property's minLength was increased from `1` to `3`
+- :warning: the `data/propertyNames` request property's minLength was increased from `1` to `3`
+- :warning: the `data/unevaluatedItems` request property's minLength was increased from `1` to `3`
+- :warning: the `data/unevaluatedProperties` request property's minLength was increased from `1` to `3`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

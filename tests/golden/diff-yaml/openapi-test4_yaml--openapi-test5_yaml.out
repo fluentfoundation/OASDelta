@@ -1,0 +1,46 @@
+info:
+    title:
+        from: Tufin
+        to: Tufin1
+    contact:
+        added: true
+    license:
+        added: true
+    version:
+        from: 1.0.0
+        to: 1.0.1
+paths:
+    added:
+        - /api/{domain}/{project}/badges/security-score
+        - /api/{domain}/{project}/install-command
+    deleted:
+        - /prefix/api/{domain}/{project}/badges/security-score
+endpoints:
+    added:
+        - method: GET
+          path: /api/{domain}/{project}/badges/security-score
+        - method: GET
+          path: /api/{domain}/{project}/install-command
+    deleted:
+        - method: GET
+          path: /prefix/api/{domain}/{project}/badges/security-score
+        - method: POST
+          path: /prefix/api/{domain}/{project}/badges/security-score
+components:
+    schemas:
+        added:
+            - network-policies
+            - requests
+            - rules
+    headers:
+        added:
+            - test
+            - testc
+    responses:
+        added:
+            - default
+    securitySchemes:
+        added:
+            - AccessToken
+            - bearerAuth
+

@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the request body `text/plain` const value changed from `FixedValue` to `NewFixedValue`
+- :warning: removed the media type `application/json` from the request body
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

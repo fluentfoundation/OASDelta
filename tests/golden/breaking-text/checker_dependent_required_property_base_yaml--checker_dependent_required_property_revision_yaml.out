@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-property-dependent-required-added] at ./checker/dependent_required_property_revision.yaml
+	in API POST /products
+		the `address` request property dependentRequired was added: when `street` is present, `city` are required
+
+

@@ -1,0 +1,50 @@
+paths:
+    deleted:
+        - /alpha-gone
+        - /stable-gone
+    modified:
+        /pets:
+            operations:
+                deleted:
+                    - DELETE
+                    - PATCH
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    description:
+                                        from: OK
+                                        to: Pets
+webhooks:
+    modified:
+        orderCreated:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "200":
+                                    description:
+                                        from: OK
+                                        to: Created
+endpoints:
+    deleted:
+        - method: GET
+          path: /alpha-gone
+        - method: DELETE
+          path: /pets
+        - method: PATCH
+          path: /pets
+        - method: GET
+          path: /stable-gone
+    modified:
+        ?   method: GET
+            path: /pets
+        :   responses:
+                modified:
+                    "200":
+                        description:
+                            from: OK
+                            to: Pets
+

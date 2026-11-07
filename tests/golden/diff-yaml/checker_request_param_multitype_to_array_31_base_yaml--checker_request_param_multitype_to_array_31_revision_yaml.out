@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /api/v1.0/groups:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                query:
+                                    token:
+                                        schema:
+                                            type:
+                                                added:
+                                                    - array
+                                                deleted:
+                                                    - integer
+                                                    - string
+                                            items:
+                                                schemaAdded: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /api/v1.0/groups
+        :   parameters:
+                modified:
+                    query:
+                        token:
+                            schema:
+                                type:
+                                    added:
+                                        - array
+                                    deleted:
+                                        - integer
+                                        - string
+                                items:
+                                    schemaAdded: true
+

@@ -1,0 +1,19 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /pets
+-  removed `#/components/schemas/Rabbit` from the response body `anyOf` list for the response status `200`
+-  removed `#/components/schemas/Breed3` from the `anyOf[#/components/schemas/Dog]/breed` response property `anyOf` list for the response status `200`
+
+
+
+
+## Components
+-  removed the schema `Breed3`
+-  removed the schema `Rabbit`
+
+
+
+

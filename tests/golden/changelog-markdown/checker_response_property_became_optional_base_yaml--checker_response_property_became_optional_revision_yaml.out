@@ -1,0 +1,14 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+- :warning: the response property `data/name` became optional for the status `200`
+- :warning: removed the required property `location` from the response with the `200` status
+
+
+
+
+
+

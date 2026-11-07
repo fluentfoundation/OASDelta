@@ -1,0 +1,13 @@
+### New Endpoints: 2
+--------------------
+GET /tenant/api/test  
+GET /tenant/api/test1  
+
+### Deleted Endpoints: 2
+------------------------
+GET /api/test  
+GET /api/test1  
+
+### Modified Endpoints: None
+----------------------------
+

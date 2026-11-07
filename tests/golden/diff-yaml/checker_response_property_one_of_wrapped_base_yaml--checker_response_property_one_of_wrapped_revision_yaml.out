@@ -1,0 +1,71 @@
+paths:
+    modified:
+        /example:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    oneOf:
+                                                        added:
+                                                            - index: 0
+                                                            - index: 1
+                                                    type:
+                                                        deleted:
+                                                            - object
+                                                    required:
+                                                        stringsdiff:
+                                                            deleted:
+                                                                - bar
+                                                                - foo
+                                                    properties:
+                                                        deleted:
+                                                            - bar
+                                                            - baz
+                                                            - foo
+                                                    oneOfWrapping:
+                                                        numAlternatives: 2
+                                                        movedProperties:
+                                                            - bar
+                                                            - baz
+                                                            - foo
+endpoints:
+    modified:
+        ?   method: GET
+            path: /example
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        oneOf:
+                                            added:
+                                                - index: 0
+                                                - index: 1
+                                        type:
+                                            deleted:
+                                                - object
+                                        required:
+                                            stringsdiff:
+                                                deleted:
+                                                    - bar
+                                                    - foo
+                                        properties:
+                                            deleted:
+                                                - bar
+                                                - baz
+                                                - foo
+                                        oneOfWrapping:
+                                            numAlternatives: 2
+                                            movedProperties:
+                                                - bar
+                                                - baz
+                                                - foo
+

@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /t:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    filter:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    tag:
+                                                        type:
+                                                            deleted:
+                                                                - "null"
+                                    q:
+                                        schema:
+                                            type:
+                                                deleted:
+                                                    - "null"
+endpoints:
+    modified:
+        ?   method: GET
+            path: /t
+        :   parameters:
+                modified:
+                    query:
+                        filter:
+                            schema:
+                                properties:
+                                    modified:
+                                        tag:
+                                            type:
+                                                deleted:
+                                                    - "null"
+                        q:
+                            schema:
+                                type:
+                                    deleted:
+                                        - "null"
+

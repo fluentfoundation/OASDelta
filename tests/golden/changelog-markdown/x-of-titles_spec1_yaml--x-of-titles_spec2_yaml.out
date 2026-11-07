@@ -1,0 +1,14 @@
+# API Changelog 0.1 vs. 0.1
+
+
+## API Changes
+
+### GET /test
+- :warning: added `subschema #2: Title 3` to the response body `anyOf` list for the response status `200`
+-  removed `subschema #2: Title 2` from the response body `anyOf` list for the response status `200`
+
+
+
+
+
+

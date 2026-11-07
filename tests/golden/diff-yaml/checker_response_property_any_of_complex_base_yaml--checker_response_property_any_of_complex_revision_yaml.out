@@ -1,0 +1,168 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    anyOf:
+                                                        added:
+                                                            - index: 3
+                                                              component: Fox
+                                                        modified:
+                                                            - base:
+                                                                index: 0
+                                                                component: Dog
+                                                              revision:
+                                                                index: 0
+                                                                component: Dog
+                                                              diff:
+                                                                properties:
+                                                                    modified:
+                                                                        breed:
+                                                                            anyOf:
+                                                                                modified:
+                                                                                    - base:
+                                                                                        index: 1
+                                                                                        component: Breed2
+                                                                                      revision:
+                                                                                        index: 0
+                                                                                        component: Breed2
+                                                                                      diff:
+                                                                                        properties:
+                                                                                            modified:
+                                                                                                name:
+                                                                                                    type:
+                                                                                                        added:
+                                                                                                            - number
+                                                                                                        deleted:
+                                                                                                            - string
+                                                            - base:
+                                                                index: 2
+                                                                title: Rabbit
+                                                              revision:
+                                                                index: 2
+                                                                title: Rabbit
+                                                              diff:
+                                                                type:
+                                                                    added:
+                                                                        - number
+                                                                    deleted:
+                                                                        - string
+                                                            - base:
+                                                                index: 3
+                                                              revision:
+                                                                index: 4
+                                                              diff:
+                                                                type:
+                                                                    added:
+                                                                        - number
+                                                                    deleted:
+                                                                        - string
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        anyOf:
+                                            added:
+                                                - index: 3
+                                                  component: Fox
+                                            modified:
+                                                - base:
+                                                    index: 0
+                                                    component: Dog
+                                                  revision:
+                                                    index: 0
+                                                    component: Dog
+                                                  diff:
+                                                    properties:
+                                                        modified:
+                                                            breed:
+                                                                anyOf:
+                                                                    modified:
+                                                                        - base:
+                                                                            index: 1
+                                                                            component: Breed2
+                                                                          revision:
+                                                                            index: 0
+                                                                            component: Breed2
+                                                                          diff:
+                                                                            properties:
+                                                                                modified:
+                                                                                    name:
+                                                                                        type:
+                                                                                            added:
+                                                                                                - number
+                                                                                            deleted:
+                                                                                                - string
+                                                - base:
+                                                    index: 2
+                                                    title: Rabbit
+                                                  revision:
+                                                    index: 2
+                                                    title: Rabbit
+                                                  diff:
+                                                    type:
+                                                        added:
+                                                            - number
+                                                        deleted:
+                                                            - string
+                                                - base:
+                                                    index: 3
+                                                  revision:
+                                                    index: 4
+                                                  diff:
+                                                    type:
+                                                        added:
+                                                            - number
+                                                        deleted:
+                                                            - string
+components:
+    schemas:
+        added:
+            - Fox
+        modified:
+            Breed2:
+                properties:
+                    modified:
+                        name:
+                            type:
+                                added:
+                                    - number
+                                deleted:
+                                    - string
+            Dog:
+                properties:
+                    modified:
+                        breed:
+                            anyOf:
+                                modified:
+                                    - base:
+                                        index: 1
+                                        component: Breed2
+                                      revision:
+                                        index: 0
+                                        component: Breed2
+                                      diff:
+                                        properties:
+                                            modified:
+                                                name:
+                                                    type:
+                                                        added:
+                                                            - number
+                                                        deleted:
+                                                            - string
+

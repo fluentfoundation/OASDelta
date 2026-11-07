@@ -1,0 +1,294 @@
+extensions:
+    deleted:
+        - x-extension-test
+        - x-extension-test2
+info:
+    contact:
+        added: true
+    version:
+        from: 1.0.0
+        to: 1.0.1
+paths:
+    deleted:
+        - /api/{domain}/{project}/install-command
+        - /register
+        - /subscribe
+    modified:
+        /api/{domain}/{project}/badges/security-score:
+            extensions:
+                deleted:
+                    - x-extension-test
+            operations:
+                added:
+                    - POST
+                modified:
+                    GET:
+                        extensions:
+                            deleted:
+                                - x-beta
+                                - x-extension-test
+                        tags:
+                            deleted:
+                                - security
+                        operationID:
+                            from: GetSecurityScores
+                            to: ""
+                        parameters:
+                            deleted:
+                                cookie:
+                                    - test
+                                header:
+                                    - user
+                                    - x-auth-name
+                            modified:
+                                path:
+                                    domain:
+                                        schema:
+                                            type:
+                                                added:
+                                                    - integer
+                                                deleted:
+                                                    - string
+                                            format:
+                                                from: hyphen-separated list
+                                                to: non-negative integer
+                                            description:
+                                                from: Hyphen-separated list of lowercase string
+                                                to: Non-negative integers (including zero)
+                                            example:
+                                                from: generic-bank
+                                                to: "100"
+                                            min:
+                                                from: null
+                                                to: 7
+                                            pattern:
+                                                from: ^(?:([a-z]+-)*([a-z]+)?)$
+                                                to: ^(?:\d+)$
+                                query:
+                                    filter:
+                                        extensions:
+                                            deleted:
+                                                - x-extension-test
+                                        content:
+                                            modified:
+                                                application/json:
+                                                    extensions:
+                                                        deleted:
+                                                            - x-extension-test
+                                                    schema:
+                                                        properties:
+                                                            modified:
+                                                                color:
+                                                                    type:
+                                                                        added:
+                                                                            - number
+                                                                        deleted:
+                                                                            - string
+                                    image:
+                                        explode:
+                                            from: null
+                                            to: true
+                                        schema:
+                                            extensions:
+                                                deleted:
+                                                    - x-extension-test
+                                            description:
+                                                from: alphanumeric
+                                                to: alphanumeric with underscore, dash, period, slash and colon
+                                        examples:
+                                            deleted:
+                                                - "0"
+                                    token:
+                                        schema:
+                                            anyOf:
+                                                added:
+                                                    - index: 0
+                                                    - index: 1
+                                            type:
+                                                deleted:
+                                                    - string
+                                            format:
+                                                from: uuid
+                                                to: ""
+                                            description:
+                                                from: RFC 4122 UUID
+                                                to: ""
+                                            example:
+                                                from: 26734565-dbcc-449a-a370-0beaaf04b0e8
+                                                to: null
+                                            maxLength:
+                                                from: 29
+                                                to: null
+                                            pattern:
+                                                from: ^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$
+                                                to: ""
+                        responses:
+                            added:
+                                - default
+                            deleted:
+                                - "200"
+                                - "201"
+                                - "400"
+            parameters:
+                deleted:
+                    path:
+                        - domain
+endpoints:
+    added:
+        - method: POST
+          path: /api/{domain}/{project}/badges/security-score
+    deleted:
+        - method: GET
+          path: /api/{domain}/{project}/install-command
+        - method: POST
+          path: /register
+        - method: POST
+          path: /subscribe
+    modified:
+        ?   method: GET
+            path: /api/{domain}/{project}/badges/security-score
+        :   extensions:
+                deleted:
+                    - x-beta
+                    - x-extension-test
+            tags:
+                deleted:
+                    - security
+            operationID:
+                from: GetSecurityScores
+                to: ""
+            parameters:
+                deleted:
+                    cookie:
+                        - test
+                    header:
+                        - user
+                        - x-auth-name
+                modified:
+                    path:
+                        domain:
+                            schema:
+                                type:
+                                    added:
+                                        - integer
+                                    deleted:
+                                        - string
+                                format:
+                                    from: hyphen-separated list
+                                    to: non-negative integer
+                                description:
+                                    from: Hyphen-separated list of lowercase string
+                                    to: Non-negative integers (including zero)
+                                example:
+                                    from: generic-bank
+                                    to: "100"
+                                min:
+                                    from: null
+                                    to: 7
+                                pattern:
+                                    from: ^(?:([a-z]+-)*([a-z]+)?)$
+                                    to: ^(?:\d+)$
+                    query:
+                        filter:
+                            extensions:
+                                deleted:
+                                    - x-extension-test
+                            content:
+                                modified:
+                                    application/json:
+                                        extensions:
+                                            deleted:
+                                                - x-extension-test
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    color:
+                                                        type:
+                                                            added:
+                                                                - number
+                                                            deleted:
+                                                                - string
+                        image:
+                            explode:
+                                from: null
+                                to: true
+                            schema:
+                                extensions:
+                                    deleted:
+                                        - x-extension-test
+                                description:
+                                    from: alphanumeric
+                                    to: alphanumeric with underscore, dash, period, slash and colon
+                            examples:
+                                deleted:
+                                    - "0"
+                        token:
+                            schema:
+                                anyOf:
+                                    added:
+                                        - index: 0
+                                        - index: 1
+                                type:
+                                    deleted:
+                                        - string
+                                format:
+                                    from: uuid
+                                    to: ""
+                                description:
+                                    from: RFC 4122 UUID
+                                    to: ""
+                                example:
+                                    from: 26734565-dbcc-449a-a370-0beaaf04b0e8
+                                    to: null
+                                maxLength:
+                                    from: 29
+                                    to: null
+                                pattern:
+                                    from: ^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$
+                                    to: ""
+            responses:
+                added:
+                    - default
+                deleted:
+                    - "200"
+                    - "201"
+                    - "400"
+security:
+    deleted:
+        - index: 0
+          schemes:
+            bearerAuth: []
+servers:
+    deleted:
+        - tufin.com
+tags:
+    deleted:
+        - security
+        - reuven
+externalDocs:
+    deleted: true
+components:
+    schemas:
+        deleted:
+            - network-policies
+            - rules
+    parameters:
+        deleted:
+            - network-policies
+    headers:
+        deleted:
+            - new
+            - test
+            - testc
+    requestBodies:
+        deleted:
+            - reuven
+    responses:
+        deleted:
+            - OK
+    securitySchemes:
+        deleted:
+            - AccessToken
+            - OAuth
+            - bearerAuth
+

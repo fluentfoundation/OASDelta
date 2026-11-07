@@ -1,0 +1,74 @@
+extensions:
+    deleted:
+        - x-extension-test
+        - x-extension-test2
+openAPI:
+    from: 3.0.3
+    to: 3.0.0
+info:
+    title:
+        from: Tufin
+        to: Test API
+paths:
+    added:
+        - /resource/new
+        - /resource/newest
+    deleted:
+        - /api/{domain}/{project}/badges/security-score
+        - /api/{domain}/{project}/install-command
+        - /register
+        - /subscribe
+endpoints:
+    added:
+        - method: GET
+          path: /resource/new
+        - method: GET
+          path: /resource/newest
+    deleted:
+        - method: GET
+          path: /api/{domain}/{project}/badges/security-score
+        - method: GET
+          path: /api/{domain}/{project}/install-command
+        - method: POST
+          path: /register
+        - method: POST
+          path: /subscribe
+security:
+    deleted:
+        - index: 0
+          schemes:
+            bearerAuth: []
+servers:
+    deleted:
+        - tufin.com
+tags:
+    deleted:
+        - security
+        - reuven
+externalDocs:
+    deleted: true
+components:
+    schemas:
+        deleted:
+            - network-policies
+            - rules
+    parameters:
+        deleted:
+            - network-policies
+    headers:
+        deleted:
+            - new
+            - test
+            - testc
+    requestBodies:
+        deleted:
+            - reuven
+    responses:
+        deleted:
+            - OK
+    securitySchemes:
+        deleted:
+            - AccessToken
+            - OAuth
+            - bearerAuth
+

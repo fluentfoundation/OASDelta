@@ -1,0 +1,24 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: added the new required request property `data/else/newField`
+- :warning: added the new required request property `data/then/newField`
+-  added the new optional request property `data/contains/newField`
+-  added the new optional request property `data/contentSchema/newField`
+-  added the new optional request property `data/dependentSchemas[name]/newField`
+-  added the new optional request property `data/patternProperties[^x-]/newField`
+-  added the new optional request property `data/prefixItems[subschema #1]/newField`
+-  added the new optional request property `data/unevaluatedProperties/newField`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

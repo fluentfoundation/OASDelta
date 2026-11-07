@@ -1,0 +1,14 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /pets
+-  added `#/components/schemas/Rabbit` to the request body `anyOf` list
+-  added `#/components/schemas/Breed3` to the `anyOf[#/components/schemas/Dog]/breed` request property `anyOf` list
+
+
+
+
+
+

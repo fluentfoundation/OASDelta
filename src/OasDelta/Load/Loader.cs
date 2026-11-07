@@ -280,7 +280,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
 
     private void Register(Node n, object value) => _cache[(n, value.GetType())] = value;
 
-    private Origin? MakeOrigin(Document doc, Node n, Node? key)
+    private static Origin? MakeOrigin(Document doc, Node n, Node? key)
     {
         if (!doc.TrackOrigin || n.Kind != NodeKind.Mapping) return null;
         key ??= doc.KeyOf(n);
@@ -371,7 +371,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
     }
 
     private static readonly HashSet<string> InfoKnown = Known("title", "summary", "description", "termsOfService", "contact", "license", "version");
-    private Info BuildInfo(Document doc, Node n, Node? key)
+    private static Info BuildInfo(Document doc, Node n, Node? key)
     {
         var i = new Info
         {
@@ -393,14 +393,14 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         return i;
     }
 
-    private ExternalDocs BuildExternalDocs(Document doc, Node n)
+    private static ExternalDocs BuildExternalDocs(Document doc, Node n)
     {
         var e = new ExternalDocs { Origin = MakeOrigin(doc, n, null), Description = Str(n["description"]), URL = Str(n["url"]) };
         SetExtensions(e, n, Known("description", "url"));
         return e;
     }
 
-    private Tag BuildTag(Document doc, Node n)
+    private static Tag BuildTag(Document doc, Node n)
     {
         var t = new Tag { Origin = MakeOrigin(doc, n, null), Name = Str(n["name"]), Description = Str(n["description"]) };
         if (n["externalDocs"] is { IsMapping: true } ed) t.ExternalDocs = BuildExternalDocs(doc, ed);
@@ -408,7 +408,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         return t;
     }
 
-    private List<Server> BuildServers(Document doc, Node n)
+    private static List<Server> BuildServers(Document doc, Node n)
     {
         var r = new List<Server>();
         foreach (var s in n.Items!)
@@ -693,7 +693,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         return s;
     }
 
-    private OAuthFlow? Flow(Document doc, Node? n)
+    private static OAuthFlow? Flow(Document doc, Node? n)
     {
         if (n is null || !n.IsMapping) return null;
         var f = new OAuthFlow { Origin = MakeOrigin(doc, n, null), AuthorizationURL = Str(n["authorizationUrl"]), TokenURL = Str(n["tokenUrl"]), RefreshURL = Str(n["refreshUrl"]) };

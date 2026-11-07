@@ -1344,6 +1344,11 @@ public readonly record struct Endpoint(string Method, string Path) : IOutput, IC
         return c != 0 ? c : string.CompareOrdinal(Method, other.Method);
     }
 
+    public static bool operator <(Endpoint left, Endpoint right) => left.CompareTo(right) < 0;
+    public static bool operator <=(Endpoint left, Endpoint right) => left.CompareTo(right) <= 0;
+    public static bool operator >(Endpoint left, Endpoint right) => left.CompareTo(right) > 0;
+    public static bool operator >=(Endpoint left, Endpoint right) => left.CompareTo(right) >= 0;
+
     public object? ToOutput()
     {
         var m = new OMap();

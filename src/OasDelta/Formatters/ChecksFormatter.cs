@@ -60,10 +60,12 @@ public static class ChecksFormatter
         _ => Text(checks, l),
     };
 
+    private static readonly string[] TextHeader = ["ID", "LEVEL", "GUARDS", "GENERATED", "DESCRIPTION"];
+
     /// <summary>text/tabwriter with minwidth 1, tabwidth 1, padding 1, space padding; the description column is left ragged.</summary>
     private static string Text(List<CheckOut> checks, Localizer l)
     {
-        var rows = new List<string[]> { new[] { "ID", "LEVEL", "GUARDS", "GENERATED", "DESCRIPTION" } };
+        var rows = new List<string[]> { TextHeader };
         foreach (var c in checks) rows.Add([c.Id, c.Level, string.Join(",", c.Guards), c.Generated ? "yes" : "", l.Get(c.Description, [])]);
         var widths = new int[4];
         foreach (var r in rows) for (int i = 0; i < 4; i++) widths[i] = Math.Max(widths[i], Math.Max(1, r[i].Length) + 1);

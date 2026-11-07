@@ -63,7 +63,7 @@ public static class Color
     public static string Gray(string s) => "\u001b[37m" + s + Reset;
     public static string Bold(string s) => "\u001b[1m" + s + Reset;
 
-    public static bool PipedOutput = Console.IsOutputRedirected;
+    public static readonly bool PipedOutput = Console.IsOutputRedirected;
     public static bool Enabled(ColorMode m) => m == ColorMode.Always || (m == ColorMode.Auto && !PipedOutput);
 }
 
@@ -330,7 +330,7 @@ public sealed class Change
         {
             case ChangeSection.Api:
                 if (ignorePath == "") return false;
-                return ignorePath == Path.ToLowerInvariant() && ignoreLine.Contains((Operation + " " + Path).ToLowerInvariant(), StringComparison.Ordinal)
+                return string.Equals(ignorePath, Path.ToLowerInvariant(), StringComparison.Ordinal) && ignoreLine.Contains((Operation + " " + Path).ToLowerInvariant(), StringComparison.Ordinal)
                     && ignoreLine.Contains(GetUncolorizedText(l).ToLowerInvariant(), StringComparison.Ordinal);
             case ChangeSection.Component:
                 return ignoreLine.Contains(GetUncolorizedText(l).ToLowerInvariant(), StringComparison.Ordinal) && ignoreLine.Contains("components", StringComparison.Ordinal);

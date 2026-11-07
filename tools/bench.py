@@ -2,9 +2,10 @@
 """Wall-clock and peak-memory comparison of the Go oasdiff and the C# oasdelta binaries.
 
 usage: bench.py --go GO_BINARY --cs CS_BINARY --specs DIR [--fixtures DIR] [--runs N] [--warmup N]
-                [--json OUT.json] [--markdown OUT.md]
+                [--real-world TESTDATA_DIR [--real-world-runs N]] [--json OUT.json] [--markdown OUT.md]
 
-DIR holds base.yaml/revision.yaml/base.json/revision.json from tools/gen_bench_spec.py. Each
+DIR holds base.yaml/revision.yaml/base.json/revision.json from tools/gen_bench_spec.py. With
+--real-world, pairs of real API releases from a checkout of OASDelta-TestData are added. Each
 (input, command) case runs WARMUP untimed times and RUNS timed times per binary, interleaving
 the two binaries so that background noise hits both equally. Wall time covers the whole process
 (start-up included); peak memory is the peak resident set (Linux/macOS: wait4 rusage) or peak
@@ -108,6 +109,14 @@ def cpu_name():
     return platform.processor() or "unknown"
 
 
+# pairs from https://github.com/fluentfoundation/OASDelta-TestData (pairs.json ids)
+REAL_WORLD = [
+    ("github", "GitHub REST API (YAML, ~10 MB, Aug → Nov 2026)", "github-rest/api.github.com.yaml@2026-08-28..2026-11-06"),
+    ("stripe", "Stripe API (JSON, ~8 MB, v2500 → v2598)", "stripe/spec3.json@v2500..v2598"),
+    ("k8s-core", "Kubernetes core/v1 (JSON, ~2 MB, 1.36 → 1.37)", "kubernetes/core-v1.json@v1.36.0..v1.37.0"),
+]
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--go", required=True, help="Go oasdiff binary")
@@ -119,17 +128,31 @@ def main():
     ap.add_argument("--json", help="write results as JSON")
     ap.add_argument("--markdown", help="write (append) a Markdown table, e.g. $GITHUB_STEP_SUMMARY")
     ap.add_argument("--label", default=None, help="platform label for the report (default: OS name)")
+    ap.add_argument("--real-world", help="a checkout of OASDelta-TestData: also benchmark real API releases from it")
+    ap.add_argument("--real-world-runs", type=int, default=5)
+    ap.add_argument("--real-world-commit", help="the OASDelta-TestData commit, for the report")
     a = ap.parse_args()
 
     go, cs = os.path.abspath(a.go), os.path.abspath(a.cs)
     specs, fixtures = os.path.abspath(a.specs), os.path.abspath(a.fixtures)
 
-    inputs = [
-        ("small", "Small YAML (openapi-test1 → test3, 10 KB)", fixtures, "openapi-test1.yaml", "openapi-test3.yaml"),
-        ("large-yaml", "Large YAML (synthetic, ~1.5 MB)", specs, "base.yaml", "revision.yaml"),
-        ("large-json", "Large JSON (synthetic, ~1.1 MB)", specs, "base.json", "revision.json"),
-    ]
     commands = [["diff"], ["summary"], ["breaking"], ["changelog", "-f", "json"], ["changelog", "-f", "html"]]
+    # (key, title, kind, cwd, base, revision, commands, runs, warmup)
+    inputs = [
+        ("small", "Small YAML (openapi-test1 → test3, 10 KB)", "synthetic", fixtures, "openapi-test1.yaml", "openapi-test3.yaml", commands, a.runs, a.warmup),
+        ("large-yaml", "Large YAML (synthetic, ~1.5 MB)", "synthetic", specs, "base.yaml", "revision.yaml", commands, a.runs, a.warmup),
+        ("large-json", "Large JSON (synthetic, ~1.1 MB)", "synthetic", specs, "base.json", "revision.json", commands, a.runs, a.warmup),
+    ]
+    if a.real_world:
+        # real API releases from OASDelta-TestData: each case takes seconds, so fewer runs
+        root = os.path.abspath(a.real_world)
+        with open(os.path.join(root, "pairs.json"), encoding="utf-8") as f:
+            pairs = {p["id"]: p for p in json.load(f)["pairs"]}
+        rw_commands = [["diff"], ["breaking"], ["changelog", "-f", "json"]]
+        for key, title, pid in REAL_WORLD:
+            p = pairs[pid]
+            cmds = [c for c in rw_commands if c[0] not in p.get("skip_commands", {})]
+            inputs.append((key, title, "real-world", root, p["base"], p["revision"], cmds, a.real_world_runs, 1))
 
     label = a.label or {"win32": "Windows", "darwin": "macOS"}.get(sys.platform, "Linux")
     meta = {
@@ -151,19 +174,21 @@ def main():
             if "GITHUB_RUN_ID" in os.environ else ""
         ),
     }
-    sizes = {key: os.path.getsize(os.path.join(d, b)) + os.path.getsize(os.path.join(d, r)) for key, _, d, b, r in inputs}
+    sizes = {i[0]: os.path.getsize(os.path.join(i[3], i[4])) + os.path.getsize(os.path.join(i[3], i[5])) for i in inputs}
+    meta["real_world_runs"] = a.real_world_runs if a.real_world else 0
+    meta["test_data_commit"] = a.real_world_commit or ""
 
     print(f"{label}: {meta['cpu']} ({meta['cpu_count']} cores); {meta['go_version']} vs {meta['cs_version']}", flush=True)
     print(f"{'input':<12}{'command':<20}{'go ms':>10}{'c# ms':>10}{'speed-up':>10}{'go MB':>9}{'c# MB':>9}  output", flush=True)
     results = []
-    for key, title, cwd, base, rev in inputs:
-        for cmd in commands:
+    for key, title, kind, cwd, base, rev, cmds, runs, warmup in inputs:
+        for cmd in cmds:
             args = [*cmd, base, rev]
-            for _ in range(a.warmup):
+            for _ in range(warmup):
                 run_once(go, args, cwd)
                 run_once(cs, args, cwd)
             gs, cs_ = [], []
-            for _ in range(a.runs):
+            for _ in range(runs):
                 gs.append(run_once(go, args, cwd))
                 cs_.append(run_once(cs, args, cwd))
             g, c = stats(gs), stats(cs_)
@@ -171,6 +196,8 @@ def main():
             row = {
                 "input": key,
                 "input_title": title,
+                "kind": kind,
+                "runs": runs,
                 "input_bytes": sizes[key],
                 "command": " ".join(cmd),
                 "go": g,

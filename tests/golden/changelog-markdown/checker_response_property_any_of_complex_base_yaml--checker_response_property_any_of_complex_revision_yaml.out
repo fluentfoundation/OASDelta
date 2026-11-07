@@ -6,8 +6,8 @@
 ### GET /pets
 - :warning: added `#/components/schemas/Fox` to the response body `anyOf` list for the response status `200`
 - :warning: the `anyOf[#/components/schemas/Dog]/breed/anyOf[#/components/schemas/Breed2]/name` response's property `type` changed from `string` to `number` for status `200`
-- :warning: the `anyOf[subschema #3: Rabbit]` response's property `type` changed from `string` to `number` for status `200`
-- :warning: the `anyOf[subschema #4 -> subschema #5]` response's property `type` changed from `string` to `number` for status `200`
+- :warning: the `anyOf[subschema #3: Rabbit]/` response's property `type` changed from `string` to `number` for status `200`
+- :warning: the `anyOf[subschema #4 -> subschema #5]/` response's property `type` changed from `string` to `number` for status `200`
 
 
 

@@ -1,0 +1,18 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "YAML scalar styles", "version": "1.0.1" },
+  "paths": {
+    "/labels": {
+      "get": {
+        "summary": "fun size \ud83c\udf6b and \ud83d\ude92 wontfix",
+        "description": "Go:\n\ttype MyAPIObject struct {\n\t\tName  string\n\t}\n",
+        "parameters": [
+          { "name": "q", "in": "query", "description": "tab\tthere", "schema": { "type": "string" } },
+          { "name": "nel", "in": "query", "description": "next\u0085line", "schema": { "type": "string" } },
+          { "name": "c1", "in": "query", "description": "control\u0080char \u00a0nbsp", "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "ok" } }
+      }
+    }
+  }
+}

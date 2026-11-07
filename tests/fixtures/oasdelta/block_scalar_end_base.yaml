@@ -1,0 +1,18 @@
+openapi: 3.0.3
+info:
+  title: Block scalar end positions
+  version: 1.0.0
+paths:
+  /budgets:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        "200":
+          description: ok

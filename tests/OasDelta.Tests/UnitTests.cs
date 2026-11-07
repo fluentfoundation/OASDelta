@@ -94,6 +94,35 @@ public class YamlTests
         var yaml = YamlEmitter.Emit(new OMap { { "a", "true" }, { "b", "17113002e812" }, { "c", "12" }, { "d", "plain" } });
         Assert.Equal("a: \"true\"\nb: 17113002e812\nc: \"12\"\nd: plain\n", yaml);
     }
+
+    [Theory] // go-yaml v3 is_printable: NEL and everything beyond the BMP force double quotes and are escaped
+    [InlineData("fun size \U0001F36B", "a: \"fun size \\U0001F36B\"\n")]
+    [InlineData("next\u0085line", "a: \"next\\Nline\"\n")]
+    [InlineData("tab\there", "a: \"tab\\there\"\n")]
+    [InlineData("caf\u00e9 \u00a0", "a: caf\u00e9 \u00a0\n")] // is_space is U+0020 only: a trailing NBSP keeps the plain style
+    public void QuotesAndEscapesLikeGoYaml(string value, string expected) =>
+        Assert.Equal(expected, YamlEmitter.Emit(new OMap { { "a", value } }));
+
+    [Fact] // go-yaml v3.0.5: a tab rules out plain and single quotes, but not a literal block
+    public void TabsStayInLiteralBlocks() =>
+        Assert.Equal("a: |-\n    Go:\n    \ttype T struct{}\n", YamlEmitter.Emit(new OMap { { "a", "Go:\n\ttype T struct{}" } }));
+
+    [Fact]
+    public void StreamingMatchesBufferedOutput()
+    {
+        // several MB, so EmitTo flushes many times; the last value ends in newlines that EmitTo must still trim
+        var doc = new OMap();
+        for (int i = 0; i < 40_000; i++)
+            doc.Add($"key{i}", new OMap { { "from", $"value {i}" }, { "to", new List<object?> { i, $"line\n{i}", true } } });
+        doc.Add("zz", "trailing\n\n\n");
+        var yaml = new StringWriter { NewLine = "\n" };
+        YamlEmitter.EmitTo(yaml, doc);
+        Assert.Equal(YamlEmitter.Emit(doc).TrimEnd('\n') + "\n", yaml.ToString());
+        var json = new StringWriter { NewLine = "\n" };
+        JsonEmitter.EmitTo(json, doc);
+        Assert.Equal(JsonEmitter.Emit(doc), json.ToString());
+        Assert.True(json.ToString().Length > 2 << 20, "the document should be large enough to flush several times");
+    }
 }
 
 public class SourceTests

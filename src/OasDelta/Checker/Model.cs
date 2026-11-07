@@ -273,7 +273,7 @@ public sealed class Change
         foreach (var d in ds) if (!c.Disclaimers.Contains(d)) c.Disclaimers.Add(d);
         return c;
     }
-    public Change WithAllOfDisclaimers(bool underAllOf, SchemaDiff? schemaDiff) => WithDisclaimers(Walkers.AllOfDisclaimers(underAllOf, schemaDiff, Id));
+    public Change WithAllOfDisclaimers(bool underAllOf, SchemaDiff? schemaDiff) => WithDisclaimers(Walkers.AllOfDisclaimers(underAllOf, schemaDiff));
     public Change WithShared(SharedSchema? s) { var c = Clone(); c.Shared = s; return c; }
     public SharedSchema? GetSharedSchema() => Shared;
 

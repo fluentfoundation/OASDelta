@@ -1,0 +1,39 @@
+openapi: 3.0.3
+info:
+  title: Block scalar end positions
+  version: 1.0.1
+paths:
+  /budgets:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                expires_at:
+                  oneOf:
+                  - type: string
+                    format: date
+                  - type: integer
+                  description: |-
+                    The date the budget will expire.
+
+                    Only supported for user budgets.
+                partial_success:
+                  type: boolean
+                  description: |
+                    When enabled, deployments are processed
+                    and failures are reported.
+                strict:
+                  type: boolean
+                  description: >-
+                    Folded text
+                    over two lines.
+
+
+      responses:
+        "200":
+          description: ok

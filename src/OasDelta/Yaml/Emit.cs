@@ -11,8 +11,11 @@ public interface IOutput { object? ToOutput(); }
 public sealed class YamlEmitter
 {
     private const int Best = 4;
+    private const int FlushAt = 1 << 20;
     private readonly StringBuilder _sb;
-    private YamlEmitter(StringBuilder sb) => _sb = sb;
+    private readonly TextWriter? _out;
+    private long _flushed;
+    private YamlEmitter(StringBuilder sb, TextWriter? output = null) { _sb = sb; _out = output; }
 
     public static string Emit(object? value)
     {
@@ -20,6 +23,39 @@ public sealed class YamlEmitter
         var e = new YamlEmitter(sb);
         e.EmitRoot(Normalize(value, true));
         return sb.ToString();
+    }
+
+    /// <summary>Writes the same text as <c>Emit(value).TrimEnd('\n') + "\n"</c>, streamed to <paramref name="output"/> in
+    /// chunks, so the size of the document is not limited by the maximum length of a .NET string (about 1 GB).</summary>
+    public static void EmitTo(TextWriter output, object? value)
+    {
+        var sb = new StringBuilder(FlushAt + 4096);
+        var e = new YamlEmitter(sb, output);
+        e.EmitRoot(Normalize(value, true));
+        int n = sb.Length;
+        while (n > 0 && sb[n - 1] == '\n') n--;
+        foreach (var chunk in sb.GetChunks())
+        {
+            int len = Math.Min(chunk.Length, n);
+            if (len <= 0) break;
+            output.Write(chunk.Span[..len]);
+            n -= len;
+        }
+        output.Write('\n');
+    }
+
+    private bool AtStart => _sb.Length == 0 && _flushed == 0;
+
+    /// <summary>Streams everything but trailing newlines (which EmitTo trims at the very end) once the buffer is large.</summary>
+    private void Spill()
+    {
+        if (_out is null || _sb.Length < FlushAt) return;
+        int n = _sb.Length;
+        while (n > 0 && _sb[n - 1] == '\n') n--;
+        int keep = _sb.Length - n;
+        _out.Write(_sb.ToString(0, n));
+        _flushed += n;
+        _sb.Clear().Append('\n', keep);
     }
 
     /// <summary>Resolves IOutput / dictionaries into OMap / lists so emitters see a uniform tree.</summary>
@@ -83,9 +119,10 @@ public sealed class YamlEmitter
         bool first = true;
         foreach (var (k, v) in m)
         {
+            Spill();
             if (!(first && inline))
             {
-                if (_sb.Length > 0) _sb.Append('\n');
+                if (!AtStart) _sb.Append('\n');
                 _sb.Append(' ', indent);
             }
             first = false;
@@ -139,9 +176,10 @@ public sealed class YamlEmitter
         bool first = true;
         foreach (var v in l)
         {
+            Spill();
             if (!(first && inline))
             {
-                if (_sb.Length > 0) _sb.Append('\n');
+                if (!AtStart) _sb.Append('\n');
                 _sb.Append(' ', indent);
             }
             first = false;
@@ -223,8 +261,10 @@ public sealed class YamlEmitter
 
     private struct Analysis { public bool BlockPlainAllowed, SingleQuotedAllowed, BlockAllowed; }
 
+    /// <summary>go-yaml v3 is_printable: #x0A, #x20-#x7E, #xA0-#xD7FF, #xE000-#xFFFD except #xFEFF. NEL (#x85), tab and
+    /// everything beyond the BMP (emoji included) are not printable, so they force double quotes and get escaped.</summary>
     private static bool IsPrintable(int c) =>
-        c == 0x0A || (c >= 0x20 && c <= 0x7E) || c == 0x85 || (c >= 0xA0 && c <= 0xD7FF) || (c >= 0xE000 && c <= 0xFFFD && c != 0xFEFF) || (c >= 0x10000 && c <= 0x10FFFF);
+        c == 0x0A || (c >= 0x20 && c <= 0x7E) || (c >= 0xA0 && c <= 0xD7FF) || (c >= 0xE000 && c <= 0xFFFD && c != 0xFEFF);
     private static bool IsBreak(int c) => c is '\r' or '\n' or 0x85 or 0x2028 or 0x2029;
     private static bool IsSpace(int c) => c == ' ';
     private static bool IsBlankZ(int c) => c is ' ' or '\t' or 0 || IsBreak(c);
@@ -235,7 +275,7 @@ public sealed class YamlEmitter
         if (s.Length == 0) { res.SingleQuotedAllowed = true; res.BlockAllowed = false; return res; }
         var runes = new List<int>(s.Length);
         foreach (var r in s.EnumerateRunes()) runes.Add(r.Value);
-        bool blockInd = false, flowInd = false, lineBreaks = false, special = false;
+        bool blockInd = false, flowInd = false, lineBreaks = false, special = false, tabs = false;
         bool leadingSpace = false, leadingBreak = false, trailingSpace = false, trailingBreak = false, breakSpace = false, spaceBreak = false;
         bool precededByWs = true, prevSpace = false, prevBreak = false;
         if ((s.StartsWith("---", StringComparison.Ordinal) || s.StartsWith("...", StringComparison.Ordinal)) && (runes.Count == 3 || IsBlankZ(runes[3])))
@@ -267,7 +307,10 @@ public sealed class YamlEmitter
                     case '#': if (precededByWs) { flowInd = true; blockInd = true; } break;
                 }
             }
-            if (!IsPrintable(c)) special = true;
+            // go-yaml v3.0.5: a tab rules out plain and single-quoted scalars but, unlike other unprintable characters,
+            // still allows a literal block
+            if (c == '\t') tabs = true;
+            else if (!IsPrintable(c)) special = true;
             if (IsBreak(c)) lineBreaks = true;
             if (IsSpace(c))
             {
@@ -291,7 +334,8 @@ public sealed class YamlEmitter
         if (leadingSpace || leadingBreak || trailingSpace || trailingBreak) blockPlain = false;
         if (trailingSpace) block = false;
         if (breakSpace) { blockPlain = false; single = false; }
-        if (spaceBreak || special) { blockPlain = false; single = false; block = false; }
+        if (spaceBreak || tabs || special) { blockPlain = false; single = false; }
+        if (spaceBreak || special) block = false;
         if (lineBreaks) blockPlain = false;
         if (blockInd) blockPlain = false;
         _ = flowInd;
@@ -367,8 +411,33 @@ public static class JsonEmitter
     public static string Emit(object? value, bool indent = false)
     {
         var sb = new StringBuilder(4096);
-        Write(sb, YamlEmitter.Normalize(value), indent ? 0 : -1);
+        var streaming = s_out;
+        s_out = null; // a nested Emit must never spill into an EmitTo in progress
+        try { Write(sb, YamlEmitter.Normalize(value), indent ? 0 : -1); }
+        finally { s_out = streaming; }
         return sb.ToString();
+    }
+
+    private const int FlushAt = 1 << 20;
+    [ThreadStatic] private static TextWriter? s_out;
+
+    /// <summary>Writes the same text as <c>Emit(value)</c>, streamed to <paramref name="output"/> in chunks, so the size
+    /// of the document is not limited by the maximum length of a .NET string (about 1 GB).</summary>
+    public static void EmitTo(TextWriter output, object? value)
+    {
+        var sb = new StringBuilder(FlushAt + 4096);
+        var previous = s_out;
+        s_out = output;
+        try { Write(sb, YamlEmitter.Normalize(value), -1); }
+        finally { s_out = previous; }
+        foreach (var chunk in sb.GetChunks()) output.Write(chunk.Span);
+    }
+
+    private static void Spill(StringBuilder sb)
+    {
+        if (s_out is null || sb.Length < FlushAt) return;
+        foreach (var chunk in sb.GetChunks()) s_out.Write(chunk.Span);
+        sb.Clear();
     }
 
     private static void NewLine(StringBuilder sb, int level)
@@ -397,6 +466,7 @@ public static class JsonEmitter
                 bool first = true;
                 foreach (var (k, x) in m)
                 {
+                    Spill(sb);
                     if (!first) sb.Append(',');
                     first = false;
                     NewLine(sb, level < 0 ? -1 : level + 1);
@@ -414,6 +484,7 @@ public static class JsonEmitter
                 sb.Append('[');
                 for (int i = 0; i < l.Count; i++)
                 {
+                    Spill(sb);
                     if (i > 0) sb.Append(',');
                     NewLine(sb, level < 0 ? -1 : level + 1);
                     Write(sb, l[i], level < 0 ? -1 : level + 1);

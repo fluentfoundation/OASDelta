@@ -9,11 +9,11 @@ error	[request-property-min-increased] at ./checker/sub_schema_traversal_revisio
 
 error	[request-property-min-length-increased] at ./checker/sub_schema_traversal_revision.yaml
 	in API POST /products
-		the `data/contains` request property's minLength was increased from `1` to `3`
+		the `data/contains/` request property's minLength was increased from `1` to `3`
 
 error	[request-property-min-length-increased] at ./checker/sub_schema_traversal_revision.yaml
 	in API POST /products
-		the `data/contentSchema` request property's minLength was increased from `1` to `3`
+		the `data/contentSchema/` request property's minLength was increased from `1` to `3`
 
 error	[request-property-min-length-increased] at ./checker/sub_schema_traversal_revision.yaml
 	in API POST /products
@@ -21,18 +21,18 @@ error	[request-property-min-length-increased] at ./checker/sub_schema_traversal_
 
 error	[request-property-min-length-increased] at ./checker/sub_schema_traversal_revision.yaml
 	in API POST /products
-		the `data/prefixItems[subschema #1]` request property's minLength was increased from `1` to `3`
+		the `data/prefixItems[subschema #1]/` request property's minLength was increased from `1` to `3`
 
 error	[request-property-min-length-increased] at ./checker/sub_schema_traversal_revision.yaml
 	in API POST /products
-		the `data/propertyNames` request property's minLength was increased from `1` to `3`
+		the `data/propertyNames/` request property's minLength was increased from `1` to `3`
 
 error	[request-property-min-length-increased] at ./checker/sub_schema_traversal_revision.yaml
 	in API POST /products
-		the `data/unevaluatedItems` request property's minLength was increased from `1` to `3`
+		the `data/unevaluatedItems/` request property's minLength was increased from `1` to `3`
 
 error	[request-property-min-length-increased] at ./checker/sub_schema_traversal_revision.yaml
 	in API POST /products
-		the `data/unevaluatedProperties` request property's minLength was increased from `1` to `3`
+		the `data/unevaluatedProperties/` request property's minLength was increased from `1` to `3`
 
 

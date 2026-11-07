@@ -15,6 +15,9 @@ export interface BenchCase {
   input: string
   input_title: string
   input_bytes: number
+  /** "synthetic" (generated or upstream fixtures) or "real-world" (API releases from OASDelta-TestData). Older reports omit it. */
+  kind?: 'synthetic' | 'real-world'
+  runs?: number
   command: string
   go: Measurement
   cs: Measurement
@@ -41,6 +44,8 @@ export interface BenchReport {
     date: string
     commit: string
     run_url: string
+    real_world_runs?: number
+    test_data_commit?: string
   }
   results: BenchCase[]
 }

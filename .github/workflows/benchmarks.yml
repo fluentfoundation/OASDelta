@@ -80,6 +80,13 @@ jobs:
           mkdir specs
           python tools/gen_bench_spec.py specs ${{ env.BENCH_RESOURCES }}
 
+      - name: Check out real-world specs (OASDelta-TestData)
+        id: testdata
+        uses: actions/checkout@v7
+        with:
+          repository: fluentfoundation/OASDelta-TestData
+          path: testdata
+
       - name: Run benchmarks
         shell: bash
         run: |
@@ -89,6 +96,9 @@ jobs:
             --specs specs \
             --runs ${{ github.event.inputs.runs || '15' }} \
             --warmup 3 \
+            --real-world testdata \
+            --real-world-runs 5 \
+            --real-world-commit "${{ steps.testdata.outputs.commit }}" \
             --label "${{ matrix.name }}" \
             --json ${{ matrix.slug }}.json \
             --markdown "$GITHUB_STEP_SUMMARY"

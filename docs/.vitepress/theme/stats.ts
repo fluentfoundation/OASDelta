@@ -5,12 +5,15 @@ export const geomean = (xs: number[]) =>
 
 export function summarize(r: BenchReport) {
   const cases = r.results
-  const large = cases.filter((c) => c.input !== 'small')
+  const real = cases.filter((c) => c.kind === 'real-world')
+  const large = cases.filter((c) => c.input !== 'small' && c.kind !== 'real-world')
   const small = cases.filter((c) => c.input === 'small')
   const speedups = cases.map((c) => c.speedup)
   return {
     cases: cases.length,
     speedup: geomean(speedups),
+    speedupReal: geomean(real.map((c) => c.speedup)),
+    realCases: real.length,
     speedupLarge: geomean(large.map((c) => c.speedup)),
     speedupSmall: geomean(small.map((c) => c.speedup)),
     minSpeedup: Math.min(...speedups),

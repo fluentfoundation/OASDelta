@@ -104,17 +104,10 @@ public static class Walkers
         return g;
     }
 
-    private static readonly HashSet<string> AllOfDisclaimerSkipIds = new(StringComparer.Ordinal)
+    /// <summary>allOfDisclaimers (oasdiff 1.35.0): under an allOf branch, or the schema itself has an allOf. Since 1.35.0 this
+    /// applies to every rule, the allOf-added and annotation-only ones included.</summary>
+    public static List<Disclaimer> AllOfDisclaimers(bool underAllOf, SchemaDiff? schemaDiff)
     {
-        Ids.RequestBodyAllOfAdded, Ids.RequestPropertyAllOfAdded, Ids.ResponseBodyAllOfAdded, Ids.ResponsePropertyAllOfAdded,
-        Ids.RequestBodyAllOfAddedAnnotationOnly, Ids.RequestBodyAllOfRemovedAnnotationOnly, Ids.RequestPropertyAllOfAddedAnnotationOnly,
-        Ids.RequestPropertyAllOfRemovedAnnotationOnly, Ids.ResponseBodyAllOfAddedAnnotationOnly, Ids.ResponseBodyAllOfRemovedAnnotationOnly,
-        Ids.ResponsePropertyAllOfAddedAnnotationOnly, Ids.ResponsePropertyAllOfRemovedAnnotationOnly,
-    };
-
-    public static List<Disclaimer> AllOfDisclaimers(bool underAllOf, SchemaDiff? schemaDiff, string id)
-    {
-        if (AllOfDisclaimerSkipIds.Contains(id)) return [];
         if (schemaDiff is not null && (schemaDiff.Base is { AllOf.Count: > 0 } || schemaDiff.Revision is { AllOf.Count: > 0 })) underAllOf = true;
         return underAllOf ? [Disclaimer.AllOfNotFlattened] : [];
     }
@@ -468,12 +461,12 @@ public sealed class SchemaWalker
         new SchemaWalker { Properties = (p, sd, under) => { foreach (var name in sd.PropertiesDiff!.Deleted) processor(p, name, sd.Base!.Properties[name].Value!, sd, under); } }.Walk(d);
     }
 
+    /// <summary>schemawalk.PropertyFullName (oasdiff 1.35.0): names joined with "/", appended to the path with "/". No
+    /// names (a sub-schema itself, e.g. the items of an array) leaves a trailing "/": "items/".</summary>
     public static string PropertyFullName(string propertyPath, params string[] names)
     {
-        var parts = new List<string>(names.Length + 1);
-        if (propertyPath != "") parts.Add(propertyPath);
-        foreach (var n in names) if (n != "") parts.Add(n);
-        return string.Join("/", parts);
+        var fullName = string.Join("/", names);
+        return propertyPath != "" ? propertyPath + "/" + fullName : fullName;
     }
 }
 

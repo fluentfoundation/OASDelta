@@ -484,10 +484,17 @@ In 'composed' mode, base and revision can be a glob and oasdiff will compare mat
         var format = f.Str("format");
         if (format == "json") f.Override("exclude-elements", (List<string>)[.. f.Strings("exclude-elements").Where(x => x.Length > 0), DiffConfig.ExcludeEndpointsOption]);
         var r = CalcDiff(f);
+        // the structured formats are streamed: a diff of two large specs can be gigabytes, beyond a .NET string
+        if (format is "json" or "yaml" && r.Diff is not null)
+        {
+            if (format == "json") JsonEmitter.EmitTo(c.Out, r.Diff); else YamlEmitter.EmitTo(c.Out, r.Diff);
+            c.Out.Write('\n');
+            return f.Bool("fail-on-diff") && r.Diff is { Empty: false } ? 1 : 0;
+        }
         string text = format switch
         {
-            "json" => r.Diff is null ? "{}" : JsonEmitter.Emit(r.Diff),
-            "yaml" => r.Diff is null ? "{}" : YamlEmitter.Emit(r.Diff).TrimEnd('\n') + "\n",
+            "json" => "{}",
+            "yaml" => "{}",
             "html" => HtmlReport.Render(DiffReport.Text(r.Diff)),
             "text" or "markup" or "markdown" => DiffReport.Text(r.Diff),
             _ => throw new ReturnError($"format {Fmt.GoQuote(format)} is not supported by \"diff\"", 110),

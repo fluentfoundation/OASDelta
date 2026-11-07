@@ -14,7 +14,12 @@ const reports = computed(() => data.map((r) => ({ meta: r.meta, s: summarize(r) 
     <section v-for="r in reports" :key="r.meta.label" class="platform">
       <h3>{{ r.meta.label }} <span class="sub">{{ r.meta.cpu_count }} cores, {{ r.meta.run_url ? 'GitHub-hosted runner' : 'local run' }}</span></h3>
       <div class="tiles">
-        <div class="tile">
+        <div v-if="r.s.realCases" class="tile">
+          <div class="label">Speed-up, real-world APIs</div>
+          <div class="value">{{ fmtX(r.s.speedupReal) }}</div>
+          <div class="note">geometric mean, GitHub, Stripe and Kubernetes releases</div>
+        </div>
+        <div v-else class="tile">
           <div class="label">Speed-up, large specs</div>
           <div class="value">{{ fmtX(r.s.speedupLarge) }}</div>
           <div class="note">geometric mean, ~1–1.5 MB YAML and JSON</div>

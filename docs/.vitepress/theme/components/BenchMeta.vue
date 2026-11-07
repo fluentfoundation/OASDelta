@@ -16,6 +16,16 @@ const date = (iso: string) => new Date(iso).toUTCString().replace(/:\d\d GMT$/, 
       <tr><td>Go</td><td v-for="r in data" :key="r.meta.label"><code>{{ r.meta.go_version }}</code>, {{ r.meta.go_binary_mb }} MB binary</td></tr>
       <tr><td>C#</td><td v-for="r in data" :key="r.meta.label"><code>{{ r.meta.cs_version }}</code>, {{ r.meta.cs_binary_mb }} MB binary</td></tr>
       <tr><td>Runs</td><td v-for="r in data" :key="r.meta.label">{{ r.meta.warmup }} warm-up + {{ r.meta.runs }} timed, per case and binary</td></tr>
+      <tr v-if="data.some((r) => r.meta.real_world_runs)">
+        <td>Real-world</td>
+        <td v-for="r in data" :key="r.meta.label">
+          <template v-if="r.meta.real_world_runs">
+            1 warm-up + {{ r.meta.real_world_runs }} timed, from
+            <a :href="`https://github.com/fluentfoundation/OASDelta-TestData/tree/${r.meta.test_data_commit || 'main'}`">OASDelta-TestData<template v-if="r.meta.test_data_commit">{{ ' ' }}<code>{{ r.meta.test_data_commit.slice(0, 7) }}</code></template></a>
+          </template>
+          <template v-else>not measured</template>
+        </td>
+      </tr>
       <tr><td>Measured</td><td v-for="r in data" :key="r.meta.label">{{ date(r.meta.date) }}</td></tr>
       <tr>
         <td>Source</td>

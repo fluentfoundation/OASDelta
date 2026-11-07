@@ -1,0 +1,35 @@
+info:
+    version:
+        from: 1.0.0
+        to: 1.0.1
+paths:
+    modified:
+        /budgets:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                added:
+                                                    - expires_at
+                                                    - partial_success
+                                                    - strict
+endpoints:
+    modified:
+        ?   method: POST
+            path: /budgets
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    added:
+                                        - expires_at
+                                        - partial_success
+                                        - strict
+

@@ -1,0 +1,73 @@
+info:
+    version:
+        from: 1.0.0
+        to: 1.0.1
+paths:
+    modified:
+        /labels:
+            operations:
+                modified:
+                    GET:
+                        summary:
+                            from: fun size
+                            to: "fun size \U0001F36B and \U0001F692 wontfix"
+                        description:
+                            from: |-
+                                Go:
+                                	type MyAPIObject struct {
+                                		Name string
+                                	}
+                            to: |
+                                Go:
+                                	type MyAPIObject struct {
+                                		Name  string
+                                	}
+                        parameters:
+                            modified:
+                                query:
+                                    c1:
+                                        description:
+                                            from: plain
+                                            to: "control\x80char  nbsp"
+                                    nel:
+                                        description:
+                                            from: next line
+                                            to: "next\Nline"
+                                    q:
+                                        description:
+                                            from: "tab\there"
+                                            to: "tab\tthere"
+endpoints:
+    modified:
+        ?   method: GET
+            path: /labels
+        :   summary:
+                from: fun size
+                to: "fun size \U0001F36B and \U0001F692 wontfix"
+            description:
+                from: |-
+                    Go:
+                    	type MyAPIObject struct {
+                    		Name string
+                    	}
+                to: |
+                    Go:
+                    	type MyAPIObject struct {
+                    		Name  string
+                    	}
+            parameters:
+                modified:
+                    query:
+                        c1:
+                            description:
+                                from: plain
+                                to: "control\x80char  nbsp"
+                        nel:
+                            description:
+                                from: next line
+                                to: "next\Nline"
+                        q:
+                            description:
+                                from: "tab\there"
+                                to: "tab\tthere"
+

@@ -5,28 +5,32 @@ code as the Go binary.
 
 ## How it is checked
 
-- **Golden tests.** `tests/golden` holds the output of the Go oasdiff for seven command/format combinations over
-  every fixture pair in the upstream test data (180 pairs, 1,239 comparisons). `dotnet test` replays them in
-  process, and CI replays them again with the published NativeAOT binary (`tools/check_golden.sh`), on Linux and
-  Windows.
+- **Golden tests.** `tests/golden` holds the output of **oasdiff v1.35.0** for seven command/format combinations
+  (`diff` as yaml, json and text; `summary`; `changelog` as json and markdown; `breaking`). They cover every fixture
+  pair in the upstream test data plus a few of OasDelta's own: 179 pairs, 1,253 comparisons. `dotnet test`
+  replays them in process. CI replays them with the NativeAOT binary (`tools/check_golden.sh`) on Linux and Windows,
+  and the release workflow replays them on all six release platforms. All of them pass.
+- **Real-world parity.** [OASDelta-TestData](https://github.com/fluentfoundation/OASDelta-TestData) holds
+  consecutive releases of the GitHub, Stripe, Kubernetes and European Patent Office APIs. Its weekly
+  [parity report](https://github.com/fluentfoundation/OASDelta-TestData/actions/workflows/parity.yml) runs the
+  official oasdiff release and the latest OasDelta from nuget.org over every pair.
 - **Live parity.** `tools/parity.sh <command> [flags]` runs both binaries over every fixture pair and compares
   stdout, stderr and exit codes.
 - **Benchmarks.** Every benchmark case also compares the two binaries' output byte for byte, and the
   [results](/benchmarks) say whether they matched.
 
-## Parity with the latest release
+## Real-world results
 
-Upstream keeps moving. Against **oasdiff v1.35.0**, the release the benchmarks use:
+Against oasdiff v1.35.0, OasDelta 1.0.2 gives identical output for `diff`, `breaking` and `changelog -f json` on
+the real-world pairs, with one exception. For the two Kubernetes 1.36 → 1.37 pairs, `changelog -f json` lists the
+same entries in a different order. That is **oasdiff's own nondeterminism**: those entries tie on every sort key,
+and oasdiff's order for them changes from one run to the next. Two consecutive oasdiff runs on the same input
+differed in over a thousand positions. OasDelta always produces the same order. The parity report marks these cases
+as "reordered".
 
-| Command | Identical on fixture pairs |
-|---|---|
-| `diff` (yaml) | 180 / 180 |
-| `summary` | 180 / 180 |
-| `breaking` | 175 / 180 |
-| `changelog -f json` | 170 / 180 |
-
-The remaining differences come from wording changes upstream made after the port. For example, v1.35.0 prints
-sub-schema property paths with a trailing slash (`data/contains/`), where the port prints `data/contains`.
+For Stripe, oasdiff's YAML `diff` is over 5 GB per pair. OasDelta streams it, and the output is identical: for
+v2300 → v2500, both write 5,467,926,206 bytes with the same SHA-256. The weekly report skips that command because
+of its size.
 
 ## Reproduced exactly
 

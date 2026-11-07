@@ -1,0 +1,15 @@
+# API Changelog 1.0.0 vs. 1.0.1
+
+
+## API Changes
+
+### POST /budgets
+-  added the new optional request property `expires_at`
+-  added the new optional request property `partial_success`
+-  added the new optional request property `strict`
+
+
+
+
+
+

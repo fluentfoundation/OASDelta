@@ -205,7 +205,7 @@ public static class NodeReader
             if (parser.Accept<StreamEnd>(out _)) return null;
             parser.Consume<DocumentStart>();
             if (parser.Accept<DocumentEnd>(out _)) return null;
-            var root = ReadNode(parser, anchors);
+            var root = ReadNode(parser, anchors, new SourceLines(text));
             return root;
         }
         catch (YamlException e)
@@ -214,7 +214,39 @@ public static class NodeReader
         }
     }
 
-    private static Node ReadNode(IParser parser, Dictionary<string, Node> anchors)
+    /// <summary>Line access into the source text, built on first use (only block scalars need it).</summary>
+    private sealed class SourceLines(string text)
+    {
+        private List<int>? _starts;
+
+        public string Line(int line) // 1-based, without its line break
+        {
+            if (_starts is null)
+            {
+                _starts = [0];
+                for (int i = 0; i < text.Length; i++) if (text[i] == '\n') _starts.Add(i + 1);
+            }
+            if (line < 1 || line > _starts.Count) return "";
+            int start = _starts[line - 1], end = line < _starts.Count ? _starts[line] - 1 : text.Length;
+            if (end > start && text[end - 1] == '\r') end--;
+            return text[start..end];
+        }
+
+        /// <summary>A literal or folded block scalar ends where its last non-blank content line ends, as kin-openapi's origin
+        /// tracking reports it. YamlDotNet's end mark is after the trailing line break(s), at column 1 of a later line.</summary>
+        public (int Line, int Column) BlockScalarEnd(Scalar s)
+        {
+            if (s.End.Column != 1) return ((int)s.End.Line, (int)s.End.Column);
+            for (int l = (int)s.End.Line - 1; l > (int)s.Start.Line; l--)
+            {
+                var text = Line(l);
+                if (!string.IsNullOrWhiteSpace(text)) return (l, text.EnumerateRunes().Count() + 1);
+            }
+            return ((int)s.End.Line, (int)s.End.Column);
+        }
+    }
+
+    private static Node ReadNode(IParser parser, Dictionary<string, Node> anchors, SourceLines source)
     {
         var ev = parser.Current ?? throw new YamlParseException("unexpected end of yaml");
         parser.MoveNext();
@@ -222,6 +254,9 @@ public static class NodeReader
         {
             case Scalar s:
             {
+                var (endLine, endColumn) = s.Style is ScalarStyle.Literal or ScalarStyle.Folded
+                    ? source.BlockScalarEnd(s)
+                    : ((int)s.End.Line, (int)s.End.Column);
                 var n = new Node
                 {
                     Kind = NodeKind.Scalar,
@@ -229,7 +264,7 @@ public static class NodeReader
                     Plain = s.Style == ScalarStyle.Plain,
                     Tag = s.Tag.IsEmpty ? null : s.Tag.Value,
                     Line = (int)s.Start.Line, Column = (int)s.Start.Column,
-                    EndLine = (int)s.End.Line, EndColumn = (int)s.End.Column,
+                    EndLine = endLine, EndColumn = endColumn,
                 };
                 if (!s.Anchor.IsEmpty) anchors[s.Anchor.Value] = n;
                 return n;
@@ -239,7 +274,7 @@ public static class NodeReader
                 var n = new Node { Kind = NodeKind.Sequence, Items = [], Tag = ss.Tag.IsEmpty ? null : ss.Tag.Value, Line = (int)ss.Start.Line, Column = (int)ss.Start.Column };
                 if (!ss.Anchor.IsEmpty) anchors[ss.Anchor.Value] = n;
                 while (parser.Current is not SequenceEnd)
-                    n.Items.Add(ReadNode(parser, anchors));
+                    n.Items.Add(ReadNode(parser, anchors, source));
                 var end = parser.Current!; parser.MoveNext();
                 if (ss.Style != SequenceStyle.Flow && n.Items.Count > 0) { n.EndLine = n.Items[^1].EndLine; n.EndColumn = n.Items[^1].EndColumn; }
                 else { n.EndLine = (int)end.Start.Line; n.EndColumn = (int)end.Start.Column + 1; }
@@ -253,8 +288,8 @@ public static class NodeReader
                 Dictionary<string, int>? index = null;
                 while (parser.Current is not MappingEnd)
                 {
-                    var k = ReadNode(parser, anchors);
-                    var v = ReadNode(parser, anchors);
+                    var k = ReadNode(parser, anchors, source);
+                    var v = ReadNode(parser, anchors, source);
                     if (k.Kind == NodeKind.Scalar && k.Plain && k.Text == "<<")
                     {
                         merges ??= [];

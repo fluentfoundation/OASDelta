@@ -22,33 +22,67 @@ public static class EnumText
     public static bool IsBreaking(this Level l) => l is Level.ERR or Level.WARN;
     public static string Pretty(this Level l) => l switch
     {
-        Level.ERR => Color.Red(l.Name()), Level.WARN => Color.Purple(l.Name()), Level.INFO => Color.Cyan(l.Name()), _ => Color.Gray(l.Name()),
+        Level.ERR => Color.Red(l.Name()),
+        Level.WARN => Color.Purple(l.Name()),
+        Level.INFO => Color.Cyan(l.Name()),
+        _ => Color.Gray(l.Name()),
     };
     public static string Name(this Direction d) => d switch { Direction.Request => "request", Direction.Response => "response", _ => "none" };
     public static string Name(this Area a) => a switch
     {
-        Area.Schema => "schema", Area.Parameters => "parameters", Area.RequestBody => "requestBody", Area.Responses => "responses", Area.Paths => "paths",
-        Area.Headers => "headers", Area.Security => "security", Area.Tags => "tags", Area.Components => "components", Area.Info => "info", Area.Servers => "servers", _ => "none",
+        Area.Schema => "schema",
+        Area.Parameters => "parameters",
+        Area.RequestBody => "requestBody",
+        Area.Responses => "responses",
+        Area.Paths => "paths",
+        Area.Headers => "headers",
+        Area.Security => "security",
+        Area.Tags => "tags",
+        Area.Components => "components",
+        Area.Info => "info",
+        Area.Servers => "servers",
+        _ => "none",
     };
     public static string Name(this Kind k) => k switch
     {
-        Kind.Existence => "existence", Kind.Requiredness => "requiredness", Kind.Mutability => "mutability", Kind.Type => "type", Kind.Constraints => "constraints",
-        Kind.Values => "values", Kind.Structure => "structure", Kind.Lifecycle => "lifecycle", _ => "none",
+        Kind.Existence => "existence",
+        Kind.Requiredness => "requiredness",
+        Kind.Mutability => "mutability",
+        Kind.Type => "type",
+        Kind.Constraints => "constraints",
+        Kind.Values => "values",
+        Kind.Structure => "structure",
+        Kind.Lifecycle => "lifecycle",
+        _ => "none",
     };
     public static string Name(this Effect e) => e switch
     {
-        Effect.Widens => "widens", Effect.Narrows => "narrows", Effect.Incomparable => "incomparable", Effect.Unknown => "unknown", Effect.Violation => "violation", _ => "none",
+        Effect.Widens => "widens",
+        Effect.Narrows => "narrows",
+        Effect.Incomparable => "incomparable",
+        Effect.Unknown => "unknown",
+        Effect.Violation => "violation",
+        _ => "none",
     };
     public static string Name(this Guard g) => g switch
     {
-        Guard.ReadOnly => "read-only", Guard.WriteOnly => "write-only", Guard.Sanctioned => "sanctioned", Guard.NonSuccess => "non-success",
-        Guard.HasDefault => "has-default", Guard.Negotiated => "negotiated", _ => "required-in-requests",
+        Guard.ReadOnly => "read-only",
+        Guard.WriteOnly => "write-only",
+        Guard.Sanctioned => "sanctioned",
+        Guard.NonSuccess => "non-success",
+        Guard.HasDefault => "has-default",
+        Guard.Negotiated => "negotiated",
+        _ => "required-in-requests",
     };
     public static string Name(this Disclaimer d) => d == Disclaimer.AllOfNotFlattened ? "all-of-not-flattened" : "unknown-disclaimer";
 
     public static Level ParseLevel(string s) => s switch
     {
-        "ERR" or "err" => Level.ERR, "WARN" or "warn" => Level.WARN, "INFO" or "info" => Level.INFO, "NONE" or "none" => Level.NONE, _ => Level.INVALID,
+        "ERR" or "err" => Level.ERR,
+        "WARN" or "warn" => Level.WARN,
+        "INFO" or "info" => Level.INFO,
+        "NONE" or "none" => Level.NONE,
+        _ => Level.INVALID,
     };
 }
 
@@ -465,7 +499,14 @@ public static class Fmt
 
     private static string GoTypeName(object? v) => v switch
     {
-        null => "<nil>", string => "string", int => "int", long => "int64", ulong => "uint64", double => "float64", bool => "bool", _ => "string",
+        null => "<nil>",
+        string => "string",
+        int => "int",
+        long => "int64",
+        ulong => "uint64",
+        double => "float64",
+        bool => "bool",
+        _ => "string",
     };
 
     /// <summary>A subset of Go's fmt.Sprintf: %s %v %d %q %t %f %%, with %!(EXTRA ...) and %!s(MISSING) semantics.</summary>
@@ -500,8 +541,10 @@ public static class Fmt
                 case 'd':
                     sb.Append(a switch
                     {
-                        int x => x.ToString(CultureInfo.InvariantCulture), long x => x.ToString(CultureInfo.InvariantCulture),
-                        ulong x => x.ToString(CultureInfo.InvariantCulture), uint x => x.ToString(CultureInfo.InvariantCulture),
+                        int x => x.ToString(CultureInfo.InvariantCulture),
+                        long x => x.ToString(CultureInfo.InvariantCulture),
+                        ulong x => x.ToString(CultureInfo.InvariantCulture),
+                        uint x => x.ToString(CultureInfo.InvariantCulture),
                         _ => "%!d(" + GoTypeName(a) + "=" + GoV(a) + ")",
                     });
                     break;

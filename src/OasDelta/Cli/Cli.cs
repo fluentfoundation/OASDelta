@@ -594,9 +594,12 @@ In 'composed' mode, base and revision can be a glob and oasdiff will compare mat
             if (id.Length > 0 && rule.Id != id) continue;
             if (location.Length > 0 && !rule.Locations.Any(x => x.Contains(location, StringComparison.Ordinal))) continue;
             if (severity.Count > 0 && !(rule.Level switch
-                {
-                    Level.ERR => severity.Contains("error"), Level.WARN => severity.Contains("warn"), Level.INFO => severity.Contains("info"), _ => true,
-                })) continue;
+            {
+                Level.ERR => severity.Contains("error"),
+                Level.WARN => severity.Contains("warn"),
+                Level.INFO => severity.Contains("info"),
+                _ => true,
+            })) continue;
             if (!ChangelogTags.Match(tags, rule)) continue;
             list.Add(CheckOut.From(rule, l));
         }

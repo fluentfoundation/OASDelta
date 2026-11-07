@@ -1,8 +1,8 @@
-using StringBuilder = System.Text.StringBuilder;
 using System.Text.RegularExpressions;
-using Encoding = OasDelta.Model.Encoding;
 using OasDelta.Model;
 using OasDelta.Yaml;
+using Encoding = OasDelta.Model.Encoding;
+using StringBuilder = System.Text.StringBuilder;
 
 namespace OasDelta.Diff;
 

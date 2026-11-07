@@ -4,6 +4,28 @@ OasDelta compares two OpenAPI descriptions and reports what changed and which ch
 port of [oasdiff](https://github.com/oasdiff/oasdiff), targets .NET 10, and compiles to a single self-contained
 NativeAOT executable, `oasdelta`, with no runtime dependency.
 
+## Download a release
+
+Each [GitHub release](https://github.com/fluentfoundation/OASDelta/releases) has a ready-to-run binary for:
+
+| | x64 | Arm64 |
+|---|---|---|
+| Linux (glibc 2.39+) | `oasdelta_<version>_linux_amd64.tar.gz` | `oasdelta_<version>_linux_arm64.tar.gz` |
+| Windows | `oasdelta_<version>_windows_amd64.zip` | `oasdelta_<version>_windows_arm64.zip` |
+| macOS | `oasdelta_<version>_darwin_amd64.tar.gz` | `oasdelta_<version>_darwin_arm64.tar.gz` |
+
+Every binary passes the golden comparisons on its own platform before it is published. The release also includes a
+`checksums.txt`, and each archive has a signed build-provenance attestation, so you can check where it came from:
+
+```sh
+gh release download --repo fluentfoundation/OASDelta --pattern '*linux_amd64.tar.gz'
+gh attestation verify oasdelta_*_linux_amd64.tar.gz --repo fluentfoundation/OASDelta
+tar xzf oasdelta_*_linux_amd64.tar.gz oasdelta && ./oasdelta --version
+```
+
+On macOS, a binary downloaded with a browser is quarantined by Gatekeeper; clear it with
+`xattr -d com.apple.quarantine oasdelta`. Downloads made with `gh` or `curl` are not quarantined.
+
 ## Build from source
 
 You need the [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) and NuGet access.

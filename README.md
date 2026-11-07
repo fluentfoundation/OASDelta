@@ -9,6 +9,10 @@ OasDelta is a C# port of [oasdiff](https://github.com/oasdiff/oasdiff), the Open
 
 The command line is argument-compatible with oasdiff, so `alias oasdiff=oasdelta` is a drop-in replacement. Output matches upstream byte for byte. On every fixture pair in the upstream test data (180 pairs), each supported command and output format prints the same bytes and returns the same exit code as the Go binary.
 
+## Install
+
+Download a binary for Linux, Windows or macOS (x64 or Arm64) from [Releases](https://github.com/fluentfoundation/OASDelta/releases). Each archive has a `checksums.txt` entry and a build-provenance attestation (`gh attestation verify <file> --repo fluentfoundation/OASDelta`).
+
 ## Build
 
 ```sh
@@ -177,6 +181,18 @@ docs/          VitePress site (npm ci && npm run dev); benchmark results in docs
 ```
 
 `Checker/Generated/*.g.cs` is generated from the upstream Go sources by `tools/gen_checker_tables.py`. It holds the rule ids, the rule table and the four localizations.
+
+## Contributing and releasing
+
+`main` is protected: changes go through a pull request, and the Linux, Windows and docs checks must pass. No approving review is required, so a maintainer can merge their own PR.
+
+To release, tag a commit on `main` and push the tag:
+
+```sh
+git tag v1.1.0 && git push origin v1.1.0       # v1.1.0-rc.1 publishes a pre-release
+```
+
+The [Release workflow](.github/workflows/release.yml) builds NativeAOT binaries for linux, windows and darwin on amd64 and arm64. It runs the golden comparisons on each one and publishes them with `checksums.txt`, build-provenance attestations and generated release notes. The tag sets the version that `oasdelta --version` reports. `v*` tags are protected, so a published tag cannot be moved or deleted.
 
 ## License
 

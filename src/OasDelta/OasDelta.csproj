@@ -20,6 +20,30 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
   </PropertyGroup>
+  <!-- NuGet: a .NET tool with one NativeAOT package per platform (.NET 10 platform-specific tools).
+       `dotnet pack -r <rid>` on each platform builds OasDelta.<rid>.nupkg; `dotnet pack` builds the top-level OasDelta.nupkg
+       that points at them. The release workflow does both. -->
+  <PropertyGroup>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>oasdelta</ToolCommandName>
+    <ToolPackageRuntimeIdentifiers>linux-x64;linux-arm64;win-x64;win-arm64;osx-x64;osx-arm64</ToolPackageRuntimeIdentifiers>
+    <PackageId>OasDelta</PackageId>
+    <Authors>John Zabroski, Fluent Foundation</Authors>
+    <Copyright>Copyright © 2026 John Zabroski, Fluent Foundation</Copyright>
+    <Description>OpenAPI diff and breaking-change detection: a byte-for-byte compatible C# port of oasdiff, compiled with NativeAOT. Same commands, flags, config files and exit codes.</Description>
+    <PackageTags>openapi;oasdiff;swagger;breaking-changes;api-diff;changelog;cli;dotnet-tool;nativeaot</PackageTags>
+    <PackageProjectUrl>https://fluentfoundation.github.io/OASDelta/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/fluentfoundation/OASDelta</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReleaseNotes>https://github.com/fluentfoundation/OASDelta/releases</PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Package/README.md" Pack="true" PackagePath="/" />
+    <None Include="Package/icon.png" Pack="true" PackagePath="/" />
+  </ItemGroup>
   <ItemGroup>
     <!-- a short-lived batch process whose heap is almost all live: keep big arrays out of the LOH (each LOH budget overrun forces a full GC) -->
     <RuntimeHostConfigurationOption Include="System.GC.LOHThreshold" Value="33554432" />

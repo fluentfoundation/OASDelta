@@ -11,7 +11,12 @@ The command line is argument-compatible with oasdiff, so `alias oasdiff=oasdelta
 
 ## Install
 
-Download a binary for Linux, Windows or macOS (x64 or Arm64) from [Releases](https://github.com/fluentfoundation/OASDelta/releases). Each archive has a `checksums.txt` entry and a build-provenance attestation (`gh attestation verify <file> --repo fluentfoundation/OASDelta`).
+```sh
+dotnet tool install --global OasDelta          # NativeAOT build for your platform, from nuget.org
+dnx OasDelta breaking base.yaml revision.yaml  # or run once without installing (.NET 10 SDK)
+```
+
+Or download a binary for Linux, Windows or macOS (x64 or Arm64) from [Releases](https://github.com/fluentfoundation/OASDelta/releases). Each archive has a `checksums.txt` entry and a build-provenance attestation (`gh attestation verify <file> --repo fluentfoundation/OASDelta`).
 
 ## Build
 
@@ -192,7 +197,7 @@ To release, tag a commit on `main` and push the tag:
 git tag v1.1.0 && git push origin v1.1.0       # v1.1.0-rc.1 publishes a pre-release
 ```
 
-The [Release workflow](.github/workflows/release.yml) builds NativeAOT binaries for linux, windows and darwin on amd64 and arm64. It runs the golden comparisons on each one and publishes them with `checksums.txt`, build-provenance attestations and generated release notes. The tag sets the version that `oasdelta --version` reports. `v*` tags are protected, so a published tag cannot be moved or deleted.
+The [Release workflow](.github/workflows/release.yml) builds NativeAOT binaries for linux, windows and darwin on amd64 and arm64. It runs the golden comparisons on each one and publishes them with `checksums.txt`, build-provenance attestations and generated release notes. It then pushes the `OasDelta` .NET tool to nuget.org: six native per-platform packages plus the top-level package. The push uses Trusted Publishing, so no API key is stored, and it runs in the `nuget` environment, which only `v*` tags can deploy to. The tag sets the version that `oasdelta --version` reports. `v*` tags are protected, so a published tag cannot be moved or deleted.
 
 ## License
 

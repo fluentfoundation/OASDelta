@@ -132,8 +132,13 @@ public static partial class Checks
                 var (b, rv) = Loc.ResponseMediaTypeName(s, md, rd, from, to);
                 if (nd.ParametersDiff is { Empty: false } pd)
                 {
+                    // mixed directions, or a renamed media type, can't be ordered: report the rename only, as
+                    // check_response_mediatype_name_updated.go does, not the parameter changes as well (#15)
                     if (pd.Mixed || nd.BareNameChanged)
+                    {
                         result.Add(oi.NewApiChange(Ids.ResponseMediaTypeNameChanged, [nd.NameDiff?.From, nd.NameDiff?.To, status], Ids.ResponseMediaTypeNameChangedComment).WithSources(b, rv));
+                        continue;
+                    }
                     var bare = nd.BaseBareName;
                     foreach (var p in pd.Added) result.Add(oi.NewApiChange(Ids.ResponseMediaTypeParameterAdded, [p, bare, status], "").WithSources(b, rv));
                     foreach (var p in pd.Deleted) result.Add(oi.NewApiChange(Ids.ResponseMediaTypeParameterRemoved, [p, bare, status], "").WithSources(b, rv));

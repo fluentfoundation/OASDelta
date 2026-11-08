@@ -4,7 +4,10 @@
 # in-process with the JIT build; this catches anything trimming or NativeAOT changes. Cases listed in
 # tests/golden-known.txt are handled as that file describes. Writes a summary (with rule coverage) to
 # $GITHUB_STEP_SUMMARY when set.
-# usage: tools/check_golden.sh /path/to/oasdelta [JOBS]
+# usage: tools/check_golden.sh /path/to/oasdelta [JOBS] [SLUG...]   (SLUGs: check only those sets)
+#
+# Each comparison costs two processes (the binary and cmp): everything else is bash string handling, because process
+# creation under Git Bash on Windows is slow and there are ~10k comparisons.
 set -u
 # Git Bash on Windows rewrites POSIX-looking arguments (e.g. --prefix-revision /v2 -> C:/Program Files/Git/v2)
 # when it runs a Windows executable; turn that off. No effect elsewhere.
@@ -19,35 +22,45 @@ RESULTS=$(mktemp -d)
 
 check_slug() {
   local slug=$1 args=$2 dir="$ROOT/tests/golden/$1" seen=" " pass=0 fail=0
+  local out="$RESULTS/tmp-$1" codes known name golden rest expected_code kind code same
+  # " name=code ..." and " name=kind ..." lookups for this set, built once
+  codes=" $(awk '{ printf "%s=%s ", $1, $2 }' "$dir/exit-codes.txt")"
+  known=" $(awk -v s="$slug" '$1 == s { printf "%s=%s ", $2, $3 }' <<< "$KNOWN")"
   cd "$ROOT/tests/fixtures"
   while read -r b r; do
-    local name golden expected_code actual expected kind
-    name=$(echo "$b--$r" | sed 's|\./||g; s|[/.]|_|g')
+    name="$b--$r"; name=${name//.\//}; name=${name//\//_}; name=${name//./_}   # as gen_golden.sh names them
     case "$seen" in *" $name "*) continue ;; esac
     seen="$seen$name "
     golden="$dir/$name.out"
     [ -f "$golden" ] || continue
-    expected_code=$(awk -v n="$name" '$1 == n { print $2 }' "$dir/exit-codes.txt")
+    rest=${codes#* "$name"=}; expected_code=${rest%% *}
+    kind=""
+    case "$known" in *" $name="*) rest=${known#* "$name"=}; kind=${rest%% *} ;; esac
     # shellcheck disable=SC2086 # args are split on spaces by design
-    actual=$("$BIN" $args "$b" "$r" 2>/dev/null; echo "exit=$?")
-    expected=$(cat "$golden"; echo "exit=$expected_code")
-    kind=$(awk -v s="$slug" -v n="$name" '$1 == s && $2 == n { print $3 }' <<< "$KNOWN")
-    if [ "$actual" == "$expected" ]; then
+    "$BIN" $args "$b" "$r" > "$out" 2>/dev/null; code=$?
+    same=0
+    [ "$code" = "$expected_code" ] && cmp -s "$out" "$golden" && same=1
+    if [ $same = 1 ]; then
       if [[ "$kind" == \#* ]]; then fail=$((fail+1)); echo "NOW MATCHES [$slug] $b $r: remove it from tests/golden-known.txt ($kind)"
       else pass=$((pass+1)); fi
-    elif [ "$kind" == "unordered" ] && [ "$(sort <<< "$actual")" == "$(sort <<< "$expected")" ]; then
+    elif [ "$kind" == "unordered" ] && [ "$code" = "$expected_code" ] && [ "$(sort "$out")" == "$(sort "$golden")" ]; then
       pass=$((pass+1))
     elif [[ "$kind" == \#* ]]; then
       pass=$((pass+1))   # a tracked bug: expected to differ
     else
-      fail=$((fail+1)); echo "FAIL [$slug] $b $r"
+      fail=$((fail+1)); echo "FAIL [$slug] $b $r (exit $code, want $expected_code)"
     fi
   done <<< "$PAIRS"
-  echo "$pass $fail" > "$RESULTS/$slug"
+  rm -f "$out"
+  echo "$pass $fail" > "$RESULTS/res-$slug"
 }
 
+ONLY=" ${*:3} "
+total=0
 while IFS='|' read -r slug args; do
   [[ -z "$slug" || "$slug" == \#* ]] && continue
+  [ "$ONLY" == "  " ] || case "$ONLY" in *" $slug "*) ;; *) continue ;; esac
+  total=$((total + $(find "$ROOT/tests/golden/$slug" -name '*.out' | wc -l)))
   # poll rather than `wait -n`: macOS ships bash 3.2, which doesn't have it
   while [ "$(jobs -rp | wc -l)" -ge "$JOBS" ]; do sleep 0.2; done
   check_slug "$slug" "$args" &
@@ -55,9 +68,8 @@ done < "$ROOT/tools/golden-commands.txt"
 wait
 
 pass=0; fail=0; sets=0
-for f in "$RESULTS"/*; do read -r p q < "$f"; pass=$((pass+p)); fail=$((fail+q)); sets=$((sets+1)); done
+for f in "$RESULTS"/res-*; do read -r p q < "$f"; pass=$((pass+p)); fail=$((fail+q)); sets=$((sets+1)); done
 rm -rf "$RESULTS"
-total=$(find "$ROOT/tests/golden" -name "*.out" | wc -l | tr -d " ")
 IDS=$(grep -oE '"[a-z0-9-]+";$' "$ROOT/src/OasDelta/Checker/Generated/RuleIds.g.cs" | tr -d '";' | sort -u)
 rules=$(grep -c . <<< "$IDS")
 # grep -r, not cat with a glob: ~10k paths exceed the argument-length limit on macOS

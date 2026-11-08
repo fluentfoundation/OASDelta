@@ -233,7 +233,7 @@ public sealed class GoTemplate
                 case '"': sb.Append("&#34;"); break;
                 case '\'': sb.Append("&#39;"); break;
                 case '+': sb.Append("&#43;"); break;
-                case '\0': sb.Append("�"); break;
+                case '\0': sb.Append('\uFFFD'); break;
                 default: sb.Append(c); break;
             }
         }

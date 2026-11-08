@@ -68,9 +68,25 @@ public sealed class SchemaDiff : IDiff
     internal const int ChildCount = 19;
     internal object? GetChild(int i) => i switch
     {
-        0 => OneOfDiff, 1 => AnyOfDiff, 2 => AllOfDiff, 3 => NotDiff, 4 => ItemsDiff, 5 => PropertiesDiff, 6 => AdditionalPropertiesDiff,
-        7 => PrefixItemsDiff, 8 => ContainsDiff, 9 => PatternPropertiesDiff, 10 => DependentSchemasDiff, 11 => PropertyNamesDiff,
-        12 => UnevaluatedItemsDiff, 13 => UnevaluatedPropertiesDiff, 14 => IfDiff, 15 => ThenDiff, 16 => ElseDiff, 17 => ContentSchemaDiff, 18 => DefsDiff,
+        0 => OneOfDiff,
+        1 => AnyOfDiff,
+        2 => AllOfDiff,
+        3 => NotDiff,
+        4 => ItemsDiff,
+        5 => PropertiesDiff,
+        6 => AdditionalPropertiesDiff,
+        7 => PrefixItemsDiff,
+        8 => ContainsDiff,
+        9 => PatternPropertiesDiff,
+        10 => DependentSchemasDiff,
+        11 => PropertyNamesDiff,
+        12 => UnevaluatedItemsDiff,
+        13 => UnevaluatedPropertiesDiff,
+        14 => IfDiff,
+        15 => ThenDiff,
+        16 => ElseDiff,
+        17 => ContentSchemaDiff,
+        18 => DefsDiff,
         _ => null,
     };
     internal void SetChild(int i, object? v)

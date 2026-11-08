@@ -137,8 +137,16 @@ public sealed class PathItem : Element
 
     public Operation? GetOperation(string method) => method switch
     {
-        "CONNECT" => Connect, "DELETE" => Delete, "GET" => Get, "HEAD" => Head, "OPTIONS" => Options,
-        "PATCH" => Patch, "POST" => Post, "PUT" => Put, "TRACE" => Trace, "QUERY" => Query,
+        "CONNECT" => Connect,
+        "DELETE" => Delete,
+        "GET" => Get,
+        "HEAD" => Head,
+        "OPTIONS" => Options,
+        "PATCH" => Patch,
+        "POST" => Post,
+        "PUT" => Put,
+        "TRACE" => Trace,
+        "QUERY" => Query,
         _ => AdditionalOperations is not null && AdditionalOperations.TryGetValue(method, out var op) ? op : null,
     };
 

@@ -17,7 +17,11 @@ public sealed class FlagDef(string name, string shorthand, FlagKind kind, object
 
     public string TypeName => Kind switch
     {
-        FlagKind.Bool => "", FlagKind.Uint => "uint", FlagKind.Int => "int", FlagKind.Strings or FlagKind.EnumSlice => "strings", _ => "string",
+        FlagKind.Bool => "",
+        FlagKind.Uint => "uint",
+        FlagKind.Int => "int",
+        FlagKind.Strings or FlagKind.EnumSlice => "strings",
+        _ => "string",
     };
 
     public string DefaultText => Default switch

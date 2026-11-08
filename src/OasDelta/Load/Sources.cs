@@ -111,8 +111,11 @@ public static class GitSource
 
     private static (int code, string stdout, string stderr) Git(params string[] args)
     {
-        var psi = new ProcessStartInfo("git") { RedirectStandardOutput = true, RedirectStandardError = true, UseShellExecute = false,
-            StandardOutputEncoding = Encoding.UTF8 };
+        var psi = new ProcessStartInfo("git")
+        {
+            RedirectStandardOutput = true, RedirectStandardError = true, UseShellExecute = false,
+            StandardOutputEncoding = Encoding.UTF8
+        };
         foreach (var a in args) psi.ArgumentList.Add(a);
         try
         {

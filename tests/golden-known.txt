@@ -8,21 +8,3 @@ diff-markdown composed_base_spec1_yaml--composed_base_spec2_yaml unordered Go ma
 diff-markdown composed_revision_spec1_yaml--composed_revision_spec2_yaml unordered Go map order of modified extensions
 diff-html composed_base_spec1_yaml--composed_base_spec2_yaml unordered Go map order of modified extensions
 diff-html composed_revision_spec1_yaml--composed_revision_spec2_yaml unordered Go map order of modified extensions
-changelog-json checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-markdown checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-text checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-yaml checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-html checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-markup checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-singleline checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-githubactions checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-junit checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-lang-es checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-lang-pt-br checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-lang-ru checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-fail-on-info checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-include-path-params checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-flatten-params checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-case-sensitive-headers checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-deprecation-days checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes
-changelog-stability-level checker_add_new_media_type_revision_yaml--checker_add_new_media_type_params_modified_yaml #15 media type rename also reports parameter changes

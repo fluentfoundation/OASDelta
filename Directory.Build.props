@@ -1,0 +1,15 @@
+<Project>
+  <!-- Static analysis (issue #11): the .NET analyzers at the "recommended" level of the latest analysis release.
+       Rules that conflict with the byte-for-byte port of oasdiff are tuned in .editorconfig, each with a reason. -->
+  <PropertyGroup>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+  </PropertyGroup>
+  <!-- Warnings are errors in CI only, so a local build with a stray warning still runs.
+       NuGet audit advisories (NU1901-NU1904) stay warnings: a newly published advisory, e.g. against the SDK's own
+       ILCompiler package, would otherwise fail every build until the runner image catches up. Dependabot tracks them. -->
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true' or '$(ContinuousIntegrationBuild)' == 'true'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsNotAsErrors>$(WarningsNotAsErrors);NU1901;NU1902;NU1903;NU1904</WarningsNotAsErrors>
+  </PropertyGroup>
+</Project>

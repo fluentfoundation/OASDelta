@@ -29,6 +29,7 @@ jobs:
             os: ubuntu-latest
             rid: linux-x64
             exe: oasdelta
+            coverage: true
           - name: Windows
             os: windows-latest
             rid: win-x64
@@ -43,11 +44,38 @@ jobs:
       - name: Restore
         run: dotnet restore
 
+      - name: Check formatting (.editorconfig)
+        if: runner.os == 'Linux'
+        run: dotnet format --verify-no-changes --no-restore
+
       - name: Build
         run: dotnet build -c Release --no-restore
 
       - name: Test (unit + golden comparisons, JIT)
-        run: dotnet test -c Release --no-build --logger trx --results-directory TestResults
+        run: >-
+          dotnet test -c Release --no-build --logger trx --results-directory TestResults
+          ${{ matrix.coverage && '--collect "XPlat Code Coverage" --settings tests/OasDelta.Tests/coverage.runsettings' || '' }}
+
+      - name: Coverage report
+        if: matrix.coverage
+        uses: danielpalme/ReportGenerator-GitHub-Action@5.5.12
+        with:
+          reports: TestResults/**/coverage.cobertura.xml
+          targetdir: coverage
+          reporttypes: Html;JsonSummary;MarkdownSummaryGithub;Cobertura
+
+      - name: Coverage summary
+        if: matrix.coverage
+        shell: pwsh
+        run: .github/scripts/coverage-summary.ps1 coverage/Summary.json coverage/SummaryGithub.md >> $env:GITHUB_STEP_SUMMARY
+
+      - name: Upload coverage report
+        if: matrix.coverage
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-report
+          path: coverage
+          if-no-files-found: error
 
       - name: Publish NativeAOT
         run: dotnet publish src/OasDelta -c Release -r ${{ matrix.rid }} -o out

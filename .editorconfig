@@ -1,0 +1,109 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+[*.{csproj,props,targets,slnx,xml,config}]
+indent_size = 2
+
+[*.{yml,yaml,json}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+# Test data is compared byte for byte with oasdiff's output: never touch it.
+[tests/{fixtures,golden}/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+indent_style = unset
+indent_size = unset
+trim_trailing_whitespace = unset
+
+[*.cs]
+# ---- Layout (checked by `dotnet format whitespace`) -------------------------------------------------------------
+# Allman braces, but compact one-line blocks and several statements per line are part of the house style.
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_object_initializers = false
+csharp_new_line_before_members_in_anonymous_types = false
+csharp_new_line_between_query_expression_clauses = false
+csharp_preserve_single_line_blocks = true
+csharp_preserve_single_line_statements = true
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+csharp_indent_labels = no_change
+csharp_indent_block_contents = true
+csharp_indent_braces = false
+csharp_indent_case_contents_when_block = false
+csharp_space_after_cast = false
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_between_parentheses = false
+csharp_space_before_colon_in_inheritance_clause = true
+csharp_space_after_colon_in_inheritance_clause = true
+csharp_space_around_binary_operators = before_and_after
+csharp_space_after_comma = true
+csharp_space_before_comma = false
+csharp_space_after_dot = false
+csharp_space_before_dot = false
+csharp_space_after_semicolon_in_for_statement = true
+csharp_space_before_semicolon_in_for_statement = false
+csharp_space_before_open_square_brackets = false
+csharp_space_between_empty_square_brackets = false
+csharp_space_between_square_brackets = false
+
+# ---- Code style (checked by `dotnet format style`; only rules at warning are enforced) ----------------------
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+csharp_style_namespace_declarations = file_scoped:warning
+csharp_using_directive_placement = outside_namespace:warning
+dotnet_style_qualification_for_field = false:warning
+dotnet_style_qualification_for_property = false:warning
+dotnet_style_qualification_for_method = false:warning
+dotnet_style_qualification_for_event = false:warning
+dotnet_style_predefined_type_for_locals_parameters_members = true:warning
+dotnet_style_predefined_type_for_member_access = true:warning
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:silent
+dotnet_style_readonly_field = true:silent
+csharp_prefer_braces = false:silent
+csharp_style_var_for_built_in_types = true:silent
+csharp_style_var_when_type_is_apparent = true:silent
+csharp_style_var_elsewhere = true:silent
+csharp_style_expression_bodied_methods = when_on_single_line:silent
+csharp_style_expression_bodied_properties = true:silent
+csharp_style_expression_bodied_accessors = true:silent
+csharp_style_expression_bodied_lambdas = true:silent
+csharp_style_prefer_primary_constructors = true:silent
+csharp_style_prefer_switch_expression = true:silent
+csharp_style_prefer_pattern_matching = true:silent
+csharp_style_pattern_matching_over_is_with_cast_check = true:silent
+csharp_style_pattern_matching_over_as_with_null_check = true:silent
+csharp_prefer_simple_using_statement = true:silent
+csharp_style_implicit_object_creation_when_type_is_apparent = true:silent
+dotnet_style_prefer_collection_expression = when_types_loosely_match:silent
+dotnet_style_object_initializer = true:silent
+dotnet_style_collection_initializer = true:silent
+dotnet_style_null_propagation = true:silent
+dotnet_style_coalesce_expression = true:silent
+dotnet_style_prefer_conditional_expression_over_assignment = true:silent
+dotnet_style_prefer_conditional_expression_over_return = true:silent
+
+# ---- .NET analyzers (AnalysisLevel latest-recommended, see Directory.Build.props) -------------------------------
+# Each rule turned off here conflicts with porting oasdiff (Go) byte for byte; everything else stays on.
+
+# CA1051: the model, diff and report types mirror Go structs as plain public fields (hundreds of them); properties add nothing.
+dotnet_diagnostic.CA1051.severity = none
+# CA1720: identifiers mirror Go/cobra/pflag names (FlagKind.Int/Uint/String, Command.Short/Long, ValueDiff.Ptr, Yaml.Int).
+dotnet_diagnostic.CA1720.severity = none
+# CA1710: exception types keep their Go error names (ReturnError in internal/errors.go) so code maps 1:1 to upstream.
+dotnet_diagnostic.CA1710.severity = none

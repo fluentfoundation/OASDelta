@@ -20,15 +20,15 @@ public class EmitterOracleTests
     private sealed record Case(string Id, object? Value, string[] Yaml, string[] Json);
 
     [Fact]
-    public void Yaml_matches_go_yaml_v3() => Compare(c => c.Yaml, YamlEmitter.Emit);
+    public void YamlMatchesGoYamlV3() => Compare(c => c.Yaml, YamlEmitter.Emit);
 
     [Fact]
-    public void Json_matches_encoding_json() => Compare(c => c.Json, v => JsonEmitter.Emit(v));
+    public void JsonMatchesEncodingJson() => Compare(c => c.Json, v => JsonEmitter.Emit(v));
 
     /// <summary>The streaming entry points the CLI uses for diff output write what Emit returns (YAML: with exactly
     /// one final newline).</summary>
     [Fact]
-    public void Streaming_matches_Emit()
+    public void StreamingMatchesEmit()
     {
         foreach (var c in Cases.Value)
             foreach (var d in Docs(c.Value))
@@ -43,7 +43,7 @@ public class EmitterOracleTests
     }
 
     [Fact]
-    public void Corpus_and_expected_outputs_line_up()
+    public void CorpusAndExpectedOutputsLineUp()
     {
         Assert.True(Cases.Value.Count > 3000, $"only {Cases.Value.Count} corpus entries");
         foreach (var c in Cases.Value)

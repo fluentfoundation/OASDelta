@@ -1,0 +1,165 @@
+name: Upstream watch
+
+# Weekly: if oasdiff has released a version newer than tools/oasdiff-version.txt, regenerate tests/golden with it,
+# re-mine the fixture pairs its checker tests compare, run the tests against the new goldens, push the result to a
+# branch upstream/oasdiff-vX.Y.Z and open an issue that summarises what changed, with a link to open the pull request.
+#
+# It opens an issue rather than a pull request: pull requests created with GITHUB_TOKEN don't trigger CI, and a pull
+# request opened from the link does. Nothing happens if the branch for that version already exists.
+
+on:
+  schedule:
+    - cron: "23 4 * * 2" # weekly
+  workflow_dispatch:
+    inputs:
+      version:
+        description: oasdiff version to compare against (blank for the latest release)
+        default: ""
+      dry_run:
+        description: Only write the report to the job summary (no branch, no issue)
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # push the upstream/* branch
+  issues: write
+
+concurrency:
+  group: upstream-watch
+  cancel-in-progress: false
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Compare versions
+        id: v
+        run: |
+          current=$(tr -d '[:space:]' < tools/oasdiff-version.txt)
+          latest="${{ github.event.inputs.version }}"
+          if [ -z "$latest" ]; then
+            latest=$(gh release list -R oasdiff/oasdiff --exclude-pre-releases --limit 1 --json tagName --jq '.[0].tagName')
+          fi
+          latest=${latest#v}
+          branch="upstream/oasdiff-v$latest"
+          echo "current=$current" >> "$GITHUB_OUTPUT"
+          echo "latest=$latest" >> "$GITHUB_OUTPUT"
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          if [ "$latest" == "$current" ]; then
+            echo "OasDelta tracks oasdiff $current, the latest release." | tee -a "$GITHUB_STEP_SUMMARY"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          elif git ls-remote --exit-code --heads origin "$branch" > /dev/null; then
+            echo "Branch $branch already exists: oasdiff $latest was already reported." | tee -a "$GITHUB_STEP_SUMMARY"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "oasdiff $latest is out; OasDelta tracks $current." | tee -a "$GITHUB_STEP_SUMMARY"
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download oasdiff ${{ steps.v.outputs.latest }} (binary, checksum verified, and source)
+        if: steps.v.outputs.skip == 'false'
+        env:
+          V: ${{ steps.v.outputs.latest }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/oasdiff" && cd "$RUNNER_TEMP/oasdiff"
+          archive="oasdiff_${V}_linux_amd64.tar.gz"
+          gh release download "v$V" -R oasdiff/oasdiff -p "$archive" -p checksums.txt
+          grep " $archive\$" checksums.txt | sha256sum -c -
+          tar xzf "$archive"
+          ./oasdiff --version
+          gh api "repos/oasdiff/oasdiff/tarball/v$V" > src.tar.gz
+          mkdir src && tar xzf src.tar.gz -C src --strip-components 1
+
+      - uses: actions/setup-dotnet@v6
+        if: steps.v.outputs.skip == 'false'
+        with:
+          dotnet-version: 10.0.x
+
+      - uses: actions/setup-python@v7
+        if: steps.v.outputs.skip == 'false'
+        with:
+          python-version: "3.13"
+
+      - name: Regenerate goldens and fixture pairs
+        if: steps.v.outputs.skip == 'false'
+        run: |
+          python tools/mine_upstream_pairs.py "$RUNNER_TEMP/oasdiff/src" > tests/extra-pairs.txt
+          bash tools/gen_golden.sh "$RUNNER_TEMP/oasdiff/oasdiff" 8
+          echo "${{ steps.v.outputs.latest }}" > tools/oasdiff-version.txt
+
+      - name: Run OasDelta against the new goldens
+        if: steps.v.outputs.skip == 'false'
+        run: |
+          dotnet build src/OasDelta -c Release
+          set +e
+          bash tools/check_golden.sh src/OasDelta/bin/Release/net10.0/oasdelta > "$RUNNER_TEMP/check.txt" 2>&1
+          echo "check_status=$?" >> "$GITHUB_ENV"
+          set -e
+          tail -1 "$RUNNER_TEMP/check.txt"
+
+      - name: Push branch and open issue
+        if: steps.v.outputs.skip == 'false'
+        env:
+          CURRENT: ${{ steps.v.outputs.current }}
+          LATEST: ${{ steps.v.outputs.latest }}
+          BRANCH: ${{ steps.v.outputs.branch }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add -A tests/golden tests/extra-pairs.txt tools/oasdiff-version.txt
+          changed=$(git diff --cached --name-only -- tests/golden | grep '\.out$' | wc -l)
+          bysets=$(git diff --cached --name-only -- tests/golden | grep '\.out$' | cut -d/ -f3 | sort | uniq -c | sort -rn | awk '{ printf "| `%s` | %s |\n", $2, $1 }')
+          pairs=$(git diff --cached --numstat -- tests/extra-pairs.txt | awk '{ print "+" $1 " / -" $2 }')
+          git commit -q -m "Regenerate goldens with oasdiff $LATEST" -m "Generated by the Upstream watch workflow."
+          dry="${{ github.event.inputs.dry_run }}"
+          [ "$dry" == "true" ] || git push -q origin "$BRANCH"
+
+          summary=$(tail -1 "$RUNNER_TEMP/check.txt")
+          failures=$(grep -E '^(FAIL|NOW MATCHES) ' "$RUNNER_TEMP/check.txt" | head -40)
+          compare="${{ github.server_url }}/${{ github.repository }}/compare/main...$BRANCH?expand=1"
+          {
+            echo "oasdiff **$LATEST** has been released; OasDelta tracks **$CURRENT**."
+            echo
+            echo "The Upstream watch workflow regenerated the goldens with $LATEST and pushed them to \`$BRANCH\`."
+            echo
+            echo "**[Open the pull request]($compare)**. Opened from this link, it runs CI as usual."
+            echo
+            echo "## What changed"
+            echo
+            echo "- Golden outputs that changed: **$changed**"
+            echo "- Upstream test pairs (\`tests/extra-pairs.txt\`): $pairs lines"
+            echo "- Golden check of the current OasDelta against the new goldens: \`$summary\`"
+            echo
+            if [ "$changed" -gt 0 ]; then
+              echo "| Set | Changed outputs |"
+              echo "|---|---:|"
+              echo "$bysets"
+              echo
+            fi
+            if [ -n "$failures" ]; then
+              echo "<details><summary>First differences</summary>"
+              echo
+              echo '```'
+              echo "$failures"
+              echo '```'
+              echo "</details>"
+              echo
+            fi
+            echo "To finish: port the upstream changes until the golden check passes, update \`tests/golden-known.txt\` and \`tests/rule-coverage-floor.txt\` if needed, and bump \`OASDIFF_VERSION\` in OASDelta-TestData's parity workflow."
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          } > "$RUNNER_TEMP/issue.md"
+          if [ "$dry" == "true" ]; then
+            echo "**Dry run**: nothing was pushed and no issue was opened. The issue would read:" >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh issue create --title "oasdiff $LATEST: regenerate goldens and port the changes" --body-file "$RUNNER_TEMP/issue.md"
+          fi
+          cat "$RUNNER_TEMP/issue.md" >> "$GITHUB_STEP_SUMMARY"

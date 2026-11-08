@@ -1,0 +1,42 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /test
+- Modified header param: x-meta
+  - Schema changed
+    - Properties changed
+      - Modified property: owner
+        - Property 'OneOf' changed
+          - Schemas added: subschema #1, subschema #2
+        - Type changed from 'object' to ''
+        - Required changed
+          - Deleted required property: id
+        - Properties changed
+          - Deleted property: id
+      - Modified property: status
+        - Property 'OneOf' changed
+          - Schemas added: subschema #1, subschema #2
+        - Type changed from 'string' to ''
+        - Deleted enum values: [active retired]
+- Modified header param: x-owner
+  - Schema changed
+    - Property 'OneOf' changed
+      - Schemas added: subschema #1, subschema #2
+    - Type changed from 'object' to ''
+    - Required changed
+      - Deleted required property: id
+    - Properties changed
+      - Deleted property: id
+- Modified header param: x-status
+  - Schema changed
+    - Property 'OneOf' changed
+      - Schemas added: subschema #1, subschema #2
+    - Type changed from 'string' to ''
+    - Deleted enum values: [active retired]
+
+

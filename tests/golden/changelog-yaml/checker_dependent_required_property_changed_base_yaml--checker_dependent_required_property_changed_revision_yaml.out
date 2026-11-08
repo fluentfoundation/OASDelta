@@ -1,0 +1,38 @@
+- id: request-property-dependent-required-changed
+  text: 'the `address` request property dependentRequired for `street` was updated: `zip added`'
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/dependent_required_property_changed_base.yaml
+    line: 24
+    column: 19
+  revisionSource:
+    file: ./checker/dependent_required_property_changed_revision.yaml
+    line: 24
+    column: 19
+  fingerprint: fe35dc5fa7cf
+- id: response-property-dependent-required-changed
+  text: 'the `address` response property dependentRequired for `street` was updated for the status `200`: `zip added`'
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/dependent_required_property_changed_base.yaml
+    line: 44
+    column: 21
+  revisionSource:
+    file: ./checker/dependent_required_property_changed_revision.yaml
+    line: 45
+    column: 21
+  fingerprint: 75544a2332d8
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+

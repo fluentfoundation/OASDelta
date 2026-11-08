@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-parameter-type-changed] at ./checker/request_param_multitype_to_array_integer_31_revision.yaml
+	in API POST /api/v1.0/groups
+		for the `query` request parameter `token`, the `type` was changed from `string, integer` to `array<integer>`
+
+

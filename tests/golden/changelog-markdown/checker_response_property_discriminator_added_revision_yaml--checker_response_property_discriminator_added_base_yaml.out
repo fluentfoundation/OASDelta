@@ -1,0 +1,14 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /pets
+-  removed response discriminator for the response status `200`
+-  removed discriminator from `oneOf[#/components/schemas/Dog]/breed` response property for the response status `200`
+
+
+
+
+
+

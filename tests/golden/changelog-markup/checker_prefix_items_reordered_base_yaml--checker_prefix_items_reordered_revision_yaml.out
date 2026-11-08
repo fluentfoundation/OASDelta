@@ -1,0 +1,14 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /items
+- :warning: the `/prefixItems[subschema #1]/` request property `type` changed from `string` to `integer`
+- :warning: the `/prefixItems[subschema #2]/` request property `type` changed from `integer` to `string`
+
+
+
+
+
+

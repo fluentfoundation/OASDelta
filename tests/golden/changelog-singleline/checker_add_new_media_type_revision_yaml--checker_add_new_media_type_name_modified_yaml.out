@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./checker/add_new_media_type_name_modified.yaml, in API POST /api/v1.0/groups media type `application/json` was changed to a more specific media type `application/problem+json` for the response status `200` [response-media-type-name-specialized]. 
+
+

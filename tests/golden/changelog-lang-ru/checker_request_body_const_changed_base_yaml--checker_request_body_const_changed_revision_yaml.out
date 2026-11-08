@@ -1,0 +1,14 @@
+3 изменений: 2 error, 0 warning, 1 info
+error	[request-body-const-changed] в ./checker/request_body_const_changed_revision.yaml
+	в API POST /products
+		у тела запроса `text/plain` значение const изменено с `FixedValue` на `NewFixedValue`
+
+error	[request-body-media-type-removed] в ./checker/request_body_const_changed_revision.yaml
+	в API POST /products
+		удален тип медиа для тела запроса `application/json`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

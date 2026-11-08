@@ -1,0 +1,12 @@
+5 changes: 2 error, 0 warning, 3 info
+error at ./checker/contains_property_min_max_revision.yaml, in API POST /products the `tags` request property minContains was increased from `1` to `2` [request-property-min-contains-increased]. 
+
+error at ./checker/contains_property_min_max_revision.yaml, in API POST /products the `tags` response property maxContains was increased from `3` to `5` for the status `200` [response-property-max-contains-increased]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./checker/contains_property_min_max_revision.yaml, in API POST /products the `tags` request property maxContains was increased from `3` to `5` [request-property-max-contains-increased]. 
+
+info at ./checker/contains_property_min_max_revision.yaml, in API POST /products the `tags` response property minContains was increased from `1` to `2` for the status `200` [response-property-min-contains-increased]. 
+
+

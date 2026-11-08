@@ -1,0 +1,2 @@
+::error title=request-parameter-pattern-added,file=./checker/request_parameter_pattern_added_or_changed_base.yaml,line=14,col=13::in API POST /test added the pattern `^\w+$` to the `query` request parameter `category`
+

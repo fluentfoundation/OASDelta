@@ -1,0 +1,23 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        added:
+                                            - application/json
+endpoints:
+    modified:
+        ?   method: GET
+            path: /products
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            added:
+                                - application/json
+

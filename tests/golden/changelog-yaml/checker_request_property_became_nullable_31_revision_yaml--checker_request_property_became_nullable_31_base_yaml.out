@@ -1,0 +1,22 @@
+- id: request-property-became-not-nullable
+  text: the request property `name` became not nullable
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  fingerprint: 5c4e150a587b
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: response-property-became-not-nullable
+  text: the response property `status` became not nullable for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  fingerprint: c90c41d1e25c
+

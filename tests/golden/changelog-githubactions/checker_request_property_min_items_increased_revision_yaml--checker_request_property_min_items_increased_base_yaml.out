@@ -1,0 +1,2 @@
+::notice title=request-body-min-items-decreased,file=./checker/request_property_min_items_increased_base.yaml,line=18,col=15::in API POST /products the request's body minItems was decreased from `20` to `10`
+

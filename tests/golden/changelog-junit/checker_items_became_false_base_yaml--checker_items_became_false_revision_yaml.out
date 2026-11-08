@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-property-schema-became-false" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the schema of the request property `items` became `false`: no value passes validation</failure>
+    </testcase>
+    <testcase name="response-property-schema-became-false" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the schema of the response property `tags/items` became `false` for the status `200`: no value passes validation</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

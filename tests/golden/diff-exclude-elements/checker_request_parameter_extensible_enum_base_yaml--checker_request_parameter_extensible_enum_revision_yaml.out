@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/api/v1.0/groups":{"operations":{"modified":{"POST":{"parameters":{"modified":{"path":{"groupId":{"schema":{"extensions":{"modified":{"x-extensible-enum":[{"oldValue":"2","value":null,"op":"remove","from":"","path":"/1"}]}}}}}}}}}}}}}}

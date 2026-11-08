@@ -1,0 +1,22 @@
+5 изменений: 0 error, 0 warning, 5 info
+info	[response-body-discriminator-mapping-added] в ./checker/response_property_discriminator_mapping_changed.yaml
+	в API POST /pets
+		добавлены ключи сопоставления `cats` для дискриминатора ответа для статуса ответа `200`
+
+info	[response-body-discriminator-mapping-deleted] в ./checker/response_property_discriminator_mapping_changed.yaml
+	в API POST /pets
+		удалены ключи сопоставления `cat` из дискриминатора ответа для статуса ответа `200`
+
+info	[response-property-discriminator-mapping-added] в ./checker/response_property_discriminator_mapping_changed.yaml
+	в API POST /pets
+		добавлены ключи сопоставления дискриминатора `breed1Code` для свойства ответа `oneOf[#/components/schemas/Dog]/breed` для статуса ответа `200`
+
+info	[response-property-discriminator-mapping-changed] в ./checker/response_property_discriminator_mapping_changed.yaml
+	в API POST /pets
+		значение для ключа дискриминатора `breed2` изменено с `#/components/schemas/Breed2` на `#/components/schemas/Breed3` для свойства ответа `oneOf[#/components/schemas/Dog]/breed` для статуса ответа `200`
+
+info	[response-property-discriminator-mapping-deleted] в ./checker/response_property_discriminator_mapping_changed.yaml
+	в API POST /pets
+		удалены ключи сопоставления дискриминатора `breed1` из свойства ответа `oneOf[#/components/schemas/Dog]/breed` для статуса ответа `200`
+
+

@@ -1,0 +1,6 @@
+2 changes: 2 error, 0 warning, 0 info
+error at ./checker/media_type_param_value_revision.yaml, in API POST /api/v1.0/groups the media type parameter `charset` of `application/json` was changed from `utf-8` to `utf-16` for the response status `200` [response-media-type-parameter-changed]. 
+
+error at ./checker/media_type_param_value_revision.yaml, in API POST /api/v1.0/groups the media type parameter `charset` of `application/json` was changed from `utf-8` to `utf-16` for the response status `409` [response-media-type-parameter-changed]. 
+
+

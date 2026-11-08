@@ -1,0 +1,26 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /labels
+- Summary changed from 'fun size' to 'fun size 🍫 and 🚒 wontfix'
+- Description changed from 'Go:
+	type MyAPIObject struct {
+		Name string
+	}' to 'Go:
+	type MyAPIObject struct {
+		Name  string
+	}
+'
+- Modified query param: c1
+  - Description changed from 'plain' to 'controlchar  nbsp'
+- Modified query param: nel
+  - Description changed from 'next line' to 'nextline'
+- Modified query param: q
+  - Description changed from 'tab	here' to 'tab	there'
+
+

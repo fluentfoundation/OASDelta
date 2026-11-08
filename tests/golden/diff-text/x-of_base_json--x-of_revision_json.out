@@ -1,0 +1,42 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 3
+-------------------------
+GET /api/allOf/path
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Property 'AllOf' changed
+            - Modified schema: #/components/schemas/ProblemSchema
+              - Required changed
+                - Deleted required property: changedProperty
+
+GET /api/anyOf/path
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Property 'AnyOf' changed
+            - Modified schema: #/components/schemas/ProblemSchema
+              - Required changed
+                - Deleted required property: changedProperty
+
+GET /api/oneOf/path
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Property 'OneOf' changed
+            - Modified schema: #/components/schemas/ProblemSchema
+              - Required changed
+                - Deleted required property: changedProperty
+
+

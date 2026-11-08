@@ -1,0 +1,2 @@
+::notice title=response-media-type-added,file=./response-media-type-base.yaml,line=35,col=13::in API GET /products added the media type `application/json` for the response with the status `200`
+

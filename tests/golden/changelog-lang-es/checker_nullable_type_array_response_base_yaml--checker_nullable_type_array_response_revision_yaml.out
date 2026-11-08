@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-property-became-not-nullable] en ./checker/nullable_type_array_response_revision.yaml
+	en API GET /t
+		la propiedad de respuesta `p` se volvió no nulable para el estado `200`
+
+

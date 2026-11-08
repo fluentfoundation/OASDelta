@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/api/v2/changeOfRequestFieldValueTiedToEnumTest":{"operations":{"modified":{"GET":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"enum":{"added":["VALUE_3"]}}}}}}}}}}}}}

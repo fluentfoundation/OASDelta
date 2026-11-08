@@ -1,0 +1,21 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /api/atlas/v2/changeOfResponseArrayFieldTest
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/vnd.atlas.2023-01-01+json
+        - Schema changed
+          - Items changed
+            - Properties changed
+              - Modified property: testField
+                - Type changed from 'string' to 'integer'
+                - Format changed from '' to 'int32'
+
+

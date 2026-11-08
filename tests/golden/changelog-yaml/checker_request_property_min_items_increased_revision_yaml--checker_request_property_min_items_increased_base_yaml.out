@@ -1,0 +1,17 @@
+- id: request-body-min-items-decreased
+  text: the request's body minItems was decreased from `20` to `10`
+  level: 1
+  operation: POST
+  operationId: addProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/request_property_min_items_increased_revision.yaml
+    line: 18
+    column: 15
+  revisionSource:
+    file: ./checker/request_property_min_items_increased_base.yaml
+    line: 18
+    column: 15
+  fingerprint: a5074922ac8c
+

@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./checker/request_parameter_max_length_updated_revision.yaml, in API POST /test for the `query` request parameter `category`, the maxLength was increased from `10` to `15` [request-parameter-max-length-increased]. 
+
+

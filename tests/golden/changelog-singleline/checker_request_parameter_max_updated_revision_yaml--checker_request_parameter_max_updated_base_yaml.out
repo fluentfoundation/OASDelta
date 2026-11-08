@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./checker/request_parameter_max_updated_base.yaml, in API POST /api/v1.0/groups for the `query` request parameter `category`, the max was decreased from `10.00` to `5.00` [request-parameter-max-decreased]. 
+
+

@@ -1,0 +1,20 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /api/v1.0/groups
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Name changed from 'application/json; charset=utf-8' to 'application/json'
+  - Modified response: 409
+    - Content changed
+      - Modified media type: application/json
+        - Name changed from 'application/json; charset=utf-8' to 'application/json'
+
+

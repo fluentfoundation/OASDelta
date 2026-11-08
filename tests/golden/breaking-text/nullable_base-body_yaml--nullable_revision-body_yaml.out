@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[response-body-became-nullable] at ./nullable/revision-body.yaml
+	in API POST /payments/{id}
+		the response's body became nullable
+
+

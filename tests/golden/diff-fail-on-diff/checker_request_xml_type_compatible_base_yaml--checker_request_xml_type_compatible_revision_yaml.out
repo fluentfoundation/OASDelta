@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/api/v1.0/groups":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/xml":{"schema":{"type":{"added":["string"],"deleted":["object"]}}}}}}}}}}}}}

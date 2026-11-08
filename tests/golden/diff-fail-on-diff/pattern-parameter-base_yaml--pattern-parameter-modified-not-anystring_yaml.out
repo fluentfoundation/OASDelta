@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/api/v1.0/groups/{groupId}":{"operations":{"modified":{"GET":{"parameters":{"modified":{"path":{"groupId":{"schema":{"pattern":{"from":"[0-9a-f]+","to":"[0-9]+"}}}}}}}}}}}},"components":{"parameters":{"modified":{"groupId":{"schema":{"pattern":{"from":"[0-9a-f]+","to":"[0-9]+"}}}}}}}

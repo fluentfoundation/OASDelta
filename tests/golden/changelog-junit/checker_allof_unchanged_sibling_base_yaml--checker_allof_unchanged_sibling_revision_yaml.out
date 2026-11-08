@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="request-property-max-length-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `wrapper` request property's maxLength was decreased to `5`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

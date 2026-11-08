@@ -1,0 +1,7 @@
+1 changes: 0 error, 1 warning, 0 info
+warning	[response-media-type-name-changed] at ./checker/add_new_media_type_params_modified.yaml
+	in API POST /api/v1.0/groups
+		media type `application/json` was changed to `application/problem+json;q=1` for the response status `200`
+		This is a warning because oasdiff cannot tell what the changed media type parameter constrains. Adding one narrows what the server may return, removing one widens it, and changing its value may leave a client unable to read the response.
+
+

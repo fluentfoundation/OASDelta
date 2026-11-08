@@ -1,0 +1,4 @@
+::error title=request-parameter-schema-became-false,file=./checker/schema_became_false_revision.yaml::in API POST /items the schema of the `query` request parameter `filter` became `false`: no value passes validation
+::error title=request-property-schema-became-false,file=./checker/schema_became_false_revision.yaml::in API POST /items the schema of the request property `name` became `false`: no value passes validation
+::error title=response-body-schema-became-false,file=./checker/schema_became_false_revision.yaml::in API POST /items the response body schema became `false`: no response body passes validation
+

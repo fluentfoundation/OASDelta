@@ -1,0 +1,3 @@
+::notice title=request-parameter-enum-value-added,file=./openapi-test702.yaml,line=150,col=13::in API GET /api/{domain}/{project}/install-command added the new enum value `removed-value` to the `path` request parameter `domain`
+::notice title=endpoint-added,file=./openapi-test702.yaml,line=176,col=5::in API POST /subscribe endpoint added
+

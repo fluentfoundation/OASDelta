@@ -1,0 +1,7 @@
+No endpoint changes, but there are some other changes
+Other Changes
+-------------
+Security Requirements changed
+- Deleted security requirements: petstore_auth: [read:pets, write:pets]
+
+

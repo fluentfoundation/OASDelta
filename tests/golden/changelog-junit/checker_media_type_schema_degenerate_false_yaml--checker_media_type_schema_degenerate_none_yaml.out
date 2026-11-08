@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-body-media-type-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the schema from the media type `application/json` for the response with the status `200`</failure>
+    </testcase>
+    <testcase name="request-body-media-type-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the schema from the media type `application/json` of the request body</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

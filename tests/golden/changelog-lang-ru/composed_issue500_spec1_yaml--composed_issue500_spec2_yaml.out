@@ -1,0 +1,10 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[api-removed-without-deprecation] в ./composed/issue500/spec1.yaml
+	в API GET /test
+		API удалён без deprecation
+
+info	[endpoint-added] в ./composed/issue500/spec2.yaml
+	в API POST /test
+		эндпоинт добавлен
+
+

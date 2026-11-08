@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-property-schema-became-false] at ./checker/items_became_false_revision.yaml
+	in API POST /items
+		the schema of the request property `items` became `false`: no value passes validation
+
+

@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./checker/request_property_added_with_default.yaml, in API POST /products added the new required request property `description` with a default value [new-required-request-property-with-default]. A request that omits this required property is invalid under the new contract, even though the property has a default. The default is a server-side fallback, it does not make the omitted property valid. Downgrade this check with --severity-levels if omitting the property is safe for your clients.
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

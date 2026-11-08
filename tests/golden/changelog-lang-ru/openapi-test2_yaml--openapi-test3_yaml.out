@@ -1,0 +1,74 @@
+17 изменений: 6 error, 2 warning, 9 info
+error	[new-required-request-parameter] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		добавлен новый обязательный `header` параметр зароса `x-auth-name`
+
+error	[request-parameter-max-length-set] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		в `query` параметре запроса `token`, maxLength установлен в `30`
+		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+
+error	[request-parameter-pattern-added] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		добавлен pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` у `query` параметра запроса `token`
+		Это критическое изменение, потому что добавление ограничения шаблона к ранее неограниченному параметру отклонит значения, которые ранее принимались, сломав существующих клиентов
+
+error	[request-parameter-type-changed] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		в параметре запроса `path` `domain` `type/format` изменён с `integer/non-negative integer` на `string/hyphen-separated list`
+
+error	[request-parameter-type-changed] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		в параметре запроса `query` `token` `type/format` изменён с `any` на `string/uuid`
+
+error	[api-removed-without-deprecation] в openapi-test2.yaml
+	в API POST /api/{domain}/{project}/badges/security-score
+		API удалён без deprecation
+
+warning	[request-parameter-pattern-changed] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		изменён pattern у `path` параметра запроса `domain` со значения `^(?:\d+)$` на значение `^(?:([a-z]+-)*([a-z]+)?)$`
+		Это предупреждение, потому что сложно автоматически проанализировать, является ли новый шаблон надмножеством предыдущего шаблона (например, изменен с '[0-9]+' на '[0-9]*').
+
+warning	[request-parameter-removed] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удалён `query` параметр запроса `filter`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+info	[api-security-component-added]
+	в components/securitySchemes
+		компонент схемы безопасности `OAuth` был добавлен
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.1`
+
+info	[api-operation-id-added] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		добавлен идентификатор операции API `GetSecurityScore`
+
+info	[request-parameter-min-unset] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		значение min в `path` параметре запроса `domain` удалено, предыдущее значение - `7.00`
+
+info	[request-parameter-pattern-removed] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удалён pattern `^(?:[\w-./:]+)$` у `query` параметра запроса `image`
+
+info	[request-parameter-type-generalized] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		в параметре запроса `query` `image` `type/format` расширен с `string/general string` до `any`
+
+info	[endpoint-added] в openapi-test3.yaml
+	в API GET /api/{domain}/{project}/install-command
+		эндпоинт добавлен
+
+info	[endpoint-added] в openapi-test3.yaml
+	в API POST /register
+		эндпоинт добавлен
+
+info	[endpoint-added] в openapi-test3.yaml
+	в API POST /subscribe
+		эндпоинт добавлен
+
+

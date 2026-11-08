@@ -1,0 +1,25 @@
+paths:
+    modified:
+        /api/v1.0/groups:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            description:
+                                from: Creates one project.
+                                to: ""
+                            content:
+                                deleted:
+                                    - application/json
+endpoints:
+    modified:
+        ?   method: POST
+            path: /api/v1.0/groups
+        :   requestBody:
+                description:
+                    from: Creates one project.
+                    to: ""
+                content:
+                    deleted:
+                        - application/json
+

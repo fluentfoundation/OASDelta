@@ -1,0 +1,16 @@
+- id: request-parameter-max-length-decreased
+  text: for the `query` request parameter `category`, the maxLength was decreased from `15` to `10`
+  level: 3
+  operation: POST
+  path: /test
+  section: paths
+  baseSource:
+    file: ./checker/request_parameter_max_length_updated_revision.yaml
+    line: 13
+    column: 13
+  revisionSource:
+    file: ./checker/request_parameter_max_length_updated_base.yaml
+    line: 13
+    column: 13
+  fingerprint: 61314766f535
+

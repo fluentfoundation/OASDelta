@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/products":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"not":{"required":{"added":["added_prop"],"deleted":["removed_prop"]},"properties":{"added":["added_prop"],"deleted":["removed_prop"],"modified":{"modified_prop":{"maxLength":{"from":10,"to":5}}}}}}}}}}}}}}}}}

@@ -1,0 +1,16 @@
+3 cambios: 2 error, 0 warning, 1 info
+error	[response-property-enum-value-added] en openapi-test704.yaml
+	en API POST /register
+		agregado el nuevo valor enum `QWE` a la propiedad de respuesta `respenum` para el estado `default`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en openapi-test704.yaml
+	en API POST /register
+		agregado el nuevo valor enum `TER2` a la propiedad de respuesta `respenum2/respenum3` para el estado `default`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-parameter-became-enum] en ./enums/request-parameter-op-enum.yaml
+	en API GET /books/{bookId}
+		el parámetro `path` de solicitud `bookId` fue restringido a una lista de valores enum
+
+

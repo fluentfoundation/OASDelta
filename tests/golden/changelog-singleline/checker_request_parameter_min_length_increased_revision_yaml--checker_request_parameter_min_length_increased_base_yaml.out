@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./checker/request_parameter_min_length_increased_base.yaml, in API POST /test for the `query` request parameter `name`, the minLength was decreased from `5` to `3` [request-parameter-min-length-decreased]. 
+
+

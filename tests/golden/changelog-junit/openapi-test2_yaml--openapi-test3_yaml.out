@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="17" errors="0" failures="17" name="OASDiff">
+    <testcase name="new-required-request-parameter" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new required `header` request parameter `x-auth-name`</failure>
+    </testcase>
+    <testcase name="request-parameter-max-length-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `token`, the maxLength was set to `30`</failure>
+    </testcase>
+    <testcase name="request-parameter-pattern-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` to the `query` request parameter `token`</failure>
+    </testcase>
+    <testcase name="request-parameter-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `path` request parameter `domain`, the `type/format` was changed from `integer/non-negative integer` to `string/hyphen-separated list`</failure>
+    </testcase>
+    <testcase name="request-parameter-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `token`, the `type/format` was changed from `any` to `string/uuid`</failure>
+    </testcase>
+    <testcase name="api-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api removed without deprecation</failure>
+    </testcase>
+    <testcase name="request-parameter-pattern-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">changed the pattern of the `path` request parameter `domain` from `^(?:\d+)$` to `^(?:([a-z]+-)*([a-z]+)?)$`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `query` request parameter `filter`</failure>
+    </testcase>
+    <testcase name="api-security-component-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `OAuth` was added</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.1`</failure>
+    </testcase>
+    <testcase name="api-operation-id-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api operation id `GetSecurityScore` was added</failure>
+    </testcase>
+    <testcase name="request-parameter-min-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `path` request parameter `domain`, the min was unset from `7.00`</failure>
+    </testcase>
+    <testcase name="request-parameter-pattern-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image`</failure>
+    </testcase>
+    <testcase name="request-parameter-type-generalized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any`</failure>
+    </testcase>
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

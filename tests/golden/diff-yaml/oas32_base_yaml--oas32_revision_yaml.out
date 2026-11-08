@@ -1,0 +1,72 @@
+paths:
+    added:
+        - /new
+    deleted:
+        - /gone
+    modified:
+        /search:
+            operations:
+                added:
+                    - MOVE
+                deleted:
+                    - PURGE
+                modified:
+                    COPY:
+                        deprecated:
+                            from: false
+                            to: true
+                    QUERY:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    term:
+                                                        type:
+                                                            added:
+                                                                - integer
+                                                            deleted:
+                                                                - string
+                        responses:
+                            deleted:
+                                - "418"
+endpoints:
+    added:
+        - method: QUERY
+          path: /new
+        - method: MOVE
+          path: /search
+    deleted:
+        - method: LOCK
+          path: /gone
+        - method: QUERY
+          path: /gone
+        - method: PURGE
+          path: /search
+    modified:
+        ?   method: COPY
+            path: /search
+        :   deprecated:
+                from: false
+                to: true
+        ?   method: QUERY
+            path: /search
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        term:
+                                            type:
+                                                added:
+                                                    - integer
+                                                deleted:
+                                                    - string
+            responses:
+                deleted:
+                    - "418"
+

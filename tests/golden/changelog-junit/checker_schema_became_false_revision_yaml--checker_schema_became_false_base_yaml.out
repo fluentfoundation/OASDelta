@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="request-parameter-schema-became-not-false" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the schema of the `query` request parameter `filter` is no longer `false` and accepts values again</failure>
+    </testcase>
+    <testcase name="request-property-schema-became-not-false" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the schema of the request property `name` is no longer `false` and accepts values again</failure>
+    </testcase>
+    <testcase name="response-body-schema-became-not-false" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response body schema is no longer `false` and allows response bodies again</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

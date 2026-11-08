@@ -1,0 +1,1 @@
+[{"id":"request-property-became-not-nullable","text":"the request property `name` became not nullable","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","fingerprint":"5c4e150a587b"}]

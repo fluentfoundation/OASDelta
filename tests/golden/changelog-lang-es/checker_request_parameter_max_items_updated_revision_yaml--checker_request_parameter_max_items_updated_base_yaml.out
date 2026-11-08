@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-parameter-max-items-decreased] en ./checker/request_parameter_max_items_updated_base.yaml
+	en API POST /api/v1.0/groups
+		para el parámetro `query` de solicitud `category`, maxItems fue disminuido de `20` a `10`
+
+

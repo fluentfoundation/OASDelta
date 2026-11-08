@@ -1,0 +1,2 @@
+::error title=request-property-became-required,file=./required-properties/nested-property2.yaml,line=17,col=21::in API POST /test the request property `id/userId` became required
+

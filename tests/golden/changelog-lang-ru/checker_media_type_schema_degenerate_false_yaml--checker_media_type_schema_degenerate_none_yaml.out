@@ -1,0 +1,10 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[response-body-media-type-schema-removed] в ./checker/media_type_schema_degenerate_none.yaml
+	в API POST /items
+		схема удалена из типа медиа `application/json` ответа со статусом `200`
+
+info	[request-body-media-type-schema-removed] в ./checker/media_type_schema_degenerate_none.yaml
+	в API POST /items
+		схема удалена из типа медиа `application/json` тела запроса
+
+

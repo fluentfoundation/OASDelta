@@ -1,0 +1,6 @@
+1 alterações: 0 error, 1 warning, 0 info
+warning	[request-property-removed] em ./checker/request_property_added_base.yaml
+	em API POST /products
+		a propriedade de requisição `description` foi removida
+
+

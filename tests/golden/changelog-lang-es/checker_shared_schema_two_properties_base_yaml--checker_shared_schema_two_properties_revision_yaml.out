@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[response-property-pattern-added] en ./checker/shared_schema_two_properties_revision.yaml
+	en API GET /accounts
+		el patrón `customerId` fue agregado a la propiedad de respuesta `^[0-9]+$` para el estado `200` (esquema compartido: `Id`, también en `ownerId`, `userId`)
+
+info	[response-property-pattern-added] en ./checker/shared_schema_two_properties_revision.yaml
+	en API GET /orders
+		el patrón `customerId` fue agregado a la propiedad de respuesta `^[0-9]+$` para el estado `200` (esquema compartido: `Id`, también en `userId`)
+
+

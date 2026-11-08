@@ -1,0 +1,34 @@
+- id: response-body-dependent-schema-removed
+  text: removed the dependent schema `name` from the response body for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/dependent_schemas_revision.yaml
+    line: 33
+    column: 19
+    endLine: 36
+    endColumn: 37
+  fingerprint: 203d50c39775
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-body-dependent-schema-removed
+  text: removed the dependent schema `name` from the request body
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/dependent_schemas_revision.yaml
+    line: 18
+    column: 17
+    endLine: 21
+    endColumn: 35
+  fingerprint: 96b4d7138a2f
+

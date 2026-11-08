@@ -1,0 +1,11 @@
+<h2 id="other-changes">No endpoint changes, but there are some other changes<br>
+Other Changes</h2>
+<p>Security Requirements changed</p>
+<ul>
+<li>Modified security requirements: petstore_auth
+<ul>
+<li>Scheme petstore_auth Deleted scopes: [read:pets]</li>
+</ul>
+</li>
+</ul>
+

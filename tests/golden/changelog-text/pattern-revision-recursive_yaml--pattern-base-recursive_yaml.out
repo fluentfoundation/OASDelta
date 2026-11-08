@@ -1,0 +1,15 @@
+3 changes: 0 error, 0 warning, 3 info
+info	[request-property-pattern-added] at ./pattern-base-recursive.yaml
+	in API POST /api/v1.0/groups
+		added the pattern `^[a-z]+$` to the request property `data/created`
+		The property is read-only, so it never appears in requests and this change cannot invalidate one.
+
+info	[response-property-pattern-added] at ./pattern-base-recursive.yaml
+	in API POST /api/v1.0/groups
+		the `data/created` response's property pattern `^[a-z]+$` was added for the status `200`
+
+info	[response-property-pattern-added] at ./pattern-base-recursive.yaml
+	in API GET /api/v1.0/groups/{groupId}
+		the `data/created` response's property pattern `^[a-z]+$` was added for the status `200`
+
+

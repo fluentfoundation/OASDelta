@@ -1,0 +1,1 @@
+[{"id":"response-body-pattern-property-removed","text":"removed the pattern property `^x-` from the response body for the status `200`","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","baseSource":{"file":"./checker/pattern_properties_revision.yaml","line":31,"column":19,"endLine":32,"endColumn":33},"fingerprint":"0b3e4afc3d87"}]

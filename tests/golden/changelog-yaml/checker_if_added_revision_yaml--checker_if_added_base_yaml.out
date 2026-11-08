@@ -1,0 +1,78 @@
+- id: response-body-else-removed
+  text: removed 'else' subschema from the response body for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/if_added_revision.yaml
+    line: 45
+    column: 17
+  fingerprint: 67a9b77ad897
+- id: response-body-if-removed
+  text: removed 'if' subschema from the response body for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/if_added_revision.yaml
+    line: 38
+    column: 17
+  fingerprint: 3c61f7d9beb6
+- id: response-body-then-removed
+  text: removed 'then' subschema from the response body for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/if_added_revision.yaml
+    line: 42
+    column: 17
+  fingerprint: 2fb11de93d44
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-body-else-removed
+  text: removed 'else' subschema from the request body
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/if_added_revision.yaml
+    line: 24
+    column: 15
+  fingerprint: 9006a64f0d6c
+- id: request-body-if-removed
+  text: removed 'if' subschema from the request body
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/if_added_revision.yaml
+    line: 17
+    column: 15
+  fingerprint: d7bd8026ef64
+- id: request-body-then-removed
+  text: removed 'then' subschema from the request body
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/if_added_revision.yaml
+    line: 21
+    column: 15
+  fingerprint: d1c20959ff7a
+

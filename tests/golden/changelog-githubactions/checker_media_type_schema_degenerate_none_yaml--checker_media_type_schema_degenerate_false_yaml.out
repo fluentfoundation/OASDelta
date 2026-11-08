@@ -1,0 +1,3 @@
+::error title=request-body-schema-became-false,file=./checker/media_type_schema_degenerate_false.yaml,line=11,col=11::in API POST /items the request body schema became `false`: no request body passes validation
+::error title=response-body-schema-became-false,file=./checker/media_type_schema_degenerate_false.yaml,line=16,col=13::in API POST /items the response body schema became `false`: no response body passes validation
+

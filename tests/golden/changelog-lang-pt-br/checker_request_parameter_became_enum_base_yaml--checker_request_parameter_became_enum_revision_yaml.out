@@ -1,0 +1,10 @@
+2 alterações: 2 error, 0 warning, 0 info
+error	[request-parameter-became-enum] em ./checker/request_parameter_became_enum_revision.yaml
+	em API POST /api/v1.0/groups
+		o parâmetro de requisição do tipo `path` e nome `groupId` foi restrito a uma lista de valores enum
+
+error	[request-parameter-type-changed] em ./checker/request_parameter_became_enum_revision.yaml
+	em API POST /api/v1.0/groups
+		no parâmetro de requisição do tipo `path` e nome `groupId`, o `type` foi alterado de `string` para `integer`
+
+

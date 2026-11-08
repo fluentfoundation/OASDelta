@@ -1,0 +1,12 @@
+2 cambios: 0 error, 2 warning, 0 info
+warning	[request-body-prefix-items-added] en ./checker/prefix_items_added_revision.yaml
+	en API POST /products
+		agregado `subschema #1` a la lista 'prefixItems' del cuerpo de solicitud
+		Esta es una advertencia porque oasdiff no puede determinar si el cambio es incompatible. Una posición del arreglo no cubierta por `prefixItems` se valida contra el esquema `items`: cuando `items` está ausente la posición acepta cualquier valor, y cuando `items` es `false` no permite ningún valor, por lo que este cambio puede rechazar arreglos que antes eran válidos o permitir arreglos que antes no lo eran.
+
+warning	[response-body-prefix-items-added] en ./checker/prefix_items_added_revision.yaml
+	en API POST /products
+		agregado `subschema #1` a la lista 'prefixItems' del cuerpo de respuesta para el estado de respuesta `200`
+		Esta es una advertencia porque oasdiff no puede determinar si el cambio es incompatible. Una posición del arreglo no cubierta por `prefixItems` se valida contra el esquema `items`: cuando `items` está ausente la posición acepta cualquier valor, y cuando `items` es `false` no permite ningún valor, por lo que este cambio puede rechazar arreglos que antes eran válidos o permitir arreglos que antes no lo eran.
+
+

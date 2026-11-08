@@ -1,0 +1,94 @@
+- id: request-property-content-encoding-changed
+  text: the `details/data` request property contentEncoding changed from `base64` to `quoted-printable`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_prop_base.yaml
+    line: 21
+    column: 23
+  revisionSource:
+    file: ./checker/content_schema_prop_revision.yaml
+    line: 21
+    column: 23
+  fingerprint: 0e84ebb7806d
+- id: request-property-content-media-type-changed
+  text: the `details/data` request property contentMediaType changed from `application/json` to `text/plain`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_prop_base.yaml
+    line: 20
+    column: 23
+  revisionSource:
+    file: ./checker/content_schema_prop_revision.yaml
+    line: 20
+    column: 23
+  fingerprint: 2fd1035edd5b
+- id: request-property-content-schema-added
+  text: added 'contentSchema' to the request property `details/data`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/content_schema_prop_revision.yaml
+    line: 22
+    column: 23
+  fingerprint: ea9557b7359c
+- id: response-property-content-encoding-changed
+  text: the `details/data` response property contentEncoding changed from `base64` to `quoted-printable` for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_prop_base.yaml
+    line: 36
+    column: 25
+  revisionSource:
+    file: ./checker/content_schema_prop_revision.yaml
+    line: 38
+    column: 25
+  fingerprint: 1a5cdb6c5dc1
+- id: response-property-content-media-type-changed
+  text: the `details/data` response property contentMediaType changed from `application/json` to `text/plain` for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/content_schema_prop_base.yaml
+    line: 35
+    column: 25
+  revisionSource:
+    file: ./checker/content_schema_prop_revision.yaml
+    line: 37
+    column: 25
+  fingerprint: 8af963e0911c
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: response-property-content-schema-added
+  text: added 'contentSchema' to the `details/data` response property for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/content_schema_prop_revision.yaml
+    line: 39
+    column: 25
+  fingerprint: 996ce51893a6
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="request-body-const-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request body `text/plain` const value changed from `FixedValue` to `NewFixedValue`</failure>
+    </testcase>
+    <testcase name="request-body-media-type-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the media type `application/json` from the request body</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

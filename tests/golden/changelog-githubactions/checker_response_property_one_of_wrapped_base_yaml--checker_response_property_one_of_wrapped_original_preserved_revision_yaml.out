@@ -1,0 +1,2 @@
+::warning title=response-body-wrapped-in-one-of-original-preserved,file=./checker/response_property_one_of_wrapped_original_preserved_revision.yaml::in API GET /example the response body was restructured into a oneOf, keeping the original schema as one of the alternatives
+

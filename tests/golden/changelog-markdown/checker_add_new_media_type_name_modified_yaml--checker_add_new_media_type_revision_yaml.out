@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+- :warning: media type `application/problem+json` was changed to a more general media type `application/json` for the response status `200`
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+1 alterações: 0 error, 1 warning, 0 info
+warning	[request-property-max-length-decreased] em ./checker/allof_unchanged_sibling_revision.yaml
+	em API POST /items
+		o comprimento máximo da propriedade de requisição `wrapper` foi reduzido para `5`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+

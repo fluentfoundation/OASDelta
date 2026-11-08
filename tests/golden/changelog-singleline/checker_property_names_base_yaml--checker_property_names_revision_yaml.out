@@ -1,0 +1,8 @@
+3 changes: 1 error, 0 warning, 2 info
+error at ./checker/property_names_revision.yaml, in API POST /products added 'propertyNames' constraint to the request body [request-body-property-names-added]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./checker/property_names_revision.yaml, in API POST /products added 'propertyNames' constraint to the response body for the status `200` [response-body-property-names-added]. 
+
+

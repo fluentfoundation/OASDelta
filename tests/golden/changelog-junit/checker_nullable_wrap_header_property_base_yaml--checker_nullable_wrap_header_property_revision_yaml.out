@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="request-parameter-became-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `header` request parameter `x-owner` became nullable</failure>
+    </testcase>
+    <testcase name="request-parameter-became-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `header` request parameter `x-status` became nullable</failure>
+    </testcase>
+    <testcase name="request-parameter-property-became-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `owner` property of the `header` request parameter `x-meta` became nullable</failure>
+    </testcase>
+    <testcase name="request-parameter-property-became-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `status` property of the `header` request parameter `x-meta` became nullable</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

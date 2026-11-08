@@ -1,0 +1,13 @@
+- id: api-operation-id-removed
+  text: api operation id `x` removed and replaced with ``
+  level: 1
+  operation: GET
+  operationId: x
+  path: /api/test
+  section: paths
+  baseSource:
+    file: ./composed/base/spec1.yaml
+    line: 11
+    column: 7
+  fingerprint: ecd49fb8b7cb
+

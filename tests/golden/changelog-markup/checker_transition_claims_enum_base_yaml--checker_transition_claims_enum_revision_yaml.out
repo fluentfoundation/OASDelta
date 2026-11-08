@@ -1,0 +1,19 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /test
+- :warning: removed the enum value `alpha` of the request property `mode`
+- :warning: removed the enum value `beta` of the request property `mode`
+-  request property `mode` list-of-types was widened by adding types `integer` to media type `application/json`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

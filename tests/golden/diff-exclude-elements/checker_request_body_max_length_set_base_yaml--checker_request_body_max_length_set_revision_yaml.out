@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"text/plain":{"schema":{"maxLength":{"from":null,"to":15}}}}}}}}}}}}}

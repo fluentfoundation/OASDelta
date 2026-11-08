@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./checker/add_new_media_type_revision.yaml, in API POST /api/v1.0/groups added the media type `application/xml` for the response with the status `200` [response-media-type-added]. 
+
+

@@ -1,0 +1,6 @@
+::error title=response-body-exclusive-min-decreased,file=./checker/response_min_decreased_revision.yaml,line=22,col=17::in API POST /products the response's body exclusiveMinimum was decreased from `5.00` to `2.00`
+::error title=response-body-min-decreased,file=./checker/response_min_decreased_revision.yaml,line=21,col=17::in API POST /products the response's body min was decreased from `10.00` to `5.00`
+::error title=response-property-exclusive-min-decreased,file=./checker/response_min_decreased_revision.yaml,line=27,col=21::in API POST /products the `price` response property's exclusiveMinimum was decreased from `50.00` to `25.00` for the response status `200`
+::error title=response-property-min-decreased,file=./checker/response_min_decreased_revision.yaml,line=26,col=21::in API POST /products the `price` response property's min was decreased from `100.00` to `50.00` for the response status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

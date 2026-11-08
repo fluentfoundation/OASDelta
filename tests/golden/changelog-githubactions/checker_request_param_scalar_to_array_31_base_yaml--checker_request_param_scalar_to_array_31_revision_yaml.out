@@ -1,0 +1,3 @@
+::notice title=request-parameter-became-nullable,file=./checker/request_param_scalar_to_array_31_revision.yaml::in API POST /api/v1.0/groups the `query` request parameter `token` became nullable
+::notice title=request-parameter-type-generalized,file=./checker/request_param_scalar_to_array_31_revision.yaml,line=13,col=13::in API POST /api/v1.0/groups for the `query` request parameter `token`, the `type` was widened from `string` to `array<string>, null`
+

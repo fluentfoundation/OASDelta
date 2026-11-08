@@ -1,0 +1,2 @@
+::notice title=response-media-type-name-specialized,file=./checker/add_new_media_type_name_modified.yaml,line=21,col=13::in API POST /api/v1.0/groups media type `application/json` was changed to a more specific media type `application/problem+json` for the response status `200`
+

@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+-  added the optional property `data/id` to the response with the `200` status
+
+
+
+
+
+

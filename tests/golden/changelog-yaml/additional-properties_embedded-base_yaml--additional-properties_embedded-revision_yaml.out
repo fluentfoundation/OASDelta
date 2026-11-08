@@ -1,0 +1,17 @@
+- id: response-property-type-changed
+  text: the `composite-property/additionalProperties/property1` response's property `type` changed from `integer` to `string` for status `200`
+  level: 3
+  operation: GET
+  operationId: get_value
+  path: /value
+  section: paths
+  baseSource:
+    file: ./additional-properties/embedded-base.yaml
+    line: 11
+    column: 11
+  revisionSource:
+    file: ./additional-properties/embedded-revision.yaml
+    line: 11
+    column: 11
+  fingerprint: ac285a007ff0
+

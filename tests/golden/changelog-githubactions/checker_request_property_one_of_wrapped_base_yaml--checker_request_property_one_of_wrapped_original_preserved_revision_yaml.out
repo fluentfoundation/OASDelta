@@ -1,0 +1,2 @@
+::warning title=request-body-wrapped-in-one-of-original-preserved,file=./checker/request_property_one_of_wrapped_original_preserved_revision.yaml::in API POST /example the request body was restructured into a oneOf, keeping the original schema as one of the alternatives
+

@@ -1,0 +1,2 @@
+::notice title=request-parameter-became-nullable,file=./checker/nullable_wrap_param_revision.yaml::in API GET /test the `query` request parameter `kind` became nullable
+

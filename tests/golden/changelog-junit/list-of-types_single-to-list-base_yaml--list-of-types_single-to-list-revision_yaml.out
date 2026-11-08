@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="response-property-list-of-types-widened" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">response property `id` list-of-types was widened by adding types `integer` to media type `application/json` of response `200`</failure>
+    </testcase>
+    <testcase name="response-property-list-of-types-widened" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">response property `status` list-of-types was widened by adding types `number` to media type `application/json` of response `200`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

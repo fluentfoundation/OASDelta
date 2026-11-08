@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/tokens":{"operations":{"modified":{"GET":{"responses":{"modified":{"200":{"content":{"modified":{"application/json":{"schema":{"properties":{"added":["index"]}}}}}}}}}}}}}},"components":{"schemas":{"modified":{"Token":{"properties":{"added":["index"]}}}}}}

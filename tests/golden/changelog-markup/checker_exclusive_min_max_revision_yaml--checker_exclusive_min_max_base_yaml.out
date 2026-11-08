@@ -1,0 +1,20 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+-  the request's body exclusiveMaximum was increased from `50.00` to `100.00`
+-  the request's body exclusiveMinimum was decreased from `5.00` to `0.00`
+-  for the `query` request parameter `limit`, the exclusiveMaximum was increased from `50.00` to `100.00`
+-  for the `query` request parameter `limit`, the exclusiveMinimum was decreased from `5.00` to `0.00`
+-  the `price` request property's exclusiveMaximum was increased from `500.00` to `1000.00`
+-  the `price` request property's exclusiveMinimum was decreased from `10.00` to `0.00`
+-  the response's body exclusiveMaximum was decreased from `200.00` to `100.00`
+-  the `price` response property's exclusiveMaximum was decreased from `2000.00` to `1000.00` for the response status `200`
+
+
+
+
+
+

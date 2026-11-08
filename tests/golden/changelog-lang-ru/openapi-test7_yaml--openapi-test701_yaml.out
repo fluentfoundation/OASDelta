@@ -1,0 +1,31 @@
+7 изменений: 0 error, 0 warning, 7 info
+info	[api-global-security-added]
+	в security
+		схема безопасности `bearerAuth` была добавлена к API
+		Ни один эндпоинт не наследует требования безопасности верхнего уровня API, поэтому это изменение не затрагивает клиентов.
+
+info	[api-security-component-added]
+	в components/securitySchemes
+		компонент схемы безопасности `AccessToken` был добавлен
+
+info	[api-security-component-added]
+	в components/securitySchemes
+		компонент схемы безопасности `OAuth` был добавлен
+
+info	[api-security-component-added]
+	в components/securitySchemes
+		компонент схемы безопасности `bearerAuth` был добавлен
+
+info	[endpoint-added] в openapi-test701.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		эндпоинт добавлен
+
+info	[endpoint-added] в openapi-test701.yaml
+	в API GET /api/{domain}/{project}/install-command
+		эндпоинт добавлен
+
+info	[endpoint-added] в openapi-test701.yaml
+	в API POST /register
+		эндпоинт добавлен
+
+

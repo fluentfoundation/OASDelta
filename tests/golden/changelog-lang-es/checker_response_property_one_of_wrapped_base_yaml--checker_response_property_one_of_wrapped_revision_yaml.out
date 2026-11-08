@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-body-wrapped-in-one-of] en ./checker/response_property_one_of_wrapped_revision.yaml
+	en API GET /example
+		el cuerpo de respuesta se reestructuró en un `oneOf`, por lo que un campo que antes estaba garantizado podría dejar de estar presente
+
+

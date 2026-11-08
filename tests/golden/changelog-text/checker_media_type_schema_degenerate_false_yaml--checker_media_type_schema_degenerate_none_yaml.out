@@ -1,0 +1,10 @@
+2 changes: 1 error, 0 warning, 1 info
+error	[response-body-media-type-schema-removed] at ./checker/media_type_schema_degenerate_none.yaml
+	in API POST /items
+		removed the schema from the media type `application/json` for the response with the status `200`
+
+info	[request-body-media-type-schema-removed] at ./checker/media_type_schema_degenerate_none.yaml
+	in API POST /items
+		removed the schema from the media type `application/json` of the request body
+
+

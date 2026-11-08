@@ -1,0 +1,14 @@
+3 cambios: 0 error, 2 warning, 1 info
+warning	[response-property-pattern-changed] en ./pattern-modified.yaml
+	en API POST /api/v1.0/groups
+		el patrón de la propiedad de respuesta `created` fue cambiado de `^[a-z]+$` a `.*` para el estado `200`
+
+warning	[response-property-pattern-changed] en ./pattern-modified.yaml
+	en API GET /api/v1.0/groups/{groupId}
+		el patrón de la propiedad de respuesta `created` fue cambiado de `^[a-z]+$` a `.*` para el estado `200`
+
+info	[request-property-pattern-generalized] en ./pattern-modified.yaml
+	en API POST /api/v1.0/groups
+		cambiado el patrón de la propiedad de solicitud `created` de `^[a-z]+$` a un patrón más general `.*`
+
+

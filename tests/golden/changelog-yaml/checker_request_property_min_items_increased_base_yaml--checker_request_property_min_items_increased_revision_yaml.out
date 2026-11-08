@@ -1,0 +1,17 @@
+- id: request-body-min-items-increased
+  text: the request's body minItems was increased to `20`
+  level: 3
+  operation: POST
+  operationId: addProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/request_property_min_items_increased_base.yaml
+    line: 18
+    column: 15
+  revisionSource:
+    file: ./checker/request_property_min_items_increased_revision.yaml
+    line: 18
+    column: 15
+  fingerprint: 1edf055c4da7
+

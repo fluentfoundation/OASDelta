@@ -1,0 +1,62 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            oneOf:
+                                                modified:
+                                                    - base:
+                                                        index: 0
+                                                        component: Dog
+                                                      revision:
+                                                        index: 0
+                                                        component: Dog
+                                                      diff:
+                                                        properties:
+                                                            modified:
+                                                                breed:
+                                                                    discriminatorDiff:
+                                                                        deleted: true
+                                            discriminatorDiff:
+                                                deleted: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                oneOf:
+                                    modified:
+                                        - base:
+                                            index: 0
+                                            component: Dog
+                                          revision:
+                                            index: 0
+                                            component: Dog
+                                          diff:
+                                            properties:
+                                                modified:
+                                                    breed:
+                                                        discriminatorDiff:
+                                                            deleted: true
+                                discriminatorDiff:
+                                    deleted: true
+components:
+    schemas:
+        modified:
+            Dog:
+                properties:
+                    modified:
+                        breed:
+                            discriminatorDiff:
+                                deleted: true
+

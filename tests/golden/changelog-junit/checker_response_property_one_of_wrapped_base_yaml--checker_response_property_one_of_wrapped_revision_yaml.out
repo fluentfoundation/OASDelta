@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="response-body-wrapped-in-one-of" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response body was restructured into a oneOf, so a field that was previously guaranteed may no longer be present</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[response-media-type-parameter-removed] at ./checker/add_new_media_type_revision.yaml
+	in API POST /api/v1.0/groups
+		the media type parameter `charset` was removed from `application/json` for the response status `200`
+
+error	[response-media-type-parameter-removed] at ./checker/add_new_media_type_revision.yaml
+	in API POST /api/v1.0/groups
+		the media type parameter `charset` was removed from `application/json` for the response status `409`
+
+

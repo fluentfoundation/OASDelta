@@ -1,0 +1,37 @@
+8 cambios: 2 error, 0 warning, 6 info
+error	[response-mediatype-became-not-enum] en ./checker/enum_removed_entirely_revision.yaml
+	en API PUT /mode
+		removida la restricción enum del esquema de respuesta `text/plain` para el estado `200`
+		El servidor ahora puede devolver cualquier valor del tipo del esquema, incluidos valores que el enum anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta.
+
+error	[response-property-became-not-enum] en ./checker/enum_removed_entirely_revision.yaml
+	en API POST /pets
+		removida la restricción enum de la propiedad de respuesta `status` para el estado `200`
+		El servidor ahora puede devolver cualquier valor del tipo de la propiedad, incluidos valores que el enum anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta.
+
+info	[request-body-became-not-enum] en ./checker/enum_removed_entirely_revision.yaml
+	en API PUT /mode
+		removida la restricción enum del cuerpo de solicitud
+
+info	[request-parameter-became-not-enum] en ./checker/enum_removed_entirely_revision.yaml
+	en API GET /pets
+		removida la restricción enum del parámetro `query` de solicitud `status`
+
+info	[request-parameter-property-became-not-enum] en ./checker/enum_removed_entirely_revision.yaml
+	en API GET /pets
+		removida la restricción enum de la propiedad `origin` del parámetro `query` de solicitud `filter`
+
+info	[request-property-became-not-enum] en ./checker/enum_removed_entirely_revision.yaml
+	en API POST /pets
+		removida la restricción enum de la propiedad de solicitud `kind`
+
+info	[request-property-became-not-enum] en ./checker/enum_removed_entirely_revision.yaml
+	en API POST /pets
+		removida la restricción enum de la propiedad de solicitud `status`
+
+info	[response-property-became-not-enum] en ./checker/enum_removed_entirely_revision.yaml
+	en API POST /pets
+		removida la restricción enum de la propiedad de respuesta `secret` para el estado `200`
+		La propiedad es de solo escritura, por lo que nunca aparece en las respuestas y este cambio no puede invalidar ninguna.
+
+

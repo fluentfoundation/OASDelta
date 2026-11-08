@@ -1,0 +1,30 @@
+7 изменений: 3 error, 0 warning, 4 info
+error	[response-property-else-removed] в ./checker/if_added_prop_base.yaml
+	в API POST /products
+		удалена подсхема 'else' из поля ответа `details` для статуса `200`
+
+error	[response-property-if-removed] в ./checker/if_added_prop_base.yaml
+	в API POST /products
+		удалена подсхема 'if' из поля ответа `details` для статуса `200`
+
+error	[response-property-then-removed] в ./checker/if_added_prop_base.yaml
+	в API POST /products
+		удалена подсхема 'then' из поля ответа `details` для статуса `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-property-else-removed] в ./checker/if_added_prop_base.yaml
+	в API POST /products
+		удалена подсхема 'else' из поля запроса `details`
+
+info	[request-property-if-removed] в ./checker/if_added_prop_base.yaml
+	в API POST /products
+		удалена подсхема 'if' из поля запроса `details`
+
+info	[request-property-then-removed] в ./checker/if_added_prop_base.yaml
+	в API POST /products
+		удалена подсхема 'then' из поля запроса `details`
+
+

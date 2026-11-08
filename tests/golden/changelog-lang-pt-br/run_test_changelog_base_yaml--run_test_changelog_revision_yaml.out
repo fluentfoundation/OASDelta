@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[response-non-success-status-removed] em ./run_test/changelog_revision.yaml
+	em API POST /api/v1.0/groups
+		a resposta de não sucesso com o status `409` foi removida
+
+

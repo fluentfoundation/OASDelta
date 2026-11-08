@@ -1,0 +1,10 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[request-parameter-enum-value-removed] en ./checker/request_parameter_enum_value_updated_revision.yaml
+	en API GET /test
+		removido el valor enum `available` del parámetro `query` de solicitud `status`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

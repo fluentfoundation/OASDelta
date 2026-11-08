@@ -1,0 +1,10 @@
+2 изменений: 2 error, 0 warning, 0 info
+error	[request-body-schema-became-false] в ./checker/media_type_schema_degenerate_false.yaml
+	в API POST /items
+		схема тела запроса стала `false`: ни одно тело запроса не проходит валидацию
+
+error	[response-body-schema-became-false] в ./checker/media_type_schema_degenerate_false.yaml
+	в API POST /items
+		схема тела ответа стала `false`: ни одно тело ответа не проходит валидацию
+
+

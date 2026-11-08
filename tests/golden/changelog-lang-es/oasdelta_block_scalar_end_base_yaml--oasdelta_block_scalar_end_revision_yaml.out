@@ -1,0 +1,14 @@
+3 cambios: 0 error, 0 warning, 3 info
+info	[new-optional-request-property] en ./oasdelta/block_scalar_end_revision.yaml
+	en API POST /budgets
+		agregada la nueva propiedad de solicitud opcional `expires_at`
+
+info	[new-optional-request-property] en ./oasdelta/block_scalar_end_revision.yaml
+	en API POST /budgets
+		agregada la nueva propiedad de solicitud opcional `partial_success`
+
+info	[new-optional-request-property] en ./oasdelta/block_scalar_end_revision.yaml
+	en API POST /budgets
+		agregada la nueva propiedad de solicitud opcional `strict`
+
+

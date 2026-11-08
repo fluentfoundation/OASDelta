@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
+    <testcase name="request-body-dependent-required-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request body dependentRequired for `name` was updated: `phone added`</failure>
+    </testcase>
+    <testcase name="response-body-dependent-required-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response body dependentRequired for `name` was updated for the status `200`: `phone added`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `phone`</failure>
+    </testcase>
+    <testcase name="response-optional-property-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the optional property `phone` to the response with the `200` status</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

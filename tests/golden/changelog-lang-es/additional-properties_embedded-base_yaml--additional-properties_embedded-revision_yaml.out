@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-property-type-changed] en ./additional-properties/embedded-revision.yaml
+	en API GET /value
+		el `composite-property/additionalProperties/property1` de la propiedad de respuesta `type` fue cambiado de `integer` a `string` para el estado `200`
+
+

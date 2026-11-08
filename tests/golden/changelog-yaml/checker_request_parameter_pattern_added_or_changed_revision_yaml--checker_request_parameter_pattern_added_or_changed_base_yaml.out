@@ -1,0 +1,13 @@
+- id: request-parameter-pattern-added
+  text: added the pattern `^\w+$` to the `query` request parameter `category`
+  comment: This is a breaking change because adding a pattern restriction to a previously unrestricted parameter will reject values that were previously accepted, breaking existing clients
+  level: 3
+  operation: POST
+  path: /test
+  section: paths
+  revisionSource:
+    file: ./checker/request_parameter_pattern_added_or_changed_base.yaml
+    line: 14
+    column: 13
+  fingerprint: ca38f4232284
+

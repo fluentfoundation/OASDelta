@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-body-pattern-property-added] at ./checker/pattern_properties_revision.yaml
+	in API POST /products
+		added the pattern property `^x-` to the request body
+
+

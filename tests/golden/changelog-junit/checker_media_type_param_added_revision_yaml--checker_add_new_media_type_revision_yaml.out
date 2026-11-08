@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-media-type-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the media type parameter `charset` was removed from `application/json` for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-media-type-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the media type parameter `charset` was removed from `application/json` for the response status `409`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

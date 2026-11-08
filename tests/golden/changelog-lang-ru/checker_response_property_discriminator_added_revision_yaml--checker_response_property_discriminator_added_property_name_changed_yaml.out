@@ -1,0 +1,42 @@
+10 изменений: 0 error, 0 warning, 10 info
+info	[response-body-discriminator-property-name-changed] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+	в API POST /pets
+		имя свойства дискриминатора ответа изменено с `petType` на `petType2` для статуса ответа `200`
+
+info	[response-optional-property-added] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+	в API POST /pets
+		добавлено необязательное свойство `oneOf[#/components/schemas/Cat]/petType2` в ответе со статусом `200`
+
+info	[response-optional-property-added] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+	в API POST /pets
+		добавлено необязательное свойство `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name2` в ответе со статусом `200`
+
+info	[response-optional-property-added] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+	в API POST /pets
+		добавлено необязательное свойство `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name2` в ответе со статусом `200`
+
+info	[response-optional-property-added] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+	в API POST /pets
+		добавлено необязательное свойство `oneOf[#/components/schemas/Dog]/petType2` в ответе со статусом `200`
+
+info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+	в API POST /pets
+		удалено необязательное поле `oneOf[#/components/schemas/Cat]/petType` из ответа со статусом `200`
+
+info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+	в API POST /pets
+		удалено необязательное поле `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name` из ответа со статусом `200`
+
+info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+	в API POST /pets
+		удалено необязательное поле `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name` из ответа со статусом `200`
+
+info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+	в API POST /pets
+		удалено необязательное поле `oneOf[#/components/schemas/Dog]/petType` из ответа со статусом `200`
+
+info	[response-property-discriminator-property-name-changed] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+	в API POST /pets
+		имя свойства дискриминатора ответа изменено для свойства ответа `oneOf[#/components/schemas/Dog]/breed` с `name` на `name2` для статуса ответа `200`
+
+

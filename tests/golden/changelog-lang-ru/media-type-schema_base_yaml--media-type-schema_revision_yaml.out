@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[request-body-media-type-schema-added] в ./media-type-schema/revision.yaml
+	в API POST /test
+		схема добавлена к типу медиа `application/json` тела запроса
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-body-media-type-schema-added] в ./media-type-schema/revision.yaml
+	в API POST /test
+		схема добавлена к типу медиа `application/json` ответа со статусом `200`
+
+

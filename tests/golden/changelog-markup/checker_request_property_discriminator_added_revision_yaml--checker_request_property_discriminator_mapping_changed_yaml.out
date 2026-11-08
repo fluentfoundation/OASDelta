@@ -1,0 +1,17 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /pets
+-  added `cats` mapping keys to the request discriminator
+-  removed `cat` mapping keys from the request discriminator
+-  added `breed1Code` discriminator mapping keys to the `oneOf[#/components/schemas/Dog]/breed` request property
+-  mapped value for discriminator key `breed2` changed from `#/components/schemas/Breed2` to `#/components/schemas/Breed3` for `oneOf[#/components/schemas/Dog]/breed` request property
+-  removed `breed1` discriminator mapping keys from the `oneOf[#/components/schemas/Dog]/breed` request property
+
+
+
+
+
+

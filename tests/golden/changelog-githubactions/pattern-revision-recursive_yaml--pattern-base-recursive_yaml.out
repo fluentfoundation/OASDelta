@@ -1,0 +1,4 @@
+::notice title=request-property-pattern-added,file=./pattern-base-recursive.yaml,line=58,col=15::in API POST /api/v1.0/groups added the pattern `^[a-z]+$` to the request property `data/created`
+::notice title=response-property-pattern-added,file=./pattern-base-recursive.yaml,line=58,col=15::in API POST /api/v1.0/groups the `data/created` response's property pattern `^[a-z]+$` was added for the status `200`
+::notice title=response-property-pattern-added,file=./pattern-base-recursive.yaml,line=58,col=15::in API GET /api/v1.0/groups/{groupId} the `data/created` response's property pattern `^[a-z]+$` was added for the status `200`
+

@@ -1,0 +1,13 @@
+- id: request-body-enum-value-added
+  text: request body enum value added `VALUE_3`
+  level: 1
+  operation: GET
+  operationId: getTest
+  path: /api/v2/changeOfRequestFieldValueTiedToEnumTest
+  section: paths
+  revisionSource:
+    file: ./enums/request-body-enum.yaml
+    line: 26
+    column: 17
+  fingerprint: a81766cc3c4c
+

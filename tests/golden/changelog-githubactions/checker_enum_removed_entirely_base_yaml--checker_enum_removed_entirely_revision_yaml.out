@@ -1,0 +1,9 @@
+::error title=response-mediatype-became-not-enum,file=./checker/enum_removed_entirely_revision.yaml::in API PUT /mode removed the enum constraint from the response schema `text/plain` for the response status `200`
+::error title=response-property-became-not-enum,file=./checker/enum_removed_entirely_revision.yaml::in API POST /pets removed the enum constraint from the `status` response property for the response status `200`
+::notice title=request-body-became-not-enum,file=./checker/enum_removed_entirely_revision.yaml::in API PUT /mode removed the enum constraint from the request body
+::notice title=request-parameter-became-not-enum,file=./checker/enum_removed_entirely_revision.yaml::in API GET /pets removed the enum constraint from the `query` request parameter `status`
+::notice title=request-parameter-property-became-not-enum,file=./checker/enum_removed_entirely_revision.yaml::in API GET /pets removed the enum constraint from the property `origin` of the `query` request parameter `filter`
+::notice title=request-property-became-not-enum,file=./checker/enum_removed_entirely_revision.yaml::in API POST /pets removed the enum constraint from the request property `kind`
+::notice title=request-property-became-not-enum,file=./checker/enum_removed_entirely_revision.yaml::in API POST /pets removed the enum constraint from the request property `status`
+::notice title=response-property-became-not-enum,file=./checker/enum_removed_entirely_revision.yaml::in API POST /pets removed the enum constraint from the `secret` response property for the response status `200`
+

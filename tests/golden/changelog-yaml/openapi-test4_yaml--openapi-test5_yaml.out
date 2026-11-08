@@ -1,0 +1,80 @@
+- id: api-path-removed-without-deprecation
+  text: api path removed without deprecation
+  level: 3
+  operation: GET
+  path: /prefix/api/{domain}/{project}/badges/security-score
+  section: paths
+  baseSource:
+    file: openapi-test4.yaml
+    line: 7
+    column: 5
+    endLine: 51
+    endColumn: 18
+  fingerprint: 9625281cc12b
+- id: api-path-removed-without-deprecation
+  text: api path removed without deprecation
+  level: 3
+  operation: POST
+  path: /prefix/api/{domain}/{project}/badges/security-score
+  section: paths
+  baseSource:
+    file: openapi-test4.yaml
+    line: 52
+    column: 5
+    endLine: 56
+    endColumn: 18
+  fingerprint: 730dcb3e0d5c
+- id: api-major-version-not-bumped
+  text: a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`
+  level: 1
+  section: info
+  fingerprint: 3a8b69127071
+- id: api-security-component-added
+  text: the component security scheme `AccessToken` was added
+  level: 1
+  section: components
+  revisionSource:
+    file: openapi-test5.yaml
+    line: 173
+    column: 5
+    endLine: 180
+    endColumn: 39
+  fingerprint: a653b8c57d22
+- id: api-security-component-added
+  text: the component security scheme `bearerAuth` was added
+  level: 1
+  section: components
+  revisionSource:
+    file: openapi-test5.yaml
+    line: 169
+    column: 5
+    endLine: 172
+    endColumn: 24
+  fingerprint: 8b1e0fa5aee3
+- id: endpoint-added
+  text: endpoint added
+  level: 1
+  operation: GET
+  path: /api/{domain}/{project}/badges/security-score
+  section: paths
+  revisionSource:
+    file: openapi-test5.yaml
+    line: 12
+    column: 5
+    endLine: 88
+    endColumn: 18
+  fingerprint: dfc60e5c7581
+- id: endpoint-added
+  text: endpoint added
+  level: 1
+  operation: GET
+  path: /api/{domain}/{project}/install-command
+  section: paths
+  revisionSource:
+    file: openapi-test5.yaml
+    line: 90
+    column: 5
+    endLine: 131
+    endColumn: 18
+  fingerprint: 4d04126cecee
+

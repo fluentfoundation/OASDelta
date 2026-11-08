@@ -1,0 +1,32 @@
+7 changes: 3 error, 0 warning, 4 info
+error	[request-property-contains-added] at ./checker/contains_property_revision.yaml
+	in API POST /products
+		added 'contains' constraint to the request property `tags`
+
+error	[request-property-max-contains-set] at ./checker/contains_property_revision.yaml
+	in API POST /products
+		the `tags` request property's maxContains was set to `3`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error	[request-property-min-contains-set] at ./checker/contains_property_revision.yaml
+	in API POST /products
+		the `tags` request property's minContains was set to `1`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[response-property-contains-added] at ./checker/contains_property_revision.yaml
+	in API POST /products
+		added 'contains' constraint to the `tags` response property for the status `200`
+
+info	[response-property-max-contains-set] at ./checker/contains_property_revision.yaml
+	in API POST /products
+		the `tags` response property's maxContains was set to `3` for the response status `200`
+
+info	[response-property-min-contains-set] at ./checker/contains_property_revision.yaml
+	in API POST /products
+		the `tags` response property's minContains was set to `1` for the response status `200`
+
+

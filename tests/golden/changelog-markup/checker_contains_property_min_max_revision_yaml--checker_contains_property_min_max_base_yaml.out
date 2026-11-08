@@ -1,0 +1,20 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the `tags` request property maxContains was decreased from `5` to `3`
+- :warning: the `tags` response property minContains was decreased from `2` to `1` for the status `200`
+-  the `tags` request property minContains was decreased from `2` to `1`
+-  the `tags` response property maxContains was decreased from `5` to `3` for the status `200`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

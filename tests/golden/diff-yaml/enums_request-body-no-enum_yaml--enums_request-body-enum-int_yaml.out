@@ -1,0 +1,47 @@
+paths:
+    modified:
+        /api/v2/changeOfRequestFieldValueTiedToEnumTest:
+            operations:
+                modified:
+                    GET:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            type:
+                                                added:
+                                                    - int
+                                                deleted:
+                                                    - string
+                                            description:
+                                                from: any text
+                                                to: Enum values
+                                            enum:
+                                                enumAdded: true
+                                                added:
+                                                    - VALUE_1
+                                                    - VALUE_2
+endpoints:
+    modified:
+        ?   method: GET
+            path: /api/v2/changeOfRequestFieldValueTiedToEnumTest
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                type:
+                                    added:
+                                        - int
+                                    deleted:
+                                        - string
+                                description:
+                                    from: any text
+                                    to: Enum values
+                                enum:
+                                    enumAdded: true
+                                    added:
+                                        - VALUE_1
+                                        - VALUE_2
+

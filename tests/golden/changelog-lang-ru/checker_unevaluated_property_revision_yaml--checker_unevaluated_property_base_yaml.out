@@ -1,0 +1,22 @@
+5 изменений: 2 error, 0 warning, 3 info
+error	[response-property-unevaluated-items-removed] в ./checker/unevaluated_property_base.yaml
+	в API POST /products
+		удалено ограничение 'unevaluatedItems' из поля ответа `meta` для статуса `200`
+
+error	[response-property-unevaluated-properties-removed] в ./checker/unevaluated_property_base.yaml
+	в API POST /products
+		удалено ограничение 'unevaluatedProperties' из поля ответа `meta` для статуса `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-property-unevaluated-items-removed] в ./checker/unevaluated_property_base.yaml
+	в API POST /products
+		удалено ограничение 'unevaluatedItems' из поля запроса `meta`
+
+info	[request-property-unevaluated-properties-removed] в ./checker/unevaluated_property_base.yaml
+	в API POST /products
+		удалено ограничение 'unevaluatedProperties' из поля запроса `meta`
+
+

@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-property-pattern-added] en ./checker/shared_schema_override_revision.yaml
+	en API GET /orders
+		el patrón `billing/zip` fue agregado a la propiedad de respuesta `^[0-9]{5}$` para el estado `200` (esquema compartido: `Address`, también en `shipping/zip`)
+
+

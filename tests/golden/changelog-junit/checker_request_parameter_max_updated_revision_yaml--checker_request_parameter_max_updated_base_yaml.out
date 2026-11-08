@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="request-parameter-max-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `category`, the max was decreased from `10.00` to `5.00`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

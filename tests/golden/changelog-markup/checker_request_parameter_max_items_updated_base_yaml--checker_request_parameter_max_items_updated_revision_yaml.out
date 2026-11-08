@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+-  for the `query` request parameter `category`, the maxItems was increased from `10` to `20`
+
+
+
+
+
+

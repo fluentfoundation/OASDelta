@@ -1,0 +1,18 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+- :warning: the `created` response's property pattern was changed from `^[a-z]+$` to `.*` for the status `200`
+-  changed the pattern of the request property `created` from `^[a-z]+$` to a more general pattern `.*`
+
+
+### GET /api/v1.0/groups/{groupId}
+- :warning: the `created` response's property pattern was changed from `^[a-z]+$` to `.*` for the status `200`
+
+
+
+
+
+

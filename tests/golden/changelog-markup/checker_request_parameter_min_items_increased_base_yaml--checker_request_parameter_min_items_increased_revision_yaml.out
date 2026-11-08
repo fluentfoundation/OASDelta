@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+- :warning: for the `query` request parameter `category`, the minItems was increased from `2` to `3`
+
+
+
+
+
+

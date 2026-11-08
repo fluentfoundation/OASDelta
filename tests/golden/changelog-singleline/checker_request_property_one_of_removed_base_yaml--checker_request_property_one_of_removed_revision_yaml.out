@@ -1,0 +1,12 @@
+5 changes: 2 error, 0 warning, 3 info
+error at ./checker/request_property_one_of_removed_revision.yaml, in API POST /pets removed `#/components/schemas/Rabbit` from the request body `oneOf` list [request-body-one-of-removed]. 
+
+error at ./checker/request_property_one_of_removed_revision.yaml, in API POST /pets removed `#/components/schemas/Breed3` from the `oneOf[#/components/schemas/Dog]/breed` request property `oneOf` list [request-property-one-of-removed]. 
+
+info, in components/schemas removed the schema `Breed3` [api-schema-removed]. 
+
+info, in components/schemas removed the schema `Rabbit` [api-schema-removed]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

@@ -1,0 +1,12 @@
+2 alterações: 0 error, 2 warning, 0 info
+warning	[request-body-prefix-items-removed] em ./checker/prefix_items_added_base.yaml
+	em API POST /products
+		removido `subschema #1` da lista 'prefixItems' do corpo da requisição
+		Este é um aviso porque o oasdiff não consegue determinar se a mudança é incompatível. Uma posição do array não coberta por `prefixItems` é validada contra o esquema `items`: quando `items` está ausente a posição aceita qualquer valor, e quando `items` é `false` não permite valor algum, portanto esta mudança pode rejeitar arrays que antes eram válidos ou permitir arrays que antes não eram.
+
+warning	[response-body-prefix-items-removed] em ./checker/prefix_items_added_base.yaml
+	em API POST /products
+		removido `subschema #1` da lista 'prefixItems' do corpo da resposta para o status de resposta `200`
+		Este é um aviso porque o oasdiff não consegue determinar se a mudança é incompatível. Uma posição do array não coberta por `prefixItems` é validada contra o esquema `items`: quando `items` está ausente a posição aceita qualquer valor, e quando `items` é `false` não permite valor algum, portanto esta mudança pode rejeitar arrays que antes eram válidos ou permitir arrays que antes não eram.
+
+

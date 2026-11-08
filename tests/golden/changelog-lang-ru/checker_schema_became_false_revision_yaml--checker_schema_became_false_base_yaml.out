@@ -1,0 +1,14 @@
+3 изменений: 0 error, 0 warning, 3 info
+info	[request-parameter-schema-became-not-false] в ./checker/schema_became_false_base.yaml
+	в API POST /items
+		схема параметра запроса `query` `filter` больше не `false` и снова принимает значения
+
+info	[request-property-schema-became-not-false] в ./checker/schema_became_false_base.yaml
+	в API POST /items
+		схема свойства запроса `name` больше не `false` и снова принимает значения
+
+info	[response-body-schema-became-not-false] в ./checker/schema_became_false_base.yaml
+	в API POST /items
+		схема тела ответа больше не `false` и снова допускает тела ответа
+
+

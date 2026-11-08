@@ -1,0 +1,25 @@
+# API Changelog 0.0.1 vs. 0.0.1
+
+
+## API Changes
+
+### GET /api/allOf/path
+- :warning: the response property `allOf[#/components/schemas/ProblemSchema]/changedProperty` became optional for the status `200`
+
+
+### GET /api/anyOf/path
+- :warning: the response property `anyOf[#/components/schemas/ProblemSchema]/changedProperty` became optional for the status `200`
+
+
+### GET /api/oneOf/path
+- :warning: the response property `oneOf[#/components/schemas/ProblemSchema]/changedProperty` became optional for the status `200`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `0.0.1`
+
+
+
+

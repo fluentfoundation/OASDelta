@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="8" errors="0" failures="8" name="OASDiff">
+    <testcase name="response-mediatype-became-not-enum" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the enum constraint from the response schema `text/plain` for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-became-not-enum" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the enum constraint from the `status` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="request-body-became-not-enum" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the enum constraint from the request body</failure>
+    </testcase>
+    <testcase name="request-parameter-became-not-enum" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the enum constraint from the `query` request parameter `status`</failure>
+    </testcase>
+    <testcase name="request-parameter-property-became-not-enum" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the enum constraint from the property `origin` of the `query` request parameter `filter`</failure>
+    </testcase>
+    <testcase name="request-property-became-not-enum" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the enum constraint from the request property `kind`</failure>
+    </testcase>
+    <testcase name="request-property-became-not-enum" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the enum constraint from the request property `status`</failure>
+    </testcase>
+    <testcase name="response-property-became-not-enum" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the enum constraint from the `secret` response property for the response status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

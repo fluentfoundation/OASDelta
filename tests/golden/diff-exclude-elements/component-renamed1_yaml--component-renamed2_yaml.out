@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/example":{"operations":{"modified":{"GET":{"responses":{"modified":{"200":{"content":{"modified":{"application/json":{"schema":{"properties":{"added":["extra"]}}}}}}}}}}}}}},"components":{"schemas":{"added":["New"],"deleted":["Old"]}}}

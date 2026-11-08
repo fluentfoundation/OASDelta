@@ -1,0 +1,1 @@
+[{"id":"response-property-property-names-removed","text":"removed 'propertyNames' constraint from the `details` response property for the status `200`","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","baseSource":{"file":"./checker/property_names_prop_revision.yaml","line":29,"column":21},"fingerprint":"2a83b7721a5a"}]

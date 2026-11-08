@@ -1,0 +1,67 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                added:
+                                                    - phone
+                                            dependentRequired:
+                                                modified:
+                                                    name:
+                                                        added:
+                                                            - phone
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        added:
+                                                            - phone
+                                                    dependentRequired:
+                                                        modified:
+                                                            name:
+                                                                added:
+                                                                    - phone
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    added:
+                                        - phone
+                                dependentRequired:
+                                    modified:
+                                        name:
+                                            added:
+                                                - phone
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            added:
+                                                - phone
+                                        dependentRequired:
+                                            modified:
+                                                name:
+                                                    added:
+                                                        - phone
+

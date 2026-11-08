@@ -1,0 +1,19 @@
+- id: request-property-max-length-set
+  text: the `age` request property's maxLength was set to `15`
+  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  level: 3
+  operation: POST
+  operationId: addPet
+  path: /pets
+  section: paths
+  revisionSource:
+    file: ./checker/request_property_max_length_set_revision.yaml
+    line: 17
+    column: 19
+  fingerprint: 762068cff081
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+

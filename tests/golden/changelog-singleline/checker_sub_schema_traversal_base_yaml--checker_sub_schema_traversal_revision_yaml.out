@@ -1,0 +1,22 @@
+10 changes: 9 error, 0 warning, 1 info
+error at ./checker/sub_schema_traversal_revision.yaml, in API POST /products the `kind` request property const value changed from `typeA` to `typeB` [request-property-const-changed]. 
+
+error at ./checker/sub_schema_traversal_revision.yaml, in API POST /products the `data/then/value` request property's min was increased to `5.00` [request-property-min-increased]. 
+
+error at ./checker/sub_schema_traversal_revision.yaml, in API POST /products the `data/contains/` request property's minLength was increased from `1` to `3` [request-property-min-length-increased]. 
+
+error at ./checker/sub_schema_traversal_revision.yaml, in API POST /products the `data/contentSchema/` request property's minLength was increased from `1` to `3` [request-property-min-length-increased]. 
+
+error at ./checker/sub_schema_traversal_revision.yaml, in API POST /products the `data/else/value` request property's minLength was increased from `1` to `3` [request-property-min-length-increased]. 
+
+error at ./checker/sub_schema_traversal_revision.yaml, in API POST /products the `data/prefixItems[subschema #1]/` request property's minLength was increased from `1` to `3` [request-property-min-length-increased]. 
+
+error at ./checker/sub_schema_traversal_revision.yaml, in API POST /products the `data/propertyNames/` request property's minLength was increased from `1` to `3` [request-property-min-length-increased]. 
+
+error at ./checker/sub_schema_traversal_revision.yaml, in API POST /products the `data/unevaluatedItems/` request property's minLength was increased from `1` to `3` [request-property-min-length-increased]. 
+
+error at ./checker/sub_schema_traversal_revision.yaml, in API POST /products the `data/unevaluatedProperties/` request property's minLength was increased from `1` to `3` [request-property-min-length-increased]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

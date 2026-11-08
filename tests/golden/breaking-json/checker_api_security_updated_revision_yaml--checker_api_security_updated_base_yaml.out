@@ -1,0 +1,1 @@
+[{"id":"api-security-scope-added","text":"the security scope `read:pets` was added to the endpoint's security scheme `petstore_auth`","level":3,"operation":"POST","path":"/subscribe","section":"paths","revisionSource":{"file":"./checker/api_security_updated_base.yaml","line":23,"column":7},"fingerprint":"3cd99ca19610"}]

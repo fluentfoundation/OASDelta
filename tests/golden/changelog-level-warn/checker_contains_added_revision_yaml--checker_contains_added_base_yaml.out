@@ -1,0 +1,1 @@
+[{"id":"response-body-contains-removed","text":"removed 'contains' constraint from the response body for the status `200`","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","baseSource":{"file":"./checker/contains_added_revision.yaml","line":27,"column":17},"fingerprint":"17061d629aac"}]

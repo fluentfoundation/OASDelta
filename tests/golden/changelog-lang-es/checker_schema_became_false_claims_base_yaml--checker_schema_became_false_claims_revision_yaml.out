@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-body-schema-became-false] en ./checker/schema_became_false_claims_revision.yaml
+	en API POST /t
+		el esquema del cuerpo de solicitud se convirtió en `false`: ningún cuerpo de solicitud pasa la validación
+
+

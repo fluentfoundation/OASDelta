@@ -1,0 +1,20 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the request body minContains was increased from `1` to `2`
+- :warning: the response body maxContains was increased from `5` to `6` for the status `200`
+-  the request body maxContains was increased from `5` to `6`
+-  the response body minContains was increased from `1` to `2` for the status `200`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

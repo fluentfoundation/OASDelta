@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /test
+-  property `mode` of `query` request parameter `filter` list-of-types was widened by adding types `integer and boolean`
+
+
+
+
+
+

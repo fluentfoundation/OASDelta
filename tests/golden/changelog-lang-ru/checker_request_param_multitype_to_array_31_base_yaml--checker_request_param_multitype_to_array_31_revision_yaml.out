@@ -1,0 +1,7 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[request-parameter-type-generalized] в ./checker/request_param_multitype_to_array_31_revision.yaml
+	в API POST /api/v1.0/groups
+		в параметре запроса `query` `token` `type` расширен с `string, integer` до `array<string>`
+		Этот параметр использует сериализацию form/explode, где одиночное значение является допустимым массивом из одного элемента, поэтому расширение его до массива, элементы которого по-прежнему принимают прежние значения, не нарушает работу существующих клиентов.
+
+

@@ -1,0 +1,58 @@
+- id: api-path-removed-without-deprecation
+  text: api path removed without deprecation
+  level: 3
+  operation: GET
+  path: /api/test
+  section: paths
+  baseSource:
+    file: ./prefix/simple1.yaml
+    line: 7
+    column: 5
+    endLine: 10
+    endColumn: 26
+  fingerprint: a2540a71ef5b
+- id: api-path-removed-without-deprecation
+  text: api path removed without deprecation
+  level: 3
+  operation: GET
+  path: /api/test1
+  section: paths
+  baseSource:
+    file: ./prefix/simple1.yaml
+    line: 12
+    column: 5
+    endLine: 15
+    endColumn: 26
+  fingerprint: 362f0095dc9c
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: endpoint-added
+  text: endpoint added
+  level: 1
+  operation: GET
+  path: /tenant/api/test
+  section: paths
+  revisionSource:
+    file: ./prefix/simple2.yaml
+    line: 7
+    column: 5
+    endLine: 10
+    endColumn: 26
+  fingerprint: 7af7fa4b3ca6
+- id: endpoint-added
+  text: endpoint added
+  level: 1
+  operation: GET
+  path: /tenant/api/test1
+  section: paths
+  revisionSource:
+    file: ./prefix/simple2.yaml
+    line: 12
+    column: 5
+    endLine: 15
+    endColumn: 26
+  fingerprint: e65c9420d8ce
+

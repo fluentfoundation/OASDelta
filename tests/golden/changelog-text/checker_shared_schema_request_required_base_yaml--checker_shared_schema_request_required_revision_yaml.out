@@ -1,0 +1,10 @@
+2 changes: 1 error, 0 warning, 1 info
+error	[request-property-became-required] at ./checker/shared_schema_request_required_revision.yaml
+	in API POST /example
+		the request property `left/id` became required (shared schema: `Shared`, also at `right`)
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+

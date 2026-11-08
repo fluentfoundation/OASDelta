@@ -1,0 +1,6 @@
+1 alterações: 0 error, 1 warning, 0 info
+warning	[response-property-pattern-changed] em ./checker/response_pattern_added_or_changed_revision.yaml
+	em API POST /api/v1.0/groups
+		o padrão da propriedade de resposta `data/created` foi alterado de `^[a-z]+$` para `^(?:([a-z]+-)*([a-z]+)?)$` para o status `200`
+
+

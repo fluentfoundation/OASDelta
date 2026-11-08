@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-media-type-added] en ./response-media-type-base.yaml
+	en API GET /products
+		agregado el tipo de media `application/json` a la respuesta con estado `200`
+
+

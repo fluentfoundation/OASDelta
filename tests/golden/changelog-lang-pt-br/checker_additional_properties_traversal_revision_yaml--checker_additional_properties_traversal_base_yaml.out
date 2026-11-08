@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[response-required-property-added] em ./checker/additional_properties_traversal_base.yaml
+	em API GET /entries
+		a propriedade obrigatória `additionalProperties/kind` foi adicionada à resposta com o status `200`
+
+

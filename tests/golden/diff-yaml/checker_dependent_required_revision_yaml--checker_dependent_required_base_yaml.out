@@ -1,0 +1,51 @@
+paths:
+    modified:
+        /products:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            dependentRequired:
+                                                deleted:
+                                                    name:
+                                                        - email
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    dependentRequired:
+                                                        deleted:
+                                                            name:
+                                                                - email
+endpoints:
+    modified:
+        ?   method: POST
+            path: /products
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                dependentRequired:
+                                    deleted:
+                                        name:
+                                            - email
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        dependentRequired:
+                                            deleted:
+                                                name:
+                                                    - email
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="new-required-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new required request property `/not/added_prop`</failure>
+    </testcase>
+    <testcase name="request-property-max-length-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `/not/modified_prop` request property's maxLength was decreased to `5`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `/not/removed_prop`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

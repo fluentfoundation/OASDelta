@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-body-any-of-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added `#/components/schemas/Rabbit` to the request body `anyOf` list</failure>
+    </testcase>
+    <testcase name="request-property-any-of-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added `#/components/schemas/Breed3` to the `anyOf[#/components/schemas/Dog]/breed` request property `anyOf` list</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

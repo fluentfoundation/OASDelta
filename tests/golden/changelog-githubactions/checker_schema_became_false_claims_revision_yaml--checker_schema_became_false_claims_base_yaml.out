@@ -1,0 +1,2 @@
+::notice title=request-body-schema-became-not-false,file=./checker/schema_became_false_claims_base.yaml,line=11,col=15::in API POST /t the request body schema is no longer `false` and accepts request bodies again
+

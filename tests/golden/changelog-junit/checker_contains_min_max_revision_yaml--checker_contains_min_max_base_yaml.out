@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
+    <testcase name="request-body-max-contains-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request body maxContains was decreased from `6` to `5`</failure>
+    </testcase>
+    <testcase name="response-body-min-contains-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response body minContains was decreased from `2` to `1` for the status `200`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="request-body-min-contains-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request body minContains was decreased from `2` to `1`</failure>
+    </testcase>
+    <testcase name="response-body-max-contains-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response body maxContains was decreased from `6` to `5` for the status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

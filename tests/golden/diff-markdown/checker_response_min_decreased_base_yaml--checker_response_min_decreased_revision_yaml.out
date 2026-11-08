@@ -1,0 +1,22 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /products
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - ExclusiveMin changed from 5 to 2
+          - Min changed from 10 to 5
+          - Properties changed
+            - Modified property: price
+              - ExclusiveMin changed from 50 to 25
+              - Min changed from 100 to 50
+
+

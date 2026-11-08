@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `QWE` enum value to the `respenum` response property for the response status `default`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `TER2` enum value to the `respenum2/respenum3` response property for the response status `default`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

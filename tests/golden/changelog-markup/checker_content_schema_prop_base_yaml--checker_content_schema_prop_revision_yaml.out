@@ -1,0 +1,22 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the `details/data` request property contentEncoding changed from `base64` to `quoted-printable`
+- :warning: the `details/data` request property contentMediaType changed from `application/json` to `text/plain`
+- :warning: added 'contentSchema' to the request property `details/data`
+- :warning: the `details/data` response property contentEncoding changed from `base64` to `quoted-printable` for the status `200`
+- :warning: the `details/data` response property contentMediaType changed from `application/json` to `text/plain` for the status `200`
+-  added 'contentSchema' to the `details/data` response property for the status `200`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

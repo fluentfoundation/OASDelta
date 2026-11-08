@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[api-schema-removed]
+	в components/schemas
+		удалена схема `Old`
+
+info	[response-optional-property-added] в ./component-renamed2.yaml
+	в API GET /example
+		добавлено необязательное свойство `extra` в ответе со статусом `200`
+
+

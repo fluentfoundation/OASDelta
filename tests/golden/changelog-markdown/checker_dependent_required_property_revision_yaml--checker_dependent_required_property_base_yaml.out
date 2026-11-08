@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the `address` response property dependentRequired was removed for the status `200`: when `street` was present, `city` were required
+-  the `address` request property dependentRequired was removed: when `street` was present, `city` were required
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

@@ -1,0 +1,2 @@
+::warning title=request-parameter-property-type-changed,file=./checker/request_parameter_property_type_changed_revision.yaml,line=65,col=11::in API GET /groups for the `query` request parameter `filters`, the `type` of property `groupId` was changed from `number` to `string`
+

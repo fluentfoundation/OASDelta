@@ -1,0 +1,18 @@
+4 changes: 2 error, 0 warning, 2 info
+error	[response-success-status-removed] at ./attributes/base.yaml
+	in API GET /partner-api/test/another-method
+		removed the success response with the status `201`
+
+error	[response-success-status-removed] at ./attributes/base.yaml
+	in API GET /partner-api/test/some-method
+		removed the success response with the status `201`
+
+info	[response-success-status-added] at ./attributes/base.yaml
+	in API GET /partner-api/test/another-method
+		added the success response with the status `200`
+
+info	[response-success-status-added] at ./attributes/base.yaml
+	in API GET /partner-api/test/some-method
+		added the success response with the status `200`
+
+

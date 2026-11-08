@@ -1,0 +1,20 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /api/{uniqueId}/tests
+- Servers changed
+  - New server: https://qa-testapi.azurewebsites.net
+  - Deleted server: https://dev-testapi.azurewebsites.net
+
+Other Changes
+-------------
+Servers changed
+- New server: https://qa-testapi.azurewebsites.net
+- Deleted server: https://dev-testapi.azurewebsites.net
+
+

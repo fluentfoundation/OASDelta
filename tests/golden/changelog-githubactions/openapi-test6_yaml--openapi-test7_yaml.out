@@ -1,0 +1,4 @@
+::error title=api-path-removed-without-deprecation,file=openapi-test6.yaml::in API GET /health api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test6.yaml::in API GET /health/live api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test6.yaml::in API GET /health/ready api path removed without deprecation
+

@@ -1,0 +1,2 @@
+::notice title=request-parameter-property-enum-value-added,file=./checker/request_parameter_property_enum_value_updated_base.yaml,line=21,col=21::in API GET /test added the enum value `value-b` to the property `origin` of the `query` request parameter `filter`
+

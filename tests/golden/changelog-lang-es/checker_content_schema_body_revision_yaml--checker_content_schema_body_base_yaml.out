@@ -1,0 +1,30 @@
+7 cambios: 5 error, 0 warning, 2 info
+error	[request-body-content-encoding-changed] en ./checker/content_schema_body_base.yaml
+	en API POST /products
+		el contentEncoding del cuerpo de solicitud fue cambiado de `quoted-printable` a `base64`
+
+error	[request-body-content-media-type-changed] en ./checker/content_schema_body_base.yaml
+	en API POST /products
+		el contentMediaType del cuerpo de solicitud fue cambiado de `text/plain` a `application/json`
+
+error	[response-body-content-encoding-changed] en ./checker/content_schema_body_base.yaml
+	en API POST /products
+		el contentEncoding del cuerpo de respuesta fue cambiado de `quoted-printable` a `base64` para el estado `200`
+
+error	[response-body-content-media-type-changed] en ./checker/content_schema_body_base.yaml
+	en API POST /products
+		el contentMediaType del cuerpo de respuesta fue cambiado de `text/plain` a `application/json` para el estado `200`
+
+error	[response-body-content-schema-removed] en ./checker/content_schema_body_base.yaml
+	en API POST /products
+		removido 'contentSchema' del cuerpo de respuesta para el estado `200`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[request-body-content-schema-removed] en ./checker/content_schema_body_base.yaml
+	en API POST /products
+		removido 'contentSchema' del cuerpo de solicitud
+
+

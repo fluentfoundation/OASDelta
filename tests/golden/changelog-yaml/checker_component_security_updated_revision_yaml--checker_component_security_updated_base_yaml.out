@@ -1,0 +1,12 @@
+- id: api-security-component-removed
+  text: the component security scheme `BasicAuth` was removed
+  level: 1
+  section: components
+  baseSource:
+    file: ./checker/component_security_updated_revision.yaml
+    line: 37
+    column: 5
+    endLine: 39
+    endColumn: 20
+  fingerprint: 5bc7d94a1491
+

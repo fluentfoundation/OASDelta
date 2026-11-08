@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./nullable/revision-embedded-property.yaml, in API POST /payments/{id} the response property `name/name` became nullable for the status `201` [response-property-became-nullable]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

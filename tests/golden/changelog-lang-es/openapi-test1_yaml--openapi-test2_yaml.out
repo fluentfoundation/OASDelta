@@ -1,0 +1,108 @@
+25 cambios: 7 error, 4 warning, 14 info
+error	[request-parameter-min-set] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		para el parámetro `path` de solicitud `domain`, mínimo fue establecido en `7.00`
+		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+
+error	[request-parameter-type-changed] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		para el parámetro `path` de solicitud `domain`, el `type/format` fue cambiado de `string/hyphen-separated list` a `integer/non-negative integer`
+
+error	[response-success-status-removed] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		removido el estado de respuesta exitosa `200`
+
+error	[response-success-status-removed] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		removido el estado de respuesta exitosa `201`
+
+error	[api-path-removed-without-deprecation] en ./openapi-test1.yaml
+	en API GET /api/{domain}/{project}/install-command
+		ruta de api removida sin deprecación
+
+error	[api-path-removed-without-deprecation] en ./openapi-test1.yaml
+	en API POST /register
+		ruta de api removida sin deprecación
+
+error	[api-path-removed-without-deprecation] en ./openapi-test1.yaml
+	en API POST /subscribe
+		ruta de api removida sin deprecación
+
+warning	[request-parameter-pattern-changed] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		cambiado el patrón del parámetro `path` de solicitud `domain` de `^(?:([a-z]+-)*([a-z]+)?)$` a `^(?:\d+)$`
+		Esta es una advertencia porque agregar o cambiar un patrón puede restringir los valores aceptados y romper clientes existentes. Para cambios de patrón, es difícil analizar automáticamente si el nuevo patrón es un superconjunto del patrón anterior (ej. cambiado de '[0-9]+' a '[0-9]*')
+
+warning	[request-parameter-removed] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		eliminado el parámetro `cookie` de solicitud `test`
+		Esto es una advertencia porque algunas aplicaciones pueden devolver un error al recibir un parámetro que no esperan. Se recomienda deprecar el parámetro primero.
+
+warning	[request-parameter-removed] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		eliminado el parámetro `header` de solicitud `user`
+		Esto es una advertencia porque algunas aplicaciones pueden devolver un error al recibir un parámetro que no esperan. Se recomienda deprecar el parámetro primero.
+
+warning	[request-parameter-removed] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		eliminado el parámetro `header` de solicitud `x-auth-name`
+		Esto es una advertencia porque algunas aplicaciones pueden devolver un error al recibir un parámetro que no esperan. Se recomienda deprecar el parámetro primero.
+
+info	[api-major-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión mayor no aumentó, de `1.0.0` a `1.0.1`
+
+info	[api-schema-removed]
+	en components/schemas
+		removido el esquema `network-policies`
+
+info	[api-schema-removed]
+	en components/schemas
+		removido el esquema `rules`
+
+info	[api-security-component-removed]
+	en components/securitySchemes
+		el esquema de seguridad `AccessToken` fue removido
+
+info	[api-security-component-removed]
+	en components/securitySchemes
+		el esquema de seguridad `OAuth` fue removido
+
+info	[api-security-component-removed]
+	en components/securitySchemes
+		el esquema de seguridad `bearerAuth` fue removido
+
+info	[api-operation-id-removed] en ./openapi-test1.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		id de operación de api `GetSecurityScores` removido y reemplazado por ``
+
+info	[api-security-anonymous-access-added] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		el endpoint ahora permite acceso anónimo
+		Este endpoint hereda los requisitos de seguridad de nivel superior de la API.
+
+info	[api-tag-removed] en ./openapi-test1.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		etiqueta de api `security` removida
+
+info	[request-parameter-max-length-unset] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		para el parámetro `query` de solicitud `token`, el valor maxLength fue removido de `29`
+
+info	[request-parameter-pattern-removed] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		removido el patrón `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` del parámetro `query` de solicitud `token`
+
+info	[request-parameter-type-generalized] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		para el parámetro `query` de solicitud `token`, el `type/format` fue ampliado de `string/uuid` a `any`
+
+info	[response-non-success-status-removed] en ./openapi-test2.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		removido el estado de respuesta no exitosa `400`
+
+info	[endpoint-added] en ./openapi-test2.yaml
+	en API POST /api/{domain}/{project}/badges/security-score
+		endpoint agregado
+
+

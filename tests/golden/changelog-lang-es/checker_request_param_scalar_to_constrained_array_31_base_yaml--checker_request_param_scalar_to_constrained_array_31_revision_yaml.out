@@ -1,0 +1,10 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[request-parameter-type-changed] en ./checker/request_param_scalar_to_constrained_array_31_revision.yaml
+	en API POST /api/v1.0/groups
+		para el parámetro `query` de solicitud `token`, el `type` fue cambiado de `string` a `array<string>`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

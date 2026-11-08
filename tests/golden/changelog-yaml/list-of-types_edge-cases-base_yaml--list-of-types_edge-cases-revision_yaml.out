@@ -1,0 +1,50 @@
+- id: response-property-list-of-types-widened
+  text: response property `mixedBoth` list-of-types was widened by adding types `number` to media type `application/json` of response `200`
+  level: 3
+  operation: GET
+  path: /edge
+  section: paths
+  fingerprint: 111f5ca3e81c
+- id: response-property-one-of-added
+  text: 'added `subschema #1, subschema #2` to the `complexOneOf` response property `oneOf` list for the response status `200`'
+  level: 3
+  operation: GET
+  path: /edge
+  section: paths
+  revisionSource:
+    file: ./list-of-types/edge-cases-revision.yaml
+    line: 20
+    column: 25
+    endLine: 20
+    endColumn: 38
+  fingerprint: d3811641f8a1
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: response-property-one-of-removed
+  text: 'removed `subschema #1, subschema #2` from the `complexOneOf` response property `oneOf` list for the response status `200`'
+  level: 1
+  operation: GET
+  path: /edge
+  section: paths
+  baseSource:
+    file: ./list-of-types/edge-cases-base.yaml
+    line: 20
+    column: 25
+    endLine: 20
+    endColumn: 37
+  fingerprint: 2270258e514a
+- id: response-property-type-specialized
+  text: the `emptyOneOf` response's property `type` was narrowed from `any` to `string` for status `200`
+  level: 1
+  operation: GET
+  path: /edge
+  section: paths
+  revisionSource:
+    file: ./list-of-types/edge-cases-revision.yaml
+    line: 17
+    column: 21
+  fingerprint: 262ac67ac0d9
+

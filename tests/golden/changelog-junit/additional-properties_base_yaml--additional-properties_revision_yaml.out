@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="response-property-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `additionalProperties/property1` response's property `type` changed from `integer` to `string` for status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

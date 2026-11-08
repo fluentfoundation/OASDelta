@@ -1,0 +1,10 @@
+4 changes: 2 error, 0 warning, 2 info
+error at ./checker/transition_claims_enum_revision.yaml, in API POST /test removed the enum value `alpha` of the request property `mode` [request-property-enum-value-removed]. 
+
+error at ./checker/transition_claims_enum_revision.yaml, in API POST /test removed the enum value `beta` of the request property `mode` [request-property-enum-value-removed]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./checker/transition_claims_enum_revision.yaml, in API POST /test request property `mode` list-of-types was widened by adding types `integer` to media type `application/json` [request-property-list-of-types-widened]. 
+
+

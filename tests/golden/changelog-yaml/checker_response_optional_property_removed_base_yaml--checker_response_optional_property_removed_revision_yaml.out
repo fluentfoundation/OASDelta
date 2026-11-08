@@ -1,0 +1,15 @@
+- id: response-optional-property-removed
+  text: removed the optional property `data/id` from the response with the `200` status
+  level: 1
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups
+  section: paths
+  baseSource:
+    file: ./checker/response_optional_property_removed_base.yaml
+    line: 39
+    column: 13
+    endLine: 41
+    endColumn: 29
+  fingerprint: b6bc196e4433
+

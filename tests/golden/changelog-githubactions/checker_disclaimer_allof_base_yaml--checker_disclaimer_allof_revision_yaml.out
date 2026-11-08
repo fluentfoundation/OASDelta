@@ -1,0 +1,2 @@
+::warning title=response-property-became-optional,file=./checker/disclaimer_allof_revision.yaml::in API GET /x the response property `allOf[#/components/schemas/A]/id` became optional for the status `200`
+

@@ -1,0 +1,17 @@
+- id: request-property-min-decreased
+  text: the `age` request property's min was decreased from `15.00` to `10.00`
+  level: 1
+  operation: POST
+  operationId: addPet
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./checker/request_property_min_increased_revision.yaml
+    line: 17
+    column: 19
+  revisionSource:
+    file: ./checker/request_property_min_increased_base.yaml
+    line: 17
+    column: 19
+  fingerprint: 5796828ebb70
+

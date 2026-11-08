@@ -1,0 +1,12 @@
+2 alterações: 0 error, 0 warning, 2 info
+info	[response-body-all-of-added] em ./checker/response_property_all_of_added_revision.yaml
+	em API GET /pets
+		`#/components/schemas/Rabbit` foi adicionado à lista `allOf` do corpo da resposta para o status `200`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-property-all-of-added] em ./checker/response_property_all_of_added_revision.yaml
+	em API GET /pets
+		`#/components/schemas/Breed3` foi adicionado à lista `allOf` da propriedade de resposta `allOf[#/components/schemas/Dog]/breed` para o status `200`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+

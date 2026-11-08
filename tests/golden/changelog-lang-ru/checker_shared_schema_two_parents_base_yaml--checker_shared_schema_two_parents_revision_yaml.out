@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[response-optional-property-added] в ./checker/shared_schema_two_parents_revision.yaml
+	в API GET /example
+		добавлено необязательное свойство `first/shared/extra` в ответе со статусом `200` (общая схема: `Shared`, также в `third/shared/extra`, `fourth/shared/extra` и ещё 1)
+
+info	[response-property-pattern-added] в ./checker/shared_schema_two_parents_revision.yaml
+	в API GET /example
+		у свойства `first/shared/id` для ответа со статусом `^[0-9]+$` добавлен паттерн `200` (общая схема: `Shared`, также в `third/shared/id`, `fourth/shared/id` и ещё 1)
+
+

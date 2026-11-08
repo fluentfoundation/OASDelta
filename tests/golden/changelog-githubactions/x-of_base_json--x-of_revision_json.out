@@ -1,0 +1,5 @@
+::error title=response-property-became-optional,file=./x-of/revision.json::in API GET /api/anyOf/path the response property `anyOf[#/components/schemas/ProblemSchema]/changedProperty` became optional for the status `200`
+::error title=response-property-became-optional,file=./x-of/revision.json::in API GET /api/oneOf/path the response property `oneOf[#/components/schemas/ProblemSchema]/changedProperty` became optional for the status `200`
+::warning title=response-property-became-optional,file=./x-of/revision.json::in API GET /api/allOf/path the response property `allOf[#/components/schemas/ProblemSchema]/changedProperty` became optional for the status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `0.0.1`
+

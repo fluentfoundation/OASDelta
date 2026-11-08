@@ -1,0 +1,30 @@
+7 изменений: 2 error, 4 warning, 1 info
+error	[request-property-type-changed] в ./checker/request_property_type_changed_base_array_to_object.yaml
+	в API POST /dogs
+		у поля запроса `colors` `type` изменён с `object` на `array<integer>`
+
+error	[request-body-type-changed] в ./checker/request_property_type_changed_base_array_to_object.yaml
+	в API POST /pets
+		`type` тела запроса изменён с `object` на `array<object>`
+
+warning	[request-property-removed] в ./checker/request_property_type_changed_base_array_to_object.yaml
+	в API POST /dogs
+		удалено поле запроса `colors/blue`
+
+warning	[request-property-removed] в ./checker/request_property_type_changed_base_array_to_object.yaml
+	в API POST /dogs
+		удалено поле запроса `colors/green`
+
+warning	[request-property-removed] в ./checker/request_property_type_changed_base_array_to_object.yaml
+	в API POST /dogs
+		удалено поле запроса `colors/red`
+
+warning	[request-property-removed] в ./checker/request_property_type_changed_base_array_to_object.yaml
+	в API POST /pets
+		удалено поле запроса `data`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

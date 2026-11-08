@@ -1,0 +1,31 @@
+7 cambios: 0 error, 0 warning, 7 info
+info	[api-global-security-added]
+	en security
+		el esquema de seguridad `bearerAuth` fue agregado a la api
+		Ningún endpoint hereda los requisitos de seguridad de nivel superior de la API, por lo que este cambio no afecta a ningún cliente.
+
+info	[api-security-component-added]
+	en components/securitySchemes
+		el esquema de seguridad `AccessToken` fue agregado
+
+info	[api-security-component-added]
+	en components/securitySchemes
+		el esquema de seguridad `OAuth` fue agregado
+
+info	[api-security-component-added]
+	en components/securitySchemes
+		el esquema de seguridad `bearerAuth` fue agregado
+
+info	[endpoint-added] en openapi-test701.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		endpoint agregado
+
+info	[endpoint-added] en openapi-test701.yaml
+	en API GET /api/{domain}/{project}/install-command
+		endpoint agregado
+
+info	[endpoint-added] en openapi-test701.yaml
+	en API POST /register
+		endpoint agregado
+
+

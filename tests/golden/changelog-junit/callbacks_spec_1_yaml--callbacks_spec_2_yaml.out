@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="0" errors="0" failures="0" name="OASDiff">
+    <testcase name="no breaking changes detected" classname="OASDiff" time="0"></testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[response-property-schema-became-not-false] at ./checker/items_became_false_base.yaml
+	in API POST /items
+		the schema of the response property `tags/items` is no longer `false` for the status `200` and allows values again
+
+

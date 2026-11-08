@@ -1,0 +1,13 @@
+paths:
+    modified:
+        /api/v1.0/groups:
+            parameters:
+                modified:
+                    query:
+                        category:
+                            schema:
+                                items:
+                                    maxItems:
+                                        from: 20
+                                        to: 10
+

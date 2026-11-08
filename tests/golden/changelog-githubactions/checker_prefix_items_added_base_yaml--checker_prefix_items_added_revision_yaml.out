@@ -1,0 +1,3 @@
+::warning title=request-body-prefix-items-added,file=./checker/prefix_items_added_revision.yaml,line=16,col=15::in API POST /products added `subschema #1` to the request body 'prefixItems' list
+::warning title=response-body-prefix-items-added,file=./checker/prefix_items_added_revision.yaml,line=27,col=17::in API POST /products added `subschema #1` to the response body 'prefixItems' list for the response status `200`
+

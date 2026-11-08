@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="request-body-property-names-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added 'propertyNames' constraint to the request body</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="response-body-property-names-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added 'propertyNames' constraint to the response body for the status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

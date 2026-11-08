@@ -1,0 +1,3 @@
+::warning title=request-property-prefix-items-added,file=./checker/prefix_items_prop_revision.yaml,line=19,col=19::in API POST /products added `subschema #1` to the `details` request property 'prefixItems' list
+::warning title=response-property-prefix-items-added,file=./checker/prefix_items_prop_revision.yaml,line=33,col=21::in API POST /products added `subschema #1` to the `details` response property 'prefixItems' list for the response status `200`
+

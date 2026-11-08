@@ -1,0 +1,25 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /example
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Property 'OneOf' changed
+          - Schemas added: subschema #1, subschema #2
+        - Type changed from 'object' to ''
+        - Required changed
+          - Deleted required property: bar
+          - Deleted required property: foo
+        - Properties changed
+          - Deleted property: bar
+          - Deleted property: baz
+          - Deleted property: foo
+
+

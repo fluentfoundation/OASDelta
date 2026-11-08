@@ -1,0 +1,12 @@
+- id: request-property-became-required
+  text: the request property `items/id` became required
+  level: 3
+  operation: POST
+  path: /test
+  section: paths
+  revisionSource:
+    file: ./required-properties/items2.yaml
+    line: 16
+    column: 21
+  fingerprint: 01c062c2123c
+

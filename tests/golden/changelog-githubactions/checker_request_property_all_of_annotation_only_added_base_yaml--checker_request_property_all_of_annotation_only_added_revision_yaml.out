@@ -1,0 +1,2 @@
+::notice title=request-body-all-of-added-annotation-only,file=./checker/request_property_all_of_annotation_only_added_revision.yaml,line=19,col=19::in API POST /pets added annotation-only `subschema #1: annotation-only subschema` to the request body `allOf` list
+

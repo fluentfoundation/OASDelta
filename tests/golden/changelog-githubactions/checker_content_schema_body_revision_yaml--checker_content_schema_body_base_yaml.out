@@ -1,0 +1,8 @@
+::error title=request-body-content-encoding-changed,file=./checker/content_schema_body_base.yaml,line=15,col=15::in API POST /products the request body contentEncoding changed from `quoted-printable` to `base64`
+::error title=request-body-content-media-type-changed,file=./checker/content_schema_body_base.yaml,line=14,col=15::in API POST /products the request body contentMediaType changed from `text/plain` to `application/json`
+::error title=response-body-content-encoding-changed,file=./checker/content_schema_body_base.yaml,line=24,col=17::in API POST /products the response body contentEncoding changed from `quoted-printable` to `base64` for the status `200`
+::error title=response-body-content-media-type-changed,file=./checker/content_schema_body_base.yaml,line=23,col=17::in API POST /products the response body contentMediaType changed from `text/plain` to `application/json` for the status `200`
+::error title=response-body-content-schema-removed,file=./checker/content_schema_body_base.yaml::in API POST /products removed 'contentSchema' from the response body for the status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-body-content-schema-removed,file=./checker/content_schema_body_base.yaml::in API POST /products removed 'contentSchema' from the request body
+

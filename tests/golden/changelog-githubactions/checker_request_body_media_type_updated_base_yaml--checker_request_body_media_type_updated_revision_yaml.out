@@ -1,0 +1,2 @@
+::notice title=request-body-media-type-added,file=./checker/request_body_media_type_updated_revision.yaml,line=18,col=11::in API POST /api/v1.0/groups added the media type `application/json` to the request body
+

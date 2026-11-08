@@ -1,0 +1,8 @@
+::error title=response-property-contains-removed,file=./checker/contains_property_base.yaml::in API POST /products removed 'contains' constraint from the `tags` response property for the status `200`
+::error title=response-property-max-contains-unset,file=./checker/contains_property_base.yaml::in API POST /products the `tags` response property's maxContains was unset from `3` for the response status `200`
+::error title=response-property-min-contains-unset,file=./checker/contains_property_base.yaml::in API POST /products the `tags` response property's minContains was unset from `1` for the response status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-property-contains-removed,file=./checker/contains_property_base.yaml::in API POST /products removed 'contains' constraint from the request property `tags`
+::notice title=request-property-max-contains-unset,file=./checker/contains_property_base.yaml::in API POST /products the `tags` request property's maxContains was unset from `3`
+::notice title=request-property-min-contains-unset,file=./checker/contains_property_base.yaml::in API POST /products the `tags` request property's minContains was unset from `1`
+

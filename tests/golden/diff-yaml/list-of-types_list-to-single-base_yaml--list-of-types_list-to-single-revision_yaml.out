@@ -1,0 +1,73 @@
+paths:
+    modified:
+        /test:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    userId:
+                                                        oneOf:
+                                                            deleted:
+                                                                - index: 0
+                                                                - index: 1
+                                                        type:
+                                                            added:
+                                                                - integer
+                                                        listOfTypes:
+                                                            deleted:
+                                                                - string
+                                                    value:
+                                                        anyOf:
+                                                            deleted:
+                                                                - index: 0
+                                                                - index: 1
+                                                                - index: 2
+                                                        type:
+                                                            added:
+                                                                - string
+                                                        listOfTypes:
+                                                            deleted:
+                                                                - number
+                                                                - boolean
+endpoints:
+    modified:
+        ?   method: POST
+            path: /test
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    modified:
+                                        userId:
+                                            oneOf:
+                                                deleted:
+                                                    - index: 0
+                                                    - index: 1
+                                            type:
+                                                added:
+                                                    - integer
+                                            listOfTypes:
+                                                deleted:
+                                                    - string
+                                        value:
+                                            anyOf:
+                                                deleted:
+                                                    - index: 0
+                                                    - index: 1
+                                                    - index: 2
+                                            type:
+                                                added:
+                                                    - string
+                                            listOfTypes:
+                                                deleted:
+                                                    - number
+                                                    - boolean
+

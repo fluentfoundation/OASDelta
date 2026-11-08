@@ -1,0 +1,10 @@
+2 alterações: 2 error, 0 warning, 0 info
+error	[request-body-became-enum] em ./enums/request-body-enum-int.yaml
+	em API GET /api/v2/changeOfRequestFieldValueTiedToEnumTest
+		o corpo da requisição foi restrito a uma lista de valores enum
+
+error	[request-body-type-changed] em ./enums/request-body-enum-int.yaml
+	em API GET /api/v2/changeOfRequestFieldValueTiedToEnumTest
+		o `type` do corpo da requisição foi alterado de `string` para `int`
+
+

@@ -1,0 +1,2 @@
+::error title=request-parameter-max-decreased,file=./checker/request_parameter_max_updated_base.yaml,line=26,col=13::in API POST /api/v1.0/groups for the `query` request parameter `category`, the max was decreased from `10.00` to `5.00`
+

@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /test
+- :warning: response property `id` list-of-types was widened by adding types `integer` to media type `application/json` of response `200`
+- :warning: response property `status` list-of-types was widened by adding types `number` to media type `application/json` of response `200`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

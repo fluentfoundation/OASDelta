@@ -1,0 +1,1 @@
+[{"id":"response-body-became-nullable","text":"the response's body became nullable","level":3,"operation":"POST","path":"/payments/{id}","section":"paths","revisionSource":{"file":"./nullable/revision-body.yaml","line":15,"column":17},"fingerprint":"5cbf5ea53c5c"}]

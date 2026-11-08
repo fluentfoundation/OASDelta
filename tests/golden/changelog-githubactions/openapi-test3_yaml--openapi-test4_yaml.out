@@ -1,0 +1,9 @@
+::error title=api-path-removed-without-deprecation,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/install-command api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test3.yaml::in API POST /register api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test3.yaml::in API POST /subscribe api path removed without deprecation
+::notice title=api-security-component-removed::in API   the component security scheme `OAuth` was removed
+::notice title=api-version-decreased::in API   a breaking change was detected but the version decreased from `1.0.1` to `1.0.0`
+::notice title=endpoint-added,file=openapi-test4.yaml,line=7,col=5::in API GET /prefix/api/{domain}/{project}/badges/security-score endpoint added
+::notice title=endpoint-added,file=openapi-test4.yaml,line=52,col=5::in API POST /prefix/api/{domain}/{project}/badges/security-score endpoint added
+

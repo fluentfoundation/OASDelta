@@ -1,0 +1,8 @@
+3 changes: 1 error, 0 warning, 2 info
+error at ./list-of-types/list-to-list-revision.yaml, in API GET /api response property `data` list-of-types was widened by adding types `number and boolean` to media type `application/json` of response `200` [response-property-list-of-types-widened]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./list-of-types/list-to-list-revision.yaml, in API GET /api response property `metadata` list-of-types was narrowed by removing types `object` from media type `application/json` of response `200` [response-property-list-of-types-narrowed]. 
+
+

@@ -1,0 +1,12 @@
+5 changes: 2 error, 0 warning, 3 info
+error at ./prefix/simple1.yaml, in API GET /api/test api path removed without deprecation [api-path-removed-without-deprecation]. 
+
+error at ./prefix/simple1.yaml, in API GET /api/test1 api path removed without deprecation [api-path-removed-without-deprecation]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./prefix/simple2.yaml, in API GET /tenant/api/test endpoint added [endpoint-added]. 
+
+info at ./prefix/simple2.yaml, in API GET /tenant/api/test1 endpoint added [endpoint-added]. 
+
+

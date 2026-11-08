@@ -1,0 +1,6 @@
+1 alterações: 1 error, 0 warning, 0 info
+error	[response-property-type-changed] em ./type-change/revision-response.yaml
+	em API GET /api/atlas/v2/changeOfResponseArrayFieldTest
+		o `items/testField` da propriedade de resposta `type/format` foi alterado de `string` para `integer/int32` para o status `200`
+
+

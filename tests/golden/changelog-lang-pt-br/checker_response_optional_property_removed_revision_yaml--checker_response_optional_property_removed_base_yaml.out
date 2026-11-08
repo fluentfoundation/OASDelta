@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[response-optional-property-added] em ./checker/response_optional_property_removed_base.yaml
+	em API POST /api/v1.0/groups
+		a propriedade opcional `data/id` foi adicionada à resposta com o status `200`
+
+

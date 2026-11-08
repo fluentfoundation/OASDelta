@@ -1,0 +1,2 @@
+::error title=request-property-pattern-added,file=./checker/request_property_pattern_added_or_changed_base.yaml,line=23,col=11::in API POST /test added the pattern `^\w+$` to the request property `name`
+

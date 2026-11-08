@@ -1,0 +1,42 @@
+10 alterações: 0 error, 0 warning, 10 info
+info	[response-body-discriminator-property-name-changed] em ./checker/response_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		o nome da propriedade do discriminador de resposta foi alterado de `petType` para `petType2` para o status `200`
+
+info	[response-optional-property-added] em ./checker/response_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade opcional `oneOf[#/components/schemas/Cat]/petType2` foi adicionada à resposta com o status `200`
+
+info	[response-optional-property-added] em ./checker/response_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade opcional `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name2` foi adicionada à resposta com o status `200`
+
+info	[response-optional-property-added] em ./checker/response_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade opcional `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name2` foi adicionada à resposta com o status `200`
+
+info	[response-optional-property-added] em ./checker/response_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade opcional `oneOf[#/components/schemas/Dog]/petType2` foi adicionada à resposta com o status `200`
+
+info	[response-optional-property-removed] em ./checker/response_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade opcional `oneOf[#/components/schemas/Cat]/petType` foi removida da resposta com o status `200`
+
+info	[response-optional-property-removed] em ./checker/response_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade opcional `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name` foi removida da resposta com o status `200`
+
+info	[response-optional-property-removed] em ./checker/response_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade opcional `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name` foi removida da resposta com o status `200`
+
+info	[response-optional-property-removed] em ./checker/response_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		a propriedade opcional `oneOf[#/components/schemas/Dog]/petType` foi removida da resposta com o status `200`
+
+info	[response-property-discriminator-property-name-changed] em ./checker/response_property_discriminator_added_property_name_changed.yaml
+	em API POST /pets
+		o nome da propriedade do discriminador foi alterado para a propriedade de resposta `oneOf[#/components/schemas/Dog]/breed` de `name` para `name2` para o status `200`
+
+

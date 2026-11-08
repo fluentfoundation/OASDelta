@@ -1,0 +1,14 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /test
+- Modified query param: category
+  - Schema changed
+    - Pattern changed from '^\w+$' to ''
+
+

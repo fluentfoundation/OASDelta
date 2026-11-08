@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[response-property-unevaluated-items-removed] at ./checker/unevaluated_property_base.yaml
+	in API POST /products
+		removed 'unevaluatedItems' constraint from the `meta` response property for the status `200`
+
+error	[response-property-unevaluated-properties-removed] at ./checker/unevaluated_property_base.yaml
+	in API POST /products
+		removed 'unevaluatedProperties' constraint from the `meta` response property for the status `200`
+
+

@@ -1,0 +1,26 @@
+::error title=request-parameter-min-set,file=./openapi-test2.yaml,line=54,col=11::in API GET /api/{domain}/{project}/badges/security-score for the `path` request parameter `domain`, the min was set to `7.00`
+::error title=request-parameter-type-changed,file=./openapi-test2.yaml,line=53,col=11::in API GET /api/{domain}/{project}/badges/security-score for the `path` request parameter `domain`, the `type/format` was changed from `string/hyphen-separated list` to `integer/non-negative integer`
+::error title=response-success-status-removed,file=./openapi-test2.yaml::in API GET /api/{domain}/{project}/badges/security-score removed the success response with the status `200`
+::error title=response-success-status-removed,file=./openapi-test2.yaml::in API GET /api/{domain}/{project}/badges/security-score removed the success response with the status `201`
+::error title=api-path-removed-without-deprecation,file=./openapi-test1.yaml::in API GET /api/{domain}/{project}/install-command api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=./openapi-test1.yaml::in API POST /register api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=./openapi-test1.yaml::in API POST /subscribe api path removed without deprecation
+::warning title=request-parameter-pattern-changed,file=./openapi-test2.yaml,line=52,col=11::in API GET /api/{domain}/{project}/badges/security-score changed the pattern of the `path` request parameter `domain` from `^(?:([a-z]+-)*([a-z]+)?)$` to `^(?:\d+)$`
+::warning title=request-parameter-removed,file=./openapi-test2.yaml::in API GET /api/{domain}/{project}/badges/security-score deleted the `cookie` request parameter `test`
+::warning title=request-parameter-removed,file=./openapi-test2.yaml::in API GET /api/{domain}/{project}/badges/security-score deleted the `header` request parameter `user`
+::warning title=request-parameter-removed,file=./openapi-test2.yaml::in API GET /api/{domain}/{project}/badges/security-score deleted the `header` request parameter `x-auth-name`
+::notice title=api-major-version-not-bumped::in API   a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`
+::notice title=api-schema-removed::in API   removed the schema `network-policies`
+::notice title=api-schema-removed::in API   removed the schema `rules`
+::notice title=api-security-component-removed::in API   the component security scheme `AccessToken` was removed
+::notice title=api-security-component-removed::in API   the component security scheme `OAuth` was removed
+::notice title=api-security-component-removed::in API   the component security scheme `bearerAuth` was removed
+::notice title=api-operation-id-removed,file=./openapi-test1.yaml::in API GET /api/{domain}/{project}/badges/security-score api operation id `GetSecurityScores` removed and replaced with ``
+::notice title=api-security-anonymous-access-added,file=./openapi-test2.yaml::in API GET /api/{domain}/{project}/badges/security-score the endpoint now allows anonymous access
+::notice title=api-tag-removed,file=./openapi-test1.yaml::in API GET /api/{domain}/{project}/badges/security-score api tag `security` removed
+::notice title=request-parameter-max-length-unset,file=./openapi-test2.yaml::in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `token`, the maxLength was unset from `29`
+::notice title=request-parameter-pattern-removed,file=./openapi-test2.yaml::in API GET /api/{domain}/{project}/badges/security-score removed the pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` from the `query` request parameter `token`
+::notice title=request-parameter-type-generalized,file=./openapi-test2.yaml::in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `token`, the `type/format` was widened from `string/uuid` to `any`
+::notice title=response-non-success-status-removed,file=./openapi-test2.yaml::in API GET /api/{domain}/{project}/badges/security-score removed the non-success response with the status `400`
+::notice title=endpoint-added,file=./openapi-test2.yaml,line=68,col=5::in API POST /api/{domain}/{project}/badges/security-score endpoint added
+

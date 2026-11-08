@@ -1,5 +1,7 @@
 #!/bin/bash
 # Usage: parity.sh <subcommand-and-flags...>   e.g. parity.sh diff ; parity.sh diff -f json ; parity.sh summary
+# Git Bash on Windows rewrites POSIX-looking arguments when it runs a Windows executable; turn that off.
+export MSYS_NO_PATHCONV=1 MSYS2_ARG_CONV_EXCL="*"
 G=${GO:-oasdiff}
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 C=${CS:-$ROOT/src/OasDelta/bin/Release/net10.0/oasdelta}

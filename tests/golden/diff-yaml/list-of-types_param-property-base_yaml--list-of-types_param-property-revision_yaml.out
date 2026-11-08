@@ -1,0 +1,51 @@
+paths:
+    modified:
+        /test:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    filter:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    mode:
+                                                        oneOf:
+                                                            deleted:
+                                                                - index: 0
+                                                                - index: 1
+                                                                - index: 2
+                                                        type:
+                                                            added:
+                                                                - string
+                                                        listOfTypes:
+                                                            deleted:
+                                                                - integer
+                                                                - boolean
+endpoints:
+    modified:
+        ?   method: GET
+            path: /test
+        :   parameters:
+                modified:
+                    query:
+                        filter:
+                            schema:
+                                properties:
+                                    modified:
+                                        mode:
+                                            oneOf:
+                                                deleted:
+                                                    - index: 0
+                                                    - index: 1
+                                                    - index: 2
+                                            type:
+                                                added:
+                                                    - string
+                                            listOfTypes:
+                                                deleted:
+                                                    - integer
+                                                    - boolean
+

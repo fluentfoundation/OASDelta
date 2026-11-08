@@ -1,0 +1,20 @@
+4 изменений: 0 error, 2 warning, 2 info
+warning	[response-body-all-of-removed] в ./checker/response_property_all_of_removed_revision.yaml
+	в API GET /pets
+		удалён `#/components/schemas/Rabbit` из списка `allOf` тела ответа для статуса ответа `200`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+warning	[response-property-all-of-removed] в ./checker/response_property_all_of_removed_revision.yaml
+	в API GET /pets
+		удалён `#/components/schemas/Breed3` из списка `allOf` свойства ответа `allOf[#/components/schemas/Dog]/breed` для статуса ответа `200`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[api-schema-removed]
+	в components/schemas
+		удалена схема `Breed3`
+
+info	[api-schema-removed]
+	в components/schemas
+		удалена схема `Rabbit`
+
+

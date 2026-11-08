@@ -1,0 +1,10 @@
+2 changes: 0 error, 0 warning, 2 info
+info	[response-media-type-parameter-added] at ./checker/media_type_param_added_revision.yaml
+	in API POST /api/v1.0/groups
+		the media type parameter `charset` was added to `application/json` for the response status `200`
+
+info	[response-media-type-parameter-added] at ./checker/media_type_param_added_revision.yaml
+	in API POST /api/v1.0/groups
+		the media type parameter `charset` was added to `application/json` for the response status `409`
+
+

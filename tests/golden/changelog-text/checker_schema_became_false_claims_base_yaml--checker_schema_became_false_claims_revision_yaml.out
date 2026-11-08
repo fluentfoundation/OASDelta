@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-body-schema-became-false] at ./checker/schema_became_false_claims_revision.yaml
+	in API POST /t
+		the request body schema became `false`: no request body passes validation
+
+

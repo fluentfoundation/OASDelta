@@ -1,0 +1,10 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[response-property-became-nullable] en ./nullable/revision-property.yaml
+	en API POST /payments/{id}
+		la propiedad de respuesta `name` se volvió nulable para el estado `201`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

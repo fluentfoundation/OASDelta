@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /test
+- :warning: request property `userId` list-of-types was narrowed by removing types `string` from media type `application/json`
+- :warning: request property `value` list-of-types was narrowed by removing types `number and boolean` from media type `application/json`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

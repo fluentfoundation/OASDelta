@@ -1,0 +1,22 @@
+5 изменений: 2 error, 0 warning, 3 info
+error	[request-property-unevaluated-items-added] в ./checker/unevaluated_property_revision.yaml
+	в API POST /products
+		добавлено ограничение 'unevaluatedItems' в поле запроса `meta`
+
+error	[request-property-unevaluated-properties-added] в ./checker/unevaluated_property_revision.yaml
+	в API POST /products
+		добавлено ограничение 'unevaluatedProperties' в поле запроса `meta`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-property-unevaluated-items-added] в ./checker/unevaluated_property_revision.yaml
+	в API POST /products
+		добавлено ограничение 'unevaluatedItems' в поле ответа `meta` для статуса `200`
+
+info	[response-property-unevaluated-properties-added] в ./checker/unevaluated_property_revision.yaml
+	в API POST /products
+		добавлено ограничение 'unevaluatedProperties' в поле ответа `meta` для статуса `200`
+
+

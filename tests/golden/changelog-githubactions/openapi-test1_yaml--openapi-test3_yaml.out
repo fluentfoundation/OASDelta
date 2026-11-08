@@ -1,0 +1,27 @@
+::error title=response-success-status-removed,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score removed the success response with the status `200`
+::error title=response-success-status-removed,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score removed the success response with the status `201`
+::error title=api-security-removed,file=openapi-test3.yaml::in API POST /register the endpoint scheme security `bearerAuth` was removed from the API
+::error title=api-security-scope-added,file=openapi-test3.yaml,line=136,col=7::in API POST /register the security scope `write:pets` was added to the endpoint's security scheme `OAuth`
+::warning title=request-parameter-removed,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score deleted the `cookie` request parameter `test`
+::warning title=request-parameter-removed,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score deleted the `header` request parameter `user`
+::warning title=request-parameter-removed,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score deleted the `query` request parameter `filter`
+::warning title=request-parameter-removed,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/install-command deleted the `header` request parameter `network-policies`
+::notice title=api-major-version-not-bumped::in API   a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`
+::notice title=api-schema-removed::in API   removed the schema `network-policies`
+::notice title=api-schema-removed::in API   removed the schema `rules`
+::notice title=api-security-component-oauth-scope-added,file=openapi-test3.yaml,line=252,col=5::in API   the component security scheme `OAuth` oauth `authorizationCode` flow scope `admin` was added
+::notice title=api-security-component-oauth-scope-changed,file=openapi-test3.yaml,line=252,col=5::in API   the component security scheme `OAuth` oauth `authorizationCode` flow scope `accountWrite` was updated from `Allows account data to be written` to `Allows accounts data to be written`
+::notice title=api-security-component-removed::in API   the component security scheme `AccessToken` was removed
+::notice title=api-security-component-removed::in API   the component security scheme `bearerAuth` was removed
+::notice title=api-operation-id-removed,file=openapi-test1.yaml::in API GET /api/{domain}/{project}/badges/security-score api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
+::notice title=api-security-anonymous-access-added,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score the endpoint now allows anonymous access
+::notice title=api-tag-removed,file=openapi-test1.yaml::in API GET /api/{domain}/{project}/badges/security-score api tag `security` removed
+::notice title=request-parameter-max-length-increased,file=openapi-test3.yaml,line=45,col=11::in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `token`, the maxLength was increased from `29` to `30`
+::notice title=request-parameter-pattern-removed,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image`
+::notice title=request-parameter-type-generalized,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any`
+::notice title=response-non-success-status-removed,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score removed the non-success response with the status `400`
+::notice title=api-security-anonymous-access-added,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/install-command the endpoint now allows anonymous access
+::notice title=new-optional-request-default-parameter-to-existing-path,file=openapi-test3.yaml,line=129,col=7::in API GET /api/{domain}/{project}/install-command added the new optional `header` request parameter `name` to all path's operations
+::notice title=request-parameter-enum-value-added,file=openapi-test3.yaml,line=105,col=13::in API GET /api/{domain}/{project}/install-command added the new enum value `test1` to the `path` request parameter `project`
+::notice title=api-security-anonymous-access-added,file=openapi-test3.yaml::in API POST /subscribe the endpoint now allows anonymous access
+

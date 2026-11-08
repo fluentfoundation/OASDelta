@@ -1,0 +1,4 @@
+::warning title=new-required-request-property,file=./checker/allof_property_existence_revision.yaml,line=25,col=25::in API POST /items added the new required request property `wrapper/allOf[subschema #2]/added`
+::warning title=request-property-removed,file=./checker/allof_property_existence_revision.yaml::in API POST /items removed the request property `wrapper/allOf[subschema #2]/drop`
+::warning title=request-property-type-changed,file=./checker/allof_property_existence_revision.yaml,line=24,col=27::in API POST /items the `wrapper/allOf[subschema #2]/other` request property `type` changed from `string` to `integer`
+

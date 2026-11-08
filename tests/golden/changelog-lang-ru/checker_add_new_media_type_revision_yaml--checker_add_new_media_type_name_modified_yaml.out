@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-media-type-name-specialized] в ./checker/add_new_media_type_name_modified.yaml
+	в API POST /api/v1.0/groups
+		медиа-тип `application/json` изменен на более специфичный медиа-тип `application/problem+json` для ответа со статусом `200`
+
+

@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at , in API POST webhook:newPet the request property `tag` became required [request-property-became-required]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

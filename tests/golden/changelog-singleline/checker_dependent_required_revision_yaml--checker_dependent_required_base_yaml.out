@@ -1,0 +1,8 @@
+3 changes: 1 error, 0 warning, 2 info
+error at ./checker/dependent_required_base.yaml, in API POST /products the response body dependentRequired was removed for the status `200`: when `name` was present, `email` were required [response-body-dependent-required-removed]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./checker/dependent_required_base.yaml, in API POST /products the request body dependentRequired was removed: when `name` was present, `email` were required [request-body-dependent-required-removed]. 
+
+

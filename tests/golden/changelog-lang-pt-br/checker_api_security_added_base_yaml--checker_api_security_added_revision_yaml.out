@@ -1,0 +1,10 @@
+2 alterações: 1 error, 0 warning, 1 info
+error	[api-security-anonymous-access-removed] em ./checker/api_security_added_revision.yaml
+	em API POST /subscribe
+		o endpoint não permite mais acesso anônimo e agora só aceita `petstore_auth: [read:pets, write:pets]`
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+

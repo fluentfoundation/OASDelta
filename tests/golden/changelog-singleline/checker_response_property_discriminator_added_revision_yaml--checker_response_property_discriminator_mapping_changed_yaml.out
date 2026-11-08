@@ -1,0 +1,12 @@
+5 changes: 0 error, 0 warning, 5 info
+info at ./checker/response_property_discriminator_mapping_changed.yaml, in API POST /pets added `cats` mapping keys to the response discriminator for the response status `200` [response-body-discriminator-mapping-added]. 
+
+info at ./checker/response_property_discriminator_mapping_changed.yaml, in API POST /pets removed `cat` mapping keys from the response discriminator for the response status `200` [response-body-discriminator-mapping-deleted]. 
+
+info at ./checker/response_property_discriminator_mapping_changed.yaml, in API POST /pets added `breed1Code` discriminator mapping keys to the `oneOf[#/components/schemas/Dog]/breed` response property for the response status `200` [response-property-discriminator-mapping-added]. 
+
+info at ./checker/response_property_discriminator_mapping_changed.yaml, in API POST /pets mapped value for discriminator key `breed2` changed from `#/components/schemas/Breed2` to `#/components/schemas/Breed3` for `oneOf[#/components/schemas/Dog]/breed` response property for the response status `200` [response-property-discriminator-mapping-changed]. 
+
+info at ./checker/response_property_discriminator_mapping_changed.yaml, in API POST /pets removed `breed1` discriminator mapping keys from the `oneOf[#/components/schemas/Dog]/breed` response property for the response status `200` [response-property-discriminator-mapping-deleted]. 
+
+

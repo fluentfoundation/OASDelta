@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[response-required-property-removed] at ./checker/additional_properties_traversal_revision.yaml
+	in API GET /entries
+		removed the required property `additionalProperties/kind` from the response with the `200` status
+
+

@@ -1,0 +1,3 @@
+::notice title=request-optional-property-became-not-read-only,file=./checker/request_property_not_read_only_optional_revision.yaml::in API POST /api/v1.0/groups the request optional property `id` became not read-only
+::notice title=request-property-became-optional,file=./checker/request_property_not_read_only_optional_revision.yaml::in API POST /api/v1.0/groups the request property `id` became optional
+

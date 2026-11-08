@@ -1,0 +1,7 @@
+1 alterações: 0 error, 1 warning, 0 info
+warning	[response-body-wrapped-in-one-of-original-preserved] em ./checker/response_property_one_of_wrapped_original_preserved_revision.yaml
+	em API GET /example
+		o corpo da resposta foi reestruturado em um `oneOf`, mantendo o esquema original como uma das alternativas
+		Este é um aviso porque a especificação não diz se as alternativas se sobrepõem. Uma carga que corresponda a mais de uma é rejeitada pelo `oneOf`, portanto uma carga que antes era válida pode ou não continuar sendo aceita.
+
+

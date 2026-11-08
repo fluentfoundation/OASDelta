@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-property-became-optional" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response property `data/name` became optional for the status `200`</failure>
+    </testcase>
+    <testcase name="response-required-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the required property `location` from the response with the `200` status</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

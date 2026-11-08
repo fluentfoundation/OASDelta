@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="request-body-type-compatible" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body `type` changed from `object` to `string` (backward compatible)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

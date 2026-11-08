@@ -1,0 +1,6 @@
+::error title=request-body-any-of-removed,file=./checker/request_property_any_of_removed_revision.yaml::in API POST /pets removed `#/components/schemas/Rabbit` from the request body `anyOf` list
+::error title=request-property-any-of-removed,file=./checker/request_property_any_of_removed_revision.yaml::in API POST /pets removed `#/components/schemas/Breed3` from the `anyOf[#/components/schemas/Dog]/breed` request property `anyOf` list
+::notice title=api-schema-removed::in API   removed the schema `Breed3`
+::notice title=api-schema-removed::in API   removed the schema `Rabbit`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

@@ -1,0 +1,14 @@
+3 changes: 1 error, 0 warning, 2 info
+error	[new-required-request-property] at ./checker/request_property_added_revision2.yaml
+	in API POST /products
+		added the new required request property `description`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[new-optional-request-property] at ./checker/request_property_added_revision2.yaml
+	in API POST /products
+		added the new optional request property `info`
+
+

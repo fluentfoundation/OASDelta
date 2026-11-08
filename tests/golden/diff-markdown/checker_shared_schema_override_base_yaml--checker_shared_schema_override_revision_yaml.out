@@ -1,0 +1,25 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /orders
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: billing
+              - Properties changed
+                - Modified property: zip
+                  - Pattern changed from '' to '^[0-9]{5}$'
+            - Modified property: shipping
+              - Properties changed
+                - Modified property: zip
+                  - Pattern changed from '' to '^[0-9]{5}$'
+
+

@@ -1,0 +1,10 @@
+2 alterações: 0 error, 0 warning, 2 info
+info	[response-optional-property-added] em ./component-ref-override2.yaml
+	em API GET /example
+		a propriedade opcional `left/extra` foi adicionada à resposta com o status `200`
+
+info	[response-property-type-specialized] em ./component-ref-override2.yaml
+	em API GET /example
+		o `nested` da propriedade de resposta `format` foi restringido de `none` para `uuid` para o status `200`
+
+

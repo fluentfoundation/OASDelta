@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./checker/request_property_type_changed_revision.yaml, in API POST /pets the `age` request property `type/format` changed from `integer/int32` to `string/string` [request-property-type-changed]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

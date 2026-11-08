@@ -1,0 +1,22 @@
+5 изменений: 2 error, 0 warning, 3 info
+error	[request-property-max-contains-decreased] в ./checker/contains_property_min_max_base.yaml
+	в API POST /products
+		у поля запроса `tags` maxContains был уменьшен с `5` до `3`
+
+error	[response-property-min-contains-decreased] в ./checker/contains_property_min_max_base.yaml
+	в API POST /products
+		у поля ответа `tags` minContains был уменьшен с `2` до `1` для статуса `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-property-min-contains-decreased] в ./checker/contains_property_min_max_base.yaml
+	в API POST /products
+		у поля запроса `tags` minContains был уменьшен с `2` до `1`
+
+info	[response-property-max-contains-decreased] в ./checker/contains_property_min_max_base.yaml
+	в API POST /products
+		у поля ответа `tags` maxContains был уменьшен с `5` до `3` для статуса `200`
+
+

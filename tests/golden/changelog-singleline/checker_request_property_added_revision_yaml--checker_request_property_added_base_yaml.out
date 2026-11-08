@@ -1,0 +1,4 @@
+1 changes: 0 error, 1 warning, 0 info
+warning at ./checker/request_property_added_base.yaml, in API POST /products removed the request property `description` [request-property-removed]. 
+
+

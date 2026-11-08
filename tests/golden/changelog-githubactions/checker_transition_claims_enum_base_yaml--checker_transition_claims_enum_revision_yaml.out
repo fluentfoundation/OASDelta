@@ -1,0 +1,5 @@
+::error title=request-property-enum-value-removed,file=./checker/transition_claims_enum_revision.yaml::in API POST /test removed the enum value `alpha` of the request property `mode`
+::error title=request-property-enum-value-removed,file=./checker/transition_claims_enum_revision.yaml::in API POST /test removed the enum value `beta` of the request property `mode`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-property-list-of-types-widened,file=./checker/transition_claims_enum_revision.yaml::in API POST /test request property `mode` list-of-types was widened by adding types `integer` to media type `application/json`
+

@@ -1,0 +1,7 @@
+1 alterações: 1 error, 0 warning, 0 info
+error	[request-property-pattern-added] em ./checker/request_property_pattern_added_or_changed_base.yaml
+	em API POST /test
+		adicionado o padrão `^\w+$` à propriedade de requisição `name`
+		Esta é uma alteração crítica porque adicionar uma restrição de padrão a um parâmetro anteriormente irrestrito rejeitará valores que eram aceitos anteriormente, quebrando clientes existentes
+
+

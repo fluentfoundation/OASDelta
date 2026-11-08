@@ -1,0 +1,1 @@
+{"info":{"version":{"from":"1.0.0","to":"2.0.0"}},"paths":{"modified":{"/products":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"properties":{"modified":{"name":{"nullable":{"from":false,"to":true}}}}}}}}}}}}}}}}

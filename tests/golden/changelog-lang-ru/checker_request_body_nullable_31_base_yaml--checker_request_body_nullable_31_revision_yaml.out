@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[response-body-became-nullable] в ./checker/request_body_nullable_31_revision.yaml
+	в API POST /products
+		у тела ответа стало обнуляемым
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-body-became-nullable] в ./checker/request_body_nullable_31_revision.yaml
+	в API POST /products
+		тело запроса стало обнуляемым
+
+

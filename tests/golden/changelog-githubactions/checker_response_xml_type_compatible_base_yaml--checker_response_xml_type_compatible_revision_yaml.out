@@ -1,0 +1,2 @@
+::notice title=response-body-type-compatible,file=./checker/response_xml_type_compatible_revision.yaml,line=15,col=17::in API POST /api/v1.0/groups the response's body `type` changed from `string` to `object` for status `200` (backward compatible)
+

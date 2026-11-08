@@ -1,0 +1,6 @@
+1 alterações: 1 error, 0 warning, 0 info
+error	[request-body-removed] em ./checker/request_body_removed_revision.yaml
+	em API POST /api/v1.0/test
+		removido o corpo da requisição
+
+

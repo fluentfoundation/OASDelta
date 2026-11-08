@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[response-optional-property-added] в ./component-name2.yaml
+	в API GET /example
+		добавлено необязательное свойство `inline/nickname` в ответе со статусом `200`
+
+info	[response-optional-property-added] в ./component-name2.yaml
+	в API GET /example
+		добавлено необязательное свойство `left/extra` в ответе со статусом `200` (общая схема: `Shared`, также в `right/extra`)
+
+

@@ -1,0 +1,5 @@
+::warning title=response-body-all-of-removed,file=./checker/response_property_all_of_removed_revision.yaml::in API GET /pets removed `#/components/schemas/Rabbit` from the response body `allOf` list for the response status `200`
+::warning title=response-property-all-of-removed,file=./checker/response_property_all_of_removed_revision.yaml::in API GET /pets removed `#/components/schemas/Breed3` from the `allOf[#/components/schemas/Dog]/breed` response property `allOf` list for the response status `200`
+::notice title=api-schema-removed::in API   removed the schema `Breed3`
+::notice title=api-schema-removed::in API   removed the schema `Rabbit`
+

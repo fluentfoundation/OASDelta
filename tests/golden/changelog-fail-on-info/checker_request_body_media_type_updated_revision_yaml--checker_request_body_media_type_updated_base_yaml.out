@@ -1,0 +1,1 @@
+[{"id":"request-body-media-type-removed","text":"removed the media type `application/json` from the request body","level":3,"operation":"POST","operationId":"createOneGroup","path":"/api/v1.0/groups","section":"paths","baseSource":{"file":"./checker/request_body_media_type_updated_revision.yaml","line":18,"column":11,"endLine":20,"endColumn":53},"fingerprint":"7d2d2a570010"}]

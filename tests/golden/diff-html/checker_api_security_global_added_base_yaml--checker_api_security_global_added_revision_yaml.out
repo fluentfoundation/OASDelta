@@ -1,0 +1,7 @@
+<h2 id="other-changes">No endpoint changes, but there are some other changes<br>
+Other Changes</h2>
+<p>Security Requirements changed</p>
+<ul>
+<li>New security requirements: petstore_auth: [read:pets, write:pets]</li>
+</ul>
+

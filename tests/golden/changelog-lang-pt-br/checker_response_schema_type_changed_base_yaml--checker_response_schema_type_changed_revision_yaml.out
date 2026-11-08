@@ -1,0 +1,10 @@
+2 alterações: 1 error, 0 warning, 1 info
+error	[response-body-type-changed] em ./checker/response_schema_type_changed_revision.yaml
+	em API POST /api/v1.0/groups
+		o `type` do corpo da resposta foi alterado de `string` para `object` para o status `200`
+
+info	[response-optional-property-added] em ./checker/response_schema_type_changed_revision.yaml
+	em API POST /api/v1.0/groups
+		a propriedade opcional `data` foi adicionada à resposta com o status `200`
+
+

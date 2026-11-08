@@ -1,0 +1,17 @@
+3 cambios: 0 error, 3 warning, 0 info
+warning	[new-required-request-property] en ./checker/allof_property_existence_revision.yaml
+	en API POST /items
+		agregada la nueva propiedad de solicitud requerida `wrapper/allOf[subschema #2]/added`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+warning	[request-property-removed] en ./checker/allof_property_existence_revision.yaml
+	en API POST /items
+		removida la propiedad de solicitud `wrapper/allOf[subschema #2]/drop`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+warning	[request-property-type-changed] en ./checker/allof_property_existence_revision.yaml
+	en API POST /items
+		el `wrapper/allOf[subschema #2]/other` de la propiedad de solicitud `type` fue cambiado de `string` a `integer`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+

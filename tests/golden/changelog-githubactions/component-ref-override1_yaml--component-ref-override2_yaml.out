@@ -1,0 +1,3 @@
+::notice title=response-optional-property-added,file=./component-ref-override2.yaml,line=28,col=9::in API GET /example added the optional property `left/extra` to the response with the `200` status
+::notice title=response-property-type-specialized,file=./component-ref-override2.yaml,line=34,col=11::in API GET /example the `nested` response's property `format` was narrowed from `none` to `uuid` for status `200`
+

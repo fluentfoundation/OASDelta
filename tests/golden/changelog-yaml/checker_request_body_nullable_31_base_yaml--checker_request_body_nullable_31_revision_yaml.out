@@ -1,0 +1,22 @@
+- id: response-body-became-nullable
+  text: the response's body became nullable
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  fingerprint: 09583d77eb29
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-body-became-nullable
+  text: the request's body became nullable
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  fingerprint: 751d1fd160db
+

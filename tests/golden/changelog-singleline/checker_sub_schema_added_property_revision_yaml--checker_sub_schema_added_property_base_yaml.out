@@ -1,0 +1,18 @@
+8 changes: 0 error, 8 warning, 0 info
+warning at ./checker/sub_schema_added_property_base.yaml, in API POST /products removed the request property `data/contains/newField` [request-property-removed]. 
+
+warning at ./checker/sub_schema_added_property_base.yaml, in API POST /products removed the request property `data/contentSchema/newField` [request-property-removed]. 
+
+warning at ./checker/sub_schema_added_property_base.yaml, in API POST /products removed the request property `data/dependentSchemas[name]/newField` [request-property-removed]. 
+
+warning at ./checker/sub_schema_added_property_base.yaml, in API POST /products removed the request property `data/else/newField` [request-property-removed]. 
+
+warning at ./checker/sub_schema_added_property_base.yaml, in API POST /products removed the request property `data/patternProperties[^x-]/newField` [request-property-removed]. 
+
+warning at ./checker/sub_schema_added_property_base.yaml, in API POST /products removed the request property `data/prefixItems[subschema #1]/newField` [request-property-removed]. 
+
+warning at ./checker/sub_schema_added_property_base.yaml, in API POST /products removed the request property `data/then/newField` [request-property-removed]. 
+
+warning at ./checker/sub_schema_added_property_base.yaml, in API POST /products removed the request property `data/unevaluatedProperties/newField` [request-property-removed]. 
+
+

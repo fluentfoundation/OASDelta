@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[request-body-any-of-added] en ./checker/request_property_any_of_added_revision.yaml
+	en API POST /pets
+		`#/components/schemas/Rabbit` fue agregado a la lista `anyOf` del cuerpo de solicitud
+
+info	[request-property-any-of-added] en ./checker/request_property_any_of_added_revision.yaml
+	en API POST /pets
+		`#/components/schemas/Breed3` fue agregado a la lista `anyOf` de la propiedad de solicitud `anyOf[#/components/schemas/Dog]/breed`
+
+

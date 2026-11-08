@@ -1,0 +1,2 @@
+::notice title=response-optional-property-added,file=./checker/response_optional_property_removed_base.yaml,line=39,col=13::in API POST /api/v1.0/groups added the optional property `data/id` to the response with the `200` status
+

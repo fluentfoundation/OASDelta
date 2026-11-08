@@ -1,0 +1,19 @@
+4 cambios: 2 error, 1 warning, 1 info
+error	[response-property-became-optional] en ./x-of/revision.json
+	en API GET /api/anyOf/path
+		la propiedad de respuesta `anyOf[#/components/schemas/ProblemSchema]/changedProperty` se volvió opcional para el estado `200`
+
+error	[response-property-became-optional] en ./x-of/revision.json
+	en API GET /api/oneOf/path
+		la propiedad de respuesta `oneOf[#/components/schemas/ProblemSchema]/changedProperty` se volvió opcional para el estado `200`
+
+warning	[response-property-became-optional] en ./x-of/revision.json
+	en API GET /api/allOf/path
+		la propiedad de respuesta `allOf[#/components/schemas/ProblemSchema]/changedProperty` se volvió opcional para el estado `200`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `0.0.1`
+
+

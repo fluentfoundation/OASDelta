@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-optional-property-added] en ./circular2.yaml
+	en API POST /test
+		agregada la propiedad opcional `children/items/children` a la respuesta con estado `200`
+
+

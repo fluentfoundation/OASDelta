@@ -1,0 +1,14 @@
+- id: response-media-type-added
+  text: added the media type `application/json` for the response with the status `200`
+  level: 1
+  operation: GET
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./response-media-type-base.yaml
+    line: 35
+    column: 13
+    endLine: 37
+    endColumn: 56
+  fingerprint: 27bf91cc68dc
+

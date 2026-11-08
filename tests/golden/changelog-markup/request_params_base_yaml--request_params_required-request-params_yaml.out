@@ -1,0 +1,35 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /api/test1
+- :warning: added the new required `query` request parameter `version` to all path's operations
+-  added the new optional `query` request parameter `optionalQueryParam` to all path's operations
+-  added the new optional `header` request parameter `x-newrequestheaderparam`
+
+
+### POST /api/test1
+- :warning: added the new required `query` request parameter `version` to all path's operations
+-  added the new optional `query` request parameter `optionalQueryParam` to all path's operations
+
+
+### GET /api/test2
+- :warning: added the new required `query` request parameter `id` to all path's operations
+-  added the new optional `header` request parameter `optionalheaderparam` to all path's operations
+-  added the new optional `query` request parameter `newQueryParam`
+
+
+### GET /api/test3
+- :warning: added the new required `header` request parameter `if-none-match` to all path's operations
+-  added the new optional `cookie` request parameter `csrf-token`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

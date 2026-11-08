@@ -1,0 +1,14 @@
+3 alterações: 1 error, 0 warning, 2 info
+error	[request-body-became-required] em 
+	em API POST webhook:orderCreated
+		o corpo da requisição tornou-se obrigatório
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+info	[new-optional-request-property] em 
+	em API POST webhook:orderCreated
+		adicionada a nova propriedade de requisição opcional `amount`
+
+

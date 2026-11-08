@@ -1,0 +1,18 @@
+4 изменений: 3 error, 0 warning, 1 info
+error	[response-body-one-of-added] в ./checker/response_property_one_of_added_revision.yaml
+	в API GET /pets
+		добавлено `#/components/schemas/Rabbit` в список `oneOf` тела ответа для статуса ответа `200`
+
+error	[response-property-one-of-added] в ./checker/response_property_one_of_added_revision.yaml
+	в API GET /pets
+		добавлено `#/components/schemas/Breed3` в список `oneOf` свойства ответа `oneOf[#/components/schemas/Dog]/breed` для статуса ответа `200`
+
+error	[response-property-one-of-added] в ./checker/response_property_one_of_added_revision.yaml
+	в API GET /pets
+		добавлено `subschema #2: Dark brown types` в список `oneOf` свойства ответа `oneOf[#/components/schemas/Fox]/breed` для статуса ответа `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

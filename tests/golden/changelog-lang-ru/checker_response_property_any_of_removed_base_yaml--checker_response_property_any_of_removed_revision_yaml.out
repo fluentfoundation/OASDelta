@@ -1,0 +1,18 @@
+4 изменений: 0 error, 0 warning, 4 info
+info	[api-schema-removed]
+	в components/schemas
+		удалена схема `Breed3`
+
+info	[api-schema-removed]
+	в components/schemas
+		удалена схема `Rabbit`
+
+info	[response-body-any-of-removed] в ./checker/response_property_any_of_removed_revision.yaml
+	в API GET /pets
+		удалён `#/components/schemas/Rabbit` из списка `anyOf` тела ответа для статуса ответа `200`
+
+info	[response-property-any-of-removed] в ./checker/response_property_any_of_removed_revision.yaml
+	в API GET /pets
+		удалён `#/components/schemas/Breed3` из списка `anyOf` свойства ответа `anyOf[#/components/schemas/Dog]/breed` для статуса ответа `200`
+
+

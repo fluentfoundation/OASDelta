@@ -1,0 +1,1 @@
+[{"id":"request-body-pattern-property-added","text":"added the pattern property `^x-` to the request body","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","revisionSource":{"file":"./checker/pattern_properties_revision.yaml","line":18,"column":17,"endLine":19,"endColumn":31},"fingerprint":"b224632c9e58"}]

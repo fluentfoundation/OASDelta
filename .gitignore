@@ -11,3 +11,7 @@ TestResults/
 node_modules/
 docs/.vitepress/dist/
 docs/.vitepress/cache/
+
+# local notes, not committed
+.ignore/
+.claude/worktrees/

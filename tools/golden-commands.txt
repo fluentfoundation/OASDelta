@@ -1,0 +1,49 @@
+# Command/flag combinations covered by tests/golden. One per line: <slug>|<arguments>.
+# Arguments are split on spaces (no quoting), then the base and revision of each fixture pair are appended.
+# Read by tools/gen_golden.sh (writes the goldens with oasdiff), tools/check_golden.sh (checks a built binary)
+# and tests/OasDelta.Tests/GoldenTests.cs (checks in process).
+
+# diff
+diff-yaml|diff
+diff-json|diff -f json
+diff-text|diff -f text
+diff-markdown|diff -f markdown
+diff-html|diff -f html
+diff-fail-on-diff|diff --fail-on-diff -f json
+diff-exclude-elements|diff -f json --exclude-elements description,examples,title,summary
+
+# summary
+summary|summary
+summary-json|summary -f json
+
+# changelog: every format
+changelog-json|changelog -f json
+changelog-markdown|changelog -f markdown
+changelog-text|changelog
+changelog-yaml|changelog -f yaml
+changelog-html|changelog -f html
+changelog-markup|changelog -f markup
+changelog-singleline|changelog -f singleline
+changelog-githubactions|changelog -f githubactions
+changelog-junit|changelog -f junit
+
+# changelog: languages
+changelog-lang-es|changelog --lang es
+changelog-lang-pt-br|changelog --lang pt-br
+changelog-lang-ru|changelog --lang ru
+
+# changelog: options that change which changes are found or how they are reported
+changelog-level-warn|changelog -f json --level WARN
+changelog-fail-on-info|changelog -f json --fail-on INFO
+changelog-include-path-params|changelog -f json --include-path-params
+changelog-flatten-params|changelog -f json --flatten-params
+changelog-case-sensitive-headers|changelog -f json --case-insensitive-headers=false
+changelog-deprecation-days|changelog -f json --deprecation-days-beta 30 --deprecation-days-stable 90
+changelog-match-path|changelog -f json --match-path pet
+changelog-prefix-revision|changelog -f json --prefix-revision /v2
+changelog-stability-level|changelog -f json --stability-level beta
+
+# breaking
+breaking-text|breaking
+breaking-json|breaking -f json
+breaking-fail-on-warn|breaking --fail-on WARN

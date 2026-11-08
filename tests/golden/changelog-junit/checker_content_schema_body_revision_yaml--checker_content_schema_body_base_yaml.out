@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="7" errors="0" failures="7" name="OASDiff">
+    <testcase name="request-body-content-encoding-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request body contentEncoding changed from `quoted-printable` to `base64`</failure>
+    </testcase>
+    <testcase name="request-body-content-media-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request body contentMediaType changed from `text/plain` to `application/json`</failure>
+    </testcase>
+    <testcase name="response-body-content-encoding-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response body contentEncoding changed from `quoted-printable` to `base64` for the status `200`</failure>
+    </testcase>
+    <testcase name="response-body-content-media-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response body contentMediaType changed from `text/plain` to `application/json` for the status `200`</failure>
+    </testcase>
+    <testcase name="response-body-content-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed 'contentSchema' from the response body for the status `200`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="request-body-content-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed 'contentSchema' from the request body</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

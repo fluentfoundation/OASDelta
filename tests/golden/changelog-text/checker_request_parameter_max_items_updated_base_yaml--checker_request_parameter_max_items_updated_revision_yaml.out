@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[request-parameter-max-items-increased] at ./checker/request_parameter_max_items_updated_revision.yaml
+	in API POST /api/v1.0/groups
+		for the `query` request parameter `category`, the maxItems was increased from `10` to `20`
+
+

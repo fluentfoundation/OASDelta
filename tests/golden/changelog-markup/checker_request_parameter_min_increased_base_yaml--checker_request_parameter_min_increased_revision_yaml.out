@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+- :warning: for the `path` request parameter `groupId`, the min was increased from `1.00` to `10.00`
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+3 изменений: 3 error, 0 warning, 0 info
+error	[request-parameter-schema-became-false] в ./checker/schema_became_false_revision.yaml
+	в API POST /items
+		схема параметра запроса `query` `filter` стала `false`: ни одно значение не проходит валидацию
+
+error	[request-property-schema-became-false] в ./checker/schema_became_false_revision.yaml
+	в API POST /items
+		схема свойства запроса `name` стала `false`: ни одно значение не проходит валидацию
+
+error	[response-body-schema-became-false] в ./checker/schema_became_false_revision.yaml
+	в API POST /items
+		схема тела ответа стала `false`: ни одно тело ответа не проходит валидацию
+
+

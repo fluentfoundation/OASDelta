@@ -1,0 +1,2 @@
+::notice title=response-body-all-of-added-annotation-only,file=./checker/response_property_all_of_annotation_only_added_revision.yaml,line=21,col=21::in API GET /pets added annotation-only `subschema #1: annotation-only subschema` to the response body `allOf` list for the response status `200`
+

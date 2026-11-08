@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
+    <testcase name="response-body-exclusive-min-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body exclusiveMinimum was decreased from `5.00` to `2.00`</failure>
+    </testcase>
+    <testcase name="response-body-min-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body min was decreased from `10.00` to `5.00`</failure>
+    </testcase>
+    <testcase name="response-property-exclusive-min-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `price` response property's exclusiveMinimum was decreased from `50.00` to `25.00` for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-min-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `price` response property's min was decreased from `100.00` to `50.00` for the response status `200`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

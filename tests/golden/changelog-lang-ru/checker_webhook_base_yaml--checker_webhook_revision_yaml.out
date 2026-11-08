@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[webhook-removed]
+	в components/webhooks
+		webhook `orderDeleted` удалён
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[webhook-added]
+	в components/webhooks
+		webhook `orderUpdated` добавлен
+
+

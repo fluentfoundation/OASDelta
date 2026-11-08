@@ -1,0 +1,2 @@
+::notice title=request-property-min-decreased,file=./checker/request_property_min_increased_base.yaml,line=17,col=19::in API POST /pets the `age` request property's min was decreased from `15.00` to `10.00`
+

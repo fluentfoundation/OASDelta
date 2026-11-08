@@ -1,0 +1,7 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[request-parameter-type-generalized] em ./checker/request_param_multitype_to_array_31_revision.yaml
+	em API POST /api/v1.0/groups
+		no parâmetro de requisição do tipo `query` e nome `token`, o `type` foi expandido de `string, integer` para `array<string>`
+		Este parâmetro usa a serialização form/explode, onde um único valor é um array válido de um elemento, portanto ampliá-lo para um array cujos itens ainda aceitam os valores anteriores não quebra os clientes existentes.
+
+

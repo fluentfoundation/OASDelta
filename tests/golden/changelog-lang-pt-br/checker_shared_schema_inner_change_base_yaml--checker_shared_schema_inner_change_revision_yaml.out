@@ -1,0 +1,10 @@
+2 alterações: 1 error, 0 warning, 1 info
+error	[response-property-type-changed] em ./checker/shared_schema_inner_change_revision.yaml
+	em API GET /example
+		o `left/id` da propriedade de resposta `type` foi alterado de `string` para `integer` para o status `200` (schema compartilhado: `Shared`, também em `right/id`)
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+

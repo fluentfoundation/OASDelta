@@ -1,0 +1,2 @@
+::notice title=request-parameter-enum-value-added,file=./checker/request_parameter_enum_value_updated_base.yaml,line=15,col=17::in API GET /test added the new enum value `available` to the `query` request parameter `status`
+

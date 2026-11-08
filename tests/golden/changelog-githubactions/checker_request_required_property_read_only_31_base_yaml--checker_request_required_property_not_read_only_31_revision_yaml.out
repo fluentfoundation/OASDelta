@@ -1,0 +1,2 @@
+::notice title=request-required-property-became-not-read-only-in-openapi-31,file=./checker/request_required_property_not_read_only_31_revision.yaml::in API POST /api/v1.0/groups the request required property `id` became not read-only
+

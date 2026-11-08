@@ -1,0 +1,15 @@
+- id: response-required-property-removed
+  text: removed the required property `data/new` from the response with the `200` status
+  level: 3
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups
+  section: paths
+  baseSource:
+    file: ./checker/response_required_property_added_revision.yaml
+    line: 44
+    column: 13
+    endLine: 45
+    endColumn: 27
+  fingerprint: 37a254afa8b1
+

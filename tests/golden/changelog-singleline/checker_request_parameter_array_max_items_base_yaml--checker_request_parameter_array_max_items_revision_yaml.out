@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./checker/request_parameter_array_max_items_revision.yaml, in API GET /test for the `query` request parameter `ids`, the maxItems was decreased from `50` to `10` [request-parameter-max-items-decreased]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="request-parameter-enum-value-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the enum value `removed-value` from the `path` request parameter `domain`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="response-media-type-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the media type `application/json` for the response with the status `default`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,18 @@
+- id: request-body-type-compatible
+  text: the request's body `type` changed from `object` to `string` (backward compatible)
+  comment: This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking.
+  level: 1
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups
+  section: paths
+  baseSource:
+    file: ./checker/request_xml_type_compatible_base.yaml
+    line: 13
+    column: 15
+  revisionSource:
+    file: ./checker/request_xml_type_compatible_revision.yaml
+    line: 13
+    column: 15
+  fingerprint: 0287a7747ab7
+

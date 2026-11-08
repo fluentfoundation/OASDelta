@@ -1,0 +1,29 @@
+- id: request-body-schema-became-false
+  text: 'the request body schema became `false`: no request body passes validation'
+  level: 3
+  operation: POST
+  operationId: createItem
+  path: /items
+  section: paths
+  revisionSource:
+    file: ./checker/media_type_schema_degenerate_false.yaml
+    line: 11
+    column: 11
+    endLine: 11
+    endColumn: 44
+  fingerprint: 436e56f6369e
+- id: response-body-schema-became-false
+  text: 'the response body schema became `false`: no response body passes validation'
+  level: 3
+  operation: POST
+  operationId: createItem
+  path: /items
+  section: paths
+  revisionSource:
+    file: ./checker/media_type_schema_degenerate_false.yaml
+    line: 16
+    column: 13
+    endLine: 16
+    endColumn: 46
+  fingerprint: 39818b6958a7
+

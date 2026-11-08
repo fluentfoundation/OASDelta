@@ -1,0 +1,115 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-3">Modified Endpoints: 3</h3>
+<hr>
+<p>GET /api/allOf/path</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Property 'AllOf' changed
+<ul>
+<li>Modified schema: #/components/schemas/ProblemSchema
+<ul>
+<li>Required changed
+<ul>
+<li>Deleted required property: changedProperty</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>GET /api/anyOf/path</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Property 'AnyOf' changed
+<ul>
+<li>Modified schema: #/components/schemas/ProblemSchema
+<ul>
+<li>Required changed
+<ul>
+<li>Deleted required property: changedProperty</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>GET /api/oneOf/path</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Property 'OneOf' changed
+<ul>
+<li>Modified schema: #/components/schemas/ProblemSchema
+<ul>
+<li>Required changed
+<ul>
+<li>Deleted required property: changedProperty</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

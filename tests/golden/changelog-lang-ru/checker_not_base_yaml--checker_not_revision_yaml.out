@@ -1,0 +1,18 @@
+4 изменений: 2 error, 1 warning, 1 info
+error	[new-required-request-property] в ./checker/not_revision.yaml
+	в API POST /products
+		добавлено новое обязательное поле запроса `/not/added_prop`
+
+error	[request-property-max-length-decreased] в ./checker/not_revision.yaml
+	в API POST /products
+		значение maxLength у поля запроса `/not/modified_prop` уменьшено до `5`
+
+warning	[request-property-removed] в ./checker/not_revision.yaml
+	в API POST /products
+		удалено поле запроса `/not/removed_prop`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

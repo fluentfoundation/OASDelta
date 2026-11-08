@@ -1,0 +1,13 @@
+- id: request-body-schema-became-not-false
+  text: the request body schema is no longer `false` and accepts request bodies again
+  level: 1
+  operation: POST
+  operationId: op
+  path: /t
+  section: paths
+  revisionSource:
+    file: ./checker/schema_became_false_claims_base.yaml
+    line: 11
+    column: 15
+  fingerprint: ca9ff3e640aa
+

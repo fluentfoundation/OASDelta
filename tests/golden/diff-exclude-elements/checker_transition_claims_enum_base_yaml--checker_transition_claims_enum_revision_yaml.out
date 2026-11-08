@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/test":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"properties":{"modified":{"mode":{"oneOf":{"added":[{"index":0},{"index":1}]},"type":{"deleted":["string"]},"enum":{"enumDeleted":true,"deleted":["alpha","beta"]},"listOfTypes":{"added":["integer"]}}}}}}}}}}}}}}}}

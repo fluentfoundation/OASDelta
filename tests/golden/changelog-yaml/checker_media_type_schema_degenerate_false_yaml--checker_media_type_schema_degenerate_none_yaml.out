@@ -1,0 +1,29 @@
+- id: response-body-media-type-schema-removed
+  text: removed the schema from the media type `application/json` for the response with the status `200`
+  level: 3
+  operation: POST
+  operationId: createItem
+  path: /items
+  section: paths
+  baseSource:
+    file: ./checker/media_type_schema_degenerate_false.yaml
+    line: 16
+    column: 13
+    endLine: 16
+    endColumn: 46
+  fingerprint: 397fb973f7d1
+- id: request-body-media-type-schema-removed
+  text: removed the schema from the media type `application/json` of the request body
+  level: 1
+  operation: POST
+  operationId: createItem
+  path: /items
+  section: paths
+  baseSource:
+    file: ./checker/media_type_schema_degenerate_false.yaml
+    line: 11
+    column: 11
+    endLine: 11
+    endColumn: 44
+  fingerprint: fc438717ae12
+

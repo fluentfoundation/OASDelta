@@ -1,0 +1,5 @@
+::notice title=api-schema-removed::in API   removed the schema `Breed3`
+::notice title=api-schema-removed::in API   removed the schema `Rabbit`
+::notice title=response-body-any-of-removed,file=./checker/response_property_any_of_removed_revision.yaml::in API GET /pets removed `#/components/schemas/Rabbit` from the response body `anyOf` list for the response status `200`
+::notice title=response-property-any-of-removed,file=./checker/response_property_any_of_removed_revision.yaml::in API GET /pets removed `#/components/schemas/Breed3` from the `anyOf[#/components/schemas/Dog]/breed` response property `anyOf` list for the response status `200`
+

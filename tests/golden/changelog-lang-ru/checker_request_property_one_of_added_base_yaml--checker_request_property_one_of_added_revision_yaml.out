@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[request-body-one-of-added] в ./checker/request_property_one_of_added_revision.yaml
+	в API POST /pets
+		добавлено `#/components/schemas/Rabbit` в список `oneOf` тела запроса
+
+info	[request-property-one-of-added] в ./checker/request_property_one_of_added_revision.yaml
+	в API POST /pets
+		добавлено `#/components/schemas/Breed3` в список `oneOf` свойства запроса `oneOf[#/components/schemas/Dog]/breed`
+
+

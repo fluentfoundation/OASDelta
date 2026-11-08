@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
+    <testcase name="request-body-media-type-item-schema-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added an item schema to the media type `application/jsonl` of the request body</failure>
+    </testcase>
+    <testcase name="response-body-media-type-item-schema-removed-untyped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the item schema from the media type `application/jsonl` for the response with the status `200`, leaving the body with no schema</failure>
+    </testcase>
+    <testcase name="request-property-became-required" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request property `weight` became required (item schema)</failure>
+    </testcase>
+    <testcase name="response-body-media-type-item-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the item schema from the media type `application/jsonl` for the response with the status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the `deleted` enum value from the `kind` response property for the response status `200` (item schema)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

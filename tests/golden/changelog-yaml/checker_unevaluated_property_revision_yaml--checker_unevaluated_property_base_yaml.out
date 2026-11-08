@@ -1,0 +1,54 @@
+- id: response-property-unevaluated-items-removed
+  text: removed 'unevaluatedItems' constraint from the `meta` response property for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/unevaluated_property_revision.yaml
+    line: 37
+    column: 21
+  fingerprint: f84674d3e909
+- id: response-property-unevaluated-properties-removed
+  text: removed 'unevaluatedProperties' constraint from the `meta` response property for the status `200`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/unevaluated_property_revision.yaml
+    line: 39
+    column: 21
+  fingerprint: d3429858254f
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-property-unevaluated-items-removed
+  text: removed 'unevaluatedItems' constraint from the request property `meta`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/unevaluated_property_revision.yaml
+    line: 20
+    column: 19
+  fingerprint: 776934dabb0a
+- id: request-property-unevaluated-properties-removed
+  text: removed 'unevaluatedProperties' constraint from the request property `meta`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/unevaluated_property_revision.yaml
+    line: 22
+    column: 19
+  fingerprint: b1b8490bbf12
+

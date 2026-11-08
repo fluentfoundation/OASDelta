@@ -1,0 +1,2 @@
+::notice title=request-parameter-type-generalized,file=./checker/request_param_multitype_to_array_31_revision.yaml,line=13,col=13::in API POST /api/v1.0/groups for the `query` request parameter `token`, the `type` was widened from `string, integer` to `array<string>`
+

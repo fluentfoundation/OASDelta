@@ -1,0 +1,18 @@
+4 cambios: 1 error, 0 warning, 3 info
+error	[request-header-property-became-enum] en ./enums/request-parameter-property-enum.yaml
+	en API GET /books/{bookId}
+		la propiedad `bookid` del encabezado de solicitud `name` fue restringida a una lista de valores enum
+
+info	[request-parameter-property-enum-value-added] en ./enums/request-parameter-property-enum.yaml
+	en API GET /books/{bookId}
+		agregado el valor enum `VALUE_1` a la propiedad `name` del parámetro `header` de solicitud `bookid`
+
+info	[request-parameter-property-enum-value-added] en ./enums/request-parameter-property-enum.yaml
+	en API GET /books/{bookId}
+		agregado el valor enum `VALUE_2` a la propiedad `name` del parámetro `header` de solicitud `bookid`
+
+info	[request-parameter-property-enum-value-added] en ./enums/request-parameter-property-enum.yaml
+	en API GET /books/{bookId}
+		agregado el valor enum `VALUE_3` a la propiedad `name` del parámetro `header` de solicitud `bookid`
+
+

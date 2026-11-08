@@ -1,0 +1,49 @@
+paths:
+    modified:
+        /groups:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    filters:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    groupId:
+                                                        type:
+                                                            added:
+                                                                - string
+                                                            deleted:
+                                                                - number
+endpoints:
+    modified:
+        ?   method: GET
+            path: /groups
+        :   parameters:
+                modified:
+                    query:
+                        filters:
+                            schema:
+                                properties:
+                                    modified:
+                                        groupId:
+                                            type:
+                                                added:
+                                                    - string
+                                                deleted:
+                                                    - number
+components:
+    schemas:
+        modified:
+            GroupFilters:
+                properties:
+                    modified:
+                        groupId:
+                            type:
+                                added:
+                                    - string
+                                deleted:
+                                    - number
+

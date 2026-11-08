@@ -1,0 +1,35 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /accounts
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: customerId
+              - Pattern changed from '' to '^[0-9]+$'
+            - Modified property: ownerId
+              - Pattern changed from '' to '^[0-9]+$'
+            - Modified property: userId
+              - Pattern changed from '' to '^[0-9]+$'
+
+GET /orders
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: customerId
+              - Pattern changed from '' to '^[0-9]+$'
+            - Modified property: userId
+              - Pattern changed from '' to '^[0-9]+$'
+
+

@@ -1,0 +1,2 @@
+::notice title=request-parameter-default-value-changed,file=./checker/request_parameter_default_value_changed_revision_renamed.yaml,line=23,col=11::in API POST /api/v1.0/groups/{group_id} for the `path` request parameter `group_id`, default value was changed from `2` to `1`
+

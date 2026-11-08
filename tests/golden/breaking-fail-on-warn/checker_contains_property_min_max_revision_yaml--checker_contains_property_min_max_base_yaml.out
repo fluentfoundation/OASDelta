@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[request-property-max-contains-decreased] at ./checker/contains_property_min_max_base.yaml
+	in API POST /products
+		the `tags` request property maxContains was decreased from `5` to `3`
+
+error	[response-property-min-contains-decreased] at ./checker/contains_property_min_max_base.yaml
+	in API POST /products
+		the `tags` response property minContains was decreased from `2` to `1` for the status `200`
+
+

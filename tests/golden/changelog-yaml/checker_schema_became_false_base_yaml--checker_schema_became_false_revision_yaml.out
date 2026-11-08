@@ -1,0 +1,37 @@
+- id: request-parameter-schema-became-false
+  text: 'the schema of the `query` request parameter `filter` became `false`: no value passes validation'
+  level: 3
+  operation: POST
+  operationId: createItem
+  path: /items
+  section: paths
+  baseSource:
+    file: ./checker/schema_became_false_base.yaml
+    line: 13
+    column: 13
+  fingerprint: 296b87ff2094
+- id: request-property-schema-became-false
+  text: 'the schema of the request property `name` became `false`: no value passes validation'
+  level: 3
+  operation: POST
+  operationId: createItem
+  path: /items
+  section: paths
+  baseSource:
+    file: ./checker/schema_became_false_base.yaml
+    line: 21
+    column: 19
+  fingerprint: 0eb605db7cc8
+- id: response-body-schema-became-false
+  text: 'the response body schema became `false`: no response body passes validation'
+  level: 3
+  operation: POST
+  operationId: createItem
+  path: /items
+  section: paths
+  baseSource:
+    file: ./checker/schema_became_false_base.yaml
+    line: 28
+    column: 17
+  fingerprint: 39818b6958a7
+

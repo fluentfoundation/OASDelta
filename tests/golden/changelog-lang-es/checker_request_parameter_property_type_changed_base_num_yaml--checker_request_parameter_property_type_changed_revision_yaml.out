@@ -1,0 +1,7 @@
+1 cambios: 0 error, 1 warning, 0 info
+warning	[request-parameter-property-type-changed] en ./checker/request_parameter_property_type_changed_revision.yaml
+	en API GET /groups
+		para el parámetro `query` de solicitud `filters`, el `type` de la propiedad `groupId` fue cambiado de `number` a `string`
+		Esto es una advertencia ya que los objetos de parámetro pueden ser enviados de diferentes maneras, algunas de las cuales permiten cambiar este tipo, otras no.
+
+

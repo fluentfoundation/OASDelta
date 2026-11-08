@@ -1,0 +1,8 @@
+No endpoint changes, but there are some other changes
+Other Changes
+-------------
+Security Requirements changed
+- Modified security requirements: petstore_auth
+  - Scheme petstore_auth Deleted scopes: [read:pets]
+
+

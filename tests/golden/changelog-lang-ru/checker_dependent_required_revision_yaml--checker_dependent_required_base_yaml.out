@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[response-body-dependent-required-removed] в ./checker/dependent_required_base.yaml
+	в API POST /products
+		dependentRequired тела ответа был удалён для статуса `200`: когда присутствовал `name`, требовались `email`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-body-dependent-required-removed] в ./checker/dependent_required_base.yaml
+	в API POST /products
+		dependentRequired тела запроса был удалён: когда присутствовал `name`, требовались `email`
+
+

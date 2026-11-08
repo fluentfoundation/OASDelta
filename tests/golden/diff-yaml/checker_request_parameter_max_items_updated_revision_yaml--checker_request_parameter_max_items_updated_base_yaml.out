@@ -1,0 +1,29 @@
+paths:
+    modified:
+        /api/v1.0/groups:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                query:
+                                    category:
+                                        schema:
+                                            items:
+                                                maxItems:
+                                                    from: 20
+                                                    to: 10
+endpoints:
+    modified:
+        ?   method: POST
+            path: /api/v1.0/groups
+        :   parameters:
+                modified:
+                    query:
+                        category:
+                            schema:
+                                items:
+                                    maxItems:
+                                        from: 20
+                                        to: 10
+

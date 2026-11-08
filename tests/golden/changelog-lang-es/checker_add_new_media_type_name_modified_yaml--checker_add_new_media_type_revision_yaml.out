@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-media-type-name-generalized] en ./checker/add_new_media_type_revision.yaml
+	en API POST /api/v1.0/groups
+		el tipo de media `application/problem+json` fue cambiado a un tipo de media más general `application/json` para el estado de respuesta `200`
+
+

@@ -1,0 +1,22 @@
+5 cambios: 4 error, 0 warning, 1 info
+error	[request-body-media-type-item-schema-added] en ./item-schema/revision.yaml
+	en API POST /drop
+		agregado un esquema de ítem al tipo de media `application/jsonl` del cuerpo de solicitud
+
+error	[response-body-media-type-item-schema-removed-untyped] en ./item-schema/revision.yaml
+	en API POST /drop
+		removido el esquema de ítem del tipo de media `application/jsonl` de la respuesta con estado `200`, dejando el cuerpo sin esquema
+
+error	[request-property-became-required] en ./item-schema/revision.yaml
+	en API POST /ingest
+		la propiedad de solicitud `weight` se volvió requerida (item schema)
+
+error	[response-body-media-type-item-schema-removed] en ./item-schema/revision.yaml
+	en API GET /keep
+		removido el esquema de ítem del tipo de media `application/jsonl` de la respuesta con estado `200`
+
+info	[response-property-enum-value-removed] en ./item-schema/revision.yaml
+	en API GET /events
+		removido el valor enum `deleted` de la propiedad de respuesta `kind` para el estado `200` (item schema)
+
+

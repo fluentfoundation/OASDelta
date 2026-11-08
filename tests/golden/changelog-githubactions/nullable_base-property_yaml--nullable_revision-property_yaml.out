@@ -1,0 +1,3 @@
+::error title=response-property-became-nullable,file=./nullable/revision-property.yaml,line=18,col=21::in API POST /payments/{id} the response property `name` became nullable for the status `201`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

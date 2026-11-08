@@ -1,0 +1,7 @@
+1 изменений: 0 error, 1 warning, 0 info
+warning	[request-property-max-length-decreased] в ./checker/allof_unchanged_sibling_revision.yaml
+	в API POST /items
+		значение maxLength у поля запроса `wrapper` уменьшено до `5`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

@@ -1,0 +1,22 @@
+5 changes: 4 error, 0 warning, 1 info
+error	[response-body-exclusive-min-decreased] at ./checker/response_min_decreased_revision.yaml
+	in API POST /products
+		the response's body exclusiveMinimum was decreased from `5.00` to `2.00`
+
+error	[response-body-min-decreased] at ./checker/response_min_decreased_revision.yaml
+	in API POST /products
+		the response's body min was decreased from `10.00` to `5.00`
+
+error	[response-property-exclusive-min-decreased] at ./checker/response_min_decreased_revision.yaml
+	in API POST /products
+		the `price` response property's exclusiveMinimum was decreased from `50.00` to `25.00` for the response status `200`
+
+error	[response-property-min-decreased] at ./checker/response_min_decreased_revision.yaml
+	in API POST /products
+		the `price` response property's min was decreased from `100.00` to `50.00` for the response status `200`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+

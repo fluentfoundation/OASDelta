@@ -1,0 +1,15 @@
+- id: request-property-removed
+  text: removed the request property `description`
+  level: 2
+  operation: POST
+  operationId: addProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/request_property_added_revision.yaml
+    line: 17
+    column: 17
+    endLine: 18
+    endColumn: 31
+  fingerprint: 3100728efc43
+

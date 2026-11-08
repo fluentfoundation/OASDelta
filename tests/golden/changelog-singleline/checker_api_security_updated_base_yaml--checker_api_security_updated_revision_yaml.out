@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./checker/api_security_updated_revision.yaml, in API POST /subscribe the security scope `read:pets` was removed from the endpoint's security scheme `petstore_auth` [api-security-scope-removed]. 
+
+

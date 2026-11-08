@@ -1,0 +1,4 @@
+::error title=request-property-list-of-types-narrowed,file=./list-of-types/list-to-single-revision.yaml,line=15,col=19::in API POST /test request property `userId` list-of-types was narrowed by removing types `string` from media type `application/json`
+::error title=request-property-list-of-types-narrowed,file=./list-of-types/list-to-single-revision.yaml,line=17,col=19::in API POST /test request property `value` list-of-types was narrowed by removing types `number and boolean` from media type `application/json`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

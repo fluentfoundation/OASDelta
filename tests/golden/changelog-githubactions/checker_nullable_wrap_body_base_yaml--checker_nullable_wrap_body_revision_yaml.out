@@ -1,0 +1,2 @@
+::notice title=request-body-became-nullable,file=./checker/nullable_wrap_body_revision.yaml::in API POST /test the request's body became nullable
+

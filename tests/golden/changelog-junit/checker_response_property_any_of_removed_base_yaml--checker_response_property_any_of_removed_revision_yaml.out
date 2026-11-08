@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="api-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the schema `Breed3`</failure>
+    </testcase>
+    <testcase name="api-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the schema `Rabbit`</failure>
+    </testcase>
+    <testcase name="response-body-any-of-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed `#/components/schemas/Rabbit` from the response body `anyOf` list for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-any-of-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed `#/components/schemas/Breed3` from the `anyOf[#/components/schemas/Dog]/breed` response property `anyOf` list for the response status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

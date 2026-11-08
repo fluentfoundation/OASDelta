@@ -1,0 +1,3 @@
+::error title=request-required-property-became-not-read-only,file=./checker/request_required_property_not_read_only_revision.yaml::in API POST /api/v1.0/groups the request required property `id` became not read-only
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

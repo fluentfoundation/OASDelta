@@ -1,0 +1,27 @@
+- id: request-body-prefix-items-removed
+  text: 'removed `subschema #1` from the request body ''prefixItems'' list'
+  comment: 'This is a warning because oasdiff cannot determine whether the change is breaking. An array position not covered by prefixItems is validated against the items schema: when items is absent the position accepts any value, and when items is false it allows no value, so this change may either reject arrays that were previously valid or allow arrays that previously were not.'
+  level: 2
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/prefix_items_added_revision.yaml
+    line: 16
+    column: 15
+  fingerprint: f86e0fb4a99a
+- id: response-body-prefix-items-removed
+  text: 'removed `subschema #1` from the response body ''prefixItems'' list for the response status `200`'
+  comment: 'This is a warning because oasdiff cannot determine whether the change is breaking. An array position not covered by prefixItems is validated against the items schema: when items is absent the position accepts any value, and when items is false it allows no value, so this change may either reject arrays that were previously valid or allow arrays that previously were not.'
+  level: 2
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  baseSource:
+    file: ./checker/prefix_items_added_revision.yaml
+    line: 27
+    column: 17
+  fingerprint: 773397167a37
+

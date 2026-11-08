@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="7" errors="0" failures="7" name="OASDiff">
+    <testcase name="response-property-else-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed 'else' subschema from the `details` response property for the status `200`</failure>
+    </testcase>
+    <testcase name="response-property-if-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed 'if' subschema from the `details` response property for the status `200`</failure>
+    </testcase>
+    <testcase name="response-property-then-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed 'then' subschema from the `details` response property for the status `200`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="request-property-else-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed 'else' subschema from the request property `details`</failure>
+    </testcase>
+    <testcase name="request-property-if-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed 'if' subschema from the request property `details`</failure>
+    </testcase>
+    <testcase name="request-property-then-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed 'then' subschema from the request property `details`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

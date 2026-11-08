@@ -1,0 +1,22 @@
+5 изменений: 2 error, 0 warning, 3 info
+error	[response-property-list-of-types-widened] в ./list-of-types/edge-cases-revision.yaml
+	в API GET /edge
+		список типов свойства `mixedBoth` ответа был расширен добавлением типов `number` к медиа-типу `application/json` ответа `200`
+
+error	[response-property-one-of-added] в ./list-of-types/edge-cases-revision.yaml
+	в API GET /edge
+		добавлено `subschema #1, subschema #2` в список `oneOf` свойства ответа `complexOneOf` для статуса ответа `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-property-one-of-removed] в ./list-of-types/edge-cases-revision.yaml
+	в API GET /edge
+		удалён `subschema #1, subschema #2` из списка `oneOf` свойства ответа `complexOneOf` для статуса ответа `200`
+
+info	[response-property-type-specialized] в ./list-of-types/edge-cases-revision.yaml
+	в API GET /edge
+		у свойства ответа `emptyOneOf` `type` сужен с `any` до `string` для статуса `200`
+
+

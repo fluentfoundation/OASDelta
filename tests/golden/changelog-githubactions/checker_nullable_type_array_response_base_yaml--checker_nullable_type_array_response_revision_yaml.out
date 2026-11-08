@@ -1,0 +1,2 @@
+::notice title=response-property-became-not-nullable,file=./checker/nullable_type_array_response_revision.yaml::in API GET /t the response property `p` became not nullable for the status `200`
+

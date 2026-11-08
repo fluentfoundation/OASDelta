@@ -1,0 +1,1 @@
+[{"id":"response-optional-property-added","text":"added the optional property `children/items/children` to the response with the `200` status","level":1,"operation":"POST","path":"/test","section":"paths","revisionSource":{"file":"./circular2.yaml","line":20,"column":9,"endLine":23,"endColumn":51},"fingerprint":"5ba62e0198a9"}]

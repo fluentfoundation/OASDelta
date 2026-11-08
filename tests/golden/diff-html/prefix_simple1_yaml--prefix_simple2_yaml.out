@@ -1,0 +1,11 @@
+<h3 id="new-endpoints-2">New Endpoints: 2</h3>
+<hr>
+<p>GET /tenant/api/test<br>
+GET /tenant/api/test1</p>
+<h3 id="deleted-endpoints-2">Deleted Endpoints: 2</h3>
+<hr>
+<p>GET /api/test<br>
+GET /api/test1</p>
+<h3 id="modified-endpoints-none">Modified Endpoints: None</h3>
+<hr>
+

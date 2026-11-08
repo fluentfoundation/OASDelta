@@ -1,0 +1,65 @@
+paths:
+    modified:
+        /value:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    additionalProperties:
+                                                        properties:
+                                                            modified:
+                                                                property1:
+                                                                    type:
+                                                                        added:
+                                                                            - string
+                                                                        deleted:
+                                                                            - integer
+endpoints:
+    modified:
+        ?   method: GET
+            path: /value
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        additionalProperties:
+                                            properties:
+                                                modified:
+                                                    property1:
+                                                        type:
+                                                            added:
+                                                                - string
+                                                            deleted:
+                                                                - integer
+components:
+    schemas:
+        modified:
+            Schema1:
+                properties:
+                    modified:
+                        property1:
+                            type:
+                                added:
+                                    - string
+                                deleted:
+                                    - integer
+            Schema2:
+                additionalProperties:
+                    properties:
+                        modified:
+                            property1:
+                                type:
+                                    added:
+                                        - string
+                                    deleted:
+                                        - integer
+

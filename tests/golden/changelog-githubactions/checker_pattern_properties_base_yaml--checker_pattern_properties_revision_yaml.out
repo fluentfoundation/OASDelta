@@ -1,0 +1,4 @@
+::error title=request-body-pattern-property-added,file=./checker/pattern_properties_revision.yaml,line=18,col=17::in API POST /products added the pattern property `^x-` to the request body
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-body-pattern-property-added,file=./checker/pattern_properties_revision.yaml,line=31,col=19::in API POST /products added the pattern property `^x-` to the response body for the status `200`
+

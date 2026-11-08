@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="new-required-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new required request property `wrapper/allOf[subschema #2]/added`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `wrapper/allOf[subschema #2]/drop`</failure>
+    </testcase>
+    <testcase name="request-property-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `wrapper/allOf[subschema #2]/other` request property `type` changed from `string` to `integer`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

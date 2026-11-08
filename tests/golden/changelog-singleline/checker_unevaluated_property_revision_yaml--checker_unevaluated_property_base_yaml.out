@@ -1,0 +1,12 @@
+5 changes: 2 error, 0 warning, 3 info
+error at ./checker/unevaluated_property_base.yaml, in API POST /products removed 'unevaluatedItems' constraint from the `meta` response property for the status `200` [response-property-unevaluated-items-removed]. 
+
+error at ./checker/unevaluated_property_base.yaml, in API POST /products removed 'unevaluatedProperties' constraint from the `meta` response property for the status `200` [response-property-unevaluated-properties-removed]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./checker/unevaluated_property_base.yaml, in API POST /products removed 'unevaluatedItems' constraint from the request property `meta` [request-property-unevaluated-items-removed]. 
+
+info at ./checker/unevaluated_property_base.yaml, in API POST /products removed 'unevaluatedProperties' constraint from the request property `meta` [request-property-unevaluated-properties-removed]. 
+
+

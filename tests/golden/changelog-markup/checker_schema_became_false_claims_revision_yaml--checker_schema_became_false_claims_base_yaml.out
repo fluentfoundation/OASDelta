@@ -1,0 +1,13 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /t
+-  the request body schema is no longer `false` and accepts request bodies again
+
+
+
+
+
+

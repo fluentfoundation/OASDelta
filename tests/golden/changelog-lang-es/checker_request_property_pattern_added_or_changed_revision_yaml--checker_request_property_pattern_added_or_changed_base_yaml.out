@@ -1,0 +1,7 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-property-pattern-added] en ./checker/request_property_pattern_added_or_changed_base.yaml
+	en API POST /test
+		agregado el patrón `^\w+$` a la propiedad de solicitud `name`
+		Este es un cambio crítico porque agregar una restricción de patrón a un parámetro previamente sin restricciones rechazará valores que anteriormente eran aceptados, rompiendo clientes existentes
+
+

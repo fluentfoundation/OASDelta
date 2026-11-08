@@ -1,0 +1,6 @@
+2 changes: 2 error, 0 warning, 0 info
+error at ./checker/prefix_items_reordered_revision.yaml, in API POST /items the `/prefixItems[subschema #1]/` request property `type` changed from `string` to `integer` [request-property-type-changed]. 
+
+error at ./checker/prefix_items_reordered_revision.yaml, in API POST /items the `/prefixItems[subschema #2]/` request property `type` changed from `integer` to `string` [request-property-type-changed]. 
+
+

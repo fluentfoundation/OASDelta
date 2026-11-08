@@ -1,0 +1,9 @@
+- id: response-body-wrapped-in-one-of
+  text: the response body was restructured into a oneOf, so a field that was previously guaranteed may no longer be present
+  level: 3
+  operation: GET
+  operationId: getExample
+  path: /example
+  section: paths
+  fingerprint: dfb169e36bb3
+

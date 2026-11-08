@@ -1,0 +1,10 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[request-required-property-became-not-read-only] в ./checker/request_required_property_not_read_only_revision.yaml
+	в API POST /api/v1.0/groups
+		обязательное поле запроса `id` перестало быть только для чтения
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[request-property-dependent-required-added] в ./checker/dependent_required_property_revision.yaml
+	в API POST /products
+		у поля запроса `address` dependentRequired был добавлен: когда присутствует `street`, требуются `city`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-property-dependent-required-added] в ./checker/dependent_required_property_revision.yaml
+	в API POST /products
+		у поля ответа `address` dependentRequired был добавлен для статуса `200`: когда присутствует `street`, требуются `city`
+
+

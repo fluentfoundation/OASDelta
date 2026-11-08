@@ -1,0 +1,22 @@
+5 changes: 0 error, 0 warning, 5 info
+info	[api-schema-removed]
+	in components/schemas
+		removed the schema `Breed3`
+
+info	[api-schema-removed]
+	in components/schemas
+		removed the schema `Rabbit`
+
+info	[response-body-one-of-removed] at ./checker/response_property_one_of_removed_revision.yaml
+	in API GET /pets
+		removed `#/components/schemas/Rabbit` from the response body `oneOf` list for the response status `200`
+
+info	[response-property-one-of-removed] at ./checker/response_property_one_of_removed_revision.yaml
+	in API GET /pets
+		removed `#/components/schemas/Breed3` from the `oneOf[#/components/schemas/Dog]/breed` response property `oneOf` list for the response status `200`
+
+info	[response-property-one-of-removed] at ./checker/response_property_one_of_removed_revision.yaml
+	in API GET /pets
+		removed `subschema #2: Dark brown types` from the `oneOf[#/components/schemas/Fox]/breed` response property `oneOf` list for the response status `200`
+
+

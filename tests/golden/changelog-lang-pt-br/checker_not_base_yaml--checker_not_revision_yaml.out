@@ -1,0 +1,18 @@
+4 alterações: 2 error, 1 warning, 1 info
+error	[new-required-request-property] em ./checker/not_revision.yaml
+	em API POST /products
+		adicionada a nova propriedade de requisição obrigatória `/not/added_prop`
+
+error	[request-property-max-length-decreased] em ./checker/not_revision.yaml
+	em API POST /products
+		o comprimento máximo da propriedade de requisição `/not/modified_prop` foi reduzido para `5`
+
+warning	[request-property-removed] em ./checker/not_revision.yaml
+	em API POST /products
+		a propriedade de requisição `/not/removed_prop` foi removida
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+

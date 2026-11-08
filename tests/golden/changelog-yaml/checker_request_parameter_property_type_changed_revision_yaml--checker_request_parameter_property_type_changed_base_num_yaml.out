@@ -1,0 +1,17 @@
+- id: request-parameter-property-type-specialized
+  text: for the `query` request parameter `filters`, the `type` of property `groupId` was narrowed from `string` to `number`
+  level: 3
+  operation: GET
+  operationId: getGroups
+  path: /groups
+  section: paths
+  baseSource:
+    file: ./checker/request_parameter_property_type_changed_revision.yaml
+    line: 65
+    column: 11
+  revisionSource:
+    file: ./checker/request_parameter_property_type_changed_base_num.yaml
+    line: 65
+    column: 11
+  fingerprint: 714f59bc8357
+

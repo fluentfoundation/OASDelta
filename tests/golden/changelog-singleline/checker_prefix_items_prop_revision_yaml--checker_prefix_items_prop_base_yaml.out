@@ -1,0 +1,6 @@
+2 changes: 0 error, 2 warning, 0 info
+warning at ./checker/prefix_items_prop_base.yaml, in API POST /products removed `subschema #1` from the `details` request property 'prefixItems' list [request-property-prefix-items-removed]. This is a warning because oasdiff cannot determine whether the change is breaking. An array position not covered by prefixItems is validated against the items schema: when items is absent the position accepts any value, and when items is false it allows no value, so this change may either reject arrays that were previously valid or allow arrays that previously were not.
+
+warning at ./checker/prefix_items_prop_base.yaml, in API POST /products removed `subschema #1` from the `details` response property 'prefixItems' list for the response status `200` [response-property-prefix-items-removed]. This is a warning because oasdiff cannot determine whether the change is breaking. An array position not covered by prefixItems is validated against the items schema: when items is absent the position accepts any value, and when items is false it allows no value, so this change may either reject arrays that were previously valid or allow arrays that previously were not.
+
+

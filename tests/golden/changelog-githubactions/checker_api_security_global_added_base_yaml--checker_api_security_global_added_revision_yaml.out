@@ -1,0 +1,3 @@
+::error title=api-security-anonymous-access-removed,file=./checker/api_security_global_added_revision.yaml,line=5,col=1::in API POST /subscribe the endpoint no longer allows anonymous access and now only accepts `petstore_auth: [read:pets, write:pets]`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

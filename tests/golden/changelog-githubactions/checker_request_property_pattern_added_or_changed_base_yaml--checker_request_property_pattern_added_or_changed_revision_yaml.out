@@ -1,0 +1,2 @@
+::notice title=request-property-pattern-removed,file=./checker/request_property_pattern_added_or_changed_revision.yaml,line=23,col=11::in API POST /test removed the pattern `^\w+$` from the request property `name`
+

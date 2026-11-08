@@ -1,0 +1,10 @@
+2 изменений: 2 error, 0 warning, 0 info
+error	[request-body-became-enum] в ./enums/request-body-enum-int.yaml
+	в API GET /api/v2/changeOfRequestFieldValueTiedToEnumTest
+		тело запроса было ограничено списком значений перечисления
+
+error	[request-body-type-changed] в ./enums/request-body-enum-int.yaml
+	в API GET /api/v2/changeOfRequestFieldValueTiedToEnumTest
+		`type` тела запроса изменён с `string` на `int`
+
+

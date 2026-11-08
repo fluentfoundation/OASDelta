@@ -1,0 +1,8 @@
+::error title=request-property-pattern-added,file=./checker/read_only_guard_revision.yaml,line=31,col=11::in API POST /items added the pattern `^x` to the request property `name`
+::error title=request-property-type-changed,file=./checker/read_only_guard_revision.yaml,line=33,col=11::in API POST /items the `secret` request property `type` changed from `string` to `boolean`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-property-pattern-added,file=./checker/read_only_guard_revision.yaml,line=28,col=11::in API POST /items added the pattern `^x` to the request property `id`
+::notice title=response-property-pattern-added,file=./checker/read_only_guard_revision.yaml,line=28,col=11::in API POST /items the `id` response's property pattern `^x` was added for the status `200`
+::notice title=response-property-pattern-added,file=./checker/read_only_guard_revision.yaml,line=31,col=11::in API POST /items the `name` response's property pattern `^x` was added for the status `200`
+::notice title=response-property-type-changed,file=./checker/read_only_guard_revision.yaml,line=33,col=11::in API POST /items the `secret` response's property `type` changed from `string` to `boolean` for status `200`
+

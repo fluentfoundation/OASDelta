@@ -1,0 +1,13 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### GET /api/v1.0/groups/{groupId}
+- :warning: changed the pattern of the `path` request parameter `groupId` from `[0-9a-f]+` to `[0-9]+`
+
+
+
+
+
+

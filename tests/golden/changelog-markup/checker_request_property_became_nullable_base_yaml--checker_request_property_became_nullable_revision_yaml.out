@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 2.0.0
+
+
+## API Changes
+
+### POST /products
+-  the request property `name` became nullable
+
+
+
+
+
+

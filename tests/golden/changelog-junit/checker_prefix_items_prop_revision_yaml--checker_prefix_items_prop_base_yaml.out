@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-property-prefix-items-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed `subschema #1` from the `details` request property 'prefixItems' list</failure>
+    </testcase>
+    <testcase name="response-property-prefix-items-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed `subschema #1` from the `details` response property 'prefixItems' list for the response status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

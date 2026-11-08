@@ -1,0 +1,26 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /partner-api/test/another-method
+- Extensions changed
+  - Modified extension: x-test
+    - Modified /0 from 'xyz' to '123'
+- Responses changed
+  - New response: 200
+  - Deleted response: 201
+
+GET /partner-api/test/some-method
+- Extensions changed
+  - Deleted extension: x-test2
+  - Modified extension: x-test
+    - Added  with value: '123'
+- Responses changed
+  - New response: 200
+  - Deleted response: 201
+
+

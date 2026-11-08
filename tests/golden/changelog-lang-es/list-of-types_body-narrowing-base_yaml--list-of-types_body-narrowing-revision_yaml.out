@@ -1,0 +1,14 @@
+3 cambios: 1 error, 0 warning, 2 info
+error	[request-body-list-of-types-narrowed] en ./list-of-types/body-narrowing-revision.yaml
+	en API POST /test
+		lista de tipos del cuerpo de solicitud fue reducida removiendo tipos `array and string` del tipo de media `application/json`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[response-body-list-of-types-narrowed] en ./list-of-types/body-narrowing-revision.yaml
+	en API POST /test
+		lista de tipos del cuerpo de respuesta fue reducida removiendo tipos `integer and boolean` del tipo de media `application/json` de la respuesta `200`
+
+

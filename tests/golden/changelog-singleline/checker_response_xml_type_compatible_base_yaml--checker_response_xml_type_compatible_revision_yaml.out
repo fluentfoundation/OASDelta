@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./checker/response_xml_type_compatible_revision.yaml, in API POST /api/v1.0/groups the response's body `type` changed from `string` to `object` for status `200` (backward compatible) [response-body-type-compatible]. This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking.
+
+

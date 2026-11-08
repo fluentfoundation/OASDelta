@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[request-parameter-enum-value-added] в ./openapi-test702.yaml
+	в API GET /api/{domain}/{project}/install-command
+		добавлено значение enum `removed-value` у `path` параметра запроса `domain`
+
+info	[endpoint-added] в ./openapi-test702.yaml
+	в API POST /subscribe
+		эндпоинт добавлен
+
+

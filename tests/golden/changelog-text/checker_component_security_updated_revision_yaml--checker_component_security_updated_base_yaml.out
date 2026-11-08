@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[api-security-component-removed]
+	in components/securitySchemes
+		the component security scheme `BasicAuth` was removed
+
+

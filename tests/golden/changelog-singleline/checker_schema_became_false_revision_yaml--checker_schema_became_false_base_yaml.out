@@ -1,0 +1,8 @@
+3 changes: 0 error, 0 warning, 3 info
+info at ./checker/schema_became_false_base.yaml, in API POST /items the schema of the `query` request parameter `filter` is no longer `false` and accepts values again [request-parameter-schema-became-not-false]. 
+
+info at ./checker/schema_became_false_base.yaml, in API POST /items the schema of the request property `name` is no longer `false` and accepts values again [request-property-schema-became-not-false]. 
+
+info at ./checker/schema_became_false_base.yaml, in API POST /items the response body schema is no longer `false` and allows response bodies again [response-body-schema-became-not-false]. 
+
+

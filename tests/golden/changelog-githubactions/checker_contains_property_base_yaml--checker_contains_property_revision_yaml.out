@@ -1,0 +1,8 @@
+::error title=request-property-contains-added,file=./checker/contains_property_revision.yaml,line=19,col=19::in API POST /products added 'contains' constraint to the request property `tags`
+::error title=request-property-max-contains-set,file=./checker/contains_property_revision.yaml,line=22,col=19::in API POST /products the `tags` request property's maxContains was set to `3`
+::error title=request-property-min-contains-set,file=./checker/contains_property_revision.yaml,line=21,col=19::in API POST /products the `tags` request property's minContains was set to `1`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-property-contains-added,file=./checker/contains_property_revision.yaml,line=35,col=21::in API POST /products added 'contains' constraint to the `tags` response property for the status `200`
+::notice title=response-property-max-contains-set,file=./checker/contains_property_revision.yaml,line=38,col=21::in API POST /products the `tags` response property's maxContains was set to `3` for the response status `200`
+::notice title=response-property-min-contains-set,file=./checker/contains_property_revision.yaml,line=37,col=21::in API POST /products the `tags` response property's minContains was set to `1` for the response status `200`
+

@@ -1,0 +1,14 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /api/v1.0/groups
+- Modified path param: groupId
+  - Schema changed
+    - Min changed from 1 to 10
+
+

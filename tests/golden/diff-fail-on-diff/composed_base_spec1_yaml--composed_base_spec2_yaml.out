@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/api/test":{"operations":{"modified":{"GET":{"extensions":{"modified":{"tag":[{"oldValue":"old","value":"new","op":"replace","from":"","path":"/version"}],"x-since-date":[{"oldValue":"2023-01-11","value":"2023-01-12","op":"replace","from":"","path":""}]}},"operationID":{"from":"x","to":""}}}}}}}}

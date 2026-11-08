@@ -1,0 +1,10 @@
+4 changes: 0 error, 0 warning, 4 info
+info, in components/schemas removed the schema `Breed3` [api-schema-removed]. 
+
+info, in components/schemas removed the schema `Rabbit` [api-schema-removed]. 
+
+info at ./checker/response_property_any_of_removed_revision.yaml, in API GET /pets removed `#/components/schemas/Rabbit` from the response body `anyOf` list for the response status `200` [response-body-any-of-removed]. 
+
+info at ./checker/response_property_any_of_removed_revision.yaml, in API GET /pets removed `#/components/schemas/Breed3` from the `anyOf[#/components/schemas/Dog]/breed` response property `anyOf` list for the response status `200` [response-property-any-of-removed]. 
+
+

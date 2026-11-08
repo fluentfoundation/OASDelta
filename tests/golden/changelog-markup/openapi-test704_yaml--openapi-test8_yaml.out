@@ -1,0 +1,49 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /api/{domain}/{project}/badges/security-score
+- :warning: api path removed without deprecation
+
+
+### GET /api/{domain}/{project}/install-command
+- :warning: api path removed without deprecation
+
+
+### POST /register
+- :warning: api path removed without deprecation
+
+
+### GET /resource/new
+-  endpoint added
+
+
+### GET /resource/newest
+-  endpoint added
+
+
+### POST /subscribe
+- :warning: api path removed without deprecation
+
+
+
+
+## Components
+-  removed the schema `network-policies`
+-  removed the schema `rules`
+-  the component security scheme `AccessToken` was removed
+-  the component security scheme `OAuth` was removed
+-  the component security scheme `bearerAuth` was removed
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+## Security
+-  the security scheme `bearerAuth` was removed from the API
+
+
+
+

@@ -1,0 +1,29 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /api/test
+- :warning: api path removed without deprecation
+
+
+### GET /api/test1
+- :warning: api path removed without deprecation
+
+
+### GET /tenant/api/test
+-  endpoint added
+
+
+### GET /tenant/api/test1
+-  endpoint added
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

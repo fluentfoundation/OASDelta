@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/test":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"anyOf":{"modified":[{"base":{"index":0},"revision":{"index":0},"diff":{"required":{"added":["id"]}}}]}}}}}}}}}}}}}

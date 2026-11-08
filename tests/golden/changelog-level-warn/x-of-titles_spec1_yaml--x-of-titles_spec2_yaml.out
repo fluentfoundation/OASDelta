@@ -1,0 +1,1 @@
+[{"id":"response-body-any-of-added","text":"added `subschema #2: Title 3` to the response body `anyOf` list for the response status `200`","level":3,"operation":"GET","path":"/test","section":"paths","revisionSource":{"file":"./x-of-titles/spec2.yaml","line":17,"column":21,"endLine":18,"endColumn":33},"fingerprint":"b4fc9ef17df6"}]

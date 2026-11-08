@@ -1,0 +1,19 @@
+- id: response-property-pattern-added
+  text: 'the `p/a/id` response''s property pattern `^[0-9]+$` was added for the status `200` (shared schema: `Inner`, also at `q/a/id`, `p/b/id` and 1 more)'
+  sharedSchema:
+    name: Inner
+    properties:
+        - p/a/id
+        - q/a/id
+        - p/b/id
+    count: 4
+  level: 1
+  operation: GET
+  path: /example
+  section: paths
+  revisionSource:
+    file: ./checker/shared_schema_nested_revision.yaml
+    line: 34
+    column: 11
+  fingerprint: 4c61447abcd0
+

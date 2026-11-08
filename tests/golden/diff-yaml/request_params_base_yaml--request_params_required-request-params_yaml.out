@@ -1,0 +1,70 @@
+paths:
+    modified:
+        /api/test1:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            added:
+                                header:
+                                    - x-newrequestheaderparam
+            parameters:
+                added:
+                    query:
+                        - version
+                        - optionalQueryParam
+        /api/test2:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            added:
+                                query:
+                                    - newQueryParam
+            parameters:
+                added:
+                    header:
+                        - optionalheaderparam
+                    query:
+                        - id
+        /api/test3:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            added:
+                                cookie:
+                                    - csrf-token
+            parameters:
+                added:
+                    header:
+                        - if-none-match
+        /api/test4:
+            parameters:
+                added:
+                    query:
+                        - emptyPath2
+                deleted:
+                    query:
+                        - emptyPath
+endpoints:
+    modified:
+        ?   method: GET
+            path: /api/test1
+        :   parameters:
+                added:
+                    header:
+                        - x-newrequestheaderparam
+        ?   method: GET
+            path: /api/test2
+        :   parameters:
+                added:
+                    query:
+                        - newQueryParam
+        ?   method: GET
+            path: /api/test3
+        :   parameters:
+                added:
+                    cookie:
+                        - csrf-token
+

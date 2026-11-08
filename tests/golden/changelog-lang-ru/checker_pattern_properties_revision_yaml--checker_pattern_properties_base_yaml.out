@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[response-body-pattern-property-removed] в ./checker/pattern_properties_base.yaml
+	в API POST /products
+		удалено шаблонное свойство `^x-` из тела ответа для статуса `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-body-pattern-property-removed] в ./checker/pattern_properties_base.yaml
+	в API POST /products
+		удалено шаблонное свойство `^x-` из тела запроса
+
+

@@ -1,0 +1,7 @@
+1 изменений: 0 error, 1 warning, 0 info
+warning	[response-media-type-name-changed] в ./checker/add_new_media_type_params_modified.yaml
+	в API POST /api/v1.0/groups
+		медиа-тип `application/json` изменен на `application/problem+json;q=1` для ответа со статусом `200`
+		Это предупреждение, потому что oasdiff не может определить, что ограничивает изменённый параметр типа содержимого. Добавление параметра сужает то, что может вернуть сервер, удаление расширяет, а изменение значения может лишить клиента возможности прочитать ответ.
+
+

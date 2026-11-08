@@ -1,0 +1,55 @@
+# API Changelog 1.0.0 vs. 1.0.1
+
+
+## API Changes
+
+### GET /api/{domain}/{project}/badges/security-score
+- :warning: for the `path` request parameter `domain`, the min was set to `7.00`
+- :warning: for the `path` request parameter `domain`, the `type/format` was changed from `string/hyphen-separated list` to `integer/non-negative integer`
+- :warning: removed the success response with the status `200`
+- :warning: removed the success response with the status `201`
+- :warning: changed the pattern of the `path` request parameter `domain` from `^(?:([a-z]+-)*([a-z]+)?)$` to `^(?:\d+)$`
+- :warning: deleted the `cookie` request parameter `test`
+- :warning: deleted the `header` request parameter `user`
+- :warning: deleted the `header` request parameter `x-auth-name`
+-  api operation id `GetSecurityScores` removed and replaced with ``
+-  the endpoint now allows anonymous access
+-  api tag `security` removed
+-  for the `query` request parameter `token`, the maxLength was unset from `29`
+-  removed the pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` from the `query` request parameter `token`
+-  for the `query` request parameter `token`, the `type/format` was widened from `string/uuid` to `any`
+-  removed the non-success response with the status `400`
+
+
+### POST /api/{domain}/{project}/badges/security-score
+-  endpoint added
+
+
+### GET /api/{domain}/{project}/install-command
+- :warning: api path removed without deprecation
+
+
+### POST /register
+- :warning: api path removed without deprecation
+
+
+### POST /subscribe
+- :warning: api path removed without deprecation
+
+
+
+
+## Components
+-  removed the schema `network-policies`
+-  removed the schema `rules`
+-  the component security scheme `AccessToken` was removed
+-  the component security scheme `OAuth` was removed
+-  the component security scheme `bearerAuth` was removed
+
+
+## Info
+-  a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`
+
+
+
+

@@ -1,0 +1,2 @@
+::notice title=response-mediatype-enum-value-removed,file=./enums/response-enum-2.yaml::in API GET /api/v2/changeOfResponseFieldValueTiedToEnumTest response schema `application/json` enum value removed `VALUE_3`
+

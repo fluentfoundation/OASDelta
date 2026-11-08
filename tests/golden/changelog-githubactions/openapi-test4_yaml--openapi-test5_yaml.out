@@ -1,0 +1,8 @@
+::error title=api-path-removed-without-deprecation,file=openapi-test4.yaml::in API GET /prefix/api/{domain}/{project}/badges/security-score api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test4.yaml::in API POST /prefix/api/{domain}/{project}/badges/security-score api path removed without deprecation
+::notice title=api-major-version-not-bumped::in API   a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`
+::notice title=api-security-component-added,file=openapi-test5.yaml,line=173,col=5::in API   the component security scheme `AccessToken` was added
+::notice title=api-security-component-added,file=openapi-test5.yaml,line=169,col=5::in API   the component security scheme `bearerAuth` was added
+::notice title=endpoint-added,file=openapi-test5.yaml,line=12,col=5::in API GET /api/{domain}/{project}/badges/security-score endpoint added
+::notice title=endpoint-added,file=openapi-test5.yaml,line=90,col=5::in API GET /api/{domain}/{project}/install-command endpoint added
+

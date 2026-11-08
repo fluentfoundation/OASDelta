@@ -1,0 +1,14 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+- :warning: the `path` request parameter `groupId` was restricted to a list of enum values
+- :warning: for the `path` request parameter `groupId`, the `type` was changed from `string` to `integer`
+
+
+
+
+
+

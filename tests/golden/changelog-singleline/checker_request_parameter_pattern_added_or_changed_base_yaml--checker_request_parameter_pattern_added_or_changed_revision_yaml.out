@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./checker/request_parameter_pattern_added_or_changed_revision.yaml, in API POST /test removed the pattern `^\w+$` from the `query` request parameter `category` [request-parameter-pattern-removed]. 
+
+

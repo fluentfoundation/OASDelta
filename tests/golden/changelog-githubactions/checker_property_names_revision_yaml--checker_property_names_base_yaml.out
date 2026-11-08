@@ -1,0 +1,4 @@
+::error title=response-body-property-names-removed,file=./checker/property_names_base.yaml::in API POST /products removed 'propertyNames' constraint from the response body for the status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-body-property-names-removed,file=./checker/property_names_base.yaml::in API POST /products removed 'propertyNames' constraint from the request body
+

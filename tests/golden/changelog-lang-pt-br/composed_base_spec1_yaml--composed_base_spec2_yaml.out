@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[api-operation-id-removed] em ./composed/base/spec1.yaml
+	em API GET /api/test
+		id de operação da api `x` removido e substituído por ``
+
+

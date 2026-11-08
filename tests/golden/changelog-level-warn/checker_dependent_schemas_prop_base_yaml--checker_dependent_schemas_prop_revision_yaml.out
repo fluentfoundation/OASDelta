@@ -1,0 +1,1 @@
+[{"id":"request-property-dependent-schema-added","text":"added the dependent schema `name` to the `details` request property","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","revisionSource":{"file":"./checker/dependent_schemas_prop_revision.yaml","line":18,"column":21,"endLine":21,"endColumn":39},"fingerprint":"20b3529b7379"}]

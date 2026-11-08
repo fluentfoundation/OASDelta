@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /products
+- :warning: the request body dependentRequired was added: when `name` is present, `email` are required
+-  the response body dependentRequired was added for the status `200`: when `name` is present, `email` are required
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

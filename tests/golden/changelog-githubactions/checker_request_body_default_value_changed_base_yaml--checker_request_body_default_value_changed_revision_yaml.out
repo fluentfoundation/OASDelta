@@ -1,0 +1,4 @@
+::error title=request-body-media-type-removed,file=./checker/request_body_default_value_changed_revision.yaml::in API POST /products removed the media type `application/json` from the request body
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-body-default-value-changed,file=./checker/request_body_default_value_changed_revision.yaml,line=15,col=15::in API POST /products the request body `text/plain` default value changed from `Default` to `NewDefault`
+

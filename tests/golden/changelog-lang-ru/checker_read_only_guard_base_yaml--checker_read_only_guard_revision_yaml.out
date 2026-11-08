@@ -1,0 +1,33 @@
+7 изменений: 2 error, 0 warning, 5 info
+error	[request-property-pattern-added] в ./checker/read_only_guard_revision.yaml
+	в API POST /items
+		добавлен pattern `^x` у поля запроса `name`
+		Это критическое изменение, потому что добавление ограничения шаблона к ранее неограниченному параметру отклонит значения, которые ранее принимались, сломав существующих клиентов
+
+error	[request-property-type-changed] в ./checker/read_only_guard_revision.yaml
+	в API POST /items
+		у поля запроса `secret` `type` изменён с `string` на `boolean`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-property-pattern-added] в ./checker/read_only_guard_revision.yaml
+	в API POST /items
+		добавлен pattern `^x` у поля запроса `id`
+		Свойство доступно только для чтения, поэтому оно не встречается в запросах, и это изменение не может сделать запрос недействительным.
+
+info	[response-property-pattern-added] в ./checker/read_only_guard_revision.yaml
+	в API POST /items
+		у свойства `id` для ответа со статусом `^x` добавлен паттерн `200`
+
+info	[response-property-pattern-added] в ./checker/read_only_guard_revision.yaml
+	в API POST /items
+		у свойства `name` для ответа со статусом `^x` добавлен паттерн `200`
+
+info	[response-property-type-changed] в ./checker/read_only_guard_revision.yaml
+	в API POST /items
+		у свойства ответа `secret` `type` изменён с `string` на `boolean` для статуса `200`
+		Свойство доступно только для записи, поэтому оно не встречается в ответах, и это изменение не может сделать ответ недействительным.
+
+

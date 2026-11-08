@@ -1,0 +1,6 @@
+1 alterações: 1 error, 0 warning, 0 info
+error	[request-property-became-required] em ./required-properties/items2.yaml
+	em API POST /test
+		a propriedade de requisição `items/id` tornou-se obrigatória
+
+

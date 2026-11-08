@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[response-media-type-parameter-added] en ./checker/media_type_param_added_revision.yaml
+	en API POST /api/v1.0/groups
+		el parámetro de tipo de medio `charset` se añadió a `application/json` para el estado de respuesta `200`
+
+info	[response-media-type-parameter-added] en ./checker/media_type_param_added_revision.yaml
+	en API POST /api/v1.0/groups
+		el parámetro de tipo de medio `charset` se añadió a `application/json` para el estado de respuesta `409`
+
+

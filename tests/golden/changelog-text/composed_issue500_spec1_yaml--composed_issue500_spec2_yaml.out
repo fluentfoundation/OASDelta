@@ -1,0 +1,10 @@
+2 changes: 1 error, 0 warning, 1 info
+error	[api-removed-without-deprecation] at ./composed/issue500/spec1.yaml
+	in API GET /test
+		api removed without deprecation
+
+info	[endpoint-added] at ./composed/issue500/spec2.yaml
+	in API POST /test
+		endpoint added
+
+

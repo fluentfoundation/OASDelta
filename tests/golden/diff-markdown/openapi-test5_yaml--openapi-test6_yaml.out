@@ -1,0 +1,14 @@
+### New Endpoints: 3
+--------------------
+GET /health  
+GET /health/live  
+GET /health/ready  
+
+### Deleted Endpoints: 2
+------------------------
+GET /api/{domain}/{project}/badges/security-score  
+GET /api/{domain}/{project}/install-command  
+
+### Modified Endpoints: None
+----------------------------
+

@@ -1,0 +1,17 @@
+info:
+    title:
+        from: Parameter Test API
+        to: Test API
+paths:
+    added:
+        - /edge
+    deleted:
+        - /test
+endpoints:
+    added:
+        - method: GET
+          path: /edge
+    deleted:
+        - method: GET
+          path: /test
+

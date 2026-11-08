@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/t":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"type":{"added":["object"]},"required":{"added":["kind"]},"properties":{"added":["kind","note"]},"always":{"from":false,"to":null}}}}}}}}}}}}}

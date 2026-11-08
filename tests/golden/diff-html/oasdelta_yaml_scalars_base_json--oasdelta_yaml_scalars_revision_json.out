@@ -1,0 +1,34 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>GET /labels</p>
+<ul>
+<li>Summary changed from 'fun size' to 'fun size 🍫 and 🚒 wontfix'</li>
+<li>Description changed from 'Go:<br>
+type MyAPIObject struct {<br>
+Name string<br>
+}' to 'Go:<br>
+type MyAPIObject struct {<br>
+Name  string<br>
+}<br>
+'</li>
+<li>Modified query param: c1
+<ul>
+<li>Description changed from 'plain' to 'controlchar  nbsp'</li>
+</ul>
+</li>
+<li>Modified query param: nel
+<ul>
+<li>Description changed from 'next line' to 'nextline'</li>
+</ul>
+</li>
+<li>Modified query param: q
+<ul>
+<li>Description changed from 'tab	here' to 'tab	there'</li>
+</ul>
+</li>
+</ul>
+

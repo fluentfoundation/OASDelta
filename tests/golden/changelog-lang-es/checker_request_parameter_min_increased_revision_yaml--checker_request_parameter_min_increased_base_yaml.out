@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-parameter-min-decreased] en ./checker/request_parameter_min_increased_base.yaml
+	en API POST /api/v1.0/groups
+		para el parámetro `path` de solicitud `groupId`, el mínimo fue disminuido de `10.00` a `1.00`
+
+

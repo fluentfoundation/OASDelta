@@ -1,0 +1,10 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[response-property-became-optional] en ./checker/disclaimer_allof_lookalike_revision.yaml
+	en API GET /x
+		la propiedad de respuesta `allOf[fake]/inner` se volvió opcional para el estado `200`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

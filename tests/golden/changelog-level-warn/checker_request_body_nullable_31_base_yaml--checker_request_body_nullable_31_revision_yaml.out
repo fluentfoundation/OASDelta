@@ -1,0 +1,1 @@
+[{"id":"response-body-became-nullable","text":"the response's body became nullable","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","fingerprint":"09583d77eb29"}]

@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/t":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"type":{"deleted":["object"]},"required":{"deleted":["kind"]},"properties":{"deleted":["kind","note"]},"always":{"from":null,"to":false}}}}}}}}}}}}}

@@ -1,0 +1,30 @@
+7 изменений: 3 error, 0 warning, 4 info
+error	[request-property-else-added] в ./checker/if_added_prop_revision.yaml
+	в API POST /products
+		добавлена подсхема 'else' в поле запроса `details`
+
+error	[request-property-if-added] в ./checker/if_added_prop_revision.yaml
+	в API POST /products
+		добавлена подсхема 'if' в поле запроса `details`
+
+error	[request-property-then-added] в ./checker/if_added_prop_revision.yaml
+	в API POST /products
+		добавлена подсхема 'then' в поле запроса `details`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-property-else-added] в ./checker/if_added_prop_revision.yaml
+	в API POST /products
+		добавлена подсхема 'else' в поле ответа `details` для статуса `200`
+
+info	[response-property-if-added] в ./checker/if_added_prop_revision.yaml
+	в API POST /products
+		добавлена подсхема 'if' в поле ответа `details` для статуса `200`
+
+info	[response-property-then-added] в ./checker/if_added_prop_revision.yaml
+	в API POST /products
+		добавлена подсхема 'then' в поле ответа `details` для статуса `200`
+
+

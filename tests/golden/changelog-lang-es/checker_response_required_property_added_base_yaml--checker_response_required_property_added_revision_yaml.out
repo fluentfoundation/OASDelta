@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-required-property-added] en ./checker/response_required_property_added_revision.yaml
+	en API POST /api/v1.0/groups
+		agregada la propiedad requerida `data/new` a la respuesta con estado `200`
+
+

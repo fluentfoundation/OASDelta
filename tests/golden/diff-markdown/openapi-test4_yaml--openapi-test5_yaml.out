@@ -1,0 +1,13 @@
+### New Endpoints: 2
+--------------------
+GET /api/{domain}/{project}/badges/security-score  
+GET /api/{domain}/{project}/install-command  
+
+### Deleted Endpoints: 2
+------------------------
+GET /prefix/api/{domain}/{project}/badges/security-score  
+POST /prefix/api/{domain}/{project}/badges/security-score  
+
+### Modified Endpoints: None
+----------------------------
+

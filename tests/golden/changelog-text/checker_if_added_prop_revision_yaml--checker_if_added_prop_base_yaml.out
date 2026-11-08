@@ -1,0 +1,30 @@
+7 changes: 3 error, 0 warning, 4 info
+error	[response-property-else-removed] at ./checker/if_added_prop_base.yaml
+	in API POST /products
+		removed 'else' subschema from the `details` response property for the status `200`
+
+error	[response-property-if-removed] at ./checker/if_added_prop_base.yaml
+	in API POST /products
+		removed 'if' subschema from the `details` response property for the status `200`
+
+error	[response-property-then-removed] at ./checker/if_added_prop_base.yaml
+	in API POST /products
+		removed 'then' subschema from the `details` response property for the status `200`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[request-property-else-removed] at ./checker/if_added_prop_base.yaml
+	in API POST /products
+		removed 'else' subschema from the request property `details`
+
+info	[request-property-if-removed] at ./checker/if_added_prop_base.yaml
+	in API POST /products
+		removed 'if' subschema from the request property `details`
+
+info	[request-property-then-removed] at ./checker/if_added_prop_base.yaml
+	in API POST /products
+		removed 'then' subschema from the request property `details`
+
+

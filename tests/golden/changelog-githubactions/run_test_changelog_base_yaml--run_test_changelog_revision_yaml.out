@@ -1,0 +1,2 @@
+::notice title=response-non-success-status-removed,file=./run_test/changelog_revision.yaml::in API POST /api/v1.0/groups removed the non-success response with the status `409`
+

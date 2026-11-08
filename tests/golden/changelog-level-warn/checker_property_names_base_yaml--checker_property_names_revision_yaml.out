@@ -1,0 +1,1 @@
+[{"id":"request-body-property-names-added","text":"added 'propertyNames' constraint to the request body","level":3,"operation":"POST","operationId":"createProduct","path":"/products","section":"paths","revisionSource":{"file":"./checker/property_names_revision.yaml","line":17,"column":15},"fingerprint":"e28469494d4f"}]

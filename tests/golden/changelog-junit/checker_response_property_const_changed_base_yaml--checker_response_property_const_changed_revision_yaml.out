@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="response-body-const-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response body `text/plain` const value changed from `NotFound` to `Error` for the status `404`</failure>
+    </testcase>
+    <testcase name="response-property-const-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `status` response property const value changed from `ok` to `success` for the status `200`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

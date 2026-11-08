@@ -1,0 +1,17 @@
+- id: request-parameter-default-value-changed
+  text: for the `path` request parameter `group_id`, default value was changed from `2` to `1`
+  level: 1
+  operation: POST
+  operationId: createOneGroup
+  path: /api/v1.0/groups/{group_id}
+  section: paths
+  baseSource:
+    file: ./checker/request_parameter_default_value_changed_base_renamed.yaml
+    line: 23
+    column: 11
+  revisionSource:
+    file: ./checker/request_parameter_default_value_changed_revision_renamed.yaml
+    line: 23
+    column: 11
+  fingerprint: 3b17cd7d60b4
+

@@ -1,0 +1,69 @@
+paths:
+    modified:
+        /example:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            oneOf:
+                                                added:
+                                                    - index: 0
+                                                    - index: 1
+                                            type:
+                                                deleted:
+                                                    - object
+                                            required:
+                                                stringsdiff:
+                                                    deleted:
+                                                        - bar
+                                                        - foo
+                                            properties:
+                                                deleted:
+                                                    - bar
+                                                    - baz
+                                                    - foo
+                                            oneOfWrapping:
+                                                numAlternatives: 2
+                                                movedProperties:
+                                                    - bar
+                                                    - baz
+                                                    - foo
+                                                originalPreserved: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /example
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                oneOf:
+                                    added:
+                                        - index: 0
+                                        - index: 1
+                                type:
+                                    deleted:
+                                        - object
+                                required:
+                                    stringsdiff:
+                                        deleted:
+                                            - bar
+                                            - foo
+                                properties:
+                                    deleted:
+                                        - bar
+                                        - baz
+                                        - foo
+                                oneOfWrapping:
+                                    numAlternatives: 2
+                                    movedProperties:
+                                        - bar
+                                        - baz
+                                        - foo
+                                    originalPreserved: true
+

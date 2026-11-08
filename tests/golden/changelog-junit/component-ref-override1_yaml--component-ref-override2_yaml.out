@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-optional-property-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the optional property `left/extra` to the response with the `200` status</failure>
+    </testcase>
+    <testcase name="response-property-type-specialized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `nested` response's property `format` was narrowed from `none` to `uuid` for status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

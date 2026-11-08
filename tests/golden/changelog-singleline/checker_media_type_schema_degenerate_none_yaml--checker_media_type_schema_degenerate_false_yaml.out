@@ -1,0 +1,6 @@
+2 changes: 2 error, 0 warning, 0 info
+error at ./checker/media_type_schema_degenerate_false.yaml, in API POST /items the request body schema became `false`: no request body passes validation [request-body-schema-became-false]. 
+
+error at ./checker/media_type_schema_degenerate_false.yaml, in API POST /items the response body schema became `false`: no response body passes validation [response-body-schema-became-false]. 
+
+

@@ -1,0 +1,35 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-2">Modified Endpoints: 2</h3>
+<hr>
+<p>GET /api/{domain}/{project}/install-command</p>
+<ul>
+<li>Modified path param: domain
+<ul>
+<li>Schema changed
+<ul>
+<li>Deleted enum values: [removed-value]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>POST /register</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: default
+<ul>
+<li>Content changed
+<ul>
+<li>New media type: application/json</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

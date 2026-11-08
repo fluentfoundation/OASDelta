@@ -1,0 +1,10 @@
+2 alterações: 1 error, 0 warning, 1 info
+error	[api-removed-without-deprecation] em ./composed/issue500/spec1.yaml
+	em API GET /test
+		api removida sem depreciação
+
+info	[endpoint-added] em ./composed/issue500/spec2.yaml
+	em API POST /test
+		endpoint adicionado
+
+

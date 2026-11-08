@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./list-of-types/param-property-revision.yaml, in API GET /test property `mode` of `query` request parameter `filter` list-of-types was narrowed by removing types `integer and boolean` [request-parameter-property-list-of-types-narrowed]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

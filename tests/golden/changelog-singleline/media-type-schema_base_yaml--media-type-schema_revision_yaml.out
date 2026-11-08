@@ -1,0 +1,8 @@
+3 changes: 1 error, 0 warning, 2 info
+error at ./media-type-schema/revision.yaml, in API POST /test added a schema to the media type `application/json` of the request body [request-body-media-type-schema-added]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./media-type-schema/revision.yaml, in API POST /test added a schema to the media type `application/json` for the response with the status `200` [response-body-media-type-schema-added]. 
+
+

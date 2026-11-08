@@ -1,0 +1,5 @@
+::notice title=api-schema-removed::in API   removed the schema `Breed3`
+::notice title=api-schema-removed::in API   removed the schema `Rabbit`
+::notice title=request-body-all-of-removed,file=./checker/request_property_all_of_removed_revision.yaml::in API POST /pets removed `#/components/schemas/Rabbit` from the request body `allOf` list
+::notice title=request-property-all-of-removed,file=./checker/request_property_all_of_removed_revision.yaml::in API POST /pets removed `#/components/schemas/Breed3` from the `allOf[#/components/schemas/Dog]/breed` request property `allOf` list
+

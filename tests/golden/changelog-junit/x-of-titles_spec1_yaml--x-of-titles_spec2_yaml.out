@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-body-any-of-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added `subschema #2: Title 3` to the response body `anyOf` list for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-body-any-of-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed `subschema #2: Title 2` from the response body `anyOf` list for the response status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

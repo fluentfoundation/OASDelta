@@ -1,0 +1,1 @@
+[{"id":"webhook-removed","text":"webhook `orderDeleted` removed","level":3,"section":"components","baseSource":{"file":"./checker/webhook_base.yaml","line":27,"column":3,"endLine":40,"endColumn":26},"fingerprint":"a02b4eba1d2e"}]

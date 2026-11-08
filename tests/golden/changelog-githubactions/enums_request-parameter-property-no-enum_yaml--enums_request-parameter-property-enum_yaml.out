@@ -1,0 +1,5 @@
+::error title=request-header-property-became-enum,file=./enums/request-parameter-property-enum.yaml,line=17,col=17::in API GET /books/{bookId} the `bookid` request header's property `name` was restricted to a list of enum values
+::notice title=request-parameter-property-enum-value-added,file=./enums/request-parameter-property-enum.yaml,line=18,col=21::in API GET /books/{bookId} added the enum value `VALUE_1` to the property `name` of the `header` request parameter `bookid`
+::notice title=request-parameter-property-enum-value-added,file=./enums/request-parameter-property-enum.yaml,line=19,col=21::in API GET /books/{bookId} added the enum value `VALUE_2` to the property `name` of the `header` request parameter `bookid`
+::notice title=request-parameter-property-enum-value-added,file=./enums/request-parameter-property-enum.yaml,line=20,col=21::in API GET /books/{bookId} added the enum value `VALUE_3` to the property `name` of the `header` request parameter `bookid`
+

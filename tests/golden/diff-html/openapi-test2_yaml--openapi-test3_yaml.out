@@ -1,0 +1,90 @@
+<h3 id="new-endpoints-3">New Endpoints: 3</h3>
+<hr>
+<p>GET /api/{domain}/{project}/install-command<br>
+POST /register<br>
+POST /subscribe</p>
+<h3 id="deleted-endpoints-1">Deleted Endpoints: 1</h3>
+<hr>
+<p>POST /api/{domain}/{project}/badges/security-score</p>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>GET /api/{domain}/{project}/badges/security-score</p>
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-beta</li>
+</ul>
+</li>
+<li>OperationID changed from '' to 'GetSecurityScore'</li>
+<li>New header param: x-auth-name</li>
+<li>Deleted query param: filter</li>
+<li>Modified path param: domain
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'integer' to 'string'</li>
+<li>Format changed from 'non-negative integer' to 'hyphen-separated list'</li>
+<li>Description changed from 'Non-negative integers (including zero)' to 'Hyphen-separated list of lowercase string'</li>
+<li>Example changed from '100' to 'generic-bank'</li>
+<li>Min changed from 7 to null</li>
+<li>Pattern changed from '^(?:\d+)$' to '^(?:([a-z]+-)*([a-z]+)?)$'</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified query param: image
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-extension-test</li>
+</ul>
+</li>
+<li>Explode changed from true to null</li>
+<li>Schema changed
+<ul>
+<li>Property 'Not' changed
+<ul>
+<li>Schema added</li>
+</ul>
+</li>
+<li>Type changed from 'string' to ''</li>
+<li>Format changed from 'general string' to ''</li>
+<li>Description changed from 'alphanumeric with underscore, dash, period, slash and colon' to ''</li>
+<li>Example changed from 'tufinim/generic-bank:cia-latest' to null</li>
+<li>Pattern changed from '^(?:[\w-./:]+)$' to ''</li>
+</ul>
+</li>
+<li>Examples changed
+<ul>
+<li>New example: 0</li>
+<li>New example: 1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified query param: token
+<ul>
+<li>Schema changed
+<ul>
+<li>Property 'AnyOf' changed
+<ul>
+<li>Schemas deleted: subschema #1, subschema #2</li>
+</ul>
+</li>
+<li>Type changed from '' to 'string'</li>
+<li>Format changed from '' to 'uuid'</li>
+<li>Description changed from '' to 'RFC 4122 UUID'</li>
+<li>Example changed from null to '26734565-dbcc-449a-a370-0beaaf04b0e7'</li>
+<li>MaxLength changed from null to 30</li>
+<li>Pattern changed from '' to '^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-changes">Other Changes</h2>
+<p>Extensions changed</p>
+<ul>
+<li>New extension: x-extension-test2</li>
+</ul>
+

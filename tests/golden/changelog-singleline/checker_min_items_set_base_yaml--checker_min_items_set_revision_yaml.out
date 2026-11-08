@@ -1,0 +1,12 @@
+5 changes: 5 error, 0 warning, 0 info
+error at ./checker/min_items_set_revision.yaml, in API POST /batch the request's body minItems was set to `2` [request-body-min-items-set]. Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error at ./checker/min_items_set_revision.yaml, in API POST /batch the response's body minItems was unset from `2` [response-body-min-items-unset]. 
+
+error at ./checker/min_items_set_revision.yaml, in API POST /items for the `query` request parameter `ids`, the minItems was set to `3` [request-parameter-min-items-set]. Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error at ./checker/min_items_set_revision.yaml, in API POST /items the `tags` request property's minItems was set to `3` [request-property-min-items-set]. Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error at ./checker/min_items_set_revision.yaml, in API POST /items the `tags` response property's minItems was unset from `3` for the response status `200` [response-property-min-items-unset]. 
+
+

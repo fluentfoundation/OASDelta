@@ -1,0 +1,37 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /example
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: p
+              - Properties changed
+                - Modified property: a
+                  - Properties changed
+                    - Modified property: id
+                      - Pattern changed from '' to '^[0-9]+$'
+                - Modified property: b
+                  - Properties changed
+                    - Modified property: id
+                      - Pattern changed from '' to '^[0-9]+$'
+            - Modified property: q
+              - Properties changed
+                - Modified property: a
+                  - Properties changed
+                    - Modified property: id
+                      - Pattern changed from '' to '^[0-9]+$'
+                - Modified property: b
+                  - Properties changed
+                    - Modified property: id
+                      - Pattern changed from '' to '^[0-9]+$'
+
+

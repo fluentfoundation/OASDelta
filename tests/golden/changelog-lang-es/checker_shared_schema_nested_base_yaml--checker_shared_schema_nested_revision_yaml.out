@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-property-pattern-added] en ./checker/shared_schema_nested_revision.yaml
+	en API GET /example
+		el patrón `p/a/id` fue agregado a la propiedad de respuesta `^[0-9]+$` para el estado `200` (esquema compartido: `Inner`, también en `q/a/id`, `p/b/id` y 1 más)
+
+

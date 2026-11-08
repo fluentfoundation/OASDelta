@@ -1,0 +1,5 @@
+::error title=new-required-request-property,file=./checker/not_revision.yaml,line=19,col=19::in API POST /products added the new required request property `/not/added_prop`
+::error title=request-property-max-length-decreased,file=./checker/not_revision.yaml,line=23,col=21::in API POST /products the `/not/modified_prop` request property's maxLength was decreased to `5`
+::warning title=request-property-removed,file=./checker/not_revision.yaml::in API POST /products removed the request property `/not/removed_prop`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

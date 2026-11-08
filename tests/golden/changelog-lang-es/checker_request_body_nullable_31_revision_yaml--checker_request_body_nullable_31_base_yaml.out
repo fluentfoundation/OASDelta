@@ -1,0 +1,14 @@
+3 cambios: 1 error, 0 warning, 2 info
+error	[request-body-became-not-nullable] en ./checker/request_body_nullable_31_base.yaml
+	en API POST /products
+		el cuerpo de solicitud se volvió no nulable
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[response-body-became-not-nullable] en ./checker/request_body_nullable_31_base.yaml
+	en API POST /products
+		el cuerpo de respuesta se volvió no nulable
+
+

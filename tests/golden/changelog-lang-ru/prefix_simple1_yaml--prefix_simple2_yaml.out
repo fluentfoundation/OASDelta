@@ -1,0 +1,22 @@
+5 изменений: 2 error, 0 warning, 3 info
+error	[api-path-removed-without-deprecation] в ./prefix/simple1.yaml
+	в API GET /api/test
+		API path удалён без процедуры deprecation
+
+error	[api-path-removed-without-deprecation] в ./prefix/simple1.yaml
+	в API GET /api/test1
+		API path удалён без процедуры deprecation
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[endpoint-added] в ./prefix/simple2.yaml
+	в API GET /tenant/api/test
+		эндпоинт добавлен
+
+info	[endpoint-added] в ./prefix/simple2.yaml
+	в API GET /tenant/api/test1
+		эндпоинт добавлен
+
+

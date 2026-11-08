@@ -1,0 +1,10 @@
+2 alterações: 0 error, 0 warning, 2 info
+info	[response-optional-property-added] em ./checker/shared_schema_two_parents_revision.yaml
+	em API GET /example
+		a propriedade opcional `first/shared/extra` foi adicionada à resposta com o status `200` (schema compartilhado: `Shared`, também em `third/shared/extra`, `fourth/shared/extra` e mais 1)
+
+info	[response-property-pattern-added] em ./checker/shared_schema_two_parents_revision.yaml
+	em API GET /example
+		o padrão `first/shared/id` foi adicionado à propriedade de resposta `^[0-9]+$` para o status `200` (schema compartilhado: `Shared`, também em `third/shared/id`, `fourth/shared/id` e mais 1)
+
+

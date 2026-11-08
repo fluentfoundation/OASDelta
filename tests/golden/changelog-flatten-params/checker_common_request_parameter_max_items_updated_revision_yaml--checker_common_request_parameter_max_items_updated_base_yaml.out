@@ -1,0 +1,1 @@
+[{"id":"request-parameter-max-items-decreased","text":"for the `query` request parameter `category`, the maxItems was decreased from `20` to `10`","level":3,"operation":"POST","operationId":"createOneGroup","path":"/api/v1.0/groups","section":"paths","fingerprint":"e664bb6b9e31"}]

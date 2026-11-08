@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./checker/api_security_global_added_revision.yaml, in API POST /subscribe the endpoint no longer allows anonymous access and now only accepts `petstore_auth: [read:pets, write:pets]` [api-security-anonymous-access-removed]. This endpoint inherits the API's top-level security requirements.
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

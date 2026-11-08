@@ -1,0 +1,4 @@
+::error title=response-property-list-of-types-widened,file=./list-of-types/list-to-list-revision.yaml::in API GET /api response property `data` list-of-types was widened by adding types `number and boolean` to media type `application/json` of response `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-property-list-of-types-narrowed,file=./list-of-types/list-to-list-revision.yaml::in API GET /api response property `metadata` list-of-types was narrowed by removing types `object` from media type `application/json` of response `200`
+

@@ -1,0 +1,7 @@
+1 cambios: 0 error, 1 warning, 0 info
+warning	[response-property-became-optional] en ./checker/disclaimer_nested_allof_revision.yaml
+	en API GET /x
+		la propiedad de respuesta `p/allOf[#/components/schemas/A]/id` se volvió opcional para el estado `200`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+

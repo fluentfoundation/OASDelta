@@ -1,0 +1,14 @@
+3 changes: 1 error, 0 warning, 2 info
+error	[request-body-became-required] at 
+	in API POST webhook:orderCreated
+		request body became required
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[new-optional-request-property] at 
+	in API POST webhook:orderCreated
+		added the new optional request property `amount`
+
+

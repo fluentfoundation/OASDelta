@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="25" errors="0" failures="25" name="OASDiff">
+    <testcase name="request-parameter-min-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `path` request parameter `domain`, the min was set to `7.00`</failure>
+    </testcase>
+    <testcase name="request-parameter-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `path` request parameter `domain`, the `type/format` was changed from `string/hyphen-separated list` to `integer/non-negative integer`</failure>
+    </testcase>
+    <testcase name="response-success-status-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the success response with the status `200`</failure>
+    </testcase>
+    <testcase name="response-success-status-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the success response with the status `201`</failure>
+    </testcase>
+    <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api path removed without deprecation</failure>
+    </testcase>
+    <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api path removed without deprecation</failure>
+    </testcase>
+    <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api path removed without deprecation</failure>
+    </testcase>
+    <testcase name="request-parameter-pattern-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">changed the pattern of the `path` request parameter `domain` from `^(?:([a-z]+-)*([a-z]+)?)$` to `^(?:\d+)$`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `cookie` request parameter `test`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `header` request parameter `user`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `header` request parameter `x-auth-name`</failure>
+    </testcase>
+    <testcase name="api-major-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`</failure>
+    </testcase>
+    <testcase name="api-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the schema `network-policies`</failure>
+    </testcase>
+    <testcase name="api-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the schema `rules`</failure>
+    </testcase>
+    <testcase name="api-security-component-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `AccessToken` was removed</failure>
+    </testcase>
+    <testcase name="api-security-component-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `OAuth` was removed</failure>
+    </testcase>
+    <testcase name="api-security-component-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `bearerAuth` was removed</failure>
+    </testcase>
+    <testcase name="api-operation-id-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api operation id `GetSecurityScores` removed and replaced with ``</failure>
+    </testcase>
+    <testcase name="api-security-anonymous-access-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the endpoint now allows anonymous access</failure>
+    </testcase>
+    <testcase name="api-tag-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api tag `security` removed</failure>
+    </testcase>
+    <testcase name="request-parameter-max-length-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `token`, the maxLength was unset from `29`</failure>
+    </testcase>
+    <testcase name="request-parameter-pattern-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` from the `query` request parameter `token`</failure>
+    </testcase>
+    <testcase name="request-parameter-type-generalized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `token`, the `type/format` was widened from `string/uuid` to `any`</failure>
+    </testcase>
+    <testcase name="response-non-success-status-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the non-success response with the status `400`</failure>
+    </testcase>
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

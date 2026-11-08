@@ -1,0 +1,16 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /books/{bookId}
+- Modified header param: bookid
+  - Schema changed
+    - Properties changed
+      - Modified property: name
+        - New enum values: [VALUE_1 VALUE_2 VALUE_3]
+
+

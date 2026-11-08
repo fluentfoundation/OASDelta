@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-optional-property-removed] en ./checker/response_optional_property_removed_revision.yaml
+	en API POST /api/v1.0/groups
+		removida la propiedad opcional `data/id` de la respuesta con estado `200`
+
+

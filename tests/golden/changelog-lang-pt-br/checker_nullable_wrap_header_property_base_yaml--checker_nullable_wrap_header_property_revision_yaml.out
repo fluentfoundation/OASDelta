@@ -1,0 +1,18 @@
+4 alterações: 0 error, 0 warning, 4 info
+info	[request-parameter-became-nullable] em ./checker/nullable_wrap_header_property_revision.yaml
+	em API GET /test
+		o parâmetro de requisição `header` `x-owner` tornou-se anulável
+
+info	[request-parameter-became-nullable] em ./checker/nullable_wrap_header_property_revision.yaml
+	em API GET /test
+		o parâmetro de requisição `header` `x-status` tornou-se anulável
+
+info	[request-parameter-property-became-nullable] em ./checker/nullable_wrap_header_property_revision.yaml
+	em API GET /test
+		a propriedade `owner` do parâmetro de requisição `header` `x-meta` tornou-se anulável
+
+info	[request-parameter-property-became-nullable] em ./checker/nullable_wrap_header_property_revision.yaml
+	em API GET /test
+		a propriedade `status` do parâmetro de requisição `header` `x-meta` tornou-se anulável
+
+

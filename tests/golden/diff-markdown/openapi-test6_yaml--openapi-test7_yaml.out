@@ -1,0 +1,12 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: 3
+------------------------
+GET /health  
+GET /health/live  
+GET /health/ready  
+
+### Modified Endpoints: None
+----------------------------
+

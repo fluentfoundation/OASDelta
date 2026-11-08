@@ -1,0 +1,20 @@
+4 alterações: 0 error, 2 warning, 2 info
+warning	[response-body-all-of-removed] em ./checker/response_property_all_of_removed_revision.yaml
+	em API GET /pets
+		`#/components/schemas/Rabbit` foi removido da lista `allOf` do corpo da resposta para o status `200`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+warning	[response-property-all-of-removed] em ./checker/response_property_all_of_removed_revision.yaml
+	em API GET /pets
+		`#/components/schemas/Breed3` foi removido da lista `allOf` da propriedade de resposta `allOf[#/components/schemas/Dog]/breed` para o status `200`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[api-schema-removed]
+	em components/schemas
+		esquema `Breed3` removido
+
+info	[api-schema-removed]
+	em components/schemas
+		esquema `Rabbit` removido
+
+

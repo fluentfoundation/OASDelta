@@ -1,0 +1,14 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /example
+-  added the optional property `inline/nickname` to the response with the `200` status
+-  added the optional property `left/extra` to the response with the `200` status (shared schema: `Shared`, also at `right/extra`)
+
+
+
+
+
+

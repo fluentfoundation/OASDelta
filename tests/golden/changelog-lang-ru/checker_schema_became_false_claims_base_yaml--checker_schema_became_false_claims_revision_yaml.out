@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[request-body-schema-became-false] в ./checker/schema_became_false_claims_revision.yaml
+	в API POST /t
+		схема тела запроса стала `false`: ни одно тело запроса не проходит валидацию
+
+

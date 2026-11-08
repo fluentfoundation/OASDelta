@@ -1,0 +1,5 @@
+::error title=request-property-enum-value-removed,file=./checker/nullable_wrap_narrowed_revision.yaml::in API POST /test removed the enum value `serviceAccount` of the request property `optionalEnum`
+::error title=request-property-enum-value-removed,file=./checker/nullable_wrap_narrowed_revision.yaml::in API POST /test removed the enum value `user` of the request property `optionalEnum`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-property-list-of-types-widened,file=./checker/nullable_wrap_narrowed_revision.yaml::in API POST /test request property `optionalEnum` list-of-types was widened by adding types `null` to media type `application/json`
+

@@ -1,0 +1,22 @@
+5 изменений: 2 error, 0 warning, 3 info
+error	[request-body-max-contains-decreased] в ./checker/contains_min_max_base.yaml
+	в API POST /products
+		maxContains тела запроса был уменьшен с `6` до `5`
+
+error	[response-body-min-contains-decreased] в ./checker/contains_min_max_base.yaml
+	в API POST /products
+		minContains тела ответа был уменьшен с `2` до `1` для статуса `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-body-min-contains-decreased] в ./checker/contains_min_max_base.yaml
+	в API POST /products
+		minContains тела запроса был уменьшен с `2` до `1`
+
+info	[response-body-max-contains-decreased] в ./checker/contains_min_max_base.yaml
+	в API POST /products
+		maxContains тела ответа был уменьшен с `6` до `5` для статуса `200`
+
+

@@ -1,0 +1,7 @@
+1 changes: 0 error, 1 warning, 0 info
+warning	[response-property-became-optional] at ./checker/disclaimer_nested_allof_revision.yaml
+	in API GET /x
+		the response property `p/allOf[#/components/schemas/A]/id` became optional for the status `200`
+		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+
+

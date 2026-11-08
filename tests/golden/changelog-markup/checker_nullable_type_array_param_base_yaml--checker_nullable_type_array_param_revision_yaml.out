@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /t
+- :warning: the `query` request parameter `q` became not nullable
+- :warning: the `tag` property of the `query` request parameter `filter` became not nullable
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

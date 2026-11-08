@@ -1,0 +1,40 @@
+- id: new-optional-request-property
+  text: added the new optional request property `expires_at`
+  level: 1
+  operation: POST
+  path: /budgets
+  section: paths
+  revisionSource:
+    file: ./oasdelta/block_scalar_end_revision.yaml
+    line: 16
+    column: 17
+    endLine: 24
+    endColumn: 53
+  fingerprint: 5a08e1e2dd86
+- id: new-optional-request-property
+  text: added the new optional request property `partial_success`
+  level: 1
+  operation: POST
+  path: /budgets
+  section: paths
+  revisionSource:
+    file: ./oasdelta/block_scalar_end_revision.yaml
+    line: 25
+    column: 17
+    endLine: 29
+    endColumn: 47
+  fingerprint: c33b9d30532a
+- id: new-optional-request-property
+  text: added the new optional request property `strict`
+  level: 1
+  operation: POST
+  path: /budgets
+  section: paths
+  revisionSource:
+    file: ./oasdelta/block_scalar_end_revision.yaml
+    line: 30
+    column: 17
+    endLine: 34
+    endColumn: 36
+  fingerprint: 908bc028653c
+

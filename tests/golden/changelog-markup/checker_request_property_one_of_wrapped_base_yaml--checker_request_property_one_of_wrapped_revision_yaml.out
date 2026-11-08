@@ -1,0 +1,13 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /example
+- :warning: the request body was restructured into a oneOf, so a payload that was previously valid may no longer be accepted
+
+
+
+
+
+

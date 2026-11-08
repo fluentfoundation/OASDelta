@@ -1,0 +1,30 @@
+- id: request-property-property-names-added
+  text: added 'propertyNames' constraint to the request property `details`
+  level: 3
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/property_names_prop_revision.yaml
+    line: 17
+    column: 19
+  fingerprint: d865d2bece9f
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: response-property-property-names-added
+  text: added 'propertyNames' constraint to the `details` response property for the status `200`
+  level: 1
+  operation: POST
+  operationId: createProduct
+  path: /products
+  section: paths
+  revisionSource:
+    file: ./checker/property_names_prop_revision.yaml
+    line: 29
+    column: 21
+  fingerprint: e7f232917971
+

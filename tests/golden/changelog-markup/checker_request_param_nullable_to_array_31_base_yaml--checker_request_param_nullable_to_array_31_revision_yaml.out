@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /api/v1.0/groups
+-  for the `query` request parameter `token`, the `type` was widened from `string, null` to `array<string, null>, null`
+
+
+
+
+
+

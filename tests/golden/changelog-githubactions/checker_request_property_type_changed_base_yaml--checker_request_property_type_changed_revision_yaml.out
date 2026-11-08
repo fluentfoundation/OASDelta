@@ -1,0 +1,3 @@
+::error title=request-property-type-changed,file=./checker/request_property_type_changed_revision.yaml,line=21,col=19::in API POST /pets the `age` request property `type/format` changed from `integer/int32` to `string/string`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

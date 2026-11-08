@@ -1,0 +1,38 @@
+8 changes: 6 error, 2 warning, 0 info
+error	[new-required-request-parameter] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		added the new required `header` request parameter `x-auth-name`
+
+error	[request-parameter-max-length-set] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		for the `query` request parameter `token`, the maxLength was set to `30`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+error	[request-parameter-pattern-added] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		added the pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` to the `query` request parameter `token`
+		This is a breaking change because adding a pattern restriction to a previously unrestricted parameter will reject values that were previously accepted, breaking existing clients
+
+error	[request-parameter-type-changed] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		for the `path` request parameter `domain`, the `type/format` was changed from `integer/non-negative integer` to `string/hyphen-separated list`
+
+error	[request-parameter-type-changed] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		for the `query` request parameter `token`, the `type/format` was changed from `any` to `string/uuid`
+
+error	[api-removed-without-deprecation] at openapi-test2.yaml
+	in API POST /api/{domain}/{project}/badges/security-score
+		api removed without deprecation
+
+warning	[request-parameter-pattern-changed] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		changed the pattern of the `path` request parameter `domain` from `^(?:\d+)$` to `^(?:([a-z]+-)*([a-z]+)?)$`
+		This is a warning because adding or changing a pattern may restrict the accepted values and break existing clients. For pattern changes, it is difficult to automatically analyze if the new pattern is a superset of the previous pattern (e.g. changed from '[0-9]+' to '[0-9]*')
+
+warning	[request-parameter-removed] at openapi-test3.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `query` request parameter `filter`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+

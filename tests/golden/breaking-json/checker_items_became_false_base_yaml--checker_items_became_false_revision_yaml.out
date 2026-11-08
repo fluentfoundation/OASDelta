@@ -1,0 +1,1 @@
+[{"id":"request-property-schema-became-false","text":"the schema of the request property `items` became `false`: no value passes validation","level":3,"operation":"POST","operationId":"createItem","path":"/items","section":"paths","revisionSource":{"file":"./checker/items_became_false_revision.yaml","line":17,"column":15},"fingerprint":"f52285aac658"}]

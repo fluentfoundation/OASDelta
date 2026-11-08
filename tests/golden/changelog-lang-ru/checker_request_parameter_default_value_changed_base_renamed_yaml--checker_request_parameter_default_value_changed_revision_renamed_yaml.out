@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[request-parameter-default-value-changed] в ./checker/request_parameter_default_value_changed_revision_renamed.yaml
+	в API POST /api/v1.0/groups/{group_id}
+		для параметра запроса `path` значение по умолчанию изменено с `group_id` на `2`%!(EXTRA string=`1`)
+
+

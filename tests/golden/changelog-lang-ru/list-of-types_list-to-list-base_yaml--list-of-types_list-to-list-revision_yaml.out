@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[response-property-list-of-types-widened] в ./list-of-types/list-to-list-revision.yaml
+	в API GET /api
+		список типов свойства `data` ответа был расширен добавлением типов `number and boolean` к медиа-типу `application/json` ответа `200`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-property-list-of-types-narrowed] в ./list-of-types/list-to-list-revision.yaml
+	в API GET /api
+		список типов свойства `metadata` ответа был сужен удалением типов `object` из медиа-типа `application/json` ответа `200`
+
+

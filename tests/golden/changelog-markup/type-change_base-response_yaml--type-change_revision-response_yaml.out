@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /api/atlas/v2/changeOfResponseArrayFieldTest
+- :warning: the `items/testField` response's property `type/format` changed from `string` to `integer/int32` for status `200`
+
+
+
+
+
+

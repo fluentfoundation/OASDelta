@@ -1,0 +1,14 @@
+# API Changelog 1.0 vs. 1.0
+
+
+## API Changes
+
+### POST /items
+- :warning: the request body schema became `false`: no request body passes validation
+- :warning: the response body schema became `false`: no response body passes validation
+
+
+
+
+
+

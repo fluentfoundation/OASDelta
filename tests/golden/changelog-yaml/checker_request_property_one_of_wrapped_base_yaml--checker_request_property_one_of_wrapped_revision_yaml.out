@@ -1,0 +1,9 @@
+- id: request-body-wrapped-in-one-of
+  text: the request body was restructured into a oneOf, so a payload that was previously valid may no longer be accepted
+  level: 3
+  operation: POST
+  operationId: postExample
+  path: /example
+  section: paths
+  fingerprint: 96014b7a9ad6
+

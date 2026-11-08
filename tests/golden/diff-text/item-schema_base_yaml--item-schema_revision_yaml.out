@@ -1,0 +1,35 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 4
+-------------------------
+POST /drop
+- Request body changed
+  - Content changed
+    - Modified media type: application/jsonl
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/jsonl
+
+GET /events
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: text/event-stream
+
+POST /ingest
+- Request body changed
+  - Content changed
+    - Modified media type: application/jsonl
+
+GET /keep
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/jsonl
+
+

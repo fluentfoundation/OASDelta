@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /subscribe:
+            operations:
+                modified:
+                    POST:
+                        securityRequirements:
+                            deleted:
+                                - index: 0
+                                  schemes:
+                                    petstore_auth:
+                                        - write:pets
+                                        - read:pets
+                            listDeleted: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /subscribe
+        :   securityRequirements:
+                deleted:
+                    - index: 0
+                      schemes:
+                        petstore_auth:
+                            - write:pets
+                            - read:pets
+                listDeleted: true
+

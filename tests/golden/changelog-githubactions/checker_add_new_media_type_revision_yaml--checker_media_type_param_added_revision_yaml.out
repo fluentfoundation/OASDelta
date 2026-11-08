@@ -1,0 +1,3 @@
+::notice title=response-media-type-parameter-added,file=./checker/media_type_param_added_revision.yaml,line=21,col=13::in API POST /api/v1.0/groups the media type parameter `charset` was added to `application/json` for the response status `200`
+::notice title=response-media-type-parameter-added,file=./checker/media_type_param_added_revision.yaml,line=37,col=13::in API POST /api/v1.0/groups the media type parameter `charset` was added to `application/json` for the response status `409`
+

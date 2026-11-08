@@ -1,0 +1,2 @@
+::notice title=response-required-property-added,file=./checker/additional_properties_traversal_base.yaml,line=24,col=21::in API GET /entries added the required property `additionalProperties/kind` to the response with the `200` status
+

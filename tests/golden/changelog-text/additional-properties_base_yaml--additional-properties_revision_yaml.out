@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[response-property-type-changed] at ./additional-properties/revision.yaml
+	in API GET /value
+		the `additionalProperties/property1` response's property `type` changed from `integer` to `string` for status `200`
+
+

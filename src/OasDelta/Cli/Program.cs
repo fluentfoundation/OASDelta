@@ -8,6 +8,13 @@ public static class Program
         var stderr = new StreamWriter(Console.OpenStandardError(), new System.Text.UTF8Encoding(false)) { AutoFlush = true, NewLine = "\n" };
         var sw = System.Diagnostics.Stopwatch.StartNew();
 
+        // test support for tools/check_golden.sh; inert unless the variable is set
+        if (Environment.GetEnvironmentVariable(GoldenBatch.Variable) is { Length: > 0 } caseList)
+        {
+            try { return GoldenBatch.Run(caseList, stdout); }
+            finally { stdout.Flush(); }
+        }
+
         try { return Cli.Run(args, stdout, stderr); }
         catch (Exception e)
         {

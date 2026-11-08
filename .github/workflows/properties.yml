@@ -1,0 +1,78 @@
+name: Properties
+
+# Property-based differential testing against oasdiff (issue #22). CsCheck generates OpenAPI document pairs (a base
+# document and edits that make the revision) and checks that OasDelta prints exactly what oasdiff prints, for command
+# lines drawn from tools/golden-commands.txt. A mismatch is shrunk to a small case. Pairs that make a rule fire that
+# no golden does are kept as fixture candidates. Report only: nightly or on demand, never on pull requests.
+#
+# The oracle-free properties (tests/OasDelta.Tests/Properties/SpecProperties.cs) run in CI with every build.
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # nightly
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: Time budget in minutes
+        default: "20"
+      seed:
+        description: CsCheck seed to replay (blank for a new run)
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: properties
+  cancel-in-progress: false
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+jobs:
+  oracle:
+    name: Compare with oasdiff
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      - name: oasdiff version the port tracks (tools/oasdiff-version.txt)
+        run: echo "OASDIFF_VERSION=$(tr -d '[:space:]' < tools/oasdiff-version.txt)" >> "$GITHUB_ENV"
+
+      - name: Download oasdiff ${{ env.OASDIFF_VERSION }} (official release, checksum verified)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/oasdiff" && cd "$RUNNER_TEMP/oasdiff"
+          archive="oasdiff_${OASDIFF_VERSION}_linux_amd64.tar.gz"
+          gh release download "v${OASDIFF_VERSION}" -R oasdiff/oasdiff -p "$archive" -p checksums.txt
+          grep " $archive\$" checksums.txt | sha256sum -c -
+          tar xzf "$archive"
+          ./oasdiff --version
+
+      - name: Build
+        run: dotnet build tests/OasDelta.Tests -c Release
+
+      - name: Generate pairs and compare (CsCheck)
+        env:
+          MINUTES: ${{ github.event.inputs.minutes || '20' }}
+          SEED: ${{ github.event.inputs.seed }}
+        run: |
+          export OASDIFF="$RUNNER_TEMP/oasdiff/oasdiff" OASDELTA_PROPERTIES_OUT="$RUNNER_TEMP/properties"
+          export CsCheck_Time=$((MINUTES * 60))
+          if [ -n "$SEED" ]; then export CsCheck_Seed="$SEED"; fi
+          dotnet test tests/OasDelta.Tests -c Release --no-build --filter Category=Oracle --logger "console;verbosity=normal"
+
+      - name: Upload kept cases (mismatches and new-rule candidates)
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: properties
+          path: ${{ runner.temp }}/properties
+          if-no-files-found: ignore

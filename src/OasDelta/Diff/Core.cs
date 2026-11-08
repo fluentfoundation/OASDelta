@@ -576,8 +576,8 @@ public sealed class ListOfTypesDiff : IDiff
         var types = new List<string>();
         foreach (var r in schemas)
         {
-            var s = r.Value!;
-            if (s.Type is not { Count: 1 } || s.Properties.Count > 0 || s.OneOf.Count > 0 || s.AnyOf.Count > 0 || s.AllOf.Count > 0) return null;
+            // a schema without a value (a cycle of bare references) is no simple type; oasdiff panics here
+            if (r.Value is not { } s || s.Type is not { Count: 1 } || s.Properties.Count > 0 || s.OneOf.Count > 0 || s.AnyOf.Count > 0 || s.AllOf.Count > 0) return null;
             types.Add(s.Type[0]);
         }
         return types;
@@ -606,7 +606,7 @@ public sealed class OneOfWrappingDiff : IDiff
         var moved = new List<string>();
         foreach (var name in b.Properties.Keys)
             foreach (var alt in r.OneOf)
-                if (alt.Value!.Properties.ContainsKey(name)) { moved.Add(name); break; }
+                if (alt.Value?.Properties.ContainsKey(name) == true) { moved.Add(name); break; }
         if (moved.Count == 0) return null;
         moved.Sort(StringComparer.Ordinal);
         bool preserved = false;

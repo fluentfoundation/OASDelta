@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[response-header-max-length-set] в ./properties/header_schema_revision.yaml
+	в API GET /pets
+		у заголовка ответа `x-inline` задано значение maxLength в `10` для статуса `200`
+
+info	[response-header-min-length-set] в ./properties/header_schema_revision.yaml
+	в API GET /pets
+		у заголовка ответа `x-shared` задано значение minLength в `2` для статуса `200`
+
+

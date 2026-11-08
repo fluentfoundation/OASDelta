@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="request-parameter-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `limit`, the `type` was changed from `string` to `integer`</failure>
+    </testcase>
+    <testcase name="request-parameter-deprecated" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">`path` request parameter `petId` was deprecated</failure>
+    </testcase>
+    <testcase name="request-parameter-deprecated" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">`query` request parameter `filter` was deprecated</failure>
+    </testcase>
+    <testcase name="request-parameter-deprecated" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">`query` request parameter `limit` was deprecated</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

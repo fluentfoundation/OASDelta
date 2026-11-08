@@ -154,3 +154,37 @@ public class SourceTests
         finally { Directory.Delete(root, true); }
     }
 }
+
+/// <summary>The file names changelog sources show: kin-openapi's url.URL{Path: filepath.ToSlash(location)}.String(),
+/// then oasdiff's displayFilePath (checked against oasdiff 1.35.0 on Windows; the Unix cases follow the same code).</summary>
+public class SourceFileTests
+{
+    [Theory]
+    [InlineData("openapi.yaml", "openapi.yaml")]
+    [InlineData("./checker/base.yaml", "./checker/base.yaml")]
+    [InlineData("a b.yaml", "a%20b.yaml")]
+    [InlineData("ü(1)!.yaml", "%C3%BC%281%29%21.yaml")]
+    [InlineData("a%20b+c,d;e=f@g$h&i~j.yaml", "a%2520b+c,d;e=f@g$h&i~j.yaml")]
+    [InlineData("-", "stdin")]
+    [InlineData("https://example.com/a%20b.yaml", "https://example.com/a%20b.yaml")]
+    public void SameOnEveryPlatform(string location, string shown) =>
+        Assert.Equal(shown, Checker.Loc.DisplayFilePath(location));
+
+    [Fact]
+    public void WindowsPathsAreUrlPathsWithoutTheDrive()
+    {
+        // "C:\specs\api.yaml" -> "./C:/specs/api.yaml" (RFC 3986 §4.2), which displayFilePath reads as revision "./C"
+        if (OperatingSystem.IsWindows())
+        {
+            Assert.Equal("./C:/specs/api.yaml", SpecLoader.OriginFile(@"C:\specs\api.yaml"));
+            Assert.Equal("/specs/my%20api.yaml", Checker.Loc.DisplayFilePath(@"C:\specs\my api.yaml"));
+            Assert.Equal("sub/x.yaml", Checker.Loc.DisplayFilePath(@"sub\x.yaml"));
+        }
+        else
+        {
+            // filepath.ToSlash does nothing on Unix: a backslash is part of the name, and escaped
+            Assert.Equal("./C:%5Cspecs%5Capi.yaml", SpecLoader.OriginFile(@"C:\specs\api.yaml"));
+            Assert.Equal("sub%5Cx.yaml", Checker.Loc.DisplayFilePath(@"sub\x.yaml"));
+        }
+    }
+}

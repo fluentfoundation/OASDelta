@@ -1,0 +1,27 @@
+openapi: 3.0.3
+info:
+  title: reference cycles v2
+  version: "1"
+paths:
+  /pets:
+    get:
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pet'
+components:
+  schemas:
+    Pet:
+      $ref: '#/components/schemas/Pet'
+    A:
+      $ref: '#/components/schemas/B'
+    B:
+      $ref: '#/components/schemas/A'
+    Owner:
+      type: object
+      properties:
+        pet:
+          $ref: '#/components/schemas/A'

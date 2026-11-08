@@ -326,6 +326,9 @@ public sealed class SubschemasDiff : IDiff
     internal bool Pending;
     internal List<Ref<Schema>>? BaseRefs, RevisionRefs;
 
+    /// <summary>A subschema's title; a schema without a value (a cycle of bare references) has none.</summary>
+    private static string TitleOf(Ref<Schema> r) => r.Value?.Title ?? "";
+
     public bool Empty => Added.Count == 0 && Deleted.Count == 0 && Modified.Count == 0;
 
     public object? ToOutput()
@@ -345,8 +348,8 @@ public sealed class SubschemasDiff : IDiff
         if (d is null) return;
         list.Add(new ModifiedSubschema
         {
-            Base = new Subschema(i1, ComponentNameOf(r1), r1.Value!.Title),
-            Revision = new Subschema(i2, ComponentNameOf(r2), r2.Value!.Title),
+            Base = new Subschema(i1, ComponentNameOf(r1), TitleOf(r1)),
+            Revision = new Subschema(i2, ComponentNameOf(r2), TitleOf(r2)),
             Diff = d,
         });
     }
@@ -420,8 +423,8 @@ public sealed class SubschemasDiff : IDiff
         var r = new SubschemasDiff();
         int n = Math.Min(refs1.Count, refs2.Count);
         for (int i = 0; i < n; i++) AddModified(r.Modified, refs1[i], refs2[i], i, i, SchemaDiff.Get(config, state, refs1[i], refs2[i]));
-        for (int i = refs2.Count; i < refs1.Count; i++) r.AppendDeleted(i, refs1[i], refs1[i].Value!.Title);
-        for (int i = refs1.Count; i < refs2.Count; i++) r.AppendAdded(i, refs2[i], refs2[i].Value!.Title);
+        for (int i = refs2.Count; i < refs1.Count; i++) r.AppendDeleted(i, refs1[i], TitleOf(refs1[i]));
+        for (int i = refs1.Count; i < refs2.Count; i++) r.AppendAdded(i, refs2[i], TitleOf(refs2[i]));
         return r.Empty ? null : r;
     }
 
@@ -438,14 +441,14 @@ public sealed class SubschemasDiff : IDiff
         var deletedIdx = NonContainedInline(u, refs1, refs2, false);
         var (added2, deleted2, modified) = CompareByTitle(u, addedIdx, deletedIdx, refs1, refs2);
         addedIdx = added2; deletedIdx = deleted2;
-        if (addedIdx.Count == 1 && deletedIdx.Count == 1 && refs1[deletedIdx[0]].Value!.Title == "" && refs2[addedIdx[0]].Value!.Title == "")
+        if (addedIdx.Count == 1 && deletedIdx.Count == 1 && TitleOf(refs1[deletedIdx[0]]) == "" && TitleOf(refs2[addedIdx[0]]) == "")
         {
             AddModified(modified, refs1[deletedIdx[0]], refs2[addedIdx[0]], deletedIdx[0], addedIdx[0], u.Diff(refs1[deletedIdx[0]], refs2[addedIdx[0]]));
             addedIdx = []; deletedIdx = [];
         }
         var r = new SubschemasDiff { Modified = modified };
-        foreach (var i in addedIdx) r.Added.Add(new Subschema(i, "", refs2[i].Value!.Title));
-        foreach (var i in deletedIdx) r.Deleted.Add(new Subschema(i, "", refs1[i].Value!.Title));
+        foreach (var i in addedIdx) r.Added.Add(new Subschema(i, "", TitleOf(refs2[i])));
+        foreach (var i in deletedIdx) r.Deleted.Add(new Subschema(i, "", TitleOf(refs1[i])));
         return r;
     }
 
@@ -456,10 +459,10 @@ public sealed class SubschemasDiff : IDiff
         var matchedTitles = new HashSet<string>(StringComparer.Ordinal) { "" };
         foreach (var a in addedIdx)
         {
-            var title = refs2[a].Value!.Title;
+            var title = TitleOf(refs2[a]);
             if (matchedTitles.Contains(title)) continue;
             foreach (var d in deletedIdx)
-                if (title == refs1[d].Value!.Title) { addedMatched[a] = d; deletedMatched[d] = a; matchedTitles.Add(title); break; }
+                if (title == TitleOf(refs1[d])) { addedMatched[a] = d; deletedMatched[d] = a; matchedTitles.Add(title); break; }
         }
         var modified = new List<ModifiedSubschema>();
         foreach (var a in addedIdx)

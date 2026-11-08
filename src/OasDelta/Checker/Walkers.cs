@@ -452,13 +452,13 @@ public sealed class SchemaWalker
     public static void AddedProperties(SchemaDiff? d, Action<string, string, Schema, SchemaDiff, bool> processor)
     {
         if (d is null) return;
-        new SchemaWalker { Properties = (p, sd, under) => { foreach (var name in sd.PropertiesDiff!.Added) processor(p, name, sd.Revision!.Properties[name].Value!, sd, under); } }.Walk(d);
+        new SchemaWalker { Properties = (p, sd, under) => { foreach (var name in sd.PropertiesDiff!.Added) if (sd.Revision!.Properties[name].Value is { } v) processor(p, name, v, sd, under); } }.Walk(d);
     }
 
     public static void DeletedProperties(SchemaDiff? d, Action<string, string, Schema, SchemaDiff, bool> processor)
     {
         if (d is null) return;
-        new SchemaWalker { Properties = (p, sd, under) => { foreach (var name in sd.PropertiesDiff!.Deleted) processor(p, name, sd.Base!.Properties[name].Value!, sd, under); } }.Walk(d);
+        new SchemaWalker { Properties = (p, sd, under) => { foreach (var name in sd.PropertiesDiff!.Deleted) if (sd.Base!.Properties[name].Value is { } v) processor(p, name, v, sd, under); } }.Walk(d);
     }
 
     /// <summary>schemawalk.PropertyFullName (oasdiff 1.35.0): names joined with "/", appended to the path with "/". No
@@ -587,7 +587,8 @@ internal sealed class References
 
 public static class Loc
 {
-    public static string DisplayFilePath(string file) => Change.SourceDisplay(file);
+    /// <summary>location.displayFilePath of the file kin-openapi records in an origin (see SpecLoader.OriginFile).</summary>
+    public static string DisplayFilePath(string file) => Change.SourceDisplay(Load.SpecLoader.OriginFile(file));
 
     private static SourceLoc FromKey(Sources sources, Operation? op, Location key) => new()
     {

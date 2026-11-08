@@ -1,0 +1,20 @@
+openapi: 3.0.3
+info:
+  title: sunset sources
+  version: "1"
+paths:
+  /pets:
+    get:
+      x-stability-level: stable
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  kind:
+                    type: string

@@ -110,6 +110,40 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         return spec;
     }
 
+    /// <summary>
+    /// The file name kin-openapi records in an element's origin, which oasdiff shows in changelog sources:
+    /// <c>url.URL{Path: filepath.ToSlash(location)}.String()</c>. Go escapes the path (net/url, encodePath) and, per
+    /// RFC 3986 §4.2, puts "./" in front when the first segment has a colon. So "a b.yaml" shows as "a%20b.yaml", and
+    /// on Windows "C:\specs\api.yaml" becomes "./C:/specs/api.yaml", which oasdiff's display then reads as a git
+    /// revision ("./C" : "/specs/api.yaml"). Stdin and http(s) locations are left alone.
+    /// </summary>
+    public static string OriginFile(string location)
+    {
+        if (location.Length == 0 || location == "-" || location.Contains("://", StringComparison.Ordinal)) return location;
+        var escaped = GoEscapePath(ToSlash(location));
+        int slash = escaped.IndexOf('/');
+        var first = slash < 0 ? escaped : escaped[..slash];
+        return first.Contains(':', StringComparison.Ordinal) ? "./" + escaped : escaped;
+    }
+
+    /// <summary>Go filepath.ToSlash: only Windows has another separator.</summary>
+    internal static string ToSlash(string p) => OperatingSystem.IsWindows() ? p.Replace('\\', '/') : p;
+
+    /// <summary>Go net/url escape(s, encodePath): keeps letters, digits, "-_.~" and "$&amp;+,/:;=@"; escapes every
+    /// other UTF-8 byte as %XX.</summary>
+    private static string GoEscapePath(string s)
+    {
+        var bytes = System.Text.Encoding.UTF8.GetBytes(s);
+        var sb = new System.Text.StringBuilder(bytes.Length);
+        foreach (var b in bytes)
+        {
+            char c = (char)b;
+            if (char.IsAsciiLetterOrDigit(c) || "-_.~$&+,/:;=@".Contains(c, StringComparison.Ordinal)) sb.Append(c);
+            else sb.Append('%').Append("0123456789ABCDEF"[b >> 4]).Append("0123456789ABCDEF"[b & 15]);
+        }
+        return sb.ToString();
+    }
+
     private static bool IsUrl(string s) => s.StartsWith("http://", StringComparison.OrdinalIgnoreCase) || s.StartsWith("https://", StringComparison.OrdinalIgnoreCase);
 
     private static readonly HttpClient Http = new();
@@ -207,9 +241,10 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         else
         {
             var baseDir = Path.GetDirectoryName(from.Key) ?? "";
-            key = Path.GetFullPath(Path.Combine(baseDir, Uri.UnescapeDataString(file)));
-            var locDir = Path.GetDirectoryName(from.Location) ?? "";
-            location = CleanPath(locDir.Length == 0 ? file : locDir + "/" + file);
+            var rel = Uri.UnescapeDataString(file);
+            key = Path.GetFullPath(Path.Combine(baseDir, rel));
+            // kin's defaultJoin: path.Join(path.Dir(base.Path), ref.Path) on the slash form, unescaped (absolute: as is)
+            location = rel.StartsWith('/') ? rel : CleanPath(GoPathDir(ToSlash(from.Location)) + "/" + rel);
         }
         if (_docs.TryGetValue(key, out var d)) return d;
         string text;
@@ -260,15 +295,23 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         foreach (var (k, v) in n.Pairs!)
             if (k.KeyString.StartsWith("x-", StringComparison.Ordinal))
                 (result.Extensions ??= new(StringComparer.Ordinal))[k.KeyString] = v.ToValue();
-        if (depth > 64) throw new LoadException($"reference cycle detected at {reference}");
-        var (tdoc, tnode) = ResolveRef(doc, reference);
-        if (RefOf(tnode) is not null)
+        // a cycle of bare references ("A: {$ref: B}, B: {$ref: A}") has no value: kin-openapi loads it and leaves Value
+        // nil, and the diff fails only if it compares such a schema on both sides ("base schema value is nil", 104)
+        if (depth > 64) return result;
+        var noOrigin = _noOrigin;
+        _noOrigin = 0; // the target is located where it is defined
+        try
         {
-            // ref to a ref: share the final value
-            var inner = ReadRef(tdoc, tnode, tdoc.KeyOf(tnode), build, depth + 1);
-            result.Value = inner.Value;
+            var (tdoc, tnode) = ResolveRef(doc, reference);
+            if (RefOf(tnode) is not null)
+            {
+                // ref to a ref: share the final value
+                var inner = ReadRef(tdoc, tnode, tdoc.KeyOf(tnode), build, depth + 1);
+                result.Value = inner.Value;
+            }
+            else result.Value = Cached(tdoc, tnode, tdoc.KeyOf(tnode), build);
         }
-        else result.Value = Cached(tdoc, tnode, tdoc.KeyOf(tnode), build);
+        finally { _noOrigin = noOrigin; }
         return result;
     }
 
@@ -280,9 +323,14 @@ public sealed class SpecLoader(LoaderOptions? options = null)
 
     private void Register(Node n, object value) => _cache[(n, value.GetType())] = value;
 
-    private static Origin? MakeOrigin(Document doc, Node n, Node? key)
+    /// <summary>Above zero while building what is written inline under a header: kin-openapi's Header embeds Parameter,
+    /// and its origin walk skips the embedded struct, so the header's schema, content and examples get no origin
+    /// (changes in them are located at the operation). Whatever they reach through $ref has its own origin.</summary>
+    private int _noOrigin;
+
+    private Origin? MakeOrigin(Document doc, Node n, Node? key)
     {
-        if (!doc.TrackOrigin || n.Kind != NodeKind.Mapping) return null;
+        if (_noOrigin > 0 || !doc.TrackOrigin || n.Kind != NodeKind.Mapping) return null;
         key ??= doc.KeyOf(n);
         if (key is null && n.Pairs is { Count: > 0 }) key = n.Pairs[0].Key;
         var o = new Origin();
@@ -371,7 +419,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
     }
 
     private static readonly HashSet<string> InfoKnown = Known("title", "summary", "description", "termsOfService", "contact", "license", "version");
-    private static Info BuildInfo(Document doc, Node n, Node? key)
+    private Info BuildInfo(Document doc, Node n, Node? key)
     {
         var i = new Info
         {
@@ -393,14 +441,14 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         return i;
     }
 
-    private static ExternalDocs BuildExternalDocs(Document doc, Node n)
+    private ExternalDocs BuildExternalDocs(Document doc, Node n)
     {
         var e = new ExternalDocs { Origin = MakeOrigin(doc, n, null), Description = Str(n["description"]), URL = Str(n["url"]) };
         SetExtensions(e, n, Known("description", "url"));
         return e;
     }
 
-    private static Tag BuildTag(Document doc, Node n)
+    private Tag BuildTag(Document doc, Node n)
     {
         var t = new Tag { Origin = MakeOrigin(doc, n, null), Name = Str(n["name"]), Description = Str(n["description"]) };
         if (n["externalDocs"] is { IsMapping: true } ed) t.ExternalDocs = BuildExternalDocs(doc, ed);
@@ -408,7 +456,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         return t;
     }
 
-    private static List<Server> BuildServers(Document doc, Node n)
+    private List<Server> BuildServers(Document doc, Node n)
     {
         var r = new List<Server>();
         foreach (var s in n.Items!)
@@ -631,9 +679,14 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         p.Deprecated = Bool(n["deprecated"]); p.Required = Bool(n["required"]);
         p.Example = n["example"]?.ToValue();
         SetExtensions(p, n, ParameterKnown);
-        if (n["schema"] is { } s && IsSchemaNode(s)) p.Schema = ReadSchemaRef(doc, s, null);
-        p.Examples = RefMap<Example>(doc, n["examples"], BuildExample);
-        p.Content = BuildContent(doc, n["content"]);
+        if (p is Header) _noOrigin++;
+        try
+        {
+            if (n["schema"] is { } s && IsSchemaNode(s)) p.Schema = ReadSchemaRef(doc, s, null);
+            p.Examples = RefMap<Example>(doc, n["examples"], BuildExample);
+            p.Content = BuildContent(doc, n["content"]);
+        }
+        finally { if (p is Header) _noOrigin--; }
     }
 
     private Example BuildExample(Document doc, Node n, Node? key)
@@ -693,7 +746,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         return s;
     }
 
-    private static OAuthFlow? Flow(Document doc, Node? n)
+    private OAuthFlow? Flow(Document doc, Node? n)
     {
         if (n is null || !n.IsMapping) return null;
         var f = new OAuthFlow { Origin = MakeOrigin(doc, n, null), AuthorizationURL = Str(n["authorizationUrl"]), TokenURL = Str(n["tokenUrl"]), RefreshURL = Str(n["refreshUrl"]) };

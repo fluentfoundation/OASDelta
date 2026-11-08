@@ -1,0 +1,67 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        extensions:
+                            added:
+                                - x-sunset
+                        summary:
+                            from: ""
+                            to: list pets
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            name:
+                                                                extensions:
+                                                                    added:
+                                                                        - x-sunset
+                                                                description:
+                                                                    from: ""
+                                                                    to: the name
+                                                                deprecated:
+                                                                    from: false
+                                                                    to: true
+                        deprecated:
+                            from: false
+                            to: true
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   extensions:
+                added:
+                    - x-sunset
+            summary:
+                from: ""
+                to: list pets
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                name:
+                                                    extensions:
+                                                        added:
+                                                            - x-sunset
+                                                    description:
+                                                        from: ""
+                                                        to: the name
+                                                    deprecated:
+                                                        from: false
+                                                        to: true
+            deprecated:
+                from: false
+                to: true
+

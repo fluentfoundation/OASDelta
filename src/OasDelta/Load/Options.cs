@@ -42,7 +42,7 @@ public static class SpecOptions
             foreach (var op in path.Operations().Values)
                 foreach (var pp in path.Parameters)
                 {
-                    var v = pp.Value!;
+                    if (pp.Value is not { } v) continue;
                     bool exists = op.Parameters.Any(x => x.Value is not null && x.Value.In == v.In && x.Value.Name == v.Name);
                     if (!exists) op.Parameters = [.. op.Parameters, new Ref<Parameter>(v)];
                 }

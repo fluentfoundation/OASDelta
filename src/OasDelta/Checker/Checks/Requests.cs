@@ -12,7 +12,7 @@ public static partial class Checks
         foreach (var (path, _, m, md) in Walkers.ModifiedOperations(d))
         {
             if (md.RequestBodyDiff is not { Added: true }) continue;
-            var id = md.Revision!.RequestBody!.Value!.Required ? Ids.AddedRequiredRequestBody : Ids.AddedOptionalRequestBody;
+            var id = md.Revision!.RequestBody!.Value?.Required == true ? Ids.AddedRequiredRequestBody : Ids.AddedOptionalRequestBody;
             result.Add(OpInfo.FromDiff(c, md, s, m, path).NewApiChange(id, [], "").WithSources(null, Loc.RequestBody(s, md.Revision)));
         }
         return result;
@@ -167,7 +167,7 @@ public static partial class Checks
             foreach (var name in rd.Added)
             {
                 if (!sd.Revision!.Properties.TryGetValue(name, out var rp) || rp is null) continue;
-                if (rp.Value!.ReadOnly) continue;
+                if (rp.Value?.ReadOnly != false) continue;
                 if (!sd.Base!.Properties.TryGetValue(name, out var bp) || bp is null) continue;
                 var (b, rv) = Loc.SchemaAddedItem(p.OpInfo.Sources, p.OpInfo.MethodDiff, sd, "required", name);
                 r.Add(ParamChange(p, Ids.RequestHeaderPropertyBecameRequired, [p.Name, name]).WithSchema(sd, sd, "").WithSources(b, rv));
@@ -178,7 +178,7 @@ public static partial class Checks
             foreach (var name in prd.Added)
             {
                 if (!pd.Revision!.Properties.TryGetValue(name, out var rp) || rp is null) continue;
-                if (rp.Value!.ReadOnly) continue;
+                if (rp.Value?.ReadOnly != false) continue;
                 var (b, rv) = Loc.SchemaAddedItem(p.OpInfo.Sources, p.OpInfo.MethodDiff, pd, "required", name);
                 var full = SchemaWalker.PropertyFullName(path, SchemaWalker.PropertyFullName(pname, name));
                 r.Add(ParamChange(p, Ids.RequestHeaderPropertyBecameRequired, [p.Name, full]).WithSchema(sd, pd, full).WithSources(b, rv));
@@ -192,7 +192,7 @@ public static partial class Checks
 
     private static bool ChangedRequiredPropertyRelevant(SchemaDiff sd, string name) =>
         sd.Base!.Properties.TryGetValue(name, out var b) && b is not null &&
-        sd.Revision!.Properties.TryGetValue(name, out var r) && r is not null && !r.Value!.ReadOnly;
+        sd.Revision!.Properties.TryGetValue(name, out var r) && r?.Value is { ReadOnly: false };
 
     public static List<Change> RequestPropertyRequiredUpdatedCheck(OpenApiDiff d, Sources s, CheckerConfig c) => RequestBodies(d, s, c, (i, r) =>
     {
@@ -205,7 +205,7 @@ public static partial class Checks
                 if (!ChangedRequiredPropertyRelevant(sd, name)) continue;
                 var (b, rv) = Loc.SchemaAddedItem(i.Sources, i.OperationItem, sd, "required", name);
                 List<object?> args = [SchemaWalker.PropertyFullName(path, SchemaWalker.PropertyFullName(pname, name))];
-                var ch = sd.Revision!.Properties[name].Value!.Default is null
+                var ch = sd.Revision!.Properties[name].Value?.Default is null
                     ? i.NewChange(Ids.RequestPropertyBecameRequired, args, "")
                     : i.NewChange(Ids.RequestPropertyBecameRequiredWithDefault, args, RequiredRequestPropertyWithDefaultComment);
                 r.Add(ch.WithSchema(i.SchemaDiff, sd, schemaPath).WithSources(b, rv));

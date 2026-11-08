@@ -1,0 +1,30 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        added:
+                                            - application/json
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            added:
+                                - application/json
+components:
+    schemas:
+        added:
+            - A
+            - B
+            - Owner
+            - Pet
+

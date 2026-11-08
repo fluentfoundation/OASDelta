@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-media-type-added] en ./properties/ref_cycle_revision.yaml
+	en API GET /pets
+		agregado el tipo de media `application/json` a la respuesta con estado `200`
+
+

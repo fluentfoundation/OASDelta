@@ -1,0 +1,87 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 4
+-------------------------
+GET /api/{domain}/{project}/badges/security-score
+- Extensions changed
+  - Deleted extension: x-extension-test
+- Tags changed from 'security' to ''
+- OperationID changed from 'GetSecurityScores' to 'GetSecurityScore'
+- Deleted query param: filter
+- Deleted header param: user
+- Deleted cookie param: test
+- Modified query param: image
+  - Extensions changed
+    - New extension: x-extension-test
+  - Schema changed
+    - Extensions changed
+      - Deleted extension: x-extension-test
+    - Property 'Not' changed
+      - Schema added
+    - Type changed from 'string' to ''
+    - Format changed from 'general string' to ''
+    - Description changed from 'alphanumeric' to ''
+    - Example changed from 'tufinim/generic-bank:cia-latest' to null
+    - Pattern changed from '^(?:[\w-./:]+)$' to ''
+  - Examples changed
+    - New example: 1
+    - Modified example: 0
+      - Value changed from 'reuven' to 'reuven1'
+- Modified query param: token
+  - Schema changed
+    - Example changed from '26734565-dbcc-449a-a370-0beaaf04b0e8' to '26734565-dbcc-449a-a370-0beaaf04b0e7'
+    - MaxLength changed from 29 to 30
+- Responses changed
+  - New response: default
+  - Deleted response: 200
+  - Deleted response: 201
+  - Deleted response: 400
+
+GET /api/{domain}/{project}/install-command
+- Deleted header param: network-policies
+- Modified path param: project
+  - Schema changed
+    - New enum values: [test1]
+- Responses changed
+  - Modified response: default
+    - Extensions changed
+      - New extension: x-extension-test
+      - New extension: x-test
+    - Description changed from 'Tufin1' to 'Tufin'
+    - Headers changed
+      - Modified header: x-ratelimit-limit
+        - Extensions changed
+          - New extension: x-test
+        - Description changed from 'Request limit per hour.' to 'Request limit per min.'
+- Servers changed
+  - New server: https://api.oasdiff.com
+  - New server: https://www.oasdiff.com
+
+POST /register
+- Callbacks changed
+- Security changed
+  - Deleted security requirements: bearerAuth
+  - Modified security requirements: OAuth
+    - Scheme OAuth Added scopes: [write:pets]
+
+POST /subscribe
+- Callbacks changed
+
+Other Changes
+-------------
+Extensions changed
+- Deleted extension: x-extension-test
+- Modified extension: x-extension-test2
+  - Modified value from 'go' to 'nogo'
+
+Security Requirements changed
+- Deleted security requirements: bearerAuth
+
+Servers changed
+- Deleted server: tufin.com
+
+

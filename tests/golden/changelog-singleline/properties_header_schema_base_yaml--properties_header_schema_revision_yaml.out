@@ -1,0 +1,6 @@
+2 changes: 0 error, 0 warning, 2 info
+info at ./properties/header_schema_revision.yaml, in API GET /pets the `x-inline` response header's maxLength was set to `10` for the status `200` [response-header-max-length-set]. 
+
+info at ./properties/header_schema_revision.yaml, in API GET /pets the `x-shared` response header's minLength was set to `2` for the status `200` [response-header-min-length-set]. 
+
+

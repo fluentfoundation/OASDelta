@@ -1,0 +1,14 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /pets
+- :warning: sunset date `2020-01-01` is too small, must be at least `0` days from now
+- :warning: response property `name` sunset date `2020-01-01` is too small, must be at least `0` days from now
+
+
+
+
+
+

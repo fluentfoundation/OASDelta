@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-parameter-type-changed] at ./properties/param_deprecated_revision.yaml
+	in API GET /pets/{petId}
+		for the `query` request parameter `limit`, the `type` was changed from `string` to `integer`
+
+

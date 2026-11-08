@@ -1,0 +1,18 @@
+4 alterações: 1 error, 0 warning, 3 info
+error	[request-parameter-type-changed] em ./properties/param_deprecated_revision.yaml
+	em API GET /pets/{petId}
+		no parâmetro de requisição do tipo `query` e nome `limit`, o `type` foi alterado de `string` para `integer`
+
+info	[request-parameter-deprecated] em ./properties/param_deprecated_revision.yaml
+	em API GET /pets/{petId}
+		o parâmetro de requisição do tipo `path` e nome `petId` foi depreciado
+
+info	[request-parameter-deprecated] em ./properties/param_deprecated_revision.yaml
+	em API GET /pets/{petId}
+		o parâmetro de requisição do tipo `query` e nome `filter` foi depreciado
+
+info	[request-parameter-deprecated] em ./properties/param_deprecated_revision.yaml
+	em API GET /pets/{petId}
+		o parâmetro de requisição do tipo `query` e nome `limit` foi depreciado
+
+

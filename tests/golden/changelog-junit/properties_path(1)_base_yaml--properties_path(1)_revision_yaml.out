@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="26" errors="0" failures="26" name="OASDiff">
+    <testcase name="response-success-status-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the success response with the status `200`</failure>
+    </testcase>
+    <testcase name="response-success-status-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the success response with the status `201`</failure>
+    </testcase>
+    <testcase name="api-security-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the endpoint scheme security `bearerAuth` was removed from the API</failure>
+    </testcase>
+    <testcase name="api-security-scope-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the security scope `write:pets` was added to the endpoint's security scheme `OAuth`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `cookie` request parameter `test`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `header` request parameter `user`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `query` request parameter `filter`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `header` request parameter `network-policies`</failure>
+    </testcase>
+    <testcase name="api-major-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`</failure>
+    </testcase>
+    <testcase name="api-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the schema `network-policies`</failure>
+    </testcase>
+    <testcase name="api-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the schema `rules`</failure>
+    </testcase>
+    <testcase name="api-security-component-oauth-scope-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `OAuth` oauth `authorizationCode` flow scope `admin` was added</failure>
+    </testcase>
+    <testcase name="api-security-component-oauth-scope-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `OAuth` oauth `authorizationCode` flow scope `accountWrite` was updated from `Allows account data to be written` to `Allows accounts data to be written`</failure>
+    </testcase>
+    <testcase name="api-security-component-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `AccessToken` was removed</failure>
+    </testcase>
+    <testcase name="api-security-component-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `bearerAuth` was removed</failure>
+    </testcase>
+    <testcase name="api-operation-id-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`</failure>
+    </testcase>
+    <testcase name="api-security-anonymous-access-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the endpoint now allows anonymous access</failure>
+    </testcase>
+    <testcase name="api-tag-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api tag `security` removed</failure>
+    </testcase>
+    <testcase name="request-parameter-max-length-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `token`, the maxLength was increased from `29` to `30`</failure>
+    </testcase>
+    <testcase name="request-parameter-pattern-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image`</failure>
+    </testcase>
+    <testcase name="request-parameter-type-generalized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any`</failure>
+    </testcase>
+    <testcase name="response-non-success-status-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the non-success response with the status `400`</failure>
+    </testcase>
+    <testcase name="api-security-anonymous-access-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the endpoint now allows anonymous access</failure>
+    </testcase>
+    <testcase name="new-optional-request-default-parameter-to-existing-path" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `header` request parameter `name` to all path's operations</failure>
+    </testcase>
+    <testcase name="request-parameter-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new enum value `test1` to the `path` request parameter `project`</failure>
+    </testcase>
+    <testcase name="api-security-anonymous-access-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the endpoint now allows anonymous access</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

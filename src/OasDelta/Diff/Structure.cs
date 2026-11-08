@@ -1,8 +1,8 @@
-using StringBuilder = System.Text.StringBuilder;
 using System.Text.RegularExpressions;
-using Encoding = OasDelta.Model.Encoding;
 using OasDelta.Model;
 using OasDelta.Yaml;
+using Encoding = OasDelta.Model.Encoding;
+using StringBuilder = System.Text.StringBuilder;
 
 namespace OasDelta.Diff;
 
@@ -1343,6 +1343,11 @@ public readonly record struct Endpoint(string Method, string Path) : IOutput, IC
         int c = string.CompareOrdinal(Path, other.Path);
         return c != 0 ? c : string.CompareOrdinal(Method, other.Method);
     }
+
+    public static bool operator <(Endpoint left, Endpoint right) => left.CompareTo(right) < 0;
+    public static bool operator <=(Endpoint left, Endpoint right) => left.CompareTo(right) <= 0;
+    public static bool operator >(Endpoint left, Endpoint right) => left.CompareTo(right) > 0;
+    public static bool operator >=(Endpoint left, Endpoint right) => left.CompareTo(right) >= 0;
 
     public object? ToOutput()
     {

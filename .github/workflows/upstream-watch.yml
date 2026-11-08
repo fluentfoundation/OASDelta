@@ -103,7 +103,7 @@ jobs:
           bash tools/check_golden.sh src/OasDelta/bin/Release/net10.0/oasdelta > "$RUNNER_TEMP/check.txt" 2>&1
           echo "check_status=$?" >> "$GITHUB_ENV"
           set -e
-          tail -1 "$RUNNER_TEMP/check.txt"
+          grep -vE '^(FAIL|NOW MATCHES) ' "$RUNNER_TEMP/check.txt" || true
 
       - name: Push branch and open issue
         if: steps.v.outputs.skip == 'false'
@@ -123,7 +123,9 @@ jobs:
           dry="${{ github.event.inputs.dry_run }}"
           [ "$dry" == "true" ] || git push -q origin "$BRANCH"
 
-          summary=$(tail -1 "$RUNNER_TEMP/check.txt")
+          summary=$(grep '^golden: ' "$RUNNER_TEMP/check.txt" | tail -1)
+          # anything else the check reported, e.g. "rule coverage dropped below the floor (377 < 379)"
+          notes=$(grep -vE '^(FAIL|NOW MATCHES|golden:) ' "$RUNNER_TEMP/check.txt" | grep . | head -10 || true)
           failures=$(grep -E '^(FAIL|NOW MATCHES) ' "$RUNNER_TEMP/check.txt" | head -40)
           compare="${{ github.server_url }}/${{ github.repository }}/compare/main...$BRANCH?expand=1"
           {
@@ -138,6 +140,9 @@ jobs:
             echo "- Golden outputs that changed: **$changed**"
             echo "- Upstream test pairs (\`tests/extra-pairs.txt\`): $pairs lines"
             echo "- Golden check of the current OasDelta against the new goldens: \`$summary\`"
+            if [ -n "$notes" ]; then
+              while IFS= read -r note; do echo "- Also reported: \`$note\`"; done <<< "$notes"
+            fi
             echo
             if [ "$changed" -gt 0 ]; then
               echo "| Set | Changed outputs |"
@@ -163,3 +168,4 @@ jobs:
             gh issue create --title "oasdiff $LATEST: regenerate goldens and port the changes" --body-file "$RUNNER_TEMP/issue.md"
           fi
           cat "$RUNNER_TEMP/issue.md" >> "$GITHUB_STEP_SUMMARY"
+          cat "$RUNNER_TEMP/issue.md"   # also in the log

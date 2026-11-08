@@ -212,6 +212,12 @@ public static class NodeReader
         {
             throw new YamlParseException($"yaml: line {e.Start.Line}: {e.Message}");
         }
+        catch (InvalidOperationException e)
+        {
+            // YamlDotNet's parser can fail this way on some malformed input (e.g. a block scalar indented less than its
+            // indentation indicator says, in a sequence, followed by more mapping keys); go-yaml reports a syntax error
+            throw new YamlParseException($"yaml: line {parser.Current?.Start.Line ?? 0}: {e.Message}");
+        }
     }
 
     /// <summary>Line access into the source text, built on first use (only block scalars need it).</summary>

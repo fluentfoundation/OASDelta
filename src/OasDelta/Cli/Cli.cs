@@ -449,8 +449,12 @@ In 'composed' mode, base and revision can be a glob and oasdiff will compare mat
         try { result.Diff = OpenApiDiff.Get(config, s1, s2); }
         catch (Exception e) when (e is DiffException or DuplicateEndpointException) { throw new ReturnError("diff failed: " + e.Message, 104); }
         Timing("diff", sw);
-        foreach (var (k, v) in OpenApiDiff.OperationSources(s1, baseSrc.DisplayPath)) result.Sources.Map[k] = v;
-        foreach (var (k, v) in OpenApiDiff.OperationSources(s2, revSrc.DisplayPath)) result.Sources.Map[k] = v;
+        try
+        {
+            foreach (var (k, v) in OpenApiDiff.OperationSources(s1, baseSrc.DisplayPath, config.IncludePathParams)) result.Sources.Map[k] = v;
+            foreach (var (k, v) in OpenApiDiff.OperationSources(s2, revSrc.DisplayPath, config.IncludePathParams)) result.Sources.Map[k] = v;
+        }
+        catch (Exception e) when (e is DiffException or DuplicateEndpointException) { throw new ReturnError("diff failed: " + e.Message, 104); }
         Timing("sources", sw);
         result.BaseVersion = s1.Info?.Version is { Length: > 0 } bv ? bv : "n/a";
         result.RevisionVersion = s2.Info?.Version is { Length: > 0 } rv ? rv : "n/a";

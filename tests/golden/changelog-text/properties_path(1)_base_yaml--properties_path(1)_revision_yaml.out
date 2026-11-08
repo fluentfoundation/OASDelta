@@ -1,0 +1,113 @@
+26 changes: 4 error, 4 warning, 18 info
+error	[response-success-status-removed] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the success response with the status `200`
+
+error	[response-success-status-removed] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the success response with the status `201`
+
+error	[api-security-removed] at ./properties/path(1)_revision.yaml
+	in API POST /register
+		the endpoint scheme security `bearerAuth` was removed from the API
+
+error	[api-security-scope-added] at ./properties/path(1)_revision.yaml
+	in API POST /register
+		the security scope `write:pets` was added to the endpoint's security scheme `OAuth`
+
+warning	[request-parameter-removed] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `cookie` request parameter `test`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning	[request-parameter-removed] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `header` request parameter `user`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning	[request-parameter-removed] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		deleted the `query` request parameter `filter`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning	[request-parameter-removed] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/install-command
+		deleted the `header` request parameter `network-policies`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+info	[api-major-version-not-bumped]
+	in info
+		a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`
+
+info	[api-schema-removed]
+	in components/schemas
+		removed the schema `network-policies`
+
+info	[api-schema-removed]
+	in components/schemas
+		removed the schema `rules`
+
+info	[api-security-component-oauth-scope-added]
+	in components/securitySchemes
+		the component security scheme `OAuth` oauth `authorizationCode` flow scope `admin` was added
+
+info	[api-security-component-oauth-scope-changed]
+	in components/securitySchemes
+		the component security scheme `OAuth` oauth `authorizationCode` flow scope `accountWrite` was updated from `Allows account data to be written` to `Allows accounts data to be written`
+
+info	[api-security-component-removed]
+	in components/securitySchemes
+		the component security scheme `AccessToken` was removed
+
+info	[api-security-component-removed]
+	in components/securitySchemes
+		the component security scheme `bearerAuth` was removed
+
+info	[api-operation-id-removed] at ./properties/path(1)_base.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
+
+info	[api-security-anonymous-access-added] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		the endpoint now allows anonymous access
+		This endpoint inherits the API's top-level security requirements.
+
+info	[api-tag-removed] at ./properties/path(1)_base.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		api tag `security` removed
+
+info	[request-parameter-max-length-increased] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		for the `query` request parameter `token`, the maxLength was increased from `29` to `30`
+
+info	[request-parameter-pattern-removed] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image`
+
+info	[request-parameter-type-generalized] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any`
+
+info	[response-non-success-status-removed] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/badges/security-score
+		removed the non-success response with the status `400`
+
+info	[api-security-anonymous-access-added] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/install-command
+		the endpoint now allows anonymous access
+		This endpoint inherits the API's top-level security requirements.
+
+info	[new-optional-request-default-parameter-to-existing-path] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/install-command
+		added the new optional `header` request parameter `name` to all path's operations
+
+info	[request-parameter-enum-value-added] at ./properties/path(1)_revision.yaml
+	in API GET /api/{domain}/{project}/install-command
+		added the new enum value `test1` to the `path` request parameter `project`
+
+info	[api-security-anonymous-access-added] at ./properties/path(1)_revision.yaml
+	in API POST /subscribe
+		the endpoint now allows anonymous access
+		This endpoint inherits the API's top-level security requirements.
+
+

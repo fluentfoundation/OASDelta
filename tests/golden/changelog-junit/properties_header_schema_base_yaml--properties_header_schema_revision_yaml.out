@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-header-max-length-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `x-inline` response header's maxLength was set to `10` for the status `200`</failure>
+    </testcase>
+    <testcase name="response-header-min-length-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `x-shared` response header's minLength was set to `2` for the status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

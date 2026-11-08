@@ -1,0 +1,13 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /pets
+-  added the media type `application/json` for the response with the status `200`
+
+
+
+
+
+

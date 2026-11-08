@@ -1,0 +1,16 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /pets/{petId}
+- :warning: for the `query` request parameter `limit`, the `type` was changed from `string` to `integer`
+-  `path` request parameter `petId` was deprecated
+-  `query` request parameter `filter` was deprecated
+-  `query` request parameter `limit` was deprecated
+
+
+
+
+
+

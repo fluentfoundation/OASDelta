@@ -1,0 +1,18 @@
+4 изменений: 1 error, 0 warning, 3 info
+error	[request-parameter-type-changed] в ./properties/param_deprecated_revision.yaml
+	в API GET /pets/{petId}
+		в параметре запроса `query` `limit` `type` изменён с `string` на `integer`
+
+info	[request-parameter-deprecated] в ./properties/param_deprecated_revision.yaml
+	в API GET /pets/{petId}
+		`path` параметр запроса `petId` объявлен устаревшим
+
+info	[request-parameter-deprecated] в ./properties/param_deprecated_revision.yaml
+	в API GET /pets/{petId}
+		`query` параметр запроса `filter` объявлен устаревшим
+
+info	[request-parameter-deprecated] в ./properties/param_deprecated_revision.yaml
+	в API GET /pets/{petId}
+		`query` параметр запроса `limit` объявлен устаревшим
+
+

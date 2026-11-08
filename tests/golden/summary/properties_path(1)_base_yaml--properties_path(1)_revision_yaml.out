@@ -1,0 +1,33 @@
+diff: true
+details:
+    callbacks:
+        added: 1
+    endpoints:
+        modified: 4
+    examples:
+        added: 1
+    headers:
+        deleted: 3
+    links:
+        added: 1
+    parameters:
+        deleted: 1
+    paths:
+        modified: 4
+    requestBodies:
+        modified: 1
+    responses:
+        deleted: 1
+    schemas:
+        deleted: 2
+    security:
+        deleted: 1
+    securitySchemes:
+        deleted: 2
+        modified: 1
+    servers:
+        deleted: 1
+    tags:
+        deleted: 1
+        modified: 1
+

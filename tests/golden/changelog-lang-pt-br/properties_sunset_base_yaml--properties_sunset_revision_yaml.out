@@ -1,0 +1,10 @@
+2 alterações: 2 error, 0 warning, 0 info
+error	[api-sunset-date-too-small] em ./properties/sunset_revision.yaml
+	em API GET /pets
+		data de expiração `2020-01-01` muito próxima, deve ser pelo menos `0` dias a partir de agora
+
+error	[response-property-sunset-date-too-small] em ./properties/sunset_revision.yaml
+	em API GET /pets
+		a data de expiração `name` da propriedade de resposta `2020-01-01` é muito próxima, deve ser pelo menos `0` dias a partir de agora
+
+

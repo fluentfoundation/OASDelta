@@ -28,7 +28,7 @@ public static partial class Checks
             foreach (var name in rd.HeadersDiff.Added)
             {
                 if (!rd.Revision!.Headers.TryGetValue(name, out var h) || h is null) continue;
-                result.Add(oi.NewApiChange(Ids.ResponseHeaderAdded, [name, status], "").WithSources(null, Loc.FromOrigin(s, md.Revision, h.Value!.Origin)));
+                result.Add(oi.NewApiChange(Ids.ResponseHeaderAdded, [name, status], "").WithSources(null, Loc.FromOrigin(s, md.Revision, h.Value?.Origin)));
             }
         }
         return result;
@@ -42,8 +42,7 @@ public static partial class Checks
             if (rd.HeadersDiff is null) continue;
             foreach (var name in rd.HeadersDiff.Deleted)
             {
-                if (!rd.Base!.Headers.TryGetValue(name, out var h) || h is null) continue;
-                var header = h.Value!;
+                if (!rd.Base!.Headers.TryGetValue(name, out var h) || h?.Value is not { } header) continue;
                 var id = header.Required ? Ids.RequiredResponseHeaderRemoved : Ids.OptionalResponseHeaderRemoved;
                 result.Add(oi.NewApiChange(id, [name, status], "").WithSources(Loc.FromOrigin(s, md.Base, header.Origin), null));
             }
@@ -397,7 +396,7 @@ public static partial class Checks
         {
             if (p.PropertyDiff.DeprecatedDiff is not { } dd) return;
             var stage = Deprecation.Announce(dd, p.PropertyDiff.Revision?.Extensions, days, ids);
-            var (b, rv) = Loc.SchemaField(i.Sources, i.OperationItem, p.PropertyDiff, stage.AtSunset ? DiffConfig.SunsetExtension : "deprecated");
+            var (b, rv) = Loc.SchemaField(i.Sources, i.OperationItem, p.PropertyDiff, "deprecated"); // as upstream, at every stage
             List<object?> args = [p.FullName, .. stage.Args];
             var ch = p.NewChange(stage.Id, args, "").WithSources(b, rv);
             if (stage.Id == ids.Deprecated || stage.Id == ids.WithSunset)

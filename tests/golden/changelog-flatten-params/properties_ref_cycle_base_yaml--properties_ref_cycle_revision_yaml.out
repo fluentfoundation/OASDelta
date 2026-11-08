@@ -1,0 +1,1 @@
+[{"id":"response-media-type-added","text":"added the media type `application/json` for the response with the status `200`","level":1,"operation":"GET","path":"/pets","section":"paths","revisionSource":{"file":"./properties/ref_cycle_revision.yaml","line":12,"column":13,"endLine":14,"endColumn":49},"fingerprint":"9cabd5f1efd8"}]

@@ -1,0 +1,26 @@
+openapi: 3.0.3
+info:
+  title: sunset sources
+  version: "1"
+paths:
+  /pets:
+    get:
+      x-stability-level: stable
+      deprecated: true
+      summary: list pets
+      x-sunset: "2020-01-01"
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    deprecated: true
+                    description: the name
+                    x-sunset: "2020-01-01"
+                  kind:
+                    type: string

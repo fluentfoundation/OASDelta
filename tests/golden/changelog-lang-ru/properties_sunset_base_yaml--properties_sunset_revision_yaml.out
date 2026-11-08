@@ -1,0 +1,10 @@
+2 изменений: 2 error, 0 warning, 0 info
+error	[api-sunset-date-too-small] в ./properties/sunset_revision.yaml
+	в API GET /pets
+		дата API sunset date `2020-01-01` слишком ранняя, должно быть как минимум `0` дней от текущего дня
+
+error	[response-property-sunset-date-too-small] в ./properties/sunset_revision.yaml
+	в API GET /pets
+		дата прекращения `name` поля ответа `2020-01-01` слишком ранняя, должно быть как минимум `0` дней от текущего дня
+
+

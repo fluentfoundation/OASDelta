@@ -1,0 +1,113 @@
+26 cambios: 4 error, 4 warning, 18 info
+error	[response-success-status-removed] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		removido el estado de respuesta exitosa `200`
+
+error	[response-success-status-removed] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		removido el estado de respuesta exitosa `201`
+
+error	[api-security-removed] en ./properties/path(1)_revision.yaml
+	en API POST /register
+		el esquema de seguridad `bearerAuth` fue removido del endpoint de la api
+
+error	[api-security-scope-added] en ./properties/path(1)_revision.yaml
+	en API POST /register
+		el alcance de seguridad `write:pets` fue agregado al esquema de seguridad del endpoint `OAuth`
+
+warning	[request-parameter-removed] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		eliminado el parámetro `cookie` de solicitud `test`
+		Esto es una advertencia porque algunas aplicaciones pueden devolver un error al recibir un parámetro que no esperan. Se recomienda deprecar el parámetro primero.
+
+warning	[request-parameter-removed] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		eliminado el parámetro `header` de solicitud `user`
+		Esto es una advertencia porque algunas aplicaciones pueden devolver un error al recibir un parámetro que no esperan. Se recomienda deprecar el parámetro primero.
+
+warning	[request-parameter-removed] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		eliminado el parámetro `query` de solicitud `filter`
+		Esto es una advertencia porque algunas aplicaciones pueden devolver un error al recibir un parámetro que no esperan. Se recomienda deprecar el parámetro primero.
+
+warning	[request-parameter-removed] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/install-command
+		eliminado el parámetro `header` de solicitud `network-policies`
+		Esto es una advertencia porque algunas aplicaciones pueden devolver un error al recibir un parámetro que no esperan. Se recomienda deprecar el parámetro primero.
+
+info	[api-major-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión mayor no aumentó, de `1.0.0` a `1.0.1`
+
+info	[api-schema-removed]
+	en components/schemas
+		removido el esquema `network-policies`
+
+info	[api-schema-removed]
+	en components/schemas
+		removido el esquema `rules`
+
+info	[api-security-component-oauth-scope-added]
+	en components/securitySchemes
+		en el esquema de seguridad `OAuth`, el flujo OAuth `authorizationCode` agregó el alcance `admin`
+
+info	[api-security-component-oauth-scope-changed]
+	en components/securitySchemes
+		en el esquema de seguridad `OAuth`, el alcance `authorizationCode` del flujo OAuth `accountWrite` fue actualizado de `Allows account data to be written` a `Allows accounts data to be written`
+
+info	[api-security-component-removed]
+	en components/securitySchemes
+		el esquema de seguridad `AccessToken` fue removido
+
+info	[api-security-component-removed]
+	en components/securitySchemes
+		el esquema de seguridad `bearerAuth` fue removido
+
+info	[api-operation-id-removed] en ./properties/path(1)_base.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		id de operación de api `GetSecurityScores` removido y reemplazado por `GetSecurityScore`
+
+info	[api-security-anonymous-access-added] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		el endpoint ahora permite acceso anónimo
+		Este endpoint hereda los requisitos de seguridad de nivel superior de la API.
+
+info	[api-tag-removed] en ./properties/path(1)_base.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		etiqueta de api `security` removida
+
+info	[request-parameter-max-length-increased] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		para el parámetro `query` de solicitud `token`, maxLength fue aumentado de `29` a `30`
+
+info	[request-parameter-pattern-removed] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		removido el patrón `^(?:[\w-./:]+)$` del parámetro `query` de solicitud `image`
+
+info	[request-parameter-type-generalized] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		para el parámetro `query` de solicitud `image`, el `type/format` fue ampliado de `string/general string` a `any`
+
+info	[response-non-success-status-removed] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/badges/security-score
+		removido el estado de respuesta no exitosa `400`
+
+info	[api-security-anonymous-access-added] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/install-command
+		el endpoint ahora permite acceso anónimo
+		Este endpoint hereda los requisitos de seguridad de nivel superior de la API.
+
+info	[new-optional-request-default-parameter-to-existing-path] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/install-command
+		agregado el nuevo parámetro `header` de solicitud opcional `name` a todas las operaciones del path
+
+info	[request-parameter-enum-value-added] en ./properties/path(1)_revision.yaml
+	en API GET /api/{domain}/{project}/install-command
+		agregado el nuevo valor enum `test1` al parámetro `path` de solicitud `project`
+
+info	[api-security-anonymous-access-added] en ./properties/path(1)_revision.yaml
+	en API POST /subscribe
+		el endpoint ahora permite acceso anónimo
+		Este endpoint hereda los requisitos de seguridad de nivel superior de la API.
+
+

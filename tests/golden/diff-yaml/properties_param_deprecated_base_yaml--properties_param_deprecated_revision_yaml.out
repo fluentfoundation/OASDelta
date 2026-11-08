@@ -1,0 +1,55 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                path:
+                                    petId:
+                                        deprecated:
+                                            from: false
+                                            to: true
+                                query:
+                                    filter:
+                                        deprecated:
+                                            from: false
+                                            to: true
+                                    limit:
+                                        deprecated:
+                                            from: false
+                                            to: true
+                                        schema:
+                                            type:
+                                                added:
+                                                    - integer
+                                                deleted:
+                                                    - string
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets/{petId}
+        :   parameters:
+                modified:
+                    path:
+                        petId:
+                            deprecated:
+                                from: false
+                                to: true
+                    query:
+                        filter:
+                            deprecated:
+                                from: false
+                                to: true
+                        limit:
+                            deprecated:
+                                from: false
+                                to: true
+                            schema:
+                                type:
+                                    added:
+                                        - integer
+                                    deleted:
+                                        - string
+

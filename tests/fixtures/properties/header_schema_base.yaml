@@ -1,0 +1,27 @@
+openapi: 3.0.3
+info:
+  title: header schema sources
+  version: "1"
+paths:
+  /pets:
+    get:
+      responses:
+        "200":
+          description: ok
+          headers:
+            X-Inline:
+              schema:
+                type: string
+            X-Shared:
+              $ref: "#/components/headers/Shared"
+            X-Referenced:
+              schema:
+                $ref: "#/components/schemas/Token"
+components:
+  headers:
+    Shared:
+      schema:
+        type: string
+  schemas:
+    Token:
+      type: string

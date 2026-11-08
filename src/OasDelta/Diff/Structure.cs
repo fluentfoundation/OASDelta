@@ -415,10 +415,10 @@ public sealed class ParametersDiffByLocation : IDiff
 
     internal static bool IsExplodedObjectParam(Parameter? p)
     {
-        if (p?.Schema is null) return false;
+        // a schema without a value (a cycle of bare references) is no object; oasdiff 1.35.0 panics here instead
+        if (p?.Schema?.Value is not { } s) return false;
         bool explode = p.Explode is true;
         bool form = p.Style switch { "form" => true, "" => IsQueryOrCookie(p), _ => false };
-        var s = p.Schema.Value!;
         bool obj = s.Type is { Count: 1 } && s.Type[0] == "object" && s.Properties.Count > 0;
         return explode && form && obj;
     }
@@ -1514,13 +1514,11 @@ public sealed class OpenApiDiff : IDiff
         return r;
     }
 
-    /// <summary>Sources: operation → source url.</summary>
-    public static Dictionary<Operation, string> OperationSources(OpenApiDoc spec, string url)
-    {
-        var r = new Dictionary<Operation, string>(ReferenceEqualityComparer.Instance);
-        foreach (var item in spec.Paths.Map.Values) foreach (var op in item.Operations().Values) r[op] = url;
-        return r;
-    }
+    /// <summary>Sources: operation → source url, as diff.GetWithOperationsSourcesMap computes them: through
+    /// mergedPaths of the one spec, which also rejects two paths that are the same endpoint once parameter names are
+    /// ignored (DuplicateEndpointException) and invalid x-since-date values (DiffException).</summary>
+    public static Dictionary<Operation, string> OperationSources(OpenApiDoc spec, string url, bool includePathParams) =>
+        MergedPaths([(spec, url)], includePathParams).Item2;
 
     /// <summary>diff.GetPathsDiff for composed mode.</summary>
     public static (OpenApiDiff? diff, Dictionary<Operation, string> sources) GetPathsDiff(DiffConfig config, List<(OpenApiDoc spec, string url)> s1, List<(OpenApiDoc spec, string url)> s2)

@@ -1,0 +1,1 @@
+{"openapi":"3.0.3","info":{"title":"negative zero","version":"1"},"paths":{"/a":{"get":{"parameters":[{"name":"int","in":"query","schema":{"type":"number","default":-0}},{"name":"float","in":"query","schema":{"type":"number","default":-0.0}}],"responses":{"200":{"description":"ok"}}}}}}

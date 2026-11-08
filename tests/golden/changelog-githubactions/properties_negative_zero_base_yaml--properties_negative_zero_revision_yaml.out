@@ -1,0 +1,4 @@
+::notice title=request-parameter-default-value-changed,file=./properties/negative_zero_revision.yaml,line=23,col=13::in API GET /a for the `query` request parameter `float`, default value was changed from `-0.00` to `1.00`
+::notice title=request-parameter-default-value-changed,file=./properties/negative_zero_revision.yaml,line=13,col=13::in API GET /a for the `query` request parameter `int`, default value was changed from `0.00` to `1.00`
+::notice title=request-parameter-default-value-changed,file=./properties/negative_zero_revision.yaml,line=18,col=13::in API GET /a for the `query` request parameter `octal`, default value was changed from `0.00` to `1.00`
+

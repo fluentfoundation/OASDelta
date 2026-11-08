@@ -152,6 +152,8 @@ public partial class SpecProperties
     private static object? AsParsed(object? v) => v switch
     {
         long l => (double)l,
+        // go-yaml writes negative zero as "-0" and reads that back as the integer 0
+        double d when d == 0 && double.IsNegative(d) => 0.0,
         Map m => m.Aggregate(new Map(), (acc, kv) => { acc[kv.Key] = AsParsed(kv.Value); return acc; }),
         List<object?> l => l.Select(AsParsed).ToList(),
         _ => v,

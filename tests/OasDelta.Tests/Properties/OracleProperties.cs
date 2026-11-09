@@ -25,16 +25,18 @@ public sealed class OracleFactAttribute : FactAttribute
 /// pair on which both tools agree, is a promotion candidate: the pair is kept under properties/new-rules/&lt;rule&gt;
 /// to be added to tests/fixtures (raising tests/rule-coverage-floor.txt).
 ///
-/// Run by the Properties workflow (nightly, with a time budget: CsCheck_Time); locally:
+/// Run by the Properties workflow (nightly, with a time budget in seconds: CsCheck_Time, sampled in one-minute rounds;
+/// the first mismatch ends the run); locally:
 /// OASDIFF=path/to/oasdiff CsCheck_Time=60 dotnet test --filter Category=Oracle
 /// </summary>
 [Trait("Category", "Oracle")]
-
 public class OracleProperties(ITestOutputHelper output)
 {
     private static readonly Lazy<string[][]> Commands = new(() => [.. GoldenTests.Commands().Values]);
 
     private static readonly Gen<int[]> CommandChoice = Gen.Int[0, 1000].Array[3];
+
+    private const int RoundSeconds = 60;
 
     [OracleFact]
     public void MatchesOasdiff()
@@ -48,7 +50,7 @@ public class OracleProperties(ITestOutputHelper output)
         var started = DateTime.UtcNow;
         try
         {
-            Gen.Select(SpecPair.Gen, CommandChoice).Sample((p, choice) =>
+            void Check(SpecPair p, int[] choice)
             {
                 using var f = CaseFiles.Write(p);
                 foreach (var i in choice)
@@ -92,7 +94,23 @@ public class OracleProperties(ITestOutputHelper output)
                     if (want.Code == 0 && Support.Compare(want.Out, changelog.Out) != Support.Agreement.Different && promoted.TryAdd(id, ""))
                         promoted[id] = Support.Keep(Path.Combine("new-rules", id), p, $"rule {id}: fires here and in no golden; oasdelta and oasdiff agree");
                 }
-            }, print: t => $"{t.Item1}\ncommands: {string.Join(" | ", t.Item2.Select(i => string.Join(' ', Commands.Value[i % Commands.Value.Length])))}\nkept in {Support.Keep("mismatch", t.Item1, "oasdelta and oasdiff differ")}");
+            }
+
+            string Print((SpecPair, int[]) t) =>
+                $"{t.Item1}\ncommands: {string.Join(" | ", t.Item2.Select(i => string.Join(' ', Commands.Value[i % Commands.Value.Length])))}\nkept in {Support.Keep("mismatch", t.Item1, "oasdelta and oasdiff differ")}";
+
+            var gen = Gen.Select(SpecPair.Gen, CommandChoice);
+            if (Environment.GetEnvironmentVariable("CsCheck_Seed") is { Length: > 0 })
+                gen.Sample(Check, print: Print); // replay a reported seed
+            else
+            {
+                // rounds of at most a minute, so a mismatch ends the run (shrunk) soon after it is found instead of
+                // CsCheck spending the rest of the budget looking for a smaller one
+                int budget = int.TryParse(Environment.GetEnvironmentVariable("CsCheck_Time"), out var s) && s > 0 ? s : 60;
+                double left;
+                while ((left = budget - (DateTime.UtcNow - started).TotalSeconds) >= 1)
+                    gen.Sample(Check, time: (int)Math.Min(RoundSeconds, left), print: Print);
+            }
         }
         catch (Exception e)
         {

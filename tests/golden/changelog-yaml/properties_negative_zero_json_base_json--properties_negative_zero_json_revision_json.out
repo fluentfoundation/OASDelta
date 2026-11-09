@@ -1,0 +1,15 @@
+- id: request-parameter-default-value-changed
+  text: for the `query` request parameter `float`, default value was changed from `-0.00` to `1.00`
+  level: 1
+  operation: GET
+  path: /a
+  section: paths
+  fingerprint: 20280e5573d8
+- id: request-parameter-default-value-changed
+  text: for the `query` request parameter `int`, default value was changed from `-0.00` to `1.00`
+  level: 1
+  operation: GET
+  path: /a
+  section: paths
+  fingerprint: 6390d629eb1b
+

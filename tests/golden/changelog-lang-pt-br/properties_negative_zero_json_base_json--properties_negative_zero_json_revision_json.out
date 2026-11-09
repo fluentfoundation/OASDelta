@@ -1,0 +1,10 @@
+2 alterações: 0 error, 0 warning, 2 info
+info	[request-parameter-default-value-changed] em ./properties/negative_zero_json_revision.json
+	em API GET /a
+		no parâmetro de requisição do tipo `query` e nome `float` teve seu valor padrão foi alterado de `-0.00` para `1.00`
+
+info	[request-parameter-default-value-changed] em ./properties/negative_zero_json_revision.json
+	em API GET /a
+		no parâmetro de requisição do tipo `query` e nome `int` teve seu valor padrão foi alterado de `-0.00` para `1.00`
+
+

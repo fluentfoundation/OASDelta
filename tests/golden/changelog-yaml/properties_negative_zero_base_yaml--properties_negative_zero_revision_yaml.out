@@ -1,0 +1,46 @@
+- id: request-parameter-default-value-changed
+  text: for the `query` request parameter `float`, default value was changed from `-0.00` to `1.00`
+  level: 1
+  operation: GET
+  path: /a
+  section: paths
+  baseSource:
+    file: ./properties/negative_zero_base.yaml
+    line: 23
+    column: 13
+  revisionSource:
+    file: ./properties/negative_zero_revision.yaml
+    line: 23
+    column: 13
+  fingerprint: 20280e5573d8
+- id: request-parameter-default-value-changed
+  text: for the `query` request parameter `int`, default value was changed from `0.00` to `1.00`
+  level: 1
+  operation: GET
+  path: /a
+  section: paths
+  baseSource:
+    file: ./properties/negative_zero_base.yaml
+    line: 13
+    column: 13
+  revisionSource:
+    file: ./properties/negative_zero_revision.yaml
+    line: 13
+    column: 13
+  fingerprint: fcd231707ac1
+- id: request-parameter-default-value-changed
+  text: for the `query` request parameter `octal`, default value was changed from `0.00` to `1.00`
+  level: 1
+  operation: GET
+  path: /a
+  section: paths
+  baseSource:
+    file: ./properties/negative_zero_base.yaml
+    line: 18
+    column: 13
+  revisionSource:
+    file: ./properties/negative_zero_revision.yaml
+    line: 18
+    column: 13
+  fingerprint: e74491e779f4
+

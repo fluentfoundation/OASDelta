@@ -1,0 +1,15 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /a
+-  for the `query` request parameter `float`, default value was changed from `-0.00` to `1.00`
+-  for the `query` request parameter `int`, default value was changed from `0.00` to `1.00`
+-  for the `query` request parameter `octal`, default value was changed from `0.00` to `1.00`
+
+
+
+
+
+

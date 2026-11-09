@@ -59,7 +59,9 @@ jobs:
       - name: Build
         run: dotnet build tests/OasDelta.Tests -c Release
 
-      - name: Generate pairs and compare (CsCheck)
+      # Runs for the whole budget unless it finds a mismatch: then it stops within a minute and fails, with the shrunk
+      # case in the job summary and the "properties" artifact. A failure here is a parity finding, not a timeout.
+      - name: Compare with oasdiff for ${{ github.event.inputs.minutes || '20' }} minutes (fails on the first mismatch)
         env:
           MINUTES: ${{ github.event.inputs.minutes || '20' }}
           SEED: ${{ github.event.inputs.seed }}

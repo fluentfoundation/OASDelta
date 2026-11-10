@@ -38,6 +38,10 @@ public class OracleProperties(ITestOutputHelper output)
 
     private const int RoundSeconds = 60;
 
+    /// <summary>How many more times to run oasdiff when its output differs. An output it gives once in 5 runs is still
+    /// missed by 10 retries 1 time in 10 (0.8^10); by 100, about 2 times in 10^10.</summary>
+    private const int OasdiffRetries = 100;
+
     [OracleFact]
     public void MatchesOasdiff()
     {
@@ -67,8 +71,10 @@ public class OracleProperties(ITestOutputHelper output)
                     }
                     var agreement = got.Code == want.Code ? Support.Compare(want.Out, got.Out) : Support.Agreement.Different;
                     // some of oasdiff's output depends on Go's random map order (e.g. which name a schema shared by two
-                    // components gets): OasDelta's output only has to be one oasdiff can produce
-                    for (int retry = 0; agreement == Support.Agreement.Different && retry < 10; retry++)
+                    // components gets): OasDelta's output only has to be one oasdiff can produce. The outputs need not be
+                    // equally likely (one name in 5 runs, or fewer), so retry until oasdiff produces it; only a real
+                    // mismatch runs all the retries.
+                    for (int retry = 0; agreement == Support.Agreement.Different && retry < OasdiffRetries; retry++)
                     {
                         var again = oasdiff.Run(args);
                         if (again.Code == got.Code && Support.Compare(again.Out, got.Out) != Support.Agreement.Different)
@@ -78,7 +84,7 @@ public class OracleProperties(ITestOutputHelper output)
                         }
                     }
                     if (agreement == Support.Agreement.Different)
-                        throw new PropertyException($"{string.Join(' ', cmd)}: exit {got.Code}, oasdiff {want.Code}\n--- oasdiff\n{Support.Clip(want.Out)}\n--- oasdelta\n{Support.Clip(got.Out)}");
+                        throw new PropertyException($"{string.Join(' ', cmd)}: exit {got.Code}, oasdiff {want.Code} (in each of {OasdiffRetries + 1} runs)\n--- oasdiff\n{Support.Clip(want.Out)}\n--- oasdelta\n{Support.Clip(got.Out)}");
                     if (agreement == Support.Agreement.Reordered) Interlocked.Increment(ref reordered);
                 }
 

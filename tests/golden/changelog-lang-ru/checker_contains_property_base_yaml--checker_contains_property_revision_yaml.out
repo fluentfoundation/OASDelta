@@ -6,12 +6,12 @@ error	[request-property-contains-added] в ./checker/contains_property_revision.
 error	[request-property-max-contains-set] в ./checker/contains_property_revision.yaml
 	в API POST /products
 		у поля запроса `tags` задано значение maxContains в `3`
-		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+		Установка ограничения отклоняет значения, которые принимал прежний контракт, если только клиенты не укладываются в новое ограничение.
 
 error	[request-property-min-contains-set] в ./checker/contains_property_revision.yaml
 	в API POST /products
 		у поля запроса `tags` задано значение minContains в `1`
-		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+		Установка ограничения отклоняет значения, которые принимал прежний контракт, если только клиенты не укладываются в новое ограничение.
 
 info	[api-version-not-bumped]
 	в info

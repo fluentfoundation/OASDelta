@@ -4,7 +4,7 @@
 ## API Changes
 
 ### GET /api/test
-- :warning: api removed without deprecation
+- :warning: API removed without deprecation
 
 
 ### POST /api/test

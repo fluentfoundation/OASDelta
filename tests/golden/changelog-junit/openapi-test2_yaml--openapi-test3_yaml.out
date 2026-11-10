@@ -17,7 +17,7 @@
       <failure message="Breaking change detected">for the `query` request parameter `token`, the `type/format` was changed from `any` to `string/uuid`</failure>
     </testcase>
     <testcase name="api-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api removed without deprecation</failure>
+      <failure message="Breaking change detected">API removed without deprecation</failure>
     </testcase>
     <testcase name="request-parameter-pattern-changed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">changed the pattern of the `path` request parameter `domain` from `^(?:\d+)$` to `^(?:([a-z]+-)*([a-z]+)?)$`</failure>
@@ -32,7 +32,7 @@
       <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.1`</failure>
     </testcase>
     <testcase name="api-operation-id-added" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api operation id `GetSecurityScore` was added</failure>
+      <failure message="Breaking change detected">API operation id `GetSecurityScore` was added</failure>
     </testcase>
     <testcase name="request-parameter-min-unset" classname="OASDiff" time="0">
       <failure message="Breaking change detected">for the `path` request parameter `domain`, the min was unset from `7.00`</failure>

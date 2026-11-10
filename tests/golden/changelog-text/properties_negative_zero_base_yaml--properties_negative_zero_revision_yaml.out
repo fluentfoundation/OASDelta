@@ -5,7 +5,7 @@ info	[request-parameter-default-value-changed] at ./properties/negative_zero_rev
 
 info	[request-parameter-default-value-changed] at ./properties/negative_zero_revision.yaml
 	in API GET /a
-		for the `query` request parameter `int`, default value was changed from `0.00` to `1.00`
+		for the `query` request parameter `int`, default value was changed from `-0.00` to `1.00`
 
 info	[request-parameter-default-value-changed] at ./properties/negative_zero_revision.yaml
 	in API GET /a

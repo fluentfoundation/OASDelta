@@ -8,10 +8,10 @@
 -------------------------
 GET /api/test
 - Extensions changed
-  - Modified extension: tag
-    - Modified /version from 'old' to 'new'
   - Modified extension: x-since-date
     - Modified value from '2023-01-11' to '2023-01-12'
+  - Modified extension: tag
+    - Modified /version from 'old' to 'new'
 - OperationID changed from 'x' to ''
 
 

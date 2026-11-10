@@ -1,4 +1,4 @@
-::error title=api-path-removed-without-deprecation,file=./list-of-types/param-test-base.yaml::in API GET /test api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=./list-of-types/param-test-base.yaml::in API GET /test API path removed without deprecation
 ::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 ::notice title=endpoint-added,file=./list-of-types/edge-cases-base.yaml,line=7,col=5::in API GET /edge endpoint added
 

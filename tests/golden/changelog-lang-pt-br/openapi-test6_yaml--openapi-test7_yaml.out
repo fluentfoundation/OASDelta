@@ -1,14 +1,14 @@
 3 alterações: 3 error, 0 warning, 0 info
 error	[api-path-removed-without-deprecation] em openapi-test6.yaml
 	em API GET /health
-		caminho da api removido sem depreciação
+		caminho da API removido sem depreciação
 
 error	[api-path-removed-without-deprecation] em openapi-test6.yaml
 	em API GET /health/live
-		caminho da api removido sem depreciação
+		caminho da API removido sem depreciação
 
 error	[api-path-removed-without-deprecation] em openapi-test6.yaml
 	em API GET /health/ready
-		caminho da api removido sem depreciação
+		caminho da API removido sem depreciação
 
 

@@ -1,7 +1,7 @@
 17 changes: 6 error, 2 warning, 9 info
 error at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score added the new required `header` request parameter `x-auth-name` [new-required-request-parameter]. 
 
-error at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `token`, the maxLength was set to `30` [request-parameter-max-length-set]. Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+error at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `token`, the maxLength was set to `30` [request-parameter-max-length-set]. Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
 error at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score added the pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` to the `query` request parameter `token` [request-parameter-pattern-added]. This is a breaking change because adding a pattern restriction to a previously unrestricted parameter will reject values that were previously accepted, breaking existing clients
 
@@ -9,7 +9,7 @@ error at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-
 
 error at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `token`, the `type/format` was changed from `any` to `string/uuid` [request-parameter-type-changed]. 
 
-error at openapi-test2.yaml, in API POST /api/{domain}/{project}/badges/security-score api removed without deprecation [api-removed-without-deprecation]. 
+error at openapi-test2.yaml, in API POST /api/{domain}/{project}/badges/security-score API removed without deprecation [api-removed-without-deprecation]. 
 
 warning at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score changed the pattern of the `path` request parameter `domain` from `^(?:\d+)$` to `^(?:([a-z]+-)*([a-z]+)?)$` [request-parameter-pattern-changed]. This is a warning because adding or changing a pattern may restrict the accepted values and break existing clients. For pattern changes, it is difficult to automatically analyze if the new pattern is a superset of the previous pattern (e.g. changed from '[0-9]+' to '[0-9]*')
 
@@ -19,7 +19,7 @@ info, in components/securitySchemes the component security scheme `OAuth` was ad
 
 info, in info a breaking change was detected but the version is still `1.0.1` [api-version-not-bumped]. 
 
-info at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score api operation id `GetSecurityScore` was added [api-operation-id-added]. 
+info at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score API operation id `GetSecurityScore` was added [api-operation-id-added]. 
 
 info at openapi-test3.yaml, in API GET /api/{domain}/{project}/badges/security-score for the `path` request parameter `domain`, the min was unset from `7.00` [request-parameter-min-unset]. 
 

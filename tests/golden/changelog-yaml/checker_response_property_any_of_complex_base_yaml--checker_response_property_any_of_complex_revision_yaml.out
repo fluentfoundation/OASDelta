@@ -29,7 +29,7 @@
     column: 11
   fingerprint: 2f1fb0b5f5b6
 - id: response-property-type-changed
-  text: 'the `anyOf[subschema #3: Rabbit]/` response''s property `type` changed from `string` to `number` for status `200`'
+  text: 'the `anyOf[subschema #3: Rabbit]` response''s property `type` changed from `string` to `number` for status `200`'
   level: 3
   operation: GET
   operationId: listPets
@@ -43,9 +43,9 @@
     file: ./checker/response_property_any_of_complex_revision.yaml
     line: 19
     column: 21
-  fingerprint: 281df648b34a
+  fingerprint: a23b10f6a59e
 - id: response-property-type-changed
-  text: 'the `anyOf[subschema #4 -> subschema #5]/` response''s property `type` changed from `string` to `number` for status `200`'
+  text: 'the `anyOf[subschema #4 -> subschema #5]` response''s property `type` changed from `string` to `number` for status `200`'
   level: 3
   operation: GET
   operationId: listPets
@@ -59,7 +59,7 @@
     file: ./checker/response_property_any_of_complex_revision.yaml
     line: 22
     column: 21
-  fingerprint: a5cdf1b26505
+  fingerprint: f100f1a97e7f
 - id: api-version-not-bumped
   text: a breaking change was detected but the version is still `1.0.0`
   level: 1

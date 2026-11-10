@@ -1,5 +1,5 @@
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /api/{domain}/{project}/badges/security-score
@@ -12,7 +12,7 @@
     endColumn: 18
   fingerprint: f8d390617baf
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /api/{domain}/{project}/install-command
@@ -55,7 +55,7 @@
     line: 150
     column: 5
     endLine: 155
-    endColumn: 19
+    endColumn: 25
   fingerprint: 377a843441ca
 - id: api-security-component-removed
   text: the component security scheme `AccessToken` was removed
@@ -77,7 +77,7 @@
     line: 169
     column: 5
     endLine: 172
-    endColumn: 24
+    endColumn: 25
   fingerprint: 471257f7ddee
 - id: api-version-decreased
   text: a breaking change was detected but the version decreased from `1.0.1` to `1.0.0`

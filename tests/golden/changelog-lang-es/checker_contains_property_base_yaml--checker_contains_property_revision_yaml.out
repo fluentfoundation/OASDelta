@@ -6,12 +6,12 @@ error	[request-property-contains-added] en ./checker/contains_property_revision.
 error	[request-property-max-contains-set] en ./checker/contains_property_revision.yaml
 	en API POST /products
 		el valor maxContains de la propiedad de solicitud `tags` fue establecido en `3`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 error	[request-property-min-contains-set] en ./checker/contains_property_revision.yaml
 	en API POST /products
 		el valor minContains de la propiedad de solicitud `tags` fue establecido en `1`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 info	[api-version-not-bumped]
 	en info

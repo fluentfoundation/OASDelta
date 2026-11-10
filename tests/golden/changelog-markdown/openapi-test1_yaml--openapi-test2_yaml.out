@@ -12,9 +12,9 @@
 - :warning: deleted the `cookie` request parameter `test`
 - :warning: deleted the `header` request parameter `user`
 - :warning: deleted the `header` request parameter `x-auth-name`
--  api operation id `GetSecurityScores` removed and replaced with ``
+-  API operation id `GetSecurityScores` removed and replaced with ``
 -  the endpoint now allows anonymous access
--  api tag `security` removed
+-  API tag `security` removed
 -  for the `query` request parameter `token`, the maxLength was unset from `29`
 -  removed the pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` from the `query` request parameter `token`
 -  for the `query` request parameter `token`, the `type/format` was widened from `string/uuid` to `any`
@@ -26,15 +26,15 @@
 
 
 ### GET /api/{domain}/{project}/install-command
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### POST /register
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### POST /subscribe
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 

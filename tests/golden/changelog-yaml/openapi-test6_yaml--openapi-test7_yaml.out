@@ -1,5 +1,5 @@
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /health
@@ -12,7 +12,7 @@
     endColumn: 33
   fingerprint: 2441359cef10
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /health/live
@@ -25,7 +25,7 @@
     endColumn: 33
   fingerprint: a60aa31d3c5f
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /health/ready

@@ -1,5 +1,5 @@
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /api/test
@@ -12,7 +12,7 @@
     endColumn: 26
   fingerprint: a2540a71ef5b
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /api/test1

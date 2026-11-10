@@ -12,7 +12,7 @@
   fingerprint: ed3d4d5e2c90
 - id: request-property-max-contains-set
   text: the `tags` request property's maxContains was set to `3`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: createProduct
@@ -25,7 +25,7 @@
   fingerprint: cc792af394ee
 - id: request-property-min-contains-set
   text: the `tags` request property's minContains was set to `1`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: createProduct

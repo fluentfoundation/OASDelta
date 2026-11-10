@@ -1,7 +1,7 @@
 3 changes: 2 error, 0 warning, 1 info
-error at ./checker/clone_diff_base.yaml, in API PATCH /pets api removed without deprecation [api-removed-without-deprecation]. 
+error at ./checker/clone_diff_base.yaml, in API PATCH /pets API removed without deprecation [api-removed-without-deprecation]. 
 
-error at ./checker/clone_diff_base.yaml, in API GET /stable-gone api path removed without deprecation [api-path-removed-without-deprecation]. 
+error at ./checker/clone_diff_base.yaml, in API GET /stable-gone API path removed without deprecation [api-path-removed-without-deprecation]. 
 
 info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
 

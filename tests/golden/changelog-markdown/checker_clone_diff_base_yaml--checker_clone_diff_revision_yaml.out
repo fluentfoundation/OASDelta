@@ -4,11 +4,11 @@
 ## API Changes
 
 ### PATCH /pets
-- :warning: api removed without deprecation
+- :warning: API removed without deprecation
 
 
 ### GET /stable-gone
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 

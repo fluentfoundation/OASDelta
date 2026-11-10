@@ -1,5 +1,5 @@
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: LOCK
   operationId: lockGone
@@ -13,7 +13,7 @@
     endColumn: 28
   fingerprint: 26f671eda83f
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: QUERY
   operationId: goneQuery
@@ -27,7 +27,7 @@
     endColumn: 26
   fingerprint: 71e305c016cb
 - id: api-removed-without-deprecation
-  text: api removed without deprecation
+  text: API removed without deprecation
   level: 3
   operation: PURGE
   operationId: purgeSearch

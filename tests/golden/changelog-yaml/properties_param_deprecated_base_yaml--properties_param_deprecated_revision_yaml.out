@@ -19,18 +19,10 @@
   operation: GET
   path: /pets/{petId}
   section: paths
-  baseSource:
-    file: ./properties/param_deprecated_base.yaml
-    line: 7
-    column: 5
-    endLine: 24
-    endColumn: 26
   revisionSource:
     file: ./properties/param_deprecated_revision.yaml
-    line: 7
-    column: 5
-    endLine: 27
-    endColumn: 26
+    line: 12
+    column: 11
   fingerprint: 2458fb1381a4
 - id: request-parameter-deprecated
   text: '`query` request parameter `filter` was deprecated'
@@ -38,18 +30,10 @@
   operation: GET
   path: /pets/{petId}
   section: paths
-  baseSource:
-    file: ./properties/param_deprecated_base.yaml
-    line: 7
-    column: 5
-    endLine: 24
-    endColumn: 26
   revisionSource:
     file: ./properties/param_deprecated_revision.yaml
-    line: 7
-    column: 5
-    endLine: 27
-    endColumn: 26
+    line: 17
+    column: 11
   fingerprint: 680d500cb1fe
 - id: request-parameter-deprecated
   text: '`query` request parameter `limit` was deprecated'
@@ -57,5 +41,9 @@
   operation: GET
   path: /pets/{petId}
   section: paths
+  revisionSource:
+    file: ./properties/param_deprecated_revision.yaml
+    line: 22
+    column: 11
   fingerprint: 62fe5c7ca583
 

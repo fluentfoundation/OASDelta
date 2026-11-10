@@ -4,11 +4,11 @@
 ## API Changes
 
 ### GET /api/test
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### GET /api/test1
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### GET /tenant/api/test

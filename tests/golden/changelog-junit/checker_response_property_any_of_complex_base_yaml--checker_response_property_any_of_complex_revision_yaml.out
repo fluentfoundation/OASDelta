@@ -8,10 +8,10 @@
       <failure message="Breaking change detected">the `anyOf[#/components/schemas/Dog]/breed/anyOf[#/components/schemas/Breed2]/name` response's property `type` changed from `string` to `number` for status `200`</failure>
     </testcase>
     <testcase name="response-property-type-changed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `anyOf[subschema #3: Rabbit]/` response's property `type` changed from `string` to `number` for status `200`</failure>
+      <failure message="Breaking change detected">the `anyOf[subschema #3: Rabbit]` response's property `type` changed from `string` to `number` for status `200`</failure>
     </testcase>
     <testcase name="response-property-type-changed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `anyOf[subschema #4 -> subschema #5]/` response's property `type` changed from `string` to `number` for status `200`</failure>
+      <failure message="Breaking change detected">the `anyOf[subschema #4 -> subschema #5]` response's property `type` changed from `string` to `number` for status `200`</failure>
     </testcase>
     <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
       <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>

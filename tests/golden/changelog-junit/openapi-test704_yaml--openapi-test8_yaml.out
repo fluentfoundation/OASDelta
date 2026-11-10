@@ -2,16 +2,16 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="13" errors="0" failures="13" name="OASDiff">
     <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api path removed without deprecation</failure>
+      <failure message="Breaking change detected">API path removed without deprecation</failure>
     </testcase>
     <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api path removed without deprecation</failure>
+      <failure message="Breaking change detected">API path removed without deprecation</failure>
     </testcase>
     <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api path removed without deprecation</failure>
+      <failure message="Breaking change detected">API path removed without deprecation</failure>
     </testcase>
     <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api path removed without deprecation</failure>
+      <failure message="Breaking change detected">API path removed without deprecation</failure>
     </testcase>
     <testcase name="api-global-security-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the security scheme `bearerAuth` was removed from the API</failure>

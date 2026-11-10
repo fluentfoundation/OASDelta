@@ -2,7 +2,7 @@
 error	[new-required-request-property-with-default] en ./checker/request_property_added_with_default.yaml
 	en API POST /products
 		agregada la nueva propiedad de solicitud requerida `description` con un valor por defecto
-		Una solicitud que omite esta propiedad obligatoria es inválida según el nuevo contrato, aunque la propiedad tenga un valor por defecto. El valor por defecto es un mecanismo del servidor, no hace que la propiedad omitida sea válida. Reduce la severidad de esta verificación con --severity-levels si omitir la propiedad es seguro para tus clientes.
+		Una solicitud que omite esta propiedad obligatoria es inválida según el nuevo contrato, aunque la propiedad tenga un valor por defecto. El valor por defecto es un mecanismo del servidor, no hace que la propiedad omitida sea válida.
 
 info	[api-version-not-bumped]
 	en info

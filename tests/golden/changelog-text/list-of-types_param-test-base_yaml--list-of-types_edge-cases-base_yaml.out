@@ -1,7 +1,7 @@
 3 changes: 1 error, 0 warning, 2 info
 error	[api-path-removed-without-deprecation] at ./list-of-types/param-test-base.yaml
 	in API GET /test
-		api path removed without deprecation
+		API path removed without deprecation
 
 info	[api-version-not-bumped]
 	in info

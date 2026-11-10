@@ -2,7 +2,7 @@
 error	[request-body-min-items-set] в ./checker/min_items_set_revision.yaml
 	в API POST /batch
 		задано значение minItems у тела запроса в `2`
-		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+		Установка ограничения отклоняет значения, которые принимал прежний контракт, если только клиенты не укладываются в новое ограничение.
 
 error	[response-body-min-items-unset] в ./checker/min_items_set_revision.yaml
 	в API POST /batch
@@ -11,12 +11,12 @@ error	[response-body-min-items-unset] в ./checker/min_items_set_revision.yaml
 error	[request-parameter-min-items-set] в ./checker/min_items_set_revision.yaml
 	в API POST /items
 		в `query` параметре запроса `ids`, minItems установлен в `3`
-		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+		Установка ограничения отклоняет значения, которые принимал прежний контракт, если только клиенты не укладываются в новое ограничение.
 
 error	[request-property-min-items-set] в ./checker/min_items_set_revision.yaml
 	в API POST /items
 		у поля запроса `tags` задано значение minItems в `3`
-		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+		Установка ограничения отклоняет значения, которые принимал прежний контракт, если только клиенты не укладываются в новое ограничение.
 
 error	[response-property-min-items-unset] в ./checker/min_items_set_revision.yaml
 	в API POST /items

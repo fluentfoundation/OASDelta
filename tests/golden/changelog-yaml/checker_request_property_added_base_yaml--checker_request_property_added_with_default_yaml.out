@@ -1,6 +1,6 @@
 - id: new-required-request-property-with-default
   text: added the new required request property `description` with a default value
-  comment: A request that omits this required property is invalid under the new contract, even though the property has a default. The default is a server-side fallback, it does not make the omitted property valid. Downgrade this check with --severity-levels if omitting the property is safe for your clients.
+  comment: A request that omits this required property is invalid under the new contract, even though the property has a default. The default is a server-side fallback, it does not make the omitted property valid.
   level: 3
   operation: POST
   operationId: addProduct

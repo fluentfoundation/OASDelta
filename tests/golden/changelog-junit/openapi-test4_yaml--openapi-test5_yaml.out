@@ -2,10 +2,10 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="7" errors="0" failures="7" name="OASDiff">
     <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api path removed without deprecation</failure>
+      <failure message="Breaking change detected">API path removed without deprecation</failure>
     </testcase>
     <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api path removed without deprecation</failure>
+      <failure message="Breaking change detected">API path removed without deprecation</failure>
     </testcase>
     <testcase name="api-major-version-not-bumped" classname="OASDiff" time="0">
       <failure message="Breaking change detected">a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`</failure>

@@ -1,7 +1,7 @@
 3 alterações: 1 error, 0 warning, 2 info
 error	[api-path-removed-without-deprecation] em ./list-of-types/param-test-base.yaml
 	em API GET /test
-		caminho da api removido sem depreciação
+		caminho da API removido sem depreciação
 
 info	[api-version-not-bumped]
 	em info

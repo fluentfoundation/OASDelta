@@ -19,7 +19,7 @@
 <ul>
 <li>Schema changed
 <ul>
-<li>Default changed from 0 to 1</li>
+<li>Default changed from -0 to 1</li>
 </ul>
 </li>
 </ul>

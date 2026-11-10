@@ -9,9 +9,9 @@
 - :warning: deleted the `cookie` request parameter `test`
 - :warning: deleted the `header` request parameter `user`
 - :warning: deleted the `query` request parameter `filter`
--  api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
+-  API operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
 -  the endpoint now allows anonymous access
--  api tag `security` removed
+-  API tag `security` removed
 -  for the `query` request parameter `token`, the maxLength was increased from `29` to `30`
 -  removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image`
 -  for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any`

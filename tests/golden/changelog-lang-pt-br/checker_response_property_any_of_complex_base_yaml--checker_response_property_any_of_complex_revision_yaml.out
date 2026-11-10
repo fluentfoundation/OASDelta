@@ -9,11 +9,11 @@ error	[response-property-type-changed] em ./checker/response_property_any_of_com
 
 error	[response-property-type-changed] em ./checker/response_property_any_of_complex_revision.yaml
 	em API GET /pets
-		o `anyOf[subschema #3: Rabbit]/` da propriedade de resposta `type` foi alterado de `string` para `number` para o status `200`
+		o `anyOf[subschema #3: Rabbit]` da propriedade de resposta `type` foi alterado de `string` para `number` para o status `200`
 
 error	[response-property-type-changed] em ./checker/response_property_any_of_complex_revision.yaml
 	em API GET /pets
-		o `anyOf[subschema #4 -> subschema #5]/` da propriedade de resposta `type` foi alterado de `string` para `number` para o status `200`
+		o `anyOf[subschema #4 -> subschema #5]` da propriedade de resposta `type` foi alterado de `string` para `number` para o status `200`
 
 info	[api-version-not-bumped]
 	em info

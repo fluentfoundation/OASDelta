@@ -6,12 +6,12 @@ error	[request-property-contains-added] at ./checker/contains_property_revision.
 error	[request-property-max-contains-set] at ./checker/contains_property_revision.yaml
 	in API POST /products
 		the `tags` request property's maxContains was set to `3`
-		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+		Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
 error	[request-property-min-contains-set] at ./checker/contains_property_revision.yaml
 	in API POST /products
 		the `tags` request property's minContains was set to `1`
-		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+		Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
 info	[api-version-not-bumped]
 	in info

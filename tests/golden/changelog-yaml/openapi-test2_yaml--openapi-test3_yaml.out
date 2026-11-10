@@ -14,7 +14,7 @@
   fingerprint: 3d3f92eed240
 - id: request-parameter-max-length-set
   text: for the `query` request parameter `token`, the maxLength was set to `30`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: GET
   operationId: GetSecurityScore
@@ -67,7 +67,7 @@
     column: 11
   fingerprint: 44d22bbe2795
 - id: api-removed-without-deprecation
-  text: api removed without deprecation
+  text: API removed without deprecation
   level: 3
   operation: POST
   path: /api/{domain}/{project}/badges/security-score
@@ -120,7 +120,7 @@
     line: 252
     column: 5
     endLine: 263
-    endColumn: 35
+    endColumn: 43
   fingerprint: 1611ea36b1f5
 - id: api-version-not-bumped
   text: a breaking change was detected but the version is still `1.0.1`
@@ -128,7 +128,7 @@
   section: info
   fingerprint: 98ed755c4681
 - id: api-operation-id-added
-  text: api operation id `GetSecurityScore` was added
+  text: API operation id `GetSecurityScore` was added
   level: 1
   operation: GET
   operationId: GetSecurityScore

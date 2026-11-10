@@ -1,6 +1,6 @@
-::error title=api-path-removed-without-deprecation,file=./oas32/base.yaml::in API LOCK /gone api path removed without deprecation
-::error title=api-path-removed-without-deprecation,file=./oas32/base.yaml::in API QUERY /gone api path removed without deprecation
-::error title=api-removed-without-deprecation,file=./oas32/base.yaml::in API PURGE /search api removed without deprecation
+::error title=api-path-removed-without-deprecation,file=./oas32/base.yaml::in API LOCK /gone API path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=./oas32/base.yaml::in API QUERY /gone API path removed without deprecation
+::error title=api-removed-without-deprecation,file=./oas32/base.yaml::in API PURGE /search API removed without deprecation
 ::error title=request-property-type-changed,file=./oas32/revision.yaml,line=17,col=19::in API QUERY /search the `term` request property `type` changed from `string` to `integer`
 ::notice title=endpoint-added,file=./oas32/revision.yaml,line=34,col=5::in API QUERY /new endpoint added
 ::notice title=endpoint-deprecated,file=./oas32/revision.yaml,line=24,col=9::in API COPY /search endpoint deprecated

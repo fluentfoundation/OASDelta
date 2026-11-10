@@ -5,14 +5,14 @@ error	[request-parameter-type-changed] en ./properties/param_deprecated_revision
 
 info	[request-parameter-deprecated] en ./properties/param_deprecated_revision.yaml
 	en API GET /pets/{petId}
-		parámetro de solicitud deprecado%!(EXTRA string=`path`, string=`petId`)
+		el parámetro `path` de solicitud `petId` fue deprecado
 
 info	[request-parameter-deprecated] en ./properties/param_deprecated_revision.yaml
 	en API GET /pets/{petId}
-		parámetro de solicitud deprecado%!(EXTRA string=`query`, string=`filter`)
+		el parámetro `query` de solicitud `filter` fue deprecado
 
 info	[request-parameter-deprecated] en ./properties/param_deprecated_revision.yaml
 	en API GET /pets/{petId}
-		parámetro de solicitud deprecado%!(EXTRA string=`query`, string=`limit`)
+		el parámetro `query` de solicitud `limit` fue deprecado
 
 

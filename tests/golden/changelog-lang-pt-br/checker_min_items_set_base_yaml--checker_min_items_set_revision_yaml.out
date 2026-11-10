@@ -2,7 +2,7 @@
 error	[request-body-min-items-set] em ./checker/min_items_set_revision.yaml
 	em API POST /batch
 		o número mínimo de itens do corpo da requisição foi definido como `2`
-		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+		Definir um limite rejeita valores que o contrato anterior aceitava, a menos que seus clientes respeitem o novo limite.
 
 error	[response-body-min-items-unset] em ./checker/min_items_set_revision.yaml
 	em API POST /batch
@@ -11,12 +11,12 @@ error	[response-body-min-items-unset] em ./checker/min_items_set_revision.yaml
 error	[request-parameter-min-items-set] em ./checker/min_items_set_revision.yaml
 	em API POST /items
 		no parâmetro de requisição do tipo `query` e nome `ids`, o número mínimo de itens foi definido como `3`
-		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+		Definir um limite rejeita valores que o contrato anterior aceitava, a menos que seus clientes respeitem o novo limite.
 
 error	[request-property-min-items-set] em ./checker/min_items_set_revision.yaml
 	em API POST /items
 		o número mínimo de itens da propriedade de requisição `tags` foi definido como `3`
-		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+		Definir um limite rejeita valores que o contrato anterior aceitava, a menos que seus clientes respeitem o novo limite.
 
 error	[response-property-min-items-unset] em ./checker/min_items_set_revision.yaml
 	em API POST /items

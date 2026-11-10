@@ -9,6 +9,6 @@ info	[api-version-not-bumped]
 
 info	[request-body-default-value-changed] en ./checker/request_body_default_value_changed_revision.yaml
 	en API POST /products
-		el valor por defecto del cuerpo de solicitud fue cambiado de `text/plain` a `Default`%!(EXTRA string=`NewDefault`)
+		el valor por defecto del cuerpo de solicitud `text/plain` fue cambiado de `Default` a `NewDefault`
 
 

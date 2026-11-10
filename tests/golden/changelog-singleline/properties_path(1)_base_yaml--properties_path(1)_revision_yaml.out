@@ -29,11 +29,11 @@ info, in components/securitySchemes the component security scheme `AccessToken` 
 
 info, in components/securitySchemes the component security scheme `bearerAuth` was removed [api-security-component-removed]. 
 
-info at ./properties/path(1)_base.yaml, in API GET /api/{domain}/{project}/badges/security-score api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore` [api-operation-id-removed]. 
+info at ./properties/path(1)_base.yaml, in API GET /api/{domain}/{project}/badges/security-score API operation id `GetSecurityScores` removed and replaced with `GetSecurityScore` [api-operation-id-removed]. 
 
 info at ./properties/path(1)_revision.yaml, in API GET /api/{domain}/{project}/badges/security-score the endpoint now allows anonymous access [api-security-anonymous-access-added]. This endpoint inherits the API's top-level security requirements.
 
-info at ./properties/path(1)_base.yaml, in API GET /api/{domain}/{project}/badges/security-score api tag `security` removed [api-tag-removed]. 
+info at ./properties/path(1)_base.yaml, in API GET /api/{domain}/{project}/badges/security-score API tag `security` removed [api-tag-removed]. 
 
 info at ./properties/path(1)_revision.yaml, in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `token`, the maxLength was increased from `29` to `30` [request-parameter-max-length-increased]. 
 

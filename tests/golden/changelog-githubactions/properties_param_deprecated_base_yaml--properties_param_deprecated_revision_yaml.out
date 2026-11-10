@@ -1,5 +1,5 @@
 ::error title=request-parameter-type-changed,file=./properties/param_deprecated_revision.yaml,line=24,col=13::in API GET /pets/{petId} for the `query` request parameter `limit`, the `type` was changed from `string` to `integer`
-::notice title=request-parameter-deprecated,file=./properties/param_deprecated_revision.yaml,line=7,col=5::in API GET /pets/{petId} `path` request parameter `petId` was deprecated
-::notice title=request-parameter-deprecated,file=./properties/param_deprecated_revision.yaml,line=7,col=5::in API GET /pets/{petId} `query` request parameter `filter` was deprecated
-::notice title=request-parameter-deprecated,file=./properties/param_deprecated_revision.yaml::in API GET /pets/{petId} `query` request parameter `limit` was deprecated
+::notice title=request-parameter-deprecated,file=./properties/param_deprecated_revision.yaml,line=12,col=11::in API GET /pets/{petId} `path` request parameter `petId` was deprecated
+::notice title=request-parameter-deprecated,file=./properties/param_deprecated_revision.yaml,line=17,col=11::in API GET /pets/{petId} `query` request parameter `filter` was deprecated
+::notice title=request-parameter-deprecated,file=./properties/param_deprecated_revision.yaml,line=22,col=11::in API GET /pets/{petId} `query` request parameter `limit` was deprecated
 

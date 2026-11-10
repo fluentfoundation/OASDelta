@@ -12,7 +12,7 @@ GET /a
     - Default changed from -0 to 1
 - Modified query param: int
   - Schema changed
-    - Default changed from 0 to 1
+    - Default changed from -0 to 1
 - Modified query param: octal
   - Schema changed
     - Default changed from 0 to 1

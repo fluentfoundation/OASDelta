@@ -1,3 +1,3 @@
-::notice title=api-tag-removed,file=./run_test/changelog_include_checks_base.yaml::in API POST /api/v1.0/groups api tag `Group` removed
+::notice title=api-tag-removed,file=./run_test/changelog_include_checks_base.yaml::in API POST /api/v1.0/groups API tag `Group` removed
 ::notice title=response-non-success-status-removed,file=./run_test/changelog_include_checks_revision.yaml::in API POST /api/v1.0/groups removed the non-success response with the status `409`
 

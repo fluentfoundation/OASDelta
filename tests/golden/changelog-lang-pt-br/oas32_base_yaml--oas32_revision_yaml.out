@@ -1,15 +1,15 @@
 8 alterações: 4 error, 0 warning, 4 info
 error	[api-path-removed-without-deprecation] em ./oas32/base.yaml
 	em API LOCK /gone
-		caminho da api removido sem depreciação
+		caminho da API removido sem depreciação
 
 error	[api-path-removed-without-deprecation] em ./oas32/base.yaml
 	em API QUERY /gone
-		caminho da api removido sem depreciação
+		caminho da API removido sem depreciação
 
 error	[api-removed-without-deprecation] em ./oas32/base.yaml
 	em API PURGE /search
-		api removida sem depreciação
+		API removida sem depreciação
 
 error	[request-property-type-changed] em ./oas32/revision.yaml
 	em API QUERY /search

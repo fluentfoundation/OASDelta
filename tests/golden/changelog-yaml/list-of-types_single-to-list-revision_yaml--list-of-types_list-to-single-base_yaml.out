@@ -1,5 +1,5 @@
 - id: api-removed-without-deprecation
-  text: api removed without deprecation
+  text: API removed without deprecation
   level: 3
   operation: GET
   path: /test

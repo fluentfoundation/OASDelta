@@ -1,3 +1,4 @@
-::warning title=request-body-all-of-added,file=./checker/request_property_all_of_added_revision.yaml,line=17,col=19::in API POST /pets added `#/components/schemas/Rabbit` to the request body `allOf` list
-::warning title=request-property-all-of-added,file=./checker/request_property_all_of_added_revision.yaml,line=34,col=15::in API POST /pets added `#/components/schemas/Breed3` to the `allOf[#/components/schemas/Dog]/breed` request property `allOf` list
+::error title=request-body-all-of-added,file=./checker/request_property_all_of_added_revision.yaml,line=17,col=19::in API POST /pets added `#/components/schemas/Rabbit` to the request body `allOf` list
+::error title=request-property-all-of-added,file=./checker/request_property_all_of_added_revision.yaml,line=34,col=15::in API POST /pets added `#/components/schemas/Breed3` to the `allOf[#/components/schemas/Dog]/breed` request property `allOf` list
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 

@@ -1,5 +1,5 @@
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   operationId: GetSecurityScores
@@ -13,7 +13,7 @@
     endColumn: 18
   fingerprint: f8d390617baf
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /api/{domain}/{project}/install-command
@@ -26,7 +26,7 @@
     endColumn: 18
   fingerprint: e28db7a5f80b
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: POST
   path: /register
@@ -39,7 +39,7 @@
     endColumn: 29
   fingerprint: ce00b68ad8ce
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: POST
   path: /subscribe
@@ -81,7 +81,7 @@
     line: 270
     column: 5
     endLine: 274
-    endColumn: 19
+    endColumn: 25
   fingerprint: 377a843441ca
 - id: api-security-component-removed
   text: the component security scheme `AccessToken` was removed
@@ -103,7 +103,7 @@
     line: 320
     column: 5
     endLine: 329
-    endColumn: 60
+    endColumn: 66
   fingerprint: dacbb94d9ed7
 - id: api-security-component-removed
   text: the component security scheme `bearerAuth` was removed
@@ -114,7 +114,7 @@
     line: 313
     column: 5
     endLine: 316
-    endColumn: 24
+    endColumn: 25
   fingerprint: 471257f7ddee
 - id: api-version-not-bumped
   text: a breaking change was detected but the version is still `1.0.0`

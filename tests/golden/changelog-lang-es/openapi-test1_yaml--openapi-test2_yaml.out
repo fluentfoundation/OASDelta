@@ -2,7 +2,7 @@
 error	[request-parameter-min-set] en ./openapi-test2.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
 		para el parámetro `path` de solicitud `domain`, mínimo fue establecido en `7.00`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 error	[request-parameter-type-changed] en ./openapi-test2.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
@@ -18,15 +18,15 @@ error	[response-success-status-removed] en ./openapi-test2.yaml
 
 error	[api-path-removed-without-deprecation] en ./openapi-test1.yaml
 	en API GET /api/{domain}/{project}/install-command
-		ruta de api removida sin deprecación
+		ruta de API removida sin deprecación
 
 error	[api-path-removed-without-deprecation] en ./openapi-test1.yaml
 	en API POST /register
-		ruta de api removida sin deprecación
+		ruta de API removida sin deprecación
 
 error	[api-path-removed-without-deprecation] en ./openapi-test1.yaml
 	en API POST /subscribe
-		ruta de api removida sin deprecación
+		ruta de API removida sin deprecación
 
 warning	[request-parameter-pattern-changed] en ./openapi-test2.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
@@ -74,7 +74,7 @@ info	[api-security-component-removed]
 
 info	[api-operation-id-removed] en ./openapi-test1.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
-		id de operación de api `GetSecurityScores` removido y reemplazado por ``
+		id de operación de API `GetSecurityScores` removido y reemplazado por ``
 
 info	[api-security-anonymous-access-added] en ./openapi-test2.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
@@ -83,7 +83,7 @@ info	[api-security-anonymous-access-added] en ./openapi-test2.yaml
 
 info	[api-tag-removed] en ./openapi-test1.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
-		etiqueta de api `security` removida
+		etiqueta de API `security` removida
 
 info	[request-parameter-max-length-unset] en ./openapi-test2.yaml
 	en API GET /api/{domain}/{project}/badges/security-score

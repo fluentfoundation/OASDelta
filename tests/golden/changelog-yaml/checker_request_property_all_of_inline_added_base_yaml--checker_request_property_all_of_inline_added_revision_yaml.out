@@ -1,9 +1,6 @@
 - id: request-body-all-of-added
   text: 'added `subschema #3` to the request body `allOf` list'
-  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
-  disclaimers:
-    - all-of-not-flattened
-  level: 2
+  level: 3
   operation: POST
   operationId: updatePets
   path: /pets
@@ -15,4 +12,9 @@
     endLine: 26
     endColumn: 36
   fingerprint: eb3169669e92
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
 

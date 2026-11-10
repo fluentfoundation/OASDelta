@@ -1,7 +1,7 @@
 2 alterações: 0 error, 0 warning, 2 info
 info	[api-tag-removed] em ./run_test/changelog_include_checks_base.yaml
 	em API POST /api/v1.0/groups
-		tag da api `Group` removida
+		tag da API `Group` removida
 
 info	[response-non-success-status-removed] em ./run_test/changelog_include_checks_revision.yaml
 	em API POST /api/v1.0/groups

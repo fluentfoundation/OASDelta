@@ -9,11 +9,11 @@ error	[request-property-min-increased] em ./checker/sub_schema_traversal_revisio
 
 error	[request-property-min-length-increased] em ./checker/sub_schema_traversal_revision.yaml
 	em API POST /products
-		o comprimento mínimo da propriedade de requisição `data/contains/` foi aumentado de `1` para `3`
+		o comprimento mínimo da propriedade de requisição `data/contains` foi aumentado de `1` para `3`
 
 error	[request-property-min-length-increased] em ./checker/sub_schema_traversal_revision.yaml
 	em API POST /products
-		o comprimento mínimo da propriedade de requisição `data/contentSchema/` foi aumentado de `1` para `3`
+		o comprimento mínimo da propriedade de requisição `data/contentSchema` foi aumentado de `1` para `3`
 
 error	[request-property-min-length-increased] em ./checker/sub_schema_traversal_revision.yaml
 	em API POST /products
@@ -21,19 +21,19 @@ error	[request-property-min-length-increased] em ./checker/sub_schema_traversal_
 
 error	[request-property-min-length-increased] em ./checker/sub_schema_traversal_revision.yaml
 	em API POST /products
-		o comprimento mínimo da propriedade de requisição `data/prefixItems[subschema #1]/` foi aumentado de `1` para `3`
+		o comprimento mínimo da propriedade de requisição `data/prefixItems[subschema #1]` foi aumentado de `1` para `3`
 
 error	[request-property-min-length-increased] em ./checker/sub_schema_traversal_revision.yaml
 	em API POST /products
-		o comprimento mínimo da propriedade de requisição `data/propertyNames/` foi aumentado de `1` para `3`
+		o comprimento mínimo da propriedade de requisição `data/propertyNames` foi aumentado de `1` para `3`
 
 error	[request-property-min-length-increased] em ./checker/sub_schema_traversal_revision.yaml
 	em API POST /products
-		o comprimento mínimo da propriedade de requisição `data/unevaluatedItems/` foi aumentado de `1` para `3`
+		o comprimento mínimo da propriedade de requisição `data/unevaluatedItems` foi aumentado de `1` para `3`
 
 error	[request-property-min-length-increased] em ./checker/sub_schema_traversal_revision.yaml
 	em API POST /products
-		o comprimento mínimo da propriedade de requisição `data/unevaluatedProperties/` foi aumentado de `1` para `3`
+		o comprimento mínimo da propriedade de requisição `data/unevaluatedProperties` foi aumentado de `1` para `3`
 
 info	[api-version-not-bumped]
 	em info

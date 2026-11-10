@@ -2,7 +2,7 @@
 error	[request-body-max-length-set] en ./checker/request_body_max_length_set_revision.yaml
 	en API POST /pets
 		la longitud máxima del cuerpo de solicitud fue establecida en `15`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 info	[api-version-not-bumped]
 	en info

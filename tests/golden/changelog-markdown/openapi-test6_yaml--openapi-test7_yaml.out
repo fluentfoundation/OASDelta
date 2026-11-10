@@ -4,15 +4,15 @@
 ## API Changes
 
 ### GET /health
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### GET /health/live
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### GET /health/ready
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 

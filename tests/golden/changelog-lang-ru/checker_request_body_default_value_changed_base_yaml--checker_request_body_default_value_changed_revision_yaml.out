@@ -9,6 +9,6 @@ info	[api-version-not-bumped]
 
 info	[request-body-default-value-changed] в ./checker/request_body_default_value_changed_revision.yaml
 	в API POST /products
-		значение по умолчанию для тела запроса изменено с `text/plain` на `Default`%!(EXTRA string=`NewDefault`)
+		значение по умолчанию для тела запроса `text/plain` изменено с `Default` на `NewDefault`
 
 

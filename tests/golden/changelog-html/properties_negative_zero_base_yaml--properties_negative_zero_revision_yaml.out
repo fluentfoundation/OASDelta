@@ -136,7 +136,7 @@
         
         <li class="change">
         
-        for the `query` request parameter `int`, default value was changed from `0.00` to `1.00`
+        for the `query` request parameter `int`, default value was changed from `-0.00` to `1.00`
         </li>
         
         <li class="change">

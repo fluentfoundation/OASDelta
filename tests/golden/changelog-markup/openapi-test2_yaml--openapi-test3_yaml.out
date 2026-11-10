@@ -11,14 +11,14 @@
 - :warning: for the `query` request parameter `token`, the `type/format` was changed from `any` to `string/uuid`
 - :warning: changed the pattern of the `path` request parameter `domain` from `^(?:\d+)$` to `^(?:([a-z]+-)*([a-z]+)?)$`
 - :warning: deleted the `query` request parameter `filter`
--  api operation id `GetSecurityScore` was added
+-  API operation id `GetSecurityScore` was added
 -  for the `path` request parameter `domain`, the min was unset from `7.00`
 -  removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image`
 -  for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any`
 
 
 ### POST /api/{domain}/{project}/badges/security-score
-- :warning: api removed without deprecation
+- :warning: API removed without deprecation
 
 
 ### GET /api/{domain}/{project}/install-command

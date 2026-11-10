@@ -2,6 +2,6 @@
 error	[request-parameter-max-length-set] em ./checker/request_parameter_max_length_set_revision.yaml
 	em API POST /test
 		no parâmetro de requisição do tipo `query` e nome `category`, o comprimento máximo foi definido como `15`
-		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+		Definir um limite rejeita valores que o contrato anterior aceitava, a menos que seus clientes respeitem o novo limite.
 
 

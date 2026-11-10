@@ -1,5 +1,5 @@
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   operationId: GetSecurityScore
@@ -13,7 +13,7 @@
     endColumn: 18
   fingerprint: f8d390617baf
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /api/{domain}/{project}/install-command
@@ -26,7 +26,7 @@
     endColumn: 28
   fingerprint: e28db7a5f80b
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: POST
   path: /register
@@ -39,7 +39,7 @@
     endColumn: 29
   fingerprint: ce00b68ad8ce
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: POST
   path: /subscribe
@@ -60,7 +60,7 @@
     line: 252
     column: 5
     endLine: 263
-    endColumn: 35
+    endColumn: 43
   fingerprint: dacbb94d9ed7
 - id: api-version-decreased
   text: a breaking change was detected but the version decreased from `1.0.1` to `1.0.0`

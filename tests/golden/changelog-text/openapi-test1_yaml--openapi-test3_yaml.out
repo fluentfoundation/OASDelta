@@ -65,7 +65,7 @@ info	[api-security-component-removed]
 
 info	[api-operation-id-removed] at openapi-test1.yaml
 	in API GET /api/{domain}/{project}/badges/security-score
-		api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
+		API operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
 
 info	[api-security-anonymous-access-added] at openapi-test3.yaml
 	in API GET /api/{domain}/{project}/badges/security-score
@@ -74,7 +74,7 @@ info	[api-security-anonymous-access-added] at openapi-test3.yaml
 
 info	[api-tag-removed] at openapi-test1.yaml
 	in API GET /api/{domain}/{project}/badges/security-score
-		api tag `security` removed
+		API tag `security` removed
 
 info	[request-parameter-max-length-increased] at openapi-test3.yaml
 	in API GET /api/{domain}/{project}/badges/security-score

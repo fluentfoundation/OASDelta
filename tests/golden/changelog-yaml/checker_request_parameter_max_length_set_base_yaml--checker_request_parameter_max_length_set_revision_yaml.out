@@ -1,6 +1,6 @@
 - id: request-parameter-max-length-set
   text: for the `query` request parameter `category`, the maxLength was set to `15`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   path: /test

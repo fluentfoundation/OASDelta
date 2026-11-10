@@ -1,6 +1,6 @@
 1 cambios: 0 error, 0 warning, 1 info
 info	[request-parameter-default-value-changed] en ./checker/request_parameter_default_value_changed_revision.yaml
 	en API POST /api/v1.0/groups
-		valor por defecto para el parámetro de solicitud `query` cambiado de `category` a `default_category`%!(EXTRA string=`updated_category`)
+		valor por defecto para el parámetro `query` de solicitud `category` cambiado de `default_category` a `updated_category`
 
 

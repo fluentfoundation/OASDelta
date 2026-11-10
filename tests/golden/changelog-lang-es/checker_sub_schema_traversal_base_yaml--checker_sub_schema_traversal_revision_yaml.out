@@ -9,11 +9,11 @@ error	[request-property-min-increased] en ./checker/sub_schema_traversal_revisio
 
 error	[request-property-min-length-increased] en ./checker/sub_schema_traversal_revision.yaml
 	en API POST /products
-		la longitud mínima de la propiedad de solicitud `data/contains/` fue aumentada de `1` a `3`
+		la longitud mínima de la propiedad de solicitud `data/contains` fue aumentada de `1` a `3`
 
 error	[request-property-min-length-increased] en ./checker/sub_schema_traversal_revision.yaml
 	en API POST /products
-		la longitud mínima de la propiedad de solicitud `data/contentSchema/` fue aumentada de `1` a `3`
+		la longitud mínima de la propiedad de solicitud `data/contentSchema` fue aumentada de `1` a `3`
 
 error	[request-property-min-length-increased] en ./checker/sub_schema_traversal_revision.yaml
 	en API POST /products
@@ -21,19 +21,19 @@ error	[request-property-min-length-increased] en ./checker/sub_schema_traversal_
 
 error	[request-property-min-length-increased] en ./checker/sub_schema_traversal_revision.yaml
 	en API POST /products
-		la longitud mínima de la propiedad de solicitud `data/prefixItems[subschema #1]/` fue aumentada de `1` a `3`
+		la longitud mínima de la propiedad de solicitud `data/prefixItems[subschema #1]` fue aumentada de `1` a `3`
 
 error	[request-property-min-length-increased] en ./checker/sub_schema_traversal_revision.yaml
 	en API POST /products
-		la longitud mínima de la propiedad de solicitud `data/propertyNames/` fue aumentada de `1` a `3`
+		la longitud mínima de la propiedad de solicitud `data/propertyNames` fue aumentada de `1` a `3`
 
 error	[request-property-min-length-increased] en ./checker/sub_schema_traversal_revision.yaml
 	en API POST /products
-		la longitud mínima de la propiedad de solicitud `data/unevaluatedItems/` fue aumentada de `1` a `3`
+		la longitud mínima de la propiedad de solicitud `data/unevaluatedItems` fue aumentada de `1` a `3`
 
 error	[request-property-min-length-increased] en ./checker/sub_schema_traversal_revision.yaml
 	en API POST /products
-		la longitud mínima de la propiedad de solicitud `data/unevaluatedProperties/` fue aumentada de `1` a `3`
+		la longitud mínima de la propiedad de solicitud `data/unevaluatedProperties` fue aumentada de `1` a `3`
 
 info	[api-version-not-bumped]
 	en info

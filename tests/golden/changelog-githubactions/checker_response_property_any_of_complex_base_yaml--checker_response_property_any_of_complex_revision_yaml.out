@@ -1,6 +1,6 @@
 ::error title=response-body-any-of-added,file=./checker/response_property_any_of_complex_revision.yaml,line=20,col=21::in API GET /pets added `#/components/schemas/Fox` to the response body `anyOf` list for the response status `200`
 ::error title=response-property-type-changed,file=./checker/response_property_any_of_complex_revision.yaml,line=45,col=11::in API GET /pets the `anyOf[#/components/schemas/Dog]/breed/anyOf[#/components/schemas/Breed2]/name` response's property `type` changed from `string` to `number` for status `200`
-::error title=response-property-type-changed,file=./checker/response_property_any_of_complex_revision.yaml,line=19,col=21::in API GET /pets the `anyOf[subschema #3: Rabbit]/` response's property `type` changed from `string` to `number` for status `200`
-::error title=response-property-type-changed,file=./checker/response_property_any_of_complex_revision.yaml,line=22,col=21::in API GET /pets the `anyOf[subschema #4 -> subschema #5]/` response's property `type` changed from `string` to `number` for status `200`
+::error title=response-property-type-changed,file=./checker/response_property_any_of_complex_revision.yaml,line=19,col=21::in API GET /pets the `anyOf[subschema #3: Rabbit]` response's property `type` changed from `string` to `number` for status `200`
+::error title=response-property-type-changed,file=./checker/response_property_any_of_complex_revision.yaml,line=22,col=21::in API GET /pets the `anyOf[subschema #4 -> subschema #5]` response's property `type` changed from `string` to `number` for status `200`
 ::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 

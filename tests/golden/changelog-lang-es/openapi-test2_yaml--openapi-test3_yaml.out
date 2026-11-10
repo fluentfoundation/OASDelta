@@ -6,7 +6,7 @@ error	[new-required-request-parameter] en openapi-test3.yaml
 error	[request-parameter-max-length-set] en openapi-test3.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
 		para el parámetro `query` de solicitud `token`, maxLength fue establecido en `30`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 error	[request-parameter-pattern-added] en openapi-test3.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
@@ -23,7 +23,7 @@ error	[request-parameter-type-changed] en openapi-test3.yaml
 
 error	[api-removed-without-deprecation] en openapi-test2.yaml
 	en API POST /api/{domain}/{project}/badges/security-score
-		api removida sin deprecación
+		API removida sin deprecación
 
 warning	[request-parameter-pattern-changed] en openapi-test3.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
@@ -45,7 +45,7 @@ info	[api-version-not-bumped]
 
 info	[api-operation-id-added] en openapi-test3.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
-		id de operación de api `GetSecurityScore` fue agregado
+		id de operación de API `GetSecurityScore` fue agregado
 
 info	[request-parameter-min-unset] en openapi-test3.yaml
 	en API GET /api/{domain}/{project}/badges/security-score

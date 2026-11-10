@@ -1,7 +1,7 @@
-::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API GET /api/{domain}/{project}/badges/security-score api path removed without deprecation
-::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API GET /api/{domain}/{project}/install-command api path removed without deprecation
-::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API POST /register api path removed without deprecation
-::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API POST /subscribe api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API GET /api/{domain}/{project}/badges/security-score API path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API GET /api/{domain}/{project}/install-command API path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API POST /register API path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test704.yaml::in API POST /subscribe API path removed without deprecation
 ::notice title=api-global-security-removed::in API   the security scheme `bearerAuth` was removed from the API
 ::notice title=api-schema-removed::in API   removed the schema `network-policies`
 ::notice title=api-schema-removed::in API   removed the schema `rules`

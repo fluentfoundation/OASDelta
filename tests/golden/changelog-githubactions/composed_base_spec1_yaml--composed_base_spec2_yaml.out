@@ -1,2 +1,2 @@
-::notice title=api-operation-id-removed,file=./composed/base/spec1.yaml::in API GET /api/test api operation id `x` removed and replaced with ``
+::notice title=api-operation-id-removed,file=./composed/base/spec1.yaml::in API GET /api/test API operation id `x` removed and replaced with ``
 

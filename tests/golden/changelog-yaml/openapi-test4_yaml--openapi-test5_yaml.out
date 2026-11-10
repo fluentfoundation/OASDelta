@@ -1,5 +1,5 @@
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /prefix/api/{domain}/{project}/badges/security-score
@@ -12,7 +12,7 @@
     endColumn: 18
   fingerprint: 9625281cc12b
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: POST
   path: /prefix/api/{domain}/{project}/badges/security-score
@@ -49,7 +49,7 @@
     line: 169
     column: 5
     endLine: 172
-    endColumn: 24
+    endColumn: 25
   fingerprint: 8b1e0fa5aee3
 - id: endpoint-added
   text: endpoint added

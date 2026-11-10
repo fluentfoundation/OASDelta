@@ -2,16 +2,16 @@
 warning	[new-required-request-property] at ./checker/allof_property_existence_revision.yaml
 	in API POST /items
 		added the new required request property `wrapper/allOf[subschema #2]/added`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 warning	[request-property-removed] at ./checker/allof_property_existence_revision.yaml
 	in API POST /items
 		removed the request property `wrapper/allOf[subschema #2]/drop`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 warning	[request-property-type-changed] at ./checker/allof_property_existence_revision.yaml
 	in API POST /items
 		the `wrapper/allOf[subschema #2]/other` request property `type` changed from `string` to `integer`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 

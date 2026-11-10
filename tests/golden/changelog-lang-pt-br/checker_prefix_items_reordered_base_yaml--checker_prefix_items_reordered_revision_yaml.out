@@ -1,10 +1,10 @@
 2 alterações: 2 error, 0 warning, 0 info
 error	[request-property-type-changed] em ./checker/prefix_items_reordered_revision.yaml
 	em API POST /items
-		o `/prefixItems[subschema #1]/` da propriedade de requisição `type` foi alterado de `string` para `integer`
+		o `/prefixItems[subschema #1]` da propriedade de requisição `type` foi alterado de `string` para `integer`
 
 error	[request-property-type-changed] em ./checker/prefix_items_reordered_revision.yaml
 	em API POST /items
-		o `/prefixItems[subschema #2]/` da propriedade de requisição `type` foi alterado de `integer` para `string`
+		o `/prefixItems[subschema #2]` da propriedade de requisição `type` foi alterado de `integer` para `string`
 
 

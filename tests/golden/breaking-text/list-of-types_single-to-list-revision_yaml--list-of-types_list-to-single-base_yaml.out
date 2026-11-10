@@ -1,6 +1,6 @@
 1 changes: 1 error, 0 warning, 0 info
 error	[api-removed-without-deprecation] at ./list-of-types/single-to-list-revision.yaml
 	in API GET /test
-		api removed without deprecation
+		API removed without deprecation
 
 

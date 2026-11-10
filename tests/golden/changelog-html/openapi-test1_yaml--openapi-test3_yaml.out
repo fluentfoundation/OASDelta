@@ -176,7 +176,7 @@
         
         <li class="change">
         
-        api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
+        API operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
         </li>
         
         <li class="change">
@@ -186,7 +186,7 @@
         
         <li class="change">
         
-        api tag `security` removed
+        API tag `security` removed
         </li>
         
         <li class="change">

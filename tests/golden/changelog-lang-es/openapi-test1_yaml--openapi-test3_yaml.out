@@ -9,7 +9,7 @@ error	[response-success-status-removed] en openapi-test3.yaml
 
 error	[api-security-removed] en openapi-test3.yaml
 	en API POST /register
-		el esquema de seguridad `bearerAuth` fue removido del endpoint de la api
+		el esquema de seguridad `bearerAuth` fue removido del endpoint de la API
 
 error	[api-security-scope-added] en openapi-test3.yaml
 	en API POST /register
@@ -65,7 +65,7 @@ info	[api-security-component-removed]
 
 info	[api-operation-id-removed] en openapi-test1.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
-		id de operación de api `GetSecurityScores` removido y reemplazado por `GetSecurityScore`
+		id de operación de API `GetSecurityScores` removido y reemplazado por `GetSecurityScore`
 
 info	[api-security-anonymous-access-added] en openapi-test3.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
@@ -74,7 +74,7 @@ info	[api-security-anonymous-access-added] en openapi-test3.yaml
 
 info	[api-tag-removed] en openapi-test1.yaml
 	en API GET /api/{domain}/{project}/badges/security-score
-		etiqueta de api `security` removida
+		etiqueta de API `security` removida
 
 info	[request-parameter-max-length-increased] en openapi-test3.yaml
 	en API GET /api/{domain}/{project}/badges/security-score

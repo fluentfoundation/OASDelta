@@ -1,5 +1,5 @@
-::error title=api-path-removed-without-deprecation,file=./prefix/simple1.yaml::in API GET /api/test api path removed without deprecation
-::error title=api-path-removed-without-deprecation,file=./prefix/simple1.yaml::in API GET /api/test1 api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=./prefix/simple1.yaml::in API GET /api/test API path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=./prefix/simple1.yaml::in API GET /api/test1 API path removed without deprecation
 ::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 ::notice title=endpoint-added,file=./prefix/simple2.yaml,line=7,col=5::in API GET /tenant/api/test endpoint added
 ::notice title=endpoint-added,file=./prefix/simple2.yaml,line=12,col=5::in API GET /tenant/api/test1 endpoint added

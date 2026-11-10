@@ -4,18 +4,10 @@
   operation: GET
   path: /pets
   section: paths
-  baseSource:
-    file: ./properties/header_schema_base.yaml
-    line: 7
-    column: 5
-    endLine: 19
-    endColumn: 51
   revisionSource:
     file: ./properties/header_schema_revision.yaml
-    line: 7
-    column: 5
-    endLine: 20
-    endColumn: 51
+    line: 15
+    column: 17
   fingerprint: 9f4468aceafe
 - id: response-header-min-length-set
   text: the `x-shared` response header's minLength was set to `2` for the status `200`
@@ -23,17 +15,9 @@
   operation: GET
   path: /pets
   section: paths
-  baseSource:
-    file: ./properties/header_schema_base.yaml
-    line: 7
-    column: 5
-    endLine: 19
-    endColumn: 51
   revisionSource:
     file: ./properties/header_schema_revision.yaml
-    line: 7
-    column: 5
-    endLine: 20
-    endColumn: 51
+    line: 26
+    column: 9
   fingerprint: 3d9df4955255
 

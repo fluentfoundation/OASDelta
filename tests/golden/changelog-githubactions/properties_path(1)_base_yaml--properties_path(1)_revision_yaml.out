@@ -13,9 +13,9 @@
 ::notice title=api-security-component-oauth-scope-changed,file=./properties/path%25281%2529_revision.yaml,line=252,col=5::in API   the component security scheme `OAuth` oauth `authorizationCode` flow scope `accountWrite` was updated from `Allows account data to be written` to `Allows accounts data to be written`
 ::notice title=api-security-component-removed::in API   the component security scheme `AccessToken` was removed
 ::notice title=api-security-component-removed::in API   the component security scheme `bearerAuth` was removed
-::notice title=api-operation-id-removed,file=./properties/path(1)_base.yaml::in API GET /api/{domain}/{project}/badges/security-score api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
+::notice title=api-operation-id-removed,file=./properties/path(1)_base.yaml::in API GET /api/{domain}/{project}/badges/security-score API operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
 ::notice title=api-security-anonymous-access-added,file=./properties/path(1)_revision.yaml::in API GET /api/{domain}/{project}/badges/security-score the endpoint now allows anonymous access
-::notice title=api-tag-removed,file=./properties/path(1)_base.yaml::in API GET /api/{domain}/{project}/badges/security-score api tag `security` removed
+::notice title=api-tag-removed,file=./properties/path(1)_base.yaml::in API GET /api/{domain}/{project}/badges/security-score API tag `security` removed
 ::notice title=request-parameter-max-length-increased,file=./properties/path%25281%2529_revision.yaml,line=45,col=11::in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `token`, the maxLength was increased from `29` to `30`
 ::notice title=request-parameter-pattern-removed,file=./properties/path(1)_revision.yaml::in API GET /api/{domain}/{project}/badges/security-score removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image`
 ::notice title=request-parameter-type-generalized,file=./properties/path(1)_revision.yaml::in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any`

@@ -132,7 +132,7 @@
     line: 250
     column: 5
     endLine: 254
-    endColumn: 19
+    endColumn: 25
   fingerprint: 377a843441ca
 - id: api-security-component-oauth-scope-added
   text: the component security scheme `OAuth` oauth `authorizationCode` flow scope `admin` was added
@@ -143,7 +143,7 @@
     line: 252
     column: 5
     endLine: 263
-    endColumn: 35
+    endColumn: 43
   fingerprint: ebafe6491090
 - id: api-security-component-oauth-scope-changed
   text: the component security scheme `OAuth` oauth `authorizationCode` flow scope `accountWrite` was updated from `Allows account data to be written` to `Allows accounts data to be written`
@@ -154,13 +154,13 @@
     line: 300
     column: 5
     endLine: 309
-    endColumn: 60
+    endColumn: 66
   revisionSource:
     file: openapi-test3.yaml
     line: 252
     column: 5
     endLine: 263
-    endColumn: 35
+    endColumn: 43
   fingerprint: d2e2060d6484
 - id: api-security-component-removed
   text: the component security scheme `AccessToken` was removed
@@ -182,10 +182,10 @@
     line: 293
     column: 5
     endLine: 296
-    endColumn: 24
+    endColumn: 25
   fingerprint: 471257f7ddee
 - id: api-operation-id-removed
-  text: api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
+  text: API operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
   level: 1
   operation: GET
   operationId: GetSecurityScores
@@ -210,7 +210,7 @@
     column: 1
   fingerprint: d6ade0aa023b
 - id: api-tag-removed
-  text: api tag `security` removed
+  text: API tag `security` removed
   level: 1
   operation: GET
   operationId: GetSecurityScores

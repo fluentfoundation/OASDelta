@@ -1,4 +1,4 @@
-::error title=api-removed-without-deprecation,file=./list-of-types/single-to-list-revision.yaml::in API GET /test api removed without deprecation
+::error title=api-removed-without-deprecation,file=./list-of-types/single-to-list-revision.yaml::in API GET /test API removed without deprecation
 ::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 ::notice title=endpoint-added,file=./list-of-types/list-to-single-base.yaml,line=7,col=5::in API POST /test endpoint added
 

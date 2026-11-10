@@ -1,19 +1,19 @@
 11 alterações: 4 error, 0 warning, 7 info
 error	[new-required-request-default-parameter-to-existing-path] em ./request_params/required-request-params.yaml
 	em API GET /api/test1
-		o novo parâmetro obrigatório de requisição `query` foi adicionado a todas as operações do caminho%!(EXTRA string=`version`)
+		o novo parâmetro obrigatório de requisição do tipo `query` e nome `version` foi adicionado a todas as operações do caminho
 
 error	[new-required-request-default-parameter-to-existing-path] em ./request_params/required-request-params.yaml
 	em API POST /api/test1
-		o novo parâmetro obrigatório de requisição `query` foi adicionado a todas as operações do caminho%!(EXTRA string=`version`)
+		o novo parâmetro obrigatório de requisição do tipo `query` e nome `version` foi adicionado a todas as operações do caminho
 
 error	[new-required-request-default-parameter-to-existing-path] em ./request_params/required-request-params.yaml
 	em API GET /api/test2
-		o novo parâmetro obrigatório de requisição `query` foi adicionado a todas as operações do caminho%!(EXTRA string=`id`)
+		o novo parâmetro obrigatório de requisição do tipo `query` e nome `id` foi adicionado a todas as operações do caminho
 
 error	[new-required-request-default-parameter-to-existing-path] em ./request_params/required-request-params.yaml
 	em API GET /api/test3
-		o novo parâmetro obrigatório de requisição `header` foi adicionado a todas as operações do caminho%!(EXTRA string=`if-none-match`)
+		o novo parâmetro obrigatório de requisição do tipo `header` e nome `if-none-match` foi adicionado a todas as operações do caminho
 
 info	[api-version-not-bumped]
 	em info
@@ -21,7 +21,7 @@ info	[api-version-not-bumped]
 
 info	[new-optional-request-default-parameter-to-existing-path] em ./request_params/required-request-params.yaml
 	em API GET /api/test1
-		o novo parâmetro opcional de requisição `query` foi adicionado a todas as operações do caminho%!(EXTRA string=`optionalQueryParam`)
+		o novo parâmetro opcional de requisição do tipo `query` e nome `optionalQueryParam` foi adicionado a todas as operações do caminho
 
 info	[new-optional-request-parameter] em ./request_params/required-request-params.yaml
 	em API GET /api/test1
@@ -29,11 +29,11 @@ info	[new-optional-request-parameter] em ./request_params/required-request-param
 
 info	[new-optional-request-default-parameter-to-existing-path] em ./request_params/required-request-params.yaml
 	em API POST /api/test1
-		o novo parâmetro opcional de requisição `query` foi adicionado a todas as operações do caminho%!(EXTRA string=`optionalQueryParam`)
+		o novo parâmetro opcional de requisição do tipo `query` e nome `optionalQueryParam` foi adicionado a todas as operações do caminho
 
 info	[new-optional-request-default-parameter-to-existing-path] em ./request_params/required-request-params.yaml
 	em API GET /api/test2
-		o novo parâmetro opcional de requisição `header` foi adicionado a todas as operações do caminho%!(EXTRA string=`optionalheaderparam`)
+		o novo parâmetro opcional de requisição do tipo `header` e nome `optionalheaderparam` foi adicionado a todas as operações do caminho
 
 info	[new-optional-request-parameter] em ./request_params/required-request-params.yaml
 	em API GET /api/test2

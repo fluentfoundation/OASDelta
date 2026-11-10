@@ -1,1 +1,1 @@
-[{"id":"api-removed-without-deprecation","text":"api removed without deprecation","level":3,"operation":"GET","path":"/test","section":"paths","baseSource":{"file":"./list-of-types/single-to-list-revision.yaml","line":7,"column":5,"endLine":23,"endColumn":37},"fingerprint":"834c1d022428"}]
+[{"id":"api-removed-without-deprecation","text":"API removed without deprecation","level":3,"operation":"GET","path":"/test","section":"paths","baseSource":{"file":"./list-of-types/single-to-list-revision.yaml","line":7,"column":5,"endLine":23,"endColumn":37},"fingerprint":"834c1d022428"}]

@@ -2,7 +2,7 @@
 error	[request-parameter-min-set] at ./openapi-test2.yaml
 	in API GET /api/{domain}/{project}/badges/security-score
 		for the `path` request parameter `domain`, the min was set to `7.00`
-		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+		Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
 error	[request-parameter-type-changed] at ./openapi-test2.yaml
 	in API GET /api/{domain}/{project}/badges/security-score
@@ -18,15 +18,15 @@ error	[response-success-status-removed] at ./openapi-test2.yaml
 
 error	[api-path-removed-without-deprecation] at ./openapi-test1.yaml
 	in API GET /api/{domain}/{project}/install-command
-		api path removed without deprecation
+		API path removed without deprecation
 
 error	[api-path-removed-without-deprecation] at ./openapi-test1.yaml
 	in API POST /register
-		api path removed without deprecation
+		API path removed without deprecation
 
 error	[api-path-removed-without-deprecation] at ./openapi-test1.yaml
 	in API POST /subscribe
-		api path removed without deprecation
+		API path removed without deprecation
 
 warning	[request-parameter-pattern-changed] at ./openapi-test2.yaml
 	in API GET /api/{domain}/{project}/badges/security-score

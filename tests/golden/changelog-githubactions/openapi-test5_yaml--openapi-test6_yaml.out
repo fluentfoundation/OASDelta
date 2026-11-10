@@ -1,5 +1,5 @@
-::error title=api-path-removed-without-deprecation,file=openapi-test5.yaml::in API GET /api/{domain}/{project}/badges/security-score api path removed without deprecation
-::error title=api-path-removed-without-deprecation,file=openapi-test5.yaml::in API GET /api/{domain}/{project}/install-command api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test5.yaml::in API GET /api/{domain}/{project}/badges/security-score API path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test5.yaml::in API GET /api/{domain}/{project}/install-command API path removed without deprecation
 ::notice title=api-schema-removed::in API   removed the schema `network-policies`
 ::notice title=api-schema-removed::in API   removed the schema `requests`
 ::notice title=api-schema-removed::in API   removed the schema `rules`

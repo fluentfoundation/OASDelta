@@ -5,7 +5,7 @@ info	[request-parameter-default-value-changed] em ./properties/negative_zero_rev
 
 info	[request-parameter-default-value-changed] em ./properties/negative_zero_revision.yaml
 	em API GET /a
-		no parâmetro de requisição do tipo `query` e nome `int` teve seu valor padrão foi alterado de `0.00` para `1.00`
+		no parâmetro de requisição do tipo `query` e nome `int` teve seu valor padrão foi alterado de `-0.00` para `1.00`
 
 info	[request-parameter-default-value-changed] em ./properties/negative_zero_revision.yaml
 	em API GET /a

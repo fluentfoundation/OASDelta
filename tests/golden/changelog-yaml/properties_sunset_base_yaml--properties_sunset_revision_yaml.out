@@ -6,7 +6,7 @@
   section: paths
   revisionSource:
     file: ./properties/sunset_revision.yaml
-    line: 9
+    line: 11
     column: 7
   fingerprint: 9a03a57e71e2
 - id: response-property-sunset-date-too-small
@@ -17,7 +17,7 @@
   section: paths
   revisionSource:
     file: ./properties/sunset_revision.yaml
-    line: 22
+    line: 24
     column: 21
   fingerprint: 84d1af1afc81
 

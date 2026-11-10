@@ -1,1 +1,1 @@
-[{"id":"api-security-component-added","text":"the component security scheme `OAuth` was added","level":1,"section":"components","revisionSource":{"file":"openapi-test3.yaml","line":252,"column":5,"endLine":263,"endColumn":35},"fingerprint":"1611ea36b1f5"}]
+[{"id":"api-security-component-added","text":"the component security scheme `OAuth` was added","level":1,"section":"components","revisionSource":{"file":"openapi-test3.yaml","line":252,"column":5,"endLine":263,"endColumn":43},"fingerprint":"1611ea36b1f5"}]

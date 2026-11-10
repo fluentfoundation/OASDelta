@@ -2,32 +2,32 @@
 error	[request-body-exclusive-max-set] en ./checker/exclusive_min_max_set_revision.yaml
 	en API POST /products
 		el valor exclusiveMaximum del cuerpo de solicitud fue establecido en `100.00`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 error	[request-body-exclusive-min-set] en ./checker/exclusive_min_max_set_revision.yaml
 	en API POST /products
 		el valor exclusiveMinimum del cuerpo de solicitud fue establecido en `0.00`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 error	[request-parameter-exclusive-max-set] en ./checker/exclusive_min_max_set_revision.yaml
 	en API POST /products
 		para el parámetro `query` de solicitud `limit`, exclusiveMaximum fue establecido en `100.00`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 error	[request-parameter-exclusive-min-set] en ./checker/exclusive_min_max_set_revision.yaml
 	en API POST /products
 		para el parámetro `query` de solicitud `limit`, exclusiveMinimum fue establecido en `0.00`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 error	[request-property-exclusive-max-set] en ./checker/exclusive_min_max_set_revision.yaml
 	en API POST /products
 		el valor exclusiveMaximum de la propiedad de solicitud `price` fue establecido en `1000.00`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 error	[request-property-exclusive-min-set] en ./checker/exclusive_min_max_set_revision.yaml
 	en API POST /products
 		el valor exclusiveMinimum de la propiedad de solicitud `price` fue establecido en `0.00`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 info	[api-version-not-bumped]
 	en info

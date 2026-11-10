@@ -1,11 +1,11 @@
 3 cambios: 2 error, 0 warning, 1 info
 error	[api-removed-without-deprecation] en ./checker/clone_diff_base.yaml
 	en API PATCH /pets
-		api removida sin deprecación
+		API removida sin deprecación
 
 error	[api-path-removed-without-deprecation] en ./checker/clone_diff_base.yaml
 	en API GET /stable-gone
-		ruta de api removida sin deprecación
+		ruta de API removida sin deprecación
 
 info	[api-version-not-bumped]
 	en info

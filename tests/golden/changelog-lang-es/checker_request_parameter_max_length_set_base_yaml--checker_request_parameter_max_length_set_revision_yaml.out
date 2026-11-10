@@ -2,6 +2,6 @@
 error	[request-parameter-max-length-set] en ./checker/request_parameter_max_length_set_revision.yaml
 	en API POST /test
 		para el parámetro `query` de solicitud `category`, maxLength fue establecido en `15`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 

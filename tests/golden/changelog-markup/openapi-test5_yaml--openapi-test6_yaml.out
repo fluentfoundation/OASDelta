@@ -4,11 +4,11 @@
 ## API Changes
 
 ### GET /api/{domain}/{project}/badges/security-score
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### GET /api/{domain}/{project}/install-command
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### GET /health

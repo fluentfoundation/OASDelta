@@ -1,19 +1,19 @@
 8 changes: 4 error, 0 warning, 4 info
 error	[api-path-removed-without-deprecation] at openapi-test3.yaml
 	in API GET /api/{domain}/{project}/badges/security-score
-		api path removed without deprecation
+		API path removed without deprecation
 
 error	[api-path-removed-without-deprecation] at openapi-test3.yaml
 	in API GET /api/{domain}/{project}/install-command
-		api path removed without deprecation
+		API path removed without deprecation
 
 error	[api-path-removed-without-deprecation] at openapi-test3.yaml
 	in API POST /register
-		api path removed without deprecation
+		API path removed without deprecation
 
 error	[api-path-removed-without-deprecation] at openapi-test3.yaml
 	in API POST /subscribe
-		api path removed without deprecation
+		API path removed without deprecation
 
 info	[api-security-component-removed]
 	in components/securitySchemes

@@ -13,9 +13,9 @@
 ::notice title=api-security-component-oauth-scope-changed,file=openapi-test3.yaml,line=252,col=5::in API   the component security scheme `OAuth` oauth `authorizationCode` flow scope `accountWrite` was updated from `Allows account data to be written` to `Allows accounts data to be written`
 ::notice title=api-security-component-removed::in API   the component security scheme `AccessToken` was removed
 ::notice title=api-security-component-removed::in API   the component security scheme `bearerAuth` was removed
-::notice title=api-operation-id-removed,file=openapi-test1.yaml::in API GET /api/{domain}/{project}/badges/security-score api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
+::notice title=api-operation-id-removed,file=openapi-test1.yaml::in API GET /api/{domain}/{project}/badges/security-score API operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`
 ::notice title=api-security-anonymous-access-added,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score the endpoint now allows anonymous access
-::notice title=api-tag-removed,file=openapi-test1.yaml::in API GET /api/{domain}/{project}/badges/security-score api tag `security` removed
+::notice title=api-tag-removed,file=openapi-test1.yaml::in API GET /api/{domain}/{project}/badges/security-score API tag `security` removed
 ::notice title=request-parameter-max-length-increased,file=openapi-test3.yaml,line=45,col=11::in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `token`, the maxLength was increased from `29` to `30`
 ::notice title=request-parameter-pattern-removed,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image`
 ::notice title=request-parameter-type-generalized,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any`

@@ -2,7 +2,7 @@
 error	[request-property-max-set] en ./checker/request_property_max_set_revision.yaml
 	en API POST /pets
 		el valor máximo de la propiedad de solicitud `age` fue establecido en `15.00`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 info	[api-version-not-bumped]
 	en info

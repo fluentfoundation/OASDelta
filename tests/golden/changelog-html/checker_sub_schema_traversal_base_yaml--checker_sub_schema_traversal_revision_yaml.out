@@ -153,7 +153,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
         </div>
         
-        the `data/contains/` request property&#39;s minLength was increased from `1` to `3`
+        the `data/contains` request property&#39;s minLength was increased from `1` to `3`
         </li>
         
         <li class="change">
@@ -162,7 +162,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
         </div>
         
-        the `data/contentSchema/` request property&#39;s minLength was increased from `1` to `3`
+        the `data/contentSchema` request property&#39;s minLength was increased from `1` to `3`
         </li>
         
         <li class="change">
@@ -180,7 +180,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
         </div>
         
-        the `data/prefixItems[subschema #1]/` request property&#39;s minLength was increased from `1` to `3`
+        the `data/prefixItems[subschema #1]` request property&#39;s minLength was increased from `1` to `3`
         </li>
         
         <li class="change">
@@ -189,7 +189,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
         </div>
         
-        the `data/propertyNames/` request property&#39;s minLength was increased from `1` to `3`
+        the `data/propertyNames` request property&#39;s minLength was increased from `1` to `3`
         </li>
         
         <li class="change">
@@ -198,7 +198,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
         </div>
         
-        the `data/unevaluatedItems/` request property&#39;s minLength was increased from `1` to `3`
+        the `data/unevaluatedItems` request property&#39;s minLength was increased from `1` to `3`
         </li>
         
         <li class="change">
@@ -207,7 +207,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
         </div>
         
-        the `data/unevaluatedProperties/` request property&#39;s minLength was increased from `1` to `3`
+        the `data/unevaluatedProperties` request property&#39;s minLength was increased from `1` to `3`
         </li>
         
     </ul>

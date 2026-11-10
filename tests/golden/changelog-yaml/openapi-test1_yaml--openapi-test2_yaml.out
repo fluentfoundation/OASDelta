@@ -1,6 +1,6 @@
 - id: request-parameter-min-set
   text: for the `path` request parameter `domain`, the min was set to `7.00`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: GET
   path: /api/{domain}/{project}/badges/security-score
@@ -52,7 +52,7 @@
     endColumn: 29
   fingerprint: a121002ce2b9
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /api/{domain}/{project}/install-command
@@ -65,7 +65,7 @@
     endColumn: 18
   fingerprint: e28db7a5f80b
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: POST
   path: /register
@@ -78,7 +78,7 @@
     endColumn: 29
   fingerprint: ce00b68ad8ce
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: POST
   path: /subscribe
@@ -173,7 +173,7 @@
     line: 250
     column: 5
     endLine: 254
-    endColumn: 19
+    endColumn: 25
   fingerprint: 377a843441ca
 - id: api-security-component-removed
   text: the component security scheme `AccessToken` was removed
@@ -195,7 +195,7 @@
     line: 300
     column: 5
     endLine: 309
-    endColumn: 60
+    endColumn: 66
   fingerprint: dacbb94d9ed7
 - id: api-security-component-removed
   text: the component security scheme `bearerAuth` was removed
@@ -206,10 +206,10 @@
     line: 293
     column: 5
     endLine: 296
-    endColumn: 24
+    endColumn: 25
   fingerprint: 471257f7ddee
 - id: api-operation-id-removed
-  text: api operation id `GetSecurityScores` removed and replaced with ``
+  text: API operation id `GetSecurityScores` removed and replaced with ``
   level: 1
   operation: GET
   operationId: GetSecurityScores
@@ -233,7 +233,7 @@
     column: 1
   fingerprint: d6ade0aa023b
 - id: api-tag-removed
-  text: api tag `security` removed
+  text: API tag `security` removed
   level: 1
   operation: GET
   operationId: GetSecurityScores

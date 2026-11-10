@@ -3,9 +3,9 @@ error at ./checker/response_property_any_of_complex_revision.yaml, in API GET /p
 
 error at ./checker/response_property_any_of_complex_revision.yaml, in API GET /pets the `anyOf[#/components/schemas/Dog]/breed/anyOf[#/components/schemas/Breed2]/name` response's property `type` changed from `string` to `number` for status `200` [response-property-type-changed]. 
 
-error at ./checker/response_property_any_of_complex_revision.yaml, in API GET /pets the `anyOf[subschema #3: Rabbit]/` response's property `type` changed from `string` to `number` for status `200` [response-property-type-changed]. 
+error at ./checker/response_property_any_of_complex_revision.yaml, in API GET /pets the `anyOf[subschema #3: Rabbit]` response's property `type` changed from `string` to `number` for status `200` [response-property-type-changed]. 
 
-error at ./checker/response_property_any_of_complex_revision.yaml, in API GET /pets the `anyOf[subschema #4 -> subschema #5]/` response's property `type` changed from `string` to `number` for status `200` [response-property-type-changed]. 
+error at ./checker/response_property_any_of_complex_revision.yaml, in API GET /pets the `anyOf[subschema #4 -> subschema #5]` response's property `type` changed from `string` to `number` for status `200` [response-property-type-changed]. 
 
 info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
 

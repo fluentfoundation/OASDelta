@@ -1,6 +1,6 @@
 - id: request-body-exclusive-max-set
   text: the request's body exclusiveMaximum was set to `100.00`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: createProduct
@@ -13,7 +13,7 @@
   fingerprint: ab2bb5b41787
 - id: request-body-exclusive-min-set
   text: the request's body exclusiveMinimum was set to `0.00`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: createProduct
@@ -26,7 +26,7 @@
   fingerprint: 556d86f0ff78
 - id: request-parameter-exclusive-max-set
   text: for the `query` request parameter `limit`, the exclusiveMaximum was set to `100.00`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: createProduct
@@ -39,7 +39,7 @@
   fingerprint: 0ec2dbec0471
 - id: request-parameter-exclusive-min-set
   text: for the `query` request parameter `limit`, the exclusiveMinimum was set to `0.00`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: createProduct
@@ -52,7 +52,7 @@
   fingerprint: d23a36e0e827
 - id: request-property-exclusive-max-set
   text: the `price` request property's exclusiveMaximum was set to `1000.00`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: createProduct
@@ -65,7 +65,7 @@
   fingerprint: b05964e91e5a
 - id: request-property-exclusive-min-set
   text: the `price` request property's exclusiveMinimum was set to `0.00`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: createProduct

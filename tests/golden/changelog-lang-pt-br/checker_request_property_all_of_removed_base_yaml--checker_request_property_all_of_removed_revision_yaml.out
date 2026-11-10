@@ -10,11 +10,11 @@ info	[api-schema-removed]
 info	[request-body-all-of-removed] em ./checker/request_property_all_of_removed_revision.yaml
 	em API POST /pets
 		`#/components/schemas/Rabbit` foi removido da lista `allOf` do corpo da requisição
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+		Isto comparou os ramos do `allOf` um a um, então outro ramo já pode descrever o que mudou aqui, deixando o esquema mesclado igual. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
 info	[request-property-all-of-removed] em ./checker/request_property_all_of_removed_revision.yaml
 	em API POST /pets
 		`#/components/schemas/Breed3` foi removido da lista `allOf` da propriedade de requisição `allOf[#/components/schemas/Dog]/breed`
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+		Isto comparou os ramos do `allOf` um a um, então outro ramo já pode descrever o que mudou aqui, deixando o esquema mesclado igual. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
 

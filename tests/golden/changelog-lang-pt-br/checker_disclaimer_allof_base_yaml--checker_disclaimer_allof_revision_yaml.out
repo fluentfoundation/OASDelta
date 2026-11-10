@@ -2,6 +2,6 @@
 warning	[response-property-became-optional] em ./checker/disclaimer_allof_revision.yaml
 	em API GET /x
 		a propriedade de resposta `allOf[#/components/schemas/A]/id` tornou-se opcional para o status `200`
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+		Isto comparou os ramos do `allOf` um a um, então outro ramo já pode descrever o que mudou aqui, deixando o esquema mesclado igual. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
 

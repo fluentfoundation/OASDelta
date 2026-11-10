@@ -1,6 +1,6 @@
 - id: request-body-min-items-set
   text: the request's body minItems was set to `2`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: createBatch
@@ -25,7 +25,7 @@
   fingerprint: b85797e792a3
 - id: request-parameter-min-items-set
   text: for the `query` request parameter `ids`, the minItems was set to `3`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: createItem
@@ -38,7 +38,7 @@
   fingerprint: a3f59ee7f6e4
 - id: request-property-min-items-set
   text: the `tags` request property's minItems was set to `3`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: createItem

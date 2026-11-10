@@ -10,7 +10,7 @@ error	[response-property-became-optional] в ./x-of/revision.json
 warning	[response-property-became-optional] в ./x-of/revision.json
 	в API GET /api/allOf/path
 		поле ответа `allOf[#/components/schemas/ProblemSchema]/changedProperty` стало необязательным для ответа со статусом `200`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 info	[api-version-not-bumped]
 	в info

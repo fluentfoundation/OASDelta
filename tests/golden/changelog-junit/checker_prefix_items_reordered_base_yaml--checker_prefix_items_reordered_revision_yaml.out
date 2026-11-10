@@ -2,10 +2,10 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
     <testcase name="request-property-type-changed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `/prefixItems[subschema #1]/` request property `type` changed from `string` to `integer`</failure>
+      <failure message="Breaking change detected">the `/prefixItems[subschema #1]` request property `type` changed from `string` to `integer`</failure>
     </testcase>
     <testcase name="request-property-type-changed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `/prefixItems[subschema #2]/` request property `type` changed from `integer` to `string`</failure>
+      <failure message="Breaking change detected">the `/prefixItems[subschema #2]` request property `type` changed from `integer` to `string`</failure>
     </testcase>
   </testsuite>
 </testsuites>

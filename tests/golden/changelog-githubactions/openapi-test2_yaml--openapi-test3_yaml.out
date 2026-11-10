@@ -3,12 +3,12 @@
 ::error title=request-parameter-pattern-added,file=openapi-test3.yaml,line=43,col=11::in API GET /api/{domain}/{project}/badges/security-score added the pattern `^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12})$` to the `query` request parameter `token`
 ::error title=request-parameter-type-changed,file=openapi-test3.yaml,line=62,col=11::in API GET /api/{domain}/{project}/badges/security-score for the `path` request parameter `domain`, the `type/format` was changed from `integer/non-negative integer` to `string/hyphen-separated list`
 ::error title=request-parameter-type-changed,file=openapi-test3.yaml,line=44,col=11::in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `token`, the `type/format` was changed from `any` to `string/uuid`
-::error title=api-removed-without-deprecation,file=openapi-test2.yaml::in API POST /api/{domain}/{project}/badges/security-score api removed without deprecation
+::error title=api-removed-without-deprecation,file=openapi-test2.yaml::in API POST /api/{domain}/{project}/badges/security-score API removed without deprecation
 ::warning title=request-parameter-pattern-changed,file=openapi-test3.yaml,line=61,col=11::in API GET /api/{domain}/{project}/badges/security-score changed the pattern of the `path` request parameter `domain` from `^(?:\d+)$` to `^(?:([a-z]+-)*([a-z]+)?)$`
 ::warning title=request-parameter-removed,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score deleted the `query` request parameter `filter`
 ::notice title=api-security-component-added,file=openapi-test3.yaml,line=252,col=5::in API   the component security scheme `OAuth` was added
 ::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.1`
-::notice title=api-operation-id-added,file=openapi-test3.yaml,line=19,col=7::in API GET /api/{domain}/{project}/badges/security-score api operation id `GetSecurityScore` was added
+::notice title=api-operation-id-added,file=openapi-test3.yaml,line=19,col=7::in API GET /api/{domain}/{project}/badges/security-score API operation id `GetSecurityScore` was added
 ::notice title=request-parameter-min-unset,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score for the `path` request parameter `domain`, the min was unset from `7.00`
 ::notice title=request-parameter-pattern-removed,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score removed the pattern `^(?:[\w-./:]+)$` from the `query` request parameter `image`
 ::notice title=request-parameter-type-generalized,file=openapi-test3.yaml::in API GET /api/{domain}/{project}/badges/security-score for the `query` request parameter `image`, the `type/format` was widened from `string/general string` to `any`

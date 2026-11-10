@@ -12,11 +12,11 @@
 
 
 ### GET /prefix/api/{domain}/{project}/badges/security-score
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### POST /prefix/api/{domain}/{project}/badges/security-score
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 

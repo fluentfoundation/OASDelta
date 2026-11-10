@@ -1,11 +1,11 @@
 7 alterações: 2 error, 0 warning, 5 info
 error	[api-path-removed-without-deprecation] em openapi-test4.yaml
 	em API GET /prefix/api/{domain}/{project}/badges/security-score
-		caminho da api removido sem depreciação
+		caminho da API removido sem depreciação
 
 error	[api-path-removed-without-deprecation] em openapi-test4.yaml
 	em API POST /prefix/api/{domain}/{project}/badges/security-score
-		caminho da api removido sem depreciação
+		caminho da API removido sem depreciação
 
 info	[api-major-version-not-bumped]
 	em info

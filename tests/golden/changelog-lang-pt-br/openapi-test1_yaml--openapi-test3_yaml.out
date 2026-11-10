@@ -9,7 +9,7 @@ error	[response-success-status-removed] em openapi-test3.yaml
 
 error	[api-security-removed] em openapi-test3.yaml
 	em API POST /register
-		o esquema de segurança `bearerAuth` foi removido do endpoint da api
+		o esquema de segurança `bearerAuth` foi removido do endpoint da API
 
 error	[api-security-scope-added] em openapi-test3.yaml
 	em API POST /register
@@ -65,7 +65,7 @@ info	[api-security-component-removed]
 
 info	[api-operation-id-removed] em openapi-test1.yaml
 	em API GET /api/{domain}/{project}/badges/security-score
-		id de operação da api `GetSecurityScores` removido e substituído por `GetSecurityScore`
+		id de operação da API `GetSecurityScores` removido e substituído por `GetSecurityScore`
 
 info	[api-security-anonymous-access-added] em openapi-test3.yaml
 	em API GET /api/{domain}/{project}/badges/security-score
@@ -74,7 +74,7 @@ info	[api-security-anonymous-access-added] em openapi-test3.yaml
 
 info	[api-tag-removed] em openapi-test1.yaml
 	em API GET /api/{domain}/{project}/badges/security-score
-		tag da api `security` removida
+		tag da API `security` removida
 
 info	[request-parameter-max-length-increased] em openapi-test3.yaml
 	em API GET /api/{domain}/{project}/badges/security-score
@@ -99,7 +99,7 @@ info	[api-security-anonymous-access-added] em openapi-test3.yaml
 
 info	[new-optional-request-default-parameter-to-existing-path] em openapi-test3.yaml
 	em API GET /api/{domain}/{project}/install-command
-		o novo parâmetro opcional de requisição `header` foi adicionado a todas as operações do caminho%!(EXTRA string=`name`)
+		o novo parâmetro opcional de requisição do tipo `header` e nome `name` foi adicionado a todas as operações do caminho
 
 info	[request-parameter-enum-value-added] em openapi-test3.yaml
 	em API GET /api/{domain}/{project}/install-command

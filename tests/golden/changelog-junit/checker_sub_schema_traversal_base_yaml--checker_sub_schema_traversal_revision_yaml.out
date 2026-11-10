@@ -8,25 +8,25 @@
       <failure message="Breaking change detected">the `data/then/value` request property's min was increased to `5.00`</failure>
     </testcase>
     <testcase name="request-property-min-length-increased" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `data/contains/` request property's minLength was increased from `1` to `3`</failure>
+      <failure message="Breaking change detected">the `data/contains` request property's minLength was increased from `1` to `3`</failure>
     </testcase>
     <testcase name="request-property-min-length-increased" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `data/contentSchema/` request property's minLength was increased from `1` to `3`</failure>
+      <failure message="Breaking change detected">the `data/contentSchema` request property's minLength was increased from `1` to `3`</failure>
     </testcase>
     <testcase name="request-property-min-length-increased" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the `data/else/value` request property's minLength was increased from `1` to `3`</failure>
     </testcase>
     <testcase name="request-property-min-length-increased" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `data/prefixItems[subschema #1]/` request property's minLength was increased from `1` to `3`</failure>
+      <failure message="Breaking change detected">the `data/prefixItems[subschema #1]` request property's minLength was increased from `1` to `3`</failure>
     </testcase>
     <testcase name="request-property-min-length-increased" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `data/propertyNames/` request property's minLength was increased from `1` to `3`</failure>
+      <failure message="Breaking change detected">the `data/propertyNames` request property's minLength was increased from `1` to `3`</failure>
     </testcase>
     <testcase name="request-property-min-length-increased" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `data/unevaluatedItems/` request property's minLength was increased from `1` to `3`</failure>
+      <failure message="Breaking change detected">the `data/unevaluatedItems` request property's minLength was increased from `1` to `3`</failure>
     </testcase>
     <testcase name="request-property-min-length-increased" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `data/unevaluatedProperties/` request property's minLength was increased from `1` to `3`</failure>
+      <failure message="Breaking change detected">the `data/unevaluatedProperties` request property's minLength was increased from `1` to `3`</failure>
     </testcase>
     <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
       <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>

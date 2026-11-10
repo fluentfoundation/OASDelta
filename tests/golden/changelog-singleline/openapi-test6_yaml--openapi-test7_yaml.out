@@ -1,8 +1,8 @@
 3 changes: 3 error, 0 warning, 0 info
-error at openapi-test6.yaml, in API GET /health api path removed without deprecation [api-path-removed-without-deprecation]. 
+error at openapi-test6.yaml, in API GET /health API path removed without deprecation [api-path-removed-without-deprecation]. 
 
-error at openapi-test6.yaml, in API GET /health/live api path removed without deprecation [api-path-removed-without-deprecation]. 
+error at openapi-test6.yaml, in API GET /health/live API path removed without deprecation [api-path-removed-without-deprecation]. 
 
-error at openapi-test6.yaml, in API GET /health/ready api path removed without deprecation [api-path-removed-without-deprecation]. 
+error at openapi-test6.yaml, in API GET /health/ready API path removed without deprecation [api-path-removed-without-deprecation]. 
 
 

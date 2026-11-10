@@ -5,7 +5,7 @@
       <failure message="Breaking change detected">for the `query` request parameter `float`, default value was changed from `-0.00` to `1.00`</failure>
     </testcase>
     <testcase name="request-parameter-default-value-changed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">for the `query` request parameter `int`, default value was changed from `0.00` to `1.00`</failure>
+      <failure message="Breaking change detected">for the `query` request parameter `int`, default value was changed from `-0.00` to `1.00`</failure>
     </testcase>
     <testcase name="request-parameter-default-value-changed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">for the `query` request parameter `octal`, default value was changed from `0.00` to `1.00`</failure>

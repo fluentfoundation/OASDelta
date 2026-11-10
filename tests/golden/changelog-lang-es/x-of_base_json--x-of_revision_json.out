@@ -10,7 +10,7 @@ error	[response-property-became-optional] en ./x-of/revision.json
 warning	[response-property-became-optional] en ./x-of/revision.json
 	en API GET /api/allOf/path
 		la propiedad de respuesta `allOf[#/components/schemas/ProblemSchema]/changedProperty` se volvió opcional para el estado `200`
-		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+		Esto comparó las ramas de `allOf` una por una, así que otra rama ya puede describir lo que cambió aquí, dejando igual el esquema fusionado. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
 info	[api-version-not-bumped]
 	en info

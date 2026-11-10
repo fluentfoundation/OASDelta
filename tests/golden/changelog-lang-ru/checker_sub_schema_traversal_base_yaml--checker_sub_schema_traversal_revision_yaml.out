@@ -9,11 +9,11 @@ error	[request-property-min-increased] в ./checker/sub_schema_traversal_revisio
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/contains/` была увеличена с `1` до `3`
+		минимальная длина свойства запроса `data/contains` была увеличена с `1` до `3`
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/contentSchema/` была увеличена с `1` до `3`
+		минимальная длина свойства запроса `data/contentSchema` была увеличена с `1` до `3`
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
@@ -21,19 +21,19 @@ error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/prefixItems[subschema #1]/` была увеличена с `1` до `3`
+		минимальная длина свойства запроса `data/prefixItems[subschema #1]` была увеличена с `1` до `3`
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/propertyNames/` была увеличена с `1` до `3`
+		минимальная длина свойства запроса `data/propertyNames` была увеличена с `1` до `3`
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/unevaluatedItems/` была увеличена с `1` до `3`
+		минимальная длина свойства запроса `data/unevaluatedItems` была увеличена с `1` до `3`
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/unevaluatedProperties/` была увеличена с `1` до `3`
+		минимальная длина свойства запроса `data/unevaluatedProperties` была увеличена с `1` до `3`
 
 info	[api-version-not-bumped]
 	в info

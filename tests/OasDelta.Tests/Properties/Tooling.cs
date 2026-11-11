@@ -14,7 +14,8 @@ internal interface ITool
     Outcome Run(params string[] args);
 }
 
-/// <summary>Exit code and stdout of a run; <see cref="Crashed"/>: the Go binary panicked (exit 2, "panic:" on stderr).
+/// <summary>Exit code and stdout of a run; <see cref="Crashed"/>: the Go binary panicked or hit a fatal runtime error
+/// (exit 2, "panic:" or "fatal error:" on stderr).
 /// OasDelta never reports a crash this way: an exception escaping the CLI fails the test instead.</summary>
 internal readonly record struct Outcome(int Code, string Out, bool Crashed = false);
 
@@ -61,7 +62,9 @@ internal sealed class External(string exe) : ITool
             throw new TimeoutException($"{Name} {string.Join(' ', args)} did not finish in 120 s");
         }
         p.WaitForExit();
-        return new Outcome(p.ExitCode, stdout.Result, p.ExitCode == 2 && stderr.Result.Contains("panic:", StringComparison.Ordinal));
+        // a panic, or a fatal runtime error such as "fatal error: stack overflow" (both exit 2)
+        return new Outcome(p.ExitCode, stdout.Result,
+            p.ExitCode == 2 && (stderr.Result.Contains("panic:", StringComparison.Ordinal) || stderr.Result.Contains("fatal error:", StringComparison.Ordinal)));
     }
 }
 

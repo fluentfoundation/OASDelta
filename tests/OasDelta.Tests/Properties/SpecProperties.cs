@@ -101,9 +101,11 @@ public partial class SpecProperties
     /// documents and for arbitrary values with hostile strings.
     ///
     /// One exception, go-yaml's own: a string that needs a block scalar with an indentation indicator ("|4-", for a
-    /// leading space or line break), as a sequence item ("- |4-", "- - |4-"), is written with its text indented from
-    /// the enclosing node rather than from the dash, and go-yaml cannot read that back ("did not find expected '-'
-    /// indicator"). oasdiff rejects such a spec (exit 102), and OasDelta reproduces both the writing and the reading.</summary>
+    /// leading space or line break), as a sequence item ("- |4-", "- - |4-") or as the key of a mapping that is a
+    /// sequence item ("- ? |4-"), is written with its text indented from the enclosing node rather than from the dash,
+    /// and go-yaml cannot read that back ("did not find expected '-' indicator", "did not find expected key"). oasdiff
+    /// rejects such a spec (exit 102), and OasDelta reproduces both the writing and the reading (checked against
+    /// oasdiff 1.35.0's diff -f yaml, which writes the same bytes and cannot load them).</summary>
     [Fact]
     public void EmitParseEmitIsStable() =>
         Gen.Frequency<object?>((1, SpecGen.Spec.Select(m => (object?)m)), (2, AnyValue)).Select(AsParsed).Sample(v =>
@@ -123,7 +125,7 @@ public partial class SpecProperties
 
     // ------------------------------------------------------------------ helpers
 
-    [System.Text.RegularExpressions.GeneratedRegex(@"^ *(- )+[|>][1-9][-+]?$", System.Text.RegularExpressions.RegexOptions.Multiline)]
+    [System.Text.RegularExpressions.GeneratedRegex(@"^ *(- )+(\? )?[|>][1-9][-+]?$", System.Text.RegularExpressions.RegexOptions.Multiline)]
     private static partial System.Text.RegularExpressions.Regex GoYamlCannotReadBack();
 
     private static readonly Gen<string> AnyString = Gen.Frequency<string>(

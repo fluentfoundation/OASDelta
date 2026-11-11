@@ -239,3 +239,68 @@ public class CyclicArrayTests
         Assert.Contains($"changed from `{from}` to `{to}`", output);
     }
 }
+
+/// <summary>kin-openapi's resolve pass rejects null where it expects an object in some places and not others, and
+/// reports the first one in its own order (components by kind, then paths, then webhooks, each sorted by name).
+/// Each expectation is what oasdiff 1.35.0 prints (exit 102).</summary>
+public class NullObjectTests
+{
+    private static string? LoadError(string body)
+    {
+        try
+        {
+            new SpecLoader().LoadFromText("openapi: 3.1.0\ninfo: {title: t, version: '1'}\n" + body, "spec.yaml");
+            return null;
+        }
+        catch (LoadException e) { return e.Message; }
+    }
+
+    private const string Ok = "responses: {'200': {description: ok}}";
+
+    [Theory]
+    [InlineData("paths: {}\ncomponents: {schemas: {A: {oneOf: [{type: string}, null]}}}", "schema")]
+    [InlineData("paths: {}\ncomponents: {schemas: {A: {properties: {a: null}}}}", "schema")]
+    [InlineData("paths: {}\ncomponents: {schemas: {A: {prefixItems: [null]}}}", "schema")]
+    [InlineData("paths: {}\ncomponents: {schemas: {A: {$defs: {x: null}}}}", "schema")]
+    [InlineData("paths: {}\ncomponents: {schemas: {A: null}}", "schema")]
+    [InlineData("paths: {/p: {post: {parameters: [null], " + Ok + "}}}", "parameter")]
+    [InlineData("paths: {/p: {post: {responses: {'200': null}}}}", "response")]
+    [InlineData("paths: {/p: {post: {responses: {'200': {description: ok, headers: {X: null}}}}}}", "header")]
+    [InlineData("paths: {/p: {post: {responses: {'200': {description: ok, links: {l: null}}}}}}", "link")]
+    [InlineData("paths: {/p: {post: {callbacks: {c: null}, " + Ok + "}}}", "callback")]
+    [InlineData("paths: {/p: {post: {callbacks: {c: {'{$url}': null}}, " + Ok + "}}}", "path item")]
+    [InlineData("paths: {}\ncomponents: {requestBodies: {B: null}}", "requestBody")]
+    [InlineData("paths: {}\ncomponents: {securitySchemes: {S: null}}", "securityScheme")]
+    [InlineData("paths: {}\ncomponents: {examples: {E: null}}", "example")]
+    // the schema components come before the paths, whatever their names
+    [InlineData("paths: {/p: {post: {parameters: [null], " + Ok + "}}}\ncomponents: {schemas: {A: null}}", "schema")]
+    // headers come before schemas
+    [InlineData("paths: {}\ncomponents: {schemas: {A: null}, headers: {H: null}}", "header")]
+    // paths by name, operations by method
+    [InlineData("paths: {/b: {post: {parameters: [null]}}, /a: {post: {responses: {'200': null}}}}", "response")]
+    [InlineData("paths: {/a: {put: {parameters: [null]}, get: {responses: {'200': null}}}}", "response")]
+    public void NullIsRejectedWhereKinRejectsIt(string body, string kind) =>
+        Assert.Equal($"invalid {kind}: value MUST be an object", LoadError(body));
+
+    [Theory]
+    [InlineData("paths: {/p: {post: {requestBody: {content: {a/b: {schema: {items: null, not: null, additionalProperties: null}}}}, " + Ok + "}}}")]
+    [InlineData("paths: {/p: {post: {requestBody: null, " + Ok + "}}}")]
+    [InlineData("paths: {/p: {post: {requestBody: {content: {a/b: null}}, " + Ok + "}}}")]
+    [InlineData("paths: {/p: null, /q: {post: null}}")]
+    [InlineData("paths: {}\ncomponents: {links: {L: null}, pathItems: {P: null}}")]
+    [InlineData("paths: {}\nwebhooks: {w: null}")]
+    public void NullIsAcceptedWhereKinSkipsIt(string body) => Assert.Null(LoadError(body));
+
+    /// <summary>An empty mapping that is a list item has no origin (oasdiff/yaml3 locates it by its first key).</summary>
+    [Fact]
+    public void AnEmptyListItemHasNoOrigin()
+    {
+        var spec = new SpecLoader().LoadFromText(
+            "openapi: 3.1.0\ninfo: {title: t, version: '1'}\npaths: {}\ncomponents:\n  schemas:\n    A:\n      oneOf:\n        - {}\n        - {type: string}\n    B: {}\n",
+            "spec.yaml");
+        var a = spec.Components!.Schemas["A"].Value!;
+        Assert.Null(a.OneOf[0].Value!.Origin);
+        Assert.NotNull(a.OneOf[1].Value!.Origin);
+        Assert.NotNull(spec.Components.Schemas["B"].Value!.Origin); // a map value is located by its key, empty or not
+    }
+}

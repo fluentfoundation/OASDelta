@@ -1,0 +1,4 @@
+1 changes: 0 error, 1 warning, 0 info
+warning at ./properties/empty_subschema_b.yaml, in API POST /p for the `query` request parameter `q`, the `type` of property `oneOf[subschema #2]/` was changed from `boolean` to `any` [request-parameter-property-type-changed]. This is a warning because parameter objects can be passed in different ways, some of which allow this type change while others do not.
+
+

@@ -1,0 +1,10 @@
+2 изменений: 2 error, 0 warning, 0 info
+error	[api-removed-without-deprecation] в ./properties/pathitem_ref_null_base.yaml
+	в API POST /p
+		API удалён без deprecation
+
+error	[api-removed-without-deprecation] в 
+	в API POST webhook:w
+		API удалён без deprecation
+
+

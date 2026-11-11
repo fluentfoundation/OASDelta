@@ -1,0 +1,7 @@
+# A null webhook is a nil path item to kin-openapi: it can be added or removed, but comparing it with a webhook of the
+# same name fails (diff failed: path item is nil, exit 104).
+openapi: 3.1.0
+info: {title: null webhook, version: '1'}
+paths: {}
+webhooks:
+  w: null

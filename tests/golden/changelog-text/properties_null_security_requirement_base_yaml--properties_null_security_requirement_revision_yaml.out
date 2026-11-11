@@ -1,0 +1,7 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[api-security-added] at ./properties/null_security_requirement_revision.yaml
+	in API POST /p
+		the endpoint scheme security `a` was added to the API
+		This endpoint inherits the API's top-level security requirements.
+
+

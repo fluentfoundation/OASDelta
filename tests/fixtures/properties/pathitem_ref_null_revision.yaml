@@ -1,0 +1,10 @@
+# A $ref to a null path item (components.pathItems.P: null) reads as an empty path item.
+openapi: 3.1.0
+info: {title: ref to a null path item, version: '1'}
+paths:
+  /p: {$ref: '#/components/pathItems/P'}
+webhooks:
+  w: {$ref: '#/components/pathItems/P'}
+components:
+  pathItems:
+    P: null

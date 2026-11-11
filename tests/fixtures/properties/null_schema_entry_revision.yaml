@@ -1,0 +1,17 @@
+# kin-openapi rejects null in a list or map of schemas (invalid schema: value MUST be an object, exit 102)
+openapi: 3.1.0
+info: {title: null entries, version: '1'}
+paths:
+  /p:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                a: null
+              oneOf:
+                - null
+      responses:
+        '200': {description: ok}

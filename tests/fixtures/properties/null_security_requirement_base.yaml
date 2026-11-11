@@ -1,0 +1,10 @@
+openapi: 3.0.3
+info: {title: null security requirement, version: '1'}
+paths:
+  /p:
+    post:
+      responses:
+        '200': {description: ok}
+components:
+  securitySchemes:
+    a: {type: http, scheme: basic}

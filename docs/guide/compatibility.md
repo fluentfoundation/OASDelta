@@ -70,10 +70,15 @@ of its size.
   belong to one schema. Which one oasdiff shows in a change's "shared schema" detail depends on Go map order and
   changes from run to run. The port always shows the first in sorted order, one of the names oasdiff shows.
 - **Template errors.** Messages for broken custom templates are shorter than Go's.
-- **Crashes.** Where oasdiff crashes, the port reports an error instead. A parameter or response that is only a
-  reference to itself (`P: {$ref: '#/components/parameters/P'}`) makes oasdiff 1.35.0 panic while it lowercases
-  header names (exit 2, with a Go stack trace). The port fails with `diff failed: parameter reference is nil`
-  (exit 104), which is what oasdiff reports for it with `--case-insensitive-headers=false`.
+- **Crashes.** Where oasdiff crashes, the port reports an error or a result instead.
+  - A parameter or response that is only a reference to itself (`P: {$ref: '#/components/parameters/P'}`) makes
+    oasdiff 1.35.0 panic while it lowercases header names (exit 2, with a Go stack trace). The port fails with
+    `diff failed: parameter reference is nil` (exit 104), which is what oasdiff reports for it with
+    `--case-insensitive-headers=false`.
+  - An array whose items are the array itself (`Item: {type: array, items: {$ref: '#/components/schemas/Item'}}`)
+    makes `changelog` and `breaking` in oasdiff 1.35.0 run out of stack when a type change involves it
+    (`fatal error: stack overflow`, exit 2). The port reports the change and shows the repeated schema as `…`:
+    ``the request's body `type` changed from `array<…>` to `string` ``.
 
 ## Not ported
 

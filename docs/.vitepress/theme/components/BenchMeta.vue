@@ -16,6 +16,13 @@ const date = (iso: string) => new Date(iso).toUTCString().replace(/:\d\d GMT$/, 
       <tr><td>Go</td><td v-for="r in data" :key="r.meta.label"><code>{{ r.meta.go_version }}</code>, {{ r.meta.go_binary_mb }} MB binary</td></tr>
       <tr><td>C#</td><td v-for="r in data" :key="r.meta.label"><code>{{ r.meta.cs_version }}</code>, {{ r.meta.cs_binary_mb }} MB binary</td></tr>
       <tr><td>Runs</td><td v-for="r in data" :key="r.meta.label">{{ r.meta.warmup }} warm-up + {{ r.meta.runs }} timed, per case and binary</td></tr>
+      <tr><td>Timing</td><td v-for="r in data" :key="r.meta.label"><code>{{ r.meta.harness ?? 'bench.py (Python timer)' }}</code></td></tr>
+      <tr v-if="data.some((r) => r.meta.memory)">
+        <td>Memory</td>
+        <td v-for="r in data" :key="r.meta.label">
+          {{ r.meta.memory ?? '' }}<template v-if="r.meta.memory_floor_mb != null">; {{ r.meta.memory_floor_mb }} MB for a program that does nothing</template>
+        </td>
+      </tr>
       <tr v-if="data.some((r) => r.meta.real_world_runs)">
         <td>Real-world</td>
         <td v-for="r in data" :key="r.meta.label">

@@ -188,3 +188,54 @@ public class SourceFileTests
         }
     }
 }
+
+/// <summary>An array whose items are the array itself has no end. oasdiff 1.35.0 recurses describing its type until
+/// Go's stack limit (fatal error: stack overflow, exit 2) on changelog and breaking; the port shows the repeated
+/// schema as "…". Found by the property tests, where the overflow took down the test process.</summary>
+public class CyclicArrayTests
+{
+    private const string Spec = """
+        openapi: 3.0.3
+        info: {title: t, version: '1'}
+        paths:
+          /p:
+            post:
+              requestBody:
+                content:
+                  application/json:
+                    schema: SCHEMA
+              responses:
+                '200': {description: ok}
+        components:
+          schemas:
+            Item: {type: array, items: {$ref: '#/components/schemas/Item'}}
+            A: {type: array, items: {$ref: '#/components/schemas/B'}}
+            B: {type: array, format: pair, items: {$ref: '#/components/schemas/A'}}
+        """;
+
+    private static (int Code, string Out) Changelog(string baseSchema, string revisionSchema)
+    {
+        var dir = Directory.CreateTempSubdirectory("oasdelta-cyclic-").FullName;
+        try
+        {
+            string b = Path.Combine(dir, "base.yaml"), r = Path.Combine(dir, "revision.yaml");
+            File.WriteAllText(b, Spec.Replace("SCHEMA", baseSchema));
+            File.WriteAllText(r, Spec.Replace("SCHEMA", revisionSchema));
+            var stdout = new StringWriter { NewLine = "\n" };
+            int code = Cli.Cli.Run(["changelog", b, r], stdout, new StringWriter());
+            return (code, stdout.ToString());
+        }
+        finally { Directory.Delete(dir, true); }
+    }
+
+    [Theory]
+    [InlineData("{$ref: '#/components/schemas/Item'}", "{type: string}", "array<…>", "string")]
+    [InlineData("{type: string}", "{$ref: '#/components/schemas/Item'}", "string", "array<…>")]
+    [InlineData("{$ref: '#/components/schemas/A'}", "{type: string}", "array<array<…>/pair>", "string")]
+    public void TheRepeatedSchemaIsShownAsAnEllipsis(string baseSchema, string revisionSchema, string from, string to)
+    {
+        var (code, output) = Changelog(baseSchema, revisionSchema);
+        Assert.Equal(0, code);
+        Assert.Contains($"changed from `{from}` to `{to}`", output);
+    }
+}

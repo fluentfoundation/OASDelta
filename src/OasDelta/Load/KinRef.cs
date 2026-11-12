@@ -166,7 +166,7 @@ public sealed partial class SpecLoader
             ("requestBodies", KT.RequestBodies), ("responses", KT.ResponseBodies), ("securitySchemes", KT.SecuritySchemes),
             ("examples", KT.Examples), ("links", KT.Links), ("callbacks", KT.Callbacks)),
         [KT.Info] = new(Plain("title", "summary", "description", "termsOfService", "version"), StringComparer.Ordinal)
-            { ["contact"] = KT.Contact, ["license"] = KT.License },
+        { ["contact"] = KT.Contact, ["license"] = KT.License },
         [KT.Contact] = Plain("name", "url", "email"),
         [KT.License] = Plain("name", "url", "identifier"),
         [KT.ExternalDocs] = Plain("description", "url"),
@@ -183,7 +183,7 @@ public sealed partial class SpecLoader
             ("callbacks", KT.Callbacks), ("deprecated", KT.Other), ("security", KT.Other), ("servers", KT.Servers),
             ("externalDocs", KT.ExternalDocs)),
         [KT.Parameter] = new(Plain("name", "in", "description", "style", "explode", "allowEmptyValue", "allowReserved", "deprecated", "required"), StringComparer.Ordinal)
-            { ["schema"] = KT.SchemaRef, ["example"] = KT.Generic, ["examples"] = KT.Examples, ["content"] = KT.Content },
+        { ["schema"] = KT.SchemaRef, ["example"] = KT.Generic, ["examples"] = KT.Examples, ["content"] = KT.Content },
         [KT.RequestBody] = new(Plain("description", "required"), StringComparer.Ordinal) { ["content"] = KT.Content },
         [KT.Response] = Fields(("description", KT.Other), ("headers", KT.Headers), ("content", KT.Content), ("links", KT.Links)),
         [KT.MediaType] = Fields(("schema", KT.SchemaRef), ("itemSchema", KT.SchemaRef), ("example", KT.Generic),
@@ -191,9 +191,9 @@ public sealed partial class SpecLoader
         [KT.Encoding] = new(Plain("contentType", "style", "explode", "allowReserved"), StringComparer.Ordinal) { ["headers"] = KT.Headers },
         [KT.Example] = new(Plain("summary", "description", "externalValue"), StringComparer.Ordinal) { ["value"] = KT.Generic },
         [KT.Link] = new(Plain("operationRef", "operationId", "description"), StringComparer.Ordinal)
-            { ["parameters"] = KT.Generic, ["server"] = KT.Server, ["requestBody"] = KT.Generic },
+        { ["parameters"] = KT.Generic, ["server"] = KT.Server, ["requestBody"] = KT.Generic },
         [KT.SecurityScheme] = new(Plain("type", "description", "name", "in", "scheme", "bearerFormat", "openIdConnectUrl"), StringComparer.Ordinal)
-            { ["flows"] = KT.OAuthFlows },
+        { ["flows"] = KT.OAuthFlows },
         [KT.OAuthFlows] = Fields(("implicit", KT.OAuthFlow), ("password", KT.OAuthFlow), ("clientCredentials", KT.OAuthFlow), ("authorizationCode", KT.OAuthFlow)),
         [KT.OAuthFlow] = Plain("authorizationUrl", "tokenUrl", "refreshUrl", "scopes"),
         [KT.Discriminator] = Plain("propertyName", "mapping"),

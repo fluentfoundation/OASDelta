@@ -13,6 +13,9 @@ namespace OasDelta.Tests.Properties;
 ///
 /// Each run samples new cases (CsCheck_Iter, default 100; CsCheck_Time for a time budget). A failure is shrunk to a
 /// small case, printed with its seed (replay with CsCheck_Seed), and kept under TestResults/properties.
+///
+/// A stack overflow ends the test process with no seed and no shrinking. The files of the cases being run at the time
+/// stay behind in the temp directory (oasdelta-properties/*): run the CLI on each to find the one that overflows.
 /// </summary>
 public partial class SpecProperties
 {

@@ -22,8 +22,39 @@ export function summarize(r: BenchReport) {
     leaner: cases.filter((c) => c.memory_ratio > 1).length,
     memory: geomean(cases.map((c) => c.memory_ratio)),
     identical: cases.filter((c) => c.identical).length,
+    reordered: cases.filter((c) => c.output === 'reordered'),
   }
 }
+
+/** "4 orders in 5 runs" for one side of a reordered case. */
+const orders = (n: number, runs: number) => `${n} ${n === 1 ? 'order' : 'orders'} in ${runs} runs`
+
+/** Why some cases are not byte for byte identical, when they have the same entries in another order. Built from
+ * what the benchmark recorded, so it only claims what the run saw. */
+export function reorderNote(reordered: BenchCase[]): string {
+  if (!reordered.length) return ''
+  const names = reordered.map((c) => `${c.input} ${c.command}`)
+  const list = names.length === 1 ? names[0] : `${names.slice(0, -1).join(', ')} and ${names.at(-1)}`
+  let note = `${reordered.length === 1 ? 'One case' : `${reordered.length} cases`} (${list}) ` +
+    `${reordered.length === 1 ? 'prints' : 'print'} the same entries as oasdiff in a different order.`
+  const measured = reordered.filter((c) => c.order_runs && c.go_orders && c.cs_orders)
+  if (measured.length !== reordered.length) return note
+  if (measured.every((c) => c.go_orders! > 1 && c.cs_orders === 1)) {
+    note += ' oasdiff’s own order there changes from run to run (' +
+      measured.map((c) => orders(c.go_orders!, c.order_runs!)).join(', ') +
+      '); OasDelta’s does not. oasdiff sorts changes with a comparison that ignores some of their fields, and ' +
+      'leaves changes that differ only in those fields in Go’s random map order.'
+  } else {
+    note += ' Distinct outputs over repeated runs: ' +
+      measured.map((c) => `${c.input} ${c.command}: oasdiff ${orders(c.go_orders!, c.order_runs!)}, ` +
+        `OasDelta ${orders(c.cs_orders!, c.order_runs!)}`).join('; ') + '.'
+  }
+  return note
+}
+
+/** The Output column of a case. */
+export const outputLabel = (c: BenchCase) =>
+  c.output === 'reordered' ? 'same entries, other order' : c.identical ? 'identical' : 'differs'
 
 export const fmtX = (x: number) => `${x >= 10 ? x.toFixed(0) : x.toFixed(1)}×`
 export const fmtMs = (ms: number) =>

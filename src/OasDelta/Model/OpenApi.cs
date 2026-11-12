@@ -130,6 +130,9 @@ public sealed class PathItem : Element
     public static readonly string[] FixedMethods = ["CONNECT", "DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT", "QUERY", "TRACE"];
 
     public string Ref = "", Summary = "", Description = "";
+    /// <summary>A webhook written as null: kin-openapi keeps it as a nil *PathItem, which is a webhook that can be
+    /// added or removed but not compared ("path item is nil").</summary>
+    public bool IsNil;
     public Operation? Connect, Delete, Get, Head, Options, Patch, Post, Put, Trace, Query;
     public List<Server> Servers = [];
     public List<Ref<Parameter>> Parameters = [];
@@ -236,6 +239,8 @@ public sealed class Response : Element
 
 public sealed class MediaType : Element
 {
+    /// <summary>Written as null: kin-openapi keeps a nil *MediaType, which cannot be compared ("media type is nil").</summary>
+    public bool IsNil;
     public Ref<Schema>? Schema;
     public Ref<Schema>? ItemSchema;
     public object? Example;
@@ -245,6 +250,8 @@ public sealed class MediaType : Element
 
 public sealed class Encoding : Element
 {
+    /// <summary>Written as null: kin-openapi keeps a nil *Encoding, which cannot be compared ("encoding is nil").</summary>
+    public bool IsNil;
     public string ContentType = "", Style = "";
     public Dictionary<string, Ref<Header>> Headers = new(StringComparer.Ordinal);
     public bool? Explode;
@@ -291,6 +298,9 @@ public sealed class OAuthFlow : Element
 public sealed class SecurityRequirement : Dictionary<string, List<string>>
 {
     public SecurityRequirement() : base(StringComparer.Ordinal) { }
+
+    /// <summary>Written as null (security: [null]): a nil map to kin-openapi, shown as null in JSON.</summary>
+    public bool IsNil;
 }
 
 public sealed class Discriminator : Element

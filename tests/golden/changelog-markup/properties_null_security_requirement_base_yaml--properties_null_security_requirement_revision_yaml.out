@@ -1,0 +1,13 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### POST /p
+-  the endpoint scheme security `a` was added to the API
+
+
+
+
+
+

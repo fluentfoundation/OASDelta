@@ -56,7 +56,7 @@ public sealed class LoaderOptions
 }
 
 /// <summary>Loads OpenAPI documents into the model, resolving $refs (kin-openapi Loader equivalent).</summary>
-public sealed class SpecLoader(LoaderOptions? options = null)
+public sealed partial class SpecLoader(LoaderOptions? options = null)
 {
     private readonly LoaderOptions _opt = options ?? new LoaderOptions();
     private readonly Dictionary<string, Document> _docs = new(StringComparer.Ordinal);
@@ -106,6 +106,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         // version first: 3.1 sibling handling depends on it
         spec.OpenAPI = Str(doc.Root["openapi"]);
         _is31 = spec.IsOpenAPI31OrLater();
+        CheckForNulls(doc);
         BuildDoc(doc, doc.Root, spec);
         return spec;
     }
@@ -332,7 +333,13 @@ public sealed class SpecLoader(LoaderOptions? options = null)
     {
         if (_noOrigin > 0 || !doc.TrackOrigin || n.Kind != NodeKind.Mapping) return null;
         key ??= doc.KeyOf(n);
-        if (key is null && n.Pairs is { Count: > 0 }) key = n.Pairs[0].Key;
+        if (key is null)
+        {
+            // oasdiff/yaml3 locates a mapping that is not a map value (a sequence item, the document root) by its
+            // first key, and gives an empty one no origin at all (addOriginInSeq, decoder.document)
+            if (n.Pairs is not { Count: > 0 }) return null;
+            key = n.Pairs[0].Key;
+        }
         var o = new Origin();
         if (key is not null)
             o.Key = new Location { File = doc.Location, Line = key.Line, Column = key.Column, Name = key.Text ?? "", EndLine = n.EndLine, EndColumn = n.EndColumn };
@@ -392,6 +399,9 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         foreach (var (k, v) in n.Pairs!)
             if (v.IsMapping || (typeof(T) == typeof(Schema) && v.IsScalar && v.ToValue() is bool))
                 r[k.KeyString] = ReadRef(doc, v, k, build);
+            // null where kin-openapi does not reject it (components.links, an encoding's headers): a nil entry, which
+            // the diff cannot compare ("link reference is nil"); everywhere else CheckForNulls has failed the load
+            else if (v.IsNull) r[k.KeyString] = new Ref<T>();
         return r;
     }
 
@@ -413,7 +423,11 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         if (n["webhooks"] is { IsMapping: true } wh)
         {
             spec.Webhooks = new(StringComparer.Ordinal);
-            foreach (var (k, v) in wh.Pairs!) if (v.IsMapping) spec.Webhooks[k.KeyString] = BuildPathItemOrRef(doc, v, k);
+            foreach (var (k, v) in wh.Pairs!)
+            {
+                if (v.IsMapping) spec.Webhooks[k.KeyString] = BuildPathItemOrRef(doc, v, k);
+                else if (v.IsNull) spec.Webhooks[k.KeyString] = new PathItem { IsNil = true }; // still a webhook to kin
+            }
         }
         spec.JSONSchemaDialect = Str(n["jsonSchemaDialect"]);
     }
@@ -482,7 +496,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         var r = new List<SecurityRequirement>();
         foreach (var item in n.Items!)
         {
-            var req = new SecurityRequirement();
+            var req = new SecurityRequirement { IsNil = item.IsNull };
             if (item.IsMapping) foreach (var (k, v) in item.Pairs!) req[k.KeyString] = StrList(v);
             r.Add(req);
         }
@@ -522,6 +536,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
     private PathItem BuildPathItemOrRef(Document doc, Node n, Node? key)
     {
         var reference = RefOf(n);
+        if (!n.IsMapping) return new PathItem(); // a $ref to null (components.pathItems.P: null): kin reads an empty path item
         if (reference is null) return Cached<PathItem>(doc, n, key, BuildPathItem);
         var (tdoc, tnode) = ResolveRef(doc, reference);
         var target = BuildPathItemOrRef(tdoc, tnode, tdoc.KeyOf(tnode));
@@ -629,7 +644,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         if (n is null || !n.IsMapping) return r;
         foreach (var (k, v) in n.Pairs!)
             if (v.IsMapping) r[k.KeyString] = BuildMediaType(doc, v, k);
-            else if (v.IsNull) r[k.KeyString] = new MediaType();
+            else if (v.IsNull) r[k.KeyString] = new MediaType { IsNil = true };
         return r;
     }
 
@@ -644,6 +659,7 @@ public sealed class SpecLoader(LoaderOptions? options = null)
         if (n["encoding"] is { IsMapping: true } enc)
             foreach (var (k, v) in enc.Pairs!)
             {
+                if (v.IsNull) { m.Encoding[k.KeyString] = new Encoding { IsNil = true }; continue; }
                 if (!v.IsMapping) continue;
                 var e = new Encoding { Origin = MakeOrigin(doc, v, k), ContentType = Str(v["contentType"]), Style = Str(v["style"]), Explode = BoolPtr(v["explode"]), AllowReserved = Bool(v["allowReserved"]) };
                 SetExtensions(e, v, Known("contentType", "headers", "style", "explode", "allowReserved"));

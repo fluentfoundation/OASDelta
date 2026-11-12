@@ -1,0 +1,2 @@
+::warning title=request-parameter-property-type-changed,file=./properties/empty_subschema_b.yaml,line=7,col=5::in API POST /p for the `query` request parameter `q`, the `type` of property `oneOf[subschema #2]/` was changed from `boolean` to `any`
+

@@ -1,0 +1,14 @@
+{
+  "openapi": "3.1.0",
+  "info": {"title": "empty subschema", "version": "1"},
+  "paths": {
+    "/p": {
+      "post": {
+        "parameters": [
+          {"in": "query", "name": "q", "schema": {"oneOf": [{"type": "string"}, {"type": "boolean"}]}}
+        ],
+        "responses": {"200": {"description": "ok"}}
+      }
+    }
+  }
+}

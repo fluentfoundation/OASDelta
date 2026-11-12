@@ -1,0 +1,8 @@
+security:
+    added:
+        - index: 0
+          schemes: {}
+        - index: 1
+          schemes:
+            a: []
+

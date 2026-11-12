@@ -320,19 +320,30 @@ public static class Walkers
     public static string RevisionTypeFormat(SchemaDiff d) => TypeFormatValue(d.Revision, TypeFormatDimension(d));
     public static string TypeFormatValue(Schema? s, string dim) => dim switch { "format" => FormatString(s), "type" => TypeString(s), _ => TypeFormatString(s) };
 
-    public static string TypeString(Schema? s)
+    // An array whose items are the array itself (Item: {type: array, items: {$ref: Item}}) has no end: oasdiff 1.35.0
+    // recurses until Go's 1 GB stack limit and dies (fatal error: stack overflow, exit 2). The port shows a schema met
+    // again inside its own items as "…" (array<…>).
+    public static string TypeString(Schema? s) => TypeString(s, []);
+    public static string FormatString(Schema? s) => s is null || s.Format == "" ? "none" : s.Format;
+    public static string TypeFormatString(Schema? s) => TypeFormatString(s, []);
+
+    private static string TypeString(Schema? s, HashSet<Schema> enclosing)
     {
         if (s is null) return "any";
         var parts = new List<string>();
+        enclosing.Add(s);
         foreach (var t in s.Type ?? [])
-            parts.Add(t == "array" && s.Items?.Value is not null ? "array<" + TypeFormatString(s.Items.Value) + ">" : t);
+            parts.Add(t == "array" && s.Items?.Value is { } items
+                ? "array<" + (enclosing.Contains(items) ? "…" : TypeFormatString(items, enclosing)) + ">"
+                : t);
+        enclosing.Remove(s);
         return parts.Count == 0 ? "any" : string.Join(", ", parts);
     }
-    public static string FormatString(Schema? s) => s is null || s.Format == "" ? "none" : s.Format;
-    public static string TypeFormatString(Schema? s)
+
+    private static string TypeFormatString(Schema? s, HashSet<Schema> enclosing)
     {
         if (s is null) return "";
-        var t = TypeString(s);
+        var t = TypeString(s, enclosing);
         if (s.Format == "") return t;
         return t == "any" ? s.Format : t + "/" + s.Format;
     }

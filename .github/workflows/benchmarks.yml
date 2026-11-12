@@ -41,6 +41,9 @@ jobs:
             exe: oasdelta
             asset: linux_amd64
             go_exe: oasdiff
+            hyperfine_asset: hyperfine-v2.0.0-x86_64-unknown-linux-musl.tar.gz
+            hyperfine_sha256: 38e59087bd65520930a13cf513d8a493b7043741e8ad62349a8a9929eb61bc5c
+            hyperfine_exe: hyperfine
           - name: Windows
             slug: windows
             os: windows-latest
@@ -48,6 +51,9 @@ jobs:
             exe: oasdelta.exe
             asset: windows_amd64
             go_exe: oasdiff.exe
+            hyperfine_asset: hyperfine-v2.0.0-x86_64-pc-windows-msvc.zip
+            hyperfine_sha256: 3dec51acee1060908e67948838d6bc0a7aacde0774acebfa4afb220dcf0bc078
+            hyperfine_exe: hyperfine.exe
     steps:
       - uses: actions/checkout@v7
 
@@ -78,6 +84,26 @@ jobs:
           tar xzf "$archive"
           ./${{ matrix.go_exe }} --version
 
+      # hyperfine times the runs (and measures peak RSS on Linux). Its releases publish no checksums file; these are the
+      # SHA-256 of the v2.0.0 assets as downloaded on 2026-11-11.
+      - name: Download hyperfine 2.0.0 (checksum verified)
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p hyperfine && cd hyperfine
+          gh release download v2.0.0 -R sharkdp/hyperfine -p "${{ matrix.hyperfine_asset }}"
+          echo "${{ matrix.hyperfine_sha256 }}  ${{ matrix.hyperfine_asset }}" | sha256sum -c -
+          case "${{ matrix.hyperfine_asset }}" in
+            *.zip) python -m zipfile -e "${{ matrix.hyperfine_asset }}" . ;;
+            *) tar xzf "${{ matrix.hyperfine_asset }}" ;;
+          esac
+          exe=$(find . -name "${{ matrix.hyperfine_exe }}" -type f | head -n 1)
+          "$exe" --version
+          path="$PWD/${exe#./}"
+          if command -v cygpath >/dev/null; then path=$(cygpath -m "$path"); fi # Windows: a path Python can open
+          echo "HYPERFINE=$path" >> "$GITHUB_ENV"
+
       - name: Generate benchmark specs
         run: |
           mkdir specs
@@ -97,6 +123,7 @@ jobs:
             --go go/${{ matrix.go_exe }} \
             --cs out/${{ matrix.exe }} \
             --specs specs \
+            --hyperfine "$HYPERFINE" \
             --runs ${{ github.event.inputs.runs || '15' }} \
             --warmup 3 \
             --real-world testdata \

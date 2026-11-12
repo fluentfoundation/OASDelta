@@ -1,0 +1,3 @@
+::error title=api-removed-without-deprecation,file=./properties/pathitem_ref_null_base.yaml::in API POST /p api removed without deprecation
+::error title=api-removed-without-deprecation::in API POST webhook:w api removed without deprecation
+

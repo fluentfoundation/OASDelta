@@ -1,0 +1,7 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[api-security-added] en ./properties/null_security_requirement_revision.yaml
+	en API POST /p
+		el esquema de seguridad `a` fue agregado al endpoint de la api
+		Este endpoint hereda los requisitos de seguridad de nivel superior de la API.
+
+

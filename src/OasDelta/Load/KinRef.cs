@@ -6,17 +6,29 @@ namespace OasDelta.Load;
 
 /// <summary>
 /// kin-openapi's resolveComponent (loader.go, v0.151.0), which oasdiff uses to follow every <c>$ref</c> with a fragment.
-/// It differs from following a JSON pointer through the document in ways that change what loads:
+/// The port keeps what kin means to do and leaves out its bugs:
 /// <list type="bullet">
-/// <item>It first drills into the typed document (T, Components, Schema, ...). A ref wrapper is drilled through its
-/// resolved value, so <c>#/components/schemas/R/properties/x</c> works when R is itself a $ref. What it reaches must be
-/// of the kind the $ref stands for, or a map from an extension; anything else is "bad data in ... (expecting ref to
-/// parameter object)".</item>
-/// <item>When that fails, it reads the document that holds the $ref again, not the one the $ref points to, and follows
-/// the pointer through it as plain data. The drill closure assigns the enclosing function's err, so the error that
-/// comes out is that second drill's bare one ("map key \"Z\" not found"); and when the second drill ends on a null,
-/// err is nil and the $ref resolves to nothing at all.</item>
+/// <item>Kept: it first drills into the typed document (T, Components, Schema, ...). A ref wrapper is drilled through
+/// its resolved value, so <c>#/components/schemas/R/properties/x</c> works when R is itself a $ref. What it reaches
+/// must be of the kind the $ref stands for, or a map from an extension; anything else is "bad data in ... (expecting
+/// ref to parameter object)". <c>#</c> is the document's unknown top-level keys (kin's issue 856: a file that is
+/// itself a schema). When the typed drill fails, the pointer is followed through the plain data, which reaches
+/// extensions and fields the typed document does not have.</item>
+/// <item>Not kept: <c>#</c> on an OpenAPI document (one with an openapi key) gives kin an object made of its x- keys,
+/// so a schema $ref to it is silently "any". The port reports bad data.</item>
+/// <item>Not kept: kin follows that second pointer through the document that holds the $ref (path), not the one the
+/// $ref points to (componentPath). With <c>./defs.yaml#/components/schemas/Pet</c> and no Pet in defs.yaml, oasdiff
+/// silently uses the referencing file's own Pet. The port follows it through the target.</item>
+/// <item>Not kept: kin's drill closure assigns the enclosing function's err, so the error that comes out is the
+/// second drill's bare one ("map key \"Z\" not found", naming neither the $ref nor the file), and a pointer that
+/// passes through a null comes out as no error at all. The port reports the error kin builds before losing it
+/// (<c>failed to resolve "Z" in fragment in URI: "#/x-defs/Z": map key "Z" not found</c>), also for a pointer
+/// through a null.</item>
+/// <item>Not kept: a pointer to a typed field that is absent (<c>#/components/schemas/A/not</c>) makes kin panic
+/// (it copies a nil pointer); the port reports it as not found.</item>
 /// </list>
+/// A $ref to a null (present in the document) resolves to nothing, as in kin; oasdiff then reports what it does for
+/// such a value (for a schema, "schema value is nil").
 /// </summary>
 public sealed partial class SpecLoader
 {
@@ -72,18 +84,29 @@ public sealed partial class SpecLoader
         if (fragment.Length == 0) fragment = "/";
         if (fragment[0] != '/') throw new LoadException($"expected fragment prefix '#/' in URI {Fmt.GoQuote(fragmentRef)}");
         var tokens = fragment[1..].Split('/').Select(t => t.Replace("~1", "/").Replace("~0", "~")).ToArray();
+        // "#" and "#/": kin reads the target as T and takes its unknown top-level keys, for a file that is itself the
+        // object (its issue 856: a file that is a schema). The root of an OpenAPI document is no such object: kin
+        // makes one of its x- keys (an "any" schema) or of nothing. The port rejects it.
+        if (tokens is [""] && target.Root is { IsMapping: true } root && root["openapi"] is not null)
+            throw new LoadException($"bad data in {Fmt.GoQuote(fragmentRef)} (expecting {Readable(kind)})");
 
         (Document, Node) result;
         if (TypedDrill(target, tokens) is { } t)
         {
-            if (t.Kind == KindOf(kind)) result = (t.Doc, t.Node ?? NullNode); // a typed nil: kin panics copying it
+            if (t.Kind == KindOf(kind))
+            {
+                // a typed nil: kin panics copying it. Absent: not found; a null: resolves to nothing
+                if (t.Node is null) throw new LoadException(FailedToResolve(reference, tokens[^1], null));
+                result = (t.Doc, t.Node.IsNull ? NullNode : t.Node);
+            }
             else if (t.Kind == KT.Generic && t.Node!.IsMapping) result = (t.Doc, t.Node);
             else if (t.Kind == KT.Generic && ReferenceEquals(t.Node, NullNode)) result = (t.Doc, NullNode); // nil map: decodes to nothing
             else throw new LoadException($"bad data in {Fmt.GoQuote(fragmentRef)} (expecting {Readable(kind)})");
         }
         else
         {
-            var node = RawDrill(from.Root, tokens);
+            // kin reads the referencing document (path) here; the pointer is the target's
+            var node = RawDrill(target.Root, tokens, reference);
             if (node is null) result = (target, NullNode);
             else if (node.IsMapping) result = (target, node);
             else throw new LoadException($"bad data in {Fmt.GoQuote(fragmentRef)} (expecting {Readable(kind)})");
@@ -93,32 +116,39 @@ public sealed partial class SpecLoader
         return result;
     }
 
+    /// <summary>kin's failedToResolveRefFragmentPart, with drillIntoField's error; the reference as written, so that
+    /// the file is named too.</summary>
+    private static string FailedToResolve(string reference, string token, string? error) =>
+        $"failed to resolve {Fmt.GoQuote(token)} in fragment in URI: {Fmt.GoQuote(reference)}" + (error is null ? "" : ": " + error);
+
     /// <summary>drillIntoField over the plain data of a document. Null: the pointer ends on a null.</summary>
-    private static Node? RawDrill(Node? root, string[] tokens)
+    private static Node? RawDrill(Node? root, string[] tokens, string reference)
     {
         var cur = root;
+        string? previous = null;
         foreach (var token in tokens)
         {
-            if (cur is null || cur.IsNull) return null;
-            if (cur.IsMapping) cur = cur[token] ?? throw new LoadException($"map key {Fmt.GoQuote(token)} not found");
-            else if (cur.IsSequence) cur = cur.Items![SliceIndex(token, cur.Items.Count, raw: true)!.Value];
-            else throw new LoadException("not a map, slice nor struct");
+            string? error = null;
+            if (cur is null || cur.IsNull) error = previous is null ? "the document is null" : $"{Fmt.GoQuote(previous)} is null";
+            else if (cur.IsMapping) { if (cur[token] is { } next) cur = next; else error = $"map key {Fmt.GoQuote(token)} not found"; }
+            else if (cur.IsSequence) { if (SliceIndex(token, cur.Items!.Count, out error) is { } i) cur = cur.Items[i]; }
+            else error = "not a map, slice nor struct";
+            if (error is not null) throw new LoadException(FailedToResolve(reference, token, error));
+            previous = token;
         }
         return cur is null || cur.IsNull ? null : cur;
     }
 
-    /// <summary>drillIntoField's slice index. With <paramref name="raw"/> its error is thrown; otherwise null.</summary>
-    private static int? SliceIndex(string token, int count, bool raw)
+    /// <summary>drillIntoField's slice index, or null and its error.</summary>
+    private static int? SliceIndex(string token, int count, out string? error)
     {
-        string? error = null;
+        error = null;
         int index = 0;
         if (token.StartsWith('+') || token.StartsWith('-')) error = $"invalid slice index {Fmt.GoQuote(token)}";
         else if (token.Length == 0 || !token.All(char.IsAsciiDigit)) error = $"strconv.Atoi: parsing {Fmt.GoQuote(token)}: invalid syntax";
         else if (!int.TryParse(token, NumberStyles.None, CultureInfo.InvariantCulture, out index)) error = $"strconv.Atoi: parsing {Fmt.GoQuote(token)}: value out of range";
         else if (index >= count) error = "slice index out of bounds";
-        if (error is null) return index;
-        if (raw) throw new LoadException(error);
-        return null;
+        return error is null ? index : null;
     }
 
     // ------------------------------------------------------------------ the typed document
@@ -236,8 +266,8 @@ public sealed partial class SpecLoader
         [KT.SchemaRefs] = KT.SchemaRef, [KT.Parameters] = KT.ParameterRef, [KT.Servers] = KT.Server, [KT.Tags] = KT.Tag,
     };
 
-    /// <summary>A cursor of the typed drill: a kind, the node it was read from (null: a nil pointer, absent or null in
-    /// the document) and the document that node is in.</summary>
+    /// <summary>A cursor of the typed drill: a kind, the node it was read from (null: absent, a nil pointer; a null
+    /// node: null in the document, also a nil pointer) and the document that node is in.</summary>
     private readonly record struct Typed(KT Kind, Node? Node, Document Doc);
 
     /// <summary>The drill over the typed document. Null: it fails, and kin falls back to the plain data.</summary>
@@ -260,7 +290,7 @@ public sealed partial class SpecLoader
             // plain data; a null on the way is the drill's "nil cursor" failure
             Node? next = null;
             if (node!.IsMapping) next = node[token];
-            else if (node.IsSequence && SliceIndex(token, node.Items!.Count, raw: false) is { } i) next = node.Items![i];
+            else if (node.IsSequence && SliceIndex(token, node.Items!.Count, out _) is { } i) next = node.Items![i];
             return next is null || next.IsNull ? null : new Typed(KT.Generic, next, doc);
         }
         if (node is null || node.IsNull) return null; // drilling into a nil pointer, map or slice
@@ -278,7 +308,7 @@ public sealed partial class SpecLoader
             if (Value(cur) is not { } value) return cur;
             var ap = value.Node!["additionalProperties"];
             if (ap is { IsScalar: true } && !ap.IsNull && ap.ToValue() is bool) return new Typed(KT.Other, ap, value.Doc);
-            return new Typed(KT.SchemaRef, ap is null || ap.IsNull ? null : ap, value.Doc);
+            return new Typed(KT.SchemaRef, ap, value.Doc);
         }
         if (RefValue.ContainsKey(kind))
         {
@@ -290,13 +320,13 @@ public sealed partial class SpecLoader
             if (!node.IsMapping) return null;
             if (kind is KT.Paths or KT.Responses or KT.Callback && token.StartsWith("x-", StringComparison.Ordinal)) return null;
             var next = node[token];
-            return next is null ? null : new Typed(valueKind, next.IsNull ? null : next, doc);
+            return next is null ? null : new Typed(valueKind, next, doc);
         }
         if (SliceValue.TryGetValue(kind, out var itemKind))
         {
-            if (!node.IsSequence || SliceIndex(token, node.Items!.Count, raw: false) is not { } i) return null;
+            if (!node.IsSequence || SliceIndex(token, node.Items!.Count, out _) is not { } i) return null;
             var item = node.Items![i];
-            return new Typed(itemKind, item.IsNull ? null : item, doc);
+            return new Typed(itemKind, item, doc);
         }
         if (StructFields.TryGetValue(kind, out var fields) && node.IsMapping)
         {
@@ -304,7 +334,7 @@ public sealed partial class SpecLoader
             {
                 var field = node[token];
                 if (fieldKind == KT.Generic) return field is null || field.IsNull ? null : new Typed(KT.Generic, field, doc);
-                return new Typed(fieldKind, field is null || field.IsNull ? null : field, doc);
+                return new Typed(fieldKind, field, doc);
             }
             var ext = node[token];
             return ext is null || ext.IsNull ? null : new Typed(KT.Generic, ext, doc);

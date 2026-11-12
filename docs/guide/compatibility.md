@@ -79,6 +79,11 @@ of its size.
     makes `changelog` and `breaking` in oasdiff 1.35.0 run out of stack when a type change involves it
     (`fatal error: stack overflow`, exit 2). The port reports the change and shows the repeated schema as `…`:
     ``the request's body `type` changed from `array<…>` to `string` ``.
+  - A `null` in a few places makes oasdiff 1.35.0 panic with a nil pointer dereference (exit 2). The port reads
+    them as follows:
+    - an entry of `tags` or `servers` is skipped, so `tags: [null]` compares like `tags: []`
+    - a server variable (`variables: {h: null}`) and a link that is a `$ref` to a null `components.links` entry
+      are kept as empty objects and compared like any other.
 
 ## Not ported
 

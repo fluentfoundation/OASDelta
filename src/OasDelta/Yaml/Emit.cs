@@ -58,12 +58,20 @@ public sealed class YamlEmitter
         _sb.Clear().Append('\n', keep);
     }
 
+    /// <summary>A nil Go map: encoding/json writes null, yaml.v3 writes {}.</summary>
+    public sealed class NilMap
+    {
+        public static readonly NilMap Instance = new();
+        private NilMap() { }
+    }
+
     /// <summary>Resolves IOutput / dictionaries into OMap / lists so emitters see a uniform tree.</summary>
     public static object? Normalize(object? v, bool yaml = false)
     {
         switch (v)
         {
             case null: return null;
+            case NilMap: return yaml ? new OMap() : null;
             case Embedded em: return yaml ? new OMap { { em.YamlKey, Normalize(em.Value, yaml) } } : Normalize(em.Value, yaml);
             case IOutput o: return Normalize(o.ToOutput(), yaml);
             case OasDelta.Diff.ComplexKeyMap cm:

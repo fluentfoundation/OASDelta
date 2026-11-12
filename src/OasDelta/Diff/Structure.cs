@@ -746,6 +746,7 @@ public sealed class MediaTypeDiff : IDiff
 
     internal static MediaTypeDiff? Get(DiffConfig config, DiffState state, string n1, string n2, MediaType m1, MediaType m2)
     {
+        if (m1.IsNil || m2.IsNil) throw new DiffException("media type is nil");
         var r = new MediaTypeDiff { NameDiff = MediaTypeNameDiff.Get(n1, n2), ExtensionsDiff = ExtensionsDiff.Get(config, m1.Extensions, m2.Extensions) };
         r.SchemaDiff = SchemaDiff.Get(config, state, m1.Schema, m2.Schema);
         r.ItemSchemaDiff = SchemaDiff.Get(config, state, m1.ItemSchema, m2.ItemSchema);
@@ -780,6 +781,7 @@ public sealed class EncodingDiff : IDiff
 
     internal static EncodingDiff? Get(DiffConfig config, DiffState state, Encoding e1, Encoding e2)
     {
+        if (e1.IsNil || e2.IsNil) throw new DiffException("encoding is nil");
         var r = new EncodingDiff
         {
             ExtensionsDiff = ExtensionsDiff.Get(config, e1.Extensions, e2.Extensions),
@@ -944,10 +946,13 @@ public sealed class SecurityAlternative : IOutput
 {
     public int Index;
     public SortedDictionary<string, List<string>> Schemes = new(StringComparer.Ordinal);
+    /// <summary>The requirement was null (security: [null]): its schemes are a nil map.</summary>
+    public bool IsNil;
 
     public SecurityAlternative(int index, SecurityRequirement req)
     {
         Index = index;
+        IsNil = req.IsNil;
         foreach (var (k, v) in req) Schemes[k] = v;
     }
 
@@ -966,7 +971,7 @@ public sealed class SecurityAlternative : IOutput
 
     public string SchemeNames() => string.Join(" AND ", Schemes.Keys);
 
-    public object? ToOutput() => new OMap { { "index", (long)Index }, { "schemes", Schemes } };
+    public object? ToOutput() => new OMap { { "index", (long)Index }, { "schemes", IsNil ? YamlEmitter.NilMap.Instance : Schemes } };
 }
 
 public sealed class ModifiedSecurityRequirement : IOutput
@@ -1330,7 +1335,9 @@ public sealed class WebhooksDiff : MapDiff<PathDiff>
     internal static WebhooksDiff? Get(DiffConfig config, DiffState state, Dictionary<string, PathItem>? w1, Dictionary<string, PathItem>? w2)
     {
         if ((w1 is null || w1.Count == 0) && (w2 is null || w2.Count == 0)) return null;
-        var r = Build<WebhooksDiff, PathItem>(w1, w2, (a, b) => PathDiff.Get(config, state, new PathItemPair { PathItem1 = a, PathItem2 = b }));
+        var r = Build<WebhooksDiff, PathItem>(w1, w2, (a, b) => a.IsNil || b.IsNil
+            ? throw new DiffException("path item is nil")
+            : PathDiff.Get(config, state, new PathItemPair { PathItem1 = a, PathItem2 = b }));
         if (r is not null) { r.Base = w1; r.Revision = w2; }
         return r;
     }

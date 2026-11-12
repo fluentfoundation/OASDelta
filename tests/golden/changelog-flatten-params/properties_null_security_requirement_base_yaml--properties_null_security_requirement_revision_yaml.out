@@ -1,0 +1,1 @@
+[{"id":"api-security-added","text":"the endpoint scheme security `a` was added to the API","comment":"This endpoint inherits the API's top-level security requirements.","level":1,"operation":"POST","path":"/p","section":"paths","revisionSource":{"file":"./properties/null_security_requirement_revision.yaml","line":4,"column":1},"fingerprint":"60d4e7aa8f0a"}]

@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-parameter-property-type-specialized] en ./properties/empty_subschema_a.json
+	en API POST /p
+		para el parámetro `query` de solicitud `q`, el `type` de la propiedad `oneOf[subschema #2]/` fue reducido de `any` a `boolean`
+
+

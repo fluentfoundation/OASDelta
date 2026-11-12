@@ -1,0 +1,7 @@
+1 изменений: 0 error, 1 warning, 0 info
+warning	[request-parameter-property-type-changed] в ./properties/empty_subschema_b.yaml
+	в API POST /p
+		в параметре запроса `query` `q` `type` свойства `oneOf[subschema #2]/` изменён с `boolean` на `any`
+		Это предупреждение, поскольку объекты параметров могут передаваться разными способами, некоторые из которых допускают изменение этого типа, а другие — нет.
+
+

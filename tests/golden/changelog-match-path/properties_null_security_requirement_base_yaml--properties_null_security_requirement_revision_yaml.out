@@ -1,0 +1,1 @@
+[{"id":"api-global-security-added","text":"the security scheme `a` was added to the API","comment":"No endpoint inherits the API's top-level security requirements, so this change affects no client.","level":1,"section":"security","revisionSource":{"file":"./properties/null_security_requirement_revision.yaml","line":4,"column":1},"fingerprint":"ebb9265ec4d9"}]

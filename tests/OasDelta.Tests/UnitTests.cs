@@ -304,3 +304,67 @@ public class NullObjectTests
         Assert.NotNull(spec.Components.Schemas["B"].Value!.Origin); // a map value is located by its key, empty or not
     }
 }
+
+/// <summary>--allow-external-refs=false (the default of the GitHub actions): which $refs are refused, with which
+/// message and exit code. Checked against oasdiff 1.35.0 (load/git.go, load/errors.go, kin-openapi's loader).</summary>
+public class ExternalRefPolicyTests
+{
+    private const string Dir = "tests/fixtures/external-refs/";
+
+    private static (int Code, string Out, string Err) Run(params string[] args)
+    {
+        var stdout = new StringWriter { NewLine = "\n" };
+        var stderr = new StringWriter { NewLine = "\n" };
+        int code = Cli.Cli.Run(args, stdout, stderr);
+        return (code, stdout.ToString(), stderr.ToString());
+    }
+
+    /// <summary>The repository root, or null outside a git checkout (git revision paths are relative to it).</summary>
+    private static readonly string? Root = FindRoot();
+
+    private static string? FindRoot()
+    {
+        for (var d = new DirectoryInfo(AppContext.BaseDirectory); d != null; d = d.Parent)
+            if (Directory.Exists(Path.Combine(d.FullName, ".git")) || File.Exists(Path.Combine(d.FullName, ".git")))
+                return d.FullName;
+        return null;
+    }
+
+    [Fact]
+    public void AFileSpecMayNotReadASiblingFile()
+    {
+        if (Root is null) return;
+        var spec = Path.Combine(Root, Dir, "split.yaml");
+        var (code, _, err) = Run("breaking", spec, spec, "--allow-external-refs=false");
+        Assert.Equal(123, code);
+        Assert.Contains("encountered disallowed external reference: \"./schemas.yaml#/Pet\"", err, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void AGitRevisionSpecReadsItsRelativeRefsFromTheRevision()
+    {
+        if (Root is null || !Committed("split.yaml")) return;
+        var (code, output, err) = Run("breaking", $"HEAD:{Dir}split.yaml", $"HEAD:{Dir}split.yaml", "--allow-external-refs=false");
+        Assert.True(code == 0, err);
+        Assert.Equal("No changes detected\n", output);
+    }
+
+    [Fact]
+    public void AGitRevisionSpecMayNotReadAUrl()
+    {
+        if (Root is null || !Committed("url.yaml")) return;
+        var (code, _, err) = Run("breaking", $"HEAD:{Dir}url.yaml", $"HEAD:{Dir}url.yaml", "--allow-external-refs=false");
+        Assert.Equal(123, code);
+        Assert.Contains($"failed to load base spec from \"HEAD:{Dir}url.yaml\": external $ref not allowed (enable --allow-external-refs to permit): https://example.invalid/schemas.yaml", err, StringComparison.Ordinal);
+    }
+
+    /// <summary>Whether HEAD has the fixture (not yet, before it is first committed).</summary>
+    private static bool Committed(string name)
+    {
+        var psi = new System.Diagnostics.ProcessStartInfo("git", ["cat-file", "-e", $"HEAD:{Dir}{name}"])
+        { WorkingDirectory = Root, RedirectStandardError = true, RedirectStandardOutput = true };
+        using var p = System.Diagnostics.Process.Start(psi)!;
+        p.WaitForExit();
+        return p.ExitCode == 0;
+    }
+}

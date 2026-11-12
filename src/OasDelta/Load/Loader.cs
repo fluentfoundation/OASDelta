@@ -186,6 +186,15 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
 
     // ------------------------------------------------------------------ ref resolution
 
+    private const string KinRefusalMessage = "encountered disallowed external reference";
+    private const string ExternalRefNotAllowed = "external $ref not allowed (enable --allow-external-refs to permit)";
+
+    /// <summary>load.IsExternalRefDisallowed: whether a load failed because --allow-external-refs=false refused a $ref
+    /// (exit code 123), from kin-openapi or from oasdiff's git-revision reader.</summary>
+    internal static bool IsExternalRefDisallowed(string message) =>
+        message.Contains("disallowed external reference", StringComparison.Ordinal) ||
+        message.Contains(ExternalRefNotAllowed, StringComparison.Ordinal);
+
     private (Document doc, Node node) ResolveRef(Document from, string reference)
     {
         string filePart = reference, fragment = "";
@@ -195,7 +204,15 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
         if (filePart.Length > 0)
         {
             if (!_opt.AllowExternalRefs)
-                throw new LoadException($"encountered disallowed external reference: {reference}");
+            {
+                // load/git.go: a spec read from a git revision reads its relative refs from the same revision, which
+                // the policy allows; any other ref (a URL) is refused by oasdiff's reader, with its own message.
+                // Elsewhere kin-openapi refuses every ref to another document, a sibling file included.
+                if (!from.Key.StartsWith(GitKeyPrefix, StringComparison.Ordinal))
+                    throw new LoadException($"{KinRefusalMessage}: {Checker.Fmt.GoQuote(reference)}");
+                if (IsUrl(filePart))
+                    throw new LoadException($"{ExternalRefNotAllowed}: {filePart}");
+            }
             target = LoadExternal(from, filePart);
         }
         var node = target.Root ?? throw new LoadException($"failed to resolve {reference}: empty document");

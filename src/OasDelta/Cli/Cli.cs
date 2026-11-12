@@ -471,7 +471,7 @@ In 'composed' mode, base and revision can be a glob and oasdiff will compare mat
     }
 
     private static ReturnError SpecsLoadError(string what, string glob, string msg) =>
-        new($"failed to load {what} specs from glob {Fmt.GoQuote(glob)}: {msg}", msg.Contains("disallowed external reference", StringComparison.Ordinal) ? 123 : 103);
+        new($"failed to load {what} specs from glob {Fmt.GoQuote(glob)}: {msg}", Load.SpecLoader.IsExternalRefDisallowed(msg) ? 123 : 103);
 
     private static OpenApiDoc LoadSpec(string what, SpecSource src, LoaderOptions opts)
     {
@@ -479,7 +479,7 @@ In 'composed' mode, base and revision can be a glob and oasdiff will compare mat
         catch (Exception e) when (e is LoadException or YamlParseException)
         {
             var msg = $"failed to load {what} spec from {src.Out}: {e.Message}";
-            throw new ReturnError(msg, e.Message.Contains("disallowed external reference", StringComparison.Ordinal) ? 123 : 102);
+            throw new ReturnError(msg, Load.SpecLoader.IsExternalRefDisallowed(e.Message) ? 123 : 102);
         }
     }
 

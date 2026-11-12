@@ -1,0 +1,12 @@
+# A $ref to a URL: refused with --allow-external-refs=false wherever the spec is read from (never fetched).
+openapi: 3.0.0
+info: {title: url, version: "1"}
+paths:
+  /pets:
+    get:
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema: {$ref: 'https://example.invalid/schemas.yaml#/Pet'}

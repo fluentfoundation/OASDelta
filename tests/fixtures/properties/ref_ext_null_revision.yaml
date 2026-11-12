@@ -1,0 +1,12 @@
+openapi: 3.0.3
+info: {title: refs, version: '1'}
+paths:
+  /items:
+    get:
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              # E is null: kin's typed drill fails, it drills this file instead, and fails with map key "D" not found
+              schema: {$ref: './ref_ext_null_defs.yaml#/D/E'}

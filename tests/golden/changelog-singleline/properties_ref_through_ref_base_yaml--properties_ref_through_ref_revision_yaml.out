@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./properties/ref_through_ref_revision.yaml, in API GET /items the response's body `type` changed from `string` to `integer` for status `200` [response-body-type-changed]. 
+
+

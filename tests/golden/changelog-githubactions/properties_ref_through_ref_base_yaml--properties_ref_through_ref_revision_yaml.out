@@ -1,0 +1,2 @@
+::error title=response-body-type-changed,file=./properties/ref_through_ref_revision.yaml,line=18,col=14::in API GET /items the response's body `type` changed from `string` to `integer` for status `200`
+

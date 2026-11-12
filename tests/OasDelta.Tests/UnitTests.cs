@@ -368,3 +368,77 @@ public class ExternalRefPolicyTests
         return p.ExitCode == 0;
     }
 }
+
+/// <summary>kin-openapi's resolveComponent: what a $ref with a fragment may point at, and its errors. It drills into the
+/// typed document first (through a $ref'd component's value, and only to the kind the $ref stands for); when that fails
+/// it drills the plain data of the document holding the $ref, and that drill's error is the one reported. Each
+/// expectation is what oasdiff 1.35.0 prints (exit 102).</summary>
+public class KinRefTests
+{
+    private const string Components = """
+        components:
+          schemas:
+            A: {type: object, properties: {x: {type: string}}}
+            R: {$ref: '#/components/schemas/A'}
+          parameters:
+            P: {name: q, in: query, schema: {type: string}}
+          headers:
+            H: {schema: {type: string}}
+          examples:
+            E: {value: {k: v}}
+          x-defs:
+            D: {type: string}
+        x-defs: {B: null}
+        x-l: [{type: string}]
+        """;
+
+    private static string? LoadError(string operation)
+    {
+        try
+        {
+            new SpecLoader().LoadFromText("openapi: 3.0.3\ninfo: {title: t, version: '1'}\npaths:\n  /p:\n    x-p: {type: string}\n    get:\n" + operation + "\n" + Components, "spec.yaml");
+            return null;
+        }
+        catch (LoadException e) { return e.Message; }
+    }
+
+    private static string SchemaRef(string reference) =>
+        $"      responses: {{'200': {{description: ok, content: {{a/b: {{schema: {{$ref: '{reference}'}}}}}}}}}}";
+
+    [Theory]
+    [InlineData("#/components/parameters/P", "bad data in \"#/components/parameters/P\" (expecting ref to schema object)")]
+    [InlineData("#/info/title", "bad data in \"#/info/title\" (expecting ref to schema object)")]
+    [InlineData("#/x-l", "bad data in \"#/x-l\" (expecting ref to schema object)")]
+    [InlineData("#/x-l/abc", "strconv.Atoi: parsing \"abc\": invalid syntax")]
+    [InlineData("#/x-l/-1", "invalid slice index \"-1\"")]
+    [InlineData("#/x-l/+0", "invalid slice index \"+0\"")]
+    [InlineData("#/x-l/5", "slice index out of bounds")]
+    [InlineData("#/x-defs/Z", "map key \"Z\" not found")]
+    [InlineData("#/info/title/x", "not a map, slice nor struct")]
+    [InlineData("#components/schemas/A", "expected fragment prefix '#/' in URI \"#components/schemas/A\"")]
+    public void ASchemaRefIsRejected(string reference, string error) => Assert.Equal(error, LoadError(SchemaRef(reference)));
+
+    [Theory]
+    [InlineData("#/components/schemas/R/properties/x")] // through R, a $ref itself
+    [InlineData("#/components/headers/H/schema")]       // not in the typed Header; found in the plain data
+    [InlineData("#/paths/~1p/x-p")]
+    [InlineData("#/components/x-defs/D")]
+    [InlineData("#/x-defs/B")]                          // null: resolves to nothing
+    [InlineData("#")]
+    [InlineData("#/")]
+    public void ASchemaRefIsAccepted(string reference) => Assert.Null(LoadError(SchemaRef(reference)));
+
+    [Theory]
+    [InlineData("      parameters: [{$ref: '#/components/schemas/A'}]\n      responses: {'200': {description: ok}}", "parameter")]
+    [InlineData("      parameters: [{$ref: '#/components/headers/H'}]\n      responses: {'200': {description: ok}}", "parameter")]
+    [InlineData("      responses: {'200': {$ref: '#/components/schemas/A'}}", "response")]
+    [InlineData("      requestBody: {$ref: '#/components/parameters/P'}\n      responses: {'200': {description: ok}}", "requestBody")]
+    [InlineData("      responses: {'200': {description: ok, headers: {Y: {$ref: '#/components/parameters/P'}}}}", "header")]
+    [InlineData("      responses: {'200': {description: ok, content: {a/b: {examples: {e: {$ref: '#/components/schemas/A'}}}}}}", "example")]
+    public void ARefToAnotherKindIsRejected(string operation, string kind) =>
+        Assert.EndsWith($"(expecting ref to {kind} object)", LoadError(operation));
+
+    [Fact]
+    public void AParameterRefToAnExtensionMapIsAccepted() =>
+        Assert.Null(LoadError("      parameters: [{$ref: '#/components/x-defs/D'}]\n      responses: {'200': {description: ok}}"));
+}

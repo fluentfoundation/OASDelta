@@ -1,0 +1,19 @@
+openapi: 3.0.3
+info: {title: refs, version: '1'}
+paths:
+  /items:
+    get:
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              # through R, which is itself a $ref: kin drills into its resolved value
+              schema: {$ref: '#/components/schemas/R/properties/id'}
+components:
+  schemas:
+    A:
+      type: object
+      properties:
+        id: {type: integer}
+    R: {$ref: '#/components/schemas/A'}

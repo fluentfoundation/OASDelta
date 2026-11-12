@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-body-type-changed] en ./properties/ref_through_ref_revision.yaml
+	en API GET /items
+		el `type` del cuerpo de respuesta fue cambiado de `string` a `integer` para el estado `200`
+
+

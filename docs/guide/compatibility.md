@@ -57,6 +57,11 @@ of its size.
 - **HTML templates:** CSS comments are dropped the way `html/template` drops them; the diff report reproduces
   goldmark's HTML, including heading ids.
 - **Command line:** pflag usage text, cobra error messages and exit codes (100–123).
+- **`$ref` resolution (kin-openapi):** what a `$ref` may point at and the errors when it can't. A `$ref` must reach
+  the kind of object it stands for (a parameter pointing at a schema fails with `bad data in
+  "#/components/schemas/Limit" (expecting ref to parameter object)`). It may go through another `$ref`
+  (`#/components/schemas/Alias/properties/id`). When the pointer doesn't resolve, kin's fallback reads the document
+  that holds the `$ref`, and the port reports the same error (`map key "Z" not found`, `slice index out of bounds`).
 
 ## Known differences
 
@@ -70,6 +75,9 @@ of its size.
   belong to one schema. Which one oasdiff shows in a change's "shared schema" detail depends on Go map order and
   changes from run to run. The port always shows the first in sorted order, one of the names oasdiff shows.
 - **Template errors.** Messages for broken custom templates are shorter than Go's.
+- **Missing files.** A spec or `$ref`'d file that doesn't exist is reported with Go's Linux wording
+  (`open sub/defs.yaml: no such file or directory`) on every OS. On Windows, oasdiff prints the Windows text and a
+  backslash path instead.
 - **Crashes.** Where oasdiff crashes, the port reports an error or a result instead.
   - A parameter or response that is only a reference to itself (`P: {$ref: '#/components/parameters/P'}`) makes
     oasdiff 1.35.0 panic while it lowercases header names (exit 2, with a Go stack trace). The port fails with

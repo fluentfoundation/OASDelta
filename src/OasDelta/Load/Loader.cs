@@ -197,24 +197,11 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
 
     private (Document doc, Node node) ResolveRef(Document from, string reference)
     {
-        string filePart = reference, fragment = "";
+        // what kin's resolve pass made of this $ref (see KinRef.cs); the rest are refs kin never resolves
+        if (_kinResolved.TryGetValue((from, reference), out var kin)) return kin;
         int hash = reference.IndexOf('#');
-        if (hash >= 0) { filePart = reference[..hash]; fragment = reference[(hash + 1)..]; }
-        var target = from;
-        if (filePart.Length > 0)
-        {
-            if (!_opt.AllowExternalRefs)
-            {
-                // load/git.go: a spec read from a git revision reads its relative refs from the same revision, which
-                // the policy allows; any other ref (a URL) is refused by oasdiff's reader, with its own message.
-                // Elsewhere kin-openapi refuses every ref to another document, a sibling file included.
-                if (!from.Key.StartsWith(GitKeyPrefix, StringComparison.Ordinal))
-                    throw new LoadException($"{KinRefusalMessage}: {Checker.Fmt.GoQuote(reference)}");
-                if (IsUrl(filePart))
-                    throw new LoadException($"{ExternalRefNotAllowed}: {filePart}");
-            }
-            target = LoadExternal(from, filePart);
-        }
+        var fragment = hash >= 0 ? reference[(hash + 1)..] : "";
+        var target = TargetDocument(from, reference);
         var node = target.Root ?? throw new LoadException($"failed to resolve {reference}: empty document");
         if (fragment.Length > 0 && fragment != "/")
         {
@@ -229,6 +216,31 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
             }
         }
         return (target, node);
+    }
+
+    /// <summary>The document a $ref points into, loaded if it is another one, under --allow-external-refs.</summary>
+    private Document TargetDocument(Document from, string reference)
+    {
+        int hash = reference.IndexOf('#');
+        var filePart = hash >= 0 ? reference[..hash] : reference;
+        if (filePart.Length == 0) return from;
+        CheckRefPolicy(from, reference, filePart);
+        return LoadExternal(from, filePart);
+    }
+
+    /// <summary>--allow-external-refs=false: kin's refusal comes before the document is read, unwrapped.</summary>
+    private void CheckRefPolicy(Document from, string reference, string filePart)
+    {
+        if (!_opt.AllowExternalRefs)
+        {
+            // load/git.go: a spec read from a git revision reads its relative refs from the same revision, which
+            // the policy allows; any other ref (a URL) is refused by oasdiff's reader, with its own message.
+            // Elsewhere kin-openapi refuses every ref to another document, a sibling file included.
+            if (!from.Key.StartsWith(GitKeyPrefix, StringComparison.Ordinal))
+                throw new LoadException($"{KinRefusalMessage}: {Checker.Fmt.GoQuote(reference)}");
+            if (IsUrl(filePart))
+                throw new LoadException($"{ExternalRefNotAllowed}: {filePart}");
+        }
     }
 
     private Document LoadExternal(Document from, string file)
@@ -267,6 +279,9 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
         if (_docs.TryGetValue(key, out var d)) return d;
         string text;
         try { text = IsUrl(key) ? Http.GetStringAsync(key).GetAwaiter().GetResult() : File.ReadAllText(key); }
+        // os.ReadFile's error, with the path kin joined (Go's Unix wording, as for the spec itself)
+        catch (Exception e) when (e is FileNotFoundException or DirectoryNotFoundException)
+        { throw new LoadException($"open {location}: no such file or directory"); }
         catch (Exception e) when (e is IOException or HttpRequestException or UnauthorizedAccessException)
         { throw new LoadException($"failed to load external reference {file} from {from.Location}: {e.Message}"); }
         return ParseDocument(text, location, key);
@@ -321,6 +336,7 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
         try
         {
             var (tdoc, tnode) = ResolveRef(doc, reference);
+            if (ReferenceEquals(tnode, NullNode)) return result; // kin resolved it to nothing: Value stays nil
             if (RefOf(tnode) is not null)
             {
                 // ref to a ref: share the final value

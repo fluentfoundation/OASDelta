@@ -166,6 +166,72 @@ internal static partial class Support
         return dir;
     }
 
+    private const string SchemaRefPrefix = "#/components/schemas/";
+
+    /// <summary>Component schemas that are only a $ref to another component (<c>Item: {$ref: '#/components/schemas/Error'}</c>),
+    /// in either document, mapped to one name of their group (the first in ordinal order). Every name of a group
+    /// belongs to one schema, and which of them oasdiff shows as a change's shared schema depends on Go map order
+    /// (checker/shared_schema.go), so it changes from run to run. Names that are no alias are not in the map.</summary>
+    public static Dictionary<string, string> SchemaAliases(params Map[] docs)
+    {
+        var parent = new Dictionary<string, string>(StringComparer.Ordinal);
+        string Find(string x)
+        {
+            while (parent.TryGetValue(x, out var p) && p != x) x = p;
+            return x;
+        }
+        foreach (var doc in docs)
+        {
+            if (doc.GetValueOrDefault("components") is not Map c || c.GetValueOrDefault("schemas") is not Map schemas) continue;
+            foreach (var (name, value) in schemas)
+            {
+                if (value is not Map m || m.Count != 1 || m.GetValueOrDefault("$ref") is not string r || !r.StartsWith(SchemaRefPrefix, StringComparison.Ordinal)) continue;
+                var target = r[SchemaRefPrefix.Length..].Replace("~1", "/", StringComparison.Ordinal).Replace("~0", "~", StringComparison.Ordinal);
+                string a = Find(name), b = Find(target);
+                if (a == b) continue;
+                // the root of a group is its first name, so it is the same whatever order the aliases come in
+                if (string.CompareOrdinal(a, b) < 0) parent[b] = a; else parent[a] = b;
+                parent.TryAdd(a, a);
+                parent.TryAdd(b, b);
+            }
+        }
+        return parent.Keys.ToDictionary(n => n, Find, StringComparer.Ordinal);
+    }
+
+    /// <summary>The output with every shared-schema name that is an alias (<see cref="SchemaAliases"/>) replaced by the
+    /// first name of its group: in the change's text ("shared schema: `Item`", in each language oasdiff has) and in
+    /// the sharedSchema.name field of JSON and YAML. Nothing else changes, so any other difference still counts.</summary>
+    public static string WithCanonicalSharedSchemaNames(string output, IReadOnlyDictionary<string, string> aliases)
+    {
+        if (aliases.Count == 0) return output;
+        string Canonical(string name) => aliases.TryGetValue(name, out var c) ? c : name;
+        output = SharedSchemaLabel().Replace(output, m => m.Groups[1].Value + Canonical(m.Groups[2].Value) + "`");
+        output = SharedSchemaJsonName().Replace(output, m =>
+        {
+            string name;
+            try { name = JsonSerializer.Deserialize<string>("\"" + m.Groups[2].Value + "\"")!; }
+            catch (JsonException) { return m.Value; }
+            return aliases.ContainsKey(name) ? m.Groups[1].Value + JsonEncodedText.Encode(Canonical(name)) + "\"" : m.Value;
+        });
+        return SharedSchemaYamlName().Replace(output, m =>
+        {
+            var raw = m.Groups[2].Value;
+            var name = raw.Length >= 2 && raw[0] == '\'' && raw[^1] == '\'' ? raw[1..^1].Replace("''", "'", StringComparison.Ordinal)
+                : raw.Length >= 2 && raw[0] == '"' && raw[^1] == '"' ? raw[1..^1] : raw;
+            return aliases.ContainsKey(name) ? m.Groups[1].Value + Canonical(name) : m.Value;
+        });
+    }
+
+    // checker/localizations_src/*/messages.yaml: shared-schema-detail-name
+    [GeneratedRegex("((?:shared schema|esquema compartido|schema compartilhado|общая схема): `)([^`]*)`")]
+    private static partial Regex SharedSchemaLabel();
+
+    [GeneratedRegex("(\"sharedSchema\":\\s*\\{\\s*\"name\":\\s*\")((?:[^\"\\\\]|\\\\.)*)\"")]
+    private static partial Regex SharedSchemaJsonName();
+
+    [GeneratedRegex(@"(sharedSchema:\r?\n[ \t]+name: )(.*?)\r?$", RegexOptions.Multiline)]
+    private static partial Regex SharedSchemaYamlName();
+
     /// <summary>The same output, or the same up to order: lines in a different order (oasdiff's text, Markdown and
     /// HTML output for composed specs) or entries of a JSON array in a different order.</summary>
     public static Agreement Compare(string expected, string actual)

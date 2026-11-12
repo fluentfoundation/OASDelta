@@ -512,6 +512,20 @@ internal static class Edits
             ("switch OpenAPI version", c => c.Doc["openapi"] = c.V31 ? "3.0.3" : "3.1.0"),
             ("add component schema", c => MapAt(MapAt(c.Doc, "components"), "schemas").TryAdd("Added" + c.A % 10, Typed(SpecGen.Types[c.A % 6]))),
             ("set an extension", c => c.Doc["x-" + SpecGen.Words[c.A % 8]] = c.T),
+            // kin-openapi rejects null in some places, keeps it as a nil it cannot compare in others, and ignores it in
+            // the rest; and an empty mapping in a list has no origin. Both found parity bugs.
+            ("set a node to null", c => ReplaceNode(c, null)),
+            ("set a node to {}", c => ReplaceNode(c, new Map())),
         ],
     };
+
+    /// <summary>Replaces one of the document's nodes (any kind but the root) where it sits.</summary>
+    private static void ReplaceNode(Ctx c, object? value)
+    {
+        var locs = Walk(c.Doc).Where(l => l.Kind != Kind.Root).ToList();
+        if (locs.Count == 0) return;
+        var loc = locs[c.A % locs.Count];
+        if (loc.Parent is Map m && loc.Key is not null) m[loc.Key] = value;
+        else if (loc.Parent is List<object?> l && loc.Index >= 0 && loc.Index < l.Count) l[loc.Index] = value;
+    }
 }

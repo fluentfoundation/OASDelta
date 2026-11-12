@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import { defineLoader } from 'vitepress'
 
-/** One measured side of a case: timings over all timed runs, peak memory over all runs. */
+/** One measured side of a case: timings over the timed runs, the highest peak memory seen. */
 export interface Measurement {
   median_ms: number
   mean_ms: number
@@ -25,7 +25,14 @@ export interface BenchCase {
   speedup: number
   /** Go peak ÷ C# peak: above 1 means oasdelta uses less memory. */
   memory_ratio: number
+  /** stdout and exit code byte for byte the same (output === 'identical'). */
   identical: boolean
+  /** 'reordered': the same lines or JSON array entries, in another order. Older reports omit it. */
+  output?: 'identical' | 'reordered' | 'different'
+  /** For a reordered case: how many distinct outputs each binary printed in order_runs runs. */
+  order_runs?: number
+  go_orders?: number
+  cs_orders?: number
 }
 
 export interface BenchReport {
@@ -46,6 +53,12 @@ export interface BenchReport {
     run_url: string
     real_world_runs?: number
     test_data_commit?: string
+    /** What timed the runs, e.g. "hyperfine 2.0.0". Older reports (bench.py's own timer) omit it. */
+    harness?: string
+    /** How peak memory was measured. */
+    memory?: string
+    /** Linux: the peak RSS hyperfine reports for a program that does nothing (its own share of every reading). */
+    memory_floor_mb?: number | null
   }
   results: BenchCase[]
 }

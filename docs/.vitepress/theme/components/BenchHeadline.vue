@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { data } from '../../../data/benchmarks.data'
-import { summarize, fmtX } from '../stats'
+import { summarize, fmtX, reorderNote } from '../stats'
 
-const reports = computed(() => data.map((r) => ({ meta: r.meta, s: summarize(r) })))
+const reports = computed(() =>
+  data.map((r) => {
+    const s = summarize(r)
+    return { meta: r.meta, s, note: reorderNote(s.reordered) }
+  }),
+)
 </script>
 
 <template>
@@ -36,10 +41,11 @@ const reports = computed(() => data.map((r) => ({ meta: r.meta, s: summarize(r) 
         </div>
         <div class="tile">
           <div class="label">Identical output</div>
-          <div class="value">{{ r.s.identical }} / {{ r.s.cases }}</div>
+          <div class="value">{{ r.s.identical }} / {{ r.s.cases }}<span v-if="r.note" class="mark" aria-hidden="true">*</span></div>
           <div class="note">stdout and exit code, byte for byte</div>
         </div>
       </div>
+      <p v-if="r.note" class="footnote"><span aria-hidden="true">* </span>{{ r.note }}</p>
     </section>
   </div>
 </template>
@@ -57,4 +63,6 @@ h3 { margin: 0 0 12px; font-size: 16px; border: 0; padding: 0; }
 .value { font-size: 30px; font-weight: 600; color: var(--vp-c-text-1); line-height: 1.2; margin: 6px 0 4px; font-variant-numeric: tabular-nums; }
 .note { font-size: 12px; color: var(--vp-c-text-3); line-height: 1.35; }
 .empty { color: var(--vp-c-text-2); }
+.mark { font-size: 20px; vertical-align: super; line-height: 0; margin-left: 2px; color: var(--vp-c-text-2); }
+.footnote { margin: 10px 0 0; font-size: 13px; line-height: 1.5; color: var(--vp-c-text-2); }
 </style>

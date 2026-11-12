@@ -1,0 +1,10 @@
+2 alterações: 2 error, 0 warning, 0 info
+error	[api-removed-without-deprecation] em ./properties/pathitem_ref_null_base.yaml
+	em API POST /p
+		api removida sem depreciação
+
+error	[api-removed-without-deprecation] em 
+	em API POST webhook:w
+		api removida sem depreciação
+
+

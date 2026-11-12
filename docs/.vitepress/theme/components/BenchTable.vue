@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { data } from '../../../data/benchmarks.data'
-import { fmtMs, fmtMb, fmtX } from '../stats'
+import { fmtMs, fmtMb, fmtX, outputLabel } from '../stats'
 </script>
 
 <template>
@@ -28,7 +28,10 @@ import { fmtMs, fmtMb, fmtX } from '../stats'
           <td class="n"><b>{{ fmtX(c.speedup) }}</b></td>
           <td class="n">{{ fmtMb(c.go.peak_mb) }}</td>
           <td class="n">{{ fmtMb(c.cs.peak_mb) }}</td>
-          <td>{{ c.identical ? 'identical' : 'differs' }}</td>
+          <td>
+            {{ outputLabel(c) }}
+            <small v-if="c.output === 'reordered' && c.order_runs">(distinct in {{ c.order_runs }} runs: oasdiff {{ c.go_orders }}, oasdelta {{ c.cs_orders }})</small>
+          </td>
         </tr>
       </tbody>
     </table>

@@ -1,0 +1,52 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>GET /pets</p>
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-sunset</li>
+</ul>
+</li>
+<li>Summary changed from '' to 'list pets'</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: name
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-sunset</li>
+</ul>
+</li>
+<li>Description changed from '' to 'the name'</li>
+<li>Deprecated changed from false to true</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Deprecated changed from false to true</li>
+</ul>
+

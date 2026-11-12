@@ -1,0 +1,12 @@
+# A null media type is a nil *MediaType to kin-openapi, which the diff cannot compare with the one on the other side
+# (diff failed: media type is nil, exit 104).
+openapi: 3.0.3
+info: {title: null media type, version: '2'}
+paths:
+  /p:
+    post:
+      requestBody:
+        content:
+          application/json: null
+      responses:
+        '200': {description: ok}

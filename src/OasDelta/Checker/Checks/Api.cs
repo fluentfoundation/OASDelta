@@ -82,7 +82,7 @@ public static partial class Checks
             var (days, ok) = Deprecation.Days(config, op.Extensions);
             if (!ok && Deprecation.NowDeprecated(md.DeprecatedDiff)) continue;
             var stage = Deprecation.Announce(md.DeprecatedDiff, op.Extensions, days, ApiDeprecationIds);
-            var (b, r) = Loc.OperationField(src, md, stage.AtSunset ? DiffConfig.SunsetExtension : "deprecated");
+            var (b, r) = Loc.OperationField(src, md, "deprecated"); // as upstream, at every stage
             var details = stage.Id is Ids.EndpointReactivated or Ids.EndpointDeprecated or Ids.EndpointDeprecatedWithSunset ? FormatDeprecationDetails(op.Extensions) : "";
             result.Add(OpInfo.Of(config, op, src, m, path).NewApiChange(stage.Id, stage.Args, "").WithSources(b, r).WithDetails(details));
         }

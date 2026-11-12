@@ -1,0 +1,14 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /pets
+-  the `x-inline` response header's maxLength was set to `10` for the status `200`
+-  the `x-shared` response header's minLength was set to `2` for the status `200`
+
+
+
+
+
+

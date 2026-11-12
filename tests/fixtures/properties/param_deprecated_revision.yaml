@@ -1,0 +1,27 @@
+openapi: 3.0.3
+info:
+  title: deprecated parameters
+  version: "1"
+paths:
+  /pets/{petId}:
+    get:
+      parameters:
+        - name: petId
+          in: path
+          required: true
+          deprecated: true
+          schema:
+            type: string
+        - name: filter
+          in: query
+          deprecated: true
+          schema:
+            type: string
+        - name: limit
+          in: query
+          deprecated: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: ok

@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets":{"operations":{"modified":{"GET":{"extensions":{"added":["x-sunset"]},"responses":{"modified":{"200":{"content":{"modified":{"application/json":{"schema":{"properties":{"modified":{"name":{"extensions":{"added":["x-sunset"]},"deprecated":{"from":false,"to":true}}}}}}}}}}},"deprecated":{"from":false,"to":true}}}}}}}}

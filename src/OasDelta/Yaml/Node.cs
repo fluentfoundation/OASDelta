@@ -84,12 +84,19 @@ public sealed class Node
         };
     }
 
+    /// <summary>Tag of a number read by <see cref="JsonNodeReader"/>: kin-openapi decodes JSON with encoding/json, where
+    /// every number is a float64 (so "-0" is negative zero; in YAML it is the integer 0).</summary>
+    internal const string JsonNumberTag = "!oasdelta-json-number";
+
     public static object? ResolveScalar(string s, bool plain, string? tag)
     {
         if (tag is not null && tag.Length > 0 && tag != "!")
         {
             switch (tag)
             {
+                case JsonNumberTag:
+                    // out of float64 range: encoding/json fails, and kin-openapi falls back to reading the text as YAML
+                    return double.TryParse(s, NumberStyles.Float, CultureInfo.InvariantCulture, out var jd) && !double.IsInfinity(jd) ? jd : ResolvePlain(s);
                 case "tag:yaml.org,2002:str": return s;
                 case "tag:yaml.org,2002:null": return null;
                 case "tag:yaml.org,2002:bool": return ResolvePlain(s) is bool b ? b : s;
@@ -158,7 +165,7 @@ public sealed class Node
                 acc = acc * (UInt128)radix + (UInt128)v;
                 if (acc > ulong.MaxValue) return false;
             }
-            if (neg) { if (acc > (UInt128)long.MaxValue + 1) return false; d = -(double)acc; }
+            if (neg) { if (acc > (UInt128)long.MaxValue + 1) return false; d = acc == 0 ? 0 : -(double)acc; } // ParseInt: "-00" is 0
             else d = (double)acc;
             return true;
         }
@@ -180,6 +187,12 @@ public sealed class Node
             if (ed == 0) return false;
         }
         if (i != body.Length) return false;
+        // an integer is ParseInt's (or ParseUint's) value first: "-0" is the integer 0, not negative zero
+        if (digits == i)
+        {
+            if (long.TryParse(span, NumberStyles.AllowLeadingSign, CultureInfo.InvariantCulture, out var l)) { d = l; return true; }
+            if (ulong.TryParse(span, NumberStyles.AllowLeadingSign, CultureInfo.InvariantCulture, out var u)) { d = u; return true; }
+        }
         return double.TryParse(span, NumberStyles.Float, CultureInfo.InvariantCulture, out d) && !double.IsInfinity(d);
     }
 
@@ -211,6 +224,12 @@ public static class NodeReader
         catch (YamlException e)
         {
             throw new YamlParseException($"yaml: line {e.Start.Line}: {e.Message}");
+        }
+        catch (InvalidOperationException e)
+        {
+            // YamlDotNet's parser can fail this way on some malformed input (e.g. a block scalar indented less than its
+            // indentation indicator says, in a sequence, followed by more mapping keys); go-yaml reports a syntax error
+            throw new YamlParseException($"yaml: line {parser.Current?.Start.Line ?? 0}: {e.Message}");
         }
     }
 
@@ -389,7 +408,7 @@ public static class JsonNodeReader
             case System.Text.Json.JsonTokenType.String:
                 return new Node { Kind = NodeKind.Scalar, Text = r.GetString(), Plain = false };
             case System.Text.Json.JsonTokenType.Number:
-                return new Node { Kind = NodeKind.Scalar, Text = System.Text.Encoding.UTF8.GetString(r.ValueSpan), Plain = true };
+                return new Node { Kind = NodeKind.Scalar, Text = System.Text.Encoding.UTF8.GetString(r.ValueSpan), Plain = true, Tag = Node.JsonNumberTag };
             case System.Text.Json.JsonTokenType.True: return new Node { Kind = NodeKind.Scalar, Text = "true", Plain = true };
             case System.Text.Json.JsonTokenType.False: return new Node { Kind = NodeKind.Scalar, Text = "false", Plain = true };
             default: return new Node { Kind = NodeKind.Scalar, Text = "null", Plain = true };

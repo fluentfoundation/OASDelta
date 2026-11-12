@@ -1,0 +1,2 @@
+::notice title=response-media-type-added,file=./properties/ref_cycle_revision.yaml,line=12,col=13::in API GET /pets added the media type `application/json` for the response with the status `200`
+

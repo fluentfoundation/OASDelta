@@ -415,10 +415,10 @@ public sealed class ParametersDiffByLocation : IDiff
 
     internal static bool IsExplodedObjectParam(Parameter? p)
     {
-        if (p?.Schema is null) return false;
+        // a schema without a value (a cycle of bare references) is no object; oasdiff 1.35.0 panics here instead
+        if (p?.Schema?.Value is not { } s) return false;
         bool explode = p.Explode is true;
         bool form = p.Style switch { "form" => true, "" => IsQueryOrCookie(p), _ => false };
-        var s = p.Schema.Value!;
         bool obj = s.Type is { Count: 1 } && s.Type[0] == "object" && s.Properties.Count > 0;
         return explode && form && obj;
     }
@@ -746,6 +746,7 @@ public sealed class MediaTypeDiff : IDiff
 
     internal static MediaTypeDiff? Get(DiffConfig config, DiffState state, string n1, string n2, MediaType m1, MediaType m2)
     {
+        if (m1.IsNil || m2.IsNil) throw new DiffException("media type is nil");
         var r = new MediaTypeDiff { NameDiff = MediaTypeNameDiff.Get(n1, n2), ExtensionsDiff = ExtensionsDiff.Get(config, m1.Extensions, m2.Extensions) };
         r.SchemaDiff = SchemaDiff.Get(config, state, m1.Schema, m2.Schema);
         r.ItemSchemaDiff = SchemaDiff.Get(config, state, m1.ItemSchema, m2.ItemSchema);
@@ -780,6 +781,7 @@ public sealed class EncodingDiff : IDiff
 
     internal static EncodingDiff? Get(DiffConfig config, DiffState state, Encoding e1, Encoding e2)
     {
+        if (e1.IsNil || e2.IsNil) throw new DiffException("encoding is nil");
         var r = new EncodingDiff
         {
             ExtensionsDiff = ExtensionsDiff.Get(config, e1.Extensions, e2.Extensions),
@@ -944,10 +946,13 @@ public sealed class SecurityAlternative : IOutput
 {
     public int Index;
     public SortedDictionary<string, List<string>> Schemes = new(StringComparer.Ordinal);
+    /// <summary>The requirement was null (security: [null]): its schemes are a nil map.</summary>
+    public bool IsNil;
 
     public SecurityAlternative(int index, SecurityRequirement req)
     {
         Index = index;
+        IsNil = req.IsNil;
         foreach (var (k, v) in req) Schemes[k] = v;
     }
 
@@ -966,7 +971,7 @@ public sealed class SecurityAlternative : IOutput
 
     public string SchemeNames() => string.Join(" AND ", Schemes.Keys);
 
-    public object? ToOutput() => new OMap { { "index", (long)Index }, { "schemes", Schemes } };
+    public object? ToOutput() => new OMap { { "index", (long)Index }, { "schemes", IsNil ? YamlEmitter.NilMap.Instance : Schemes } };
 }
 
 public sealed class ModifiedSecurityRequirement : IOutput
@@ -1330,7 +1335,9 @@ public sealed class WebhooksDiff : MapDiff<PathDiff>
     internal static WebhooksDiff? Get(DiffConfig config, DiffState state, Dictionary<string, PathItem>? w1, Dictionary<string, PathItem>? w2)
     {
         if ((w1 is null || w1.Count == 0) && (w2 is null || w2.Count == 0)) return null;
-        var r = Build<WebhooksDiff, PathItem>(w1, w2, (a, b) => PathDiff.Get(config, state, new PathItemPair { PathItem1 = a, PathItem2 = b }));
+        var r = Build<WebhooksDiff, PathItem>(w1, w2, (a, b) => a.IsNil || b.IsNil
+            ? throw new DiffException("path item is nil")
+            : PathDiff.Get(config, state, new PathItemPair { PathItem1 = a, PathItem2 = b }));
         if (r is not null) { r.Base = w1; r.Revision = w2; }
         return r;
     }
@@ -1514,13 +1521,11 @@ public sealed class OpenApiDiff : IDiff
         return r;
     }
 
-    /// <summary>Sources: operation → source url.</summary>
-    public static Dictionary<Operation, string> OperationSources(OpenApiDoc spec, string url)
-    {
-        var r = new Dictionary<Operation, string>(ReferenceEqualityComparer.Instance);
-        foreach (var item in spec.Paths.Map.Values) foreach (var op in item.Operations().Values) r[op] = url;
-        return r;
-    }
+    /// <summary>Sources: operation → source url, as diff.GetWithOperationsSourcesMap computes them: through
+    /// mergedPaths of the one spec, which also rejects two paths that are the same endpoint once parameter names are
+    /// ignored (DuplicateEndpointException) and invalid x-since-date values (DiffException).</summary>
+    public static Dictionary<Operation, string> OperationSources(OpenApiDoc spec, string url, bool includePathParams) =>
+        MergedPaths([(spec, url)], includePathParams).Item2;
 
     /// <summary>diff.GetPathsDiff for composed mode.</summary>
     public static (OpenApiDiff? diff, Dictionary<Operation, string> sources) GetPathsDiff(DiffConfig config, List<(OpenApiDoc spec, string url)> s1, List<(OpenApiDoc spec, string url)> s2)

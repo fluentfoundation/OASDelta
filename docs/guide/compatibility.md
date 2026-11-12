@@ -9,12 +9,23 @@ code as the Go binary.
   option combinations ([`tools/golden-commands.txt`](https://github.com/fluentfoundation/OASDelta/blob/main/tools/golden-commands.txt)):
   every output format of `diff`, `summary`, `changelog` and `breaking`; `--lang` es, pt-br and ru; and option sets
   such as `--level`, `--fail-on`, `--flatten-params`, `--include-path-params`, `--match-path`, `--prefix-revision`
-  and deprecation days. They run over 307 fixture pairs: the upstream test data paired by file name, plus the pairs
-  upstream's own checker tests compare (`tests/extra-pairs.txt`). That is 10,131 comparisons, in which 379 of the
-  617 checker rules fire. `dotnet test` replays them in process. CI replays them with the NativeAOT binary
+  and deprecation days. They run over 317 fixture pairs: the upstream test data paired by file name, the pairs
+  upstream's own checker tests compare (`tests/extra-pairs.txt`), and regression cases found by the property-based
+  tests. That is 10,461 comparisons, in which 383 of the 617 checker rules fire. `dotnet test` replays them in
+  process. CI replays them with the NativeAOT binary
   (`tools/check_golden.sh`) on Linux and Windows, and the release workflow replays them on all six release
   platforms. The few cases that are expected to differ are listed in `tests/golden-known.txt`, each with its
   issue. CI fails if a listed case starts to match, so the list cannot go stale.
+- **Property-based tests.** [CsCheck](https://github.com/AnthonyLloyd/CsCheck) generates OpenAPI 3.0 and 3.1
+  documents, with names and values that are awkward for YAML, JSON, Markdown and HTML, and applies random edits to
+  get a revision: types, formats, enums, bounds, required, deprecation and stability, composition, parameters,
+  headers, media types, responses, security, paths. A nightly
+  [workflow](https://github.com/fluentfoundation/OASDelta/actions/workflows/properties.yml) runs both binaries on
+  thousands of such pairs, with command lines drawn from the golden set, and fails on any difference, shrunk to a
+  minimal case. Pairs that make a rule fire that no golden does are kept as new fixtures. Properties that need no
+  oracle run with every `dotnet test`: a document has no changes against itself, YAML and JSON input give the same
+  changes, `breaking` is the changelog's errors and warnings, differences are symmetric, and emitting, parsing and
+  emitting again is stable. Each of these holds for oasdiff too.
 - **Real-world parity.** [OASDelta-TestData](https://github.com/fluentfoundation/OASDelta-TestData) holds
   consecutive releases of the GitHub, Stripe, Kubernetes and European Patent Office APIs. Its weekly
   [parity report](https://github.com/fluentfoundation/OASDelta-TestData/actions/workflows/parity.yml) runs the
@@ -55,7 +66,24 @@ of its size.
   Common syntax errors are reworded to match Go's messages.
 - **Extension order in the text diff report.** Upstream lists modified extensions in Go map order, which is
   random; the port sorts them.
+- **The name of a schema two components share.** With `Owner: {$ref: '#/components/schemas/Error'}`, both names
+  belong to one schema. Which one oasdiff shows in a change's "shared schema" detail depends on Go map order and
+  changes from run to run. The port always shows the first in sorted order, one of the names oasdiff shows.
 - **Template errors.** Messages for broken custom templates are shorter than Go's.
+- **Crashes.** Where oasdiff crashes, the port reports an error or a result instead.
+  - A parameter or response that is only a reference to itself (`P: {$ref: '#/components/parameters/P'}`) makes
+    oasdiff 1.35.0 panic while it lowercases header names (exit 2, with a Go stack trace). The port fails with
+    `diff failed: parameter reference is nil` (exit 104), which is what oasdiff reports for it with
+    `--case-insensitive-headers=false`.
+  - An array whose items are the array itself (`Item: {type: array, items: {$ref: '#/components/schemas/Item'}}`)
+    makes `changelog` and `breaking` in oasdiff 1.35.0 run out of stack when a type change involves it
+    (`fatal error: stack overflow`, exit 2). The port reports the change and shows the repeated schema as `…`:
+    ``the request's body `type` changed from `array<…>` to `string` ``.
+  - A `null` in a few places makes oasdiff 1.35.0 panic with a nil pointer dereference (exit 2). The port reads
+    them as follows:
+    - an entry of `tags` or `servers` is skipped, so `tags: [null]` compares like `tags: []`
+    - a server variable (`variables: {h: null}`) and a link that is a `$ref` to a null `components.links` entry
+      are kept as empty objects and compared like any other.
 
 ## Not ported
 

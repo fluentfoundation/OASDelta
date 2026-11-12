@@ -1,0 +1,10 @@
+2 changes: 0 error, 0 warning, 2 info
+info	[request-parameter-default-value-changed] at ./properties/negative_zero_json_revision.json
+	in API GET /a
+		for the `query` request parameter `float`, default value was changed from `-0.00` to `1.00`
+
+info	[request-parameter-default-value-changed] at ./properties/negative_zero_json_revision.json
+	in API GET /a
+		for the `query` request parameter `int`, default value was changed from `-0.00` to `1.00`
+
+

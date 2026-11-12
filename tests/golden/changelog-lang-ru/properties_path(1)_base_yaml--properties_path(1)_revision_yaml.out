@@ -1,0 +1,113 @@
+26 изменений: 4 error, 4 warning, 18 info
+error	[response-success-status-removed] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удален успешный (2xx) статус ответа `200`
+
+error	[response-success-status-removed] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удален успешный (2xx) статус ответа `201`
+
+error	[api-security-removed] в ./properties/path(1)_revision.yaml
+	в API POST /register
+		схема безопасности точки доступа `bearerAuth` была удалена из API
+
+error	[api-security-scope-added] в ./properties/path(1)_revision.yaml
+	в API POST /register
+		к схеме безопасности эндпоинта `write:pets` была добавлена область безопасности `OAuth`
+
+warning	[request-parameter-removed] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удалён `cookie` параметр запроса `test`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+warning	[request-parameter-removed] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удалён `header` параметр запроса `user`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+warning	[request-parameter-removed] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удалён `query` параметр запроса `filter`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+warning	[request-parameter-removed] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/install-command
+		удалён `header` параметр запроса `network-policies`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+info	[api-major-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но мажорная версия не увеличилась, с `1.0.0` до `1.0.1`
+
+info	[api-schema-removed]
+	в components/schemas
+		удалена схема `network-policies`
+
+info	[api-schema-removed]
+	в components/schemas
+		удалена схема `rules`
+
+info	[api-security-component-oauth-scope-added]
+	в components/securitySchemes
+		в схеме безопасности `OAuth` OAuth поток `authorizationCode` получил разрешение `admin`
+
+info	[api-security-component-oauth-scope-changed]
+	в components/securitySchemes
+		в схеме безопасности `OAuth` в OAuth потоке `authorizationCode` разрешение `accountWrite` обновлено с `Allows account data to be written` на `Allows accounts data to be written`
+
+info	[api-security-component-removed]
+	в components/securitySchemes
+		компонент схемы безопасности `AccessToken` был удален
+
+info	[api-security-component-removed]
+	в components/securitySchemes
+		компонент схемы безопасности `bearerAuth` был удален
+
+info	[api-operation-id-removed] в ./properties/path(1)_base.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		Идентификатор операции API `GetSecurityScores` удален и заменен на `GetSecurityScore`
+
+info	[api-security-anonymous-access-added] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		эндпоинт теперь допускает анонимный доступ
+		Этот эндпоинт наследует требования безопасности верхнего уровня API.
+
+info	[api-tag-removed] в ./properties/path(1)_base.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		Тег API `security` удален
+
+info	[request-parameter-max-length-increased] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		в `query` параметре запроса `token`, maxLength увеличен с `29` до `30`
+
+info	[request-parameter-pattern-removed] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удалён pattern `^(?:[\w-./:]+)$` у `query` параметра запроса `image`
+
+info	[request-parameter-type-generalized] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		в параметре запроса `query` `image` `type/format` расширен с `string/general string` до `any`
+
+info	[response-non-success-status-removed] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/badges/security-score
+		удален неуспешный (не 2xx) статус ответа `400`
+
+info	[api-security-anonymous-access-added] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/install-command
+		эндпоинт теперь допускает анонимный доступ
+		Этот эндпоинт наследует требования безопасности верхнего уровня API.
+
+info	[new-optional-request-default-parameter-to-existing-path] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/install-command
+		добавлен новый необязательный `header` параметр запроса `name` ко всем операциям пути
+
+info	[request-parameter-enum-value-added] в ./properties/path(1)_revision.yaml
+	в API GET /api/{domain}/{project}/install-command
+		добавлено значение enum `test1` у `path` параметра запроса `project`
+
+info	[api-security-anonymous-access-added] в ./properties/path(1)_revision.yaml
+	в API POST /subscribe
+		эндпоинт теперь допускает анонимный доступ
+		Этот эндпоинт наследует требования безопасности верхнего уровня API.
+
+

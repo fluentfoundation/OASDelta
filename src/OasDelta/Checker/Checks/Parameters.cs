@@ -83,7 +83,8 @@ public static partial class Checks
         var (days, ok) = Deprecation.Days(c, opExt);
         if (!ok && Deprecation.NowDeprecated(dd)) return;
         var stage = Deprecation.Announce(dd, p.ParamDiff.Revision?.Extensions, days, ParamDeprecationIds);
-        var (b, rv) = Loc.ParameterField(p.OpInfo.Sources, p.OpInfo.MethodDiff, p.ParamDiff, "deprecated");
+        // as upstream: the "deprecated" field of the parameter's *schema* diff, so usually the operation's location
+        var (b, rv) = Loc.SchemaField(p.OpInfo.Sources, p.OpInfo.MethodDiff, p.ParamDiff.SchemaDiff, "deprecated");
         string details = stage.Id switch
         {
             Ids.RequestParameterReactivated => FormatDeprecationDetails(opExt),

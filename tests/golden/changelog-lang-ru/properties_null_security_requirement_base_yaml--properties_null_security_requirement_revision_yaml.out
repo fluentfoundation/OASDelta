@@ -1,0 +1,7 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[api-security-added] в ./properties/null_security_requirement_revision.yaml
+	в API POST /p
+		схема безопасности точки доступа `a` была добавлена к API
+		Этот эндпоинт наследует требования безопасности верхнего уровня API.
+
+

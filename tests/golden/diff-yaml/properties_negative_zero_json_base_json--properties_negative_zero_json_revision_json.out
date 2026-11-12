@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /a:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    float:
+                                        schema:
+                                            default:
+                                                from: -0
+                                                to: 1
+                                    int:
+                                        schema:
+                                            default:
+                                                from: -0
+                                                to: 1
+endpoints:
+    modified:
+        ?   method: GET
+            path: /a
+        :   parameters:
+                modified:
+                    query:
+                        float:
+                            schema:
+                                default:
+                                    from: -0
+                                    to: 1
+                        int:
+                            schema:
+                                default:
+                                    from: -0
+                                    to: 1
+

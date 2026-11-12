@@ -1,0 +1,3 @@
+::error title=api-sunset-date-too-small,file=./properties/sunset_revision.yaml,line=9,col=7::in API GET /pets sunset date `2020-01-01` is too small, must be at least `0` days from now
+::error title=response-property-sunset-date-too-small,file=./properties/sunset_revision.yaml,line=22,col=21::in API GET /pets response property `name` sunset date `2020-01-01` is too small, must be at least `0` days from now
+

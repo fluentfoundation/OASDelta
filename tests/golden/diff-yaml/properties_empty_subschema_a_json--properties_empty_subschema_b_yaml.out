@@ -1,0 +1,41 @@
+paths:
+    modified:
+        /p:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                query:
+                                    q:
+                                        schema:
+                                            oneOf:
+                                                modified:
+                                                    - base:
+                                                        index: 1
+                                                      revision:
+                                                        index: 1
+                                                      diff:
+                                                        type:
+                                                            deleted:
+                                                                - boolean
+endpoints:
+    modified:
+        ?   method: POST
+            path: /p
+        :   parameters:
+                modified:
+                    query:
+                        q:
+                            schema:
+                                oneOf:
+                                    modified:
+                                        - base:
+                                            index: 1
+                                          revision:
+                                            index: 1
+                                          diff:
+                                            type:
+                                                deleted:
+                                                    - boolean
+

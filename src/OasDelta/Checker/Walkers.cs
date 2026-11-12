@@ -320,19 +320,30 @@ public static class Walkers
     public static string RevisionTypeFormat(SchemaDiff d) => TypeFormatValue(d.Revision, TypeFormatDimension(d));
     public static string TypeFormatValue(Schema? s, string dim) => dim switch { "format" => FormatString(s), "type" => TypeString(s), _ => TypeFormatString(s) };
 
-    public static string TypeString(Schema? s)
+    // An array whose items are the array itself (Item: {type: array, items: {$ref: Item}}) has no end: oasdiff 1.35.0
+    // recurses until Go's 1 GB stack limit and dies (fatal error: stack overflow, exit 2). The port shows a schema met
+    // again inside its own items as "…" (array<…>).
+    public static string TypeString(Schema? s) => TypeString(s, []);
+    public static string FormatString(Schema? s) => s is null || s.Format == "" ? "none" : s.Format;
+    public static string TypeFormatString(Schema? s) => TypeFormatString(s, []);
+
+    private static string TypeString(Schema? s, HashSet<Schema> enclosing)
     {
         if (s is null) return "any";
         var parts = new List<string>();
+        enclosing.Add(s);
         foreach (var t in s.Type ?? [])
-            parts.Add(t == "array" && s.Items?.Value is not null ? "array<" + TypeFormatString(s.Items.Value) + ">" : t);
+            parts.Add(t == "array" && s.Items?.Value is { } items
+                ? "array<" + (enclosing.Contains(items) ? "…" : TypeFormatString(items, enclosing)) + ">"
+                : t);
+        enclosing.Remove(s);
         return parts.Count == 0 ? "any" : string.Join(", ", parts);
     }
-    public static string FormatString(Schema? s) => s is null || s.Format == "" ? "none" : s.Format;
-    public static string TypeFormatString(Schema? s)
+
+    private static string TypeFormatString(Schema? s, HashSet<Schema> enclosing)
     {
         if (s is null) return "";
-        var t = TypeString(s);
+        var t = TypeString(s, enclosing);
         if (s.Format == "") return t;
         return t == "any" ? s.Format : t + "/" + s.Format;
     }
@@ -452,13 +463,13 @@ public sealed class SchemaWalker
     public static void AddedProperties(SchemaDiff? d, Action<string, string, Schema, SchemaDiff, bool> processor)
     {
         if (d is null) return;
-        new SchemaWalker { Properties = (p, sd, under) => { foreach (var name in sd.PropertiesDiff!.Added) processor(p, name, sd.Revision!.Properties[name].Value!, sd, under); } }.Walk(d);
+        new SchemaWalker { Properties = (p, sd, under) => { foreach (var name in sd.PropertiesDiff!.Added) if (sd.Revision!.Properties[name].Value is { } v) processor(p, name, v, sd, under); } }.Walk(d);
     }
 
     public static void DeletedProperties(SchemaDiff? d, Action<string, string, Schema, SchemaDiff, bool> processor)
     {
         if (d is null) return;
-        new SchemaWalker { Properties = (p, sd, under) => { foreach (var name in sd.PropertiesDiff!.Deleted) processor(p, name, sd.Base!.Properties[name].Value!, sd, under); } }.Walk(d);
+        new SchemaWalker { Properties = (p, sd, under) => { foreach (var name in sd.PropertiesDiff!.Deleted) if (sd.Base!.Properties[name].Value is { } v) processor(p, name, v, sd, under); } }.Walk(d);
     }
 
     /// <summary>schemawalk.PropertyFullName (oasdiff 1.35.0): names joined with "/", appended to the path with "/". No
@@ -587,7 +598,8 @@ internal sealed class References
 
 public static class Loc
 {
-    public static string DisplayFilePath(string file) => Change.SourceDisplay(file);
+    /// <summary>location.displayFilePath of the file kin-openapi records in an origin (see SpecLoader.OriginFile).</summary>
+    public static string DisplayFilePath(string file) => Change.SourceDisplay(Load.SpecLoader.OriginFile(file));
 
     private static SourceLoc FromKey(Sources sources, Operation? op, Location key) => new()
     {

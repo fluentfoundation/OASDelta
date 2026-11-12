@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/p":{"ref":{"from":"","to":"#/components/pathItems/P"},"operations":{"deleted":["POST"]}}}},"webhooks":{"modified":{"w":{"ref":{"from":"","to":"#/components/pathItems/P"},"operations":{"deleted":["POST"]}}}}}

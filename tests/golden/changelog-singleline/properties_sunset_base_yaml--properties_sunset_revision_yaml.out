@@ -1,0 +1,6 @@
+2 changes: 2 error, 0 warning, 0 info
+error at ./properties/sunset_revision.yaml, in API GET /pets sunset date `2020-01-01` is too small, must be at least `0` days from now [api-sunset-date-too-small]. 
+
+error at ./properties/sunset_revision.yaml, in API GET /pets response property `name` sunset date `2020-01-01` is too small, must be at least `0` days from now [response-property-sunset-date-too-small]. 
+
+

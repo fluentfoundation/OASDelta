@@ -62,6 +62,7 @@ public partial class GoldenTests
         for (int i = 1; i < tests.Count; i++) result.Add((tests[i - 1]!, tests[i]!));
         result.Add(("openapi-test1.yaml", "openapi-test3.yaml"));
         result.Add(("home-iot-api-1.yaml", "home-iot-api-2.yaml"));
+        result.Add(("duplicate_endpoints/base.yaml", "duplicate_endpoints/revision.yaml"));
         // pairs that upstream's own tests compare (tools/mine_upstream_pairs.py)
         foreach (var line in File.ReadAllLines(Path.Combine(Root, "tests", "extra-pairs.txt")))
             if (line.Length > 0 && !line.StartsWith('#') && line.Split(' ') is [var b, var r]) result.Add((b, r));

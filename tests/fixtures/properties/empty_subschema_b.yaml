@@ -1,0 +1,16 @@
+# The second subschema is an empty mapping: kin-openapi gives it no origin (a sequence item is located by its first
+# key), so with a JSON spec on the other side (no origins at all) the change is located at the operation.
+openapi: 3.1.0
+info: {title: empty subschema, version: '1'}
+paths:
+  /p:
+    post:
+      parameters:
+        - in: query
+          name: q
+          schema:
+            oneOf:
+              - type: string
+              - {}
+      responses:
+        '200': {description: ok}

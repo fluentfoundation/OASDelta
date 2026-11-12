@@ -128,3 +128,5 @@
 ./list-of-types/param-test-revision.yaml ./list-of-types/param-test-base.yaml
 ./list-of-types/param-property-revision.yaml ./list-of-types/param-property-base.yaml
 ./oas32/base.yaml ./oas32/revision.yaml
+./properties/empty_subschema_a.json ./properties/empty_subschema_b.yaml
+./properties/empty_subschema_b.yaml ./properties/empty_subschema_a.json

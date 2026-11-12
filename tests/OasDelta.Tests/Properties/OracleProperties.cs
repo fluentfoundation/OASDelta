@@ -17,9 +17,11 @@ public sealed class OracleFactAttribute : FactAttribute
 }
 
 /// <summary>
-/// Differential property: for generated base/revision pairs, OasDelta prints what oasdiff prints, byte for byte (or
-/// the same up to order where oasdiff's own order is nondeterministic), with the same exit code. Each case runs three
-/// command lines drawn from tools/golden-commands.txt, so formats, languages and options vary too.
+/// Differential property: for generated base/revision pairs, OasDelta prints what oasdiff prints, byte for byte, with
+/// the same exit code. Two differences are allowed, both where oasdiff's own output follows Go's random map order:
+/// the order of lines or JSON array entries, and which name of an aliased component schema a change shows as its
+/// shared schema. oasdiff is run once per command line; any other run-to-run variation fails the property. Each case
+/// runs three command lines drawn from tools/golden-commands.txt, so formats, languages and options vary too.
 ///
 /// Also records which checker rules the generated pairs make fire. A rule that no golden makes fire, reached by a
 /// pair on which both tools agree, is a promotion candidate: the pair is kept under properties/new-rules/&lt;rule&gt;
@@ -45,7 +47,7 @@ public class OracleProperties(ITestOutputHelper output)
         var golden = Support.GoldenRuleIds();
         var fired = new ConcurrentDictionary<string, int>(StringComparer.Ordinal);
         var promoted = new ConcurrentDictionary<string, string>(StringComparer.Ordinal);
-        int cases = 0, reordered = 0, loadErrors = 0, oasdiffCrashes = 0, nondeterministic = 0;
+        int cases = 0, reordered = 0, loadErrors = 0, oasdiffCrashes = 0, aliasNamed = 0;
         string? failure = null;
         var started = DateTime.UtcNow;
         try
@@ -53,6 +55,7 @@ public class OracleProperties(ITestOutputHelper output)
             void Check(SpecPair p, int[] choice)
             {
                 using var f = CaseFiles.Write(p);
+                var aliases = new Lazy<Dictionary<string, string>>(() => Support.SchemaAliases(p.Base, p.Revision));
                 foreach (var i in choice)
                 {
                     var cmd = Commands.Value[i % Commands.Value.Length];
@@ -66,16 +69,15 @@ public class OracleProperties(ITestOutputHelper output)
                         continue;
                     }
                     var agreement = got.Code == want.Code ? Support.Compare(want.Out, got.Out) : Support.Agreement.Different;
-                    // some of oasdiff's output depends on Go's random map order (e.g. which name a schema shared by two
-                    // components gets): OasDelta's output only has to be one oasdiff can produce
-                    for (int retry = 0; agreement == Support.Agreement.Different && retry < 10; retry++)
+                    // Which name of an aliased schema (Item: {$ref: Error}) oasdiff shows as a change's shared schema
+                    // depends on Go's random map order, so that name alone may differ. Nothing else may: oasdiff is
+                    // not run again, so any other run-to-run variation in its output fails the property and is looked at.
+                    if (agreement == Support.Agreement.Different && got.Code == want.Code && aliases.Value.Count > 0 &&
+                        Support.Compare(Support.WithCanonicalSharedSchemaNames(want.Out, aliases.Value),
+                                        Support.WithCanonicalSharedSchemaNames(got.Out, aliases.Value)) is not Support.Agreement.Different and var named)
                     {
-                        var again = oasdiff.Run(args);
-                        if (again.Code == got.Code && Support.Compare(again.Out, got.Out) != Support.Agreement.Different)
-                        {
-                            agreement = Support.Agreement.Same;
-                            Interlocked.Increment(ref nondeterministic);
-                        }
+                        agreement = named;
+                        Interlocked.Increment(ref aliasNamed);
                     }
                     if (agreement == Support.Agreement.Different)
                         throw new PropertyException($"{string.Join(' ', cmd)}: exit {got.Code}, oasdiff {want.Code}\n--- oasdiff\n{Support.Clip(want.Out)}\n--- oasdelta\n{Support.Clip(got.Out)}");
@@ -119,18 +121,18 @@ public class OracleProperties(ITestOutputHelper output)
         }
         finally
         {
-            Report(DateTime.UtcNow - started, cases, reordered, nondeterministic, loadErrors, oasdiffCrashes, fired, promoted, failure);
+            Report(DateTime.UtcNow - started, cases, reordered, aliasNamed, loadErrors, oasdiffCrashes, fired, promoted, failure);
         }
     }
 
-    private void Report(TimeSpan took, int cases, int reordered, int nondeterministic, int loadErrors, int oasdiffCrashes, ConcurrentDictionary<string, int> fired,
+    private void Report(TimeSpan took, int cases, int reordered, int aliasNamed, int loadErrors, int oasdiffCrashes, ConcurrentDictionary<string, int> fired,
         ConcurrentDictionary<string, string> promoted, string? failure)
     {
         var inv = CultureInfo.InvariantCulture;
         var sb = new StringBuilder();
         sb.Append("## Property-based comparison with oasdiff\n\n");
         sb.Append(inv, $"- Cases: **{cases}** in {took.TotalSeconds:F0} s, 3 command lines each; same output up to order (oasdiff's nondeterminism): {reordered}\n");
-        sb.Append(inv, $"- Command lines where oasdiff's output varies between runs and OasDelta's is one of its outputs: {nondeterministic}\n");
+        sb.Append(inv, $"- Command lines that differ only in which name of an aliased schema (`Item: {{$ref: Error}}`) is the shared schema (Go map order): {aliasNamed}\n");
         sb.Append(inv, $"- Cases neither tool could load (same exit code): {loadErrors}\n");
         sb.Append(inv, $"- Command lines on which oasdiff crashed (OasDelta reported an error or a result instead): {oasdiffCrashes}\n");
         sb.Append(inv, $"- Rules fired by generated pairs: **{fired.Count}**; of those, not fired by any golden: **{promoted.Count}**\n");

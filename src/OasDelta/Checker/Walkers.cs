@@ -411,7 +411,17 @@ public sealed class SchemaWalker
     public Action<string, string, SchemaDiff, SchemaDiff?, bool>? Enter;
     public Action<string, SchemaDiff, bool>? Properties;
     internal Action<string, (SchemaDiff, bool)>? Arrive;
-    private readonly HashSet<(SchemaDiff, bool)> _seen = new(VisitComparer.Instance);
+
+    private enum StepKind : byte { Arrive, Enter, Properties }
+
+    /// <summary>One callback of a walk, with its arguments. Arrive's path is the node's path; Enter's and Properties'
+    /// are their propertyPath argument.</summary>
+    private readonly record struct Step(StepKind Kind, string Path, string Name, SchemaDiff Diff, SchemaDiff? Parent, bool UnderAllOf);
+
+    /// <summary>A walk depends only on the schema diff it starts at, which no check changes, and every check that looks
+    /// at properties walks the same media type schemas again. So each root is walked once, and later walks replay the
+    /// recorded callbacks in the same order.</summary>
+    private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<SchemaDiff, Step[]> Recorded = new();
 
     private sealed class VisitComparer : IEqualityComparer<(SchemaDiff, bool)>
     {
@@ -420,38 +430,53 @@ public sealed class SchemaWalker
         public int GetHashCode((SchemaDiff, bool) v) => HashCode.Combine(System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode(v.Item1), v.Item2);
     }
 
-    public void Walk(SchemaDiff d) => WalkNode("", "", d, null, false);
+    public void Walk(SchemaDiff d)
+    {
+        foreach (var s in Recorded.GetValue(d, Record))
+            switch (s.Kind)
+            {
+                case StepKind.Arrive: Arrive?.Invoke(s.Path, (s.Diff, s.UnderAllOf)); break;
+                case StepKind.Enter: Enter?.Invoke(s.Path, s.Name, s.Diff, s.Parent, s.UnderAllOf); break;
+                default: Properties?.Invoke(s.Path, s.Diff, s.UnderAllOf); break;
+            }
+    }
 
-    private void WalkNode(string propertyPath, string propertyName, SchemaDiff d, SchemaDiff? parent, bool underAllOf)
+    private static Step[] Record(SchemaDiff d)
+    {
+        var steps = new List<Step>();
+        WalkNode(steps, new HashSet<(SchemaDiff, bool)>(VisitComparer.Instance), "", "", d, null, false);
+        return [.. steps];
+    }
+
+    private static void WalkNode(List<Step> steps, HashSet<(SchemaDiff, bool)> seen, string propertyPath, string propertyName, SchemaDiff d, SchemaDiff? parent, bool underAllOf)
     {
         var nodePath = propertyName != "" ? PropertyFullName(propertyPath, propertyName) : propertyPath;
-        var visit = (d, underAllOf);
-        Arrive?.Invoke(nodePath, visit);
-        if (!_seen.Add(visit)) return;
-        if (Enter is not null && (propertyName != "" || propertyPath != "")) Enter(propertyPath, propertyName, d, parent, underAllOf);
+        steps.Add(new Step(StepKind.Arrive, nodePath, "", d, null, underAllOf));
+        if (!seen.Add((d, underAllOf))) return;
+        if (propertyName != "" || propertyPath != "") steps.Add(new Step(StepKind.Enter, propertyPath, propertyName, d, parent, underAllOf));
         propertyPath = nodePath;
-        if (d.AllOfDiff is not null) foreach (var v in d.AllOfDiff.Modified) WalkNode(PropertyFullName(propertyPath, $"allOf[{v}]"), "", v.Diff, d, true);
-        if (d.AnyOfDiff is not null) foreach (var v in d.AnyOfDiff.Modified) WalkNode(PropertyFullName(propertyPath, $"anyOf[{v}]"), "", v.Diff, d, underAllOf);
-        if (d.OneOfDiff is not null) foreach (var v in d.OneOfDiff.Modified) WalkNode(PropertyFullName(propertyPath, $"oneOf[{v}]"), "", v.Diff, d, underAllOf);
-        if (d.ItemsDiff is not null) WalkNode(PropertyFullName(propertyPath, "items"), "", d.ItemsDiff, d, underAllOf);
+        if (d.AllOfDiff is not null) foreach (var v in d.AllOfDiff.Modified) WalkNode(steps, seen, PropertyFullName(propertyPath, $"allOf[{v}]"), "", v.Diff, d, true);
+        if (d.AnyOfDiff is not null) foreach (var v in d.AnyOfDiff.Modified) WalkNode(steps, seen, PropertyFullName(propertyPath, $"anyOf[{v}]"), "", v.Diff, d, underAllOf);
+        if (d.OneOfDiff is not null) foreach (var v in d.OneOfDiff.Modified) WalkNode(steps, seen, PropertyFullName(propertyPath, $"oneOf[{v}]"), "", v.Diff, d, underAllOf);
+        if (d.ItemsDiff is not null) WalkNode(steps, seen, PropertyFullName(propertyPath, "items"), "", d.ItemsDiff, d, underAllOf);
         if (d.PropertiesDiff is not null)
         {
-            Properties?.Invoke(propertyPath, d, underAllOf);
-            foreach (var (name, v) in d.PropertiesDiff.Modified) WalkNode(propertyPath, name, v, d, underAllOf);
+            steps.Add(new Step(StepKind.Properties, propertyPath, "", d, null, underAllOf));
+            foreach (var (name, v) in d.PropertiesDiff.Modified) WalkNode(steps, seen, propertyPath, name, v, d, underAllOf);
         }
-        if (d.AdditionalPropertiesDiff is not null) WalkNode(PropertyFullName(propertyPath, "additionalProperties"), "", d.AdditionalPropertiesDiff, d, underAllOf);
-        if (d.PrefixItemsDiff is not null) foreach (var v in d.PrefixItemsDiff.Modified) WalkNode($"{propertyPath}/prefixItems[{v}]", "", v.Diff, d, underAllOf);
-        if (d.ContainsDiff is not null) WalkNode($"{propertyPath}/contains", "", d.ContainsDiff, d, underAllOf);
-        if (d.PropertyNamesDiff is not null) WalkNode($"{propertyPath}/propertyNames", "", d.PropertyNamesDiff, d, underAllOf);
-        if (d.UnevaluatedItemsDiff is not null) WalkNode($"{propertyPath}/unevaluatedItems", "", d.UnevaluatedItemsDiff, d, underAllOf);
-        if (d.UnevaluatedPropertiesDiff is not null) WalkNode($"{propertyPath}/unevaluatedProperties", "", d.UnevaluatedPropertiesDiff, d, underAllOf);
-        if (d.IfDiff is not null) WalkNode($"{propertyPath}/if", "", d.IfDiff, d, underAllOf);
-        if (d.ThenDiff is not null) WalkNode($"{propertyPath}/then", "", d.ThenDiff, d, underAllOf);
-        if (d.ElseDiff is not null) WalkNode($"{propertyPath}/else", "", d.ElseDiff, d, underAllOf);
-        if (d.NotDiff is not null) WalkNode($"{propertyPath}/not", "", d.NotDiff, d, underAllOf);
-        if (d.ContentSchemaDiff is not null) WalkNode($"{propertyPath}/contentSchema", "", d.ContentSchemaDiff, d, underAllOf);
-        if (d.PatternPropertiesDiff is not null) foreach (var (k, v) in d.PatternPropertiesDiff.Modified) WalkNode($"{propertyPath}/patternProperties[{k}]", "", v, d, underAllOf);
-        if (d.DependentSchemasDiff is not null) foreach (var (k, v) in d.DependentSchemasDiff.Modified) WalkNode($"{propertyPath}/dependentSchemas[{k}]", "", v, d, underAllOf);
+        if (d.AdditionalPropertiesDiff is not null) WalkNode(steps, seen, PropertyFullName(propertyPath, "additionalProperties"), "", d.AdditionalPropertiesDiff, d, underAllOf);
+        if (d.PrefixItemsDiff is not null) foreach (var v in d.PrefixItemsDiff.Modified) WalkNode(steps, seen, $"{propertyPath}/prefixItems[{v}]", "", v.Diff, d, underAllOf);
+        if (d.ContainsDiff is not null) WalkNode(steps, seen, $"{propertyPath}/contains", "", d.ContainsDiff, d, underAllOf);
+        if (d.PropertyNamesDiff is not null) WalkNode(steps, seen, $"{propertyPath}/propertyNames", "", d.PropertyNamesDiff, d, underAllOf);
+        if (d.UnevaluatedItemsDiff is not null) WalkNode(steps, seen, $"{propertyPath}/unevaluatedItems", "", d.UnevaluatedItemsDiff, d, underAllOf);
+        if (d.UnevaluatedPropertiesDiff is not null) WalkNode(steps, seen, $"{propertyPath}/unevaluatedProperties", "", d.UnevaluatedPropertiesDiff, d, underAllOf);
+        if (d.IfDiff is not null) WalkNode(steps, seen, $"{propertyPath}/if", "", d.IfDiff, d, underAllOf);
+        if (d.ThenDiff is not null) WalkNode(steps, seen, $"{propertyPath}/then", "", d.ThenDiff, d, underAllOf);
+        if (d.ElseDiff is not null) WalkNode(steps, seen, $"{propertyPath}/else", "", d.ElseDiff, d, underAllOf);
+        if (d.NotDiff is not null) WalkNode(steps, seen, $"{propertyPath}/not", "", d.NotDiff, d, underAllOf);
+        if (d.ContentSchemaDiff is not null) WalkNode(steps, seen, $"{propertyPath}/contentSchema", "", d.ContentSchemaDiff, d, underAllOf);
+        if (d.PatternPropertiesDiff is not null) foreach (var (k, v) in d.PatternPropertiesDiff.Modified) WalkNode(steps, seen, $"{propertyPath}/patternProperties[{k}]", "", v, d, underAllOf);
+        if (d.DependentSchemasDiff is not null) foreach (var (k, v) in d.DependentSchemasDiff.Modified) WalkNode(steps, seen, $"{propertyPath}/dependentSchemas[{k}]", "", v, d, underAllOf);
     }
 
     public static void ModifiedProperties(SchemaDiff? d, Action<string, string, SchemaDiff, SchemaDiff?> processor)

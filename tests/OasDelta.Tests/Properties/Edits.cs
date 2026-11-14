@@ -516,6 +516,16 @@ internal static class Edits
             // the rest; and an empty mapping in a list has no origin. Both found parity bugs.
             ("set a node to null", c => ReplaceNode(c, null)),
             ("set a node to {}", c => ReplaceNode(c, new Map())),
+            // kin-openapi follows a $ref through its typed document, and only to the kind the $ref stands for; when
+            // that fails it follows the pointer through the plain data. Any node pointing at any other one (another
+            // kind, an ancestor, through a $ref) exercises both. Not the root: "#" on an OpenAPI document is where
+            // the port departs from kin on purpose (KinRefTests).
+            ("point a node at another with $ref", c =>
+            {
+                var all = Walk(c.Doc).Where(l => l.Kind != Kind.Root).ToList();
+                if (all.Count == 0) return;
+                ReplaceNode(c, new Map { ["$ref"] = "#" + all[(c.A / 7 + c.T.Length) % all.Count].Pointer });
+            }),
         ],
     };
 

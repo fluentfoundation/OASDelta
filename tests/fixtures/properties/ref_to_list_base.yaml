@@ -1,0 +1,13 @@
+openapi: 3.0.3
+info: {title: refs, version: '1'}
+paths:
+  /items:
+    get:
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema: {$ref: '#/x-schemas/0'}
+x-schemas:
+  - {type: string}

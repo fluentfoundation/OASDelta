@@ -86,9 +86,15 @@ public sealed partial class SpecLoader
             if (!_resolving.Add(reference)) return null;
             try
             {
-                var (tdoc, tnode) = ResolveRef(doc, reference);
-                if (CheckDocument(tdoc) is { } dm) return dm; // a newly loaded document is resolved first
-                if (!reference.Contains('#')) return tnode.IsMapping ? CheckParts(tdoc, tnode, kind) : null; // a whole file
+                if (!reference.Contains('#'))
+                {
+                    // a whole file (loadSingleElementFromURI)
+                    var (fdoc, fnode) = ResolveRef(doc, reference);
+                    if (CheckDocument(fdoc) is { } dm) return dm;
+                    return fnode.IsMapping ? CheckParts(fdoc, fnode, kind) : null;
+                }
+                var (tdoc, tnode) = KinResolve(doc, reference, kind);
+                if (ReferenceEquals(tnode, NullNode)) return null; // resolved to nothing: kin leaves Value nil
                 var m = Check(tdoc, tnode, kind);
                 return m == kind ? null : m;
             }
@@ -189,8 +195,13 @@ public sealed partial class SpecLoader
             if (!PathItemIsEmpty(n) || !_resolving.Add(reference)) return null;
             try
             {
-                var (tdoc, tnode) = ResolveRef(doc, reference);
-                if (CheckDocument(tdoc) is { } dm) return dm == Must.PathItem ? null : dm;
+                Document tdoc; Node tnode;
+                if (!reference.Contains('#'))
+                {
+                    (tdoc, tnode) = ResolveRef(doc, reference);
+                    if (CheckDocument(tdoc) is { } dm) return dm == Must.PathItem ? null : dm;
+                }
+                else (tdoc, tnode) = KinResolve(doc, reference, Must.PathItem);
                 // what it points to is read as a path item; a $ref in there is not followed again
                 return tnode.IsMapping ? CheckPathItemParts(tdoc, tnode) : null;
             }

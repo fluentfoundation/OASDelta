@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[response-body-type-changed] в ./properties/ref_through_ref_revision.yaml
+	в API GET /items
+		`type` тела ответа изменён с `string` на `integer` для статуса `200`
+
+

@@ -1,0 +1,14 @@
+openapi: 3.0.3
+info: {title: refs, version: '1'}
+paths:
+  /items:
+    get:
+      parameters:
+        - {$ref: '#/components/parameters/Limit'}
+      responses:
+        '200': {description: ok}
+components:
+  parameters:
+    Limit: {name: limit, in: query, schema: {type: integer}}
+  schemas:
+    Limit: {type: integer}

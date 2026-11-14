@@ -1,0 +1,13 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /items
+- :warning: the response's body `type` changed from `string` to `integer` for status `200`
+
+
+
+
+
+

@@ -57,8 +57,11 @@ public partial class SpecProperties
     public void YamlAndJsonInputsGiveTheSameChanges() =>
         SpecPair.Gen.Sample(p =>
         {
-            using var yaml = CaseFiles.Write(p.Base, false, p.Revision, false);
-            using var json = CaseFiles.Write(p.Base, true, p.Revision, true);
+            // YAML has no negative zero: go-yaml reads "-0" as the integer 0 (so oasdiff, and the port, #26), while JSON
+            // keeps -0. The same document in both encodings has 0 there.
+            Map b = (Map)WithoutNegativeZero(p.Base)!, r = (Map)WithoutNegativeZero(p.Revision)!;
+            using var yaml = CaseFiles.Write(b, false, r, false);
+            using var json = CaseFiles.Write(b, true, r, true);
             foreach (var c in EncodingCommands)
             {
                 var y = Tool.Run([.. c, yaml.Base, yaml.Revision]);
@@ -161,6 +164,14 @@ public partial class SpecProperties
         double d when d == 0 && double.IsNegative(d) => 0.0,
         Map m => m.Aggregate(new Map(), (acc, kv) => { acc[kv.Key] = AsParsed(kv.Value); return acc; }),
         List<object?> l => l.Select(AsParsed).ToList(),
+        _ => v,
+    };
+
+    private static object? WithoutNegativeZero(object? v) => v switch
+    {
+        double d when d == 0 && double.IsNegative(d) => 0.0,
+        Map m => m.Aggregate(new Map(), (acc, kv) => { acc[kv.Key] = WithoutNegativeZero(kv.Value); return acc; }),
+        List<object?> l => l.Select(WithoutNegativeZero).ToList(),
         _ => v,
     };
 

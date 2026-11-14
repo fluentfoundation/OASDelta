@@ -368,3 +368,112 @@ public class ExternalRefPolicyTests
         return p.ExitCode == 0;
     }
 }
+
+/// <summary>kin-openapi's resolveComponent: what a $ref with a fragment may point at, and its errors. It drills into the
+/// typed document first (through a $ref'd component's value, and only to the kind the $ref stands for); when that fails
+/// it drills the plain data of the document holding the $ref, and that drill's error is the one reported. Each
+/// expectation is what oasdiff 1.35.0 prints (exit 102).</summary>
+public class KinRefTests
+{
+    private const string Components = """
+        components:
+          schemas:
+            A: {type: object, properties: {x: {type: string}}}
+            R: {$ref: '#/components/schemas/A'}
+          parameters:
+            P: {name: q, in: query, schema: {type: string}}
+          headers:
+            H: {schema: {type: string}}
+          examples:
+            E: {value: {k: v}}
+          x-defs:
+            D: {type: string}
+        x-defs: {B: null}
+        x-l: [{type: string}]
+        """;
+
+    private static string? LoadError(string operation)
+    {
+        try
+        {
+            new SpecLoader().LoadFromText("openapi: 3.0.3\ninfo: {title: t, version: '1'}\npaths:\n  /p:\n    x-p: {type: string}\n    get:\n" + operation + "\n" + Components, "spec.yaml");
+            return null;
+        }
+        catch (LoadException e) { return e.Message; }
+    }
+
+    private static string SchemaRef(string reference) =>
+        $"      responses: {{'200': {{description: ok, content: {{a/b: {{schema: {{$ref: '{reference}'}}}}}}}}}}";
+
+    [Theory]
+    [InlineData("#/components/parameters/P", "bad data in \"#/components/parameters/P\" (expecting ref to schema object)")]
+    [InlineData("#/info/title", "bad data in \"#/info/title\" (expecting ref to schema object)")]
+    [InlineData("#/x-l", "bad data in \"#/x-l\" (expecting ref to schema object)")]
+    [InlineData("#/x-l/abc", "failed to resolve \"abc\" in fragment in URI: \"#/x-l/abc\": strconv.Atoi: parsing \"abc\": invalid syntax")]
+    [InlineData("#/x-l/-1", "failed to resolve \"-1\" in fragment in URI: \"#/x-l/-1\": invalid slice index \"-1\"")]
+    [InlineData("#/x-l/+0", "failed to resolve \"+0\" in fragment in URI: \"#/x-l/+0\": invalid slice index \"+0\"")]
+    [InlineData("#/x-l/5", "failed to resolve \"5\" in fragment in URI: \"#/x-l/5\": slice index out of bounds")]
+    [InlineData("#/x-defs/Z", "failed to resolve \"Z\" in fragment in URI: \"#/x-defs/Z\": map key \"Z\" not found")]
+    [InlineData("#/info/title/x", "failed to resolve \"x\" in fragment in URI: \"#/info/title/x\": not a map, slice nor struct")]
+    [InlineData("#components/schemas/A", "expected fragment prefix '#/' in URI \"#components/schemas/A\"")]
+    // kin: the root's x- keys as a schema, or nothing
+    [InlineData("#", "bad data in \"#\" (expecting ref to schema object)")]
+    [InlineData("#/", "bad data in \"#/\" (expecting ref to schema object)")]
+    // kin: no error, the $ref resolves to nothing (its drill closure overwrites the error with nil)
+    [InlineData("#/x-defs/B/C", "failed to resolve \"C\" in fragment in URI: \"#/x-defs/B/C\": \"B\" is null")]
+    // kin: a panic (a nil *SchemaRef copied)
+    [InlineData("#/components/schemas/A/not", "failed to resolve \"not\" in fragment in URI: \"#/components/schemas/A/not\"")]
+    [InlineData("#/components/schemas/A/additionalProperties", "failed to resolve \"additionalProperties\" in fragment in URI: \"#/components/schemas/A/additionalProperties\"")]
+    public void ASchemaRefIsRejected(string reference, string error) => Assert.Equal(error, LoadError(SchemaRef(reference)));
+
+    /// <summary>The fragment of a $ref to another file is looked up in that file. kin 0.151.0 looks it up in the
+    /// file holding the $ref when the other file doesn't have it, so oasdiff 1.35.0 silently uses this file's Pet.</summary>
+    [Fact]
+    public void AFragmentIsLookedUpInTheFileItNames() =>
+        Assert.Equal("failed to resolve \"Pet\" in fragment in URI: \"./defs.yaml#/components/schemas/Pet\": map key \"Pet\" not found",
+            LoadErrorWith("./defs.yaml#/components/schemas/Pet", "openapi: 3.0.3\ninfo: {title: d, version: '1'}\npaths: {}\ncomponents: {schemas: {Cat: {type: string}}}\n"));
+
+    /// <summary>"#" is the whole file when that file is the object itself (kin's issue 856).</summary>
+    [Fact]
+    public void ARefToAFileThatIsASchemaIsAccepted() => Assert.Null(LoadErrorWith("./defs.yaml#", "type: object\nproperties: {id: {type: string}}\n"));
+
+    /// <summary>Loads a spec, which also has a Pet, whose response schema is <paramref name="reference"/>, beside
+    /// defs.yaml.</summary>
+    private static string? LoadErrorWith(string reference, string defs)
+    {
+        var dir = Directory.CreateTempSubdirectory("oasdelta-kinref-");
+        try
+        {
+            File.WriteAllText(Path.Combine(dir.FullName, "defs.yaml"), defs);
+            var spec = Path.Combine(dir.FullName, "spec.yaml");
+            File.WriteAllText(spec, "openapi: 3.0.3\ninfo: {title: t, version: '1'}\npaths:\n  /p:\n    get:\n" + SchemaRef(reference) +
+                "\ncomponents: {schemas: {Pet: {type: integer}}}\n");
+            new SpecLoader().LoadFile(spec);
+            return null;
+        }
+        catch (LoadException e) { return e.Message; }
+        finally { dir.Delete(recursive: true); }
+    }
+
+    [Theory]
+    [InlineData("#/components/schemas/R/properties/x")] // through R, a $ref itself
+    [InlineData("#/components/headers/H/schema")]       // not in the typed Header; found in the plain data
+    [InlineData("#/paths/~1p/x-p")]
+    [InlineData("#/components/x-defs/D")]
+    [InlineData("#/x-defs/B")]                          // null: resolves to nothing
+    public void ASchemaRefIsAccepted(string reference) => Assert.Null(LoadError(SchemaRef(reference)));
+
+    [Theory]
+    [InlineData("      parameters: [{$ref: '#/components/schemas/A'}]\n      responses: {'200': {description: ok}}", "parameter")]
+    [InlineData("      parameters: [{$ref: '#/components/headers/H'}]\n      responses: {'200': {description: ok}}", "parameter")]
+    [InlineData("      responses: {'200': {$ref: '#/components/schemas/A'}}", "response")]
+    [InlineData("      requestBody: {$ref: '#/components/parameters/P'}\n      responses: {'200': {description: ok}}", "requestBody")]
+    [InlineData("      responses: {'200': {description: ok, headers: {Y: {$ref: '#/components/parameters/P'}}}}", "header")]
+    [InlineData("      responses: {'200': {description: ok, content: {a/b: {examples: {e: {$ref: '#/components/schemas/A'}}}}}}", "example")]
+    public void ARefToAnotherKindIsRejected(string operation, string kind) =>
+        Assert.EndsWith($"(expecting ref to {kind} object)", LoadError(operation));
+
+    [Fact]
+    public void AParameterRefToAnExtensionMapIsAccepted() =>
+        Assert.Null(LoadError("      parameters: [{$ref: '#/components/x-defs/D'}]\n      responses: {'200': {description: ok}}"));
+}

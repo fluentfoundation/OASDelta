@@ -1,0 +1,14 @@
+openapi: 3.0.3
+info: {title: refs, version: '1'}
+paths:
+  /items:
+    get:
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              # the list itself, not an item in it: bad data in "#/x-schemas" (expecting ref to schema object)
+              schema: {$ref: '#/x-schemas'}
+x-schemas:
+  - {type: string}

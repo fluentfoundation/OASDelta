@@ -9,9 +9,9 @@ code as the Go binary.
   option combinations ([`tools/golden-commands.txt`](https://github.com/fluentfoundation/OASDelta/blob/main/tools/golden-commands.txt)):
   every output format of `diff`, `summary`, `changelog` and `breaking`; `--lang` es, pt-br and ru; and option sets
   such as `--level`, `--fail-on`, `--flatten-params`, `--include-path-params`, `--match-path`, `--prefix-revision`
-  and deprecation days. They run over 317 fixture pairs: the upstream test data paired by file name, the pairs
+  and deprecation days. They run over 327 fixture pairs: the upstream test data paired by file name, the pairs
   upstream's own checker tests compare (`tests/extra-pairs.txt`), and regression cases found by the property-based
-  tests. That is 10,461 comparisons, in which 383 of the 617 checker rules fire. `dotnet test` replays them in
+  tests. That is 10,791 comparisons, in which 384 of the 617 checker rules fire. `dotnet test` replays them in
   process. CI replays them with the NativeAOT binary
   (`tools/check_golden.sh`) on Linux and Windows, and the release workflow replays them on all six release
   platforms. The few cases that are expected to differ are listed in `tests/golden-known.txt`, each with its
@@ -57,6 +57,10 @@ of its size.
 - **HTML templates:** CSS comments are dropped the way `html/template` drops them; the diff report reproduces
   goldmark's HTML, including heading ids.
 - **Command line:** pflag usage text, cobra error messages and exit codes (100–123).
+- **`$ref` resolution (kin-openapi):** what a `$ref` may point at. A `$ref` must reach the kind of object it stands
+  for (a parameter pointing at a schema fails with `bad data in "#/components/schemas/Limit" (expecting ref to
+  parameter object)`). It may go through another `$ref` (`#/components/schemas/Alias/properties/id`), and `#` names
+  a whole file that is itself a schema. Where kin-openapi's resolver is buggy, the port departs from it (below).
 
 ## Known differences
 
@@ -70,6 +74,26 @@ of its size.
   belong to one schema. Which one oasdiff shows in a change's "shared schema" detail depends on Go map order and
   changes from run to run. The port always shows the first in sorted order, one of the names oasdiff shows.
 - **Template errors.** Messages for broken custom templates are shorter than Go's.
+- **Missing files.** A spec or `$ref`'d file that doesn't exist is reported with Go's Linux wording
+  (`open sub/defs.yaml: no such file or directory`) on every OS. On Windows, oasdiff prints the Windows text and a
+  backslash path instead.
+- **Bugs in kin-openapi's `$ref` resolver.** When a `$ref`'s pointer doesn't resolve in the typed document,
+  kin-openapi 0.151.0 follows it through the file's plain data, which is what lets it reach extensions. The port
+  does the same, without three bugs in that code:
+  - **The wrong file.** kin follows the pointer through the file that holds the `$ref`, not the file the `$ref`
+    names. With `$ref: './defs.yaml#/components/schemas/Pet'` and no `Pet` in `defs.yaml`, oasdiff silently uses the
+    referencing file's own `Pet` and reports changes against it. The port fails to load the spec (exit 102):
+    `failed to resolve "Pet" in fragment in URI: "./defs.yaml#/components/schemas/Pet": map key "Pet" not found`.
+  - **Lost errors.** The fallback overwrites kin's own error. oasdiff prints only the last step (`map key "Pet" not
+    found`, without the `$ref` or the file), and a pointer through a null (`#/x-defs/A/B` with `A: null`) gets no
+    error at all. The port prints the error kin builds and then loses, as above, and fails on a pointer through a
+    null.
+  - **`#` on an OpenAPI document.** `#` is meant for a file that is itself the object (`$ref: 'pet.yaml#'`). On an
+    OpenAPI document, kin builds the object from the document's `x-` keys, so a schema `$ref: '#'` silently becomes
+    the "any" schema. The port fails with `bad data in "#" (expecting ref to schema object)`.
+
+  A `$ref` to a `null` still resolves to nothing, as in oasdiff (for a schema, `diff failed: revision schema value
+  is nil`).
 - **Crashes.** Where oasdiff crashes, the port reports an error or a result instead.
   - A parameter or response that is only a reference to itself (`P: {$ref: '#/components/parameters/P'}`) makes
     oasdiff 1.35.0 panic while it lowercases header names (exit 2, with a Go stack trace). The port fails with
@@ -84,6 +108,9 @@ of its size.
     - an entry of `tags` or `servers` is skipped, so `tags: [null]` compares like `tags: []`
     - a server variable (`variables: {h: null}`) and a link that is a `$ref` to a null `components.links` entry
       are kept as empty objects and compared like any other.
+  - A `$ref` to a field that isn't there (`#/components/schemas/Pet/not`, with no `not` in `Pet`) makes oasdiff
+    1.35.0 panic with a nil pointer dereference (exit 2). The port fails to load the spec (exit 102): `failed to
+    resolve "not" in fragment in URI: "#/components/schemas/Pet/not"`.
 
 ## Not ported
 

@@ -1,0 +1,17 @@
+- id: request-body-contains-removed
+  text: removed 'contains' constraint from the request body
+  level: 1
+  operation: PUT
+  operationId: put_search
+  path: /search
+  section: paths
+  fingerprint: fa0ed59111b8
+- id: request-body-max-contains-unset
+  text: the request's body maxContains was unset from `4`
+  level: 1
+  operation: PUT
+  operationId: put_search
+  path: /search
+  section: paths
+  fingerprint: f937028be71d
+

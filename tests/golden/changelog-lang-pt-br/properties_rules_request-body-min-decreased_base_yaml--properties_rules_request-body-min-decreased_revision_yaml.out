@@ -1,0 +1,18 @@
+4 alterações: 2 error, 0 warning, 2 info
+error	[request-parameter-property-type-specialized] em ./properties/rules/request-body-min-decreased_revision.yaml
+	em API DELETE /search
+		no parâmetro de requisição do tipo `header` e nome `created`, o `type` da propriedade `ключ` foi restringido de `string` para `object`
+
+error	[request-property-type-changed] em ./properties/rules/request-body-min-decreased_revision.yaml
+	em API PUT /search
+		o `tag/id` da propriedade de requisição `type` foi alterado de `string` para `object` (media type: application/xml)
+
+info	[api-security-component-added]
+	em components/securitySchemes
+		o esquema de segurança `api_key` foi adicionado
+
+info	[request-body-min-decreased] em ./properties/rules/request-body-min-decreased_revision.yaml
+	em API PUT /search
+		o valor mínimo do corpo da requisição foi reduzido de `0.00` para `-2.00` (media type: */*)
+
+

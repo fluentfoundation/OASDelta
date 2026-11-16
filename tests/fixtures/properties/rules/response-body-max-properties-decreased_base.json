@@ -1,0 +1,337 @@
+{
+  "components": {
+    "schemas": {
+      "Owner": {
+        "description": "---",
+        "minimum": 2,
+        "type": [
+          "integer",
+          "null"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "api_key": {
+        "in": "cookie",
+        "name": "\u003e",
+        "type": "apiKey"
+      },
+      "bearer": {
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "title": "owner",
+    "version": "1.0.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/store/order": {
+      "delete": {
+        "parameters": [
+          {
+            "description": "名前",
+            "explode": true,
+            "in": "cookie",
+            "name": "~",
+            "required": true,
+            "schema": {
+              "properties": {
+                "kind": {
+                  "default": -0,
+                  "minimum": 2,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "line1\nline2": {
+                  "description": "status",
+                  "format": "custom",
+                  "type": "boolean",
+                  "writeOnly": true
+                },
+                "trailing ": {
+                  "$ref": "#/components/schemas/Owner"
+                },
+                "名前": {
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "example": "Ünïcode",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "名前",
+                "line1\nline2",
+                "kind",
+                "trailing "
+              ],
+              "type": "object"
+            },
+            "style": "pipeDelimited"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "maxProperties": 15,
+                  "properties": {
+                    "created": {
+                      "type": "object"
+                    },
+                    "tag": {
+                      "$ref": "#/components/schemas/Owner"
+                    },
+                    "Ünïcode": {
+                      "exclusiveMaximum": 1256,
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "writeOnly": true
+                    },
+                    "ключ": {
+                      "description": "-",
+                      "format": "custom",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "tag",
+                    "ключ",
+                    "Ünïcode"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "| table |"
+          },
+          "2XX": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "enum": [
+                    0,
+                    5
+                  ],
+                  "exclusiveMinimum": -10,
+                  "multipleOf": 10,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "煈抅ᴦ"
+          }
+        }
+      }
+    },
+    "/ünïcode/ключ": {
+      "delete": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ꠈ턡䫏Үᔏ䌯㹓♚",
+            "schema": {
+              "default": 2,
+              "description": "name",
+              "type": "number"
+            }
+          },
+          {
+            "explode": false,
+            "in": "header",
+            "name": "pet",
+            "required": false,
+            "schema": {
+              "items": {
+                "description": "id",
+                "enum": [
+                  true,
+                  false
+                ],
+                "type": "boolean"
+              },
+              "type": "array"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "ключ",
+            "headers": {
+              "line1\nline2": {
+                "schema": {
+                  "description": "id",
+                  "format": "int32",
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          },
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "pet"
+      },
+      "put": {
+        "operationId": "put_ünïcode_ключ",
+        "parameters": [
+          {
+            "description": "!tag",
+            "in": "header",
+            "name": "---",
+            "schema": {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {
+                " leading": {
+                  "minimum": -7,
+                  "type": "integer"
+                },
+                "id": {
+                  "$ref": "#/components/schemas/Owner"
+                },
+                "pet": {
+                  "maximum": 623,
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "writeOnly": true
+                },
+                "ꄝ": {
+                  "description": "...",
+                  "enum": [
+                    "tag",
+                    "_under_",
+                    "status",
+                    "蜻罊"
+                  ],
+                  "minLength": 5,
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "writeOnly": true
+                }
+              },
+              "type": "object"
+            }
+          },
+          {
+            "in": "header",
+            "name": "owner",
+            "required": false,
+            "schema": {
+              "properties": {
+                "pet": {
+                  "enum": [
+                    4
+                  ],
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "x\ty": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "| table |",
+            "schema": {
+              "properties": {
+                "owner": {
+                  "$ref": "#/components/schemas/Owner"
+                },
+                "pet": {
+                  "$ref": "#/components/schemas/Owner"
+                },
+                "Ünïcode": {
+                  "enum": [
+                    "뙣刑눕얒箘",
+                    "名前",
+                    "**bold**"
+                  ],
+                  "type": "string"
+                },
+                "䑐鰎唙뎩롣᧘镲뼂": {
+                  "default": "status",
+                  "format": "email",
+                  "minLength": 1,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "owner",
+                "䑐鰎唙뎩롣᧘镲뼂"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "id"
+          }
+        },
+        "summary": "price"
+      }
+    }
+  },
+  "security": [
+    {
+      "api_key": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.example.com/v2"
+    }
+  ],
+  "tags": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "price"
+    }
+  ]
+}

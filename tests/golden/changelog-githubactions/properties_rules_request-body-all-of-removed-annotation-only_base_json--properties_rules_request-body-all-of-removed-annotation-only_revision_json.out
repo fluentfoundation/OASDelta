@@ -1,0 +1,2 @@
+::notice title=request-body-all-of-removed-annotation-only,file=./properties/rules/request-body-all-of-removed-annotation-only_revision.json::in API PATCH /store/order removed annotation-only `subschema #1` from the request body `allOf` list
+

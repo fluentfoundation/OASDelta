@@ -1,0 +1,177 @@
+# Fires response-body-media-type-item-schema-added (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            default: false
+            type: boolean
+        Item:
+            enum:
+                - true
+                - false
+            nullable: true
+            readOnly: true
+            type: boolean
+        Pet:
+            items:
+                description: created
+                minProperties: 0
+                properties:
+                    '...':
+                        deprecated: true
+                        enum:
+                            - pet
+                            - Ünïcode
+                        minLength: 5
+                        type: string
+                    name:
+                        format: custom
+                        nullable: true
+                        type: boolean
+                type: object
+            type: array
+info:
+    title: គ葏埳⩛ᾮં䲸
+    version: v1
+openapi: 3.0.3
+paths:
+    /added/kind:
+        get:
+            responses:
+                "200":
+                    description: ok
+    /pets/{petId}:
+        post:
+            operationId: post_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            anyOf:
+                                - deprecated: true
+                                  nullable: true
+                                  type: number
+                                - default: true
+                                  enum:
+                                    - true
+                                    - false
+                                  format: custom
+                                  nullable: true
+                                  type: boolean
+                    multipart/form-data:
+                        schema:
+                            format: double
+                            maximum: 938
+                            minimum: 4
+                            nullable: true
+                            type: number
+                required: false
+            responses:
+                2XX:
+                    content:
+                        text/plain:
+                            itemSchema:
+                                type: boolean
+                            schema:
+                                format: custom
+                                type: boolean
+                    description: owner
+                "200":
+                    content:
+                        '*/*':
+                            schema:
+                                items:
+                                    items:
+                                        minimum: 2
+                                        nullable: true
+                                        type: integer
+                                    type: array
+                                type: array
+                    description: '@at'
+        put:
+            deprecated: true
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: ዿ鿭鑑뱴࿇썧廆
+                  required: false
+                  schema:
+                    $ref: '#/components/schemas/Item'
+                - in: query
+                  name: '"quoted"'
+                  required: true
+                  schema:
+                    $ref: '#/components/schemas/Item'
+                - in: cookie
+                  name: kind
+                  schema:
+                    additionalProperties: true
+                    description: a/b
+                    type: object
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            items:
+                                items:
+                                    type: integer
+                                type: array
+                                uniqueItems: true
+                            type: array
+                    multipart/form-data:
+                        schema:
+                            properties:
+                                '"quoted"':
+                                    anyOf:
+                                        - description: 名前
+                                          enum:
+                                            - 䶞擤ᜇ홏엢
+                                          nullable: true
+                                          type: string
+                                        - nullable: true
+                                          readOnly: true
+                                          type: string
+                                        - deprecated: true
+                                          description: id
+                                          format: double
+                                          type: number
+                            type: object
+            responses:
+                "200":
+                    content:
+                        text/plain:
+                            schema:
+                                items:
+                                    description: a~b
+                                    properties:
+                                        pet:
+                                            enum:
+                                                - Ünïcode
+                                                - kind
+                                                - '*star'
+                                                - 'a: b'
+                                            format: binary
+                                            nullable: true
+                                            readOnly: true
+                                            type: string
+                                        status:
+                                            default: true
+                                            type: boolean
+                                        tag:
+                                            $ref: '#/components/schemas/Error'
+                                    required:
+                                        - status
+                                        - tag
+                                        - pet
+                                    type: object
+                                type: array
+                    description: owner

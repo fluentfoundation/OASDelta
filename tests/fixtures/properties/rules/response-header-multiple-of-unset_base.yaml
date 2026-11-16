@@ -1,0 +1,67 @@
+# Fires response-header-multiple-of-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: pet
+            type: apiKey
+info:
+    title: 혵স侃놅礮᳈㟮䚷
+    version: v1
+openapi: 3.1.0
+paths:
+    /items/{id}.json:
+        patch:
+            operationId: patch_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            default: false
+                            description: status
+                            format: custom
+                            type:
+                                - boolean
+                                - "null"
+                required: true
+            responses:
+                2XX:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                type: object
+                    description: 名前
+                "200":
+                    description: id
+                "201":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                default: '[bracket]'
+                                format: date-time
+                                type: string
+                    description: '**bold**'
+                    headers:
+                        empty:
+                            deprecated: true
+                            schema:
+                                description: status
+                                format: int32
+                                minimum: -9
+                                type: integer
+                        Ünïcode:
+                            required: true
+                            schema:
+                                exclusiveMaximum: 1709
+                                format: double
+                                multipleOf: 7
+                                type:
+                                    - number
+                                    - "null"
+            summary: kind

@@ -1,0 +1,2 @@
+::error title=response-body-min-items-decreased,file=./properties/rules/response-body-min-items-decreased_revision.yaml,line=189,col=33::in API PATCH /v1/items the response's body minItems was decreased from `4` to `3`
+

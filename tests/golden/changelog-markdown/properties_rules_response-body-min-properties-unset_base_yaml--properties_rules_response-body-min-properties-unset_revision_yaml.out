@@ -1,0 +1,16 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /store/order
+- :warning: the response's body minProperties was unset from `1`
+- :warning: the response's body `type` changed from `object` to `string` for status `400`
+-  removed the optional property `created` from the response with the `400` status
+-  removed the optional property `empty` from the response with the `400` status
+
+
+
+
+
+

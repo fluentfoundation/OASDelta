@@ -1,0 +1,6 @@
+::error title=request-property-became-not-nullable,file=./properties/rules/request-required-property-became-write-only_revision.yaml::in API PATCH /search the request property ``tick`` became not nullable
+::notice title=request-property-became-not-enum,file=./properties/rules/request-required-property-became-write-only_revision.yaml::in API PATCH /search removed the enum constraint from the request property ``tick``
+::notice title=request-property-reactivated,file=./properties/rules/request-required-property-became-write-only_revision.yaml::in API PATCH /search request property ``tick`` reactivated
+::notice title=request-property-type-compatible,file=./properties/rules/request-required-property-became-write-only_revision.yaml,line=63,col=37::in API PATCH /search the ``tick`` request property `type` changed from `integer, null` to `string` (backward compatible)
+::notice title=request-required-property-became-write-only,file=./properties/rules/request-required-property-became-write-only_revision.yaml,line=64,col=37::in API PATCH /search the request required property ``tick`` became write-only
+

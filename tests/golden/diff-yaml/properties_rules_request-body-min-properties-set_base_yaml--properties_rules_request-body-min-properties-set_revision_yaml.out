@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            content:
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            minProps:
+                                                from: 0
+                                                to: 2
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /search
+        :   requestBody:
+                content:
+                    modified:
+                        text/plain:
+                            schema:
+                                minProps:
+                                    from: 0
+                                    to: 2
+

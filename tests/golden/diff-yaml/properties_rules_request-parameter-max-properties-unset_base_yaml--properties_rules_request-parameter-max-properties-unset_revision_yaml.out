@@ -1,0 +1,51 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "204":
+                                    description:
+                                        from: null
+                                        to: status
+                                    content:
+                                        added:
+                                            - application/json; charset=utf-8
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                cookie:
+                                    owner:
+                                        schema:
+                                            maxProps:
+                                                from: 11
+                                                to: null
+endpoints:
+    modified:
+        ?   method: GET
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "204":
+                        description:
+                            from: null
+                            to: status
+                        content:
+                            added:
+                                - application/json; charset=utf-8
+        ?   method: GET
+            path: /owners/{ownerId}/pets
+        :   parameters:
+                modified:
+                    cookie:
+                        owner:
+                            schema:
+                                maxProps:
+                                    from: 11
+                                    to: null
+

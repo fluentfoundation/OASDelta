@@ -1,0 +1,340 @@
+# Fires response-property-max-items-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: '#hash'
+    version: v1
+openapi: 3.1.0
+paths:
+    /pets:
+        delete:
+            operationId: delete_pets
+            responses:
+                2XX:
+                    content:
+                        '*/*':
+                            schema:
+                                oneOf:
+                                    - deprecated: true
+                                      type: number
+                                    - items:
+                                        description: 㩀鰓
+                                        example: '{brace}'
+                                        exclusiveMinimum: -10
+                                        minimum: 4
+                                        type: number
+                                      type: array
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    items:
+                                        enum:
+                                            - -82.125
+                                            - -63.875
+                                        minimum: 10
+                                        type: number
+                                    type: array
+                                type: array
+                                uniqueItems: true
+                    description: '[bracket]'
+                "404":
+                    description: Ünïcode
+                "500":
+                    description: price
+            tags:
+                - id
+                - owner
+    /store/order:
+        get:
+            parameters:
+                - in: cookie
+                  name: tag
+                  required: false
+                  schema:
+                    anyOf:
+                        - enum:
+                            - 74
+                            - 53
+                            - -87.125
+                          format: float
+                          minimum: -10
+                          readOnly: true
+                          type: number
+                        - const: ‮abc
+                          enum:
+                            - kind
+                            - a~b
+                            - tag
+                            - "1e3"
+                          format: uuid
+                          type: string
+                    discriminator:
+                        propertyName: name
+                - in: header
+                  name: ' leading'
+                  schema:
+                    default: false
+                    description: '[bracket]'
+                    readOnly: true
+                    type:
+                        - boolean
+                        - "null"
+            responses:
+                "204":
+                    description: '| table |'
+                    headers:
+                        '*star':
+                            schema:
+                                format: int32
+                                maximum: 524
+                                type: integer
+                default:
+                    content:
+                        application/json:
+                            schema:
+                                description: '>'
+                                enum:
+                                    - status
+                                pattern: ^[a-z]+$
+                                type: string
+                        text/plain:
+                            schema:
+                                oneOf:
+                                    - description: '''single'''
+                                      exclusiveMinimum: -1
+                                      format: int32
+                                      minimum: 4
+                                      type:
+                                        - integer
+                                        - "null"
+                                    - properties:
+                                        Ünïcode:
+                                            enum:
+                                                - true
+                                                - false
+                                            type: boolean
+                                        ключ:
+                                            enum:
+                                                - -83.875
+                                                - 9007199254740993
+                                            format: double
+                                            maximum: 218
+                                            multipleOf: 5
+                                            type: number
+                                        摍猓浽륬:
+                                            description: '#hash'
+                                            type:
+                                                - integer
+                                                - "null"
+                                        긝ꜹ똉꩑㧓崛焕䘧:
+                                            minimum: 10
+                                            readOnly: true
+                                            type: number
+                                      required:
+                                        - 摍猓浽륬
+                                        - ключ
+                                      type: object
+                    description: ' leading'
+        put:
+            parameters:
+                - in: query
+                  name: "\a"
+                  required: false
+                  schema:
+                    properties:
+                        名前:
+                            type:
+                                - boolean
+                                - "null"
+                    required:
+                        - 名前
+                    type: object
+                - in: header
+                  name: owner
+                  required: true
+                  schema:
+                    items:
+                        type:
+                            - number
+                            - "null"
+                    type: array
+                - in: header
+                  name: <b>&amp;
+                  schema:
+                    properties:
+                        '---':
+                            deprecated: true
+                            type: integer
+                            writeOnly: true
+                        '|':
+                            format: float
+                            type:
+                                - number
+                                - "null"
+                        "no":
+                            minimum: 5
+                            readOnly: true
+                            type: integer
+                        owner:
+                            default: kind
+                            readOnly: true
+                            type:
+                                - string
+                                - "null"
+                    type: object
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            enum:
+                                - 97.75
+                                - 59
+                            format: double
+                            type:
+                                - number
+                                - "null"
+            responses:
+                "204":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                multipleOf: 5
+                                type:
+                                    - number
+                                    - "null"
+                        text/plain:
+                            schema:
+                                deprecated: true
+                                properties:
+                                    tag:
+                                        minProperties: 2
+                                        properties:
+                                            created:
+                                                format: int32
+                                                type:
+                                                    - integer
+                                                    - "null"
+                                            id:
+                                                enum:
+                                                    - 38
+                                                exclusiveMinimum: -3
+                                                format: float
+                                                multipleOf: 10
+                                                type: number
+                                            tag:
+                                                enum:
+                                                    - true
+                                                    - false
+                                                type: boolean
+                                        required:
+                                            - tag
+                                            - id
+                                        type: object
+                                required:
+                                    - tag
+                                type: object
+                    description: 名前
+                default:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    items:
+                                        exclusiveMaximum: 1839
+                                        type:
+                                            - number
+                                            - "null"
+                                        writeOnly: true
+                                    maxItems: 30
+                                    type: array
+                                type: array
+                        application/vnd.api+json:
+                            schema:
+                                enum:
+                                    - true
+                                    - false
+                                type:
+                                    - boolean
+                                    - "null"
+                    description: created
+    /v1/items:
+        patch:
+            description: id
+            responses:
+                "200":
+                    description: "x\ty"
+                    headers:
+                        '`tick`':
+                            required: false
+                            schema:
+                                default: 56
+                                description: owner
+                                format: float
+                                type:
+                                    - number
+                                    - "null"
+                "201":
+                    content:
+                        text/plain:
+                            schema:
+                                maximum: 922
+                                type:
+                                    - integer
+                                    - "null"
+                    description: name
+                "404":
+                    content:
+                        '*/*':
+                            schema:
+                                minProperties: 0
+                                properties:
+                                    name:
+                                        items:
+                                            format: custom
+                                            type: boolean
+                                        type: array
+                                    price:
+                                        default: 䲑霳
+                                        format: date-time
+                                        maxLength: 89
+                                        minLength: 0
+                                        type:
+                                            - string
+                                            - "null"
+                                    Ünïcode:
+                                        additionalProperties: false
+                                        description: "yes"
+                                        properties:
+                                            '!tag':
+                                                default: 20
+                                                description: status
+                                                enum:
+                                                    - 18
+                                                format: int64
+                                                type:
+                                                    - integer
+                                                    - "null"
+                                            owner:
+                                                readOnly: true
+                                                type: number
+                                        required:
+                                            - owner
+                                            - '!tag'
+                                        type: object
+                                required:
+                                    - Ünïcode
+                                type: object
+                        text/plain:
+                            schema:
+                                properties:
+                                    tag:
+                                        additionalProperties: true
+                                        type: object
+                                required:
+                                    - tag
+                                type: object
+                    description: status
+            summary: '>'

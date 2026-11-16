@@ -1,0 +1,181 @@
+# Fires response-header-exclusive-max-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            description: name
+            maxProperties: 9
+            properties:
+                pet:
+                    type:
+                        - integer
+                        - "null"
+                tag:
+                    type:
+                        - number
+                        - "null"
+                名前:
+                    format: float
+                    type: number
+                췚䛯:
+                    description: pet
+                    example: "null"
+                    type:
+                        - boolean
+                        - "null"
+            required:
+                - 名前
+                - pet
+                - 췚䛯
+            type: object
+        Item:
+            description: id
+            enum:
+                - true
+                - false
+            format: custom
+            type:
+                - boolean
+                - "null"
+    securitySchemes:
+        bearer:
+            scheme: bearer
+            type: http
+        oauth:
+            flows:
+                authorizationCode:
+                    authorizationUrl: https://auth.example.com/authorize
+                    scopes:
+                        admin: admin access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: owner
+    version: v1
+openapi: 3.1.0
+paths:
+    /pets:
+        delete:
+            operationId: delete_pets
+            parameters:
+                - in: cookie
+                  name: 'trailing '
+                  schema:
+                    additionalProperties: false
+                    maxProperties: 18
+                    properties:
+                        owner:
+                            default: false
+                            type:
+                                - boolean
+                                - "null"
+                        pet:
+                            $ref: '#/components/schemas/Error'
+                        tag:
+                            format: password
+                            type:
+                                - string
+                                - "null"
+                    required:
+                        - tag
+                        - owner
+                    type: object
+                - deprecated: true
+                  in: query
+                  name: 魼檼䩎쭌굌䘁
+                  schema:
+                    items:
+                        $ref: '#/components/schemas/Item'
+                    minItems: 2
+                    type: array
+            responses:
+                "201":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                enum:
+                                    - 91
+                                    - 92
+                                    - 9007199254740993
+                                type:
+                                    - number
+                                    - "null"
+                    description: tag
+                "204":
+                    description: '@at'
+                    headers:
+                        '@at':
+                            required: true
+                            schema:
+                                type: number
+                        kind:
+                            schema:
+                                exclusiveMaximum: 1394
+                                type: number
+            summary: '{brace}'
+            tags:
+                - pet
+        post:
+            operationId: post_pets
+            parameters:
+                - in: header
+                  name: '-'
+                  schema:
+                    anyOf:
+                        - maximum: 262
+                          minimum: 2
+                          type: number
+                        - $ref: '#/components/schemas/Error'
+                        - deprecated: true
+                          format: custom
+                          type:
+                            - boolean
+                            - "null"
+                - deprecated: true
+                  explode: true
+                  in: header
+                  name: price
+                  required: true
+                  schema:
+                    items:
+                        description: 名前
+                        format: password
+                        type: string
+                        writeOnly: true
+                    type: array
+                  style: spaceDelimited
+                - explode: true
+                  in: cookie
+                  name: created
+                  schema:
+                    oneOf:
+                        - minimum: 6
+                          multipleOf: 10
+                          type:
+                            - integer
+                            - "null"
+                        - example: 名前
+                          format: float
+                          type:
+                            - number
+                            - "null"
+                        - description: 'trailing '
+                          example: '*star'
+                          type: number
+            responses:
+                "200":
+                    content:
+                        '*/*':
+                            schema:
+                                maximum: 922
+                                type: integer
+                    description: price
+            summary: kind
+            tags:
+                - tag
+                - created

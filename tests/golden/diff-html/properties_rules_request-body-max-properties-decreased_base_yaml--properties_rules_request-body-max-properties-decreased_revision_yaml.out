@@ -1,0 +1,33 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PUT /search</p>
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-sunset</li>
+</ul>
+</li>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>New media type: application/vnd.api+json</li>
+<li>Modified media type: <em>/</em>
+<ul>
+<li>Schema changed
+<ul>
+<li>MaxProps changed from 12 to 11</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

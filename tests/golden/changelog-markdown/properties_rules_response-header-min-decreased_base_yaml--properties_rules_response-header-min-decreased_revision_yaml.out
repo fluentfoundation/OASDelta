@@ -1,0 +1,22 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /items/{id}.json
+- :warning: the `>` response header's min was decreased from `4.00` to `2.00` for the status `200`
+
+
+### PUT /items/{id}.json
+- :warning: deleted the `header` request parameter `owner`
+-  the `_under_/items/` response's property `format` was narrowed from `none` to `byte` for status `201`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

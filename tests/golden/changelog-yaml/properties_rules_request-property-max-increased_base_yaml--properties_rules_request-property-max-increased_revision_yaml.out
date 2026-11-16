@@ -1,0 +1,43 @@
+- id: request-parameter-removed
+  text: deleted the `cookie` request parameter `pet`
+  comment: This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+  level: 2
+  operation: POST
+  path: /pets/{petId}
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-property-max-increased_base.yaml
+    line: 152
+    column: 19
+    endLine: 158
+    endColumn: 39
+  fingerprint: e376ccf71ed6
+- id: new-optional-request-default-parameter-to-existing-path
+  text: added the new optional `query` request parameter `pet` to all path's operations
+  level: 1
+  operation: PUT
+  path: /pets
+  section: paths
+  revisionSource:
+    file: ./properties/rules/request-property-max-increased_revision.yaml
+    line: 32
+    column: 15
+    endLine: 35
+    endColumn: 29
+  fingerprint: e15476db5dee
+- id: request-property-max-increased
+  text: 'the `anyOf[subschema #1]/oneOf[subschema #3]/` request property''s max was increased from `596.00` to `597.00`'
+  level: 1
+  operation: POST
+  path: /pets/{petId}
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-property-max-increased_base.yaml
+    line: 193
+    column: 39
+  revisionSource:
+    file: ./properties/rules/request-property-max-increased_revision.yaml
+    line: 194
+    column: 39
+  fingerprint: 36f8bf1c321a
+

@@ -1,0 +1,52 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                added:
+                    - POST
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    PATCH:
+                        extensions:
+                            deleted:
+                                - x-sunset
+                        requestBody:
+                            content:
+                                modified:
+                                    '*/*':
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    tag:
+                                                        properties:
+                                                            modified:
+                                                                tag:
+                                                                    enum:
+                                                                        added:
+                                                                            - 1
+endpoints:
+    added:
+        - method: POST
+          path: /pets/{petId}
+    modified:
+        ?   method: PATCH
+            path: /ünïcode/ключ
+        :   extensions:
+                deleted:
+                    - x-sunset
+            requestBody:
+                content:
+                    modified:
+                        '*/*':
+                            schema:
+                                properties:
+                                    modified:
+                                        tag:
+                                            properties:
+                                                modified:
+                                                    tag:
+                                                        enum:
+                                                            added:
+                                                                - 1
+

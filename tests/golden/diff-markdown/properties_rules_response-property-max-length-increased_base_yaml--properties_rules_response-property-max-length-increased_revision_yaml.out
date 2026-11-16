@@ -1,0 +1,36 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /ünïcode/ключ
+- Modified query param: owner
+  - Schema changed
+    - Property 'AnyOf' changed
+      - Modified schema: subschema #3
+        - Properties changed
+          - Modified property: *star
+            - MaxLength changed from 3 to 107
+          - Modified property: id
+            - Property 'Not' changed
+              - Schema deleted
+- Responses changed
+  - Modified response: default
+    - Content changed
+      - Modified media type: */*
+        - Schema changed
+      - Modified media type: application/json; charset=utf-8
+        - Schema changed
+          - Property 'AnyOf' changed
+            - Modified schema: subschema #3
+              - Properties changed
+                - Modified property: *star
+                  - MaxLength changed from 3 to 107
+                - Modified property: id
+                  - Property 'Not' changed
+                    - Schema deleted
+
+

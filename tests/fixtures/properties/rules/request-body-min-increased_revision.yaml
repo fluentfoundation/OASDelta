@@ -1,0 +1,227 @@
+# Fires request-body-min-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            default: 38
+            deprecated: true
+            maximum: 117
+            minimum: 2
+            type: number
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: ключ
+    version: v1
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        delete:
+            description: owner
+            operationId: delete_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - description: price
+                  in: cookie
+                  name: pet
+                  schema:
+                    default: true
+                    nullable: true
+                    type: boolean
+            responses:
+                2XX:
+                    description: _under_
+                    headers:
+                        '`tick`':
+                            schema:
+                                type: integer
+                        Ünïcode:
+                            deprecated: true
+                            schema:
+                                enum:
+                                    - 2
+                                    - 6
+                                    - 5
+                                    - 8
+                                format: int32
+                                nullable: true
+                                type: integer
+                "204":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                deprecated: true
+                                enum:
+                                    - true
+                                    - false
+                                format: custom
+                                type: boolean
+                        application/vnd.api+json:
+                            schema:
+                                enum:
+                                    - price
+                                    - pet
+                                example: Ünïcode
+                                nullable: true
+                                type: string
+                    description: ключ
+            tags:
+                - created
+        get:
+            description: price
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    description: owner
+            summary: "1e3"
+            tags:
+                - kind
+        put:
+            operationId: put_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            default: 83
+                            format: float
+                            maximum: 678
+                            nullable: true
+                            type: number
+                    application/xml:
+                        schema:
+                            default: -0
+                            description: "x\ty"
+                            format: int32
+                            minimum: 10
+                            nullable: true
+                            type: integer
+                            writeOnly: true
+                required: false
+            responses:
+                "200":
+                    description: 名前
+            security: []
+    /pets/{petId}:
+        post:
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: "1e3"
+                  schema:
+                    nullable: true
+                    type: string
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            items:
+                                items:
+                                    nullable: true
+                                    type: number
+                                maxItems: 67
+                                type: array
+                            type: array
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/Item'
+            responses:
+                2XX:
+                    description: tag
+                    headers:
+                        Ünïcode:
+                            required: true
+                            schema:
+                                format: date-time
+                                maxLength: 226
+                                type: string
+                        名前:
+                            schema:
+                                default: id
+                                description: ключ
+                                format: uuid
+                                maxLength: 149
+                                type: string
+        put:
+            operationId: put_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: created
+                  required: true
+                  schema:
+                    description: "~"
+                    type: string
+                    writeOnly: true
+                - in: cookie
+                  name: 皤㭾䦤ช찘
+                  required: true
+                  schema:
+                    anyOf:
+                        - minimum: 5
+                          type: number
+                        - default: 83
+                          format: int64
+                          type: integer
+                        - default: 92
+                          enum:
+                            - 18
+                            - 3
+                            - 7
+                          readOnly: true
+                          type: integer
+                - in: cookie
+                  name: '&anchor'
+                  required: true
+                  schema:
+                    items:
+                        $ref: '#/components/schemas/Item'
+                    type: array
+                    uniqueItems: true
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            enum:
+                                - price
+                                - created
+                                - '%20'
+                                - ключ
+                            format: date-time
+                            nullable: true
+                            pattern: '[^\n]'
+                            type: string
+                    application/xml:
+                        schema:
+                            type: object
+                required: false
+            responses:
+                "200":
+                    description: '...'
+                "404":
+                    description: owner
+                "500":
+                    description: created

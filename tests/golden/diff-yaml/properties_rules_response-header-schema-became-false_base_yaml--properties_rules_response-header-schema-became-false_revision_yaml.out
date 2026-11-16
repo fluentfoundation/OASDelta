@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "204":
+                                    headers:
+                                        modified:
+                                            ' leading':
+                                                schema:
+                                                    type:
+                                                        deleted:
+                                                            - "null"
+                                                            - number
+                                                    default:
+                                                        from: -90.875
+                                                        to: null
+                                                    always:
+                                                        from: null
+                                                        to: false
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   responses:
+                modified:
+                    "204":
+                        headers:
+                            modified:
+                                ' leading':
+                                    schema:
+                                        type:
+                                            deleted:
+                                                - "null"
+                                                - number
+                                        default:
+                                            from: -90.875
+                                            to: null
+                                        always:
+                                            from: null
+                                            to: false
+

@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[response-property-min-items-increased] en ./properties/rules/response-body-min-items-increased_revision.yaml
+	en API POST /search
+		el valor minItems de la propiedad de respuesta `名前` fue incrementado de `1` a `4` para el estado `200`
+
+info	[response-body-min-items-increased] en ./properties/rules/response-body-min-items-increased_revision.yaml
+	en API PUT /search
+		el valor minItems del cuerpo de respuesta fue incrementado de `1` a `4`
+
+

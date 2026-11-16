@@ -1,0 +1,10 @@
+2 alterações: 0 error, 0 warning, 2 info
+info	[response-media-type-added] em ./properties/rules/request-parameter-max-properties-unset_revision.yaml
+	em API GET /items/{id}.json
+		o tipo de mídia `application/json; charset=utf-8` foi adicionado à resposta com o status `204`
+
+info	[request-parameter-max-properties-unset] em ./properties/rules/request-parameter-max-properties-unset_revision.yaml
+	em API GET /owners/{ownerId}/pets
+		no parâmetro de requisição do tipo `cookie` e nome `owner`, o valor maxProperties foi removido de `11`
+
+

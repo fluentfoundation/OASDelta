@@ -1,0 +1,21 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /owners/{ownerId}/pets
+-  the response's body max was decreased from `244.00` to `241.00`
+
+
+### PUT /owners/{ownerId}/pets
+- :warning: removed the media type `application/json` for the response with the status `default`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

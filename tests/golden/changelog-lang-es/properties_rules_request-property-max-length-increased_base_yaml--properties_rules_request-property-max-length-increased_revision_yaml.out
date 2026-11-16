@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-property-max-length-increased] en ./properties/rules/request-property-max-length-increased_revision.yaml
+	en API POST /store/order
+		la longitud máxima de la propiedad de solicitud `---/pet` fue aumentada de `48` a `51`
+
+

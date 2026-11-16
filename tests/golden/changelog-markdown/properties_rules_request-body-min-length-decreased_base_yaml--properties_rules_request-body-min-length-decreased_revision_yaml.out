@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /pets
+-  the request's body minLength was decreased from `3` to `2`
+-  the response header `kind` was added for the status `404`
+
+
+
+
+
+

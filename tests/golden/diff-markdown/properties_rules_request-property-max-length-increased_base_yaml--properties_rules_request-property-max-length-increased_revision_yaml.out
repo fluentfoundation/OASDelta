@@ -1,0 +1,27 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /store/order
+- Modified query param: owner
+  - Schema changed
+    - Properties changed
+      - Modified property: _under_
+        - Properties changed
+          - Modified property: pet
+            - MaxLength changed from 48 to 51
+- Request body changed
+  - Content changed
+    - Modified media type: application/vnd.api+json
+      - Schema changed
+        - Properties changed
+          - Modified property: ---
+            - Properties changed
+              - Modified property: pet
+                - MaxLength changed from 48 to 51
+
+

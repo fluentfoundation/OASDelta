@@ -1,0 +1,18 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /v1/items
+- Request body changed
+  - Content changed
+    - Modified media type: */*
+      - Schema changed
+        - Properties changed
+          - Modified property: 'single'
+            - MultipleOf changed from 8 to null
+
+

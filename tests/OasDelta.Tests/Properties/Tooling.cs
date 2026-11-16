@@ -285,6 +285,32 @@ internal static partial class Support
         return sb.ToString();
     }
 
+    /// <summary>Whether a discriminator mapping of the document is a local JSON pointer ("#/...") to nothing.</summary>
+    public static bool HasDanglingMapping(Map doc)
+    {
+        bool Resolves(string pointer)
+        {
+            object? cur = doc;
+            foreach (var raw in pointer[2..].Split('/'))
+            {
+                var token = Uri.UnescapeDataString(raw).Replace("~1", "/", StringComparison.Ordinal).Replace("~0", "~", StringComparison.Ordinal);
+                if (cur is Map m && m.TryGetValue(token, out var next)) cur = next;
+                else if (cur is List<object?> l && int.TryParse(token, System.Globalization.CultureInfo.InvariantCulture, out var i) && i >= 0 && i < l.Count) cur = l[i];
+                else return false;
+            }
+            return true;
+        }
+        bool Walk(object? node) => node switch
+        {
+            Map m when m.GetValueOrDefault("discriminator") is Map d && d.GetValueOrDefault("mapping") is Map mapping
+                && mapping.Values.OfType<string>().Any(v => v.StartsWith("#/", StringComparison.Ordinal) && !Resolves(v)) => true,
+            Map m => m.Values.Any(Walk),
+            List<object?> l => l.Any(Walk),
+            _ => false,
+        };
+        return Walk(doc);
+    }
+
     public static string Clip(string s, int max = 1500) => s.Length <= max ? s : s[..max] + $"\n... ({s.Length - max} more characters)";
 
     /// <summary>Rule ids in a changelog/breaking JSON array.</summary>

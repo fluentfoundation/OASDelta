@@ -1,0 +1,2 @@
+::error title=request-body-multiple-of-set,file=./properties/rules/request-body-multiple-of-set_revision.yaml,line=125,col=29::in API PATCH /search the request's body multipleOf was set to `7.00`
+

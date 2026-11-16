@@ -1,0 +1,17 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /owners/{ownerId}/pets
+-  removed the item schema from the media type `application/xml` of the request body
+
+
+
+
+## Components
+-  the component security scheme `oauth` was added
+
+
+
+

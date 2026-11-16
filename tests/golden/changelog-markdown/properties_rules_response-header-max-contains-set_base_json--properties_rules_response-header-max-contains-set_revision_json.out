@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /pets/{petId}
+-  the `妏` response header's maxContains was set to `1` for the status `404`
+
+
+
+
+
+

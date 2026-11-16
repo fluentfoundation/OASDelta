@@ -1,0 +1,2 @@
+::notice title=response-property-max-length-decreased,file=./properties/rules/response-property-max-length-decreased_revision.yaml,line=136,col=45::in API GET /pets the `items/ ` response property's maxLength was decreased from `77` to `76` for the response status `2XX`
+

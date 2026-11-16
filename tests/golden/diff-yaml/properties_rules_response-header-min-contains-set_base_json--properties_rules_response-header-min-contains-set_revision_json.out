@@ -1,0 +1,35 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "204":
+                                    headers:
+                                        modified:
+                                            a/b:
+                                                schema:
+                                                    contains:
+                                                        schemaAdded: true
+                                                    minContains:
+                                                        from: null
+                                                        to: 0
+endpoints:
+    modified:
+        ?   method: POST
+            path: /search
+        :   responses:
+                modified:
+                    "204":
+                        headers:
+                            modified:
+                                a/b:
+                                    schema:
+                                        contains:
+                                            schemaAdded: true
+                                        minContains:
+                                            from: null
+                                            to: 0
+

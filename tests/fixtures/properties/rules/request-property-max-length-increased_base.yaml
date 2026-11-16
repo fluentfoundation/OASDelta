@@ -1,0 +1,123 @@
+# Fires request-property-max-length-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            additionalProperties: false
+            properties:
+                '---':
+                    $ref: '#/components/schemas/Pet'
+            type: object
+        Owner:
+            maxProperties: 19
+            properties:
+                '>':
+                    description: owner
+                    type:
+                        - string
+                        - "null"
+                'a: b':
+                    type:
+                        - boolean
+                        - "null"
+                price:
+                    type: object
+            type: object
+        Pet:
+            additionalProperties:
+                type: string
+            maxProperties: 13
+            properties:
+                ? |-
+                    line1
+                    line2
+                :   oneOf:
+                        - type:
+                            - integer
+                            - "null"
+                        - type: number
+                        - type: string
+                pet:
+                    description: 㢙ꟽ
+                    format: email
+                    maxLength: 48
+                    minLength: 3
+                    type: string
+            required:
+                - pet
+                - |-
+                  line1
+                  line2
+            type: object
+info:
+    title: status
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /store/order:
+        post:
+            deprecated: true
+            description: owner
+            parameters:
+                - description: price
+                  in: query
+                  name: owner
+                  schema:
+                    deprecated: true
+                    description: '[bracket]'
+                    properties:
+                        _under_:
+                            $ref: '#/components/schemas/Pet'
+                    type: object
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            $ref: '#/components/schemas/Item'
+                    multipart/form-data:
+                        schema:
+                            description: '`tick`'
+                            format: custom
+                            type:
+                                - boolean
+                                - "null"
+                required: true
+            responses:
+                "201":
+                    description: Ünïcode
+                    headers:
+                        tag:
+                            schema:
+                                format: int64
+                                type:
+                                    - integer
+                                    - "null"
+                "500":
+                    content:
+                        application/xml:
+                            schema:
+                                format: float
+                                minimum: 8
+                                type: number
+                        text/plain:
+                            schema:
+                                default: 9
+                                maximum: 238
+                                type:
+                                    - integer
+                                    - "null"
+                    description: pet
+                    headers:
+                        kind:
+                            schema:
+                                description: name
+                                type:
+                                    - boolean
+                                    - "null"
+                        name:
+                            schema:
+                                default: 79
+                                minimum: -3
+                                type: integer
+            tags:
+                - pet
+                - status

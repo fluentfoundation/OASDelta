@@ -1,0 +1,12 @@
+- id: response-property-max-properties-unset
+  text: 'the `pet/allOf[subschema #1]/` response property''s maxProperties was unset from `13` for the response status `201`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: PUT
+  operationId: put_pets
+  path: /pets
+  section: paths
+  fingerprint: 0991e2459b10
+

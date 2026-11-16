@@ -1,0 +1,17 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /ünïcode/ключ
+- :warning: the `name` response property's exclusiveMaximum was unset from `28.00` for the response status `200`
+
+
+### POST /ünïcode/ключ
+-  the `ключ/name` request property's exclusiveMaximum was unset from `28.00`
+
+
+
+
+
+

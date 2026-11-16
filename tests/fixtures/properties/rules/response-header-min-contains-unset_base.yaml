@@ -1,0 +1,167 @@
+# Fires response-header-min-contains-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            maxProperties: 7
+            properties:
+                created:
+                    description: '@at'
+                    properties:
+                        ' leading':
+                            $ref: '#/components/schemas/Error'
+                        tag:
+                            deprecated: true
+                            type:
+                                - integer
+                                - "null"
+                        ключ:
+                            default: 42
+                            deprecated: true
+                            description: "no"
+                            example: id
+                            multipleOf: 2
+                            type:
+                                - number
+                                - "null"
+                    required:
+                        - tag
+                    type: object
+                kind:
+                    type: boolean
+                name:
+                    description: status
+                    type:
+                        - integer
+                        - "null"
+            required:
+                - created
+                - kind
+                - name
+            type: object
+        Owner:
+            properties:
+                name:
+                    items:
+                        const: kind
+                        default: Ünïcode
+                        format: date-time
+                        maxLength: 192
+                        type:
+                            - string
+                            - "null"
+                    type: array
+                ключ:
+                    items:
+                        format: double
+                        type: number
+                        writeOnly: true
+                    type: array
+                鯅빙갏黤蕂㭠۞牭:
+                    description: id
+                    type: boolean
+            required:
+                - ключ
+                - name
+            type: object
+        Pet:
+            default: status
+            type: string
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: kind
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /search:
+        patch:
+            operationId: patch_search
+            parameters:
+                - description: kind
+                  in: cookie
+                  name: ключ
+                  required: true
+                  schema:
+                    default: 26
+                    minimum: -6
+                    readOnly: true
+                    type:
+                        - integer
+                        - "null"
+                  style: deepObject
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            items:
+                                $ref: '#/components/schemas/Error'
+                            type: array
+            responses:
+                "204":
+                    description: '---'
+                "400":
+                    description: price
+                    headers:
+                        '*star':
+                            schema:
+                                type:
+                                    - string
+                                    - "null"
+                        name:
+                            deprecated: true
+                            required: true
+                            schema:
+                                contains:
+                                    type: number
+                                minContains: 3
+                                type: boolean
+    /v1/items:
+        patch:
+            operationId: patch_v1_items
+            responses:
+                2XX:
+                    content:
+                        text/plain:
+                            schema:
+                                description: '"quoted"'
+                                type: boolean
+                    description: created
+                "200":
+                    description: 듞㷺챋ꦪꐏ
+                    headers:
+                        name:
+                            schema:
+                                type: number
+                        ключ:
+                            required: true
+                            schema:
+                                default: 名前
+                                enum:
+                                    - 瀲⺐粔쒗⸸
+                                    - created
+                                type:
+                                    - string
+                                    - "null"
+                "400":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                enum:
+                                    - 0
+                                type:
+                                    - integer
+                                    - "null"
+                        application/vnd.api+json:
+                            schema:
+                                format: float
+                                type:
+                                    - number
+                                    - "null"
+                    description: "\U0001F600"
+            summary: '{brace}'
+security:
+    - openid: []
+servers:
+    - url: https://api.example.com/v2

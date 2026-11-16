@@ -1,0 +1,54 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        deleted:
+                                            - application/xml
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/xml:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    㸢:
+                                                        writeOnly:
+                                                            from: true
+                                                            to: false
+                                        example:
+                                            from: null
+                                            to: 名前
+endpoints:
+    modified:
+        ?   method: GET
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            deleted:
+                                - application/xml
+        ?   method: POST
+            path: /items/{id}.json
+        :   requestBody:
+                content:
+                    modified:
+                        application/xml:
+                            schema:
+                                properties:
+                                    modified:
+                                        㸢:
+                                            writeOnly:
+                                                from: true
+                                                to: false
+                            example:
+                                from: null
+                                to: 名前
+

@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[sunset-deleted] в ./properties/rules/sunset-deleted_revision.yaml
+	в API PATCH /ünïcode/ключ
+		удалена дата sunset date у API, но сохранён deprecated=true
+
+info	[endpoint-added] в ./properties/rules/sunset-deleted_revision.yaml
+	в API POST /pets/{petId}
+		эндпоинт добавлен
+
+info	[request-property-enum-value-added] в ./properties/rules/sunset-deleted_revision.yaml
+	в API PATCH /ünïcode/ключ
+		добавлено enum значение `1.00` у поля запроса `tag/tag`
+
+

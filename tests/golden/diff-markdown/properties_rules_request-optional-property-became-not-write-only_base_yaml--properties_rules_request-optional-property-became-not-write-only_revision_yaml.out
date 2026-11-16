@@ -1,0 +1,25 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /items/{id}.json
+- Responses changed
+  - Modified response: 204
+    - Content changed
+      - Deleted media type: application/xml
+
+POST /items/{id}.json
+- Request body changed
+  - Content changed
+    - Modified media type: application/xml
+      - Schema changed
+        - Properties changed
+          - Modified property: 㸢
+            - WriteOnly changed from true to false
+      - Example changed from null to '名前'
+
+

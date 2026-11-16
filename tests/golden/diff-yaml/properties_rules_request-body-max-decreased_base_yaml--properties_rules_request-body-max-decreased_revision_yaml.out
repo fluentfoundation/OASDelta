@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            max:
+                                                from: 118
+                                                to: 115
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items/{id}.json
+        :   requestBody:
+                content:
+                    modified:
+                        text/plain:
+                            schema:
+                                max:
+                                    from: 118
+                                    to: 115
+

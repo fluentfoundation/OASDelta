@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /store/order
+-  the `---/pet` request property's maxLength was increased from `48` to `51`
+
+
+
+
+
+

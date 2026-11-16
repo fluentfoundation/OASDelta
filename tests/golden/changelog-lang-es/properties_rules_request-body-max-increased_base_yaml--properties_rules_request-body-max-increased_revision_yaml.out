@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-body-max-increased] en ./properties/rules/request-body-max-increased_revision.yaml
+	en API POST /v1/items
+		el valor máximo del cuerpo de solicitud fue aumentado de `92.00` a `95.00`
+
+

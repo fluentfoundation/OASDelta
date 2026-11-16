@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./properties/rules/response-body-multiple-of-changed_revision.yaml, in API DELETE /store/order the response's body multipleOf was changed from `10.00` to `5.00` [response-body-multiple-of-changed]. 
+
+info at ./properties/rules/response-body-multiple-of-changed_revision.yaml, in API GET /store/order endpoint added [endpoint-added]. 
+
+

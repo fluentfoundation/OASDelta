@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[response-property-max-properties-increased] в ./properties/rules/response-property-max-properties-increased_revision.yaml
+	в API POST /v1/items
+		значение maxProperties у поля ответа `created` увеличено с `11` до `12` для ответа со статусом `404`
+
+

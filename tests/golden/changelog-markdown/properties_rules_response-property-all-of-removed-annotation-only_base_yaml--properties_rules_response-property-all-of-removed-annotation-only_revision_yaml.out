@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /store/order
+-  removed annotation-only `subschema #1` from the `items/` response property `allOf` list for the response status `201`
+
+
+
+
+
+

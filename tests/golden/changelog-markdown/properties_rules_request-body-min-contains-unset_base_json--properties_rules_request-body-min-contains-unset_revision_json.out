@@ -1,0 +1,14 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /v1/items
+-  removed 'contains' constraint from the request body
+-  the request's body minContains was unset from `2`
+
+
+
+
+
+

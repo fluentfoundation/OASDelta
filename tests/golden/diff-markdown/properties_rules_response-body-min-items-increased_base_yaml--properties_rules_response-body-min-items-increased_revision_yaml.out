@@ -1,0 +1,27 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+POST /search
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/xml
+        - Schema changed
+          - Properties changed
+            - Modified property: 名前
+              - MinItems changed from 1 to 4
+
+PUT /search
+- Responses changed
+  - Modified response: default
+    - Content changed
+      - Modified media type: multipart/form-data
+        - Schema changed
+          - MinItems changed from 1 to 4
+
+

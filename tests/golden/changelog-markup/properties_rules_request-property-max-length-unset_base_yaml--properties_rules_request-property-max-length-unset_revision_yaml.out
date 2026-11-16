@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /items/{id}.json
+-  the `items/null` request property's maxLength was unset from `9`
+
+
+
+
+
+

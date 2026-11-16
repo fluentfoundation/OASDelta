@@ -1,0 +1,16 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /items/{id}.json
+- Modified cookie param: name
+  - Schema changed
+    - Items changed
+      - Type changed from 'string' to ''
+      - Description changed from 'kind' to ''
+
+

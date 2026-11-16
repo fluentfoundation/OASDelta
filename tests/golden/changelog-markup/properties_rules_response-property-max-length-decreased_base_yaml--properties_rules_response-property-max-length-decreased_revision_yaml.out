@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /pets
+-  the `items/ ` response property's maxLength was decreased from `77` to `76` for the response status `2XX`
+
+
+
+
+
+

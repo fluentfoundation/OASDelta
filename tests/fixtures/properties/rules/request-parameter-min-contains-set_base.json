@@ -1,0 +1,112 @@
+{
+  "info": {
+    "title": "C:\\path",
+    "version": "v1"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/items/{id}.json": {
+      "delete": {
+        "operationId": "delete_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "exclusiveMinimum": -3,
+                  "type": "integer"
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "items": {
+                    "description": "price",
+                    "enum": [
+                      19
+                    ],
+                    "exclusiveMaximum": 1275,
+                    "exclusiveMinimum": -7,
+                    "format": "int32",
+                    "maximum": 992,
+                    "type": "integer"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "name"
+          }
+        }
+      },
+      "post": {
+        "description": "price",
+        "operationId": "post_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "pet",
+            "in": "query",
+            "name": "名前",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "in": "header",
+            "name": "~",
+            "schema": {
+              "default": -9223372036854775808,
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/xml": {
+              "schema": {
+                "const": "kind",
+                "deprecated": true,
+                "enum": [
+                  "price",
+                  "~"
+                ],
+                "minLength": 3,
+                "type": "string",
+                "writeOnly": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "2XX": {
+            "description": "嚅"
+          }
+        },
+        "x-stability-level": "beta"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "created"
+    }
+  ]
+}

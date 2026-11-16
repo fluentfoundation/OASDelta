@@ -1,0 +1,18 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /search
+-  for the `cookie` request parameter `id`, the `type` was widened from `array<integer/int64>` to `any`
+
+
+
+
+## Components
+- :warning: the component security scheme `oauth` oauth `authorizationCode` flow token url changed from `https://auth.example.com/token` to `https://auth0.example.com/tokenUrl`
+- :warning: the component security scheme `oauth` oauth `clientCredentials` flow token url changed from `https://auth.example.com/token` to `https://auth0.example.com/tokenUrl`
+
+
+
+

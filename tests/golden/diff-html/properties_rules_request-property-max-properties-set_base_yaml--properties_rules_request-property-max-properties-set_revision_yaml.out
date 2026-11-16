@@ -1,0 +1,33 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PUT /ünïcode/ключ</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: text/plain
+<ul>
+<li>Schema changed
+<ul>
+<li>Items changed
+<ul>
+<li>Type changed from 'string' to 'object'</li>
+<li>AdditionalProperties changed from null to true</li>
+<li>MaxProps changed from null to 7</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

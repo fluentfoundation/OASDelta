@@ -1,0 +1,3 @@
+::notice title=response-body-all-of-added,file=./properties/rules/response-body-min-increased_revision.yaml,line=48,col=39::in API PUT /items/{id}.json added `subschema #1` to the response body `allOf` list for the response status `201`
+::notice title=response-body-min-increased,file=./properties/rules/response-body-min-increased_revision.yaml,line=67,col=33::in API PUT /items/{id}.json the response's body min was increased from `-6.00` to `-3.00`
+

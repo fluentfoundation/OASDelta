@@ -1,0 +1,35 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "500":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    maxItems:
+                                                        from: 4
+                                                        to: 2
+                                                itemSchema:
+                                                    schemaAdded: true
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /search
+        :   responses:
+                modified:
+                    "500":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        maxItems:
+                                            from: 4
+                                            to: 2
+                                    itemSchema:
+                                        schemaAdded: true
+

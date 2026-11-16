@@ -1,0 +1,1 @@
+[{"id":"response-header-min-length-increased","text":"the `status` response header's minLength was increased from `2` to `5` for the status `404`","level":1,"operation":"GET","path":"/pets","section":"paths","fingerprint":"5233e5ba9280"}]

@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-header-min-items-unset] en ./properties/rules/response-header-min-items-unset_revision.yaml
+	en API DELETE /v1/items
+		el valor minItems del encabezado de respuesta `졳恂낭` fue removido de `10` para el estado `200`
+
+

@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "400":
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-8:
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - object
+                                                        deleted:
+                                                            - "null"
+                                                            - number
+                                                    multipleOf:
+                                                        from: 5
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /pets
+        :   responses:
+                modified:
+                    "400":
+                        content:
+                            modified:
+                                application/json; charset=utf-8:
+                                    schema:
+                                        type:
+                                            added:
+                                                - object
+                                            deleted:
+                                                - "null"
+                                                - number
+                                        multipleOf:
+                                            from: 5
+                                            to: null
+

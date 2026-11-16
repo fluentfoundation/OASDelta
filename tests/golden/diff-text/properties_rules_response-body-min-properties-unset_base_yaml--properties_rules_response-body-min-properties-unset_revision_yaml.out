@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /store/order
+- Responses changed
+  - Modified response: 400
+    - Content changed
+      - Modified media type: application/vnd.api+json
+        - Schema changed
+          - Extensions changed
+            - Deleted extension: x-extensible-enum
+          - Type changed from 'object' to 'string'
+          - MinProps changed from 1 to 0
+          - Properties changed
+            - Deleted property: created
+            - Deleted property: empty
+
+

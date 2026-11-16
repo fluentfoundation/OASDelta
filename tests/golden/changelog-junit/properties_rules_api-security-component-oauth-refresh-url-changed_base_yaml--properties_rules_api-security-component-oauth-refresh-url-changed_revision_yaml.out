@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body `type` changed from `array<array<string/date-time>>` to `boolean`</failure>
+    </testcase>
+    <testcase name="api-security-component-oauth-refresh-url-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `oauth` oauth `clientCredentials` flow refresh url changed from `https://auth.example.com/refresh` to ``</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

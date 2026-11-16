@@ -1,0 +1,11 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[api-security-component-api-key-name-changed]
+	в components/securitySchemes
+		имя API-ключа компонента схемы безопасности `api_key` было изменено с `trailing ` на `id`
+
+info	[response-property-max-properties-decreased] в ./properties/rules/response-property-max-properties-decreased_revision.yaml
+	в API GET /owners/{ownerId}/pets
+		значение maxProperties у поля ответа `allOf[subschema #3]/` уменьшено с `5` до `4`, для ответа со статусом `204`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

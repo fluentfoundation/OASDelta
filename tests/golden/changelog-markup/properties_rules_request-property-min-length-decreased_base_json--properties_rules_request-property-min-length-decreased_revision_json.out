@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /store/order
+-  the `anyOf[subschema #1]/C:\path` request property's minLength was decreased from `5` to `4`
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+- id: request-parameter-exclusive-max-unset
+  text: for the `path` request parameter `petId`, the exclusiveMaximum was unset from `13.00`
+  level: 1
+  operation: POST
+  operationId: name
+  path: /pets/{petId}
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-exclusive-max-unset_base.yaml
+    line: 15
+    column: 21
+  fingerprint: fecb58559fda
+- id: response-media-type-added
+  text: added the media type `application/xml` for the response with the status `500`
+  level: 1
+  operation: POST
+  operationId: name
+  path: /pets/{petId}
+  section: paths
+  revisionSource:
+    file: ./properties/rules/request-parameter-exclusive-max-unset_revision.yaml
+    line: 72
+    column: 25
+    endLine: 74
+    endColumn: 45
+  fingerprint: e92879ad47d9
+- id: response-media-type-added
+  text: added the media type `text/plain` for the response with the status `500`
+  level: 1
+  operation: POST
+  operationId: name
+  path: /pets/{petId}
+  section: paths
+  revisionSource:
+    file: ./properties/rules/request-parameter-exclusive-max-unset_revision.yaml
+    line: 75
+    column: 25
+    endLine: 80
+    endColumn: 45
+  fingerprint: 4b72baef839d
+- id: response-property-default-value-removed
+  text: the ``tick`` response's property default value `麨챗ᒏᣟꙋ钸蠠彆` was removed for the status `200`
+  level: 1
+  operation: POST
+  operationId: name
+  path: /pets/{petId}
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-exclusive-max-unset_base.yaml
+    line: 53
+    column: 41
+  fingerprint: d471b9662181
+

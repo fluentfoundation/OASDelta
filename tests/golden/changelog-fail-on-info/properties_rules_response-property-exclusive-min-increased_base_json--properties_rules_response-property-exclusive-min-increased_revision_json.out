@@ -1,0 +1,1 @@
+[{"id":"response-property-exclusive-min-increased","text":"the `anyOf[subschema #2]/items/` response property's exclusiveMinimum was increased from `-10.00` to `-7.00` for the response status `400`","level":1,"operation":"GET","operationId":"get_owners_{ownerId}_pets","path":"/owners/{ownerId}/pets","section":"paths","fingerprint":"67e278872e6c"}]

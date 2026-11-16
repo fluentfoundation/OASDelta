@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-property-max-length-unset] en ./properties/rules/request-property-max-length-unset_revision.yaml
+	en API PATCH /items/{id}.json
+		el valor maxLength de la propiedad de solicitud `items/null` fue removido de `9`
+
+

@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./properties/rules/request-optional-property-became-not-write-only_revision.yaml, in API POST /items/{id}.json the request optional property `㸢` became not write-only [request-optional-property-became-not-write-only]. 
+
+

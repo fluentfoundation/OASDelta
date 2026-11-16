@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/owners/{ownerId}/pets":{"operations":{"modified":{"PATCH":{"responses":{"modified":{"400":{"content":{"modified":{"*/*":{"schema":{"max":{"from":244,"to":241}}}}}}}}},"PUT":{"responses":{"modified":{"default":{"content":{"deleted":["application/json"]}}}}}}}}}},"components":{"schemas":{"modified":{"Owner":{"max":{"from":244,"to":241}}}}}}

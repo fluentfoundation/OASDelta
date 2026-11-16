@@ -1,0 +1,10 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[response-body-max-increased] в ./properties/rules/response-body-max-increased_revision.yaml
+	в API PATCH /search
+		у тела ответа max увеличен с `6.00` до `778.00`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

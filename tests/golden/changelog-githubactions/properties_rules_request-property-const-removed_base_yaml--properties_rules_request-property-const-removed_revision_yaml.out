@@ -1,0 +1,2 @@
+::notice title=request-property-const-removed,file=./properties/rules/request-property-const-removed_revision.yaml::in API PATCH /pets/{petId} the `id` request property const value `pet` was removed
+

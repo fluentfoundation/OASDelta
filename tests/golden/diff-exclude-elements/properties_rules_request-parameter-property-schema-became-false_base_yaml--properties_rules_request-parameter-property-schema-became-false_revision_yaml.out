@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/items/{id}.json":{"operations":{"modified":{"POST":{"parameters":{"modified":{"cookie":{"name":{"schema":{"items":{"type":{"deleted":["string"]},"always":{"from":null,"to":false}}}}}}}}}}}}}}

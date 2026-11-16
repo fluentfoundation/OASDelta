@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-header-max-contains-set] at ./properties/rules/response-header-max-contains-set_revision.json
+	in API GET /pets/{petId}
+		the `妏` response header's maxContains was set to `1` for the status `404`
+
+

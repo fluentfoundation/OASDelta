@@ -1,0 +1,2 @@
+::notice title=request-parameter-property-schema-became-not-false,file=./properties/rules/request-parameter-property-schema-became-not-false_revision.yaml,line=44,col=27::in API DELETE /pets/{petId} the schema of the `anyOf[subschema #2]/` property of the `query` request parameter `ключ` is no longer `false` and accepts values again
+

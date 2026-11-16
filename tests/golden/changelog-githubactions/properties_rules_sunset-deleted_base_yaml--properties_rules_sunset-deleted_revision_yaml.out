@@ -1,0 +1,4 @@
+::error title=sunset-deleted,file=./properties/rules/sunset-deleted_revision.yaml::in API PATCH /ünïcode/ключ api sunset date deleted, but deprecated=true kept
+::notice title=endpoint-added,file=./properties/rules/sunset-deleted_revision.yaml,line=17,col=9::in API POST /pets/{petId} endpoint added
+::notice title=request-property-enum-value-added,file=./properties/rules/sunset-deleted_revision.yaml,line=101,col=51::in API PATCH /ünïcode/ключ added the new `1.00` enum value to the request property `tag/tag`
+

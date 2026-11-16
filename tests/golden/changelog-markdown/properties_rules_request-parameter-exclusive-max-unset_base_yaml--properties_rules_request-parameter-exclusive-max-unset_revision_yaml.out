@@ -1,0 +1,16 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /pets/{petId}
+-  for the `path` request parameter `petId`, the exclusiveMaximum was unset from `13.00`
+-  added the media type `application/xml` for the response with the status `500`
+-  added the media type `text/plain` for the response with the status `500`
+-  the ``tick`` response's property default value `麨챗ᒏᣟꙋ钸蠠彆` was removed for the status `200`
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+2 alterações: 1 error, 0 warning, 1 info
+error	[api-removed-without-deprecation] em ./properties/rules/response-header-exclusive-min-set_base.yaml
+	em API GET /pets
+		api removida sem depreciação
+
+info	[response-header-exclusive-min-set] em ./properties/rules/response-header-exclusive-min-set_revision.yaml
+	em API PATCH /store/order
+		o valor exclusiveMinimum do cabeçalho de resposta `%20` foi definido como `true` para o status `201`
+
+

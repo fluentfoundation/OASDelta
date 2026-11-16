@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+    <testcase name="response-body-media-type-item-schema-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added an item schema to the media type `text/plain` for the response with the status `2XX`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

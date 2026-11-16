@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[response-body-max-items-decreased] в ./properties/rules/response-body-max-items-decreased_revision.yaml
+	в API PATCH /search
+		значение maxItems у тела ответа уменьшено с `4` до `2`
+
+info	[response-body-media-type-item-schema-added] в ./properties/rules/response-body-max-items-decreased_revision.yaml
+	в API PATCH /search
+		схема элемента добавлена к типу медиа `application/vnd.api+json` ответа со статусом `500`
+
+

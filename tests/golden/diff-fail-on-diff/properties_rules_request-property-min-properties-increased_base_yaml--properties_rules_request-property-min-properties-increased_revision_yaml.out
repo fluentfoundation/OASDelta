@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/store/order":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"*/*":{"schema":{"properties":{"modified":{"name":{"minProps":{"from":1,"to":3}}}}}}}}},"responses":{"modified":{"2XX":{"headers":{"deleted":["ૉ硡쇲䦨員䒗"]}}}}}}}}}}}

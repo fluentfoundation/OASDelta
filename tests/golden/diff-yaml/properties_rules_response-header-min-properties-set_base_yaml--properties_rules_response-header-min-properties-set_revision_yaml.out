@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "201":
+                                    headers:
+                                        modified:
+                                            "\U0001F600":
+                                                schema:
+                                                    minProps:
+                                                        from: 0
+                                                        to: 4
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "201":
+                        headers:
+                            modified:
+                                "\U0001F600":
+                                    schema:
+                                        minProps:
+                                            from: 0
+                                            to: 4
+

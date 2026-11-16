@@ -1,0 +1,1 @@
+[{"id":"request-property-multiple-of-unset","text":"the `'single'` request property's multipleOf was unset from `8.00`","level":1,"operation":"PATCH","path":"/v1/items","section":"paths","fingerprint":"2c1b54c6deb6"}]

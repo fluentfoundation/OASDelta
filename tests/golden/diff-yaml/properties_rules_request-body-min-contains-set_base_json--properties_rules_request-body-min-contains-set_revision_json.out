@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            content:
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            contains:
+                                                schemaAdded: true
+                                            minContains:
+                                                from: null
+                                                to: 3
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /v1/items
+        :   requestBody:
+                content:
+                    modified:
+                        text/plain:
+                            schema:
+                                contains:
+                                    schemaAdded: true
+                                minContains:
+                                    from: null
+                                    to: 3
+

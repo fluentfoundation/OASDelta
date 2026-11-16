@@ -1,0 +1,16 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /items/{id}.json
+- Modified cookie param: price
+  - Schema changed
+    - Type changed from 'number' to ''
+    - Format changed from 'double' to ''
+    - Default changed from 44 to null
+
+

@@ -1,0 +1,14 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /pets/{petId}
+- Modified header param: name
+  - Schema changed
+    - MultipleOf changed from 9 to null
+
+

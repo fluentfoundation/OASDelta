@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /ünïcode/ключ
+- Request body changed
+  - Content changed
+    - Modified media type: text/plain
+      - Schema changed
+        - Items changed
+          - Type changed from 'string' to 'object'
+          - AdditionalProperties changed from null to true
+          - MaxProps changed from null to 7
+
+

@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json; charset=utf-8:
+                                        schema:
+                                            allOf:
+                                                deleted:
+                                                    - index: 0
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /store/order
+        :   requestBody:
+                content:
+                    modified:
+                        application/json; charset=utf-8:
+                            schema:
+                                allOf:
+                                    deleted:
+                                        - index: 0
+

@@ -1,0 +1,17 @@
+- id: response-property-max-length-decreased
+  text: the `items/ ` response property's maxLength was decreased from `77` to `76` for the response status `2XX`
+  level: 1
+  operation: GET
+  operationId: get_pets
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-property-max-length-decreased_base.yaml
+    line: 136
+    column: 45
+  revisionSource:
+    file: ./properties/rules/response-property-max-length-decreased_revision.yaml
+    line: 136
+    column: 45
+  fingerprint: ab8b7eaa67a2
+

@@ -1,0 +1,335 @@
+# Fires response-header-min-properties-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        api_key:
+            in: query
+            name: 名前
+            type: apiKey
+        bearer:
+            scheme: basic
+            type: http
+info:
+    title: ключ
+    version: v1
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        post:
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "400":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                description: '[bracket]'
+                                maximum: 62
+                                nullable: true
+                                type: integer
+                        text/plain:
+                            schema:
+                                properties:
+                                    '[bracket]':
+                                        nullable: true
+                                        type: integer
+                                    C:\path:
+                                        enum:
+                                            - 14
+                                            - 20
+                                        type: integer
+                                type: object
+                    description: Ünïcode
+                default:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                default: status
+                                nullable: true
+                                type: string
+                        text/plain:
+                            schema:
+                                allOf:
+                                    - properties:
+                                        id:
+                                            minimum: 8
+                                            nullable: true
+                                            type: integer
+                                        tag:
+                                            enum:
+                                                - ключ
+                                                - '@at'
+                                                - 癲ഘ答
+                                            format: date-time
+                                            readOnly: true
+                                            type: string
+                                            writeOnly: true
+                                        "x\ty":
+                                            description: '---'
+                                            maximum: 773
+                                            nullable: true
+                                            type: integer
+                                        ключ:
+                                            description: 名前
+                                            type: boolean
+                                      required:
+                                        - id
+                                        - ключ
+                                      type: object
+                                    - format: custom
+                                      nullable: true
+                                      type: boolean
+                                    - deprecated: true
+                                      description: tag
+                                      minimum: 8
+                                      nullable: true
+                                      type: integer
+                    description: pet
+                    headers:
+                        owner:
+                            schema:
+                                const: created
+                                default: pet
+                                pattern: ^.*$
+                                type: string
+        put:
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - description: Ünïcode
+                  in: query
+                  name: status
+                  schema:
+                    deprecated: true
+                    enum:
+                        - true
+                        - false
+                    format: custom
+                    type: boolean
+                - in: header
+                  name: ключ
+                  required: false
+                  schema:
+                    properties:
+                        ' ':
+                            nullable: true
+                            type: boolean
+                            writeOnly: true
+                        status:
+                            default: -9223372036854775808
+                            deprecated: true
+                            minimum: 0
+                            nullable: true
+                            type: integer
+                    required:
+                        - status
+                    type: object
+                - description: tag
+                  in: cookie
+                  name: 朑锋粃৶ಛ
+                  required: true
+                  schema:
+                    minimum: 0
+                    nullable: true
+                    type: number
+            responses:
+                "200":
+                    description: name
+            summary: ' '
+    /owners/{ownerId}/pets:
+        delete:
+            operationId: delete_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: '**bold**'
+                  required: false
+                  schema:
+                    items:
+                        nullable: true
+                        type: integer
+                    type: array
+                - in: query
+                  name: '**bold**'
+                  required: true
+                  schema:
+                    minimum: -3
+                    type: number
+                - description: ключ
+                  in: cookie
+                  name: C:\path
+                  required: false
+                  schema:
+                    format: uuid
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                description: tag
+                                nullable: true
+                                type: boolean
+                        application/xml:
+                            schema:
+                                maximum: 558
+                                nullable: true
+                                readOnly: true
+                                type: integer
+                    description: tag
+                "204":
+                    description: 萟艂쿱
+                default:
+                    description: pet
+            summary: '[bracket]'
+        get:
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: tag
+                  required: false
+                  schema:
+                    deprecated: true
+                    type: object
+                - in: header
+                  name: name
+                  schema:
+                    additionalProperties: false
+                    properties:
+                        empty:
+                            default: 87.75
+                            enum:
+                                - -61.875
+                                - 18.375
+                            maximum: 542
+                            minimum: -4
+                            nullable: true
+                            type: number
+                        owner:
+                            nullable: true
+                            type: number
+                        Ünïcode:
+                            maxLength: 211
+                            type: string
+                    required:
+                        - owner
+                    type: object
+                - in: header
+                  name: status
+                  required: false
+                  schema:
+                    format: email
+                    maxLength: 36
+                    nullable: true
+                    type: string
+            responses:
+                "404":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                maxProperties: 12
+                                minProperties: 1
+                                type: object
+                    description: kind
+    /ünïcode/ключ:
+        put:
+            description: '**bold**'
+            parameters:
+                - in: header
+                  name: ᩫ㚠
+                  required: false
+                  schema:
+                    nullable: true
+                    type: string
+                - in: header
+                  name: '|'
+                  schema:
+                    format: double
+                    maximum: 960
+                    nullable: true
+                    type: number
+                - in: query
+                  name: 名前
+                  schema:
+                    description: price
+                    type: integer
+                  style: spaceDelimited
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                properties:
+                                    pet:
+                                        description: status
+                                        type: boolean
+                                    'trailing ':
+                                        anyOf:
+                                            - format: double
+                                              type: number
+                                              writeOnly: true
+                                            - format: int64
+                                              readOnly: true
+                                              type: integer
+                                              writeOnly: true
+                                            - nullable: true
+                                              type: string
+                                required:
+                                    - 'trailing '
+                                type: object
+                        application/vnd.api+json:
+                            schema:
+                                allOf:
+                                    - deprecated: true
+                                      maxLength: 206
+                                      nullable: true
+                                      type: string
+                                    - items:
+                                        maxLength: 107
+                                        pattern: ^.*$
+                                        type: string
+                                      type: array
+                                    - properties:
+                                        '"quoted"':
+                                            const: 슒꥜Ⴖᰖ
+                                            default: id
+                                            format: byte
+                                            nullable: true
+                                            type: string
+                                        status:
+                                            type: boolean
+                                      required:
+                                        - '"quoted"'
+                                      type: object
+                    description: owner
+                    headers:
+                        "null":
+                            schema:
+                                description: "1e3"
+                                enum:
+                                    - 60.625
+                                    - 10
+                                    - 42
+                                maximum: 604
+                                nullable: true
+                                type: number
+                        Ünïcode:
+                            required: false
+                            schema:
+                                nullable: true
+                                pattern: ^[a-z]+$
+                                type: string

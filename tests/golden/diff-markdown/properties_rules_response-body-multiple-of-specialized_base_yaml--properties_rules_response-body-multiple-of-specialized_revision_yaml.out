@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /ünïcode/ключ
+- Responses changed
+  - Modified response: 2XX
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - MultipleOf changed from 5 to 10
+
+PUT /ünïcode/ключ
+- Responses changed
+  - Modified response: 200
+    - Headers changed
+      - Deleted header: x-added
+
+

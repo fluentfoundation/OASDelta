@@ -1,0 +1,144 @@
+# Fires response-property-multiple-of-specialized (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            type: object
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: ключ
+            type: apiKey
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: 名前
+    version: v1
+openapi: 3.0.3
+paths:
+    /pets:
+        delete:
+            deprecated: true
+            operationId: delete_pets
+            parameters:
+                - explode: false
+                  in: cookie
+                  name: name
+                  required: true
+                  schema:
+                    properties:
+                        '"quoted"':
+                            default: true
+                            nullable: true
+                            type: boolean
+                    type: object
+                - description: status
+                  in: header
+                  name: id
+                  required: false
+                  schema:
+                    description: created
+                    minProperties: 2
+                    properties:
+                        pet:
+                            nullable: true
+                            type: integer
+                            writeOnly: true
+                    type: object
+                - in: query
+                  name: 潹쇖⌬螇⚠
+                  schema:
+                    items:
+                        readOnly: true
+                        type: boolean
+                    maxItems: 32
+                    type: array
+            responses:
+                2XX:
+                    description: a~b
+                "500":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                oneOf:
+                                    - anyOf:
+                                        - $ref: '#/components/schemas/Owner'
+                                        - description: kind
+                                          multipleOf: 2
+                                          readOnly: true
+                                          type: number
+                                      discriminator:
+                                        mapping:
+                                            a: '#/components/schemas/Owner'
+                                        propertyName: status
+                                    - format: custom
+                                      nullable: true
+                                      readOnly: true
+                                      type: boolean
+                    description: status
+            tags:
+                - pet
+    /search:
+        get:
+            operationId: get_search
+            responses:
+                default:
+                    description: pet
+            summary: kind
+        patch:
+            operationId: patch_search
+            parameters:
+                - in: query
+                  name: ᑗڰ樰椁⻛䆟
+                  schema:
+                    items:
+                        $ref: '#/components/schemas/Owner'
+                    type: array
+                - in: query
+                  name: ‮abc
+                  required: false
+                  schema:
+                    description: ключ
+                    properties:
+                        created:
+                            $ref: '#/components/schemas/Owner'
+                    required:
+                        - created
+                    type: object
+                    x-extensible-enum:
+                        - "\U0001F600"
+            responses:
+                2XX:
+                    description: "0x1F"
+                    headers:
+                         nbsp:
+                            schema:
+                                description: Ünïcode
+                                nullable: true
+                                type: string
+                        tag:
+                            schema:
+                                maximum: 88
+                                minimum: -3
+                                type: number
+                "500":
+                    description: 名前
+                    headers:
+                        퉈祅闄췱:
+                            schema:
+                                description: ꃇᲞ툍Լ넂벦
+                                format: custom
+                                nullable: true
+                                type: boolean
+            tags:
+                - tag
+                - name
+    /ünïcode/ключ:
+        delete:
+            responses:
+                "201":
+                    description: Ünïcode
+            summary: '''single'''
+tags:
+    - name: name
+    - name: owner

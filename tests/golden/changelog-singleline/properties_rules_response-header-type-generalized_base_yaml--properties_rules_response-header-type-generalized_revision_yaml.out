@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./properties/rules/response-header-type-generalized_revision.yaml, in API DELETE /v1/items the `名前` response header's `type` was widened from `integer` to `number` for the status `400` [response-header-type-generalized]. 
+
+

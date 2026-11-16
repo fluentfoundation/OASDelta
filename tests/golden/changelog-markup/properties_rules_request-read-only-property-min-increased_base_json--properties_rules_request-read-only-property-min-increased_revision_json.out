@@ -1,0 +1,22 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /pets
+- :warning: removed the media type `application/json` for the response with the status `500`
+
+
+### PUT /ünïcode/ключ
+- :warning: removed the media type `application/json; charset=utf-8` from the request body
+-  the `叚։⋋媣塦/anyOf[subschema #2]/` request read-only property's min was increased to `-8.00`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

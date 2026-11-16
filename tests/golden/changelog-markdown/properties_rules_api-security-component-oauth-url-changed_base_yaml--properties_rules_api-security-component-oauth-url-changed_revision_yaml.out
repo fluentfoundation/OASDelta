@@ -1,0 +1,10 @@
+# API Changelog v1 vs. v1
+
+
+
+## Components
+- :warning: the component security scheme `oauth` oauth `authorizationCode` flow authorization url changed from `https://auth.example.com/authorize` to `https://auth1.example.com/authorizationUrl`
+
+
+
+

@@ -1,0 +1,160 @@
+{
+  "components": {
+    "securitySchemes": {
+      "openid": {
+        "openIdConnectUrl": "https://auth.example.com/.well-known/openid-configuration",
+        "type": "openIdConnect"
+      }
+    }
+  },
+  "info": {
+    "title": "x\ty",
+    "version": "1.0.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/search": {
+      "delete": {
+        "responses": {
+          "400": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "items": {
+                    "items": {
+                      "deprecated": true,
+                      "format": "custom",
+                      "type": "boolean"
+                    },
+                    "maxItems": 29,
+                    "type": "array"
+                  },
+                  "type": "array"
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "properties": {
+                    "kind": {
+                      "deprecated": true,
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "名前"
+          }
+        },
+        "summary": "name",
+        "tags": [
+          "price",
+          "price"
+        ]
+      },
+      "post": {
+        "operationId": "post_search",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "粞",
+            "schema": {
+              "maxProperties": 18,
+              "properties": {
+                "ключ": {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "名前": {
+                  "deprecated": true,
+                  "description": "ключ",
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "writeOnly": true
+                }
+              },
+              "required": [
+                "名前"
+              ],
+              "type": "object",
+              "x-extensible-enum": [
+                "名前",
+                "id"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "properties": {
+                  "price": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+                  "ключ": {
+                    "deprecated": true,
+                    "description": "---",
+                    "enum": [
+                      "pet",
+                      "Ünïcode"
+                    ],
+                    "pattern": "(",
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "price",
+                  "ключ"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "名前",
+            "headers": {
+              "a/b": {
+                "schema": {
+                  "format": "double",
+                  "maximum": 276,
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "null": {
+                "schema": false
+              }
+            }
+          },
+          "400": {
+            "description": "拁ᐦ榇嶾ᶋ㐬"
+          }
+        },
+        "summary": "怿ၫ菼憙戏哔铮⪂"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "tag"
+    }
+  ]
+}

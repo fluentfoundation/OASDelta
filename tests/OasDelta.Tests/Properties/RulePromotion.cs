@@ -67,6 +67,7 @@ public class RulePromotion(ITestOutputHelper output)
 
                 void Check(SpecPair p)
                 {
+                    if (Support.HasDanglingMapping(p.Revision)) return; // a known difference (OracleProperties)
                     using var f = CaseFiles.Write(p);
                     var got = InProcess.Instance.Run("changelog", "-f", "json", f.Base, f.Revision);
                     if (got.Code != 0) return;

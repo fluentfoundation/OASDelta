@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /ünïcode/ключ
+-  the request's body multipleOf was generalized from `10.00` to `5.00`
+
+
+
+
+
+

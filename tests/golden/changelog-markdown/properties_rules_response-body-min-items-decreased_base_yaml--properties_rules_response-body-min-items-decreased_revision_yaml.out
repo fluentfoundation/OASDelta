@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /v1/items
+- :warning: the response's body minItems was decreased from `4` to `3`
+
+
+
+
+
+

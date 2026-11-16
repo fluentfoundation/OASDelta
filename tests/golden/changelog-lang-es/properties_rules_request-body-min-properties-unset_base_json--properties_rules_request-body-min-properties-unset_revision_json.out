@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-body-min-properties-unset] en ./properties/rules/request-body-min-properties-unset_revision.json
+	en API POST /pets/{petId}
+		el valor minProperties del cuerpo de solicitud fue removido de `2`
+
+

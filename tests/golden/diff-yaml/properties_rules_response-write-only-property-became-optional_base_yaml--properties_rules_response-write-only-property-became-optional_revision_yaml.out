@@ -1,0 +1,342 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            '!tag':
+                                                                anyOf:
+                                                                    modified:
+                                                                        - base:
+                                                                            index: 0
+                                                                            component: Pet
+                                                                          revision:
+                                                                            index: 0
+                                                                            component: Pet
+                                                                          diff:
+                                                                            allOf:
+                                                                                modified:
+                                                                                    - base:
+                                                                                        index: 2
+                                                                                      revision:
+                                                                                        index: 2
+                                                                                      diff:
+                                                                                        required:
+                                                                                            stringsdiff:
+                                                                                                deleted:
+                                                                                                    - ключ
+                                                                                        properties:
+                                                                                            modified:
+                                                                                                ключ:
+                                                                                                    type:
+                                                                                                        added:
+                                                                                                            - "null"
+                                                                                                    format:
+                                                                                                        from: ""
+                                                                                                        to: byte
+                                                                                                    writeOnly:
+                                                                                                        from: true
+                                                                                                        to: false
+                                "404":
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-8:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            名前:
+                                                                items:
+                                                                    allOf:
+                                                                        modified:
+                                                                            - base:
+                                                                                index: 2
+                                                                              revision:
+                                                                                index: 2
+                                                                              diff:
+                                                                                required:
+                                                                                    stringsdiff:
+                                                                                        deleted:
+                                                                                            - ключ
+                                                                                properties:
+                                                                                    modified:
+                                                                                        ключ:
+                                                                                            type:
+                                                                                                added:
+                                                                                                    - "null"
+                                                                                            format:
+                                                                                                from: ""
+                                                                                                to: byte
+                                                                                            writeOnly:
+                                                                                                from: true
+                                                                                                to: false
+                                            application/vnd.api+json:
+                                                schema:
+                                                    items:
+                                                        items:
+                                                            allOf:
+                                                                modified:
+                                                                    - base:
+                                                                        index: 2
+                                                                      revision:
+                                                                        index: 2
+                                                                      diff:
+                                                                        required:
+                                                                            stringsdiff:
+                                                                                deleted:
+                                                                                    - ключ
+                                                                        properties:
+                                                                            modified:
+                                                                                ключ:
+                                                                                    type:
+                                                                                        added:
+                                                                                            - "null"
+                                                                                    format:
+                                                                                        from: ""
+                                                                                        to: byte
+                                                                                    writeOnly:
+                                                                                        from: true
+                                                                                        to: false
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "404":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            名前:
+                                                                items:
+                                                                    allOf:
+                                                                        modified:
+                                                                            - base:
+                                                                                index: 2
+                                                                              revision:
+                                                                                index: 2
+                                                                              diff:
+                                                                                required:
+                                                                                    stringsdiff:
+                                                                                        deleted:
+                                                                                            - ключ
+                                                                                properties:
+                                                                                    modified:
+                                                                                        ключ:
+                                                                                            type:
+                                                                                                added:
+                                                                                                    - "null"
+                                                                                            format:
+                                                                                                from: ""
+                                                                                                to: byte
+                                                                                            writeOnly:
+                                                                                                from: true
+                                                                                                to: false
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                '!tag':
+                                                    anyOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 0
+                                                                component: Pet
+                                                              revision:
+                                                                index: 0
+                                                                component: Pet
+                                                              diff:
+                                                                allOf:
+                                                                    modified:
+                                                                        - base:
+                                                                            index: 2
+                                                                          revision:
+                                                                            index: 2
+                                                                          diff:
+                                                                            required:
+                                                                                stringsdiff:
+                                                                                    deleted:
+                                                                                        - ключ
+                                                                            properties:
+                                                                                modified:
+                                                                                    ключ:
+                                                                                        type:
+                                                                                            added:
+                                                                                                - "null"
+                                                                                        format:
+                                                                                            from: ""
+                                                                                            to: byte
+                                                                                        writeOnly:
+                                                                                            from: true
+                                                                                            to: false
+                    "404":
+                        content:
+                            modified:
+                                application/json; charset=utf-8:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                名前:
+                                                    items:
+                                                        allOf:
+                                                            modified:
+                                                                - base:
+                                                                    index: 2
+                                                                  revision:
+                                                                    index: 2
+                                                                  diff:
+                                                                    required:
+                                                                        stringsdiff:
+                                                                            deleted:
+                                                                                - ключ
+                                                                    properties:
+                                                                        modified:
+                                                                            ключ:
+                                                                                type:
+                                                                                    added:
+                                                                                        - "null"
+                                                                                format:
+                                                                                    from: ""
+                                                                                    to: byte
+                                                                                writeOnly:
+                                                                                    from: true
+                                                                                    to: false
+                                application/vnd.api+json:
+                                    schema:
+                                        items:
+                                            items:
+                                                allOf:
+                                                    modified:
+                                                        - base:
+                                                            index: 2
+                                                          revision:
+                                                            index: 2
+                                                          diff:
+                                                            required:
+                                                                stringsdiff:
+                                                                    deleted:
+                                                                        - ключ
+                                                            properties:
+                                                                modified:
+                                                                    ключ:
+                                                                        type:
+                                                                            added:
+                                                                                - "null"
+                                                                        format:
+                                                                            from: ""
+                                                                            to: byte
+                                                                        writeOnly:
+                                                                            from: true
+                                                                            to: false
+        ?   method: GET
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "404":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                名前:
+                                                    items:
+                                                        allOf:
+                                                            modified:
+                                                                - base:
+                                                                    index: 2
+                                                                  revision:
+                                                                    index: 2
+                                                                  diff:
+                                                                    required:
+                                                                        stringsdiff:
+                                                                            deleted:
+                                                                                - ключ
+                                                                    properties:
+                                                                        modified:
+                                                                            ключ:
+                                                                                type:
+                                                                                    added:
+                                                                                        - "null"
+                                                                                format:
+                                                                                    from: ""
+                                                                                    to: byte
+                                                                                writeOnly:
+                                                                                    from: true
+                                                                                    to: false
+components:
+    schemas:
+        modified:
+            Item:
+                properties:
+                    modified:
+                        名前:
+                            items:
+                                allOf:
+                                    modified:
+                                        - base:
+                                            index: 2
+                                          revision:
+                                            index: 2
+                                          diff:
+                                            required:
+                                                stringsdiff:
+                                                    deleted:
+                                                        - ключ
+                                            properties:
+                                                modified:
+                                                    ключ:
+                                                        type:
+                                                            added:
+                                                                - "null"
+                                                        format:
+                                                            from: ""
+                                                            to: byte
+                                                        writeOnly:
+                                                            from: true
+                                                            to: false
+            Pet:
+                allOf:
+                    modified:
+                        - base:
+                            index: 2
+                          revision:
+                            index: 2
+                          diff:
+                            required:
+                                stringsdiff:
+                                    deleted:
+                                        - ключ
+                            properties:
+                                modified:
+                                    ключ:
+                                        type:
+                                            added:
+                                                - "null"
+                                        format:
+                                            from: ""
+                                            to: byte
+                                        writeOnly:
+                                            from: true
+                                            to: false
+

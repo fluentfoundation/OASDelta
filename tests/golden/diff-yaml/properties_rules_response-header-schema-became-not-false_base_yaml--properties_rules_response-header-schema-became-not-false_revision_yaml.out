@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                default:
+                                    headers:
+                                        modified:
+                                            '...':
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - number
+                                                    format:
+                                                        from: ""
+                                                        to: float
+                                                    always:
+                                                        from: false
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /owners/{ownerId}/pets
+        :   responses:
+                modified:
+                    default:
+                        headers:
+                            modified:
+                                '...':
+                                    schema:
+                                        type:
+                                            added:
+                                                - number
+                                        format:
+                                            from: ""
+                                            to: float
+                                        always:
+                                            from: false
+                                            to: null
+

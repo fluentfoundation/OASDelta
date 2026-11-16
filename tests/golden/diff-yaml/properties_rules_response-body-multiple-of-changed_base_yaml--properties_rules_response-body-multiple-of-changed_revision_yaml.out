@@ -1,0 +1,36 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                added:
+                    - GET
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "404":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    multipleOf:
+                                                        from: 10
+                                                        to: 5
+endpoints:
+    added:
+        - method: GET
+          path: /store/order
+    modified:
+        ?   method: DELETE
+            path: /store/order
+        :   responses:
+                modified:
+                    "404":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        multipleOf:
+                                            from: 10
+                                            to: 5
+

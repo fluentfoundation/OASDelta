@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets":{"operations":{"modified":{"PATCH":{"tags":{"deleted":["created"]},"parameters":{"modified":{"cookie":{"created":{"explode":{"from":true,"to":null}}},"query":{"ключ":{"schema":{"contains":{"schemaDeleted":true},"minContains":{"from":1,"to":null}}}}}}}}}}}}}

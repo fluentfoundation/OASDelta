@@ -1,0 +1,21 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /pets
+- Responses changed
+  - Modified response: 201
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Properties changed
+            - Modified property: pet
+              - Property 'AllOf' changed
+                - Modified schema: subschema #1
+                  - MaxProps changed from 13 to null
+
+

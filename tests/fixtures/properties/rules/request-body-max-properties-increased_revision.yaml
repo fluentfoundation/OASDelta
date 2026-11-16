@@ -1,0 +1,249 @@
+# Fires request-body-max-properties-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            minProperties: 1
+            properties:
+                created:
+                    anyOf:
+                        - format: binary
+                          maxLength: 96
+                          pattern: (
+                          type: string
+                        - enum:
+                            - 4
+                            - 16
+                          maximum: 844
+                          type:
+                            - integer
+                            - "null"
+                        - $ref: '#/components/schemas/Pet'
+                笱梴:
+                    items:
+                        format: double
+                        type:
+                            - number
+                            - "null"
+                        writeOnly: true
+                    maxItems: 62
+                    type: array
+            required:
+                - created
+            type: object
+        Pet:
+            items:
+                description: 名前
+                type:
+                    - string
+                    - "null"
+            type: array
+    securitySchemes:
+        api_key:
+            in: header
+            name: id
+            type: apiKey
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: "\a"
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /store/order:
+        delete:
+            operationId: delete_store_order
+            parameters:
+                - description: id
+                  in: header
+                  name: id
+                  required: true
+                  schema:
+                    anyOf:
+                        - maximum: 214
+                          type:
+                            - number
+                            - "null"
+                        - exclusiveMaximum: 1149
+                          maximum: 485
+                          type:
+                            - number
+                            - "null"
+                        - enum:
+                            - true
+                            - false
+                          type: boolean
+                  style: spaceDelimited
+            responses:
+                "201":
+                    description: 'trailing '
+        patch:
+            operationId: id
+            parameters:
+                - description: Ḛ
+                  explode: true
+                  in: query
+                  name: name
+                  schema:
+                    properties:
+                        a/b:
+                            format: custom
+                            type:
+                                - boolean
+                                - "null"
+                        status:
+                            multipleOf: 10
+                            type: integer
+                            writeOnly: true
+                    required:
+                        - status
+                    type: object
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            exclusiveMinimum: -4
+                            minimum: 3
+                            type: number
+                    text/plain:
+                        schema:
+                            enum:
+                                - -18.25
+                            type:
+                                - number
+                                - "null"
+                required: true
+            responses:
+                "201":
+                    content:
+                        '*/*':
+                            schema:
+                                description:  nbsp
+                                type: object
+                    description: id
+                    headers:
+                         nbsp:
+                            required: true
+                            schema:
+                                type: boolean
+                "204":
+                    content:
+                        application/json:
+                            schema:
+                                enum:
+                                    - kind
+                                type: string
+                        application/json; charset=utf-8:
+                            schema:
+                                type:
+                                    - integer
+                                    - "null"
+                    description: owner
+            summary: status
+        put:
+            deprecated: true
+            operationId: put_store_order
+            parameters:
+                - in: header
+                  name: id
+                  required: false
+                  schema:
+                    properties:
+                        '[bracket]':
+                            type: boolean
+                    type: boolean
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            exclusiveMinimum: -5
+                            maximum: 244
+                            type: integer
+                    application/vnd.api+json:
+                        schema:
+                            maxProperties: 13
+                            type: object
+                required: true
+            responses:
+                2XX:
+                    content:
+                        application/json:
+                            schema:
+                                deprecated: true
+                                maxProperties: 19
+                                type: object
+                        multipart/form-data:
+                            schema:
+                                $ref: '#/components/schemas/Pet'
+                    description: ключ
+                "204":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                default: true
+                                type:
+                                    - boolean
+                                    - "null"
+                    description: a/b
+                    headers:
+                        '#hash':
+                            schema:
+                                type:
+                                    - string
+                                    - "null"
+                        삂㐆:
+                            schema:
+                                maximum: 265
+                                type: integer
+    /v1/items:
+        put:
+            operationId: put_v1_items
+            responses:
+                "204":
+                    content:
+                        '*/*':
+                            schema:
+                                items:
+                                    description: 名前
+                                    enum:
+                                        - 1
+                                        - 20
+                                        - 8
+                                        - 5
+                                    maximum: 491
+                                    type: integer
+                                minItems: 1
+                                type: array
+                        text/plain:
+                            schema:
+                                anyOf:
+                                    - description: 名前
+                                      properties:
+                                        price:
+                                            deprecated: true
+                                            type: integer
+                                        tag:
+                                            deprecated: true
+                                            type: integer
+                                      required:
+                                        - price
+                                      type: object
+                                    - allOf:
+                                        - enum:
+                                            - 名前
+                                            - ""
+                                            - price
+                                          format: password
+                                          minLength: 2
+                                          type:
+                                            - string
+                                            - "null"
+                                        - minimum: 8
+                                          type:
+                                            - number
+                                            - "null"
+                    description: "~"
+            summary: '**bold**'
+tags:
+    - name: owner
+    - name: 名前

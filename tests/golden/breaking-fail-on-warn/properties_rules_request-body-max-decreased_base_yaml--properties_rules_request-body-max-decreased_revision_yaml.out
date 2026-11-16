@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-body-max-decreased] at ./properties/rules/request-body-max-decreased_revision.yaml
+	in API POST /items/{id}.json
+		the request's body max was decreased to `115.00`
+
+

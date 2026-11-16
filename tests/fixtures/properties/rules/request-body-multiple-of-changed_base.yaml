@@ -1,0 +1,114 @@
+# Fires request-body-multiple-of-changed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            allOf:
+                - oneOf:
+                    - type:
+                        - boolean
+                        - "null"
+                    - exclusiveMaximum: 1387
+                      type:
+                        - number
+                        - "null"
+                    - deprecated: true
+                      description: name
+                      exclusiveMaximum: 1429
+                      format: float
+                      type:
+                        - number
+                        - "null"
+                - $ref: '#/components/schemas/Error'
+        Pet:
+            anyOf:
+                - oneOf:
+                    - example: pet
+                      type: boolean
+                    - default: '"quoted"'
+                      description: kind
+                      type: string
+                - items:
+                    $ref: '#/components/schemas/Pet'
+                  type: array
+            discriminator:
+                mapping:
+                    a: '#/components/schemas/Pet'
+                propertyName: '|'
+    securitySchemes:
+        bearer:
+            scheme: basic
+            type: http
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: 齣悐䢞ᮮ
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /ünïcode/ключ:
+        post:
+            parameters:
+                - in: cookie
+                  name: "yes"
+                  schema:
+                    additionalProperties: false
+                    type: object
+                - description: 迂嘢
+                  in: cookie
+                  name: ключ
+                  schema:
+                    items:
+                        format: int32
+                        type: integer
+                    maxItems: 58
+                    type: array
+                - in: header
+                  name: name
+                  required: true
+                  schema:
+                    items:
+                        enum:
+                            - 16
+                            - 69
+                        format: float
+                        minimum: -7
+                        type: number
+                    minItems: 1
+                    type: array
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            items:
+                                deprecated: true
+                                properties:
+                                    owner:
+                                        exclusiveMinimum: -4
+                                        type: number
+                                type: object
+                            type: array
+                    application/vnd.api+json:
+                        schema:
+                            minimum: 1
+                            multipleOf: 10
+                            type: number
+            responses:
+                "400":
+                    content:
+                        text/plain:
+                            schema:
+                                type:
+                                    - string
+                                    - "null"
+                    description: <b>&amp;
+                "404":
+                    description: "yes"
+                    headers:
+                        '@at':
+                            schema:
+                                format: email
+                                type: string
+            summary: ' '
+security:
+    - openid: []

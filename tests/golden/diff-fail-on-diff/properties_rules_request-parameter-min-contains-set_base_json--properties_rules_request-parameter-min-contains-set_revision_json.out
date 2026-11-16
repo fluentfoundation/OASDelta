@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/items/{id}.json":{"operations":{"modified":{"POST":{"parameters":{"modified":{"header":{"~":{"schema":{"contains":{"schemaAdded":true},"minContains":{"from":null,"to":3}}}}}}}}}}}}}

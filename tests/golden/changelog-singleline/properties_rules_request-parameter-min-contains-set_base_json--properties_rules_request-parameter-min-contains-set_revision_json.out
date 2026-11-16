@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./properties/rules/request-parameter-min-contains-set_revision.json, in API POST /items/{id}.json for the `header` request parameter `~`, the minContains was set to `3` [request-parameter-min-contains-set]. Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+

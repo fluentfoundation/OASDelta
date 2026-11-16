@@ -1,0 +1,106 @@
+# Fires request-body-max-contains-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Pet:
+            items:
+                description: owner
+                type: string
+            type: array
+    securitySchemes:
+        api_key:
+            in: query
+            name: owner
+            type: apiKey
+        bearer:
+            scheme: basic
+            type: http
+info:
+    title: name
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /owners/{ownerId}/pets:
+        patch:
+            operationId: patch_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            items:
+                                description: 名前
+                                properties:
+                                    Ünïcode:
+                                        $ref: '#/components/schemas/Pet'
+                                    名前:
+                                        default: -18
+                                        exclusiveMinimum: -2
+                                        format: float
+                                        type:
+                                            - number
+                                            - "null"
+                                required:
+                                    - 名前
+                                    - Ünïcode
+                                type: object
+                            type: array
+            responses:
+                "200":
+                    content:
+                        application/xml:
+                            schema:
+                                deprecated: true
+                                minProperties: 2
+                                properties:
+                                    id:
+                                        maximum: 464
+                                        type:
+                                            - integer
+                                            - "null"
+                                    Ünïcode:
+                                        $ref: '#/components/schemas/Pet'
+                                required:
+                                    - id
+                                type: object
+                        text/plain:
+                            schema:
+                                items:
+                                    description: '**bold**'
+                                    minimum: 6
+                                    type: integer
+                                    writeOnly: true
+                                type: array
+                                uniqueItems: true
+                    description: price
+                    headers:
+                        C:\path:
+                            schema:
+                                exclusiveMaximum: 1097
+                                type: number
+                        status:
+                            required: false
+                            schema:
+                                description: created
+                                enum:
+                                    - true
+                                    - false
+                                format: custom
+                                type: boolean
+                "204":
+                    description: status
+                    headers:
+                        '!tag':
+                            schema:
+                                description: created
+                                type:
+                                    - string
+                                    - "null"
+                                writeOnly: true
+servers:
+    - url: https://api.example.com/v2
+    - url: /relative

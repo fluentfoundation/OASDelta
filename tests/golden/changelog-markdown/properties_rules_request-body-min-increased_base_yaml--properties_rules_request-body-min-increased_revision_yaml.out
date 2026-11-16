@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PUT /items/{id}.json
+- :warning: the request's body min was increased to `10.00`
+
+
+
+
+
+

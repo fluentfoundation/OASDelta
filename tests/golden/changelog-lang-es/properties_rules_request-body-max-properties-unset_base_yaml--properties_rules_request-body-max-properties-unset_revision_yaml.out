@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-body-max-properties-unset] en ./properties/rules/request-body-max-properties-unset_revision.yaml
+	en API POST /pets
+		el valor maxProperties del cuerpo de solicitud fue removido de `11`
+
+

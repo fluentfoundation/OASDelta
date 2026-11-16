@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[response-property-min-properties-unset] at ./properties/rules/response-property-min-properties-unset_revision.json
+	in API DELETE /ünïcode/ключ
+		the `-/items/` response property's minProperties was unset from `2` for the response status `default` (shared schema: `Owner`, also at `status/status/items/`)
+
+error	[response-property-type-changed] at ./properties/rules/response-property-min-properties-unset_revision.json
+	in API DELETE /ünïcode/ключ
+		the `-/items/` response's property `type` changed from `object` to `any` for status `default` (shared schema: `Owner`, also at `status/status/items/`)
+
+

@@ -1,0 +1,78 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-8:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            name:
+                                                                exclusiveMax:
+                                                                    from: 28
+                                                                    to: null
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    '*/*':
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    ключ:
+                                                        properties:
+                                                            modified:
+                                                                name:
+                                                                    exclusiveMax:
+                                                                        from: 28
+                                                                        to: null
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json; charset=utf-8:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                name:
+                                                    exclusiveMax:
+                                                        from: 28
+                                                        to: null
+        ?   method: POST
+            path: /ünïcode/ключ
+        :   requestBody:
+                content:
+                    modified:
+                        '*/*':
+                            schema:
+                                properties:
+                                    modified:
+                                        ключ:
+                                            properties:
+                                                modified:
+                                                    name:
+                                                        exclusiveMax:
+                                                            from: 28
+                                                            to: null
+components:
+    schemas:
+        modified:
+            Error:
+                properties:
+                    modified:
+                        name:
+                            exclusiveMax:
+                                from: 28
+                                to: null
+

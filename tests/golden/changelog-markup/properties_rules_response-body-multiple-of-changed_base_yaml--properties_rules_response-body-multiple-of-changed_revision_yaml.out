@@ -1,0 +1,17 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /store/order
+- :warning: the response's body multipleOf was changed from `10.00` to `5.00`
+
+
+### GET /store/order
+-  endpoint added
+
+
+
+
+
+

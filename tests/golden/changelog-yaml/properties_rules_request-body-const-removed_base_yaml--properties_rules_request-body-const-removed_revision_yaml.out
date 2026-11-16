@@ -1,0 +1,13 @@
+- id: request-body-const-removed
+  text: the request body `application/xml` const value `@at` was removed
+  level: 1
+  operation: POST
+  operationId: post_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-body-const-removed_base.yaml
+    line: 60
+    column: 29
+  fingerprint: c71487e859ca
+

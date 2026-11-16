@@ -1,0 +1,61 @@
+# Fires response-body-min-contains-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            maxProperties: 15
+            type: object
+        Item:
+            format: int32
+            maximum: 583
+            type:
+                - integer
+                - "null"
+        Pet:
+            items:
+                $ref: '#/components/schemas/Error'
+            type: array
+    securitySchemes:
+        bearer:
+            bearerFormat: JWT
+            scheme: bearer
+            type: http
+info:
+    title: status
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /ünïcode/ключ:
+        patch:
+            operationId: patch_ünïcode_ключ
+            parameters:
+                - in: header
+                  name: created
+                  required: true
+                  schema:
+                    $ref: '#/components/schemas/Pet'
+            responses:
+                "201":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                deprecated: true
+                                enum:
+                                    - owner
+                                    - 覎墱鬾嫸
+                                type:
+                                    - string
+                                    - "null"
+                    description: Ünïcode
+                default:
+                    content:
+                        text/plain:
+                            schema:
+                                type:
+                                    - boolean
+                                    - "null"
+                    description: name
+            summary:  nbsp
+security:
+    - bearer: []
+servers:
+    - url: https://api.example.com

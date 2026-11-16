@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                2XX:
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    minProps:
+                                                        from: 8
+                                                        to: 2
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    2XX:
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        minProps:
+                                            from: 8
+                                            to: 2
+

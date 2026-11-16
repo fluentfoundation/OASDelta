@@ -1,0 +1,179 @@
+# Fires response-body-max-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            oneOf:
+                - nullable: true
+                  type: integer
+                - default: true
+                  description: 名前
+                  format: custom
+                  type: boolean
+info:
+    title: 觯囨ⵞⱰ┋櫷
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /pets/{petId}:
+        delete:
+            deprecated: true
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - explode: false
+                  in: header
+                  name: kind
+                  required: false
+                  schema:
+                    items:
+                        enum:
+                            - <b>&amp;
+                            - 橽ᗘ淸뺲㕭镃׬爧
+                            - created
+                        type: string
+                    type: array
+                - in: header
+                  name: empty
+                  schema:
+                    type: boolean
+                - in: header
+                  name: 名前
+                  schema:
+                    items:
+                        nullable: true
+                        type: boolean
+                    type: array
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    default: false
+                                    format: custom
+                                    nullable: true
+                                    readOnly: true
+                                    type: boolean
+                                type: array
+                        multipart/form-data:
+                            schema:
+                                default: 11.5
+                                description: '&anchor'
+                                nullable: true
+                                type: number
+                    description: |-
+                        line1
+                        line2
+    /search:
+        patch:
+            parameters:
+                - description: status
+                  in: query
+                  name: kind
+                  schema:
+                    $ref: '#/components/schemas/Item'
+                - description: id
+                  in: query
+                  name: '>'
+                  required: false
+                  schema:
+                    format: byte
+                    type: string
+                - in: query
+                  name: 名前
+                  required: true
+                  schema:
+                    description: '[bracket]'
+                    format: custom
+                    nullable: true
+                    type: boolean
+            responses:
+                "200":
+                    description: "1e3"
+                "404":
+                    content:
+                        '*/*':
+                            schema:
+                                description: kind
+                                maximum: 6
+                                minimum: 3
+                                nullable: true
+                                type: integer
+                                writeOnly: true
+                        application/xml:
+                            schema:
+                                properties:
+                                    a~b:
+                                        $ref: '#/components/schemas/Item'
+                                    踘⸞:
+                                        default: false
+                                        type: boolean
+                                type: object
+                    description: name
+                    headers:
+                        䋘林鑢:
+                            deprecated: true
+                            schema:
+                                nullable: true
+                                type: boolean
+            summary: a~b
+        post:
+            operationId: post_search
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            items:
+                                format: int32
+                                maximum: 788
+                                multipleOf: 10
+                                nullable: true
+                                type: integer
+                                writeOnly: true
+                            type: array
+                required: true
+            responses:
+                2XX:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                allOf:
+                                    - $ref: '#/components/schemas/Item'
+                                    - $ref: '#/components/schemas/Item'
+                                    - items:
+                                        description: Ünïcode
+                                        readOnly: true
+                                        type: integer
+                                      type: array
+                    description: '---'
+        put:
+            operationId: put_search
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            default: 85.375
+                            enum:
+                                - 78.375
+                            nullable: true
+                            type: number
+                required: true
+            responses:
+                "201":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                items:
+                                    maximum: 270
+                                    type: number
+                                maxItems: 60
+                                type: array
+                    description: '>'
+            tags:
+                - id
+tags:
+    - name: Ünïcode
+    - name: 名前

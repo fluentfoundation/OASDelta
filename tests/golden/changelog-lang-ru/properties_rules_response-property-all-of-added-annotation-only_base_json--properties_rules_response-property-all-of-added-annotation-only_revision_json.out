@@ -1,0 +1,7 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-property-all-of-added-annotation-only] в ./properties/rules/response-property-all-of-added-annotation-only_revision.json
+	в API POST /store/order
+		добавлено `subschema #1` (только аннотация) в список `allOf` свойства ответа `items/name` для статуса ответа `201`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

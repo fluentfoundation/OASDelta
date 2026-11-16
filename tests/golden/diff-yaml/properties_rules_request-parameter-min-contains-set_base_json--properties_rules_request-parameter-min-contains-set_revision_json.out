@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                header:
+                                    "~":
+                                        schema:
+                                            contains:
+                                                schemaAdded: true
+                                            minContains:
+                                                from: null
+                                                to: 3
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items/{id}.json
+        :   parameters:
+                modified:
+                    header:
+                        "~":
+                            schema:
+                                contains:
+                                    schemaAdded: true
+                                minContains:
+                                    from: null
+                                    to: 3
+

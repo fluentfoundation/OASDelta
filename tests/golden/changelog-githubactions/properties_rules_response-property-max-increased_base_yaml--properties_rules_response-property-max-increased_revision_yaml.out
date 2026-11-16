@@ -1,0 +1,3 @@
+::error title=response-property-max-increased,file=./properties/rules/response-property-max-increased_revision.yaml,line=105,col=45::in API DELETE /search the `anyOf[subschema #2]/&anchor` response property's max was increased from `570.00` to `572.00` for the response status `default`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

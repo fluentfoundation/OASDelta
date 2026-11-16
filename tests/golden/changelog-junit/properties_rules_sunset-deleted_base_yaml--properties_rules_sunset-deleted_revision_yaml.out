@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="sunset-deleted" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api sunset date deleted, but deprecated=true kept</failure>
+    </testcase>
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+    <testcase name="request-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `1.00` enum value to the request property `tag/tag`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

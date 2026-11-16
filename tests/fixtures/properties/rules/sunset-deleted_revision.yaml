@@ -1,0 +1,135 @@
+# Fires sunset-deleted (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        api_key:
+            in: header
+            name: owner
+            type: apiKey
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: id
+    version: v1
+openapi: 3.1.0
+paths:
+    /pets/{petId}:
+        post:
+            operationId: post_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - description: status
+                  in: header
+                  name: 名前
+                  schema:
+                    type: boolean
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            description: '!tag'
+                            type: string
+                            writeOnly: true
+            responses:
+                "400":
+                    description: tag
+            security:
+                - bearer: []
+            summary: owner
+            x-stability-level: stable
+    /ünïcode/ключ:
+        get:
+            description: owner
+            operationId: get_ünïcode_ключ
+            parameters:
+                - in: cookie
+                  name: '---'
+                  schema:
+                    items:
+                        type: number
+                    maxItems: 68
+                    minItems: 2
+                    type: array
+            responses:
+                "200":
+                    description: ключ
+            summary: status
+            tags:
+                - ключ
+        patch:
+            deprecated: true
+            operationId: patch_ünïcode_ключ
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            minProperties: 2
+                            properties:
+                                ☮䧤簿ñ碾⓹㛄:
+                                    description: ключ
+                                    minimum: 4
+                                    type: number
+                                ? "a\r\nb"
+                                :   format: date
+                                    pattern: '[^\n]'
+                                    type: string
+                                    writeOnly: true
+                                created:
+                                    format: int64
+                                    minimum: -7
+                                    type: integer
+                                tag:
+                                    minProperties: 2
+                                    properties:
+                                        '"quoted"':
+                                            description: '>'
+                                            exclusiveMaximum: 1694
+                                            format: float
+                                            minimum: -7
+                                            multipleOf: 10
+                                            type:
+                                                - number
+                                                - "null"
+                                        ? "a\r\nb"
+                                        :   type: boolean
+                                        tag:
+                                            enum:
+                                                - 1
+                                                - 20
+                                            type:
+                                                - integer
+                                                - "null"
+                                    required:
+                                        - "a\r\nb"
+                                    type: object
+                            required:
+                                - ☮䧤簿ñ碾⓹㛄
+                                - "a\r\nb"
+                            type: object
+                required: true
+            responses:
+                "204":
+                    content:
+                        text/plain:
+                            schema:
+                                additionalProperties: false
+                                type: object
+                    description: ключ
+                    headers:
+                        鋝꥛舼஺豗屵ꨢ꿷:
+                            schema:
+                                default: created
+                                example: _under_
+                                readOnly: true
+                                type:
+                                    - string
+                                    - "null"
+            security:
+                - api_key: []
+                - bearer: []
+security:
+    - api_key: []

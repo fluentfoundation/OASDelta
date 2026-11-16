@@ -1,0 +1,17 @@
+- id: response-body-min-items-decreased
+  text: the response's body minItems was decreased from `4` to `3`
+  level: 3
+  operation: PATCH
+  operationId: patch_v1_items
+  path: /v1/items
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-body-min-items-decreased_base.yaml
+    line: 189
+    column: 33
+  revisionSource:
+    file: ./properties/rules/response-body-min-items-decreased_revision.yaml
+    line: 189
+    column: 33
+  fingerprint: ef5366ad3bc6
+

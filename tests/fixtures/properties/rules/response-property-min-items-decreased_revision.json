@@ -1,0 +1,80 @@
+{
+  "components": {
+    "schemas": {
+      "Error": {
+        "readOnly": true,
+        "type": "boolean"
+      }
+    }
+  },
+  "info": {
+    "title": "created",
+    "version": "2.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/ünïcode/ключ": {
+      "post": {
+        "responses": {
+          "204": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "items": {
+                        "minimum": -10,
+                        "type": "integer"
+                      },
+                      "minItems": 2,
+                      "type": "array"
+                    },
+                    {
+                      "items": {
+                        "minimum": -7,
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "maxItems": 95,
+                      "type": "array"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "pet",
+            "headers": {
+              "蹸뉊无Ꭷ搃䠏": {
+                "schema": {
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "created",
+            "headers": {
+              "名前": {
+                "schema": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "C:\\path"
+          }
+        }
+      }
+    }
+  }
+}

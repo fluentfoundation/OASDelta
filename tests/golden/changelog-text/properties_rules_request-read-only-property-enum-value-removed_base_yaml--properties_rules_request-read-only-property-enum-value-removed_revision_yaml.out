@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[request-read-only-property-enum-value-removed] at ./properties/rules/request-read-only-property-enum-value-removed_revision.yaml
+	in API POST /ünïcode/ключ
+		removed the enum value `49.00` of the request read-only property `oneOf[#/components/schemas/Item]/price/䯄஗Ꜵ䟐│㖵` (media type: application/json; charset=utf-8)
+
+

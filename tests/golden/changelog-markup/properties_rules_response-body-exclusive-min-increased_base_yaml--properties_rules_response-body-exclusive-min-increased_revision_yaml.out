@@ -1,0 +1,15 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /pets/{petId}
+- :warning: for the `path` request parameter `petId`, the max was set to `21.00`
+-  the response's body exclusiveMinimum was increased from `-7.00` to `-5.00`
+-  the response header `tag` was added for the status `2XX`
+
+
+
+
+
+

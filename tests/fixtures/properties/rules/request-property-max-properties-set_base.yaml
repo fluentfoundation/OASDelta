@@ -1,0 +1,162 @@
+# Fires request-property-max-properties-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            items:
+                properties:
+                    '#hash':
+                        type: integer
+                    status:
+                        format: custom
+                        type: boolean
+                required:
+                    - '#hash'
+                type: object
+                x-extensible-enum:
+                    - price
+            type: array
+        Item:
+            description: created
+            minimum: -8
+            type: integer
+        Owner:
+            maximum: 704
+            nullable: true
+            type: number
+            writeOnly: true
+    securitySchemes:
+        api_key:
+            in: header
+            name: owner
+            type: apiKey
+        oauth:
+            flows:
+                clientCredentials:
+                    refreshUrl: https://auth.example.com/refresh
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: 名前
+    version: v1
+openapi: 3.0.3
+paths:
+    /ünïcode/ключ:
+        post:
+            operationId: post_ünïcode_ключ
+            parameters:
+                - in: header
+                  name: owner
+                  schema:
+                    type: boolean
+                - in: cookie
+                  name: '"quoted"'
+                  required: false
+                  schema:
+                    properties:
+                        ' leading':
+                            description: id
+                            readOnly: true
+                            type: number
+                        tag:
+                            $ref: '#/components/schemas/Owner'
+                    required:
+                        - ' leading'
+                    type: object
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            enum:
+                                - owner
+                                - ' leading'
+                                - pet
+                            maxLength: 112
+                            nullable: true
+                            type: string
+            responses:
+                2XX:
+                    content:
+                        multipart/form-data:
+                            schema:
+                                additionalProperties:
+                                    type: string
+                                properties:
+                                    '[bracket]':
+                                        minLength: 0
+                                        type: string
+                                    C:\path:
+                                        properties:
+                                            '''single''':
+                                                nullable: true
+                                                type: integer
+                                            price:
+                                                description: status
+                                                enum:
+                                                    - owner
+                                                    - 塚ᡌ軁안価㕩⧆੯
+                                                type: string
+                                            "yes":
+                                                description: pet
+                                                maximum: 80
+                                                nullable: true
+                                                type: number
+                                        required:
+                                            - '''single'''
+                                            - "yes"
+                                        type: object
+                                    kind:
+                                        items:
+                                            description: 矕榴瓴韟㝂
+                                            format: float
+                                            nullable: true
+                                            type: number
+                                        type: array
+                                    owner:
+                                        description: 名前
+                                        type: boolean
+                                required:
+                                    - C:\path
+                                    - '[bracket]'
+                                    - kind
+                                type: object
+                    description: ▎จᢪ
+        put:
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            minLength: 5
+                            type: string
+                    text/plain:
+                        schema:
+                            items:
+                                type: string
+                            type: array
+                required: true
+            responses:
+                2XX:
+                    content:
+                        application/xml:
+                            schema:
+                                maxLength: 63
+                                nullable: true
+                                type: string
+                    description: 帎䌼ሊỲ
+                    headers:
+                         nbsp:
+                            required: true
+                            schema:
+                                format: custom
+                                nullable: true
+                                type: boolean
+                        price:
+                            schema:
+                                nullable: true
+                                type: number
+            tags:
+                - kind
+                - 名前

@@ -1,0 +1,87 @@
+# Fires response-property-all-of-removed-annotation-only (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: '&anchor'
+    version: v1
+openapi: 3.0.3
+paths:
+    /store/order:
+        patch:
+            operationId: '`tick`'
+            parameters:
+                - in: cookie
+                  name: kind
+                  schema:
+                    description: status
+                    format: custom
+                    type: boolean
+                - description: 名前
+                  in: header
+                  name: tag
+                  required: true
+                  schema:
+                    items:
+                        enum:
+                            - ключ
+                            - tag
+                            - status
+                        format: password
+                        nullable: true
+                        type: string
+                    type: array
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            properties:
+                                created:
+                                    description: created
+                                    enum:
+                                        - true
+                                        - false
+                                    nullable: true
+                                    type: boolean
+                                owner:
+                                    additionalProperties: false
+                                    properties:
+                                         nbsp:
+                                            maximum: 460
+                                            type: integer
+                                        kind:
+                                            format: float
+                                            type: number
+                                    required:
+                                        -  nbsp
+                                        - kind
+                                    type: object
+                            required:
+                                - owner
+                            type: object
+                required: true
+            responses:
+                2XX:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                type: object
+                    description: 名前
+                "201":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    description: tag
+                                    multipleOf: 5
+                                    nullable: true
+                                    type: number
+                                type: array
+                    description: 名前
+                "400":
+                    description: '''single'''
+                    headers:
+                        '*star':
+                            required: false
+                            schema:
+                                default: true
+                                format: custom
+                                nullable: true
+                                type: boolean

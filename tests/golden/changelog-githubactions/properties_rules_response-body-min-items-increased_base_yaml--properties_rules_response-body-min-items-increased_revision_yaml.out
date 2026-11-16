@@ -1,0 +1,3 @@
+::notice title=response-property-min-items-increased,file=./properties/rules/response-body-min-items-increased_revision.yaml,line=9,col=13::in API POST /search the `名前` response property's minItems was increased from `1` to `4` for the response status `200`
+::notice title=response-body-min-items-increased,file=./properties/rules/response-body-min-items-increased_revision.yaml,line=9,col=13::in API PUT /search the response's body minItems was increased from `1` to `4`
+

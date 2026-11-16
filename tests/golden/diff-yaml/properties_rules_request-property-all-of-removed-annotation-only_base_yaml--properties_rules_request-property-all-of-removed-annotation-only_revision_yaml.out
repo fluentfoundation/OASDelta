@@ -1,0 +1,47 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/vnd.api+json:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    'a: b':
+                                                        oneOf:
+                                                            modified:
+                                                                - base:
+                                                                    index: 2
+                                                                  revision:
+                                                                    index: 2
+                                                                  diff:
+                                                                    allOf:
+                                                                        deleted:
+                                                                            - index: 0
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /owners/{ownerId}/pets
+        :   requestBody:
+                content:
+                    modified:
+                        application/vnd.api+json:
+                            schema:
+                                properties:
+                                    modified:
+                                        'a: b':
+                                            oneOf:
+                                                modified:
+                                                    - base:
+                                                        index: 2
+                                                      revision:
+                                                        index: 2
+                                                      diff:
+                                                        allOf:
+                                                            deleted:
+                                                                - index: 0
+

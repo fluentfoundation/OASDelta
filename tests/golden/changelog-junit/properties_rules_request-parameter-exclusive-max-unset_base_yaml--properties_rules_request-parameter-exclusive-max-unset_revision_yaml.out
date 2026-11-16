@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="request-parameter-exclusive-max-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `path` request parameter `petId`, the exclusiveMaximum was unset from `13.00`</failure>
+    </testcase>
+    <testcase name="response-media-type-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the media type `application/xml` for the response with the status `500`</failure>
+    </testcase>
+    <testcase name="response-media-type-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the media type `text/plain` for the response with the status `500`</failure>
+    </testcase>
+    <testcase name="response-property-default-value-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the ``tick`` response's property default value `麨챗ᒏᣟꙋ钸蠠彆` was removed for the status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,4 @@
+::error title=response-media-type-removed,file=./properties/rules/response-body-max-decreased_revision.yaml::in API PUT /owners/{ownerId}/pets removed the media type `application/json` for the response with the status `default`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-body-max-decreased,file=./properties/rules/response-body-max-decreased_revision.yaml,line=21,col=13::in API PATCH /owners/{ownerId}/pets the response's body max was decreased from `244.00` to `241.00`
+

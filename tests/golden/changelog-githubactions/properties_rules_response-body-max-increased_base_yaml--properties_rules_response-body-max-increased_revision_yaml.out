@@ -1,0 +1,3 @@
+::error title=response-body-max-increased,file=./properties/rules/response-body-max-increased_revision.yaml,line=101,col=33::in API PATCH /search the response's body max was increased from `6.00` to `778.00`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

@@ -1,0 +1,63 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                path:
+                                    petId:
+                                        schema:
+                                            exclusiveMax:
+                                                from: 13
+                                                to: null
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            '`tick`':
+                                                                default:
+                                                                    from: 麨챗ᒏᣟꙋ钸蠠彆
+                                                                    to: null
+                                "500":
+                                    content:
+                                        added:
+                                            - application/xml
+                                            - text/plain
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets/{petId}
+        :   parameters:
+                modified:
+                    path:
+                        petId:
+                            schema:
+                                exclusiveMax:
+                                    from: 13
+                                    to: null
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                '`tick`':
+                                                    default:
+                                                        from: 麨챗ᒏᣟꙋ钸蠠彆
+                                                        to: null
+                    "500":
+                        content:
+                            added:
+                                - application/xml
+                                - text/plain
+

@@ -36,7 +36,7 @@ internal static class SpecGen
     public static readonly string[] Methods = ["get", "post", "put", "delete", "patch"];
     public static readonly string[] StabilityLevels = ["draft", "alpha", "beta", "stable"];
     public static readonly string[] ComponentNames = ["Pet", "Owner", "Error", "Item"];
-    public static readonly string[] SchemeNames = ["api_key", "bearer", "oauth"];
+    public static readonly string[] SchemeNames = ["api_key", "bearer", "oauth", "openid"];
 
     private static readonly string[] PathTemplates =
         ["/pets", "/pets/{petId}", "/owners/{ownerId}/pets", "/store/order", "/ünïcode/ключ", "/v1/items", "/items/{id}.json", "/search"];
@@ -62,9 +62,11 @@ internal static class SpecGen
     /// <summary>"No value": a field generated this way is left out.</summary>
     public static readonly Gen<object?> Absent = Gen.Const(() => (object?)null);
 
+    public static readonly string[] Scopes = ["read", "write", "admin"];
+
     private static readonly string[] IntegerFormats = ["int32", "int64"], NumberFormats = ["float", "double"],
         StringFormats = ["date", "date-time", "uuid", "email", "byte", "binary", "password"], OtherFormats = ["custom"],
-        Scopes = ["read", "write", "admin"], ServerUrls = ["https://api.example.com", "https://api.example.com/v2", "/relative"];
+        ServerUrls = ["https://api.example.com", "https://api.example.com/v2", "/relative"];
 
     private static Gen<object?> Opt<T>(Gen<T> g, int percent) =>
         Gen.Int[0, 99].SelectMany(i => i < percent ? g.Select(x => (object?)x) : Absent);
@@ -118,6 +120,10 @@ internal static class SpecGen
                 ("enum", Opt(EnumValues(type), 20)),
                 ("minimum", type is "integer" or "number" ? Opt(Gen.Int[-10, 10].Select(i => (long)i), 20) : Absent),
                 ("maximum", type is "integer" or "number" ? Opt(Gen.Int[11, 1000].Select(i => (long)i), 20) : Absent),
+                ("multipleOf", type is "integer" or "number" ? Opt(Gen.OneOf(2L, 5L, 10L), 8) : Absent),
+                ("exclusiveMinimum", type is "integer" or "number" ? (v31 ? Opt(Gen.Int[-10, 0].Select(i => (long)i), 8) : Absent) : Absent),
+                ("exclusiveMaximum", type is "integer" or "number" ? (v31 ? Opt(Gen.Int[1000, 2000].Select(i => (long)i), 8) : Absent) : Absent),
+                ("const", type == "string" ? Opt(Text, 4) : Absent),
                 ("minLength", type == "string" ? Opt(Gen.Int[0, 5].Select(i => (long)i), 15) : Absent),
                 ("maxLength", type == "string" ? Opt(Gen.Int[6, 255].Select(i => (long)i), 15) : Absent),
                 ("pattern", type == "string" ? Opt(Gen.OneOf("^[a-z]+$", "\\d{3}", "^.*$", "(", "[^\\n]"), 10) : Absent),
@@ -146,6 +152,8 @@ internal static class SpecGen
                 Gen.Bool.Array[distinct.Length],
                 MapOf(
                     ("additionalProperties", Opt(Gen.OneOf<object>(false, true, new Map { ["type"] = "string" }), 15)),
+                    ("minProperties", Opt(Gen.Int[0, 2].Select(i => (long)i), 10)),
+                    ("maxProperties", Opt(Gen.Int[5, 20].Select(i => (long)i), 10)),
                     ("description", Opt(Text, 20)),
                     ("deprecated", Opt(Gen.Const(true), 5)),
                     ("x-extensible-enum", Opt(Text.List[1, 2], 3))),
@@ -173,7 +181,12 @@ internal static class SpecGen
             (kw, branches, disc) =>
             {
                 var m = new Map { [kw] = branches.Select(b => (object?)b).ToList() };
-                if (disc is string d && kw != "allOf") m["discriminator"] = new Map { ["propertyName"] = d };
+                // a mapping only to a schema that exists: oasdiff fails to load a revision whose mapping points at
+                // nothing (Support.HasDanglingMapping)
+                if (disc is string d && kw != "allOf")
+                    m["discriminator"] = refs.Length == 0
+                        ? new Map { ["propertyName"] = d }
+                        : new Map { ["propertyName"] = d, ["mapping"] = new Map { ["a"] = "#/components/schemas/" + refs[0] } };
                 return m;
             });
         return Gen.Frequency((4, (IGen<Map>)leaf), (3, obj), (2, array), (1, xOf));
@@ -246,17 +259,22 @@ internal static class SpecGen
     {
         "api_key" => MapOf(("type", Gen.Const<object?>("apiKey")), ("in", Gen.OneOf<object?>("header", "query", "cookie")), ("name", Name.Select(n => (object?)n))),
         "bearer" => MapOf(("type", Gen.Const<object?>("http")), ("scheme", Gen.OneOf<object?>("bearer", "basic")), ("bearerFormat", Opt(Gen.Const("JWT"), 30))),
-        _ => Gen.Shuffle(Scopes, 1, 3).Select(scopes => new Map
+        "openid" => Gen.Const(new Map { ["type"] = "openIdConnect", ["openIdConnectUrl"] = "https://auth.example.com/.well-known/openid-configuration" }),
+        _ => Gen.Select(Gen.Shuffle(Scopes, 1, 3), Gen.Bool, Gen.Bool).Select((scopes, code, refresh) =>
         {
-            ["type"] = "oauth2",
-            ["flows"] = new Map
+            Map Scoped() => new() { ["scopes"] = ToMap(scopes.Select(s => new KeyValuePair<string, object?>(s, s + " access"))) };
+            var credentials = Scoped();
+            credentials["tokenUrl"] = "https://auth.example.com/token";
+            if (refresh) credentials["refreshUrl"] = "https://auth.example.com/refresh";
+            var flows = new Map { ["clientCredentials"] = credentials };
+            if (code)
             {
-                ["clientCredentials"] = new Map
-                {
-                    ["tokenUrl"] = "https://auth.example.com/token",
-                    ["scopes"] = ToMap(scopes.Select(s => new KeyValuePair<string, object?>(s, s + " access"))),
-                },
-            },
+                var authorization = Scoped();
+                authorization["authorizationUrl"] = "https://auth.example.com/authorize";
+                authorization["tokenUrl"] = "https://auth.example.com/token";
+                flows["authorizationCode"] = authorization;
+            }
+            return new Map { ["type"] = "oauth2", ["flows"] = flows };
         }),
     };
 

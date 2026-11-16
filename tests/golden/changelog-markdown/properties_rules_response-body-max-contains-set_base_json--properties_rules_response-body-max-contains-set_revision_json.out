@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /store/order
+-  added 'contains' constraint to the response body for the status `201`
+-  the response's body maxContains was set to `4`
+
+
+
+
+
+

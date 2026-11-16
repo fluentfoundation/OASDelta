@@ -1,0 +1,11 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[response-header-max-properties-unset] en ./properties/rules/response-header-max-properties-unset_revision.json
+	en API DELETE /items/{id}.json
+		el valor maxProperties del encabezado de respuesta `a
+b` fue removido de `1` para el estado `default`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

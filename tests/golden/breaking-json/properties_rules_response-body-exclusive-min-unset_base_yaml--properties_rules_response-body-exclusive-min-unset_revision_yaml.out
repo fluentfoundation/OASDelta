@@ -1,0 +1,1 @@
+[{"id":"response-body-exclusive-min-unset","text":"the response's body exclusiveMinimum was unset from `-2.00`","level":3,"operation":"GET","operationId":"\u003e","path":"/ünïcode/ключ","section":"paths","baseSource":{"file":"./properties/rules/response-body-exclusive-min-unset_base.yaml","line":84,"column":33},"fingerprint":"cb95f01c3aa3"}]

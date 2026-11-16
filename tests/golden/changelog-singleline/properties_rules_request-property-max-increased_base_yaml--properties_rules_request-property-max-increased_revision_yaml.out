@@ -1,0 +1,8 @@
+3 changes: 0 error, 1 warning, 2 info
+warning at ./properties/rules/request-property-max-increased_revision.yaml, in API POST /pets/{petId} deleted the `cookie` request parameter `pet` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+info at ./properties/rules/request-property-max-increased_revision.yaml, in API PUT /pets added the new optional `query` request parameter `pet` to all path's operations [new-optional-request-default-parameter-to-existing-path]. 
+
+info at ./properties/rules/request-property-max-increased_revision.yaml, in API POST /pets/{petId} the `anyOf[subschema #1]/oneOf[subschema #3]/` request property's max was increased from `596.00` to `597.00` [request-property-max-increased]. 
+
+

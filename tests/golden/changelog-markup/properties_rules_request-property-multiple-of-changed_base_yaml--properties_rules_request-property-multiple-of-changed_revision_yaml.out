@@ -1,0 +1,18 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /items/{id}.json
+-  the response required property `` became read-only for the status `404`
+
+
+### PUT /owners/{ownerId}/pets
+- :warning: the `items/` request property's multipleOf was changed from `5.00` to `2.00`
+-  added annotation-only `subschema #1` to the `items/` request property `allOf` list
+
+
+
+
+
+

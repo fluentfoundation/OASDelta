@@ -1,0 +1,82 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                default:
+                                    headers:
+                                        modified:
+                                            kind:
+                                                schema:
+                                                    max:
+                                                        from: -4
+                                                        to: 973
+                    GET:
+                        parameters:
+                            modified:
+                                cookie:
+                                    status:
+                                        schema:
+                                            enum:
+                                                enumDeleted: true
+                                                deleted:
+                                                    - id-1
+                                                    - id
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    required:
+                                                        stringsdiff:
+                                                            deleted:
+                                                                - '`tick`'
+                                                    properties:
+                                                        deleted:
+                                                            - '`tick`'
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /search
+        :   responses:
+                modified:
+                    default:
+                        headers:
+                            modified:
+                                kind:
+                                    schema:
+                                        max:
+                                            from: -4
+                                            to: 973
+        ?   method: GET
+            path: /search
+        :   parameters:
+                modified:
+                    cookie:
+                        status:
+                            schema:
+                                enum:
+                                    enumDeleted: true
+                                    deleted:
+                                        - id-1
+                                        - id
+            responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        required:
+                                            stringsdiff:
+                                                deleted:
+                                                    - '`tick`'
+                                        properties:
+                                            deleted:
+                                                - '`tick`'
+

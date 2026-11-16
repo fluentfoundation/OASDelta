@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="response-body-min-properties-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body minProperties was unset from `8`</failure>
+    </testcase>
+    <testcase name="request-body-min-properties-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body minProperties was unset from `8` (media type: */*)</failure>
+    </testcase>
+    <testcase name="request-read-only-property-max-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `%20/created` request read-only property's max was decreased to `209.00` (media type: application/json)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

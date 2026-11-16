@@ -1,0 +1,3 @@
+::notice title=api-tag-removed,file=./properties/rules/request-parameter-min-contains-unset_base.yaml::in API PATCH /pets api tag `created` removed
+::notice title=request-parameter-min-contains-unset,file=./properties/rules/request-parameter-min-contains-unset_revision.yaml::in API PATCH /pets for the `query` request parameter `ключ`, the minContains was unset from `1`
+

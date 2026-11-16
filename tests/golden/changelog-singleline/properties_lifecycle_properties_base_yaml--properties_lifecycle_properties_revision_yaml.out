@@ -1,0 +1,28 @@
+13 changes: 7 error, 0 warning, 6 info
+error at ./properties/lifecycle_properties_revision.yaml, in API POST /r request property `invalid` deprecated with invalid sunset date: `sunset date doesn't conform with RFC3339: not a date` [request-property-deprecated-sunset-invalid]. 
+
+error at ./properties/lifecycle_properties_revision.yaml, in API POST /r removed the request property `removed` before the sunset date `2099-12-31` [request-property-removed-before-sunset]. 
+
+error at ./properties/lifecycle_properties_revision.yaml, in API POST /r request property `decreased` stability level decreased from `stable` to `beta` [request-property-stability-decreased]. 
+
+error at ./properties/lifecycle_properties_revision.yaml, in API POST /r request property `too-small` sunset date `2020-01-01` is too small, must be at least `0` days from now [request-property-sunset-date-too-small]. 
+
+error at ./properties/lifecycle_properties_revision.yaml, in API POST /r response property `invalid` deprecated with invalid sunset date: `sunset date doesn't conform with RFC3339: not a date` [response-property-deprecated-sunset-invalid]. 
+
+error at ./properties/lifecycle_properties_revision.yaml, in API POST /r response property `decreased` stability level decreased from `stable` to `beta` [response-property-stability-decreased]. 
+
+error at ./properties/lifecycle_properties_revision.yaml, in API POST /r removed the required property `required-removed` from the response with the `200` status before the sunset date `2099-12-31` [response-required-property-removed-before-sunset]. 
+
+info at ./properties/lifecycle_properties_revision.yaml, in API POST /r request property `missing` deprecated [request-property-deprecated]. 
+
+info at ./properties/lifecycle_properties_revision.yaml, in API POST /r request property `with-sunset` deprecated with sunset date `2099-12-31` [request-property-deprecated-with-sunset]. 
+
+info at ./properties/lifecycle_properties_revision.yaml, in API POST /r request property `increased` stability level increased from `beta` to `stable` [request-property-stability-increased]. 
+
+info at ./properties/lifecycle_properties_revision.yaml, in API POST /r response property `missing` deprecated [response-property-deprecated]. 
+
+info at ./properties/lifecycle_properties_revision.yaml, in API POST /r response property `with-sunset` deprecated with sunset date `2099-12-31` [response-property-deprecated-with-sunset]. 
+
+info at ./properties/lifecycle_properties_revision.yaml, in API POST /r response property `increased` stability level increased from `beta` to `stable` [response-property-stability-increased]. 
+
+

@@ -195,7 +195,7 @@ public static class HtmlReport
         public override bool Match(Markdig.Parsers.InlineProcessor processor, ref Markdig.Helpers.StringSlice slice)
         {
             if (processor.Block is not ParagraphBlock paragraph || paragraph.Parent is not ListItemBlock item || item[0] != paragraph) return false;
-            if (processor.Root.FirstChild is not null) return false; // not at the start
+            if (processor.Root?.FirstChild is not null) return false; // not at the start
             int start = slice.Start;
             if (start + 2 > slice.End || slice.Text[start + 2] != ']') return false;
             char value = slice.Text[start + 1];

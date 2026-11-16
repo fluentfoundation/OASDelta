@@ -11,7 +11,8 @@ code as the Go binary.
   such as `--level`, `--fail-on`, `--flatten-params`, `--include-path-params`, `--match-path`, `--prefix-revision`
   and deprecation days. They run over 327 fixture pairs: the upstream test data paired by file name, the pairs
   upstream's own checker tests compare (`tests/extra-pairs.txt`), and regression cases found by the property-based
-  tests. That is 10,791 comparisons, in which 384 of the 617 checker rules fire. `dotnet test` replays them in
+  tests. That is 10,791 comparisons, in which 399 of oasdiff's 778 checker rules fire. The
+  [coverage page](./coverage) lists the rules no golden fires. `dotnet test` replays them in
   process. CI replays them with the NativeAOT binary
   (`tools/check_golden.sh`) on Linux and Windows, and the release workflow replays them on all six release
   platforms. The few cases that are expected to differ are listed in `tests/golden-known.txt`, each with its

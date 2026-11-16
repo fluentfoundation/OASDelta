@@ -1,0 +1,403 @@
+paths:
+    modified:
+        /items:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            combo:
+                                                                enum:
+                                                                    added:
+                                                                        - a~b-1
+                                                                        - a~b
+                                                                        - ~c
+                                                                        - d~
+                                                            p1:
+                                                                enum:
+                                                                    added:
+                                                                        - a~b
+                                                            p2:
+                                                                enum:
+                                                                    added:
+                                                                        - ~a~
+                                                            p3:
+                                                                enum:
+                                                                    added:
+                                                                        - ~~a~~
+                                                            p4:
+                                                                enum:
+                                                                    added:
+                                                                        - ~~~a~~~
+                                                            p5:
+                                                                enum:
+                                                                    added:
+                                                                        - a~b c~d
+                                                            p6:
+                                                                enum:
+                                                                    added:
+                                                                        - ~a
+                                                            p7:
+                                                                enum:
+                                                                    added:
+                                                                        - a~
+                                                            p8:
+                                                                enum:
+                                                                    added:
+                                                                        - ~ a ~
+                                                            p9:
+                                                                enum:
+                                                                    added:
+                                                                        - ~~a~
+                                                            p10:
+                                                                enum:
+                                                                    added:
+                                                                        - ~a~~
+                                                            p11:
+                                                                enum:
+                                                                    added:
+                                                                        - x~~y~z
+                                                            p12:
+                                                                enum:
+                                                                    added:
+                                                                        - ~~
+                                                            p13:
+                                                                enum:
+                                                                    added:
+                                                                        - "~"
+                                                            p14:
+                                                                enum:
+                                                                    added:
+                                                                        - a~~b~~c
+                                                            p15:
+                                                                enum:
+                                                                    added:
+                                                                        - ~a~b~
+                                                            p16:
+                                                                enum:
+                                                                    added:
+                                                                        - (~a~)
+                                                            p17:
+                                                                enum:
+                                                                    added:
+                                                                        - ~(a)~
+                                                            p18:
+                                                                enum:
+                                                                    added:
+                                                                        - a ~b~ c
+                                                            p19:
+                                                                enum:
+                                                                    added:
+                                                                        - ~~a~~~
+                                                            p20:
+                                                                enum:
+                                                                    added:
+                                                                        - é~ü~
+                                                            p21:
+                                                                enum:
+                                                                    added:
+                                                                        - ~1~2
+                                                            p22:
+                                                                enum:
+                                                                    added:
+                                                                        - '***~a~***'
+                                                            p23:
+                                                                enum:
+                                                                    added:
+                                                                        - '*~a~*'
+                                                            p24:
+                                                                enum:
+                                                                    added:
+                                                                        - ~*a*~
+                                                            p25:
+                                                                enum:
+                                                                    added:
+                                                                        - '`~a~`'
+                                                            p26:
+                                                                enum:
+                                                                    added:
+                                                                        - ~a\~
+                                                            p27:
+                                                                enum:
+                                                                    added:
+                                                                        - ~~~~
+                                                            p28:
+                                                                enum:
+                                                                    added:
+                                                                        - a~~~b~~~c
+                                                            p29:
+                                                                enum:
+                                                                    added:
+                                                                        - x*-y*
+                                                            p30:
+                                                                enum:
+                                                                    added:
+                                                                        - x**-y**
+                                                            p31:
+                                                                enum:
+                                                                    added:
+                                                                        - x*+y*
+                                                            p32:
+                                                                enum:
+                                                                    added:
+                                                                        - x~-y~
+                                                            p33:
+                                                                enum:
+                                                                    added:
+                                                                        - b~-a~
+                                                            p34:
+                                                                enum:
+                                                                    added:
+                                                                        - '*-a-*'
+                                                            p35:
+                                                                enum:
+                                                                    added:
+                                                                        - +*a*+
+                                                            p36:
+                                                                enum:
+                                                                    added:
+                                                                        - x_-y_
+                                                            p37:
+                                                                enum:
+                                                                    added:
+                                                                        - -~abb1*~~ ~ a--*\.
+                                                            p38:
+                                                                enum:
+                                                                    added:
+                                                                        - ~~. ~a)bé\~~~
+                                                            p39:
+                                                                enum:
+                                                                    added:
+                                                                        - a\~~b~~
+                                                            p40:
+                                                                enum:
+                                                                    added:
+                                                                        - \~~a~~
+                                                            p41:
+                                                                enum:
+                                                                    added:
+                                                                        - ~a\~~
+                                                            p42:
+                                                                enum:
+                                                                    added:
+                                                                        - '[ ] a'
+                                                            p43:
+                                                                enum:
+                                                                    added:
+                                                                        - '[x] b'
+                                                            p44:
+                                                                enum:
+                                                                    added:
+                                                                        - z [ ]
+                                                            p45:
+                                                                enum:
+                                                                    added:
+                                                                        - '[X]c'
+endpoints:
+    modified:
+        ?   method: GET
+            path: /items
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                combo:
+                                                    enum:
+                                                        added:
+                                                            - a~b-1
+                                                            - a~b
+                                                            - ~c
+                                                            - d~
+                                                p1:
+                                                    enum:
+                                                        added:
+                                                            - a~b
+                                                p2:
+                                                    enum:
+                                                        added:
+                                                            - ~a~
+                                                p3:
+                                                    enum:
+                                                        added:
+                                                            - ~~a~~
+                                                p4:
+                                                    enum:
+                                                        added:
+                                                            - ~~~a~~~
+                                                p5:
+                                                    enum:
+                                                        added:
+                                                            - a~b c~d
+                                                p6:
+                                                    enum:
+                                                        added:
+                                                            - ~a
+                                                p7:
+                                                    enum:
+                                                        added:
+                                                            - a~
+                                                p8:
+                                                    enum:
+                                                        added:
+                                                            - ~ a ~
+                                                p9:
+                                                    enum:
+                                                        added:
+                                                            - ~~a~
+                                                p10:
+                                                    enum:
+                                                        added:
+                                                            - ~a~~
+                                                p11:
+                                                    enum:
+                                                        added:
+                                                            - x~~y~z
+                                                p12:
+                                                    enum:
+                                                        added:
+                                                            - ~~
+                                                p13:
+                                                    enum:
+                                                        added:
+                                                            - "~"
+                                                p14:
+                                                    enum:
+                                                        added:
+                                                            - a~~b~~c
+                                                p15:
+                                                    enum:
+                                                        added:
+                                                            - ~a~b~
+                                                p16:
+                                                    enum:
+                                                        added:
+                                                            - (~a~)
+                                                p17:
+                                                    enum:
+                                                        added:
+                                                            - ~(a)~
+                                                p18:
+                                                    enum:
+                                                        added:
+                                                            - a ~b~ c
+                                                p19:
+                                                    enum:
+                                                        added:
+                                                            - ~~a~~~
+                                                p20:
+                                                    enum:
+                                                        added:
+                                                            - é~ü~
+                                                p21:
+                                                    enum:
+                                                        added:
+                                                            - ~1~2
+                                                p22:
+                                                    enum:
+                                                        added:
+                                                            - '***~a~***'
+                                                p23:
+                                                    enum:
+                                                        added:
+                                                            - '*~a~*'
+                                                p24:
+                                                    enum:
+                                                        added:
+                                                            - ~*a*~
+                                                p25:
+                                                    enum:
+                                                        added:
+                                                            - '`~a~`'
+                                                p26:
+                                                    enum:
+                                                        added:
+                                                            - ~a\~
+                                                p27:
+                                                    enum:
+                                                        added:
+                                                            - ~~~~
+                                                p28:
+                                                    enum:
+                                                        added:
+                                                            - a~~~b~~~c
+                                                p29:
+                                                    enum:
+                                                        added:
+                                                            - x*-y*
+                                                p30:
+                                                    enum:
+                                                        added:
+                                                            - x**-y**
+                                                p31:
+                                                    enum:
+                                                        added:
+                                                            - x*+y*
+                                                p32:
+                                                    enum:
+                                                        added:
+                                                            - x~-y~
+                                                p33:
+                                                    enum:
+                                                        added:
+                                                            - b~-a~
+                                                p34:
+                                                    enum:
+                                                        added:
+                                                            - '*-a-*'
+                                                p35:
+                                                    enum:
+                                                        added:
+                                                            - +*a*+
+                                                p36:
+                                                    enum:
+                                                        added:
+                                                            - x_-y_
+                                                p37:
+                                                    enum:
+                                                        added:
+                                                            - -~abb1*~~ ~ a--*\.
+                                                p38:
+                                                    enum:
+                                                        added:
+                                                            - ~~. ~a)bé\~~~
+                                                p39:
+                                                    enum:
+                                                        added:
+                                                            - a\~~b~~
+                                                p40:
+                                                    enum:
+                                                        added:
+                                                            - \~~a~~
+                                                p41:
+                                                    enum:
+                                                        added:
+                                                            - ~a\~~
+                                                p42:
+                                                    enum:
+                                                        added:
+                                                            - '[ ] a'
+                                                p43:
+                                                    enum:
+                                                        added:
+                                                            - '[x] b'
+                                                p44:
+                                                    enum:
+                                                        added:
+                                                            - z [ ]
+                                                p45:
+                                                    enum:
+                                                        added:
+                                                            - '[X]c'
+

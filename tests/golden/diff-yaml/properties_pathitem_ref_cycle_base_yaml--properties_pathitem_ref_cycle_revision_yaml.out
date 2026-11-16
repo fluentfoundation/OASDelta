@@ -1,0 +1,39 @@
+paths:
+    added:
+        - /b
+    modified:
+        /a:
+            ref:
+                from: ""
+                to: '#/paths/~1b'
+            summary:
+                from: ""
+                to: b
+            operations:
+                deleted:
+                    - GET
+        /self:
+            ref:
+                from: ""
+                to: '#/paths/~1self'
+            operations:
+                deleted:
+                    - GET
+webhooks:
+    added:
+        - w2
+    modified:
+        w1:
+            ref:
+                from: ""
+                to: '#/webhooks/w2'
+            operations:
+                deleted:
+                    - POST
+endpoints:
+    deleted:
+        - method: GET
+          path: /a
+        - method: GET
+          path: /self
+

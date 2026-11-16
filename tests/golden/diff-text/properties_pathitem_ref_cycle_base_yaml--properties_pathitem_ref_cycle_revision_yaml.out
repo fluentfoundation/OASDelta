@@ -1,0 +1,11 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: 2
+------------------------
+GET /a  
+GET /self  
+
+### Modified Endpoints: None
+----------------------------
+

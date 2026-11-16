@@ -1,0 +1,39 @@
+# Fires request-body-default-value-added (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            nullable: true
+            type: boolean
+        Owner:
+            items:
+                description: "\a"
+                type: number
+            type: array
+info:
+    title: 챤猪٫싵䆁ឤ
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /v1/items:
+        put:
+            operationId: put_v1_items
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            default: '---'
+                            enum:
+                                - 20
+                                - 1
+                                - 9
+                            example: ""
+                            type: integer
+            responses:
+                "200":
+                    description: '| table |'
+                "500":
+                    description: status
+                default:
+                    description: pet
+            tags:
+                - kind

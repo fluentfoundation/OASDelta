@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    writeOnly:
+                                                        from: true
+                                                        to: false
+                                                    min:
+                                                        from: -8
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /pets
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        writeOnly:
+                                            from: true
+                                            to: false
+                                        min:
+                                            from: -8
+                                            to: null
+

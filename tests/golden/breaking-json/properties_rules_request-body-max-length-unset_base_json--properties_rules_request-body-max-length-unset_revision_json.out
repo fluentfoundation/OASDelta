@@ -1,0 +1,1 @@
+[{"id":"request-body-type-changed","text":"the request's body `type` changed from `string` to `number`","level":3,"operation":"PUT","operationId":"put_v1_items","path":"/v1/items","section":"paths","fingerprint":"fe832db7c57f"}]

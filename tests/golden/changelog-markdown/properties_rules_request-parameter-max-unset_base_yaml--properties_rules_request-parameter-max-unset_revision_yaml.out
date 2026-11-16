@@ -1,0 +1,19 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PUT /pets
+- :warning: the `query` request parameter `ключ` became not nullable
+-  `query` request parameter `ключ` list-of-types was widened by adding types `boolean`
+-  for the `query` request parameter `ключ`, the max was unset from `132.00`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

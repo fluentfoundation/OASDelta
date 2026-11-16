@@ -1,0 +1,2 @@
+::notice title=endpoint-reactivated,file=./properties/rules/endpoint-reactivated_revision.yaml::in API DELETE /owners/{ownerId}/pets endpoint reactivated
+

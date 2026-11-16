@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /pets/{petId}
+-  the `anyOf[subschema #1]/items/` request property `type` was widened from `string` to `any`
+
+
+
+
+
+

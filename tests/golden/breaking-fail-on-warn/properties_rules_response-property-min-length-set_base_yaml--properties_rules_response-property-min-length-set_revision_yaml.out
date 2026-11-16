@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[response-property-type-changed] at ./properties/rules/response-property-min-length-set_revision.yaml
+	in API POST /owners/{ownerId}/pets
+		the `items/` response's property `type` changed from `boolean` to `string` for status `400`
+
+

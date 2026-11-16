@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[request-parameter-list-of-types-widened] в ./properties/rules/request-parameter-min-items-unset_revision.yaml
+	в API PUT /search
+		список типов `cookie` параметра запроса `!tag` был расширен добавлением типов `integer`
+
+info	[request-parameter-min-items-unset] в ./properties/rules/request-parameter-min-items-unset_revision.yaml
+	в API PUT /search
+		значение minItems в `cookie` параметре запроса `!tag` удалено, предыдущее значение - `3`
+
+

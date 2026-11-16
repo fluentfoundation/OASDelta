@@ -1,0 +1,14 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /pets/{petId}
+-  the request's body maxItems was unset from `81`
+-  the `items/` request property `type` changed from `array<boolean/custom>` to `string` (backward compatible)
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### DELETE /items/{id}.json
+- :warning: the response's body minLength was unset from `2`
+- :warning: the response's body `type/format` changed from `string/date` to `number` for status `200`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

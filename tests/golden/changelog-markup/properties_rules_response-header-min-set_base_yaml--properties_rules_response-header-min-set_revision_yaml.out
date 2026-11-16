@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /pets/{petId}
+-  for the `cookie` request parameter `榶河鲠Ɯ㳦཮⒚`, the `format` was widened from `date-time` to `none`
+-  the `a/b` response header's min was set to `20.00` for the status `200`
+
+
+
+
+
+

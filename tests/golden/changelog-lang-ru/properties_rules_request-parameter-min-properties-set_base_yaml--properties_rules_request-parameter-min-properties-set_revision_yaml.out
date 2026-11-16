@@ -1,0 +1,7 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[request-parameter-min-properties-set] в ./properties/rules/request-parameter-min-properties-set_revision.yaml
+	в API POST /store/order
+		в `header` параметре запроса `status` задано значение minProperties в `14`
+		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+
+

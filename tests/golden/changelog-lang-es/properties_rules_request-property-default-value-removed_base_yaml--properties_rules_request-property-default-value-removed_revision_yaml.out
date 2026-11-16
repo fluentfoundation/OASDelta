@@ -1,0 +1,18 @@
+4 cambios: 0 error, 0 warning, 4 info
+info	[request-property-default-value-removed] en ./properties/rules/request-property-default-value-removed_revision.yaml
+	en API POST /pets
+		el valor por defecto `` fue removido de la propiedad de solicitud `9007199254740992.00`
+
+info	[request-property-min-unset] en ./properties/rules/request-property-default-value-removed_revision.yaml
+	en API POST /pets
+		el valor min de la propiedad de solicitud `status/oneOf[subschema #3]/` fue removido de `7.00`
+
+info	[request-property-reactivated] en ./properties/rules/request-property-default-value-removed_revision.yaml
+	en API POST /pets
+		propiedad de solicitud `status/oneOf[subschema #3]/` reactivada
+
+info	[request-property-type-generalized] en ./properties/rules/request-property-default-value-removed_revision.yaml
+	en API POST /pets
+		el `status/oneOf[subschema #3]/` de la propiedad de solicitud `type/format` fue ampliado de `integer, null/int64` a `any`
+
+

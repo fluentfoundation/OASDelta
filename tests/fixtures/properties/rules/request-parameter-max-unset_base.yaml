@@ -1,0 +1,126 @@
+# Fires request-parameter-max-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Pet:
+            description: status
+            format: custom
+            type: boolean
+info:
+    title: id
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /pets:
+        post:
+            description: name
+            parameters:
+                - deprecated: true
+                  description: pet
+                  in: header
+                  name: price
+                  required: false
+                  schema:
+                    $ref: '#/components/schemas/Pet'
+                - in: query
+                  name: 옦ᣄ⥚ූꝹ☌趐
+                  schema:
+                    items:
+                        $ref: '#/components/schemas/Pet'
+                    type: array
+            requestBody:
+                content:
+                    text/plain:
+                        schema:
+                            items:
+                                anyOf:
+                                    - type: number
+                                    - $ref: '#/components/schemas/Pet'
+                                    - maximum: 752
+                                      minimum: 9
+                                      type: number
+                            type: array
+                description: price
+            responses:
+                "200":
+                    content:
+                        '*/*':
+                            schema:
+                                $ref: '#/components/schemas/Pet'
+                    description: 名前
+                "204":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                properties:
+                                    ' ':
+                                        nullable: true
+                                        type: boolean
+                                    id:
+                                        additionalProperties: false
+                                        properties:
+                                            id:
+                                                description: owner
+                                                nullable: true
+                                                type: boolean
+                                            kind:
+                                                format: date-time
+                                                nullable: true
+                                                type: string
+                                            "null":
+                                                enum:
+                                                    - status
+                                                    - pet
+                                                maxLength: 55
+                                                pattern: ^.*$
+                                                type: string
+                                        required:
+                                            - kind
+                                        type: object
+                                    name:
+                                        type: object
+                                    "yes":
+                                        additionalProperties:
+                                            type: string
+                                        type: object
+                                required:
+                                    - name
+                                    - ' '
+                                type: object
+                        multipart/form-data:
+                            schema:
+                                default: 68
+                                enum:
+                                    - -38.875
+                                    - 42.5
+                                    - -83.875
+                                example: 名前
+                                nullable: true
+                                type: number
+                    description: 玮潑䕤
+                default:
+                    description: "\U0001F600"
+        put:
+            operationId: put_pets
+            parameters:
+                - description: Ünïcode
+                  in: query
+                  name: ключ
+                  schema:
+                    maximum: 132
+                    nullable: true
+                    type: number
+                - explode: false
+                  in: query
+                  name: 颶㎟ժ⤖ᙶ
+                  required: true
+                  schema:
+                    description: "yes"
+                    nullable: true
+                    pattern: ^.*$
+                    type: string
+            responses:
+                "400":
+                    description: "1e3"
+servers:
+    - url: /relative
+    - url: https://api.example.com/v2

@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[request-parameter-type-generalized] en ./properties/rules/response-header-min-set_revision.yaml
+	en API GET /pets/{petId}
+		para el parámetro `cookie` de solicitud `榶河鲠Ɯ㳦཮⒚`, el `format` fue ampliado de `date-time` a `none`
+
+info	[response-header-min-set] en ./properties/rules/response-header-min-set_revision.yaml
+	en API GET /pets/{petId}
+		el valor min del encabezado de respuesta `a/b` fue establecido en `20.00` para el estado `200`
+
+

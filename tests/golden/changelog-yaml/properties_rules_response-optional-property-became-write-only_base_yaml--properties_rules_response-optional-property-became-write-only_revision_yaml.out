@@ -1,0 +1,9 @@
+- id: response-optional-property-became-write-only
+  text: the response optional property `%20` became write-only for the status `500`
+  level: 1
+  operation: POST
+  operationId: post_v1_items
+  path: /v1/items
+  section: paths
+  fingerprint: e88b91db108f
+

@@ -1,0 +1,1 @@
+[{"id":"response-body-max-properties-set","text":"the response's body maxProperties was set to `11`","level":1,"operation":"GET","path":"/search","section":"paths","revisionSource":{"file":"./properties/rules/response-body-max-properties-set_revision.yaml","line":28,"column":33},"fingerprint":"106b85b3dad1"}]

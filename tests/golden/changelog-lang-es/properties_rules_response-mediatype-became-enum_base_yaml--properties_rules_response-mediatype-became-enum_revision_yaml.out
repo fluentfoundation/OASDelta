@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-mediatype-became-enum] en ./properties/rules/response-mediatype-became-enum_revision.yaml
+	en API POST /store/order
+		el esquema de respuesta `*/*` para el estado `400` fue restringido a una lista de valores enum
+
+

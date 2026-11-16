@@ -1,0 +1,69 @@
+# Fires response-property-deprecated (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            type: string
+    securitySchemes:
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: Ünïcode
+    version: v1
+openapi: 3.0.3
+paths:
+    /v1/items:
+        delete:
+            parameters:
+                - in: query
+                  name: 'trailing '
+                  schema:
+                    oneOf:
+                        - maximum: 724
+                          nullable: true
+                          type: number
+                        - $ref: '#/components/schemas/Error'
+                - in: header
+                  name: price
+                  schema:
+                    type: object
+            responses:
+                "200":
+                    content:
+                        '*/*':
+                            schema:
+                                description: '---'
+                                properties:
+                                    ㎖㹈ꃿ즡:
+                                        description: name
+                                        discriminator:
+                                            propertyName: "yes"
+                                        nullable: true
+                                        type: number
+                                    Ünïcode:
+                                        items:
+                                            type: boolean
+                                        type: array
+                                type: object
+                        application/vnd.api+json:
+                            schema:
+                                properties:
+                                    created:
+                                        deprecated: true
+                                        format: custom
+                                        nullable: true
+                                        type: boolean
+                                    pet:
+                                        type: object
+                                    毹⌃:
+                                        $ref: '#/components/schemas/Error'
+                                required:
+                                    - pet
+                                type: object
+                    description: kind
+            tags:
+                - status
+security:
+    - bearer: []
+servers:
+    - url: https://api.example.com

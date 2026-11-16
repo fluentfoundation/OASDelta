@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="request-property-const-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `price` request property const value `%20` was added</failure>
+    </testcase>
+    <testcase name="api-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api removed without deprecation</failure>
+    </testcase>
+    <testcase name="response-body-one-of-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added `subschema #1` to the response body `oneOf` list for the response status `201`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

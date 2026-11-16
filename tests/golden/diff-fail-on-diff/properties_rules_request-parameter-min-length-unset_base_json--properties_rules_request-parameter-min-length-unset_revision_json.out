@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/items/{id}.json":{"operations":{"modified":{"GET":{"parameters":{"modified":{"cookie":{"a/b":{"schema":{"minLength":{"from":5,"to":0}}}}}}}}}}}}}

@@ -1,0 +1,13 @@
+- id: request-parameter-became-optional
+  text: the `header` request parameter `tag` became optional
+  level: 1
+  operation: POST
+  operationId: post_v1_items
+  path: /v1/items
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-became-optional_base.yaml
+    line: 51
+    column: 19
+  fingerprint: 8328b6b9d6fa
+

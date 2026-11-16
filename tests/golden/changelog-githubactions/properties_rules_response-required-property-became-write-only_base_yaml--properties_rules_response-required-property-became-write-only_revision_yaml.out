@@ -1,0 +1,2 @@
+::error title=response-required-property-became-write-only,file=./properties/rules/response-required-property-became-write-only_revision.yaml,line=90,col=49::in API GET /pets/{petId} the response required property `名前/owner` became write-only for the status `204`
+

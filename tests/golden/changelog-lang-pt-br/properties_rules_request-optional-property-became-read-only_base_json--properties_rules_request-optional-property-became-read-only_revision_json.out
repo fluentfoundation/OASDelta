@@ -1,0 +1,7 @@
+1 alterações: 0 error, 1 warning, 0 info
+warning	[request-optional-property-became-read-only] em ./properties/rules/request-optional-property-became-read-only_revision.json
+	em API PATCH /store/order
+		a propriedade opcional de requisição `created/items/@at` tornou-se somente leitura (schema compartilhado: `Pet`, também em `pet/name/items/@at`)
+		Este é um aviso porque uma propriedade somente leitura não deve ser enviada em uma requisição, e a especificação deixa ao servidor decidir se a ignora ou rejeita a requisição. Clientes que a enviam podem ser rejeitados, ou descobrir que o valor enviado não é mais usado.
+
+

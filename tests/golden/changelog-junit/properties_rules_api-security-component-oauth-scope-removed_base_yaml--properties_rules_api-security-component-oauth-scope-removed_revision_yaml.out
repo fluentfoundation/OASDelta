@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="api-security-component-oauth-scope-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `oauth` oauth `clientCredentials` flow scope `write` was removed</failure>
+    </testcase>
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+    <testcase name="new-optional-request-parameter" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `query` request parameter `㿢몜짐躘훕綏冔⌰`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed-with-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `query` request parameter `pet` with deprecation</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

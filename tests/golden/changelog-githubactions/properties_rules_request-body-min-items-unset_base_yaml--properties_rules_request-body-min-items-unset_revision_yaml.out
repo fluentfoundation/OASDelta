@@ -1,0 +1,4 @@
+::error title=request-body-type-changed,file=./properties/rules/request-body-min-items-unset_revision.yaml,line=148,col=29::in API POST /pets the request's body `type` changed from `array<object>` to `object`
+::notice title=request-body-max-items-unset,file=./properties/rules/request-body-min-items-unset_revision.yaml::in API POST /pets the request's body maxItems was unset from `95`
+::notice title=request-body-min-items-unset,file=./properties/rules/request-body-min-items-unset_revision.yaml::in API POST /pets the request's body minItems was unset from `2`
+

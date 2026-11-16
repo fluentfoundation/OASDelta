@@ -1,0 +1,106 @@
+# Fires response-header-min-length-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            items:
+                $ref: '#/components/schemas/Error'
+            maxItems: 25
+            minItems: 1
+            type: array
+        Item:
+            description: price
+            enum:
+                - 13
+            format: int64
+            minimum: 6
+            type: integer
+        Pet:
+            description: a/b
+            properties:
+                ? "a\r\nb"
+                :   properties:
+                        '@at':
+                            type: integer
+                            writeOnly: true
+                        name:
+                            enum:
+                                - '[bracket]'
+                                - owner
+                                - pet
+                            type: string
+                    required:
+                        - name
+                    type: object
+                created:
+                    items:
+                        description: price
+                        enum:
+                            - 17
+                            - 13
+                        type: integer
+                    type: array
+                    uniqueItems: true
+            type: object
+info:
+    title: owner
+    version: v1
+openapi: 3.1.0
+paths:
+    /store/order:
+        delete:
+            operationId: delete_store_order
+            responses:
+                "204":
+                    description: 埦誀
+                "404":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                allOf:
+                                    - items:
+                                        description: created
+                                        format: custom
+                                        type: boolean
+                                      type: array
+                                    - $ref: '#/components/schemas/Item'
+                                    - type:
+                                        - boolean
+                                        - "null"
+                    description: kind
+                "500":
+                    content:
+                        '*/*':
+                            schema:
+                                items:
+                                    oneOf:
+                                        - type:
+                                            - boolean
+                                            - "null"
+                                        - description: ключ
+                                          type: number
+                                type: array
+                                uniqueItems: true
+                    description: id
+        get:
+            operationId: get_store_order
+            responses:
+                "400":
+                    description: 퇷γ⡜惰┘
+                "500":
+                    description: name
+                    headers:
+                        id:
+                            schema:
+                                minLength: 5
+                                type:
+                                    - string
+                                    - "null"
+                        罯:
+                            schema:
+                                description: 名前
+                                enum:
+                                    - id
+                                    - 名前
+                                    - '''single'''
+                                type: string
+            summary: '%20'

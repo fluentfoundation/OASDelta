@@ -1,0 +1,3 @@
+::warning title=response-body-all-of-removed,file=./properties/rules/response-body-type-specialized_revision.json::in API POST /ünïcode/ключ removed `subschema #1, subschema #2, subschema #3` from the response body `allOf` list for the response status `default`
+::notice title=response-body-type-specialized,file=./properties/rules/response-body-type-specialized_revision.json::in API POST /ünïcode/ключ the response's body `type` was narrowed from `any` to `object` for status `default`
+

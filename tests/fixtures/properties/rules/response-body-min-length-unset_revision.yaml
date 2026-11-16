@@ -1,0 +1,113 @@
+# Fires response-body-min-length-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            properties:
+                 nbsp:
+                    default: name
+                    description: '**bold**'
+                    nullable: true
+                    type: string
+                    writeOnly: true
+                ⽲睡莮:
+                    items:
+                        nullable: true
+                        type: string
+                    minItems: 0
+                    type: array
+                "yes":
+                    format: email
+                    type: string
+            required:
+                -  nbsp
+            type: object
+    securitySchemes:
+        api_key:
+            in: query
+            name: kind
+            type: apiKey
+info:
+    title: status
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        delete:
+            operationId: kind
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - deprecated: true
+                  in: query
+                  name: created
+                  schema:
+                    oneOf:
+                        - format: byte
+                          minLength: 0
+                          type: string
+                        - format: int64
+                          type: integer
+                        - deprecated: true
+                          nullable: true
+                          type: boolean
+                - in: query
+                  name: kind
+                  required: false
+                  schema:
+                    description: price
+                    nullable: true
+                    type: string
+                  style: pipeDelimited
+            responses:
+                "200":
+                    content:
+                        '*/*':
+                            schema:
+                                type: number
+                        multipart/form-data:
+                            schema:
+                                items:
+                                    items:
+                                        minimum: -4
+                                        type: number
+                                    minItems: 0
+                                    type: array
+                                    uniqueItems: true
+                                maxItems: 73
+                                type: array
+                    description: "0x1F"
+                    headers:
+                        kind:
+                            schema:
+                                type: number
+                "204":
+                    content:
+                        text/plain:
+                            schema:
+                                example: _under_
+                                maximum: 711
+                                type: integer
+                    description: "a\r\nb"
+                "404":
+                    description: "no"
+            summary: kind
+            tags:
+                - tag
+                - owner
+    /v1/items:
+        get:
+            description: tag
+            operationId: get_v1_items
+            responses:
+                "204":
+                    content:
+                        text/plain:
+                            schema:
+                                nullable: true
+                                type: number
+                    description: kind
+servers:
+    - url: /relative

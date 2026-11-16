@@ -1,0 +1,3 @@
+::error title=response-property-max-unset,file=./properties/rules/response-property-max-unset_revision.yaml::in API POST /ünïcode/ключ the `pet/ leading` response property's max was unset from `145.00` for the response status `500`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

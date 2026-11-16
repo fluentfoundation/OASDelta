@@ -1,0 +1,16 @@
+- id: request-optional-property-became-read-only
+  text: 'the request optional property `created/items/@at` became read-only (shared schema: `Pet`, also at `pet/name/items/@at`)'
+  comment: This is a warning because a read-only property should not be sent in a request, and the specification leaves it to the server whether to ignore it or reject the request. Clients that send it may be rejected, or find the value they send is no longer used.
+  sharedSchema:
+    name: Pet
+    properties:
+        - created/items/@at
+        - pet/name/items/@at
+    count: 2
+  level: 2
+  operation: PATCH
+  operationId: patch_store_order
+  path: /store/order
+  section: paths
+  fingerprint: ce33d155bf23
+

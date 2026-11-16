@@ -1,0 +1,10 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: 1
+------------------------
+DELETE /pets  
+
+### Modified Endpoints: None
+----------------------------
+

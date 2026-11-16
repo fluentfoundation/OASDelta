@@ -1,0 +1,1 @@
+[{"id":"response-property-enum-value-removed","text":"removed the `19.00` enum value from the `owner` response property for the response status `204`","level":1,"operation":"PUT","path":"/pets","section":"paths","baseSource":{"file":"./properties/rules/api-tag-added_base.yaml","line":113,"column":47},"fingerprint":"8fedbc9692e9"}]

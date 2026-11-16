@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[new-required-request-parameter] at ./properties/rules/response-property-max-properties-set_revision.yaml
+	in API POST /pets/{petId}
+		added the new required `cookie` request parameter `*star`
+
+

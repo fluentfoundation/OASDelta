@@ -1,0 +1,55 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            '*/*':
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            ㎖㹈ꃿ즡:
+                                                                discriminatorDiff:
+                                                                    added: true
+                                            application/vnd.api+json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            created:
+                                                                deprecated:
+                                                                    from: false
+                                                                    to: true
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /v1/items
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                '*/*':
+                                    schema:
+                                        properties:
+                                            modified:
+                                                ㎖㹈ꃿ즡:
+                                                    discriminatorDiff:
+                                                        added: true
+                                application/vnd.api+json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                created:
+                                                    deprecated:
+                                                        from: false
+                                                        to: true
+tags:
+    deleted:
+        - owner
+        - pet
+

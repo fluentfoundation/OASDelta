@@ -1,0 +1,47 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    PATCH:
+                        parameters:
+                            modified:
+                                header:
+                                    pet:
+                                        schema:
+                                            uniqueItems:
+                                                from: false
+                                                to: true
+                        responses:
+                            modified:
+                                2XX:
+                                    headers:
+                                        modified:
+                                            id:
+                                                schema:
+                                                    type:
+                                                        deleted:
+                                                            - string
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /v1/items
+        :   parameters:
+                modified:
+                    header:
+                        pet:
+                            schema:
+                                uniqueItems:
+                                    from: false
+                                    to: true
+            responses:
+                modified:
+                    2XX:
+                        headers:
+                            modified:
+                                id:
+                                    schema:
+                                        type:
+                                            deleted:
+                                                - string
+

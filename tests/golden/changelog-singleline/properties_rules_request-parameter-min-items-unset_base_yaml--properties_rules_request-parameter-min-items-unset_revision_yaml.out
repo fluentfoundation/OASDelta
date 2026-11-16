@@ -1,0 +1,6 @@
+2 changes: 0 error, 0 warning, 2 info
+info at ./properties/rules/request-parameter-min-items-unset_revision.yaml, in API PUT /search `cookie` request parameter `!tag` list-of-types was widened by adding types `integer` [request-parameter-list-of-types-widened]. 
+
+info at ./properties/rules/request-parameter-min-items-unset_revision.yaml, in API PUT /search for the `cookie` request parameter `!tag`, the minItems was unset from `3` [request-parameter-min-items-unset]. 
+
+

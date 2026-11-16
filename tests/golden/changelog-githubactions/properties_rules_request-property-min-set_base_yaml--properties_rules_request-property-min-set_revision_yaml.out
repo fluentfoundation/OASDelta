@@ -1,0 +1,2 @@
+::error title=request-property-min-set,file=./properties/rules/request-property-min-set_revision.yaml,line=84,col=41::in API POST /ünïcode/ключ the `items/null` request property's min was set to `-5.00`
+

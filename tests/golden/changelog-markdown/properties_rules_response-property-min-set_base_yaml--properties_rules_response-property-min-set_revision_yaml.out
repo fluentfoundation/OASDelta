@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /v1/items
+-  the `owner/price/items/名前` response property's min was set to `20.00` for the response status `500` (shared schema: `Item`, also at `owner/ключ/items/名前`)
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+[{"id":"response-body-min-properties-set","text":"the response's body minProperties was set to `10`","level":1,"operation":"DELETE","operationId":"delete_store_order","path":"/store/order","section":"paths","revisionSource":{"file":"./properties/rules/response-body-min-properties-set_revision.yaml","line":56,"column":33},"fingerprint":"55146f27552f"}]

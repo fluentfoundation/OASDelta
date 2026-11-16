@@ -1,0 +1,74 @@
+# Fires response-header-type-changed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            items:
+                type: object
+            type: array
+            uniqueItems: true
+        Owner:
+            readOnly: true
+            type:
+                - boolean
+                - "null"
+            writeOnly: true
+        Pet:
+            type: object
+    securitySchemes:
+        api_key:
+            in: header
+            name: "\U0001F600"
+            type: apiKey
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: price
+    version: v1
+openapi: 3.1.0
+paths:
+    /owners/{ownerId}/pets:
+        delete:
+            operationId: delete_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - explode: true
+                  in: header
+                  name: Ünïcode
+                  schema:
+                    allOf:
+                        - enum:
+                            - true
+                            - false
+                          format: custom
+                          type: boolean
+                        - type:
+                            - integer
+                            - "null"
+                - description: Ünïcode
+                  in: cookie
+                  name: 名前
+                  schema:
+                    items:
+                        default: 名前
+                        enum:
+                            - '[bracket]'
+                            - '---'
+                        type:
+                            - string
+                            - "null"
+                    type: array
+            responses:
+                "400":
+                    description: 酮嫌蕼ᅞ
+                    headers:
+                        "null":
+                            schema:
+                                minimum: 4
+                                type:
+                                    - number
+                                    - "null"

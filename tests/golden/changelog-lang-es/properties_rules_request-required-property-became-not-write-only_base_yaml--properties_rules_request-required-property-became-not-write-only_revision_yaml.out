@@ -1,0 +1,18 @@
+4 cambios: 0 error, 0 warning, 4 info
+info	[request-property-any-of-added] en ./properties/rules/request-required-property-became-not-write-only_revision.yaml
+	en API PUT /items/{id}.json
+		`subschema #1, subschema #2` fue agregado a la lista `anyOf` de la propiedad de solicitud `owner/status`
+
+info	[request-property-min-unset] en ./properties/rules/request-required-property-became-not-write-only_revision.yaml
+	en API PUT /items/{id}.json
+		el valor min de la propiedad de solicitud `owner/status` fue removido de `2.00`
+
+info	[request-property-type-generalized] en ./properties/rules/request-required-property-became-not-write-only_revision.yaml
+	en API PUT /items/{id}.json
+		el `owner/status` de la propiedad de solicitud `type` fue ampliado de `integer` a `any`
+
+info	[request-required-property-became-not-write-only] en ./properties/rules/request-required-property-became-not-write-only_revision.yaml
+	en API PUT /items/{id}.json
+		la propiedad requerida de solicitud `owner/status` dejó de ser de solo escritura
+
+

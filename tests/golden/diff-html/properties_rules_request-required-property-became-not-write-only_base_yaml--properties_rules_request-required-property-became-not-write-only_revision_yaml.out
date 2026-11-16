@@ -1,0 +1,50 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PUT /items/{id}.json</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/xml
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: owner
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: status
+<ul>
+<li>Property 'AnyOf' changed
+<ul>
+<li>Schemas added: subschema #1, subschema #2</li>
+</ul>
+</li>
+<li>Type changed from 'integer' to ''</li>
+<li>WriteOnly changed from true to false</li>
+<li>Min changed from 2 to null</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-body-max-items-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body maxItems was set to `11`</failure>
+    </testcase>
+    <testcase name="response-optional-property-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the optional property `items/즤ꇔ缦䎖糀䱢렄꧑` to the response with the `default` status</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

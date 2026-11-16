@@ -1,0 +1,9 @@
+- id: response-body-max-items-set
+  text: the response's body maxItems was set to `11`
+  level: 1
+  operation: DELETE
+  operationId: delete_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  fingerprint: 6ea95600e338
+

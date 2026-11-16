@@ -1,0 +1,14 @@
+3 cambios: 1 error, 0 warning, 2 info
+error	[request-parameter-became-required] en ./properties/rules/response-body-exclusive-max-set_revision.yaml
+	en API PUT /search
+		el parámetro `query` de solicitud `pet` se volvió requerido
+
+info	[request-parameter-became-nullable] en ./properties/rules/response-body-exclusive-max-set_revision.yaml
+	en API DELETE /v1/items
+		el parámetro de solicitud `cookie` `孱` se volvió nulable
+
+info	[response-body-exclusive-max-set] en ./properties/rules/response-body-exclusive-max-set_revision.yaml
+	en API DELETE /v1/items
+		el valor exclusiveMaximum del cuerpo de respuesta fue establecido en `23.00`
+
+

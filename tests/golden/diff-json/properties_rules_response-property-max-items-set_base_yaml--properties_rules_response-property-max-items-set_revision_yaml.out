@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/search":{"operations":{"modified":{"PUT":{"responses":{"modified":{"500":{"content":{"modified":{"application/json; charset=utf-8":{"schema":{"oneOf":{"modified":[{"base":{"index":0},"revision":{"index":0},"diff":{"properties":{"modified":{"a: b":{"maxItems":{"from":null,"to":19}}}}}}]}}}}}}}}}}}}}}}

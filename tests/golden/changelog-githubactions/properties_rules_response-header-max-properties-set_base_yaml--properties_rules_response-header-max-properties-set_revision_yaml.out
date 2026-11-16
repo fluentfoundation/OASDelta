@@ -1,0 +1,2 @@
+::notice title=response-header-max-properties-set,file=./properties/rules/response-header-max-properties-set_revision.yaml::in API PUT /v1/items the `id` response header's maxProperties was set to `19` for the status `204`
+

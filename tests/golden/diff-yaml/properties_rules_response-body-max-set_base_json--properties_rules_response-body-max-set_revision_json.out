@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    max:
+                                                        from: null
+                                                        to: 21
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /owners/{ownerId}/pets
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        max:
+                                            from: null
+                                            to: 21
+

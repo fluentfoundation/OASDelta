@@ -1,0 +1,2 @@
+::error title=api-security-component-type-changed,file=./properties/rules/api-security-component-type-changed_revision.yaml,line=36,col=9::in API   the component security scheme `bearer` type changed from `http` to ``
+

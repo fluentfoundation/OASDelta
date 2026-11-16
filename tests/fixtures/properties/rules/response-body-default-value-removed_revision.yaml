@@ -1,0 +1,88 @@
+# Fires response-body-default-value-removed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Pet:
+            properties:
+                ' leading':
+                    description: 名前
+                    enum:
+                        - -1
+                        - 8
+                        - 13
+                        - 3
+                    readOnly: true
+                    type:
+                        - integer
+                        - "null"
+                '|':
+                    $ref: '#/components/schemas/Pet'
+                created:
+                    enum:
+                        - 3
+                    example: kind
+                    type:
+                        - integer
+                        - "null"
+                owner:
+                    deprecated: true
+                    maximum: 549
+                    type:
+                        - integer
+                        - "null"
+            required:
+                - owner
+                - ' leading'
+                - created
+            type: object
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: created
+            type: apiKey
+        oauth:
+            flows:
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: name
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /v1/items:
+        get:
+            parameters:
+                - description: ключ
+                  in: query
+                  name: tag
+                  schema:
+                    items:
+                        type: number
+                        writeOnly: true
+                    type: array
+                  style: form
+                - in: header
+                  name: name
+                  schema:
+                    enum:
+                        - '**bold**'
+                        - owner
+                        - ઞő간캽뇿ᗰ
+                        - kind
+                    maxLength: 44
+                    pattern: (
+                    type:
+                        - string
+                        - "null"
+            responses:
+                "201":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                type: string
+                    description: ' '
+servers:
+    - url: https://api.example.com/v2

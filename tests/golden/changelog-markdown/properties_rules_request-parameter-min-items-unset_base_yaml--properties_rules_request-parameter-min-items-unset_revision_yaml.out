@@ -1,0 +1,14 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /search
+-  `cookie` request parameter `!tag` list-of-types was widened by adding types `integer`
+-  for the `cookie` request parameter `!tag`, the minItems was unset from `3`
+
+
+
+
+
+

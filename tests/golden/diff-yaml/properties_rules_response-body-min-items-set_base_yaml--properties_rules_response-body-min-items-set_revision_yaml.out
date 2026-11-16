@@ -1,0 +1,35 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            deleted: true
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            multipart/form-data:
+                                                schema:
+                                                    minItems:
+                                                        from: 0
+                                                        to: 16
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /search
+        :   requestBody:
+                deleted: true
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                multipart/form-data:
+                                    schema:
+                                        minItems:
+                                            from: 0
+                                            to: 16
+

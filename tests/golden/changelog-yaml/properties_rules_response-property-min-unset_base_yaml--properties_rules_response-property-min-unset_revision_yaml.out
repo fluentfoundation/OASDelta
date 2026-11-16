@@ -1,0 +1,13 @@
+- id: response-property-min-unset
+  text: the `<b>&amp;/1e3` response property's min was unset from `9.00` for the response status `201`
+  level: 3
+  operation: DELETE
+  operationId: delete_store_order
+  path: /store/order
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-property-min-unset_base.yaml
+    line: 52
+    column: 49
+  fingerprint: df7974bf7d11
+

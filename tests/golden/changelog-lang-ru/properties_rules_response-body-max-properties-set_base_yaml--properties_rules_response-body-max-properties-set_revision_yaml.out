@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-body-max-properties-set] в ./properties/rules/response-body-max-properties-set_revision.yaml
+	в API GET /search
+		у тела ответа задано значение maxProperties в `11`
+
+

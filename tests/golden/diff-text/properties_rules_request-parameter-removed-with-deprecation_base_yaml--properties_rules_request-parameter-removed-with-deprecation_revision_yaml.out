@@ -1,0 +1,16 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /pets/{petId}
+- New cookie param: **bold**
+- Deleted query param: **bold**
+
+GET /v1/items
+- Deleted query param: 䔫䪐뫑襖
+
+

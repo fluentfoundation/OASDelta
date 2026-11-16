@@ -1,0 +1,26 @@
+6 cambios: 1 error, 3 warning, 2 info
+error	[request-body-type-changed] en ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+	en API PUT /store/order
+		el `type` del cuerpo de solicitud fue cambiado de `object` a `array<string>`
+
+warning	[request-property-removed] en ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+	en API PUT /store/order
+		removida la propiedad de solicitud `...`
+
+warning	[request-property-removed] en ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+	en API PUT /store/order
+		removida la propiedad de solicitud `C:\path`
+
+warning	[request-property-removed] en ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+	en API PUT /store/order
+		removida la propiedad de solicitud `kind`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[request-property-removed-with-deprecation] en ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+	en API PUT /store/order
+		removida la propiedad de solicitud deprecada `id`
+
+

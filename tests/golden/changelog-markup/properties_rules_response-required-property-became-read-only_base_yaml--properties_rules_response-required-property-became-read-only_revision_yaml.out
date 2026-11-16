@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /search
+-  the response required property `anyOf[subschema #1]/created` became read-only for the status `default`
+
+
+
+
+
+

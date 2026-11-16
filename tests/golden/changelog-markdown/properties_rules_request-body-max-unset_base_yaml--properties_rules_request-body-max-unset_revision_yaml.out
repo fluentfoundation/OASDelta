@@ -1,0 +1,14 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /search
+- :warning: the request's body `type` changed from `integer` to `array<string>`
+-  the request's body max was unset from `938.00`
+
+
+
+
+
+

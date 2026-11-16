@@ -1,0 +1,2 @@
+::error title=required-response-header-removed,file=./properties/rules/required-response-header-removed_revision.yaml::in API GET /pets/{petId} the mandatory response header `<b>&amp;` removed for the status `404`
+

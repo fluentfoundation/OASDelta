@@ -1,0 +1,102 @@
+# Fires response-required-property-became-read-only (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            description: 洃㇌萏␓聁
+            properties:
+                Ünïcode:
+                    format: uuid
+                    type: string
+                    writeOnly: true
+                ключ:
+                    allOf:
+                        - deprecated: true
+                          format: custom
+                          type: boolean
+                        - format: int32
+                          type: integer
+                        - default: 0.1
+                          enum:
+                            - 44
+                          minimum: 10
+                          type: number
+                ᗿ遳:
+                    type: number
+            required:
+                - ᗿ遳
+                - ключ
+                - Ünïcode
+            type: object
+info:
+    title: pet
+    version: v1
+openapi: 3.1.0
+paths:
+    /search:
+        delete:
+            description: Ünïcode
+            operationId: delete_search
+            parameters:
+                - in: cookie
+                  name: created
+                  schema:
+                    deprecated: true
+                    type: boolean
+                - in: query
+                  name: status
+                  schema:
+                    additionalProperties: false
+                    description: 名前
+                    properties:
+                        pet:
+                            format: custom
+                            type:
+                                - boolean
+                                - "null"
+                        됓篃:
+                            type:
+                                - boolean
+                                - "null"
+                    required:
+                        - 됓篃
+                    type: object
+            responses:
+                "404":
+                    description: 名前
+                default:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                anyOf:
+                                    - additionalProperties: false
+                                      properties:
+                                        created:
+                                            type: integer
+                                        名前:
+                                            format: float
+                                            maximum: 315
+                                            minimum: 1
+                                            type: number
+                                      required:
+                                        - created
+                                      type: object
+                                    - items:
+                                        deprecated: true
+                                        minimum: 0
+                                        type: number
+                                      type: array
+                                    - deprecated: true
+                                      description: owner
+                                      properties:
+                                        name:
+                                            $ref: '#/components/schemas/Owner'
+                                      type: object
+                                      x-extensible-enum:
+                                        - '!tag'
+                        application/vnd.api+json:
+                            schema:
+                                description: created
+                                pattern: \d{3}
+                                type: string
+                    description: "null"
+            summary: ключ

@@ -1,0 +1,307 @@
+{
+  "components": {
+    "schemas": {
+      "Item": {
+        "items": {
+          "properties": {
+            "**bold**": {
+              "deprecated": true,
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "name": {
+              "type": "integer"
+            },
+            "pet": {
+              "type": "boolean"
+            },
+            "status": {
+              "description": "ключ",
+              "format": "date",
+              "type": "string"
+            }
+          },
+          "required": [
+            "**bold**"
+          ],
+          "type": "object"
+        },
+        "maxItems": 95,
+        "minItems": 2,
+        "type": "array"
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "basic",
+        "type": "http"
+      },
+      "oauth": {
+        "flows": {
+          "clientCredentials": {
+            "scopes": {
+              "read": "read access",
+              "write": "write access"
+            },
+            "tokenUrl": "https://auth.example.com/token"
+          }
+        },
+        "type": "oauth2"
+      }
+    }
+  },
+  "info": {
+    "title": "owner",
+    "version": "2.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/pets": {
+      "delete": {
+        "operationId": "delete_pets",
+        "parameters": [
+          {
+            "description": "owner",
+            "in": "header",
+            "name": "\u003cb\u003e\u0026amp;",
+            "schema": {
+              "description": "%20",
+              "properties": {
+                "---": {
+                  "format": "int64",
+                  "maximum": 92,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "---"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "in": "header",
+            "name": "@at",
+            "schema": {
+              "items": {
+                "description": "name",
+                "format": "email",
+                "minLength": 2,
+                "type": "string"
+              },
+              "minItems": 3,
+              "type": "array"
+            },
+            "style": "simple"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "properties": {
+                    "%20": {
+                      "oneOf": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        {
+                          "format": "custom",
+                          "type": [
+                            "boolean",
+                            "null"
+                          ]
+                        }
+                      ]
+                    },
+                    "trailing ": {
+                      "properties": {
+                        "pet": {
+                          "example": "\u0026anchor",
+                          "format": "float",
+                          "maximum": 637,
+                          "minimum": 10,
+                          "type": "number"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "trailing "
+                  ],
+                  "type": "object"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "minimum": -1,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "pet"
+          },
+          "404": {
+            "description": "a\r\nb"
+          },
+          "500": {
+            "description": "名前"
+          }
+        }
+      },
+      "post": {
+        "deprecated": true,
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "owner",
+            "schema": {
+              "minimum": 8,
+              "type": "number"
+            }
+          },
+          {
+            "explode": false,
+            "in": "header",
+            "name": "@at",
+            "schema": {
+              "properties": {
+                "no": {
+                  "$ref": "#/components/schemas/Item"
+                },
+                "price": {
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "tag": {
+                  "description": "a\r\nb",
+                  "type": "integer"
+                },
+                "Ünïcode": {
+                  "$ref": "#/components/schemas/Item"
+                }
+              },
+              "required": [
+                "Ünïcode"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Item"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "deprecated": true,
+                "format": "email",
+                "minLength": 0,
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "writeOnly": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "properties": {
+                    "a\r\nb": {
+                      "properties": {
+                        "ꔍ஻㰗㗨쒥ꯐ": {
+                          "description": "艨`꺴좎⿭ၣ岛欍",
+                          "maximum": 164,
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "price": {
+                      "items": {
+                        "deprecated": true,
+                        "type": "number"
+                      },
+                      "minItems": 0,
+                      "type": "array"
+                    },
+                    "Ünïcode": {
+                      "properties": {
+                        "a~b": {
+                          "$ref": "#/components/schemas/Item"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Ȃ俛詟⿉"
+          },
+          "404": {
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "items": {
+                    "items": {
+                      "$ref": "#/components/schemas/Item"
+                    },
+                    "type": "array"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "id"
+          }
+        }
+      }
+    }
+  }
+}

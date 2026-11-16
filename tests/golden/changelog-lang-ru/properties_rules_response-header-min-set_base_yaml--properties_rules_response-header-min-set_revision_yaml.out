@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[request-parameter-type-generalized] в ./properties/rules/response-header-min-set_revision.yaml
+	в API GET /pets/{petId}
+		в параметре запроса `cookie` `榶河鲠Ɯ㳦཮⒚` `format` расширен с `date-time` до `none`
+
+info	[response-header-min-set] в ./properties/rules/response-header-min-set_revision.yaml
+	в API GET /pets/{petId}
+		у заголовка ответа `a/b` задано значение min в `20.00` для статуса `200`
+
+

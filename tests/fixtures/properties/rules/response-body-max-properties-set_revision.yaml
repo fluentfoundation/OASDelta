@@ -1,0 +1,38 @@
+# Fires response-body-max-properties-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        oauth:
+            flows:
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: kind
+    version: v1
+openapi: 3.1.0
+paths:
+    /search:
+        get:
+            description: 炨櫅鮲原흹
+            responses:
+                "204":
+                    description: "x\ty"
+                "400":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                maxProperties: 11
+                                type: number
+                    description: ключ
+            tags:
+                - status
+        patch:
+            responses:
+                default:
+                    description: "a\r\nb"
+            security:
+                - oauth: []

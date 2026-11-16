@@ -1,0 +1,23 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "204":
+                                    headers:
+                                        added:
+                                            - owner
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "204":
+                        headers:
+                            added:
+                                - owner
+

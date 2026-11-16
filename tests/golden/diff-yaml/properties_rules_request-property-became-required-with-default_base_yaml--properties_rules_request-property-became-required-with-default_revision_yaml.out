@@ -1,0 +1,29 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/xml:
+                                        schema:
+                                            required:
+                                                stringsdiff:
+                                                    added:
+                                                        - created
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        application/xml:
+                            schema:
+                                required:
+                                    stringsdiff:
+                                        added:
+                                            - created
+

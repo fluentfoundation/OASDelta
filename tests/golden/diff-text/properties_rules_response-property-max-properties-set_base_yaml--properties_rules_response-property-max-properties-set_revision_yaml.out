@@ -1,0 +1,22 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+DELETE /pets/{petId}
+- Description changed from '' to 'kind'
+
+POST /pets/{petId}
+- New cookie param: *star
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/vnd.api+json
+        - Schema changed
+          - Items changed
+            - MaxProps changed from null to 13
+
+

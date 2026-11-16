@@ -1,0 +1,2 @@
+::notice title=response-body-min-length-set,file=./properties/rules/response-body-min-length-set_revision.yaml,line=33,col=33::in API POST /pets the response's body minLength was set to `14`
+

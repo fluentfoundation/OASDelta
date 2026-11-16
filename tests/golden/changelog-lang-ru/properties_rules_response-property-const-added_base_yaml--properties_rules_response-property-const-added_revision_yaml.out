@@ -1,0 +1,7 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-property-const-added] в ./properties/rules/response-property-const-added_revision.yaml
+	в API GET /pets
+		свойство ответа `` получило значение const `tag` для статуса `404`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

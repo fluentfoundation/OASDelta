@@ -1,0 +1,2 @@
+::warning title=request-required-property-became-read-only,file=./properties/rules/request-required-property-became-read-only_revision.yaml,line=13,col=13::in API PATCH /pets/{petId} the request required property `allOf[subschema #3]/릇䍱琨압蝪颯` became read-only
+

@@ -1,0 +1,51 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                default:
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-8:
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - boolean
+                                                        deleted:
+                                                            - array
+                                                    uniqueItems:
+                                                        from: true
+                                                        to: false
+                                                    maxItems:
+                                                        from: 83
+                                                        to: null
+                                                    items:
+                                                        schemaDeleted: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    default:
+                        content:
+                            modified:
+                                application/json; charset=utf-8:
+                                    schema:
+                                        type:
+                                            added:
+                                                - boolean
+                                            deleted:
+                                                - array
+                                        uniqueItems:
+                                            from: true
+                                            to: false
+                                        maxItems:
+                                            from: 83
+                                            to: null
+                                        items:
+                                            schemaDeleted: true
+

@@ -1,0 +1,33 @@
+- id: response-property-list-of-types-widened
+  text: response property `items/` list-of-types was widened by adding types `integer` to media type `multipart/form-data` of response `500`
+  level: 3
+  operation: DELETE
+  operationId: delete_ünïcode_ключ
+  path: /ünïcode/ключ
+  section: paths
+  fingerprint: 5a343e71ac31
+- id: response-property-max-items-unset
+  text: the `items/` response property's maxItems was unset from `32` for the response status `500`
+  level: 3
+  operation: DELETE
+  operationId: delete_ünïcode_ключ
+  path: /ünïcode/ключ
+  section: paths
+  fingerprint: b9f7ee754061
+- id: response-property-min-items-unset
+  text: the `items/` response property's minItems was unset from `3` for the response status `500`
+  level: 3
+  operation: DELETE
+  operationId: delete_ünïcode_ключ
+  path: /ünïcode/ключ
+  section: paths
+  fingerprint: b704d3a078ee
+- id: response-property-unique-items-unset
+  text: the `items/` response property's uniqueItems was unset for the response status `500`
+  level: 3
+  operation: DELETE
+  operationId: delete_ünïcode_ключ
+  path: /ünïcode/ключ
+  section: paths
+  fingerprint: 87a7b238e7f8
+

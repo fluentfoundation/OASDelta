@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /ünïcode/ключ
+-  the `` response's property default value `45.00` was added for the status `204`
+
+
+
+
+
+

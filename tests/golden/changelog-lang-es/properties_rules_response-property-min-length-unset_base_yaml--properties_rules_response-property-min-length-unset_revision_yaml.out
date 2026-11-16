@@ -1,0 +1,32 @@
+6 cambios: 0 error, 2 warning, 4 info
+warning	[response-property-min-length-unset] en ./properties/rules/response-property-min-length-unset_revision.yaml
+	en API POST /items/{id}.json
+		el valor minLength de la propiedad de respuesta `oneOf[subschema #1]/` fue removido de `1` para el estado `404`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+warning	[response-property-type-changed] en ./properties/rules/response-property-min-length-unset_revision.yaml
+	en API POST /items/{id}.json
+		el `oneOf[subschema #1]/` de la propiedad de respuesta `type` fue cambiado de `string, null` a `any` para el estado `404`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+info	[response-property-all-of-added] en ./properties/rules/response-property-min-length-unset_revision.yaml
+	en API POST /items/{id}.json
+		`subschema #1, subschema #2` fue agregado a la lista `allOf` de la propiedad de respuesta `oneOf[subschema #1]/` para el estado `404`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+info	[response-property-enum-value-removed] en ./properties/rules/response-property-min-length-unset_revision.yaml
+	en API POST /items/{id}.json
+		removido el valor enum ` leading` de la propiedad de respuesta `oneOf[subschema #1]/` para el estado `404`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+info	[response-property-enum-value-removed] en ./properties/rules/response-property-min-length-unset_revision.yaml
+	en API POST /items/{id}.json
+		removido el valor enum `| table |` de la propiedad de respuesta `oneOf[subschema #1]/` para el estado `404`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+info	[response-property-enum-value-removed] en ./properties/rules/response-property-min-length-unset_revision.yaml
+	en API POST /items/{id}.json
+		removido el valor enum `徴` de la propiedad de respuesta `oneOf[subschema #1]/` para el estado `404`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+

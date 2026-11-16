@@ -1,0 +1,47 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "404":
+                                    content:
+                                        modified:
+                                            multipart/form-data:
+                                                schema:
+                                                    items:
+                                                        allOf:
+                                                            modified:
+                                                                - base:
+                                                                    index: 0
+                                                                  revision:
+                                                                    index: 0
+                                                                  diff:
+                                                                    const:
+                                                                        from: null
+                                                                        to: tag
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   responses:
+                modified:
+                    "404":
+                        content:
+                            modified:
+                                multipart/form-data:
+                                    schema:
+                                        items:
+                                            allOf:
+                                                modified:
+                                                    - base:
+                                                        index: 0
+                                                      revision:
+                                                        index: 0
+                                                      diff:
+                                                        const:
+                                                            from: null
+                                                            to: tag
+

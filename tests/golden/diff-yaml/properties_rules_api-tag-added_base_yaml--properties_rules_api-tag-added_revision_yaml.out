@@ -1,0 +1,61 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    DELETE:
+                        extensions:
+                            added:
+                                - x-sunset
+                        tags:
+                            added:
+                                - id
+                        deprecated:
+                            from: false
+                            to: true
+        /pets:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            owner:
+                                                                enum:
+                                                                    deleted:
+                                                                        - 19
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /items/{id}.json
+        :   extensions:
+                added:
+                    - x-sunset
+            tags:
+                added:
+                    - id
+            deprecated:
+                from: false
+                to: true
+        ?   method: PUT
+            path: /pets
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                owner:
+                                                    enum:
+                                                        deleted:
+                                                            - 19
+

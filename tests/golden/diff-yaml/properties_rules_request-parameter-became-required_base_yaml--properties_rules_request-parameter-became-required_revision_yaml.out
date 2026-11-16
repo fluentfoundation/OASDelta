@@ -1,0 +1,25 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    DELETE:
+                        parameters:
+                            modified:
+                                query:
+                                    ◊愽貺䫔:
+                                        required:
+                                            from: false
+                                            to: true
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /search
+        :   parameters:
+                modified:
+                    query:
+                        ◊愽貺䫔:
+                            required:
+                                from: false
+                                to: true
+

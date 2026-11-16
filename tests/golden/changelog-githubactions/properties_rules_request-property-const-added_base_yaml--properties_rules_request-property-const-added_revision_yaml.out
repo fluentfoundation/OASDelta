@@ -1,0 +1,4 @@
+::error title=request-property-const-added,file=./properties/rules/request-property-const-added_revision.yaml,line=52,col=37::in API POST /pets/{petId} the `price` request property const value `%2520` was added
+::error title=api-removed-without-deprecation,file=./properties/rules/request-property-const-added_base.yaml::in API GET /store/order api removed without deprecation
+::error title=response-body-one-of-added,file=./properties/rules/request-property-const-added_revision.yaml,line=162,col=39::in API PUT /store/order added `subschema #1` to the response body `oneOf` list for the response status `201`
+

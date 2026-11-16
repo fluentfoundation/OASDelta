@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /pets/{petId}
+- :warning: the mandatory response header `<b>&amp;` removed for the status `404`
+
+
+
+
+
+

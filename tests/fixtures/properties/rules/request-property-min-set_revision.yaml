@@ -1,0 +1,113 @@
+# Fires request-property-min-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: owner
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /ünïcode/ключ:
+        post:
+            operationId: post_ünïcode_ключ
+            parameters:
+                - in: header
+                  name: name
+                  required: true
+                  schema:
+                    description: 瘃
+                    properties:
+                        kind:
+                            default: name
+                            deprecated: true
+                            enum:
+                                - status
+                            format: binary
+                            nullable: true
+                            type: string
+                        price:
+                            format: double
+                            nullable: true
+                            type: number
+                    required:
+                        - kind
+                    type: object
+                - explode: true
+                  in: header
+                  name: ‮abc
+                  required: true
+                  schema:
+                    items:
+                        nullable: true
+                        type: boolean
+                    type: array
+                - in: header
+                  name: '%20'
+                  required: false
+                  schema:
+                    discriminator:
+                        propertyName: 名前
+                    oneOf:
+                        - format: int64
+                          maximum: 826
+                          nullable: true
+                          type: integer
+                        - default: 13
+                          deprecated: true
+                          description: tag
+                          example: ключ
+                          format: int32
+                          maximum: 394
+                          nullable: true
+                          type: integer
+                        - nullable: true
+                          type: integer
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            description: 名前
+                            properties:
+                                '&anchor':
+                                    enum:
+                                        - true
+                                        - false
+                                    readOnly: true
+                                    type: boolean
+                                    writeOnly: true
+                            type: object
+                    application/xml:
+                        schema:
+                            items:
+                                properties:
+                                    '-':
+                                        nullable: true
+                                        type: boolean
+                                    "null":
+                                        minimum: -5
+                                        nullable: true
+                                        type: boolean
+                                    tag:
+                                        type: string
+                                    ᑻ焅摋哀탖釣爟:
+                                        default: 튡娛헓๶
+                                        deprecated: true
+                                        description: 依陌㉙럓₱
+                                        nullable: true
+                                        type: string
+                                required:
+                                    - "null"
+                                type: object
+                            type: array
+                required: true
+            responses:
+                "404":
+                    content:
+                        application/json:
+                            schema:
+                                description: '#hash'
+                                format: float
+                                maximum: 585
+                                type: number
+                    description: "null"
+            summary: "no"
+            tags:
+                - status
+                - kind

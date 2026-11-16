@@ -1,0 +1,33 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    '*/*':
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    '[bracket]':
+                                                        default:
+                                                            from: pet
+                                                            to: 91
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets/{petId}
+        :   requestBody:
+                content:
+                    modified:
+                        '*/*':
+                            schema:
+                                properties:
+                                    modified:
+                                        '[bracket]':
+                                            default:
+                                                from: pet
+                                                to: 91
+

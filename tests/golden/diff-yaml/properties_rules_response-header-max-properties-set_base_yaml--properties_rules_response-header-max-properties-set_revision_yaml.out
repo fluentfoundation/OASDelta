@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "204":
+                                    headers:
+                                        modified:
+                                            id:
+                                                schema:
+                                                    maxProps:
+                                                        from: null
+                                                        to: 19
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /v1/items
+        :   responses:
+                modified:
+                    "204":
+                        headers:
+                            modified:
+                                id:
+                                    schema:
+                                        maxProps:
+                                            from: null
+                                            to: 19
+

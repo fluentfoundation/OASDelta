@@ -1,0 +1,15 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /items/{id}.json
+- :warning: added the new required `header` request parameter `id`
+- :warning: deleted the `path` request parameter `id`
+-  `query` request parameter `status` was reactivated
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "500":
+                                    content:
+                                        modified:
+                                            multipart/form-data:
+                                                schema:
+                                                    items:
+                                                        anyOf:
+                                                            added:
+                                                                - index: 0
+                                                                - index: 1
+                                                        type:
+                                                            deleted:
+                                                                - array
+                                                        uniqueItems:
+                                                            from: true
+                                                            to: false
+                                                        minItems:
+                                                            from: 3
+                                                            to: 0
+                                                        maxItems:
+                                                            from: 32
+                                                            to: null
+                                                        items:
+                                                            schemaDeleted: true
+                                                        listOfTypes:
+                                                            added:
+                                                                - integer
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "500":
+                        content:
+                            modified:
+                                multipart/form-data:
+                                    schema:
+                                        items:
+                                            anyOf:
+                                                added:
+                                                    - index: 0
+                                                    - index: 1
+                                            type:
+                                                deleted:
+                                                    - array
+                                            uniqueItems:
+                                                from: true
+                                                to: false
+                                            minItems:
+                                                from: 3
+                                                to: 0
+                                            maxItems:
+                                                from: 32
+                                                to: null
+                                            items:
+                                                schemaDeleted: true
+                                            listOfTypes:
+                                                added:
+                                                    - integer
+

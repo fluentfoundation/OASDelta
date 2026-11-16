@@ -1,0 +1,14 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /items/{id}.json
+-  the response optional property `a
+b` became read-only for the status `204`
+
+
+
+
+
+

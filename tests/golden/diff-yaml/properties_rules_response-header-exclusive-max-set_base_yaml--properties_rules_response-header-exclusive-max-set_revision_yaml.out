@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "204":
+                                    headers:
+                                        modified:
+                                            '`tick`':
+                                                schema:
+                                                    type:
+                                                        deleted:
+                                                            - "null"
+                                                    exclusiveMax:
+                                                        from: null
+                                                        to: 38
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /store/order
+        :   responses:
+                modified:
+                    "204":
+                        headers:
+                            modified:
+                                '`tick`':
+                                    schema:
+                                        type:
+                                            deleted:
+                                                - "null"
+                                        exclusiveMax:
+                                            from: null
+                                            to: 38
+

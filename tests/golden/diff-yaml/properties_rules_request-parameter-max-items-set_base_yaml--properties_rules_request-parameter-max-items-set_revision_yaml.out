@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    tag:
+                                        schema:
+                                            maxItems:
+                                                from: null
+                                                to: 15
+endpoints:
+    modified:
+        ?   method: GET
+            path: /search
+        :   parameters:
+                modified:
+                    query:
+                        tag:
+                            schema:
+                                maxItems:
+                                    from: null
+                                    to: 15
+

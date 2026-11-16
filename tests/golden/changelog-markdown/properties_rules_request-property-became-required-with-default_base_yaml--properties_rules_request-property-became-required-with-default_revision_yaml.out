@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PUT /pets
+- :warning: the request property `created` with a default value became required
+
+
+
+
+
+

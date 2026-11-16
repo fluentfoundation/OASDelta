@@ -1,0 +1,14 @@
+3 changes: 2 error, 0 warning, 1 info
+error	[response-body-max-unset] at ./properties/rules/response-body-max-unset_revision.yaml
+	in API POST /pets
+		the response's body max was unset from `59.00`
+
+error	[response-body-type-changed] at ./properties/rules/response-body-max-unset_revision.yaml
+	in API POST /pets
+		the response's body `type/format` changed from `number, null/double` to `string` for status `200`
+
+info	[response-body-became-not-nullable] at ./properties/rules/response-body-max-unset_revision.yaml
+	in API POST /pets
+		the response's body became not nullable
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="request-optional-property-became-read-only" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request optional property `created/items/@at` became read-only (shared schema: `Pet`, also at `pet/name/items/@at`)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-header-max-items-set] en ./properties/rules/response-header-max-items-set_revision.yaml
+	en API DELETE /pets/{petId}
+		el valor maxItems del encabezado de respuesta `kind` fue establecido en `11` para el estado `404`
+
+

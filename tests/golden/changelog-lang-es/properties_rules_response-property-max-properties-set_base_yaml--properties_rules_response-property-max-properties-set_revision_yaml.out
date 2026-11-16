@@ -1,0 +1,10 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[new-required-request-parameter] en ./properties/rules/response-property-max-properties-set_revision.yaml
+	en API POST /pets/{petId}
+		agregado el nuevo parámetro `cookie` de solicitud requerido `*star`
+
+info	[response-property-max-properties-set] en ./properties/rules/response-property-max-properties-set_revision.yaml
+	en API POST /pets/{petId}
+		el valor maxProperties de la propiedad de respuesta `items/` fue establecido en `13` para el estado `200`
+
+

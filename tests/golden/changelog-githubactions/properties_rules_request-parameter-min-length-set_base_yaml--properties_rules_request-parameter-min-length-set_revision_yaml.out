@@ -1,0 +1,2 @@
+::error title=request-parameter-min-length-set,file=./properties/rules/request-parameter-min-length-set_revision.yaml,line=50,col=21::in API PATCH /v1/items for the `query` request parameter `price`, the minLength was set to `18`
+

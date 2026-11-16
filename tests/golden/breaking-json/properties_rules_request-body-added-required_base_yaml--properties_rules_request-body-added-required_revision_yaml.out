@@ -1,0 +1,1 @@
+[{"id":"request-body-added-required","text":"added required request body","level":3,"operation":"PATCH","path":"/store/order","section":"paths","revisionSource":{"file":"./properties/rules/request-body-added-required_revision.yaml","line":45,"column":13,"endLine":54,"endColumn":31},"fingerprint":"d596abee369c"}]

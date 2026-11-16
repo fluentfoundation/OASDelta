@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[request-property-became-enum] в ./properties/rules/request-property-enum-value-added_revision.yaml
+	в API POST /store/order
+		свойство запроса `@at` было ограничено списком значений перечисления
+
+info	[request-property-enum-value-added] в ./properties/rules/request-property-enum-value-added_revision.yaml
+	в API POST /store/order
+		добавлено enum значение `created` у поля запроса `@at`
+
+info	[request-property-enum-value-added] в ./properties/rules/request-property-enum-value-added_revision.yaml
+	в API POST /store/order
+		добавлено enum значение `created-1` у поля запроса `@at`
+
+

@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/owners/{ownerId}/pets":{"operations":{"modified":{"POST":{"responses":{"modified":{"400":{"content":{"modified":{"application/xml":{"schema":{"items":{"type":{"added":["string"],"deleted":["boolean"]},"default":{"from":false,"to":null},"readOnly":{"from":true,"to":false},"minLength":{"from":0,"to":4},"pattern":{"from":"","to":"("}}}}}}}}}}}}}}}}

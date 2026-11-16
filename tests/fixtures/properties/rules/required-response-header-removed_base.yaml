@@ -1,0 +1,120 @@
+# Fires required-response-header-removed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: id
+    version: v1
+openapi: 3.1.0
+paths:
+    /pets/{petId}:
+        get:
+            operationId: get_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - description: pet
+                  in: header
+                  name: ᴋ䤽倊
+                  schema:
+                    items:
+                        enum:
+                            - status
+                            - "0x1F"
+                        minLength: 0
+                        type:
+                            - string
+                            - "null"
+                    type: array
+                    uniqueItems: true
+            responses:
+                "404":
+                    description: kind
+                    headers:
+                        <b>&amp;:
+                            required: true
+                            schema:
+                                deprecated: true
+                                type:
+                                    - string
+                                    - "null"
+                        '{brace}':
+                            schema:
+                                enum:
+                                    - '{brace}'
+                                type: string
+        patch:
+            operationId: patch_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            items:
+                                properties:
+                                    a/b:
+                                        readOnly: true
+                                        type:
+                                            - string
+                                            - "null"
+                                    kind:
+                                        deprecated: true
+                                        example: created
+                                        minLength: 1
+                                        type:
+                                            - string
+                                            - "null"
+                                    pet:
+                                        enum:
+                                            - 31
+                                            - 31
+                                            - 63
+                                        minimum: 1
+                                        type: number
+                                    ключ:
+                                        enum:
+                                            - 97
+                                            - 15
+                                        readOnly: true
+                                        type:
+                                            - number
+                                            - "null"
+                                required:
+                                    - a/b
+                                    - kind
+                                    - ключ
+                                type: object
+                            type: array
+                            uniqueItems: true
+                    application/xml:
+                        schema:
+                            items:
+                                default: 名前
+                                format: password
+                                type: string
+                            type: array
+            responses:
+                "400":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                items:
+                                    items:
+                                        description: created
+                                        enum:
+                                            - <b>&amp;
+                                        maxLength: 249
+                                        minLength: 3
+                                        pattern: (
+                                        type: string
+                                    type: array
+                                type: array
+                    description: Ünïcode
+            tags:
+                - owner
+                - price

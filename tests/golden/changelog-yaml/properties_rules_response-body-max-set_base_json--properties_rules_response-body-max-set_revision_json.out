@@ -1,0 +1,9 @@
+- id: response-body-max-set
+  text: the response's body max was set to `21.00`
+  level: 1
+  operation: PATCH
+  operationId: patch_owners_{ownerId}_pets
+  path: /owners/{ownerId}/pets
+  section: paths
+  fingerprint: 92b8b76f7072
+

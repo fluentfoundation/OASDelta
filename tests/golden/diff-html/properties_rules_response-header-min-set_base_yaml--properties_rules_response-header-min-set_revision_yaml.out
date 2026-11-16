@@ -1,0 +1,56 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-2">Modified Endpoints: 2</h3>
+<hr>
+<p>GET /pets/{petId}</p>
+<ul>
+<li>Modified cookie param: 榶河鲠Ɯ㳦཮⒚
+<ul>
+<li>Schema changed
+<ul>
+<li>Format changed from 'date-time' to ''</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Headers changed
+<ul>
+<li>Modified header: a/b
+<ul>
+<li>Schema changed
+<ul>
+<li>Min changed from null to 20</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>PUT /pets/{petId}</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: multipart/form-data
+<ul>
+<li>Example changed from null to 'status'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

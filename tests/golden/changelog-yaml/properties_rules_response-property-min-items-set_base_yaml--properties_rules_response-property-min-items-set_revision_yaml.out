@@ -1,0 +1,29 @@
+- id: request-parameter-property-type-specialized
+  text: for the `query` request parameter `tag`, the `format` of property `items/` was narrowed from `none` to `email`
+  level: 3
+  operation: DELETE
+  operationId: delete_pets
+  path: /pets
+  section: paths
+  fingerprint: 69b6aabb5420
+- id: response-body-type-specialized
+  text: the response's body `format` was narrowed from `none` to `email` for status `default`
+  level: 1
+  operation: DELETE
+  operationId: delete_pets
+  path: /pets
+  section: paths
+  fingerprint: c2cf2d133ca7
+- id: response-property-min-items-set
+  text: 'the `anyOf[subschema #2]/0x1F` response property''s minItems was set to `10` for the response status `default`'
+  level: 1
+  operation: DELETE
+  operationId: delete_pets
+  path: /pets
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-property-min-items-set_revision.yaml
+    line: 12
+    column: 25
+  fingerprint: 6c98b2b62c85
+

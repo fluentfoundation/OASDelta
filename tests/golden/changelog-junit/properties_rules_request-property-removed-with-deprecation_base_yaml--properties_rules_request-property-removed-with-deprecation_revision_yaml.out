@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="6" errors="0" failures="6" name="OASDiff">
+    <testcase name="request-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body `type` changed from `object` to `array<string>`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `...`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `C:\path`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `kind`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="request-property-removed-with-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the deprecated request property `id`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

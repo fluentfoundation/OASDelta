@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-property-min-length-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `名前` request property's minLength was set to `12`</failure>
+    </testcase>
+    <testcase name="api-operation-id-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api operation id `price` was added</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

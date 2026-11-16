@@ -1,0 +1,10 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[response-header-min-unset] en ./properties/rules/response-header-min-unset_revision.yaml
+	en API PATCH /items/{id}.json
+		el valor min del encabezado de respuesta `ünïcode` fue removido de `-8.00` para el estado `204`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

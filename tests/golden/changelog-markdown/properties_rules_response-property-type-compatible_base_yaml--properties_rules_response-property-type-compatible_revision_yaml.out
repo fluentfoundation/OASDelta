@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PUT /ünïcode/ключ
+-  the `additionalProperties/` response's property `type` changed from `string` to `integer` for status `400` (backward compatible)
+
+
+
+
+
+

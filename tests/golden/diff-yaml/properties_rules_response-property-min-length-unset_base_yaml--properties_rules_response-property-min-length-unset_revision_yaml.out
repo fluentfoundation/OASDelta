@@ -1,0 +1,73 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "404":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    oneOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 0
+                                                              revision:
+                                                                index: 0
+                                                              diff:
+                                                                allOf:
+                                                                    added:
+                                                                        - index: 0
+                                                                        - index: 1
+                                                                type:
+                                                                    deleted:
+                                                                        - "null"
+                                                                        - string
+                                                                enum:
+                                                                    enumDeleted: true
+                                                                    deleted:
+                                                                        - 徴
+                                                                        - ' leading'
+                                                                        - '| table |'
+                                                                minLength:
+                                                                    from: 1
+                                                                    to: 0
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "404":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        oneOf:
+                                            modified:
+                                                - base:
+                                                    index: 0
+                                                  revision:
+                                                    index: 0
+                                                  diff:
+                                                    allOf:
+                                                        added:
+                                                            - index: 0
+                                                            - index: 1
+                                                    type:
+                                                        deleted:
+                                                            - "null"
+                                                            - string
+                                                    enum:
+                                                        enumDeleted: true
+                                                        deleted:
+                                                            - 徴
+                                                            - ' leading'
+                                                            - '| table |'
+                                                    minLength:
+                                                        from: 1
+                                                        to: 0
+

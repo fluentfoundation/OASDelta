@@ -1,0 +1,18 @@
+4 alterações: 4 error, 0 warning, 0 info
+error	[response-property-list-of-types-widened] em ./properties/rules/response-property-max-items-unset_revision.json
+	em API DELETE /ünïcode/ключ
+		lista de tipos da propriedade `items/` da resposta foi expandida adicionando tipos `integer` ao tipo de mídia `multipart/form-data` da resposta `500`
+
+error	[response-property-max-items-unset] em ./properties/rules/response-property-max-items-unset_revision.json
+	em API DELETE /ünïcode/ключ
+		o valor maxItems da propriedade de resposta `items/` foi removido de `32` para o status `500`
+
+error	[response-property-min-items-unset] em ./properties/rules/response-property-max-items-unset_revision.json
+	em API DELETE /ünïcode/ключ
+		o número mínimo de itens da propriedade de resposta `items/` foi desconfigurado de `3` para o status `500`
+
+error	[response-property-unique-items-unset] em ./properties/rules/response-property-max-items-unset_revision.json
+	em API DELETE /ünïcode/ключ
+		o valor uniqueItems da propriedade de resposta `items/` foi removido para o status `500`
+
+

@@ -1,0 +1,8 @@
+components:
+    securitySchemes:
+        modified:
+            api_key:
+                name:
+                    from: owner
+                    to: status
+

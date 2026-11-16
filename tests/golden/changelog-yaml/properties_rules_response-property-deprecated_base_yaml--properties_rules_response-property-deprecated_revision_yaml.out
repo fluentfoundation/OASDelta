@@ -1,0 +1,23 @@
+- id: response-property-deprecated
+  text: 'response property `created` deprecated (media type: application/vnd.api+json)'
+  level: 1
+  operation: DELETE
+  path: /v1/items
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-property-deprecated_revision.yaml
+    line: 52
+    column: 41
+  fingerprint: 4af777ae8a8f
+- id: response-property-discriminator-added
+  text: 'added discriminator to `㎖㹈ꃿ즡` response property for the response status `200` (media type: */*)'
+  level: 1
+  operation: DELETE
+  path: /v1/items
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-property-deprecated_revision.yaml
+    line: 39
+    column: 41
+  fingerprint: 92a44261d251
+

@@ -1,0 +1,26 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /pets/{petId}
+- Modified cookie param: 榶河鲠Ɯ㳦཮⒚
+  - Schema changed
+    - Format changed from 'date-time' to ''
+- Responses changed
+  - Modified response: 200
+    - Headers changed
+      - Modified header: a/b
+        - Schema changed
+          - Min changed from null to 20
+
+PUT /pets/{petId}
+- Request body changed
+  - Content changed
+    - Modified media type: multipart/form-data
+      - Example changed from null to 'status'
+
+

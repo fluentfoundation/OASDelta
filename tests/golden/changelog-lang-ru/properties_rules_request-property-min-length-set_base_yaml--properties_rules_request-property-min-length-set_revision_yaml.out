@@ -1,0 +1,11 @@
+2 изменений: 0 error, 1 warning, 1 info
+warning	[request-property-min-length-set] в ./properties/rules/request-property-min-length-set_revision.yaml
+	в API POST /pets
+		у поля запроса `名前` задано значение minLength в `12`
+		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels. Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[api-operation-id-added] в ./properties/rules/request-property-min-length-set_revision.yaml
+	в API POST /pets
+		добавлен идентификатор операции API `price`
+
+

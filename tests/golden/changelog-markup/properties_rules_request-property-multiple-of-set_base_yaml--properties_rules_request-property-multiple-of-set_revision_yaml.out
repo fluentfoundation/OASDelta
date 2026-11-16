@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /v1/items
+-  the `{brace}/oneOf[subschema #2]/` request property's multipleOf was set to `4.00`
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+::notice title=response-body-default-value-changed,file=./properties/rules/response-body-default-value-changed_revision.yaml,line=72,col=33::in API PATCH /search the response body `text/plain` default value changed from `61.00` to `id` for the status `201`
+

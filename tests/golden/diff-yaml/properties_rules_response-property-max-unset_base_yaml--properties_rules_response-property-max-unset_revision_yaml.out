@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "500":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            pet:
+                                                                properties:
+                                                                    modified:
+                                                                        ' leading':
+                                                                            max:
+                                                                                from: 145
+                                                                                to: null
+endpoints:
+    modified:
+        ?   method: POST
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "500":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                pet:
+                                                    properties:
+                                                        modified:
+                                                            ' leading':
+                                                                max:
+                                                                    from: 145
+                                                                    to: null
+

@@ -1,0 +1,30 @@
+- id: request-body-type-changed
+  text: the request's body `type` changed from `string` to `number`
+  level: 3
+  operation: PUT
+  operationId: put_v1_items
+  path: /v1/items
+  section: paths
+  fingerprint: fe832db7c57f
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-body-max-length-unset
+  text: the request's body maxLength was unset from `240`
+  level: 1
+  operation: PUT
+  operationId: put_v1_items
+  path: /v1/items
+  section: paths
+  fingerprint: 016ef2fa9dc5
+- id: request-body-min-length-unset
+  text: the request's body minLength was unset from `5`
+  level: 1
+  operation: PUT
+  operationId: put_v1_items
+  path: /v1/items
+  section: paths
+  fingerprint: 525414c1a8b3
+

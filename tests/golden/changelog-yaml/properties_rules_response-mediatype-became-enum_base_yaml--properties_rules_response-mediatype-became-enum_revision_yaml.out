@@ -1,0 +1,13 @@
+- id: response-mediatype-became-enum
+  text: the response schema `*/*` for the response status `400` was restricted to a list of enum values
+  level: 1
+  operation: POST
+  operationId: '{brace}'
+  path: /store/order
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-mediatype-became-enum_revision.yaml
+    line: 25
+    column: 33
+  fingerprint: c33c16bed403
+

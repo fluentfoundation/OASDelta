@@ -1,0 +1,164 @@
+{
+  "components": {
+    "schemas": {
+      "Error": {
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/Error"
+          },
+          "status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "status",
+          "kind"
+        ],
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "api_key": {
+        "in": "query",
+        "name": "status",
+        "type": "apiKey"
+      },
+      "oauth": {
+        "flows": {
+          "clientCredentials": {
+            "scopes": {
+              "admin": "admin access",
+              "read": "read access",
+              "write": "write access"
+            },
+            "tokenUrl": "https://auth.example.com/token"
+          }
+        },
+        "type": "oauth2"
+      }
+    }
+  },
+  "info": {
+    "title": "1e3",
+    "version": "1.0.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/v1/items": {
+      "put": {
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "kind",
+            "required": true,
+            "schema": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          {
+            "description": "created",
+            "explode": false,
+            "in": "header",
+            "name": "᭺쵁⠩㎾裱",
+            "schema": {
+              "items": {
+                "description": "\u0026anchor",
+                "format": "password",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "maxItems": 39,
+              "type": "array"
+            }
+          },
+          {
+            "in": "query",
+            "name": "0x1F",
+            "required": true,
+            "schema": {
+              "format": "binary",
+              "type": "string",
+              "writeOnly": true
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset=utf-8": {
+              "schema": {
+                "items": {
+                  "additionalProperties": true,
+                  "properties": {
+                    "created": {
+                      "format": "date",
+                      "type": "string"
+                    },
+                    "owner": {
+                      "format": "float",
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "created",
+                    "owner"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "default": -0,
+                "format": "float",
+                "minimum": -2,
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            }
+          },
+          "description": "kind"
+        },
+        "responses": {
+          "200": {
+            "description": "😀"
+          },
+          "2XX": {
+            "description": "name"
+          },
+          "404": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            },
+            "description": "फ☘㤌訐䀛꜅"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com/v2"
+    },
+    {
+      "url": "https://api.example.com"
+    }
+  ]
+}

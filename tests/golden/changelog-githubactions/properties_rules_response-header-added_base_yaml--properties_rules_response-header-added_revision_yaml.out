@@ -1,0 +1,2 @@
+::notice title=response-header-added,file=./properties/rules/response-header-added_revision.yaml,line=34,col=25::in API DELETE /ünïcode/ключ the response header `owner` was added for the status `204`
+

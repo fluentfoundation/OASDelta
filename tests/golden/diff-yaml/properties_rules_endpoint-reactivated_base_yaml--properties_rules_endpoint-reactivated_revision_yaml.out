@@ -1,0 +1,17 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    DELETE:
+                        deprecated:
+                            from: true
+                            to: false
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /owners/{ownerId}/pets
+        :   deprecated:
+                from: true
+                to: false
+

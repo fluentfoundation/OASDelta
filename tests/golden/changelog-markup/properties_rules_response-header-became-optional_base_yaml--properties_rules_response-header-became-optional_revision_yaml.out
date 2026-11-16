@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /owners/{ownerId}/pets
+- :warning: the response header `名前` became optional for the status `2XX`
+
+
+
+
+
+

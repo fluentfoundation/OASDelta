@@ -9,9 +9,9 @@ code as the Go binary.
   option combinations ([`tools/golden-commands.txt`](https://github.com/fluentfoundation/OASDelta/blob/main/tools/golden-commands.txt)):
   every output format of `diff`, `summary`, `changelog` and `breaking`; `--lang` es, pt-br and ru; and option sets
   such as `--level`, `--fail-on`, `--flatten-params`, `--include-path-params`, `--match-path`, `--prefix-revision`
-  and deprecation days. They run over 327 fixture pairs: the upstream test data paired by file name, the pairs
+  and deprecation days. They run over 468 fixture pairs: the upstream test data paired by file name, the pairs
   upstream's own checker tests compare (`tests/extra-pairs.txt`), and regression cases found by the property-based
-  tests. That is 10,791 comparisons, in which 399 of oasdiff's 778 checker rules fire. The
+  tests. That is 15,444 comparisons, in which 548 of oasdiff's 778 checker rules fire. The
   [coverage page](./coverage) lists the rules no golden fires. `dotnet test` replays them in
   process. CI replays them with the NativeAOT binary
   (`tools/check_golden.sh`) on Linux and Windows, and the release workflow replays them on all six release

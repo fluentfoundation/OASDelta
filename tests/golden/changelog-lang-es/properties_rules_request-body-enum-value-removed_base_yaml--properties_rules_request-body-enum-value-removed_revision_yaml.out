@@ -1,0 +1,18 @@
+4 cambios: 2 error, 0 warning, 2 info
+error	[request-body-enum-value-removed] en ./properties/rules/request-body-enum-value-removed_revision.yaml
+	en API POST /search
+		removido el valor enum `false` del cuerpo de solicitud
+
+error	[request-body-enum-value-removed] en ./properties/rules/request-body-enum-value-removed_revision.yaml
+	en API POST /search
+		removido el valor enum `true` del cuerpo de solicitud
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[request-body-list-of-types-widened] en ./properties/rules/request-body-enum-value-removed_revision.yaml
+	en API POST /search
+		lista de tipos del cuerpo de solicitud fue ampliada agregando tipos `integer` al tipo de media `multipart/form-data`
+
+

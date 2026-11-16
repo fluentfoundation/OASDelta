@@ -1,0 +1,14 @@
+### New Endpoints: 1
+--------------------
+GET /added/%C2%A0nbsp  
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /owners/{ownerId}/pets
+- New query param: 㿢몜짐躘훕綏冔⌰
+- Deleted query param: pet
+
+

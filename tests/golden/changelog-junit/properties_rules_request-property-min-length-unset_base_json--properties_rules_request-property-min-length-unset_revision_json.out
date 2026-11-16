@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="6" errors="0" failures="6" name="OASDiff">
+    <testcase name="response-property-min-length-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `pet/anyOf[subschema #3]/` response property's minLength was unset from `1` for the response status `404`</failure>
+    </testcase>
+    <testcase name="request-property-became-not-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request property `㺓崠讆/id/anyOf[subschema #3]/` became not nullable</failure>
+    </testcase>
+    <testcase name="response-property-became-not-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response property `pet/anyOf[subschema #3]/` became not nullable for the status `404`</failure>
+    </testcase>
+    <testcase name="response-property-type-specialized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `pet/anyOf[subschema #3]/` response's property `type` was narrowed from `string` to `any` for status `404`</failure>
+    </testcase>
+    <testcase name="request-property-min-length-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `㺓崠讆/id/anyOf[subschema #3]/` request property's minLength was unset from `1`</failure>
+    </testcase>
+    <testcase name="request-property-type-generalized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `㺓崠讆/id/anyOf[subschema #3]/` request property `type` was widened from `string` to `any`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

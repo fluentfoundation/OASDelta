@@ -566,19 +566,33 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
         return p;
     }
 
+    // the path item $refs being followed, and what each $ref resolved to
+    private readonly HashSet<Node> _pathItemRefs = new(ReferenceEqualityComparer.Instance);
+    private readonly Dictionary<Node, PathItem> _pathItemRefResults = new(ReferenceEqualityComparer.Instance);
+
     private PathItem BuildPathItemOrRef(Document doc, Node n, Node? key)
     {
         var reference = RefOf(n);
         if (!n.IsMapping) return new PathItem(); // a $ref to null (components.pathItems.P: null): kin reads an empty path item
         if (reference is null) return Cached<PathItem>(doc, n, key, BuildPathItem);
-        var (tdoc, tnode) = ResolveRef(doc, reference);
-        var target = BuildPathItemOrRef(tdoc, tnode, tdoc.KeyOf(tnode));
+        if (_pathItemRefResults.TryGetValue(n, out var done)) return done;
+        PathItem target;
+        _pathItemRefs.Add(n);
+        try
+        {
+            var (tdoc, tnode) = ResolveRef(doc, reference);
+            // a $ref cycle (/a: {$ref: '#/paths/~1a'}, or /a -> /b -> /a): kin stops at the $ref that leads back into
+            // the chain and leaves that path item empty, located where it is; every path item of the chain resolves
+            // to it, also when kin comes to it directly
+            target = _pathItemRefs.Contains(tnode) ? new PathItem { Origin = MakeOrigin(doc, n, key) } : BuildPathItemOrRef(tdoc, tnode, tdoc.KeyOf(tnode));
+        }
+        finally { _pathItemRefs.Remove(n); }
         var copy = target.ShallowClone();
         copy.Ref = reference;
         // siblings of $ref (summary/description) override
         if (n["summary"] is { } s) copy.Summary = Str(s);
         if (n["description"] is { } d) copy.Description = Str(d);
-        return copy;
+        return _pathItemRefResults[n] = copy;
     }
 
     private static readonly HashSet<string> PathItemKnown = Known("$ref", "summary", "description", "connect", "delete", "get", "head", "options", "patch", "post", "put", "trace", "query", "servers", "parameters", "additionalOperations");

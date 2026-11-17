@@ -1,0 +1,2 @@
+::error title=response-header-max-length-increased,file=./properties/rules/response-header-max-length-increased_revision.yaml,line=520,col=9::in API DELETE /store/order the `status` response header's maxLength was increased from `209` to `210` for the status `2XX`
+

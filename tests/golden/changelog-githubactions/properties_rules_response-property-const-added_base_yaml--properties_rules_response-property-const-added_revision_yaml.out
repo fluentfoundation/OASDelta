@@ -1,0 +1,2 @@
+::notice title=response-property-const-added,file=./properties/rules/response-property-const-added_revision.yaml,line=39,col=43::in API GET /pets the `` response property const value `tag` was added for the status `404`
+

@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[request-body-type-generalized] em ./properties/rules/request-body-type-generalized_revision.json
+	em API PUT /v1/items
+		o `format` do corpo da requisição foi expandido de `float` para `none`
+
+

@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /ünïcode/ключ
+- :warning: the `items/` response property's exclusiveMinimum was unset from `true` for the response status `204`
+
+
+
+
+
+

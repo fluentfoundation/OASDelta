@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./properties/rules/request-property-default-value-changed_revision.yaml, in API POST /pets/{petId} the `[bracket]` request property default value changed from `pet` to `91.00` [request-property-default-value-changed]. 
+
+

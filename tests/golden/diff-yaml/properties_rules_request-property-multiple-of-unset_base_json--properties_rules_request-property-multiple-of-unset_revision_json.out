@@ -1,0 +1,33 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            content:
+                                modified:
+                                    '*/*':
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    '''single''':
+                                                        multipleOf:
+                                                            from: 8
+                                                            to: null
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /v1/items
+        :   requestBody:
+                content:
+                    modified:
+                        '*/*':
+                            schema:
+                                properties:
+                                    modified:
+                                        '''single''':
+                                            multipleOf:
+                                                from: 8
+                                                to: null
+

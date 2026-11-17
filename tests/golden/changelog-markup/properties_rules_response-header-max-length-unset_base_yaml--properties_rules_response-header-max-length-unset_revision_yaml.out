@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /search
+- :warning: the `꣧ਏ哪᷸∄肱瘝ㆺ` response header's maxLength was unset from `135` for the status `201`
+
+
+
+
+
+

@@ -1,0 +1,182 @@
+# Fires response-header-min-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        api_key:
+            in: query
+            name: owner
+            type: apiKey
+info:
+    title: id
+    version: v1
+openapi: 3.1.0
+paths:
+    /pets/{petId}:
+        get:
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: 榶河鲠Ɯ㳦཮⒚
+                  required: false
+                  schema:
+                    format: date-time
+                    minLength: 5
+                    type:
+                        - string
+                        - "null"
+                - in: cookie
+                  name: tag
+                  schema:
+                    anyOf:
+                        - type:
+                            - string
+                            - "null"
+                        - example: 名前
+                          format: double
+                          type: number
+            responses:
+                2XX:
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                enum:
+                                    - 61
+                                    - 83
+                                type:
+                                    - number
+                                    - "null"
+                    description: '| table |'
+                "200":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                items:
+                                    items:
+                                        enum:
+                                            - ""
+                                            - "x\ty"
+                                        type: string
+                                    type: array
+                                type: array
+                    description: ⠭ឬ檧쒡
+                    headers:
+                        a/b:
+                            schema:
+                                description: "no"
+                                type:
+                                    - number
+                                    - "null"
+                        Ünïcode:
+                            schema:
+                                format: double
+                                type: number
+                "204":
+                    description: Ünïcode
+                    headers:
+                        id:
+                            schema:
+                                type:
+                                    - string
+                                    - "null"
+                        pet:
+                            schema:
+                                minimum: 9
+                                type:
+                                    - integer
+                                    - "null"
+            summary: id
+            tags:
+                - ключ
+                - owner
+        put:
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - description: "0x1F"
+                  in: cookie
+                  name: '**bold**'
+                  schema:
+                    additionalProperties:
+                        type: string
+                    description: ключ
+                    properties:
+                        둛:
+                            deprecated: true
+                            description: ключ
+                            enum:
+                                - "yes"
+                                - '| table |'
+                                - 濳
+                                - price
+                            type: string
+                    type: object
+                - in: cookie
+                  name: price
+                  schema:
+                    enum:
+                        - 3
+                    type: integer
+                  style: simple
+                - in: header
+                  name: Ünïcode
+                  schema:
+                    items:
+                        description: 'a: b'
+                        type:
+                            - number
+                            - "null"
+                    maxItems: 10
+                    type: array
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            minLength: 5
+                            type: string
+                    multipart/form-data:
+                        schema:
+                            default: 69
+                            description: id
+                            type:
+                                - number
+                                - "null"
+                description: 瑖ڐ險䐱优
+            responses:
+                2XX:
+                    description: pet
+                "500":
+                    content:
+                        '*/*':
+                            schema:
+                                properties:
+                                    tag:
+                                        items:
+                                            description: id
+                                            enum:
+                                                - true
+                                                - false
+                                            type:
+                                                - boolean
+                                                - "null"
+                                        type: array
+                                        uniqueItems: true
+                                required:
+                                    - tag
+                                type: object
+                        application/xml:
+                            schema:
+                                items:
+                                    items:
+                                        default: 뼯兮嘷╚涀ਰ贄
+                                        description: '---'
+                                        type: string
+                                    type: array
+                                type: array
+                    description: Ünïcode
+            summary: name

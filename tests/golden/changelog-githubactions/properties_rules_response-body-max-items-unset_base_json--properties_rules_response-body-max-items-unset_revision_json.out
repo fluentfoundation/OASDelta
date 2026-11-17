@@ -1,0 +1,3 @@
+::error title=response-body-max-items-unset,file=./properties/rules/response-body-max-items-unset_revision.json::in API PATCH /items/{id}.json the response's body maxItems was unset from `50`
+::error title=response-body-type-changed,file=./properties/rules/response-body-max-items-unset_revision.json::in API PATCH /items/{id}.json the response's body `type` changed from `array<integer>` to `object` for status `200`
+

@@ -1,0 +1,1 @@
+[{"id":"api-security-component-added","text":"the component security scheme `api_key` was added","level":1,"section":"components","revisionSource":{"file":"./properties/rules/request-body-min-decreased_revision.yaml","line":45,"column":9,"endLine":48,"endColumn":25},"fingerprint":"0beaaf53a2c6"}]

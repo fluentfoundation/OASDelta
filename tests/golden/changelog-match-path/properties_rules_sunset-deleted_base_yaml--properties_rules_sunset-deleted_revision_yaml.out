@@ -1,0 +1,1 @@
+[{"id":"endpoint-added","text":"endpoint added","level":1,"operation":"POST","operationId":"post_pets_{petId}","path":"/pets/{petId}","section":"paths","revisionSource":{"file":"./properties/rules/sunset-deleted_revision.yaml","line":17,"column":9,"endLine":43,"endColumn":38},"fingerprint":"93315d753e27"}]

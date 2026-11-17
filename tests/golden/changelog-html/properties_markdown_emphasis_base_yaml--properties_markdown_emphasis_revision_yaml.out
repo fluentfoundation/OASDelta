@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Changelog</title>
+    <style>
+
+        * {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        
+        .title {
+            margin: 1em 0 0.5em 0;
+            font-size: 36px;
+        }
+
+        .path {
+            color: #016BF8;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .endpoint {
+            color: #21313c;
+            line-height: 24px;
+            margin: 22px 0;
+        }        
+
+        .endpoint-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .change-type {
+            box-sizing: border-box;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 16px;
+            border-radius: 5px;
+            height: 18px;
+            padding-left: 6px;
+            padding-right: 6px;
+            text-transform: uppercase;
+            border: 1px solid;
+            letter-spacing: 1px;
+            background-color: #E3FCF7;
+            border-color: #C0FAE6;
+            color: #00684A;
+            margin-top: 2px;
+        }
+
+        .change {
+        }
+
+        .breaking {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-right: 5px;
+        }
+
+        .breaking-icon {
+            color: #DB3030;
+        }
+
+        .section-title {
+            margin: 1.5em 0 0.5em 0;
+            font-size: 24px;
+            font-weight: 600;
+            color: #21313c;
+            border-bottom: 2px solid #e8edeb;
+            padding-bottom: 0.25em;
+            text-transform: capitalize;
+        }
+
+        .tooltip {
+            position:relative;  
+        }
+
+        .tooltip:before {
+            content: attr(data-text);  
+            position:absolute;
+
+             
+            top:50%;
+            transform:translateY(-50%);
+
+             
+            left:100%;
+            margin-left:15px;  
+
+             
+            width:200px;
+            padding:10px;
+            border-radius:10px;
+            background:#000;
+            color: #fff;
+            text-align:center;
+
+            display:none;  
+        }        
+
+        .tooltip:hover:before {
+            display:block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">API Changelog 1 vs. 1</div>
+    
+
+    
+
+    
+
+    
+    
+    <div class="section-title">API Changes</div>
+    
+    <div class="endpoint">
+        <div class="endpoint-header">
+            <span class="path">GET /items</span>
+            <div class="change-type">Updated</div>
+        </div>
+        
+    <ul class="endpoint-changes">
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `(~a~)` enum value to the `p16` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `***~a~***` enum value to the `p22` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `*-a-*` enum value to the `p34` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `*~a~*` enum value to the `p23` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `&#43;*a*&#43;` enum value to the `p35` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `-~abb1*~~ ~ a--*\.` enum value to the `p37` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `[ ] a` enum value to the `p42` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `[X]c` enum value to the `p45` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `[x] b` enum value to the `p43` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `\~~a~~` enum value to the `p40` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new ``~a~`` enum value to the `p25` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `a ~b~ c` enum value to the `p18` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `a\~~b~~` enum value to the `p39` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `a~` enum value to the `p7` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `a~b` enum value to the `combo` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `a~b` enum value to the `p1` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `a~b c~d` enum value to the `p5` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `a~b-1` enum value to the `combo` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `a~~b~~c` enum value to the `p14` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `a~~~b~~~c` enum value to the `p28` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `b~-a~` enum value to the `p33` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `d~` enum value to the `combo` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `x**-y**` enum value to the `p30` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `x*&#43;y*` enum value to the `p31` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `x*-y*` enum value to the `p29` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `x_-y_` enum value to the `p36` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `x~-y~` enum value to the `p32` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `x~~y~z` enum value to the `p11` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `z [ ]` enum value to the `p44` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~` enum value to the `p13` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~ a ~` enum value to the `p8` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~(a)~` enum value to the `p17` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~*a*~` enum value to the `p24` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~1~2` enum value to the `p21` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~a` enum value to the `p6` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~a\~` enum value to the `p26` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~a\~~` enum value to the `p41` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~a~` enum value to the `p2` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~a~b~` enum value to the `p15` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~a~~` enum value to the `p10` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~c` enum value to the `combo` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~~` enum value to the `p12` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~~. ~a)bé\~~~` enum value to the `p38` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~~a~` enum value to the `p9` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~~a~~` enum value to the `p3` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~~a~~~` enum value to the `p19` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~~~a~~~` enum value to the `p4` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `~~~~` enum value to the `p27` response property for the response status `200`
+        </li>
+        
+        <li class="change">
+        
+        <div class="breaking tooltip" data-text="Breaking Change">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
+        </div>
+        
+        added the new `é~ü~` enum value to the `p20` response property for the response status `200`
+        </li>
+        
+    </ul>
+    
+    </div>
+    
+    
+
+    
+    
+</body>
+
+</html>
+

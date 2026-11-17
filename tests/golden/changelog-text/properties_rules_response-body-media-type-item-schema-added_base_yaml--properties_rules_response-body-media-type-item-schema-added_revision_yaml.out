@@ -1,0 +1,10 @@
+2 changes: 0 error, 0 warning, 2 info
+info	[endpoint-added] at ./properties/rules/response-body-media-type-item-schema-added_revision.yaml
+	in API GET /added/kind
+		endpoint added
+
+info	[response-body-media-type-item-schema-added] at ./properties/rules/response-body-media-type-item-schema-added_revision.yaml
+	in API POST /pets/{petId}
+		added an item schema to the media type `text/plain` for the response with the status `2XX`
+
+

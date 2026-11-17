@@ -1,0 +1,10 @@
+# API Changelog v1 vs. v1
+
+
+
+## Components
+- :warning: the component security scheme `api_key` api key location changed from `query` to `cookie`
+
+
+
+

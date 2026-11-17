@@ -1,0 +1,46 @@
+<h3 id="new-endpoints-1">New Endpoints: 1</h3>
+<hr>
+<p>GET /added/kind</p>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>DELETE /v1/items</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 500
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: multipart/form-data
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'object' to 'string'</li>
+<li>Required changed
+<ul>
+<li>Deleted required property: id</li>
+<li>Deleted required property: pet</li>
+<li>Deleted required property: 瀒</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>Deleted property: id</li>
+<li>Deleted property: pet</li>
+<li>Deleted property: 瀒</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

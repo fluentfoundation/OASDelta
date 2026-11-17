@@ -1,0 +1,41 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/xml:
+                                        schema:
+                                            type:
+                                                added:
+                                                    - array
+                                                deleted:
+                                                    - integer
+                                            max:
+                                                from: 938
+                                                to: null
+                                            items:
+                                                schemaAdded: true
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /search
+        :   requestBody:
+                content:
+                    modified:
+                        application/xml:
+                            schema:
+                                type:
+                                    added:
+                                        - array
+                                    deleted:
+                                        - integer
+                                max:
+                                    from: 938
+                                    to: null
+                                items:
+                                    schemaAdded: true
+

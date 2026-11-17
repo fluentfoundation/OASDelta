@@ -1,0 +1,13 @@
+# Sunset and stability rules (#43). Dates are fixed, 2020-01-01 (past) and 2099-12-31 (future), so whether a
+# sunset is too soon does not change as time passes. Some rules fire only with --deprecation-days-beta/-stable.
+openapi: 3.0.3
+info: {title: lifecycle, version: "1"}
+paths:
+  /p:
+    get:
+      responses: {"200": {description: ok}}
+      parameters:
+      - {name: earlier, in: query, schema: {type: string}, deprecated: true, x-sunset: "2020-01-01"}
+      - {name: too-small, in: query, schema: {type: string}, deprecated: true, x-sunset: "2020-01-01"}
+      - {name: deleted, in: query, schema: {type: string}, deprecated: true}
+      - {name: bad, in: query, schema: {type: string}, deprecated: true, x-sunset: "not a date"}

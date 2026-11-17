@@ -1,0 +1,182 @@
+{
+  "info": {
+    "title": "ключ",
+    "version": "v1"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/search": {
+      "delete": {
+        "operationId": "delete_search",
+        "parameters": [
+          {
+            "description": "status",
+            "in": "cookie",
+            "name": "1e3",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "deprecated": true,
+            "in": "query",
+            "name": "kind",
+            "schema": {
+              "properties": {
+                "Ünïcode": {
+                  "readOnly": true,
+                  "type": "boolean",
+                  "writeOnly": true
+                }
+              },
+              "required": [
+                "Ünïcode"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "名前",
+            "required": false,
+            "schema": {
+              "items": {
+                "description": "status",
+                "type": "number"
+              },
+              "type": "array",
+              "uniqueItems": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "description": "owner",
+                  "exclusiveMinimum": -3,
+                  "minLength": 4,
+                  "type": "string"
+                }
+              }
+            },
+            "description": "1e3",
+            "headers": {
+              "**bold**": {
+                "schema": {
+                  "description": "名前",
+                  "enum": [
+                    "꧄콱杻茇译赔",
+                    "tag",
+                    "id"
+                  ],
+                  "maxLength": 175,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "kind": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "2XX": {
+            "description": "Ünïcode"
+          }
+        },
+        "summary": "\"quoted\"",
+        "tags": [
+          "price"
+        ]
+      },
+      "post": {
+        "deprecated": true,
+        "operationId": "post_search",
+        "parameters": [
+          {
+            "description": "price",
+            "in": "cookie",
+            "name": "price",
+            "schema": {
+              "properties": {
+                "-": {
+                  "maximum": 245,
+                  "type": "integer"
+                },
+                "id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "id"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "description": "status",
+            "in": "header",
+            "name": "id",
+            "schema": {
+              "oneOf": [
+                {
+                  "format": "int32",
+                  "type": "integer"
+                },
+                {
+                  "default": "㡁뀌",
+                  "description": "츩",
+                  "format": "byte",
+                  "readOnly": true,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "type": "boolean"
+              }
+            },
+            "application/vnd.api+json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "format": "int32",
+                  "minimum": 10,
+                  "type": "integer"
+                }
+              }
+            },
+            "description": "ключ"
+          }
+        },
+        "summary": "status"
+      }
+    }
+  }
+}

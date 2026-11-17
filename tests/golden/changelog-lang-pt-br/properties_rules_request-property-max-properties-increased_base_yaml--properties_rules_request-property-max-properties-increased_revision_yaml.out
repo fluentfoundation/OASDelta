@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[request-property-max-properties-increased] em ./properties/rules/request-property-max-properties-increased_revision.yaml
+	em API PUT /items/{id}.json
+		o número máximo de propriedades da propriedade de requisição `status` foi aumentado de `8` para `11`
+
+

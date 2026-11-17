@@ -1,0 +1,2 @@
+::error title=response-header-schema-became-not-false,file=./properties/rules/response-header-schema-became-not-false_revision.yaml,line=132,col=9::in API PUT /owners/{ownerId}/pets the schema of the response header `...` is no longer `false` for the status `default` and allows values again
+

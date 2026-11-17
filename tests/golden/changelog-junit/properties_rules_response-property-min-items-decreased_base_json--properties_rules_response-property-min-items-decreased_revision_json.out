@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="response-property-min-items-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `oneOf[subschema #1]/` response property's minItems was decreased from `3` to `2` for the response status `204`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

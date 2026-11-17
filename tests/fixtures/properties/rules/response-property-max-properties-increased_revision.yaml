@@ -1,0 +1,524 @@
+# Fires response-property-max-properties-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            properties:
+                Ünïcode:
+                    minProperties: 2
+                    properties:
+                        섙ꀮ迒㐔飦:
+                            minimum: -3
+                            type:
+                                - integer
+                                - "null"
+                    required:
+                        - 섙ꀮ迒㐔飦
+                    type: object
+                名前:
+                    type: object
+            required:
+                - Ünïcode
+                - 名前
+            type: object
+        Pet:
+            description: tag
+            format: email
+            type: string
+    securitySchemes:
+        api_key:
+            in: header
+            name: '**bold**'
+            type: apiKey
+        oauth:
+            flows:
+                authorizationCode:
+                    authorizationUrl: https://auth.example.com/authorize
+                    scopes:
+                        admin: admin access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+                clientCredentials:
+                    refreshUrl: https://auth.example.com/refresh
+                    scopes:
+                        admin: admin access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: id
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /pets:
+        patch:
+            operationId: patch_pets
+            responses:
+                2XX:
+                    content:
+                        text/plain:
+                            schema:
+                                properties:
+                                    뺃䳗밆跡░敳:
+                                        $ref: '#/components/schemas/Item'
+                                type: object
+                    description: '-'
+            security:
+                - oauth: []
+                - api_key: []
+        post:
+            operationId: Ünïcode
+            parameters:
+                - in: query
+                  name: price
+                  schema:
+                    description: '>'
+                    properties:
+                        ' leading':
+                            type:
+                                - integer
+                                - "null"
+                        ключ:
+                            deprecated: true
+                            enum:
+                                - pet
+                            format: date-time
+                            readOnly: true
+                            type:
+                                - string
+                                - "null"
+                    required:
+                        - ключ
+                    type: object
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            maximum: 866
+                            type:
+                                - number
+                                - "null"
+            responses:
+                2XX:
+                    content:
+                        '*/*':
+                            schema:
+                                deprecated: true
+                                description: pet
+                                format: int32
+                                maximum: 157
+                                type:
+                                    - integer
+                                    - "null"
+                                writeOnly: true
+                        multipart/form-data:
+                            schema:
+                                properties:
+                                    id:
+                                        items:
+                                            $ref: '#/components/schemas/Pet'
+                                        maxItems: 46
+                                        type: array
+                                type: object
+                    description: kind
+                "500":
+                    content:
+                        '*/*':
+                            schema:
+                                anyOf:
+                                    - minimum: 0
+                                      type: number
+                                    - items:
+                                        default: false
+                                        description: 名前
+                                        type: boolean
+                                      type: array
+                                    - deprecated: true
+                                      type:
+                                        - string
+                                        - "null"
+                                discriminator:
+                                    mapping:
+                                        a: '#/components/schemas/Item'
+                                    propertyName: ' leading'
+                        application/vnd.api+json:
+                            schema:
+                                $ref: '#/components/schemas/Item'
+                    description: created
+            summary: 珢乀ꦆ
+    /search:
+        delete:
+            operationId: delete_search
+            responses:
+                2XX:
+                    content:
+                        '*/*':
+                            schema:
+                                properties:
+                                    '-':
+                                        items:
+                                            default: true
+                                            enum:
+                                                - true
+                                                - false
+                                            type:
+                                                - boolean
+                                                - "null"
+                                        type: array
+                                    price:
+                                        items:
+                                            format: int64
+                                            type:
+                                                - integer
+                                                - "null"
+                                        type: array
+                                type: object
+                    description: 尳
+                "201":
+                    description: 䥆ꃵ
+                "204":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                properties:
+                                    price:
+                                        description: tag
+                                        maximum: 382
+                                        type: number
+                                type: object
+                        text/plain:
+                            schema:
+                                properties:
+                                    id:
+                                        deprecated: true
+                                        properties:
+                                            a~b:
+                                                multipleOf: 5
+                                                type:
+                                                    - number
+                                                    - "null"
+                                            created:
+                                                type: boolean
+                                            owner:
+                                                exclusiveMaximum: 1524
+                                                type:
+                                                    - integer
+                                                    - "null"
+                                        required:
+                                            - owner
+                                            - a~b
+                                        type: object
+                                    price:
+                                        format: custom
+                                        readOnly: true
+                                        type: boolean
+                                    ключ:
+                                        type: boolean
+                                type: object
+                    description: id
+                    headers:
+                        "null":
+                            required: false
+                            schema:
+                                description: kind
+                                type:
+                                    - integer
+                                    - "null"
+                        status:
+                            required: false
+                            schema:
+                                readOnly: true
+                                type: integer
+            summary: name
+        put:
+            operationId: put_search
+            parameters:
+                - in: query
+                  name: ༻춧㘆壕企⃏鎄垊
+                  schema:
+                    description: name
+                    enum:
+                        - 10
+                    readOnly: true
+                    type:
+                        - integer
+                        - "null"
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            description: tag
+                            exclusiveMaximum: 1482
+                            format: double
+                            maximum: 326
+                            type:
+                                - number
+                                - "null"
+                    text/plain:
+                        schema:
+                            additionalProperties: false
+                            properties:
+                                '...':
+                                    items:
+                                        readOnly: true
+                                        type:
+                                            - string
+                                            - "null"
+                                        writeOnly: true
+                                    minItems: 3
+                                    type: array
+                                "0x1F":
+                                    format: custom
+                                    readOnly: true
+                                    type: boolean
+                                "null":
+                                    type: object
+                            required:
+                                - '...'
+                            type: object
+                required: false
+            responses:
+                "204":
+                    content:
+                        '*/*':
+                            schema:
+                                maximum: 71
+                                type: number
+                    description: price
+                "400":
+                    description: ' leading'
+                default:
+                    description: 〺혼얠뾸㨣ភ磯
+                    headers:
+                        枮ꫲ볦摙ꜿ:
+                            schema:
+                                description: price
+                                type:
+                                    - string
+                                    - "null"
+    /store/order:
+        patch:
+            operationId: patch_store_order
+            responses:
+                2XX:
+                    description: price
+                "200":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                default: -0
+                                description: 鸻ᠺ楽囎匦স퐞ᶂ
+                                maximum: 939
+                                minimum: 9
+                                type:
+                                    - number
+                                    - "null"
+                        text/plain:
+                            schema:
+                                properties:
+                                    '&anchor':
+                                        allOf:
+                                            - type: boolean
+                                            - minimum: 5
+                                              type: number
+                                    '`tick`':
+                                        items:
+                                            description: ключ
+                                            pattern: ^.*$
+                                            type:
+                                                - string
+                                                - "null"
+                                        type: array
+                                    created:
+                                        oneOf:
+                                            - description: ключ
+                                              maxLength: 101
+                                              minLength: 3
+                                              type: string
+                                            - default: 11
+                                              description: owner
+                                              type:
+                                                - number
+                                                - "null"
+                                            - description: '-'
+                                              type: boolean
+                                    status:
+                                        type: object
+                                required:
+                                    - '`tick`'
+                                    - created
+                                    - status
+                                    - '&anchor'
+                                type: object
+                    description: price
+    /v1/items:
+        delete:
+            operationId: "x\ty"
+            parameters:
+                - description: id
+                  in: query
+                  name: Ünïcode
+                  schema:
+                    format: uuid
+                    type:
+                        - string
+                        - "null"
+            responses:
+                2XX:
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    maxProperties: 12
+                                    properties:
+                                        '---':
+                                            type:
+                                                - integer
+                                                - "null"
+                                        ключ:
+                                            minimum: -4
+                                            type:
+                                                - number
+                                                - "null"
+                                    required:
+                                        - ключ
+                                        - '---'
+                                    type: object
+                                type: array
+                                uniqueItems: true
+                        application/vnd.api+json:
+                            schema:
+                                type: boolean
+                    description: ‮abc
+            tags:
+                - owner
+            x-stability-level: draft
+        get:
+            parameters:
+                - in: cookie
+                  name: 稖
+                  required: false
+                  schema:
+                    items:
+                        type: number
+                    type: array
+                  style: form
+                - in: cookie
+                  name: '-'
+                  schema:
+                    description: "yes"
+                    maximum: 629
+                    multipleOf: 10
+                    type:
+                        - number
+                        - "null"
+                    writeOnly: true
+            responses:
+                2XX:
+                    content:
+                        '*/*':
+                            schema:
+                                items:
+                                    anyOf:
+                                        - maxLength: 158
+                                          type:
+                                            - string
+                                            - "null"
+                                        - enum:
+                                            - 2
+                                            - 14
+                                            - 1
+                                            - 11
+                                          exclusiveMaximum: 1291
+                                          type: integer
+                                type: array
+                    description: Ünïcode
+                "204":
+                    description: owner
+                default:
+                    content:
+                        application/json:
+                            schema:
+                                minimum: 2
+                                type: integer
+                    description: '| table |'
+            summary: '@at'
+        post:
+            parameters:
+                - description: ' '
+                  in: cookie
+                  name: tag
+                  required: false
+                  schema:
+                    properties:
+                        ' leading':
+                            $ref: '#/components/schemas/Item'
+                        䂸័委✂㼪Ῐ:
+                            type:
+                                - boolean
+                                - "null"
+                        名前:
+                            $ref: '#/components/schemas/Pet'
+                        패绾:
+                            format: custom
+                            readOnly: true
+                            type: boolean
+                    required:
+                        - 䂸័委✂㼪Ῐ
+                    type: object
+                    x-extensible-enum:
+                        - "\U0001F600"
+                        - id
+            responses:
+                "404":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                maxProperties: 17
+                                properties:
+                                    created:
+                                        additionalProperties:
+                                            type: string
+                                        maxProperties: 12
+                                        properties:
+                                            '''single''':
+                                                exclusiveMaximum: 1887
+                                                type:
+                                                    - number
+                                                    - "null"
+                                            status:
+                                                $ref: '#/components/schemas/Item'
+                                            ключ:
+                                                type:
+                                                    - boolean
+                                                    - "null"
+                                        required:
+                                            - ключ
+                                            - status
+                                        type: object
+                                    empty:
+                                        items:
+                                            deprecated: true
+                                            format: float
+                                            minimum: 2
+                                            type: number
+                                        type: array
+                                    綏镥:
+                                        oneOf:
+                                            - type: boolean
+                                            - maximum: 643
+                                              multipleOf: 10
+                                              type:
+                                                - integer
+                                                - "null"
+                                required:
+                                    - created
+                                type: object
+                                x-extensible-enum:
+                                    - <b>&amp;
+                                    - 㡶簛㩴Һᙨ눥∣
+                    description: 禢䱱
+            security:
+                - oauth: []
+servers:
+    - url: /relative
+    - url: https://api.example.com/v2

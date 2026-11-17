@@ -1,0 +1,77 @@
+# Fires request-parameter-max-contains-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            type: boolean
+        Pet:
+            properties:
+                "x\ty":
+                    description: name
+                    minLength: 2
+                    type: string
+            type: object
+    securitySchemes:
+        bearer:
+            scheme: basic
+            type: http
+info:
+    title: '@at'
+    version: v1
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        post:
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    contains:
+                        type: boolean
+                    maxContains: 4
+                    type: string
+                - description: "~"
+                  example: 暔퐝求㝍蹥䦋
+                  in: header
+                  name: ключ
+                  schema:
+                    format: double
+                    type: number
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            description: 잫螄皳꜌ⲓ杭㹂
+                            nullable: true
+                            type: number
+                    multipart/form-data:
+                        schema:
+                            description: name
+                            properties:
+                                owner:
+                                    items:
+                                        default: 17
+                                        enum:
+                                            - 6
+                                            - 20
+                                            - 19
+                                            - 8
+                                        type: integer
+                                        x-id: pet
+                                    type: array
+                                Ünïcode:
+                                    nullable: true
+                                    type: integer
+                            required:
+                                - owner
+                            type: object
+            responses:
+                default:
+                    description: name
+            security:
+                - bearer: []
+            tags:
+                - name
+                - id
+security:
+    - bearer: []

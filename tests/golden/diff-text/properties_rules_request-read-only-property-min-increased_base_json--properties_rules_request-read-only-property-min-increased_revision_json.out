@@ -1,0 +1,27 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+POST /pets
+- Responses changed
+  - Modified response: 500
+    - Content changed
+      - Deleted media type: application/json
+
+PUT /ünïcode/ключ
+- Request body changed
+  - Content changed
+    - Deleted media type: application/json; charset=utf-8
+    - Modified media type: application/xml
+      - Schema changed
+        - Properties changed
+          - Modified property: 叚։⋋媣塦
+            - Property 'AnyOf' changed
+              - Modified schema: subschema #2
+                - Min changed from -10 to -8
+
+

@@ -1,0 +1,17 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /p
+- :warning: deleted the `query` request parameter `removed` before the sunset date `2099-12-31`
+- :warning: `query` request parameter `earlier` sunset date changed to an earlier date, from `2099-12-31` to `2020-01-01`, new sunset date must be not earlier than `2099-12-31` and at least `0` days from now
+- :warning: `query` request parameter `too-small` sunset date `2020-01-01` is too small, must be at least `0` days from now
+- :warning: `query` request parameter `deleted` sunset date deleted, but deprecated=true kept
+- :warning: failed to parse sunset date for the `query` request parameter `bad`: `sunset date doesn't conform with RFC3339: not a date`
+
+
+
+
+
+

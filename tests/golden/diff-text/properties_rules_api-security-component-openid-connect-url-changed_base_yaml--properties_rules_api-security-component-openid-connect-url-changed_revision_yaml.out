@@ -1,0 +1,10 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: 1
+------------------------
+POST /items/{id}.json  
+
+### Modified Endpoints: None
+----------------------------
+

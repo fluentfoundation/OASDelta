@@ -1,0 +1,15 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[request-parameter-max-set] в ./properties/rules/response-body-exclusive-min-increased_revision.yaml
+	в API DELETE /pets/{petId}
+		в `path` параметре запроса `petId`, max установлен в `21.00`
+		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+
+info	[response-body-exclusive-min-increased] в ./properties/rules/response-body-exclusive-min-increased_revision.yaml
+	в API DELETE /pets/{petId}
+		значение exclusiveMinimum у тела ответа увеличено с `-7.00` до `-5.00`
+
+info	[response-header-added] в ./properties/rules/response-body-exclusive-min-increased_revision.yaml
+	в API DELETE /pets/{petId}
+		добавлен заголовок ответа `tag` для ответа со статусом `2XX`
+
+

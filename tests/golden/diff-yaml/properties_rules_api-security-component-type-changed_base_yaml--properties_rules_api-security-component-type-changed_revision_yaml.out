@@ -1,0 +1,14 @@
+components:
+    securitySchemes:
+        modified:
+            bearer:
+                type:
+                    from: http
+                    to: ""
+                scheme:
+                    from: basic
+                    to: ""
+                bearerFormat:
+                    from: JWT
+                    to: ""
+

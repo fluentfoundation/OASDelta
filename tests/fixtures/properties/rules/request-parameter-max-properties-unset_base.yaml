@@ -1,0 +1,176 @@
+# Fires request-parameter-max-properties-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            nullable: true
+            type: integer
+            writeOnly: true
+        Owner:
+            maximum: 429
+            type: integer
+        Pet:
+            items:
+                items:
+                    example: tag
+                    format: int32
+                    maximum: 35
+                    minimum: 6
+                    type: integer
+                type: array
+            type: array
+info:
+    title: status
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        get:
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: owner
+                  schema:
+                    enum:
+                        - tag
+                    format: password
+                    type: string
+            responses:
+                "204": {}
+                default:
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                deprecated: true
+                                type: object
+                        multipart/form-data:
+                            schema:
+                                oneOf:
+                                    - minimum: -8
+                                      type: integer
+                                    - enum:
+                                        - true
+                                        - false
+                                      type: boolean
+                    description: ꯒய虳㿅擠䨫쌅
+    /owners/{ownerId}/pets:
+        get:
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - deprecated: true
+                  in: cookie
+                  name: owner
+                  schema:
+                    anyOf:
+                        - format: double
+                          type: number
+                        - format: byte
+                          type: string
+                    maxProperties: 11
+            responses:
+                "200":
+                    description: name
+                "400":
+                    content:
+                        text/plain:
+                            schema:
+                                type: object
+                    description: name
+            summary: '**bold**'
+    /search:
+        delete:
+            operationId: ключ
+            responses:
+                "201":
+                    description: pet
+            tags:
+                - ключ
+                - status
+        patch:
+            operationId: patch_search
+            parameters:
+                - deprecated: true
+                  in: header
+                  name: "0x1F"
+                  schema:
+                    items:
+                        default: 9
+                        description: status
+                        minimum: -4
+                        nullable: true
+                        type: integer
+                    type: array
+                - deprecated: true
+                  in: cookie
+                  name: ключ
+                  schema:
+                    enum:
+                        - true
+                        - false
+                    type: boolean
+                - explode: false
+                  in: header
+                  name: 쐈젧⤺▹⓴곬
+                  schema:
+                    $ref: '#/components/schemas/Error'
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            items:
+                                properties:
+                                    '!tag':
+                                        default: 9223372036854775807
+                                        description: "1e3"
+                                        type: integer
+                                    ключ:
+                                        $ref: '#/components/schemas/Owner'
+                                    䝣틶䊅옃:
+                                        description: C:\path
+                                        enum:
+                                            - true
+                                            - false
+                                        type: boolean
+                                    龠ⳮꐒ徧묤玅:
+                                        $ref: '#/components/schemas/Pet'
+                                required:
+                                    - '!tag'
+                                    - 䝣틶䊅옃
+                                type: object
+                            type: array
+                required: false
+            responses:
+                "500":
+                    description: pet
+            x-stability-level: stable
+        post:
+            operationId: ключ
+            parameters:
+                - in: cookie
+                  name: a/b
+                  required: false
+                  schema:
+                    $ref: '#/components/schemas/Error'
+                - in: header
+                  name: 힞㎔
+                  schema:
+                    items:
+                        enum:
+                            - -27.75
+                        format: float
+                        nullable: true
+                        readOnly: true
+                        type: number
+                    type: array
+            responses:
+                "400":
+                    description: 偛ꁔ頭డ씯粻띹⃑
+servers:
+    - url: https://api.example.com/v2

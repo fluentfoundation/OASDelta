@@ -1,0 +1,3 @@
+::error title=request-parameter-became-required,file=./properties/rules/request-parameter-became-required_revision.yaml,line=33,col=19::in API DELETE /search the `query` request parameter `◊愽貺䫔` became required
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

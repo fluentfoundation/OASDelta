@@ -1,0 +1,10 @@
+# API Changelog 2.0 vs. 2.0
+
+
+
+## Components
+-  the component security scheme `oauth` bearer format changed from `` to `...`
+
+
+
+

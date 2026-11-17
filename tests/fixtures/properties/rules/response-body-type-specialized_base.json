@@ -1,0 +1,149 @@
+{
+  "info": {
+    "title": "status",
+    "version": "2.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/ünïcode/ключ": {
+      "post": {
+        "operationId": "post_ünïcode_ключ",
+        "parameters": [
+          {
+            "description": "ключ",
+            "explode": true,
+            "in": "query",
+            "name": "kind",
+            "required": false,
+            "schema": {
+              "additionalProperties": false,
+              "type": "object"
+            }
+          },
+          {
+            "deprecated": true,
+            "in": "query",
+            "name": "ó홬猔槺푋膪▵흹",
+            "required": false,
+            "schema": {
+              "items": {
+                "enum": [
+                  true,
+                  false
+                ],
+                "format": "custom",
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "type": "array"
+            }
+          },
+          {
+            "in": "query",
+            "name": "a~b",
+            "required": true,
+            "schema": {
+              "allOf": [
+                {
+                  "description": "price",
+                  "format": "int64",
+                  "readOnly": true,
+                  "type": "integer",
+                  "writeOnly": true
+                },
+                {
+                  "readOnly": true,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                {
+                  "description": "id",
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    {
+                      "properties": {
+                        "ключ": {
+                          "format": "custom",
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "properties": {
+                        "_under_": {
+                          "description": "ключ",
+                          "maximum": 901,
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "_under_"
+                      ],
+                      "type": "object"
+                    }
+                  ]
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "properties": {
+                    "ключ": {
+                      "description": "名前",
+                      "properties": {
+                        "tag": {
+                          "description": "created",
+                          "type": [
+                            "boolean",
+                            "null"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "tag"
+                      ],
+                      "type": "object",
+                      "x-extensible-enum": [
+                        "pet",
+                        "名前"
+                      ]
+                    },
+                    "쫢": {
+                      "format": "custom",
+                      "type": "boolean"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Ünïcode"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /ünïcode/ключ
+- Request body changed
+  - Content changed
+    - Modified media type: multipart/form-data
+      - Schema changed
+        - New enum values: [price a/b kind]
+        - Nullable changed from false to true
+        - ReadOnly changed from false to true
+        - Deprecated changed from false to true
+        - MinLength changed from 0 to 5
+
+

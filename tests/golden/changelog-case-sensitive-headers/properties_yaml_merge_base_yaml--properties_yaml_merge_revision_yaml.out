@@ -1,0 +1,1 @@
+[{"id":"response-body-min-length-increased","text":"the response's body minLength was increased from `1` to `2`","level":1,"operation":"GET","path":"/a","section":"paths","baseSource":{"file":"./properties/yaml_merge_base.yaml","line":20,"column":17},"revisionSource":{"file":"./properties/yaml_merge_revision.yaml","line":15,"column":70},"fingerprint":"1fd26452822b"}]

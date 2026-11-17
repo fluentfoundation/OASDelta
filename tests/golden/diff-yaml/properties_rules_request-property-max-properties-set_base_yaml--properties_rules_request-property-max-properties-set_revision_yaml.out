@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            items:
+                                                type:
+                                                    added:
+                                                        - object
+                                                    deleted:
+                                                        - string
+                                                additionalPropertiesAllowed:
+                                                    from: null
+                                                    to: true
+                                                maxProps:
+                                                    from: null
+                                                    to: 7
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /ünïcode/ключ
+        :   requestBody:
+                content:
+                    modified:
+                        text/plain:
+                            schema:
+                                items:
+                                    type:
+                                        added:
+                                            - object
+                                        deleted:
+                                            - string
+                                    additionalPropertiesAllowed:
+                                        from: null
+                                        to: true
+                                    maxProps:
+                                        from: null
+                                        to: 7
+

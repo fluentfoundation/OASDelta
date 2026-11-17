@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./properties/rules/response-required-property-became-read-only_revision.yaml, in API DELETE /search the response required property `anyOf[subschema #1]/created` became read-only for the status `default` [response-required-property-became-read-only]. 
+
+

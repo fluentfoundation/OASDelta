@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /v1/items
+-  the `header` request parameter `tag` became optional
+
+
+
+
+
+

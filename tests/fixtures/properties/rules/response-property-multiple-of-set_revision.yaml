@@ -1,0 +1,73 @@
+# Fires response-property-multiple-of-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Pet:
+            type: string
+info:
+    title: kind
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /search:
+        delete:
+            parameters:
+                - in: cookie
+                  name: 刳蠵富鞵㪋
+                  schema:
+                    example: tag
+                    format: double
+                    type: number
+            responses:
+                2XX:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                description: ' leading'
+                                properties:
+                                    '@at':
+                                        items:
+                                            enum:
+                                                - 21
+                                                - 89.25
+                                                - -13.25
+                                            format: float
+                                            type: number
+                                        maxItems: 51
+                                        minItems: 3
+                                        type: array
+                                    id:
+                                        minimum: -10
+                                        nullable: true
+                                        readOnly: true
+                                        type: number
+                                    名前:
+                                        items:
+                                            format: uuid
+                                            maxLength: 165
+                                            minLength: 0
+                                            pattern: \d{3}
+                                            type: string
+                                        maxItems: 22
+                                        type: array
+                                    若὾Ÿ⶜:
+                                        enum:
+                                            - owner
+                                        format: date-time
+                                        maxLength: 21
+                                        multipleOf: 2
+                                        nullable: true
+                                        type: string
+                                required:
+                                    - 名前
+                                    - 若὾Ÿ⶜
+                                type: object
+                                x-extensible-enum:
+                                    - 손迺ኹ둖츍
+                                    - price
+                    description: ключ
+servers:
+    - url: https://api.example.com/v2
+    - url: /relative
+tags:
+    - name: 名前
+    - name: status

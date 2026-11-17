@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /search
+- :warning: for the `query` request parameter `tag`, the maxItems was set to `15`
+
+
+
+
+
+

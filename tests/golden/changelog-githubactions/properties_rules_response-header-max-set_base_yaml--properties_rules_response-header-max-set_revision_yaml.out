@@ -1,0 +1,2 @@
+::notice title=response-header-max-set,file=./properties/rules/response-header-max-set_revision.yaml,line=41,col=9::in API PUT /v1/items the `**bold**` response header's max was set to `6.00` for the status `default`
+

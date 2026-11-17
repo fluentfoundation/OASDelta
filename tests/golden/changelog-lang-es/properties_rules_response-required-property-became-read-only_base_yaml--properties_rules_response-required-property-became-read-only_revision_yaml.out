@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-required-property-became-read-only] en ./properties/rules/response-required-property-became-read-only_revision.yaml
+	en API DELETE /search
+		la propiedad requerida `anyOf[subschema #1]/created` se volvió de solo lectura para el estado `default`
+
+

@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /v1/items
+- :warning: for the `query` request parameter `price`, the minLength was set to `18`
+
+
+
+
+
+

@@ -1,0 +1,157 @@
+{
+  "info": {
+    "title": "status",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/items/{id}.json": {
+      "patch": {
+        "deprecated": true,
+        "operationId": "patch_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "\u003cb\u003e\u0026amp;",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "nullable": true,
+                "type": "boolean"
+              }
+            },
+            "application/json; charset=utf-8": {
+              "schema": {
+                "format": "date-time",
+                "type": "string",
+                "writeOnly": true
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "items": {
+                    "items": {
+                      "description": "ключ",
+                      "enum": [
+                        -65,
+                        49
+                      ],
+                      "maximum": 76,
+                      "readOnly": true,
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  "type": "array"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            },
+            "description": "price",
+            "headers": {
+              "a\r\nb": {
+                "deprecated": true,
+                "schema": {
+                  "maxLength": 149,
+                  "type": "string"
+                }
+              },
+              "ключ": {
+                "schema": {
+                  "minLength": 1,
+                  "nullable": true,
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "readOnly": true,
+                  "type": "boolean",
+                  "writeOnly": true
+                }
+              }
+            },
+            "description": "‮abc"
+          },
+          "default": {
+            "description": "tag"
+          }
+        },
+        "summary": "owner"
+      }
+    },
+    "/ünïcode/ключ": {
+      "post": {
+        "operationId": "post_ünïcode_ключ",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "boolean",
+                "writeOnly": true
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "properties": {
+                    "kind": {
+                      "properties": {
+                        "a\r\nb": {
+                          "maxLength": 95,
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "name"
+          },
+          "400": {
+            "description": "kind"
+          }
+        }
+      }
+    }
+  }
+}

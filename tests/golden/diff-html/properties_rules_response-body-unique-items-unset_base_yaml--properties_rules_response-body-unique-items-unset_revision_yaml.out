@@ -1,0 +1,38 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>POST /items/{id}.json</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: default
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json; charset=utf-8
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'array' to 'boolean'</li>
+<li>UniqueItems changed from true to false</li>
+<li>MaxItems changed from 83 to null</li>
+<li>Items changed
+<ul>
+<li>Schema deleted</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

@@ -1,0 +1,16 @@
+- id: request-property-max-length-increased
+  text: the `---/pet` request property's maxLength was increased from `48` to `51`
+  level: 1
+  operation: POST
+  path: /store/order
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-property-max-length-increased_base.yaml
+    line: 42
+    column: 21
+  revisionSource:
+    file: ./properties/rules/request-property-max-length-increased_revision.yaml
+    line: 42
+    column: 21
+  fingerprint: 5422699ed48c
+

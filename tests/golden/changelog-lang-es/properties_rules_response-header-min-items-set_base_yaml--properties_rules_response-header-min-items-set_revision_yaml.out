@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-header-min-items-set] en ./properties/rules/response-header-min-items-set_revision.yaml
+	en API PATCH /store/order
+		el valor minItems del encabezado de respuesta `kind` fue establecido en `6` para el estado `404`
+
+

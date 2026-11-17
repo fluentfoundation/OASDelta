@@ -9,9 +9,10 @@ code as the Go binary.
   option combinations ([`tools/golden-commands.txt`](https://github.com/fluentfoundation/OASDelta/blob/main/tools/golden-commands.txt)):
   every output format of `diff`, `summary`, `changelog` and `breaking`; `--lang` es, pt-br and ru; and option sets
   such as `--level`, `--fail-on`, `--flatten-params`, `--include-path-params`, `--match-path`, `--prefix-revision`
-  and deprecation days. They run over 327 fixture pairs: the upstream test data paired by file name, the pairs
+  and deprecation days. They run over 637 fixture pairs: the upstream test data paired by file name, the pairs
   upstream's own checker tests compare (`tests/extra-pairs.txt`), and regression cases found by the property-based
-  tests. That is 10,791 comparisons, in which 384 of the 617 checker rules fire. `dotnet test` replays them in
+  tests. That is 21,021 comparisons, in which 733 of oasdiff's 778 checker rules fire. The
+  [coverage page](./coverage) lists the rules no golden fires. `dotnet test` replays them in
   process. CI replays them with the NativeAOT binary
   (`tools/check_golden.sh`) on Linux and Windows, and the release workflow replays them on all six release
   platforms. The few cases that are expected to differ are listed in `tests/golden-known.txt`, each with its
@@ -74,6 +75,14 @@ of its size.
   belong to one schema. Which one oasdiff shows in a change's "shared schema" detail depends on Go map order and
   changes from run to run. The port always shows the first in sorted order, one of the names oasdiff shows.
 - **Template errors.** Messages for broken custom templates are shorter than Go's.
+- **Nested emphasis in the HTML diff report.** When emphasis is nested and one delimiter run is only partly used
+  (`**a* b*c*d**`), the port pairs the delimiters differently from goldmark
+  ([#46](https://github.com/fluentfoundation/OASDelta/issues/46)). Everything else in that Markdown, including
+  `~` strikethrough, task-list checkboxes and CommonMark's flanking rules, renders as goldmark renders it.
+- **A YAML word that starts with `*`** ([#54](https://github.com/fluentfoundation/OASDelta/issues/54)). The YAML
+  parser, YamlDotNet, takes such a word in a plain scalar for an alias, so the `: ` after it doesn't end the scalar.
+  As the first key of a mapping (`a *b: 1`), the port fails to load a spec that oasdiff reads. In a value
+  (`description: use a *b: c`), the port reads a spec that oasdiff rejects. Quoting the key or value avoids both.
 - **Missing files.** A spec or `$ref`'d file that doesn't exist is reported with Go's Linux wording
   (`open sub/defs.yaml: no such file or directory`) on every OS. On Windows, oasdiff prints the Windows text and a
   backslash path instead.
@@ -94,6 +103,11 @@ of its size.
 
   A `$ref` to a `null` still resolves to nothing, as in oasdiff (for a schema, `diff failed: revision schema value
   is nil`).
+- **A discriminator mapping that points at nothing.** oasdiff 1.35.0 loads both specs with one kin-openapi loader,
+  and the loader takes every document after the first for an external one. In an external document it resolves a
+  mapping's local `$ref` (`mapping: {a: '#/components/schemas/A'}`), which it skips in the root document. So when `A`
+  doesn't exist, oasdiff loads the base spec but fails on the revision (`map key "A" not found`, exit 102). The
+  port loads both, as kin does for the first one.
 - **Crashes.** Where oasdiff crashes, the port reports an error or a result instead.
   - A parameter or response that is only a reference to itself (`P: {$ref: '#/components/parameters/P'}`) makes
     oasdiff 1.35.0 panic while it lowercases header names (exit 2, with a Go stack trace). The port fails with

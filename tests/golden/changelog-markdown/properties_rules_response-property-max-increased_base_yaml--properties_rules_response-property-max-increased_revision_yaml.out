@@ -1,0 +1,17 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### DELETE /search
+- :warning: the `anyOf[subschema #2]/&anchor` response property's max was increased from `570.00` to `572.00` for the response status `default`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

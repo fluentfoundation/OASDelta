@@ -1,0 +1,52 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                deleted:
+                    - GET
+        /store/order:
+            operations:
+                modified:
+                    PATCH:
+                        parameters:
+                            modified:
+                                header:
+                                    name:
+                                        allowReserved:
+                                            from: false
+                                            to: true
+                        responses:
+                            modified:
+                                "201":
+                                    headers:
+                                        modified:
+                                            '%20':
+                                                schema:
+                                                    exclusiveMin:
+                                                        from: null
+                                                        to: true
+endpoints:
+    deleted:
+        - method: GET
+          path: /pets
+    modified:
+        ?   method: PATCH
+            path: /store/order
+        :   parameters:
+                modified:
+                    header:
+                        name:
+                            allowReserved:
+                                from: false
+                                to: true
+            responses:
+                modified:
+                    "201":
+                        headers:
+                            modified:
+                                '%20':
+                                    schema:
+                                        exclusiveMin:
+                                            from: null
+                                            to: true
+

@@ -1,0 +1,16 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /pets
+- Modified cookie param: kind
+  - Style changed from 'label' to ''
+  - Schema changed
+    - ExclusiveMin changed from true to null
+- Deprecated changed from true to false
+
+

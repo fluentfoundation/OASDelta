@@ -1,0 +1,42 @@
+paths:
+    added:
+        - /added/%C2%A0nbsp
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    PATCH:
+                        parameters:
+                            added:
+                                query:
+                                    - 㿢몜짐躘훕綏冔⌰
+                            deleted:
+                                query:
+                                    - pet
+endpoints:
+    added:
+        - method: GET
+          path: /added/%C2%A0nbsp
+    modified:
+        ?   method: PATCH
+            path: /owners/{ownerId}/pets
+        :   parameters:
+                added:
+                    query:
+                        - 㿢몜짐躘훕綏冔⌰
+                deleted:
+                    query:
+                        - pet
+tags:
+    added:
+        - created
+components:
+    securitySchemes:
+        modified:
+            oauth:
+                OAuthFlows:
+                    clientCredentials:
+                        scopes:
+                            deleted:
+                                - write
+

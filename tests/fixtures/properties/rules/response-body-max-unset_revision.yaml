@@ -1,0 +1,138 @@
+# Fires response-body-max-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: 䫬㔿
+            type: apiKey
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: a~b
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /pets:
+        post:
+            operationId: post_pets
+            parameters:
+                - description: owner
+                  explode: false
+                  in: header
+                  name: tag
+                  schema:
+                    properties:
+                        "\U0001F600":
+                            enum:
+                                - true
+                                - false
+                            type:
+                                - boolean
+                                - "null"
+                        "0x1F":
+                            format: custom
+                            type:
+                                - boolean
+                                - "null"
+                        name:
+                            maximum: 646
+                            type: integer
+                    type: object
+                - in: header
+                  name: 뽍뢥룂垗
+                  schema:
+                    deprecated: true
+                    type:
+                        - string
+                        - "null"
+                  style: spaceDelimited
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            anyOf:
+                                - properties:
+                                    "\U0001F600":
+                                        maximum: 646
+                                        type: number
+                                        writeOnly: true
+                                    ключ:
+                                        description: name
+                                        format: double
+                                        type: number
+                                  required:
+                                    - "\U0001F600"
+                                    - ключ
+                                  type: object
+                                - description: ключ
+                                  format: double
+                                  maximum: 35
+                                  type:
+                                    - number
+                                    - "null"
+                                - description: name
+                                  minimum: 0
+                                  type:
+                                    - integer
+                                    - "null"
+                required: true
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                type: string
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    deprecated: true
+                                    format: double
+                                    type:
+                                        - number
+                                        - "null"
+                                type: array
+                    description: pet
+                "500":
+                    content:
+                        '*/*':
+                            schema:
+                                allOf:
+                                    - description: price
+                                      type: integer
+                                      writeOnly: true
+                                    - properties:
+                                        '%20':
+                                            default: -23.5
+                                            description: |-
+                                                line1
+                                                line2
+                                            format: int64
+                                            readOnly: true
+                                            type: integer
+                                        '[bracket]':
+                                            type: boolean
+                                        "1e3":
+                                            readOnly: true
+                                            type:
+                                                - boolean
+                                                - "null"
+                                        name:
+                                            enum:
+                                                - ꮶᯎ
+                                            format: binary
+                                            minLength: 0
+                                            type: string
+                                      required:
+                                        - "1e3"
+                                        - '[bracket]'
+                                        - '%20'
+                                      type: object
+                    description: ' leading'
+                default:
+                    description: 㩴⫟ᴰ䦊퉃囮
+security:
+    - bearer: []
+servers:
+    - url: https://api.example.com
+    - url: /relative

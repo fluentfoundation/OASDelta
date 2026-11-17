@@ -1,0 +1,53 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    DELETE:
+                        parameters:
+                            modified:
+                                query:
+                                    ключ:
+                                        schema:
+                                            anyOf:
+                                                modified:
+                                                    - base:
+                                                        index: 1
+                                                      revision:
+                                                        index: 1
+                                                      diff:
+                                                        type:
+                                                            added:
+                                                                - string
+                                                        description:
+                                                            from: ""
+                                                            to: created
+                                                        always:
+                                                            from: false
+                                                            to: null
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /pets/{petId}
+        :   parameters:
+                modified:
+                    query:
+                        ключ:
+                            schema:
+                                anyOf:
+                                    modified:
+                                        - base:
+                                            index: 1
+                                          revision:
+                                            index: 1
+                                          diff:
+                                            type:
+                                                added:
+                                                    - string
+                                            description:
+                                                from: ""
+                                                to: created
+                                            always:
+                                                from: false
+                                                to: null
+

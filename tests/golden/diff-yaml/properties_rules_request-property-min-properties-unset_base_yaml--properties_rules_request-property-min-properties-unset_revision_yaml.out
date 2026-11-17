@@ -1,0 +1,39 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json; charset=utf-8:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    '"quoted"':
+                                                        properties:
+                                                            modified:
+                                                                price:
+                                                                    minProps:
+                                                                        from: 8
+                                                                        to: 0
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /search
+        :   requestBody:
+                content:
+                    modified:
+                        application/json; charset=utf-8:
+                            schema:
+                                properties:
+                                    modified:
+                                        '"quoted"':
+                                            properties:
+                                                modified:
+                                                    price:
+                                                        minProps:
+                                                            from: 8
+                                                            to: 0
+

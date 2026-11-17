@@ -1,0 +1,120 @@
+{
+  "components": {
+    "schemas": {
+      "Owner": {
+        "nullable": true,
+        "type": "integer"
+      }
+    }
+  },
+  "info": {
+    "title": "_under_",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/v1/items": {
+      "get": {
+        "operationId": "get_v1_items",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "{brace}",
+            "required": false,
+            "schema": {
+              "properties": {
+                "a: b": {
+                  "nullable": true,
+                  "type": "number"
+                },
+                "no": {
+                  "$ref": "#/components/schemas/Owner"
+                }
+              },
+              "required": [
+                "no"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "[bracket]"
+          },
+          "400": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "number"
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "enum": [
+                    "name",
+                    "tag",
+                    "~",
+                    "1e3"
+                  ],
+                  "maxLength": 101,
+                  "nullable": true,
+                  "type": "string"
+                }
+              }
+            },
+            "description": " nbsp"
+          },
+          "500": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "const": "kind",
+                  "description": "pet",
+                  "enum": [
+                    "owner",
+                    "kind"
+                  ],
+                  "format": "byte",
+                  "maxLength": 152,
+                  "readOnly": true,
+                  "type": "string"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "enum": [
+                    53,
+                    53.625
+                  ],
+                  "format": "float",
+                  "nullable": true,
+                  "type": "number"
+                }
+              }
+            },
+            "description": "name"
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_v1_items",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Owner"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "둜퐥"
+          }
+        }
+      }
+    }
+  }
+}

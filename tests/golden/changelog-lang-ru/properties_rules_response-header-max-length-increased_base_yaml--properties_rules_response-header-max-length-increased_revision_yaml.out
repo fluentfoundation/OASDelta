@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[response-header-max-length-increased] в ./properties/rules/response-header-max-length-increased_revision.yaml
+	в API DELETE /store/order
+		значение maxLength у заголовка ответа `status` увеличено с `209` до `210` для статуса `2XX`
+
+

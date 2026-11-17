@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets/{petId}":{"operations":{"modified":{"GET":{"parameters":{"modified":{"header":{"name":{"schema":{"multipleOf":{"from":9,"to":null}}}}}}}}}}}}}

@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "400":
+                                    content:
+                                        modified:
+                                            multipart/form-data:
+                                                schema:
+                                                    allOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 1
+                                                              revision:
+                                                                index: 1
+                                                              diff:
+                                                                minProps:
+                                                                    from: 4
+                                                                    to: 1
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /v1/items
+        :   responses:
+                modified:
+                    "400":
+                        content:
+                            modified:
+                                multipart/form-data:
+                                    schema:
+                                        allOf:
+                                            modified:
+                                                - base:
+                                                    index: 1
+                                                  revision:
+                                                    index: 1
+                                                  diff:
+                                                    minProps:
+                                                        from: 4
+                                                        to: 1
+

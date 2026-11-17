@@ -1,0 +1,7 @@
+1 cambios: 0 error, 1 warning, 0 info
+warning	[response-property-min-properties-decreased] en ./properties/rules/response-property-min-properties-decreased_revision.yaml
+	en API PATCH /v1/items
+		el número mínimo de propiedades de la propiedad de respuesta `allOf[subschema #2]/` fue disminuido de `4` a `1` para el estado `400`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+

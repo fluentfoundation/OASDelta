@@ -1,0 +1,75 @@
+# Fires response-property-reactivated (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: Ünïcode
+    version: v1
+openapi: 3.1.0
+paths:
+    /pets/{petId}:
+        patch:
+            deprecated: true
+            operationId: patch_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - deprecated: true
+                  in: query
+                  name: ключ
+                  schema:
+                    type: integer
+            requestBody:
+                content:
+                    text/plain:
+                        schema:
+                            format: custom
+                            type: boolean
+                required: false
+            responses:
+                "201":
+                    description: a/b
+                "500":
+                    content:
+                        application/xml:
+                            schema:
+                                format: float
+                                minimum: 9
+                                type:
+                                    - number
+                                    - "null"
+                        multipart/form-data:
+                            schema:
+                                oneOf:
+                                    - enum:
+                                        - price
+                                        - ' leading'
+                                      pattern: ^.*$
+                                      readOnly: true
+                                      type: string
+                                    - additionalProperties: true
+                                      properties:
+                                        price:
+                                            enum:
+                                                - 1
+                                                - 12
+                                            type:
+                                                - integer
+                                                - "null"
+                                      required:
+                                        - price
+                                      type: object
+                                    - type: object
+                    description: '"quoted"'
+                default:
+                    content:
+                        '*/*':
+                            schema:
+                                items:
+                                    deprecated: true
+                                    format: int64
+                                    readOnly: true
+                                    type: integer
+                                type: array
+                    description: tag
+            summary: Ünïcode

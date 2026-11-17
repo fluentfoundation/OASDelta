@@ -1,0 +1,77 @@
+# Fires response-property-exclusive-max-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        oauth:
+            flows:
+                authorizationCode:
+                    authorizationUrl: https://auth.example.com/authorize
+                    scopes:
+                        read: read access
+                    tokenUrl: https://auth.example.com/token
+                clientCredentials:
+                    scopes:
+                        read: read access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: id
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /search:
+        put:
+            responses:
+                "204":
+                    content:
+                        '*/*':
+                            schema:
+                                description: name
+                                type: boolean
+                                writeOnly: true
+                        application/vnd.api+json:
+                            schema:
+                                properties:
+                                    ? "a\r\nb"
+                                    :   items:
+                                            format: float
+                                            type:
+                                                - number
+                                                - "null"
+                                        type: array
+                                    kind:
+                                        oneOf:
+                                            - description: '`tick`'
+                                              format: int32
+                                              minimum: 3
+                                              multipleOf: 5
+                                              type:
+                                                - integer
+                                                - "null"
+                                            - default: true
+                                              format: custom
+                                              type: boolean
+                                            - type:
+                                                - number
+                                                - "null"
+                                    status:
+                                        properties:
+                                            id:
+                                                enum:
+                                                    - 90.5
+                                                    - 99
+                                                type:
+                                                    - number
+                                                    - "null"
+                                            ключ:
+                                                description: "a\r\nb"
+                                                exclusiveMaximum: 1343
+                                                type: integer
+                                        required:
+                                            - ключ
+                                        type: object
+                                required:
+                                    - status
+                                type: object
+                    description: ключ
+                "404":
+                    description: '[bracket]'

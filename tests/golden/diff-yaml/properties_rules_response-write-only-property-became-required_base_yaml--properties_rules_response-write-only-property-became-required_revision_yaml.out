@@ -1,0 +1,248 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                deleted:
+                    - PUT
+        /pets/{petId}:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json; charset=utf-8:
+                                        schema:
+                                            items:
+                                                properties:
+                                                    modified:
+                                                        Ünïcode:
+                                                            required:
+                                                                stringsdiff:
+                                                                    added:
+                                                                        - price
+                                                            properties:
+                                                                modified:
+                                                                    price:
+                                                                        type:
+                                                                            added:
+                                                                                - string
+                                                                            deleted:
+                                                                                - object
+                                                                        writeOnly:
+                                                                            from: false
+                                                                            to: true
+                                                                        required:
+                                                                            stringsdiff:
+                                                                                deleted:
+                                                                                    - '%20'
+                                                                                    - '&anchor'
+                                                                                    - id
+                                                                        properties:
+                                                                            deleted:
+                                                                                - '%20'
+                                                                                - '&anchor'
+                                                                                - id
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-8:
+                                                schema:
+                                                    required:
+                                                        stringsdiff:
+                                                            added:
+                                                                - price
+                                                    properties:
+                                                        modified:
+                                                            price:
+                                                                type:
+                                                                    added:
+                                                                        - string
+                                                                    deleted:
+                                                                        - object
+                                                                writeOnly:
+                                                                    from: false
+                                                                    to: true
+                                                                required:
+                                                                    stringsdiff:
+                                                                        deleted:
+                                                                            - '%20'
+                                                                            - '&anchor'
+                                                                            - id
+                                                                properties:
+                                                                    deleted:
+                                                                        - '%20'
+                                                                        - '&anchor'
+                                                                        - id
+                                            application/xml:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            "no":
+                                                                items:
+                                                                    required:
+                                                                        stringsdiff:
+                                                                            added:
+                                                                                - price
+                                                                    properties:
+                                                                        modified:
+                                                                            price:
+                                                                                type:
+                                                                                    added:
+                                                                                        - string
+                                                                                    deleted:
+                                                                                        - object
+                                                                                writeOnly:
+                                                                                    from: false
+                                                                                    to: true
+                                                                                required:
+                                                                                    stringsdiff:
+                                                                                        deleted:
+                                                                                            - '%20'
+                                                                                            - '&anchor'
+                                                                                            - id
+                                                                                properties:
+                                                                                    deleted:
+                                                                                        - '%20'
+                                                                                        - '&anchor'
+                                                                                        - id
+endpoints:
+    deleted:
+        - method: PUT
+          path: /owners/{ownerId}/pets
+    modified:
+        ?   method: POST
+            path: /pets/{petId}
+        :   requestBody:
+                content:
+                    modified:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    properties:
+                                        modified:
+                                            Ünïcode:
+                                                required:
+                                                    stringsdiff:
+                                                        added:
+                                                            - price
+                                                properties:
+                                                    modified:
+                                                        price:
+                                                            type:
+                                                                added:
+                                                                    - string
+                                                                deleted:
+                                                                    - object
+                                                            writeOnly:
+                                                                from: false
+                                                                to: true
+                                                            required:
+                                                                stringsdiff:
+                                                                    deleted:
+                                                                        - '%20'
+                                                                        - '&anchor'
+                                                                        - id
+                                                            properties:
+                                                                deleted:
+                                                                    - '%20'
+                                                                    - '&anchor'
+                                                                    - id
+            responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                application/json; charset=utf-8:
+                                    schema:
+                                        required:
+                                            stringsdiff:
+                                                added:
+                                                    - price
+                                        properties:
+                                            modified:
+                                                price:
+                                                    type:
+                                                        added:
+                                                            - string
+                                                        deleted:
+                                                            - object
+                                                    writeOnly:
+                                                        from: false
+                                                        to: true
+                                                    required:
+                                                        stringsdiff:
+                                                            deleted:
+                                                                - '%20'
+                                                                - '&anchor'
+                                                                - id
+                                                    properties:
+                                                        deleted:
+                                                            - '%20'
+                                                            - '&anchor'
+                                                            - id
+                                application/xml:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                "no":
+                                                    items:
+                                                        required:
+                                                            stringsdiff:
+                                                                added:
+                                                                    - price
+                                                        properties:
+                                                            modified:
+                                                                price:
+                                                                    type:
+                                                                        added:
+                                                                            - string
+                                                                        deleted:
+                                                                            - object
+                                                                    writeOnly:
+                                                                        from: false
+                                                                        to: true
+                                                                    required:
+                                                                        stringsdiff:
+                                                                            deleted:
+                                                                                - '%20'
+                                                                                - '&anchor'
+                                                                                - id
+                                                                    properties:
+                                                                        deleted:
+                                                                            - '%20'
+                                                                            - '&anchor'
+                                                                            - id
+components:
+    schemas:
+        modified:
+            Error:
+                required:
+                    stringsdiff:
+                        added:
+                            - price
+                properties:
+                    modified:
+                        price:
+                            type:
+                                added:
+                                    - string
+                                deleted:
+                                    - object
+                            writeOnly:
+                                from: false
+                                to: true
+                            required:
+                                stringsdiff:
+                                    deleted:
+                                        - '%20'
+                                        - '&anchor'
+                                        - id
+                            properties:
+                                deleted:
+                                    - '%20'
+                                    - '&anchor'
+                                    - id
+

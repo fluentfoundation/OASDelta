@@ -1,0 +1,64 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                cookie:
+                                    榶河鲠Ɯ㳦཮⒚:
+                                        schema:
+                                            format:
+                                                from: date-time
+                                                to: ""
+                        responses:
+                            modified:
+                                "200":
+                                    headers:
+                                        modified:
+                                            a/b:
+                                                schema:
+                                                    min:
+                                                        from: null
+                                                        to: 20
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    multipart/form-data:
+                                        example:
+                                            from: null
+                                            to: status
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets/{petId}
+        :   parameters:
+                modified:
+                    cookie:
+                        榶河鲠Ɯ㳦཮⒚:
+                            schema:
+                                format:
+                                    from: date-time
+                                    to: ""
+            responses:
+                modified:
+                    "200":
+                        headers:
+                            modified:
+                                a/b:
+                                    schema:
+                                        min:
+                                            from: null
+                                            to: 20
+        ?   method: PUT
+            path: /pets/{petId}
+        :   requestBody:
+                content:
+                    modified:
+                        multipart/form-data:
+                            example:
+                                from: null
+                                to: status
+

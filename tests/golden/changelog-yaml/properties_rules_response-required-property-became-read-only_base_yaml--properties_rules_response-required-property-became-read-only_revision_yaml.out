@@ -1,0 +1,9 @@
+- id: response-required-property-became-read-only
+  text: 'the response required property `anyOf[subschema #1]/created` became read-only for the status `default`'
+  level: 1
+  operation: DELETE
+  operationId: delete_search
+  path: /search
+  section: paths
+  fingerprint: 593631dd545a
+

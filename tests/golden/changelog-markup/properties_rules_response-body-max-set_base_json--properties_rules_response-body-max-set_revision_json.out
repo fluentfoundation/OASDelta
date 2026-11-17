@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /owners/{ownerId}/pets
+-  the response's body max was set to `21.00`
+
+
+
+
+
+

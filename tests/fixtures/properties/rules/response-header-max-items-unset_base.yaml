@@ -1,0 +1,76 @@
+# Fires response-header-max-items-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            $ref: '#/components/schemas/Item'
+        Item:
+            items:
+                oneOf:
+                    - type:
+                        - integer
+                        - "null"
+                    - enum:
+                        - 4
+                        - -1
+                        - 10
+                        - 17
+                      format: int64
+                      maximum: 986
+                      minimum: -3
+                      type: integer
+            maxItems: 51
+            type: array
+    securitySchemes:
+        api_key:
+            in: header
+            name: tag
+            type: apiKey
+info:
+    title: Ünïcode
+    version: v1
+openapi: 3.1.0
+paths:
+    /owners/{ownerId}/pets:
+        get:
+            operationId: get_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "204":
+                    description: a~b
+                    headers:
+                        '{brace}':
+                            schema:
+                                readOnly: true
+                                type: integer
+                        kind:
+                            required: false
+                            schema:
+                                default: 1.23456789125e+08
+                                maxItems: 3
+                                type:
+                                    - number
+                                    - "null"
+            summary: ключ
+        post:
+            operationId: name
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "204":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                format: date
+                                minLength: 3
+                                readOnly: true
+                                type: string
+                    description: name

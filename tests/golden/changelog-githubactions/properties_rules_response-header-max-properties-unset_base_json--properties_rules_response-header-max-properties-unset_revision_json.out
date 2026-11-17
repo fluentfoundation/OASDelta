@@ -1,0 +1,3 @@
+::error title=response-header-max-properties-unset,file=./properties/rules/response-header-max-properties-unset_revision.json::in API DELETE /items/{id}.json the `a%0D%0Ab` response header's maxProperties was unset from `1` for the status `default`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

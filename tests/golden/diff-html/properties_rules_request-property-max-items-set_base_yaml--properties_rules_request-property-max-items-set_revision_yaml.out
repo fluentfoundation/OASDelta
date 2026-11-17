@@ -1,0 +1,43 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>POST /items/{id}.json</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: text/plain
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: -
+<ul>
+<li>Property 'AnyOf' changed
+<ul>
+<li>Modified schema: subschema #2
+<ul>
+<li>MaxItems changed from null to 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

@@ -47,13 +47,16 @@ public class OracleProperties(ITestOutputHelper output)
         var golden = Support.GoldenRuleIds();
         var fired = new ConcurrentDictionary<string, int>(StringComparer.Ordinal);
         var promoted = new ConcurrentDictionary<string, string>(StringComparer.Ordinal);
-        int cases = 0, reordered = 0, loadErrors = 0, oasdiffCrashes = 0, aliasNamed = 0;
+        int cases = 0, reordered = 0, loadErrors = 0, oasdiffCrashes = 0, aliasNamed = 0, danglingMappings = 0;
         string? failure = null;
         var started = DateTime.UtcNow;
         try
         {
             void Check(SpecPair p, int[] choice)
             {
+                // a known difference (compatibility.md): oasdiff fails to load a revision whose discriminator mapping
+                // points at nothing, as its loader takes the revision for an external document
+                if (Support.HasDanglingMapping(p.Revision)) { Interlocked.Increment(ref danglingMappings); return; }
                 using var f = CaseFiles.Write(p);
                 var aliases = new Lazy<Dictionary<string, string>>(() => Support.SchemaAliases(p.Base, p.Revision));
                 foreach (var i in choice)
@@ -121,11 +124,11 @@ public class OracleProperties(ITestOutputHelper output)
         }
         finally
         {
-            Report(DateTime.UtcNow - started, cases, reordered, aliasNamed, loadErrors, oasdiffCrashes, fired, promoted, failure);
+            Report(DateTime.UtcNow - started, cases, reordered, aliasNamed, loadErrors, oasdiffCrashes, danglingMappings, fired, promoted, failure);
         }
     }
 
-    private void Report(TimeSpan took, int cases, int reordered, int aliasNamed, int loadErrors, int oasdiffCrashes, ConcurrentDictionary<string, int> fired,
+    private void Report(TimeSpan took, int cases, int reordered, int aliasNamed, int loadErrors, int oasdiffCrashes, int danglingMappings, ConcurrentDictionary<string, int> fired,
         ConcurrentDictionary<string, string> promoted, string? failure)
     {
         var inv = CultureInfo.InvariantCulture;
@@ -135,6 +138,7 @@ public class OracleProperties(ITestOutputHelper output)
         sb.Append(inv, $"- Command lines that differ only in which name of an aliased schema (`Item: {{$ref: Error}}`) is the shared schema (Go map order): {aliasNamed}\n");
         sb.Append(inv, $"- Cases neither tool could load (same exit code): {loadErrors}\n");
         sb.Append(inv, $"- Command lines on which oasdiff crashed (OasDelta reported an error or a result instead): {oasdiffCrashes}\n");
+        sb.Append(inv, $"- Cases skipped because the revision's discriminator mapping points at nothing (a known difference): {danglingMappings}\n");
         sb.Append(inv, $"- Rules fired by generated pairs: **{fired.Count}**; of those, not fired by any golden: **{promoted.Count}**\n");
         sb.Append(failure is null ? "- Mismatches: **none**\n" : "- Mismatch: **yes** (shrunk case below and in the artifact)\n");
         if (!promoted.IsEmpty)

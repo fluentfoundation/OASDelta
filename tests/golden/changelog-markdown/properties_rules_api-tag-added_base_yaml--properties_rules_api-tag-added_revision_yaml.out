@@ -1,0 +1,18 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /items/{id}.json
+-  api tag `id` added
+-  endpoint deprecated with sunset date `2099-12-31`
+
+
+### PUT /pets
+-  removed the `19.00` enum value from the `owner` response property for the response status `204`
+
+
+
+
+
+

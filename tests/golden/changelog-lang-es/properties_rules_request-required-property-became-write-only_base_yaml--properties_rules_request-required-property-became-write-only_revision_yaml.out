@@ -1,0 +1,23 @@
+5 cambios: 1 error, 0 warning, 4 info
+error	[request-property-became-not-nullable] en ./properties/rules/request-required-property-became-write-only_revision.yaml
+	en API PATCH /search
+		la propiedad de solicitud ``tick`` se volvió no nulable
+
+info	[request-property-became-not-enum] en ./properties/rules/request-required-property-became-write-only_revision.yaml
+	en API PATCH /search
+		removida la restricción enum de la propiedad de solicitud ``tick``
+
+info	[request-property-reactivated] en ./properties/rules/request-required-property-became-write-only_revision.yaml
+	en API PATCH /search
+		propiedad de solicitud ``tick`` reactivada
+
+info	[request-property-type-compatible] en ./properties/rules/request-required-property-became-write-only_revision.yaml
+	en API PATCH /search
+		el ``tick`` de la propiedad de solicitud `type` cambió de `integer, null` a `string` (retrocompatible)
+		Este cambio es retrocompatible porque el tipo de medio no es fuertemente tipado (por ejemplo XML), donde cualquier valor puede representarse como texto, por lo que el tipo no se impone en la transmisión. Con un tipo de medio fuertemente tipado como JSON el mismo cambio sería incompatible.
+
+info	[request-required-property-became-write-only] en ./properties/rules/request-required-property-became-write-only_revision.yaml
+	en API PATCH /search
+		la propiedad requerida de solicitud ``tick`` se volvió de solo escritura
+
+

@@ -1,0 +1,23 @@
+### New Endpoints: 1
+--------------------
+POST /pets/{petId}  
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /ünïcode/ключ
+- Extensions changed
+  - Deleted extension: x-sunset
+- Request body changed
+  - Content changed
+    - Modified media type: */*
+      - Schema changed
+        - Properties changed
+          - Modified property: tag
+            - Properties changed
+              - Modified property: tag
+                - New enum values: [1]
+
+

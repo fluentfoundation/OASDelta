@@ -1,0 +1,29 @@
+### New Endpoints: 3
+--------------------
+PATCH /search  
+POST /search  
+PUT /search  
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /items/{id}.json
+- Responses changed
+  - Modified response: 204
+    - Content changed
+      - Modified media type: application/xml
+        - Schema changed
+          - Properties changed
+            - Modified property: name
+              - Property 'AnyOf' changed
+                - Modified schema: subschema #1
+                  - MultipleOf changed from 10 to 5
+
+Other Changes
+-------------
+Extensions changed
+- Deleted extension: x-name
+
+

@@ -1,0 +1,1 @@
+[{"id":"request-body-type-generalized","text":"the request's body `format` was widened from `float` to `none`","level":1,"operation":"PUT","path":"/v1/items","section":"paths","fingerprint":"96d66e5a257d"}]

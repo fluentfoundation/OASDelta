@@ -1,0 +1,1 @@
+[{"id":"request-property-min-length-decreased","text":"the `anyOf[subschema #1]/C:\\path` request property's minLength was decreased from `5` to `4`","level":1,"operation":"POST","path":"/store/order","section":"paths","fingerprint":"94b0a67d673c"}]

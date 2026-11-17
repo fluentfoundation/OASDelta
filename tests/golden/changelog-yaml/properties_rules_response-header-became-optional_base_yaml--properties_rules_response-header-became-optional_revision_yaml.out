@@ -1,0 +1,17 @@
+- id: response-header-became-optional
+  text: the response header `名前` became optional for the status `2XX`
+  level: 3
+  operation: DELETE
+  operationId: delete_owners_{ownerId}_pets
+  path: /owners/{ownerId}/pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-header-became-optional_base.yaml
+  revisionSource:
+    file: ./properties/rules/response-header-became-optional_revision.yaml
+    line: 59
+    column: 25
+    endLine: 63
+    endColumn: 45
+  fingerprint: 0f6baf9a89de
+

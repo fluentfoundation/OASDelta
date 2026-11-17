@@ -1,0 +1,1 @@
+[{"id":"request-property-became-enum","text":"request property `@at` was restricted to a list of enum values","level":3,"operation":"POST","operationId":"post_store_order","path":"/store/order","section":"paths","revisionSource":{"file":"./properties/rules/request-property-enum-value-added_revision.yaml","line":98,"column":37},"fingerprint":"c932f3fe48a3"}]

@@ -1,0 +1,2 @@
+::notice title=response-header-max-items-set,file=./properties/rules/response-header-max-items-set_revision.yaml,line=8,col=9::in API DELETE /pets/{petId} the `kind` response header's maxItems was set to `11` for the status `404`
+

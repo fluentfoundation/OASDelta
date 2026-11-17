@@ -1,0 +1,54 @@
+{
+  "info": {
+    "title": "id",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/store/order": {
+      "get": {
+        "deprecated": true,
+        "operationId": "get_store_order",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "#hash",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "price": {
+                      "nullable": true,
+                      "type": "number"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "contains": {
+                    "type": "boolean"
+                  },
+                  "maxContains": 4,
+                  "type": "string"
+                }
+              }
+            },
+            "description": "id"
+          }
+        },
+        "tags": [
+          "ключ"
+        ]
+      }
+    }
+  }
+}

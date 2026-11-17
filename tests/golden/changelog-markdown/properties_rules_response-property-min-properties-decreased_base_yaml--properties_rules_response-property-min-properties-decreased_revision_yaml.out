@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /v1/items
+- :warning: the `allOf[subschema #2]/` response property's minProperties was decreased from `4` to `1` for the response status `400`
+
+
+
+
+
+

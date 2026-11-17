@@ -1,0 +1,12 @@
+- id: request-property-max-length-unset
+  text: the `items/null` request property's maxLength was unset from `9`
+  level: 1
+  operation: PATCH
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-property-max-length-unset_base.yaml
+    line: 11
+    column: 21
+  fingerprint: cc3b94debeec
+

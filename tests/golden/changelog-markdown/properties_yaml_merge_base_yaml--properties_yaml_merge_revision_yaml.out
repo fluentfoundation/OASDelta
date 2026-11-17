@@ -1,0 +1,13 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /a
+-  the response's body minLength was increased from `1` to `2`
+
+
+
+
+
+

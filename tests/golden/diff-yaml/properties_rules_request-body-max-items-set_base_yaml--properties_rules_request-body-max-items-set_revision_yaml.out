@@ -1,0 +1,49 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/vnd.api+json:
+                                        schema:
+                                            maxItems:
+                                                from: null
+                                                to: 11
+                        responses:
+                            modified:
+                                default:
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    items:
+                                                        properties:
+                                                            added:
+                                                                - 즤ꇔ缦䎖糀䱢렄꧑
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        application/vnd.api+json:
+                            schema:
+                                maxItems:
+                                    from: null
+                                    to: 11
+            responses:
+                modified:
+                    default:
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        items:
+                                            properties:
+                                                added:
+                                                    - 즤ꇔ缦䎖糀䱢렄꧑
+

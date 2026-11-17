@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-header-min-properties-set] en ./properties/rules/response-header-min-properties-set_revision.yaml
+	en API DELETE /ünïcode/ключ
+		el valor minProperties del encabezado de respuesta `😀` fue establecido en `4` para el estado `201`
+
+

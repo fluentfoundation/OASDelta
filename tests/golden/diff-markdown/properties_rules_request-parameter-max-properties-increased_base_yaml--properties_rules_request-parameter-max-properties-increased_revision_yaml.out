@@ -1,0 +1,14 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /ünïcode/ключ
+- Modified cookie param: Ünïcode
+  - Schema changed
+    - MaxProps changed from 6 to 9
+
+

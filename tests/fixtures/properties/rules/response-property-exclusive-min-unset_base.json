@@ -1,0 +1,471 @@
+{
+  "components": {
+    "schemas": {
+      "Item": {
+        "items": {
+          "example": "pet",
+          "maxLength": 169,
+          "nullable": true,
+          "type": "string"
+        },
+        "type": "array"
+      }
+    }
+  },
+  "info": {
+    "title": "{brace}",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/items/{id}.json": {
+      "put": {
+        "operationId": "put_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "yes",
+            "required": true,
+            "schema": {
+              "items": {
+                "default": 9007199254740993,
+                "description": "price",
+                "format": "int64",
+                "minimum": -4,
+                "nullable": true,
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "x\ty",
+            "required": false,
+            "schema": {
+              "description": "price",
+              "nullable": true,
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "名前",
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/Item"
+              },
+              "type": "array"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "deprecated": true,
+                "description": "no",
+                "readOnly": true,
+                "type": "boolean"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "format": "custom",
+                "nullable": true,
+                "type": "boolean"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "204": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "enum": [
+                    "name"
+                  ],
+                  "pattern": "^[a-z]+$",
+                  "type": "string"
+                }
+              }
+            },
+            "description": "'single'"
+          },
+          "2XX": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "nullable": true,
+                      "readOnly": true,
+                      "type": "string"
+                    },
+                    {
+                      "description": " leading",
+                      "nullable": true,
+                      "type": "integer"
+                    }
+                  ]
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "format": "int64",
+                  "maximum": 702,
+                  "nullable": true,
+                  "type": "integer"
+                }
+              }
+            },
+            "description": "名前",
+            "headers": {
+              "␖嵏⁥ጝ⯠育": {
+                "schema": {
+                  "description": "name",
+                  "example": "C:\\path",
+                  "minimum": -8,
+                  "nullable": true,
+                  "readOnly": true,
+                  "type": "integer"
+                }
+              },
+              "嗋謂鎧緱眩盱辣耭": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "'single'"
+          }
+        }
+      }
+    },
+    "/search": {
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "鏄諠"
+          },
+          "500": {
+            "description": "name"
+          }
+        }
+      }
+    },
+    "/v1/items": {
+      "delete": {
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "kind",
+            "schema": {
+              "allOf": [
+                {
+                  "format": "custom",
+                  "nullable": true,
+                  "type": "boolean"
+                },
+                {
+                  "$ref": "#/components/schemas/Item"
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "default": 3,
+                  "minimum": 3,
+                  "type": "number"
+                }
+              }
+            },
+            "description": "price"
+          },
+          "404": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "items": {
+                    "format": "custom",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  "type": "array"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Item"
+                }
+              }
+            },
+            "description": "视ܲ皆"
+          },
+          "default": {
+            "description": "ключ"
+          }
+        }
+      },
+      "get": {
+        "operationId": "get_v1_items",
+        "responses": {
+          "200": {
+            "description": "id"
+          }
+        },
+        "tags": [
+          "price",
+          "name"
+        ]
+      },
+      "put": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "price",
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "no",
+                    "pet",
+                    "price"
+                  ],
+                  "type": "string",
+                  "writeOnly": true
+                },
+                {
+                  "nullable": true,
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "pet",
+            "required": false,
+            "schema": {
+              "nullable": true,
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            },
+            "description": "名前",
+            "headers": {
+              "status": {
+                "schema": {
+                  "minimum": -1,
+                  "type": "number"
+                }
+              },
+              "tag": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ünïcode/ключ": {
+      "get": {
+        "parameters": [
+          {
+            "deprecated": true,
+            "explode": true,
+            "in": "header",
+            "name": "a/b",
+            "required": false,
+            "schema": {
+              "minimum": -10,
+              "nullable": true,
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "items": {
+                    "default": 68,
+                    "exclusiveMinimum": true,
+                    "maximum": 688,
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  "type": "array",
+                  "uniqueItems": true
+                }
+              }
+            },
+            "description": "pet"
+          },
+          "2XX": {
+            "description": "no"
+          },
+          "404": {
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "minimum": 1,
+                        "multipleOf": 10,
+                        "type": "number",
+                        "writeOnly": true
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "items": {
+                        "nullable": true,
+                        "type": "boolean"
+                      },
+                      "minItems": 1,
+                      "type": "array"
+                    }
+                  ],
+                  "discriminator": {
+                    "mapping": {
+                      "a": "#/components/schemas/Item"
+                    },
+                    "propertyName": "kind"
+                  }
+                }
+              }
+            },
+            "description": "created"
+          }
+        },
+        "summary": "owner",
+        "tags": [
+          "created",
+          "status"
+        ]
+      },
+      "patch": {
+        "operationId": "patch_ünïcode_ключ",
+        "parameters": [
+          {
+            "description": "name",
+            "in": "header",
+            "name": "Ünïcode",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/vnd.api+json": {
+              "schema": {
+                "format": "custom",
+                "type": "boolean"
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "items": {
+                  "maxProperties": 11,
+                  "properties": {
+                    "null": {
+                      "$ref": "#/components/schemas/Item"
+                    },
+                    "price": {
+                      "description": "---",
+                      "nullable": true,
+                      "readOnly": true,
+                      "type": "number"
+                    },
+                    "status": {
+                      "description": "ключ",
+                      "type": "boolean"
+                    },
+                    "ᆕ": {
+                      "default": 15.25,
+                      "description": "created",
+                      "enum": [
+                        14
+                      ],
+                      "nullable": true,
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            }
+          },
+          "description": "kind"
+        },
+        "responses": {
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "default": true,
+                  "description": "Ünïcode",
+                  "nullable": true,
+                  "type": "boolean"
+                }
+              },
+              "application/vnd.api+json": {
+                "schema": {
+                  "nullable": true,
+                  "type": "integer"
+                }
+              }
+            },
+            "description": "Ünïcode"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com"
+    },
+    {
+      "url": "/relative"
+    }
+  ]
+}

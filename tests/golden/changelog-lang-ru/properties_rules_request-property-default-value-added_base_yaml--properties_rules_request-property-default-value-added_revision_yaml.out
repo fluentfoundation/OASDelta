@@ -1,0 +1,7 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[request-property-default-value-added] в ./properties/rules/request-property-default-value-added_revision.yaml
+	в API POST /store/order
+		добавлено значение по умолчанию `` для свойства запроса `77.00`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

@@ -1,0 +1,14 @@
+3 alterações: 1 error, 0 warning, 2 info
+error	[request-property-became-enum] em ./properties/rules/request-property-enum-value-added_revision.yaml
+	em API POST /store/order
+		a propriedade de requisição `@at` foi restrita a uma lista de valores enum
+
+info	[request-property-enum-value-added] em ./properties/rules/request-property-enum-value-added_revision.yaml
+	em API POST /store/order
+		valor `created` do enum adicionado à propriedade de requisição `@at`
+
+info	[request-property-enum-value-added] em ./properties/rules/request-property-enum-value-added_revision.yaml
+	em API POST /store/order
+		valor `created-1` do enum adicionado à propriedade de requisição `@at`
+
+

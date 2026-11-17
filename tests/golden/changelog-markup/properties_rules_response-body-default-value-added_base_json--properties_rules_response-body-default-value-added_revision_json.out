@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /search
+-  the response body `application/json; charset=utf-8` default value `pet` was added for the status `2XX`
+
+
+
+
+
+

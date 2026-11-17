@@ -1,0 +1,4 @@
+::error title=request-property-became-enum,file=./properties/rules/request-property-enum-value-added_revision.yaml,line=98,col=37::in API POST /store/order request property `@at` was restricted to a list of enum values
+::notice title=request-property-enum-value-added,file=./properties/rules/request-property-enum-value-added_revision.yaml,line=100,col=43::in API POST /store/order added the new `created` enum value to the request property `@at`
+::notice title=request-property-enum-value-added,file=./properties/rules/request-property-enum-value-added_revision.yaml,line=99,col=43::in API POST /store/order added the new `created-1` enum value to the request property `@at`
+

@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./properties/rules/response-header-type-changed_revision.yaml, in API DELETE /owners/{ownerId}/pets the `null` response header's `format` changed from `float` to `none` for the status `400` [response-header-type-changed]. 
+
+

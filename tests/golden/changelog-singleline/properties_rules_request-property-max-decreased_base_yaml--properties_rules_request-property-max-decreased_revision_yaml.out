@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./properties/rules/request-property-max-decreased_revision.yaml, in API PUT /pets the `>` request property's max was decreased to `237.00` [request-property-max-decreased]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

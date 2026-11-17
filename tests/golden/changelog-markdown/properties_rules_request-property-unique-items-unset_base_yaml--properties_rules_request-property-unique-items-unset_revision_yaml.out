@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /store/order
+-  the `items/` request property's uniqueItems was unset
+
+
+
+
+
+

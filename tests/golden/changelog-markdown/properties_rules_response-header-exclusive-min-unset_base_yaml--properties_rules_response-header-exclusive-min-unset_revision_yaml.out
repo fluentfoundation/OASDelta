@@ -1,0 +1,17 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /ünïcode/ключ
+- :warning: the `owner` response header's exclusiveMinimum was unset from `true` for the status `2XX`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

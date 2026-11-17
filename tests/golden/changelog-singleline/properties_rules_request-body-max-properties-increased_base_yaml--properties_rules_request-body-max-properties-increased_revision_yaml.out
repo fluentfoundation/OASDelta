@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./properties/rules/request-body-max-properties-increased_revision.yaml, in API PUT /store/order the request's body maxProperties was increased from `11` to `13` [request-body-max-properties-increased]. 
+
+

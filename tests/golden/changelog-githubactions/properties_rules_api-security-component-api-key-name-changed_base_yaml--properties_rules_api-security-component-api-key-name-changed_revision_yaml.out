@@ -1,0 +1,2 @@
+::error title=api-security-component-api-key-name-changed,file=./properties/rules/api-security-component-api-key-name-changed_revision.yaml,line=4,col=9::in API   the component security scheme `api_key` api key name changed from `owner` to `status`
+

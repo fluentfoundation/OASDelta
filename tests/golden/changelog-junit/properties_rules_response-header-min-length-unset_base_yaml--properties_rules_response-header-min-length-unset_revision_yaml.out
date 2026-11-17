@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="response-header-min-length-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `id` response header's minLength was unset from `5` for the status `500`</failure>
+    </testcase>
+    <testcase name="response-header-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `id` response header's `type` changed from `string, null` to `any` for the status `500`</failure>
+    </testcase>
+    <testcase name="response-property-const-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `` response property const value `name` was added for the status `404`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,20 @@
+4 changes: 2 error, 2 warning, 0 info
+error	[request-property-min-items-increased] at ./properties/rules/request-property-min-items-increased_revision.yaml
+	in API PATCH /items/{id}.json
+		the `'single'` request property's minItems was increased to `2`
+
+error	[new-request-path-parameter] at ./properties/rules/request-property-min-items-increased_revision.yaml
+	in API DELETE /pets/{petId}
+		added the new path request parameter `id`
+
+warning	[request-parameter-removed] at ./properties/rules/request-property-min-items-increased_revision.yaml
+	in API DELETE /pets/{petId}
+		deleted the `header` request parameter `id`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+warning	[request-parameter-removed] at ./properties/rules/request-property-min-items-increased_revision.yaml
+	in API PATCH /pets/{petId}
+		deleted the `path` request parameter `petId`
+		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+
+

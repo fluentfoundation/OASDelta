@@ -1,0 +1,22 @@
+5 alterações: 5 error, 0 warning, 0 info
+error	[request-parameter-removed-before-sunset] em ./properties/lifecycle_parameters_revision.yaml
+	em API GET /p
+		parâmetro de requisição do tipo `query` e nome `removed` removido antes da data de expiração `2099-12-31`
+
+error	[request-parameter-sunset-date-changed-too-small] em ./properties/lifecycle_parameters_revision.yaml
+	em API GET /p
+		a data de expiração do parâmetro de requisição do tipo `query` e nome `earlier` foi alterada para uma data anterior, de `2099-12-31` para `2020-01-01`, a nova data deve ser pelo menos `2099-12-31` dias a partir de agora%!(EXTRA string=`0`)
+
+error	[request-parameter-sunset-date-too-small] em ./properties/lifecycle_parameters_revision.yaml
+	em API GET /p
+		a data de expiração `query` do parâmetro de requisição do tipo `too-small` e nome `2020-01-01` é muito próxima, deve ser pelo menos `0` dias a partir de agora
+
+error	[request-parameter-sunset-deleted] em ./properties/lifecycle_parameters_revision.yaml
+	em API GET /p
+		a data de expiração do parâmetro de requisição do tipo `query` e nome `deleted` foi excluída, mas deprecated=true foi mantido
+
+error	[request-parameter-sunset-parse] em ./properties/lifecycle_parameters_revision.yaml
+	em API GET /p
+		falha ao analisar a data de expiração no parâmetro de requisição do tipo `query` e nome `bad`: `sunset date doesn't conform with RFC3339: not a date`
+
+

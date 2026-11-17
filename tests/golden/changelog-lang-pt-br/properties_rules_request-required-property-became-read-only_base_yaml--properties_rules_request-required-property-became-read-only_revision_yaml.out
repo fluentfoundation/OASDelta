@@ -1,0 +1,7 @@
+1 alterações: 0 error, 1 warning, 0 info
+warning	[request-required-property-became-read-only] em ./properties/rules/request-required-property-became-read-only_revision.yaml
+	em API PATCH /pets/{petId}
+		a propriedade obrigatória de requisição `allOf[subschema #3]/릇䍱琨압蝪颯` tornou-se somente leitura
+		Este é um aviso porque uma propriedade somente leitura não deve ser enviada em uma requisição, e a especificação deixa ao servidor decidir se a ignora ou rejeita a requisição. Clientes que a enviam podem ser rejeitados, ou descobrir que o valor enviado não é mais usado. Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+

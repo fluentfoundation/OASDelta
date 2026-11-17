@@ -1,0 +1,3 @@
+::error title=response-body-multiple-of-changed,file=./properties/rules/response-body-multiple-of-changed_revision.yaml,line=60,col=33::in API DELETE /store/order the response's body multipleOf was changed from `10.00` to `5.00`
+::notice title=endpoint-added,file=./properties/rules/response-body-multiple-of-changed_revision.yaml,line=68,col=9::in API GET /store/order endpoint added
+

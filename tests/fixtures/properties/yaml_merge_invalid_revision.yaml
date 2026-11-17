@@ -1,0 +1,9 @@
+# A merge of anything but a mapping or a sequence of mappings: go-yaml v3 fails to load the spec ("map merge
+# requires map or sequence of maps as the value").
+openapi: 3.0.3
+info: {title: merge of a list with a string, version: '1'}
+paths:
+  /a:
+    get:
+      responses:
+        '200': {<<: [{description: ok}, oops]}

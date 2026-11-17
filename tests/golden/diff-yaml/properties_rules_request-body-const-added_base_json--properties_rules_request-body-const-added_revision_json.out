@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            content:
+                                modified:
+                                    '*/*':
+                                        schema:
+                                            const:
+                                                from: null
+                                                to: tag
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /pets/{petId}
+        :   requestBody:
+                content:
+                    modified:
+                        '*/*':
+                            schema:
+                                const:
+                                    from: null
+                                    to: tag
+

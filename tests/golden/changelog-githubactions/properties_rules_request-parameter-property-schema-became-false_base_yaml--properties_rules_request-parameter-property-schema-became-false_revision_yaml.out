@@ -1,0 +1,2 @@
+::error title=request-parameter-property-schema-became-false,file=./properties/rules/request-parameter-property-schema-became-false_revision.yaml::in API POST /items/{id}.json the schema of the `items/` property of the `cookie` request parameter `name` became `false`: no value passes validation
+

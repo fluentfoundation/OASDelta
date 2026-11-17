@@ -1,0 +1,18 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /ünïcode/ключ
+- Responses changed
+  - Modified response: 204
+    - Content changed
+      - Modified media type: application/json; charset=utf-8
+        - Schema changed
+          - Items changed
+            - Default changed from null to 45
+
+

@@ -1,0 +1,7 @@
+1 changes: 0 error, 1 warning, 0 info
+warning	[request-property-multiple-of-changed] at ./properties/rules/request-property-multiple-of-changed_revision.yaml
+	in API PUT /owners/{ownerId}/pets
+		the `items/` request property's multipleOf was changed from `5.00` to `2.00`
+		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+
+

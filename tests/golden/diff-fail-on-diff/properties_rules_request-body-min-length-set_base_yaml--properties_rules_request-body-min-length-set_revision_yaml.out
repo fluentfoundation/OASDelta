@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/ünïcode/ключ":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"multipart/form-data":{"schema":{"enum":{"enumAdded":true,"added":["price","a/b","kind"]},"nullable":{"from":false,"to":true},"readOnly":{"from":false,"to":true},"deprecated":{"from":false,"to":true},"minLength":{"from":0,"to":5}}}}}}}}}}}}}

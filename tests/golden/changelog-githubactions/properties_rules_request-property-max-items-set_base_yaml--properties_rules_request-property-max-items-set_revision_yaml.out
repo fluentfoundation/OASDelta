@@ -1,0 +1,2 @@
+::error title=request-property-max-items-set,file=./properties/rules/request-property-max-items-set_revision.yaml,line=67,col=43::in API POST /items/{id}.json the `-/anyOf[subschema #2]/` request property's maxItems was set to `1`
+

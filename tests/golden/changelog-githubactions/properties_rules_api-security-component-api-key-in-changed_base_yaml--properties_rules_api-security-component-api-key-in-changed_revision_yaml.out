@@ -1,0 +1,2 @@
+::error title=api-security-component-api-key-in-changed,file=./properties/rules/api-security-component-api-key-in-changed_revision.yaml,line=11,col=9::in API   the component security scheme `api_key` api key location changed from `query` to `cookie`
+

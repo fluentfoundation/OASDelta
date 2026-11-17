@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-property-const-removed] en ./properties/rules/request-property-const-removed_revision.yaml
+	en API PATCH /pets/{petId}
+		la propiedad de solicitud `id` tuvo el valor const `pet` removido
+
+

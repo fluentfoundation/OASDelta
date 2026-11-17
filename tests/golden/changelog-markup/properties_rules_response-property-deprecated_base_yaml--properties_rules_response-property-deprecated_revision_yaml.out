@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /v1/items
+-  response property `created` deprecated (media type: application/vnd.api+json)
+-  added discriminator to `㎖㹈ꃿ즡` response property for the response status `200` (media type: */*)
+
+
+
+
+
+

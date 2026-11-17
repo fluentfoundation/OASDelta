@@ -1,0 +1,148 @@
+# Fires request-body-multiple-of-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: '`tick`'
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /search:
+        delete:
+            operationId: delete_search
+            parameters:
+                - description: "1e3"
+                  in: query
+                  name: tag
+                  schema:
+                    properties:
+                        '**bold**':
+                            enum:
+                                - 19
+                                - 10
+                                - 20
+                            nullable: true
+                            readOnly: true
+                            type: integer
+                        created:
+                            nullable: true
+                            pattern: ^.*$
+                            type: string
+                    required:
+                        - created
+                    type: object
+                - in: query
+                  name: price
+                  required: false
+                  schema:
+                    items:
+                        enum:
+                            - true
+                            - false
+                        format: custom
+                        type: boolean
+                    minItems: 0
+                    type: array
+            responses:
+                "200":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                properties:
+                                    ' leading':
+                                        nullable: true
+                                        type: boolean
+                                type: object
+                    description: owner
+                "201":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                default: 㶧愥楛
+                                readOnly: true
+                                type: string
+                    description: C:\path
+                default:
+                    content:
+                        '*/*':
+                            schema:
+                                nullable: true
+                                type: number
+                        text/plain:
+                            schema:
+                                items:
+                                    type: integer
+                                type: array
+                    description: '@at'
+            tags:
+                - Ünïcode
+                - status
+        get:
+            operationId: get_search
+            responses:
+                "200":
+                    content:
+                        text/plain:
+                            schema:
+                                description: ' leading'
+                                type: number
+                    description: status
+                    headers:
+                        name:
+                            schema:
+                                format: byte
+                                minLength: 2
+                                type: string
+                "204":
+                    description: '!tag'
+                default:
+                    content:
+                        '*/*':
+                            schema:
+                                enum:
+                                    - true
+                                    - false
+                                nullable: true
+                                type: boolean
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    items:
+                                        type: number
+                                    type: array
+                                type: array
+                    description: owner
+        patch:
+            deprecated: true
+            parameters:
+                - in: header
+                  name: 掙ὁ膊瀘拢
+                  schema:
+                    minProperties: 1
+                    type: object
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            format: float
+                            multipleOf: 7
+                            nullable: true
+                            type: number
+                    application/json:
+                        schema:
+                            default: 8
+                            multipleOf: 10
+                            type: integer
+                required: true
+            responses:
+                default:
+                    description: "0x1F"
+                    headers:
+                        created:
+                            schema:
+                                nullable: true
+                                readOnly: true
+                                type: string
+                        tag:
+                            required: true
+                            schema:
+                                description: '&anchor'
+                                type: string
+            summary: kind

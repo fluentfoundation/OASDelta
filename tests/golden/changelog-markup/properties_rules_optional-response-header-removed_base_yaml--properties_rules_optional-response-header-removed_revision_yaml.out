@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /items/{id}.json
+-  the optional response header `x	y` removed for the status `200`
+
+
+
+
+
+

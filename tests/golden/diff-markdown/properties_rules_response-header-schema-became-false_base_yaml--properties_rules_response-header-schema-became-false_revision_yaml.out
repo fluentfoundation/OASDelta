@@ -1,0 +1,18 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /pets
+- Responses changed
+  - Modified response: 204
+    - Headers changed
+      - Modified header:  leading
+        - Schema changed
+          - Type changed from 'null, number' to ''
+          - Default changed from -90.875 to null
+
+

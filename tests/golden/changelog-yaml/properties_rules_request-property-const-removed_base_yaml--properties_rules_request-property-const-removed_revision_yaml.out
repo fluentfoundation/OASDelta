@@ -1,0 +1,12 @@
+- id: request-property-const-removed
+  text: the `id` request property const value `pet` was removed
+  level: 1
+  operation: PATCH
+  path: /pets/{petId}
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-property-const-removed_base.yaml
+    line: 105
+    column: 37
+  fingerprint: b972e1f5301f
+

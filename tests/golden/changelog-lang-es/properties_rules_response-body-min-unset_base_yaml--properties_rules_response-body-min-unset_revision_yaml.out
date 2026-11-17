@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-body-min-unset] en ./properties/rules/response-body-min-unset_revision.yaml
+	en API DELETE /pets
+		el valor min del cuerpo de respuesta fue removido de `-8.00`
+
+

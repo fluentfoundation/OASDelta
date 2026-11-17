@@ -1,0 +1,8 @@
+3 changes: 1 error, 0 warning, 2 info
+error at ./properties/rules/request-body-became-optional_revision.yaml, in API GET /pets/{petId} removed the media type `application/json; charset=utf-8` for the response with the status `200` [response-media-type-removed]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./properties/rules/request-body-became-optional_revision.yaml, in API PATCH /pets/{petId} request body became optional [request-body-became-optional]. 
+
+

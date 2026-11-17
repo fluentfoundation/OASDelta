@@ -1,0 +1,64 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    multipart/form-data:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    price:
+                                                        const:
+                                                            from: null
+                                                            to: '%20'
+        /store/order:
+            operations:
+                deleted:
+                    - GET
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    oneOf:
+                                                        added:
+                                                            - index: 0
+endpoints:
+    deleted:
+        - method: GET
+          path: /store/order
+    modified:
+        ?   method: POST
+            path: /pets/{petId}
+        :   requestBody:
+                content:
+                    modified:
+                        multipart/form-data:
+                            schema:
+                                properties:
+                                    modified:
+                                        price:
+                                            const:
+                                                from: null
+                                                to: '%20'
+        ?   method: PUT
+            path: /store/order
+        :   responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        oneOf:
+                                            added:
+                                                - index: 0
+

@@ -1,0 +1,4 @@
+::error title=response-body-max-unset,file=./properties/rules/response-body-max-unset_revision.yaml::in API POST /pets the response's body max was unset from `59.00`
+::error title=response-body-type-changed,file=./properties/rules/response-body-max-unset_revision.yaml,line=85,col=33::in API POST /pets the response's body `type/format` changed from `number, null/double` to `string` for status `200`
+::notice title=response-body-became-not-nullable,file=./properties/rules/response-body-max-unset_revision.yaml::in API POST /pets the response's body became not nullable
+

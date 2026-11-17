@@ -1,0 +1,2 @@
+::notice title=request-property-min-length-decreased,file=./properties/rules/request-property-min-length-decreased_revision.json::in API POST /store/order the `anyOf[subschema #1]/C:\path` request property's minLength was decreased from `5` to `4`
+

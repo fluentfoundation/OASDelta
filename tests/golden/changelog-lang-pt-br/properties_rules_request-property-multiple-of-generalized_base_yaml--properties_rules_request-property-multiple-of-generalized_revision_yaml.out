@@ -1,0 +1,7 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[request-property-multiple-of-generalized] em ./properties/rules/request-property-multiple-of-generalized_revision.yaml
+	em API PUT /v1/items
+		o valor multipleOf da propriedade de requisição `‮abc/anyOf[subschema #2]/` foi generalizado de `2.00` para `1.00`
+		Esta alteração não é incompatível porque o multipleOf anterior é um múltiplo inteiro do novo, então todos os valores válidos anteriormente continuam válidos.
+
+

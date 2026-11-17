@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[response-optional-property-became-write-only] em ./properties/rules/response-optional-property-became-write-only_revision.yaml
+	em API POST /v1/items
+		a propriedade opcional `%20` tornou-se somente escrita para o status `500`
+
+

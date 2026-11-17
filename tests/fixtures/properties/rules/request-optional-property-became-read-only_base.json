@@ -1,0 +1,269 @@
+{
+  "components": {
+    "schemas": {
+      "Pet": {
+        "items": {
+          "additionalProperties": true,
+          "properties": {
+            "@at": {
+              "enum": [
+                "tag",
+                "Ünïcode",
+                "price",
+                "1e3"
+              ],
+              "type": "string",
+              "writeOnly": true
+            }
+          },
+          "type": "object"
+        },
+        "type": "array"
+      }
+    },
+    "securitySchemes": {
+      "oauth": {
+        "flows": {
+          "clientCredentials": {
+            "scopes": {
+              "admin": "admin access",
+              "read": "read access",
+              "write": "write access"
+            },
+            "tokenUrl": "https://auth.example.com/token"
+          }
+        },
+        "type": "oauth2"
+      }
+    }
+  },
+  "info": {
+    "title": "쪻ᮜ砳",
+    "version": "v1"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/owners/{ownerId}/pets": {
+      "get": {
+        "operationId": "鰦驇䈄ꄃ藊扔◴퀩",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ownerId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "名前",
+            "in": "query",
+            "name": "pet",
+            "required": false,
+            "schema": {
+              "items": {
+                "deprecated": true,
+                "type": "boolean"
+              },
+              "minItems": 0,
+              "type": "array"
+            }
+          },
+          {
+            "in": "header",
+            "name": "kind",
+            "schema": {
+              "properties": {
+                "~": {
+                  "$ref": "#/components/schemas/Pet"
+                }
+              },
+              "required": [
+                "~"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "in": "query",
+            "name": "status",
+            "schema": {
+              "$ref": "#/components/schemas/Pet"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "description": "created",
+                        "format": "float",
+                        "type": "number"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "items": {
+                        "minimum": 1,
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "items": {
+                        "type": [
+                          "boolean",
+                          "null"
+                        ]
+                      },
+                      "minItems": 0,
+                      "type": "array",
+                      "uniqueItems": true
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "name"
+          },
+          "2XX": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "default": 1e-7,
+                  "deprecated": true,
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "kind"
+          }
+        },
+        "tags": [
+          "tag"
+        ]
+      }
+    },
+    "/store/order": {
+      "patch": {
+        "operationId": "patch_store_order",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "created": {
+                    "$ref": "#/components/schemas/Pet"
+                  },
+                  "pet": {
+                    "properties": {
+                      "\u0026anchor": {
+                        "deprecated": true,
+                        "type": "boolean"
+                      },
+                      "name": {
+                        "$ref": "#/components/schemas/Pet"
+                      },
+                      "price": {
+                        "default": "名前",
+                        "maxLength": 198,
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "price",
+                      "\u0026anchor"
+                    ],
+                    "type": "object"
+                  },
+                  "tag": {
+                    "oneOf": [
+                      {
+                        "type": [
+                          "boolean",
+                          "null"
+                        ]
+                      },
+                      {
+                        "pattern": "^.*$",
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    ]
+                  },
+                  "֐琯蓶䕝": {
+                    "enum": [
+                      true,
+                      false
+                    ],
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "pet",
+                  "created",
+                  "tag",
+                  "֐琯蓶䕝"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "items": {
+                    "items": {
+                      "format": "custom",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "type": "array"
+                  },
+                  "type": "array"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "items": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "price"
+          },
+          "2XX": {
+            "description": "tag"
+          }
+        },
+        "summary": "名前"
+      }
+    }
+  }
+}

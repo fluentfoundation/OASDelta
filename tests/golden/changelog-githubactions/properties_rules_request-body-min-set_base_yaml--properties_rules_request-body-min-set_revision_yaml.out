@@ -1,0 +1,3 @@
+::error title=request-body-min-set,file=./properties/rules/request-body-min-set_revision.yaml,line=60,col=29::in API PUT /pets/{petId} the request's body min was set to `5.00`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

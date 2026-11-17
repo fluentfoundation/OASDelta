@@ -1,0 +1,23 @@
+- id: response-body-all-of-removed
+  text: 'removed `subschema #1, subschema #2, subschema #3` from the response body `allOf` list for the response status `default`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: POST
+  operationId: post_ünïcode_ключ
+  path: /ünïcode/ключ
+  section: paths
+  fingerprint: 8af86c0c00a4
+- id: response-body-type-specialized
+  text: the response's body `type` was narrowed from `any` to `object` for status `default`
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: POST
+  operationId: post_ünïcode_ключ
+  path: /ünïcode/ключ
+  section: paths
+  fingerprint: ddeaa5111eef
+

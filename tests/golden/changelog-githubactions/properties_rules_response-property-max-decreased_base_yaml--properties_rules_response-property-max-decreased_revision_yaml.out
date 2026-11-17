@@ -1,0 +1,2 @@
+::notice title=response-property-max-decreased,file=./properties/rules/response-property-max-decreased_revision.yaml,line=181,col=45::in API GET /v1/items the `名前/items/` response property's max was decreased from `911.00` to `910.00` for the response status `500`
+

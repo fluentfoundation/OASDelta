@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="response-header-max-length-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `꣧ਏ哪᷸∄肱瘝ㆺ` response header's maxLength was unset from `135` for the status `201`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,2 @@
+::notice title=request-property-exclusive-min-unset,file=./properties/rules/request-property-exclusive-min-unset_revision.yaml::in API POST /owners/{ownerId}/pets the `pet` request property's exclusiveMinimum was unset from `true`
+

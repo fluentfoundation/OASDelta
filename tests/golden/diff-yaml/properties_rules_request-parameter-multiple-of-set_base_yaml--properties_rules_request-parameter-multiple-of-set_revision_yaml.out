@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    DELETE:
+                        parameters:
+                            modified:
+                                cookie:
+                                    price:
+                                        schema:
+                                            multipleOf:
+                                                from: null
+                                                to: 2
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /pets
+        :   parameters:
+                modified:
+                    cookie:
+                        price:
+                            schema:
+                                multipleOf:
+                                    from: null
+                                    to: 2
+

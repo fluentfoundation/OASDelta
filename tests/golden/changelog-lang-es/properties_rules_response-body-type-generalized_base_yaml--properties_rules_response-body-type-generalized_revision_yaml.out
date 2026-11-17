@@ -1,0 +1,23 @@
+5 cambios: 4 error, 0 warning, 1 info
+error	[response-body-max-unset] en ./properties/rules/response-body-type-generalized_revision.yaml
+	en API DELETE /ünïcode/ключ
+		el valor max del cuerpo de respuesta fue removido de `886.00`
+
+error	[response-body-min-unset] en ./properties/rules/response-body-type-generalized_revision.yaml
+	en API DELETE /ünïcode/ключ
+		el valor min del cuerpo de respuesta fue removido de `1.00`
+
+error	[response-body-type-generalized] en ./properties/rules/response-body-type-generalized_revision.yaml
+	en API DELETE /ünïcode/ключ
+		el `type/format` del cuerpo de respuesta fue ampliado de `integer/int64` a `number` para el estado `204`
+
+error	[response-media-type-removed] en ./properties/rules/response-body-type-generalized_revision.yaml
+	en API DELETE /ünïcode/ключ
+		removido el tipo de media `text/plain` de la respuesta con estado `default`
+
+info	[response-body-type-compatible] en ./properties/rules/response-body-type-generalized_revision.yaml
+	en API DELETE /ünïcode/ключ
+		el `type` del cuerpo de respuesta cambió de `string` a `number` para el estado `default` (retrocompatible)
+		Este cambio es retrocompatible porque el tipo de medio no es fuertemente tipado (por ejemplo XML), donde cualquier valor puede representarse como texto, por lo que el tipo no se impone en la transmisión. Con un tipo de medio fuertemente tipado como JSON el mismo cambio sería incompatible.
+
+

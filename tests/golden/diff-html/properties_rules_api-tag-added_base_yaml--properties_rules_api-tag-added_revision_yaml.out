@@ -1,0 +1,49 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-2">Modified Endpoints: 2</h3>
+<hr>
+<p>DELETE /items/{id}.json</p>
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-sunset</li>
+</ul>
+</li>
+<li>Tags changed from '' to 'id'</li>
+<li>Deprecated changed from false to true</li>
+</ul>
+<p>PUT /pets</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 204
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/vnd.api+json
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: owner
+<ul>
+<li>Deleted enum values: [19]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

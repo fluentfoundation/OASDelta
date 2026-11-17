@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-parameter-min-length-unset] en ./properties/rules/request-parameter-min-length-unset_revision.json
+	en API GET /items/{id}.json
+		para el parámetro `cookie` de solicitud `a/b`, el valor minLength fue removido de `5`
+
+

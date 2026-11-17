@@ -1,0 +1,130 @@
+# Fires api-security-component-oauth-token-url-changed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        oauth:
+            flows:
+                authorizationCode:
+                    authorizationUrl: https://auth.example.com/authorize
+                    scopes:
+                        read: read access
+                    tokenUrl: https://auth.example.com/token
+                clientCredentials:
+                    refreshUrl: https://auth.example.com/refresh
+                    scopes:
+                        read: read access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: "\U0001F600"
+    version: v1
+openapi: 3.0.3
+paths:
+    /search:
+        delete:
+            operationId: delete_search
+            parameters:
+                - in: header
+                  name: '"quoted"'
+                  required: false
+                  schema:
+                    properties:
+                        name:
+                            default: 80
+                            readOnly: true
+                            type: integer
+                        pet:
+                            nullable: true
+                            type: number
+                        price:
+                            type: boolean
+                        륯䍺趆㒒唋:
+                            enum:
+                                - ꏁ㌁唵耖载貽
+                                - name
+                                - 柅ᅭ㎩믵桙ꗍ撘
+                            minLength: 5
+                            nullable: true
+                            type: string
+                    required:
+                        - price
+                        - pet
+                    type: object
+                  style: deepObject
+            responses:
+                "204":
+                    description: Ünïcode
+                    headers:
+                        pet:
+                            schema:
+                                enum:
+                                    - 11
+                                readOnly: true
+                                type: integer
+            security: []
+            summary: status
+        patch:
+            operationId: patch_search
+            parameters:
+                - description: ""
+                  in: cookie
+                  name: id
+                  schema:
+                    items:
+                        description: status
+                        format: int64
+                        type: integer
+                    type: array
+                  style: spaceDelimited
+                - in: cookie
+                  name: '---'
+                  required: false
+                  schema:
+                    deprecated: true
+                    description: a~b
+                    format: date-time
+                    maxLength: 44
+                    minLength: 2
+                    type: string
+                    writeOnly: true
+            responses:
+                default:
+                    description: "0x1F"
+            tags:
+                - id
+        post:
+            operationId: post_search
+            parameters:
+                - in: cookie
+                  name: kind
+                  schema:
+                    items:
+                        default: price
+                        pattern: \d{3}
+                        type: string
+                    type: array
+            responses:
+                "204":
+                    description: Ünïcode
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                deprecated: true
+                                enum:
+                                    - "x\ty"
+                                    - name
+                                type: string
+                        application/vnd.api+json:
+                            schema:
+                                description: '*star'
+                                enum:
+                                    - 27
+                                format: double
+                                minimum: 5
+                                nullable: true
+                                type: number
+                    description: pet
+            summary: 흆㉐鹺㶥䕟亢撙圙

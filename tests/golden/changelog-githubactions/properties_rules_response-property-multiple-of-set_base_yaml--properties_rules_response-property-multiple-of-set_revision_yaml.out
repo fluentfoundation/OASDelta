@@ -1,0 +1,2 @@
+::notice title=response-property-multiple-of-set,file=./properties/rules/response-property-multiple-of-set_revision.yaml,line=57,col=41::in API DELETE /search the `若὾Ÿ⶜` response property's multipleOf was set to `2.00` for the response status `2XX`
+

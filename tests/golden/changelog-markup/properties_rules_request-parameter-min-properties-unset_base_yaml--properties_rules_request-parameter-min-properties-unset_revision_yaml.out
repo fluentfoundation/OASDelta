@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /owners/{ownerId}/pets
+-  for the `header` request parameter `owner`, the minProperties was unset from `2`
+
+
+
+
+
+

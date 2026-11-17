@@ -1,0 +1,83 @@
+# Fires request-parameter-default-value-removed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            description: C:\path
+            type:
+                - integer
+                - "null"
+        Owner:
+            default: owner
+            enum:
+                - kind
+                - owner
+            type:
+                - string
+                - "null"
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: kind
+            type: apiKey
+info:
+    title: kind
+    version: v1
+openapi: 3.1.0
+paths:
+    /items/{id}.json:
+        post:
+            description: '&anchor'
+            operationId: post_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "204":
+                    description: 疙醡ꦱ吟섲ࣻЇၭ
+                default:
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                example: "x\ty"
+                                type:
+                                    - integer
+                                    - "null"
+                    description: a/b
+            summary: tag
+            x-stability-level: alpha
+        put:
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - deprecated: true
+                  in: cookie
+                  name: price
+                  schema: false
+                - in: query
+                  name: a/b
+                  schema:
+                    type:
+                        - string
+                        - "null"
+                  style: pipeDelimited
+            responses:
+                2XX:
+                    content:
+                        application/json:
+                            schema:
+                                const: kind
+                                deprecated: true
+                                description: status
+                                type:
+                                    - string
+                                    - "null"
+                    description: '*star'
+servers:
+    - url: /relative
+    - url: https://api.example.com

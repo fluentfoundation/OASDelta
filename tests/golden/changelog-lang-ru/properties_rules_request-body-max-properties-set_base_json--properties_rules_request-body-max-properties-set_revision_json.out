@@ -1,0 +1,7 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[request-body-max-properties-set] в ./properties/rules/request-body-max-properties-set_revision.json
+	в API POST /v1/items
+		значение maxProperties у тела запроса задано в `11`
+		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+
+

@@ -1,0 +1,12 @@
+- id: response-property-exclusive-max-unset
+  text: 'the `kind/oneOf[subschema #3]/` response property''s exclusiveMaximum was unset from `1272.00` for the response status `204`'
+  level: 3
+  operation: PUT
+  path: /search
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-property-exclusive-max-unset_base.yaml
+    line: 53
+    column: 47
+  fingerprint: 681d2b4ea9e4
+

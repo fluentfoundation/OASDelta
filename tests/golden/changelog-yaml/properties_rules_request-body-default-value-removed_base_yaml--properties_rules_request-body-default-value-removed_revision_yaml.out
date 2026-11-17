@@ -1,0 +1,29 @@
+- id: request-body-type-changed
+  text: the request's body `type/format` changed from `number/double` to `boolean`
+  level: 3
+  operation: PUT
+  operationId: put_search
+  path: /search
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-body-default-value-removed_base.yaml
+    line: 29
+    column: 29
+  revisionSource:
+    file: ./properties/rules/request-body-default-value-removed_revision.yaml
+    line: 27
+    column: 29
+  fingerprint: 15639c4c23bc
+- id: request-body-default-value-removed
+  text: the request body `application/json; charset=utf-8` default value `14.00` was removed
+  level: 1
+  operation: PUT
+  operationId: put_search
+  path: /search
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-body-default-value-removed_base.yaml
+    line: 27
+    column: 29
+  fingerprint: 8a636540b205
+

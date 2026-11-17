@@ -1,0 +1,8 @@
+3 changes: 2 error, 0 warning, 1 info
+error at ./properties/rules/response-body-max-contains-unset_revision.yaml, in API PATCH /pets/{petId} removed 'contains' constraint from the response body for the status `204` [response-body-contains-removed]. 
+
+error at ./properties/rules/response-body-max-contains-unset_revision.yaml, in API PATCH /pets/{petId} the response's body maxContains was unset from `0` [response-body-max-contains-unset]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

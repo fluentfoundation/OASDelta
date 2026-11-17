@@ -1,0 +1,11 @@
+diff: true
+details:
+    endpoints:
+        deleted: 1
+    paths:
+        deleted: 1
+    schemas:
+        modified: 1
+    securitySchemes:
+        modified: 1
+

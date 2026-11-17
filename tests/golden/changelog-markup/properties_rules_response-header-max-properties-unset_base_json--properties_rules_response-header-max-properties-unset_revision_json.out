@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### DELETE /items/{id}.json
+- :warning: the `a
+b` response header's maxProperties was unset from `1` for the status `default`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

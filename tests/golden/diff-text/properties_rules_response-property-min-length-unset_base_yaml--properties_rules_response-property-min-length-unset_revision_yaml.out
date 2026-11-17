@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /items/{id}.json
+- Responses changed
+  - Modified response: 404
+    - Content changed
+      - Modified media type: application/vnd.api+json
+        - Schema changed
+          - Property 'OneOf' changed
+            - Modified schema: subschema #1
+              - Property 'AllOf' changed
+                - Schemas added: subschema #1, subschema #2
+              - Type changed from 'null, string' to ''
+              - Deleted enum values: [徴  leading | table |]
+              - MinLength changed from 1 to 0
+
+

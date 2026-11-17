@@ -1,0 +1,2 @@
+::error title=response-header-exclusive-max-unset,file=./properties/rules/response-header-exclusive-max-unset_revision.yaml,line=63,col=9::in API DELETE /pets the `kind` response header's exclusiveMaximum was unset from `1394.00` for the status `204`
+

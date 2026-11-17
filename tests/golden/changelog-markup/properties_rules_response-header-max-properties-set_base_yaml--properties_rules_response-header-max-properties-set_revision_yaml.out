@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /v1/items
+-  the `id` response header's maxProperties was set to `19` for the status `204`
+
+
+
+
+
+

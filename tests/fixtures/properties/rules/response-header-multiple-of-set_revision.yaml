@@ -1,0 +1,98 @@
+# Fires response-header-multiple-of-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        oauth:
+            flows:
+                authorizationCode:
+                    authorizationUrl: https://auth.example.com/authorize
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+                clientCredentials:
+                    refreshUrl: https://auth.example.com/refresh
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: 名前
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /v1/items:
+        get:
+            operationId: get_v1_items
+            parameters:
+                - in: header
+                  name: "a\r\nb"
+                  schema:
+                    items:
+                        nullable: true
+                        type: number
+                    type: array
+                - in: header
+                  name: name
+                  schema:
+                    nullable: true
+                    type: boolean
+            responses:
+                2XX:
+                    content:
+                        '*/*':
+                            schema:
+                                type: number
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    items:
+                                        type: boolean
+                                    type: array
+                                type: array
+                    description: "null"
+                    headers:
+                        ‮abc:
+                            required: false
+                            schema:
+                                description: id
+                                maxLength: 56
+                                multipleOf: 3
+                                type: string
+                        Ünïcode:
+                            required: true
+                            schema:
+                                deprecated: true
+                                type: integer
+                "400":
+                    content:
+                        '*/*':
+                            schema:
+                                description: kind
+                                format: float
+                                type: number
+                        application/json:
+                            schema:
+                                description: 狢၁쳰
+                                format: custom
+                                type: boolean
+                    description: price
+                "500":
+                    description: id
+            security:
+                - oauth: []
+                - openid: []
+            summary: status
+security:
+    - openid: []
+servers:
+    - url: https://api.example.com
+    - url: /relative
+tags:
+    - name: status
+    - name: name

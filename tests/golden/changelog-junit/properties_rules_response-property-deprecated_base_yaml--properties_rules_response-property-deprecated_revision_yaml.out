@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-property-deprecated" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">response property `created` deprecated (media type: application/vnd.api+json)</failure>
+    </testcase>
+    <testcase name="response-property-discriminator-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added discriminator to `㎖㹈ꃿ즡` response property for the response status `200` (media type: */*)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

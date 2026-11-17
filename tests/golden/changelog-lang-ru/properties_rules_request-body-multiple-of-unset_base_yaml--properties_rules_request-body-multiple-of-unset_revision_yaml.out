@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[request-body-multiple-of-unset] в ./properties/rules/request-body-multiple-of-unset_revision.yaml
+	в API PATCH /owners/{ownerId}/pets
+		значение multipleOf у тела запроса удалено, предыдущее значение - `5.00`
+
+

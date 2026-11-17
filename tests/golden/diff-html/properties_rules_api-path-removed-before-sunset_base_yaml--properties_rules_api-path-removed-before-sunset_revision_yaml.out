@@ -1,0 +1,17 @@
+<h3 id="new-endpoints-3">New Endpoints: 3</h3>
+<hr>
+<p>DELETE /pets/{petId}<br>
+GET /pets/{petId}<br>
+POST /pets/{petId}</p>
+<h3 id="deleted-endpoints-3">Deleted Endpoints: 3</h3>
+<hr>
+<p>DELETE /pets/{petId}/v2<br>
+GET /pets/{petId}/v2<br>
+POST /pets/{petId}/v2</p>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PUT /owners/{ownerId}/pets</p>
+<ul>
+<li>New path param: ownerId</li>
+</ul>
+

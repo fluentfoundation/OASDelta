@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/search":{"operations":{"modified":{"DELETE":{"responses":{"modified":{"default":{"content":{"modified":{"application/vnd.api+json":{"schema":{"anyOf":{"modified":[{"base":{"index":1},"revision":{"index":1},"diff":{"properties":{"modified":{"\u0026anchor":{"max":{"from":570,"to":572}}}}}}]}}}}}}}}}}}}}}}

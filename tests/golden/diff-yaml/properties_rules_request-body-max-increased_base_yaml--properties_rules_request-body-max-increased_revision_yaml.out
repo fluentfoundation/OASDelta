@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    multipart/form-data:
+                                        schema:
+                                            max:
+                                                from: 92
+                                                to: 95
+endpoints:
+    modified:
+        ?   method: POST
+            path: /v1/items
+        :   requestBody:
+                content:
+                    modified:
+                        multipart/form-data:
+                            schema:
+                                max:
+                                    from: 92
+                                    to: 95
+

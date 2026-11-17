@@ -1,0 +1,35 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            items:
+                                                properties:
+                                                    modified:
+                                                        owner:
+                                                            writeOnly:
+                                                                from: false
+                                                                to: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /v1/items
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                items:
+                                    properties:
+                                        modified:
+                                            owner:
+                                                writeOnly:
+                                                    from: false
+                                                    to: true
+

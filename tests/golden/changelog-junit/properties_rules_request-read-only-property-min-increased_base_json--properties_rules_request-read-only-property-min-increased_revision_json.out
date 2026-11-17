@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="response-media-type-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the media type `application/json` for the response with the status `500`</failure>
+    </testcase>
+    <testcase name="request-body-media-type-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the media type `application/json; charset=utf-8` from the request body</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="request-read-only-property-min-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `叚։⋋媣塦/anyOf[subschema #2]/` request read-only property's min was increased to `-8.00`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

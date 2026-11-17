@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /search
+- :warning: the request's body minProperties was set to `2`
+
+
+
+
+
+

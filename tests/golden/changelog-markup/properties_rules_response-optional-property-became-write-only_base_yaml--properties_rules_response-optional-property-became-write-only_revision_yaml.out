@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /v1/items
+-  the response optional property `%20` became write-only for the status `500`
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+4 alterações: 2 error, 2 warning, 0 info
+error	[request-property-min-items-increased] em ./properties/rules/request-property-min-items-increased_revision.yaml
+	em API PATCH /items/{id}.json
+		o número mínimo de itens da propriedade de requisição `'single'` foi aumentado para `2`
+
+error	[new-request-path-parameter] em ./properties/rules/request-property-min-items-increased_revision.yaml
+	em API DELETE /pets/{petId}
+		adicionado o novo parâmetro de caminho da requisição `id`
+
+warning	[request-parameter-removed] em ./properties/rules/request-property-min-items-increased_revision.yaml
+	em API DELETE /pets/{petId}
+		parâmetro de requisição do tipo `header` e nome `id` removido
+		Este é um aviso porque alguns aplicativos podem retornar um erro ao receber um parâmetro que não esperam. Recomenda-se depreciar o parâmetro primeiro.
+
+warning	[request-parameter-removed] em ./properties/rules/request-property-min-items-increased_revision.yaml
+	em API PATCH /pets/{petId}
+		parâmetro de requisição do tipo `path` e nome `petId` removido
+		Este é um aviso porque alguns aplicativos podem retornar um erro ao receber um parâmetro que não esperam. Recomenda-se depreciar o parâmetro primeiro.
+
+

@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/items/{id}.json":{"operations":{"modified":{"GET":{"responses":{"modified":{"204":{"content":{"added":["application/json; charset=utf-8"]}}}}}}}},"/owners/{ownerId}/pets":{"operations":{"modified":{"GET":{"parameters":{"modified":{"cookie":{"owner":{"schema":{"maxProps":{"from":11,"to":null}}}}}}}}}}}}}

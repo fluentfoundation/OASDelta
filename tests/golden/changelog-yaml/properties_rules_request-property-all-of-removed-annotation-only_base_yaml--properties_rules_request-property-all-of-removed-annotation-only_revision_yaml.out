@@ -1,0 +1,17 @@
+- id: request-property-all-of-removed-annotation-only
+  text: 'removed annotation-only `subschema #1` from the `a: b/oneOf[subschema #3]/` request property `allOf` list'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: PUT
+  path: /owners/{ownerId}/pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-property-all-of-removed-annotation-only_base.yaml
+    line: 77
+    column: 47
+    endLine: 77
+    endColumn: 65
+  fingerprint: 15c223e29079
+

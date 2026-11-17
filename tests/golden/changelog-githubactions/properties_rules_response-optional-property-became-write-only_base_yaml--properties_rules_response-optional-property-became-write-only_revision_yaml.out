@@ -1,0 +1,2 @@
+::notice title=response-optional-property-became-write-only,file=./properties/rules/response-optional-property-became-write-only_revision.yaml::in API POST /v1/items the response optional property `%2520` became write-only for the status `500`
+

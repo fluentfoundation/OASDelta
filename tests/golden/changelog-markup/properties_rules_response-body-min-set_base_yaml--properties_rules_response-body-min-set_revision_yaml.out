@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /items/{id}.json
+- :warning: the response's body `type` changed from `object` to `integer` for status `204`
+-  the response's body min was set to `4.00`
+
+
+
+
+
+

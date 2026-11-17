@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/store/order":{"operations":{"modified":{"GET":{"parameters":{"modified":{"header":{" leading":{"explode":{"from":null,"to":true}}}}}},"PUT":{"responses":{"modified":{"default":{"content":{"modified":{"application/json; charset=utf-8":{"schema":{"items":{"maxItems":{"from":30,"to":32}}}}}}}}}}}}}}}}

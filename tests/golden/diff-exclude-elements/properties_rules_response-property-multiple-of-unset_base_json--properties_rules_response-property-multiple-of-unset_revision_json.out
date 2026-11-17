@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/v1/items":{"operations":{"modified":{"GET":{"responses":{"modified":{"200":{"content":{"modified":{"text/plain":{"schema":{"properties":{"modified":{"pet":{"multipleOf":{"from":3,"to":null}}}}}}}}}}}}}}}}}}

@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /pets/{petId}
+-  for the `header` request parameter `name`, the multipleOf was unset from `9.00`
+
+
+
+
+
+

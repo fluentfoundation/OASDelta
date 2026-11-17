@@ -1,0 +1,23 @@
+5 изменений: 4 error, 0 warning, 1 info
+error	[response-body-max-unset] в ./properties/rules/response-body-type-generalized_revision.yaml
+	в API DELETE /ünïcode/ключ
+		значение max у тела ответа удалено, предыдущее значение - `886.00`
+
+error	[response-body-min-unset] в ./properties/rules/response-body-type-generalized_revision.yaml
+	в API DELETE /ünïcode/ключ
+		значение min у тела ответа удалено, предыдущее значение - `1.00`
+
+error	[response-body-type-generalized] в ./properties/rules/response-body-type-generalized_revision.yaml
+	в API DELETE /ünïcode/ключ
+		`type/format` тела ответа расширен с `integer/int64` до `number` для статуса `204`
+
+error	[response-media-type-removed] в ./properties/rules/response-body-type-generalized_revision.yaml
+	в API DELETE /ünïcode/ключ
+		удалён media type `text/plain` для ответа со статусом `default`
+
+info	[response-body-type-compatible] в ./properties/rules/response-body-type-generalized_revision.yaml
+	в API DELETE /ünïcode/ключ
+		`type` тела ответа изменён с `string` до `number` для статуса `default` (обратно совместимо)
+		Это изменение обратно совместимо, потому что тип медиа не является строго типизированным (например XML), где любое значение может быть представлено как текст, поэтому тип не проверяется при передаче. При строго типизированном типе медиа, таком как JSON, это же изменение было бы ломающим.
+
+

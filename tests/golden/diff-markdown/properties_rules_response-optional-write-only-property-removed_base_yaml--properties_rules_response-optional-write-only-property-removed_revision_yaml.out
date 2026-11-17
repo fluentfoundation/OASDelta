@@ -1,0 +1,28 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /pets/{petId}
+- Responses changed
+  - Modified response: 400
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Type changed from 'object' to 'number'
+          - AdditionalProperties changed from true to null
+          - Required changed
+            - Deleted required property: owner
+            - Deleted required property: price
+            - Deleted required property: 薫鑈஼ห꼁洲㗔
+          - Properties changed
+            - Deleted property: <b>&amp;
+            - Deleted property: owner
+            - Deleted property: price
+            - Deleted property: 薫鑈஼ห꼁洲㗔
+- Deprecated changed from false to true
+
+

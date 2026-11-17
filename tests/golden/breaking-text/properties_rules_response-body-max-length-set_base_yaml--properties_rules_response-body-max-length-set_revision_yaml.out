@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[response-body-type-changed] at ./properties/rules/response-body-max-length-set_revision.yaml
+	in API PATCH /pets/{petId}
+		the response's body `type` changed from `boolean` to `string` for status `default`
+
+

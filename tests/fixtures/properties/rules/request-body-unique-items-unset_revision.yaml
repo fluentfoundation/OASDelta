@@ -1,0 +1,54 @@
+# Fires request-body-unique-items-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            items:
+                description: price
+                example: '%20'
+                type: boolean
+            type: array
+            uniqueItems: true
+    securitySchemes:
+        api_key:
+            in: query
+            name: 名前
+            type: apiKey
+info:
+    title: '>'
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /store/order:
+        put:
+            deprecated: true
+            operationId: put_store_order
+            parameters:
+                - in: header
+                  name: name
+                  schema:
+                    items:
+                        $ref: '#/components/schemas/Owner'
+                    type: array
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            type: string
+                required: true
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                default: -51.75
+                                description: '`tick`'
+                                maximum: 222
+                                type:
+                                    - number
+                                    - "null"
+                        multipart/form-data:
+                            schema:
+                                type: string
+                    description: name
+servers:
+    - url: /relative

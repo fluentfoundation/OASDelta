@@ -1,0 +1,5 @@
+::error title=response-property-list-of-types-widened,file=./properties/rules/response-property-max-items-unset_revision.json::in API DELETE /ünïcode/ключ response property `items/` list-of-types was widened by adding types `integer` to media type `multipart/form-data` of response `500`
+::error title=response-property-max-items-unset,file=./properties/rules/response-property-max-items-unset_revision.json::in API DELETE /ünïcode/ключ the `items/` response property's maxItems was unset from `32` for the response status `500`
+::error title=response-property-min-items-unset,file=./properties/rules/response-property-max-items-unset_revision.json::in API DELETE /ünïcode/ключ the `items/` response property's minItems was unset from `3` for the response status `500`
+::error title=response-property-unique-items-unset,file=./properties/rules/response-property-max-items-unset_revision.json::in API DELETE /ünïcode/ключ the `items/` response property's uniqueItems was unset for the response status `500`
+

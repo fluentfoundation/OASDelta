@@ -1,0 +1,50 @@
+paths:
+    modified:
+        /items/{id}.json:
+            summary:
+                from: ""
+                to: name
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    allOf:
+                                                        added:
+                                                            - index: 0
+                                "400":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    min:
+                                                        from: -6
+                                                        to: -3
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        allOf:
+                                            added:
+                                                - index: 0
+                    "400":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        min:
+                                            from: -6
+                                            to: -3
+

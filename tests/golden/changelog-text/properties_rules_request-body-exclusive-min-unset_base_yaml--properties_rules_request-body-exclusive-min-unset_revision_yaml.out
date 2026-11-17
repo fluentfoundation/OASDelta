@@ -1,0 +1,26 @@
+6 changes: 2 error, 0 warning, 4 info
+error	[request-body-media-type-removed] at ./properties/rules/request-body-exclusive-min-unset_revision.yaml
+	in API PATCH /pets/{petId}
+		removed the media type `multipart/form-data` from the request body
+
+error	[request-body-type-changed] at ./properties/rules/request-body-exclusive-min-unset_revision.yaml
+	in API PATCH /pets/{petId}
+		the request's body `type/format` changed from `number/float` to `object`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[new-optional-request-property] at ./properties/rules/request-body-exclusive-min-unset_revision.yaml
+	in API PATCH /pets/{petId}
+		added the new optional request property `---`
+
+info	[request-body-exclusive-min-unset] at ./properties/rules/request-body-exclusive-min-unset_revision.yaml
+	in API PATCH /pets/{petId}
+		the request's body exclusiveMinimum was unset from `-8.00`
+
+info	[request-body-min-unset] at ./properties/rules/request-body-exclusive-min-unset_revision.yaml
+	in API PATCH /pets/{petId}
+		the request's body min was unset from `-5.00`
+
+

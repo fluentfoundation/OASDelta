@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `query` request parameter `䔫䪐뫑襖`</failure>
+    </testcase>
+    <testcase name="new-optional-request-parameter" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional `cookie` request parameter `**bold**`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed-with-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `query` request parameter `**bold**` with deprecation</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

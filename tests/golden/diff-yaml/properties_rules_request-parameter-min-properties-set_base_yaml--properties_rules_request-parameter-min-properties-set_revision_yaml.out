@@ -1,0 +1,44 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                header:
+                                    status:
+                                        schema:
+                                            minProps:
+                                                from: 0
+                                                to: 14
+endpoints:
+    modified:
+        ?   method: POST
+            path: /store/order
+        :   parameters:
+                modified:
+                    header:
+                        status:
+                            schema:
+                                minProps:
+                                    from: 0
+                                    to: 14
+components:
+    schemas:
+        modified:
+            Item:
+                properties:
+                    modified:
+                        ключ:
+                            oneOf:
+                                modified:
+                                    - base:
+                                        index: 2
+                                      revision:
+                                        index: 2
+                                      diff:
+                                        pattern:
+                                            from: ""
+                                            to: ^[a-z]+$
+

@@ -1,0 +1,7 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[response-mediatype-enum-value-added] в ./properties/rules/response-mediatype-enum-value-added_revision.yaml
+	в API PATCH /items/{id}.json
+		добавлено новое enum значение `created` в схему ответа `text/plain` для ответа со статусом `404`
+		Сервер теперь может вернуть значение, которое исключал прежний контракт, поэтому клиент, написанный по нему, может не обработать ответ. Если набор значений предполагает расширение, объявите его через x-extensible-enum.
+
+

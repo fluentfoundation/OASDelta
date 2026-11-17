@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info, in security the security scope `write` was added to the global security scheme `openid` [api-global-security-scope-added]. No endpoint inherits the API's top-level security requirements, so this change affects no client.
+
+

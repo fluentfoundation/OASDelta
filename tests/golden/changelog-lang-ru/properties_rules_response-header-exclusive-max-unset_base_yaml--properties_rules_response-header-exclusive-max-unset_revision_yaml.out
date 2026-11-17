@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[response-header-exclusive-max-unset] в ./properties/rules/response-header-exclusive-max-unset_revision.yaml
+	в API DELETE /pets
+		значение exclusiveMaximum у заголовка ответа `kind` удалено, предыдущее значение - `1394.00`, для статуса `204`
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
+    <testcase name="request-body-became-not-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body became not nullable</failure>
+    </testcase>
+    <testcase name="request-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body `type/format` changed from `integer, null/int64` to `number`</failure>
+    </testcase>
+    <testcase name="request-body-default-value-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request body `multipart/form-data` default value `82.00` was removed</failure>
+    </testcase>
+    <testcase name="request-body-exclusive-max-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body exclusiveMaximum was unset from `1585.00`</failure>
+    </testcase>
+    <testcase name="request-body-min-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body min was unset from `5.00`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

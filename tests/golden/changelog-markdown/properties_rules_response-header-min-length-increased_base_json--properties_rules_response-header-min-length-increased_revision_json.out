@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /pets
+-  the `status` response header's minLength was increased from `2` to `5` for the status `404`
+
+
+
+
+
+

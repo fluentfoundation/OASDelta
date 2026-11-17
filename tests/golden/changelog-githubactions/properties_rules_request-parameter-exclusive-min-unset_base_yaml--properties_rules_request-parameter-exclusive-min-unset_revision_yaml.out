@@ -1,0 +1,3 @@
+::notice title=endpoint-reactivated,file=./properties/rules/request-parameter-exclusive-min-unset_revision.yaml::in API PUT /pets endpoint reactivated
+::notice title=request-parameter-exclusive-min-unset,file=./properties/rules/request-parameter-exclusive-min-unset_revision.yaml::in API PUT /pets for the `cookie` request parameter `kind`, the exclusiveMinimum was unset from `true`
+

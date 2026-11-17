@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[response-header-max-set] em ./properties/rules/response-header-max-set_revision.yaml
+	em API PUT /v1/items
+		o valor max do cabeçalho de resposta `**bold**` foi definido como `6.00` para o status `default`
+
+

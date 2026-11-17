@@ -1,0 +1,309 @@
+{
+  "components": {
+    "schemas": {
+      "Item": {
+        "format": "password",
+        "nullable": true,
+        "type": "string"
+      },
+      "Owner": {
+        "nullable": true,
+        "type": "string"
+      }
+    },
+    "securitySchemes": {
+      "oauth": {
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://auth.example.com/authorize",
+            "scopes": {
+              "admin": "admin access",
+              "read": "read access"
+            },
+            "tokenUrl": "https://auth.example.com/token"
+          },
+          "clientCredentials": {
+            "refreshUrl": "https://auth.example.com/refresh",
+            "scopes": {
+              "admin": "admin access",
+              "read": "read access"
+            },
+            "tokenUrl": "https://auth.example.com/token"
+          }
+        },
+        "type": "oauth2"
+      }
+    }
+  },
+  "info": {
+    "title": "no",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/pets/{petId}": {
+      "delete": {
+        "operationId": "delete_pets_{petId}",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "petId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "0x1F",
+            "in": "header",
+            "name": "price",
+            "schema": {
+              "format": "int64",
+              "nullable": true,
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "created",
+            "schema": {
+              "description": "名前",
+              "properties": {
+                "0x1F": {
+                  "$ref": "#/components/schemas/Owner"
+                },
+                "ключ": {
+                  "format": "date",
+                  "minLength": 3,
+                  "nullable": true,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ключ"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "description": "tag",
+                  "multipleOf": 10,
+                  "type": "integer"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "description": "Ünïcode",
+                  "properties": {
+                    "[bracket]": {
+                      "enum": [
+                        44.75,
+                        35.375,
+                        -22.25
+                      ],
+                      "type": "number"
+                    },
+                    "`tick`": {
+                      "description": "0x1F",
+                      "properties": {
+                        "yes": {
+                          "minimum": -9,
+                          "nullable": true,
+                          "type": "integer"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "tag": {
+                      "format": "custom",
+                      "nullable": true,
+                      "type": "boolean"
+                    },
+                    "ключ": {
+                      "items": {
+                        "format": "float",
+                        "maximum": 875,
+                        "type": "number"
+                      },
+                      "maxItems": 33,
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "ключ",
+                    "[bracket]",
+                    "tag"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "ключ"
+          },
+          "400": {
+            "description": "name"
+          },
+          "500": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "description": "price",
+                  "properties": {
+                    " leading": {
+                      "items": {
+                        "$ref": "#/components/schemas/Item"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "description": "pet",
+                      "enum": [
+                        5,
+                        18,
+                        9
+                      ],
+                      "type": "integer"
+                    },
+                    {
+                      "properties": {
+                        "pet": {
+                          "default": 87,
+                          "minimum": 1,
+                          "nullable": true,
+                          "type": "integer"
+                        },
+                        "名前": {
+                          "nullable": true,
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "items": {
+                        "description": " ",
+                        "nullable": true,
+                        "type": "number"
+                      },
+                      "type": "array"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "~"
+          }
+        },
+        "summary": "偐꿺죩෸"
+      },
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "petId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "additionalProperties": false,
+                      "minProperties": 1,
+                      "properties": {
+                        "id": {
+                          "description": "tag",
+                          "nullable": true,
+                          "type": "string",
+                          "writeOnly": true
+                        },
+                        "name": {
+                          "description": "price",
+                          "type": "string"
+                        },
+                        "owner": {
+                          "$ref": "#/components/schemas/Owner"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "oneOf": [
+                        {
+                          "format": "int32",
+                          "multipleOf": 5,
+                          "type": "integer"
+                        },
+                        {
+                          "deprecated": true,
+                          "format": "uuid",
+                          "maxLength": 110,
+                          "nullable": true,
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    {
+                      "minProperties": 0,
+                      "properties": {
+                        "status": {
+                          "default": 80,
+                          "description": "_under_",
+                          "nullable": true,
+                          "readOnly": true,
+                          "type": "integer"
+                        },
+                        "Ünïcode": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "Ünïcode",
+                        "status"
+                      ],
+                      "type": "object"
+                    }
+                  ]
+                }
+              },
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "items": {
+                    "enum": [
+                      true,
+                      false
+                    ],
+                    "readOnly": true,
+                    "type": "boolean"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                }
+              }
+            },
+            "description": "\u0026anchor"
+          }
+        },
+        "summary": "Ünïcode"
+      }
+    }
+  }
+}

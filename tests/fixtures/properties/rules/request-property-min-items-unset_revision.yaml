@@ -1,0 +1,160 @@
+# Fires request-property-min-items-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            deprecated: true
+            description: name
+            properties:
+                '>':
+                    items:
+                        type:
+                            - integer
+                            - "null"
+                    type: array
+            type: object
+    securitySchemes:
+        api_key:
+            in: header
+            name: '-'
+            type: apiKey
+info:
+    title: kind
+    version: v1
+openapi: 3.1.0
+paths:
+    /items/{id}.json:
+        get:
+            deprecated: true
+            operationId: owner
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: '%20'
+                  required: false
+                  schema:
+                    items:
+                        deprecated: true
+                        description: created
+                        enum:
+                            - 名前
+                            - 䠣鎄퉂䘙緫蕈
+                        minLength: 4
+                        pattern: (
+                        type:
+                            - string
+                            - "null"
+                    minItems: 1
+                    type: array
+                - in: query
+                  name: "\U0001F600"
+                  schema:
+                    example: pet
+                    format: custom
+                    type: boolean
+            responses:
+                "201":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                properties:
+                                    ' leading':
+                                        items:
+                                            description: status
+                                            format: int32
+                                            type: integer
+                                        type: array
+                                    name:
+                                        default: 名前
+                                        type:
+                                            - string
+                                            - "null"
+                                    Ünïcode:
+                                        items:
+                                            description: 名前
+                                            exclusiveMinimum: -3
+                                            format: int32
+                                            type:
+                                                - integer
+                                                - "null"
+                                            writeOnly: true
+                                        type: array
+                                    ćⰅ:
+                                        properties:
+                                            "\a":
+                                                type:
+                                                    - integer
+                                                    - "null"
+                                            '*star':
+                                                $ref: '#/components/schemas/Owner'
+                                        required:
+                                            - "\a"
+                                        type: object
+                                required:
+                                    - ' leading'
+                                    - name
+                                    - ćⰅ
+                                type: object
+                    description: kind
+                "400":
+                    description: '#hash'
+            summary: '*star'
+        patch:
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: header
+                  name: "null"
+                  schema:
+                    description: 풏딪ɜǈ尉
+                    type:
+                        - number
+                        - "null"
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            additionalProperties:
+                                type: string
+                            description: kind
+                            properties:
+                                id:
+                                    enum:
+                                        - 15
+                                        - 8
+                                        - 7
+                                        - 0
+                                    type: integer
+                            required:
+                                - id
+                            type: object
+                required: false
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Owner'
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    items:
+                                        type: integer
+                                    type: array
+                                maxItems: 30
+                                type: array
+                    description: "~"
+                "400":
+                    description: price
+            tags:
+                - Ünïcode
+                - status
+tags:
+    - name: name
+    - name: price

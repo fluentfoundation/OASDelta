@@ -1,0 +1,33 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PATCH /store/order</p>
+<ul>
+<li>Modified header param: created
+<ul>
+<li>Schema changed
+<ul>
+<li>WriteOnly changed from false to true</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Request body changed</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Headers changed
+<ul>
+<li>New header: *star</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

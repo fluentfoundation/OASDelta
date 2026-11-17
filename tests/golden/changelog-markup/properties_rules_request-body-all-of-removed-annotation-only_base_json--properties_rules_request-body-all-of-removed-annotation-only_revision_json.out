@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /store/order
+-  removed annotation-only `subschema #1` from the request body `allOf` list
+
+
+
+
+
+

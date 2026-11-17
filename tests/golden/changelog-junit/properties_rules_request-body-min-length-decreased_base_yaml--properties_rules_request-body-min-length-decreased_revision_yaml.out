@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-body-min-length-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body minLength was decreased from `3` to `2`</failure>
+    </testcase>
+    <testcase name="response-header-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response header `kind` was added for the status `404`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

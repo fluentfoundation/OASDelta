@@ -1,0 +1,195 @@
+{
+  "info": {
+    "title": "owner",
+    "version": "2.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/store/order": {
+      "delete": {
+        "responses": {
+          "default": {
+            "description": "**bold**"
+          }
+        },
+        "x-stability-level": "stable"
+      },
+      "post": {
+        "operationId": "{brace}",
+        "responses": {
+          "200": {
+            "description": "名前"
+          },
+          "2XX": {
+            "description": "窈ꊪᵷ냲"
+          },
+          "400": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "deprecated": true,
+                  "format": "uuid",
+                  "nullable": true,
+                  "type": "string"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "description": "-",
+                  "properties": {
+                    "owner": {
+                      "properties": {
+                        "status": {
+                          "description": "@at",
+                          "format": "double",
+                          "type": "number"
+                        },
+                        "tag": {
+                          "default": -82.375,
+                          "enum": [
+                            -16.625,
+                            9007199254740993
+                          ],
+                          "maximum": 408,
+                          "nullable": true,
+                          "readOnly": true,
+                          "type": "number"
+                        },
+                        "ключ": {
+                          "description": "name",
+                          "nullable": true,
+                          "type": "boolean",
+                          "writeOnly": true
+                        },
+                        "名前": {
+                          "minimum": 4,
+                          "nullable": true,
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "名前",
+                        "tag",
+                        "ключ"
+                      ],
+                      "type": "object"
+                    },
+                    "price": {
+                      "default": -9223372036854775808,
+                      "minimum": -6,
+                      "nullable": true,
+                      "type": "number"
+                    },
+                    "ģὸ欋秱": {
+                      "properties": {
+                        "`tick`": {
+                          "default": 99.125,
+                          "description": "created",
+                          "minimum": 0,
+                          "nullable": true,
+                          "type": "number"
+                        },
+                        "empty": {
+                          "nullable": true,
+                          "type": "boolean"
+                        },
+                        "x\ty": {
+                          "nullable": true,
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "empty",
+                        "`tick`"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "ģὸ欋秱",
+                    "price"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "owner"
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "`tick`",
+            "schema": {
+              "allOf": [
+                {
+                  "default": 9007199254740993,
+                  "readOnly": true,
+                  "type": "integer"
+                },
+                {
+                  "default": -0,
+                  "nullable": true,
+                  "readOnly": true,
+                  "type": "integer"
+                },
+                {
+                  "nullable": true,
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
+            "description": "line1\nline2",
+            "in": "cookie",
+            "name": "\u0026anchor",
+            "schema": {
+              "items": {
+                "format": "password",
+                "type": "string"
+              },
+              "minItems": 0,
+              "type": "array"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "maxLength": 60,
+                "nullable": true,
+                "type": "string",
+                "writeOnly": true
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "type": "number"
+              }
+            }
+          },
+          "description": " ",
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "pet"
+          }
+        },
+        "x-stability-level": "alpha"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "tag"
+    },
+    {
+      "name": "pet"
+    }
+  ]
+}

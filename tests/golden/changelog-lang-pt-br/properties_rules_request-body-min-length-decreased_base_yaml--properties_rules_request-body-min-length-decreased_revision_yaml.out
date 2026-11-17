@@ -1,0 +1,10 @@
+2 alterações: 0 error, 0 warning, 2 info
+info	[request-body-min-length-decreased] em ./properties/rules/request-body-min-length-decreased_revision.yaml
+	em API POST /pets
+		o comprimento mínimo do corpo da requisição foi reduzido de `3` para `2`
+
+info	[response-header-added] em ./properties/rules/request-body-min-length-decreased_revision.yaml
+	em API POST /pets
+		o cabeçalho de resposta `kind` foi adicionado para o status `404`
+
+

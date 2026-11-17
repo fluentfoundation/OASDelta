@@ -1,0 +1,17 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### DELETE /store/order
+- :warning: the `‮abc` response property's minLength was decreased from `2` to `1` for the response status `404`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

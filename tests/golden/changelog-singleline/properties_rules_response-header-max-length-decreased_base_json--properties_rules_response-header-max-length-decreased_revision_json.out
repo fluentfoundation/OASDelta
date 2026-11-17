@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./properties/rules/response-header-max-length-decreased_revision.json, in API PUT /ünïcode/ключ the `條졿꽐` response header's maxLength was decreased from `104` to `9` for the status `404` [response-header-max-length-decreased]. 
+
+

@@ -1,0 +1,40 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+PATCH /store/order
+- Responses changed
+  - Modified response: 404
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Properties changed
+            - Modified property: pet
+              - Property 'AnyOf' changed
+                - Modified schema: subschema #3
+                  - Type changed from 'string' to ''
+                  - Nullable changed from true to false
+                  - ReadOnly changed from true to false
+                  - MinLength changed from 1 to 0
+
+PUT /v1/items
+- Request body changed
+  - Content changed
+    - Modified media type: */*
+      - Schema changed
+        - Properties changed
+          - Modified property: 㺓崠讆
+            - Properties changed
+              - Modified property: id
+                - Property 'AnyOf' changed
+                  - Modified schema: subschema #3
+                    - Type changed from 'string' to ''
+                    - Nullable changed from true to false
+                    - ReadOnly changed from true to false
+                    - MinLength changed from 1 to 0
+
+

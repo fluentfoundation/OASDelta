@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            status:
+                                                                writeOnly:
+                                                                    from: true
+                                                                    to: false
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                status:
+                                                    writeOnly:
+                                                        from: true
+                                                        to: false
+

@@ -1,0 +1,7 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-header-type-compatible] at ./properties/rules/response-header-type-compatible_revision.yaml
+	in API PATCH /ünïcode/ключ
+		the `0x1f` response header's `type` changed from `string` to `object` for the status `200` (backward compatible)
+		This change is backward compatible because a header value is transmitted as text, so any type can be represented as a string on the wire and is not enforced there.
+
+

@@ -1,0 +1,2 @@
+::notice title=request-body-max-increased,file=./properties/rules/request-body-max-increased_revision.yaml,line=14,col=29::in API POST /v1/items the request's body max was increased from `92.00` to `95.00`
+

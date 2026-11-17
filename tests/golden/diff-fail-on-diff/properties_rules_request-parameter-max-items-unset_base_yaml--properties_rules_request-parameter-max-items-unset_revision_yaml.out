@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/search":{"operations":{"modified":{"DELETE":{"parameters":{"modified":{"cookie":{"뻩씃쑶䘎冘":{"schema":{"oneOf":{"added":[{"index":0},{"index":1}]},"type":{"deleted":["array"]},"minItems":{"from":3,"to":0},"maxItems":{"from":92,"to":null},"items":{"schemaDeleted":true},"listOfTypes":{"added":["string"]}}}}}}}}}}}}}

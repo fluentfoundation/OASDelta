@@ -1,0 +1,6 @@
+2 changes: 0 error, 0 warning, 2 info
+info at ./properties/rules/response-body-max-items-decreased_revision.yaml, in API PATCH /search the response's body maxItems was decreased from `4` to `2` [response-body-max-items-decreased]. 
+
+info at ./properties/rules/response-body-max-items-decreased_revision.yaml, in API PATCH /search added an item schema to the media type `application/vnd.api+json` for the response with the status `500` [response-body-media-type-item-schema-added]. 
+
+

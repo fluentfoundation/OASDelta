@@ -1,0 +1,10 @@
+2 changes: 1 error, 0 warning, 1 info
+error	[response-header-max-increased] at ./properties/rules/response-header-max-increased_revision.yaml
+	in API DELETE /search
+		the `kind` response header's max was increased from `-4.00` to `973.00` for the status `default`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+

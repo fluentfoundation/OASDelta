@@ -1,0 +1,15 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /pets
+- :warning: the request's body `type` changed from `array<object>` to `object`
+-  the request's body maxItems was unset from `95`
+-  the request's body minItems was unset from `2`
+
+
+
+
+
+

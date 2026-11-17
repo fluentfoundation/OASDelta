@@ -1,0 +1,722 @@
+{
+  "info": {
+    "title": "id",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/items/{id}.json": {
+      "patch": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "㴁⚃鰦껤靚뢹鮻",
+            "required": false,
+            "schema": {
+              "nullable": true,
+              "pattern": "[^\\n]",
+              "type": "string"
+            },
+            "style": "simple"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/vnd.api+json": {
+              "schema": {
+                "items": {
+                  "description": "#hash",
+                  "type": "boolean"
+                },
+                "minItems": 3,
+                "type": "array"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "anyOf": [
+                      {
+                        "description": "名前",
+                        "example": "name",
+                        "maximum": 505,
+                        "minimum": 3,
+                        "type": "number"
+                      },
+                      {
+                        "description": "created",
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  "type": "array"
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "items": {
+                    "maximum": 146,
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  "type": "array",
+                  "uniqueItems": true
+                }
+              }
+            },
+            "description": "owner",
+            "headers": {
+              "ключ": {
+                "schema": {
+                  "description": "!tag",
+                  "nullable": true,
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "500": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "minimum": -8,
+                  "type": "number"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "items": {
+                    "description": "a~b",
+                    "type": "string"
+                  },
+                  "minItems": 3,
+                  "type": "array"
+                }
+              }
+            },
+            "description": "tag"
+          }
+        }
+      }
+    },
+    "/pets": {
+      "post": {
+        "deprecated": true,
+        "operationId": "post_pets",
+        "parameters": [
+          {
+            "description": " ",
+            "in": "query",
+            "name": "price",
+            "schema": {
+              "format": "float",
+              "nullable": true,
+              "type": "number",
+              "writeOnly": true
+            },
+            "style": "pipeDelimited"
+          },
+          {
+            "in": "header",
+            "name": "tag",
+            "required": true,
+            "schema": {
+              "deprecated": true,
+              "format": "int64",
+              "nullable": true,
+              "type": "integer"
+            }
+          },
+          {
+            "in": "header",
+            "name": "owner",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "deprecated": true,
+                  "nullable": true,
+                  "type": "string"
+                },
+                {
+                  "enum": [
+                    22,
+                    19,
+                    13
+                  ],
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/vnd.api+json": {
+              "schema": {
+                "maxLength": 60,
+                "type": "string"
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "maximum": 770,
+                "nullable": true,
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "500": {
+            "description": "owner"
+          }
+        },
+        "summary": "😀",
+        "tags": [
+          "pet",
+          "名前"
+        ]
+      },
+      "put": {
+        "parameters": [
+          {
+            "description": "created",
+            "in": "header",
+            "name": "...",
+            "required": false,
+            "schema": {
+              "default": 74,
+              "description": "created",
+              "maximum": 212,
+              "nullable": true,
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "owner",
+            "schema": {
+              "deprecated": true,
+              "enum": [
+                true,
+                false
+              ],
+              "format": "custom",
+              "nullable": true,
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "2XX": {
+            "description": "kind"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "default": "፰꿬싈콀쉭",
+                  "format": "byte",
+                  "type": "string"
+                }
+              },
+              "application/vnd.api+json": {
+                "schema": {
+                  "maxProperties": 18,
+                  "type": "object"
+                }
+              }
+            },
+            "description": "tag"
+          }
+        }
+      }
+    },
+    "/pets/{petId}": {
+      "patch": {
+        "operationId": "patch_pets_{petId}",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "petId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "explode": true,
+            "in": "header",
+            "name": "_under_",
+            "required": true,
+            "schema": {
+              "properties": {
+                "created": {
+                  "maxLength": 42,
+                  "pattern": "[^\\n]",
+                  "type": "string"
+                },
+                "癝": {
+                  "deprecated": true,
+                  "format": "double",
+                  "maximum": 218,
+                  "minimum": -1,
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset=utf-8": {
+              "schema": {
+                "items": {
+                  "description": "٬",
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "properties": {
+                  "-": {
+                    "items": {
+                      "format": "float",
+                      "maximum": 217,
+                      "type": "number"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "properties": {
+                    "name": {
+                      "properties": {
+                        "`tick`": {
+                          "description": "뭔鸨鎻该湚蹒숽迸",
+                          "type": "integer"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "긦㞸널县懡": {
+                      "description": "owner",
+                      "type": "integer",
+                      "writeOnly": true
+                    }
+                  },
+                  "required": [
+                    "긦㞸널县懡"
+                  ],
+                  "type": "object"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "nullable": true,
+                  "type": "number"
+                }
+              }
+            },
+            "description": "kind",
+            "headers": {
+              "*star": {
+                "schema": {
+                  "minimum": 0,
+                  "type": "number"
+                }
+              },
+              "Ünïcode": {
+                "deprecated": true,
+                "schema": {
+                  "enum": [
+                    97,
+                    9223372036854775807
+                  ],
+                  "format": "double",
+                  "maximum": 415,
+                  "readOnly": true,
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "description": "a/b",
+                  "properties": {
+                    "created": {
+                      "default": 22,
+                      "minimum": -9,
+                      "type": "integer"
+                    },
+                    "pet": {
+                      "type": "object"
+                    },
+                    "~": {
+                      "description": "tag",
+                      "properties": {
+                        "1e3": {
+                          "nullable": true,
+                          "readOnly": true,
+                          "type": "number"
+                        },
+                        "⸡蔸ꋓጧⒸᯯ": {
+                          "enum": [
+                            12,
+                            6,
+                            7
+                          ],
+                          "type": "integer"
+                        },
+                        "鑣䣋췿懨䧑": {
+                          "format": "float",
+                          "maximum": 589,
+                          "nullable": true,
+                          "type": "number"
+                        },
+                        "횧▙": {
+                          "description": "kind",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "⸡蔸ꋓጧⒸᯯ"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "pet",
+                    "~"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "摗獍쨜",
+            "headers": {
+              "@at": {
+                "schema": {
+                  "enum": [
+                    39
+                  ],
+                  "multipleOf": 2,
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "deprecated": true,
+                    "description": "tag",
+                    "multipleOf": 2,
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  "minItems": 3,
+                  "type": "array"
+                }
+              },
+              "application/vnd.api+json": {
+                "schema": {
+                  "description": "ключ",
+                  "format": "int32",
+                  "nullable": true,
+                  "readOnly": true,
+                  "type": "integer"
+                }
+              }
+            },
+            "description": "쒥쀦鍂쎭舥ꎶ≲꣡"
+          }
+        }
+      },
+      "post": {
+        "deprecated": true,
+        "description": "'single'",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "petId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset=utf-8": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object"
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "items": {
+                  "minimum": 0,
+                  "nullable": true,
+                  "type": "integer"
+                },
+                "type": "array"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "!tag"
+          },
+          "2XX": {
+            "description": "price"
+          }
+        }
+      }
+    },
+    "/ünïcode/ключ": {
+      "delete": {
+        "operationId": "delete_ünïcode_ключ",
+        "parameters": [
+          {
+            "explode": true,
+            "in": "header",
+            "name": "status",
+            "schema": {
+              "format": "email",
+              "pattern": "(",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "pet"
+          }
+        },
+        "tags": [
+          "price",
+          "id"
+        ]
+      },
+      "get": {
+        "deprecated": true,
+        "description": "名前",
+        "operationId": "get_ünïcode_ключ",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "kind",
+            "schema": {
+              "minLength": 1,
+              "nullable": true,
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "甖皓Ὡ멦鼭ᤀ",
+            "schema": {
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "created",
+            "required": false,
+            "schema": {
+              "properties": {
+                "\u003e": {
+                  "format": "float",
+                  "nullable": true,
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "볅ᛗ"
+          },
+          "500": {
+            "description": "owner"
+          },
+          "default": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "format": "custom",
+                  "nullable": true,
+                  "type": "boolean"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "description": "price",
+                  "properties": {
+                    "| table |": {
+                      "items": {
+                        "nullable": true,
+                        "type": "boolean"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "名前"
+          }
+        }
+      },
+      "put": {
+        "operationId": "pet",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "price",
+            "schema": {
+              "items": {
+                "enum": [
+                  true,
+                  false
+                ],
+                "type": "boolean"
+              },
+              "type": "array"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/xml": {
+              "schema": {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "properties": {
+                  "x\ty": {
+                    "description": "name",
+                    "format": "binary",
+                    "nullable": true,
+                    "readOnly": true,
+                    "type": "string"
+                  },
+                  "叚։⋋媣塦": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          10,
+                          9,
+                          11,
+                          17
+                        ],
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "description": "price",
+                        "minimum": -8,
+                        "nullable": true,
+                        "readOnly": true,
+                        "type": "integer",
+                        "writeOnly": true
+                      }
+                    ],
+                    "discriminator": {
+                      "propertyName": "owner"
+                    }
+                  }
+                },
+                "required": [
+                  "x\ty"
+                ],
+                "type": "object",
+                "x-extensible-enum": [
+                  "id"
+                ]
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "id": {
+                        "format": "password",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      "pet": {
+                        "description": "Ünïcode",
+                        "enum": [
+                          "a\r\nb",
+                          "穹犟",
+                          "_under_"
+                        ],
+                        "maxLength": 228,
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "maxItems": 99,
+                  "minItems": 1,
+                  "type": "array"
+                }
+              }
+            },
+            "description": "status"
+          }
+        },
+        "summary": "owner"
+      }
+    }
+  }
+}

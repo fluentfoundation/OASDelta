@@ -1,0 +1,49 @@
+# Fires request-property-max-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            format: date-time
+            pattern: ^[a-z]+$
+            type:
+                - string
+                - "null"
+info:
+    title: '>'
+    version: v1
+openapi: 3.1.0
+paths:
+    /store/order:
+        patch:
+            parameters:
+                - in: header
+                  name: a~b
+                  schema:
+                    description: kind
+                    minimum: 6
+                    type: number
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            items:
+                                items:
+                                    $ref: '#/components/schemas/Owner'
+                                type: array
+                            type: array
+                            uniqueItems: true
+            responses:
+                "201":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                default: Ünïcode
+                                description: created
+                                enum:
+                                    - status
+                                    - 閘䣻뮝⽤ȗ뛜䦔
+                                    - 名前
+                                    - id
+                                type: string
+                    description: kind
+                "400":
+                    description: status

@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/ünïcode/ключ":{"operations":{"modified":{"PATCH":{"responses":{"modified":{"201":{"content":{"modified":{"*/*":{"schema":{"properties":{"modified":{"created":{"items":{"allOf":{"added":[{"index":0},{"index":1}]},"type":{"deleted":["string"]},"default":{"from":"pet","to":null},"nullable":{"from":true,"to":false}}}}}}}}}}}}}}}}}}}

@@ -1,0 +1,35 @@
+# Fires response-property-min-length-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: kind
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /store/order:
+        delete:
+            description: owner
+            operationId: delete_store_order
+            responses:
+                "404":
+                    content:
+                        text/plain:
+                            schema:
+                                properties:
+                                    ‮abc:
+                                        minLength: 1
+                                        nullable: true
+                                        type: string
+                                    created:
+                                        items:
+                                            enum:
+                                                - 1e+300
+                                                - -65.625
+                                            nullable: true
+                                            type: number
+                                            writeOnly: true
+                                        type: array
+                                required:
+                                    - created
+                                type: object
+                    description: 꽧㐠䊜ꇍᣌ
+            tags:
+                - status

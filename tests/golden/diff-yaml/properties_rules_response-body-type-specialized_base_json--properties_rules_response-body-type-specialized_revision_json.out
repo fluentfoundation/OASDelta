@@ -1,0 +1,41 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                default:
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    allOf:
+                                                        deleted:
+                                                            - index: 0
+                                                            - index: 1
+                                                            - index: 2
+                                                    type:
+                                                        added:
+                                                            - object
+endpoints:
+    modified:
+        ?   method: POST
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    default:
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        allOf:
+                                            deleted:
+                                                - index: 0
+                                                - index: 1
+                                                - index: 2
+                                        type:
+                                            added:
+                                                - object
+

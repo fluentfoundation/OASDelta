@@ -1,0 +1,75 @@
+# Fires request-parameter-min-length-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: '...'
+            type: apiKey
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: ключ
+    version: v1
+openapi: 3.1.0
+paths:
+    /v1/items:
+        delete:
+            deprecated: true
+            parameters:
+                - in: cookie
+                  name: name
+                  schema:
+                    readOnly: true
+                    type: string
+                - description: ключ
+                  in: cookie
+                  name: '...'
+                  schema:
+                    type: integer
+            responses:
+                "200":
+                    content:
+                        '*/*':
+                            schema:
+                                type: boolean
+                        multipart/form-data:
+                            schema:
+                                type: string
+                    description: |-
+                        line1
+                        line2
+            x-stability-level: beta
+        patch:
+            operationId: patch_v1_items
+            parameters:
+                - in: query
+                  name: price
+                  schema:
+                    description: ⷱ窜鰮㑮䰷⟊뵕
+                    minLength: 18
+                    type: object
+                - deprecated: true
+                  in: cookie
+                  name: "0x1F"
+                  schema:
+                    items:
+                        format: float
+                        maximum: 211
+                        type:
+                            - number
+                            - "null"
+                    maxItems: 83
+                    minItems: 1
+                    type: array
+                - description: '''single'''
+                  explode: true
+                  in: query
+                  name: status
+                  required: false
+                  schema:
+                    default: true
+                    type: boolean
+            responses:
+                "204":
+                    description: '`tick`'

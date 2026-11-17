@@ -1,0 +1,8 @@
+3 changes: 1 error, 1 warning, 1 info
+error at ./properties/rules/response-property-const-removed_revision.json, in API PATCH /store/order the `名前` response property const value `䞈ᗝ싋⋁쐾诚` was removed for the status `200` [response-property-const-removed]. 
+
+warning at ./properties/rules/response-property-const-removed_revision.json, in API PUT /store/order removed the request property `_under_` [request-property-removed]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /pets/{petId}
+-  response property `items/` reactivated
+
+
+
+
+
+

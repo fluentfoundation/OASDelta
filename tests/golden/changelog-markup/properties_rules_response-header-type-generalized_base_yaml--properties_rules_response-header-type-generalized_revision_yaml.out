@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /v1/items
+- :warning: the `名前` response header's `type` was widened from `integer` to `number` for the status `400`
+
+
+
+
+
+

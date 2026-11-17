@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/store/order":{"operations":{"modified":{"PUT":{"requestBody":{"content":{"modified":{"application/vnd.api+json":{"schema":{"type":{"added":["string"],"deleted":["array"]},"uniqueItems":{"from":true,"to":false},"items":{"schemaDeleted":true}}}}}}}}}}}}}

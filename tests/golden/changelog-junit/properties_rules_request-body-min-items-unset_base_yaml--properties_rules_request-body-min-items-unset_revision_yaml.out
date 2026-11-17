@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="request-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body `type` changed from `array<object>` to `object`</failure>
+    </testcase>
+    <testcase name="request-body-max-items-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body maxItems was unset from `95`</failure>
+    </testcase>
+    <testcase name="request-body-min-items-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body minItems was unset from `2`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

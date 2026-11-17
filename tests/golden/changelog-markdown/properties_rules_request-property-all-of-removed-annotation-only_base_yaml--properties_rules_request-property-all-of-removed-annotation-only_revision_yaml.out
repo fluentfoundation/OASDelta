@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /owners/{ownerId}/pets
+-  removed annotation-only `subschema #1` from the `a: b/oneOf[subschema #3]/` request property `allOf` list
+
+
+
+
+
+

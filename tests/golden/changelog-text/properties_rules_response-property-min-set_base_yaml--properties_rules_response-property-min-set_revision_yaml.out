@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-property-min-set] at ./properties/rules/response-property-min-set_revision.yaml
+	in API POST /v1/items
+		the `owner/price/items/名前` response property's min was set to `20.00` for the response status `500` (shared schema: `Item`, also at `owner/ключ/items/名前`)
+
+

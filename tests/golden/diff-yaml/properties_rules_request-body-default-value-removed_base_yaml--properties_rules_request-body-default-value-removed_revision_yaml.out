@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json; charset=utf-8:
+                                        schema:
+                                            type:
+                                                added:
+                                                    - boolean
+                                                deleted:
+                                                    - number
+                                            format:
+                                                from: double
+                                                to: ""
+                                            default:
+                                                from: 14
+                                                to: null
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /search
+        :   requestBody:
+                content:
+                    modified:
+                        application/json; charset=utf-8:
+                            schema:
+                                type:
+                                    added:
+                                        - boolean
+                                    deleted:
+                                        - number
+                                format:
+                                    from: double
+                                    to: ""
+                                default:
+                                    from: 14
+                                    to: null
+

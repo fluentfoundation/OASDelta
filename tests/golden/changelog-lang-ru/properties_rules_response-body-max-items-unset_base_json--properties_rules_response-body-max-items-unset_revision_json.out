@@ -1,0 +1,10 @@
+2 изменений: 2 error, 0 warning, 0 info
+error	[response-body-max-items-unset] в ./properties/rules/response-body-max-items-unset_revision.json
+	в API PATCH /items/{id}.json
+		значение maxItems у тела ответа удалено, предыдущее значение - `50`
+
+error	[response-body-type-changed] в ./properties/rules/response-body-max-items-unset_revision.json
+	в API PATCH /items/{id}.json
+		`type` тела ответа изменён с `array<integer>` на `object` для статуса `200`
+
+

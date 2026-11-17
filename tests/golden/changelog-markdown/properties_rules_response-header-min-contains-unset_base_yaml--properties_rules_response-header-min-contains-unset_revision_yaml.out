@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /search
+- :warning: the `name` response header's minContains was unset from `3` for the status `400`
+
+
+
+
+
+

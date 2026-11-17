@@ -1,0 +1,2 @@
+::error title=request-parameter-min-properties-set,file=./properties/rules/request-parameter-min-properties-set_revision.yaml,line=95,col=21::in API POST /store/order for the `header` request parameter `status`, the minProperties was set to `14`
+

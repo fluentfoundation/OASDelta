@@ -1,0 +1,133 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    DELETE:
+                        parameters:
+                            modified:
+                                query:
+                                    price:
+                                        schema:
+                                            schemaDeleted: true
+                                        content:
+                                            added:
+                                                - application/json
+                                    tag:
+                                        schema:
+                                            items:
+                                                anyOf:
+                                                    modified:
+                                                        - base:
+                                                            index: 1
+                                                          revision:
+                                                            index: 1
+                                                          diff:
+                                                            properties:
+                                                                modified:
+                                                                    "0x1F":
+                                                                        minItems:
+                                                                            from: 0
+                                                                            to: 10
+                                                format:
+                                                    from: ""
+                                                    to: email
+                        responses:
+                            modified:
+                                default:
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    anyOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 1
+                                                              revision:
+                                                                index: 1
+                                                              diff:
+                                                                properties:
+                                                                    modified:
+                                                                        "0x1F":
+                                                                            minItems:
+                                                                                from: 0
+                                                                                to: 10
+                                                    format:
+                                                        from: ""
+                                                        to: email
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /pets
+        :   parameters:
+                modified:
+                    query:
+                        price:
+                            schema:
+                                schemaDeleted: true
+                            content:
+                                added:
+                                    - application/json
+                        tag:
+                            schema:
+                                items:
+                                    anyOf:
+                                        modified:
+                                            - base:
+                                                index: 1
+                                              revision:
+                                                index: 1
+                                              diff:
+                                                properties:
+                                                    modified:
+                                                        "0x1F":
+                                                            minItems:
+                                                                from: 0
+                                                                to: 10
+                                    format:
+                                        from: ""
+                                        to: email
+            responses:
+                modified:
+                    default:
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        anyOf:
+                                            modified:
+                                                - base:
+                                                    index: 1
+                                                  revision:
+                                                    index: 1
+                                                  diff:
+                                                    properties:
+                                                        modified:
+                                                            "0x1F":
+                                                                minItems:
+                                                                    from: 0
+                                                                    to: 10
+                                        format:
+                                            from: ""
+                                            to: email
+components:
+    schemas:
+        modified:
+            Error:
+                anyOf:
+                    modified:
+                        - base:
+                            index: 1
+                          revision:
+                            index: 1
+                          diff:
+                            properties:
+                                modified:
+                                    "0x1F":
+                                        minItems:
+                                            from: 0
+                                            to: 10
+                format:
+                    from: ""
+                    to: email
+

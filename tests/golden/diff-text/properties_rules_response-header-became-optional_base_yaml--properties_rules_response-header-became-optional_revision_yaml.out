@@ -1,0 +1,16 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+DELETE /owners/{ownerId}/pets
+- Responses changed
+  - Modified response: 2XX
+    - Headers changed
+      - Modified header: 名前
+        - Required changed from true to false
+
+

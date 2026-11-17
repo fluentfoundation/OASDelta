@@ -1,0 +1,51 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            kind:
+                                                                oneOf:
+                                                                    modified:
+                                                                        - base:
+                                                                            index: 2
+                                                                          revision:
+                                                                            index: 2
+                                                                          diff:
+                                                                            exclusiveMax:
+                                                                                from: 1272
+                                                                                to: null
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /search
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                kind:
+                                                    oneOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 2
+                                                              revision:
+                                                                index: 2
+                                                              diff:
+                                                                exclusiveMax:
+                                                                    from: 1272
+                                                                    to: null
+

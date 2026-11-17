@@ -1,0 +1,67 @@
+- id: response-property-min-length-unset
+  text: 'the `oneOf[subschema #1]/` response property''s minLength was unset from `1` for the response status `404`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: POST
+  path: /items/{id}.json
+  section: paths
+  fingerprint: a95b61506114
+- id: response-property-type-changed
+  text: 'the `oneOf[subschema #1]/` response''s property `type` changed from `string, null` to `any` for status `404`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: POST
+  path: /items/{id}.json
+  section: paths
+  fingerprint: cf1f74ee0453
+- id: response-property-all-of-added
+  text: 'added `subschema #1, subschema #2` to the `oneOf[subschema #1]/` response property `allOf` list for the response status `404`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: POST
+  path: /items/{id}.json
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-property-min-length-unset_revision.yaml
+    line: 53
+    column: 43
+    endLine: 60
+    endColumn: 53
+  fingerprint: 311ac81f08d8
+- id: response-property-enum-value-removed
+  text: 'removed the ` leading` enum value from the `oneOf[subschema #1]/` response property for the response status `404`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: POST
+  path: /items/{id}.json
+  section: paths
+  fingerprint: 673a9e441f82
+- id: response-property-enum-value-removed
+  text: 'removed the `| table |` enum value from the `oneOf[subschema #1]/` response property for the response status `404`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: POST
+  path: /items/{id}.json
+  section: paths
+  fingerprint: decee87bb48f
+- id: response-property-enum-value-removed
+  text: 'removed the `徴` enum value from the `oneOf[subschema #1]/` response property for the response status `404`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: POST
+  path: /items/{id}.json
+  section: paths
+  fingerprint: 9a628d4c213c
+

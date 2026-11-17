@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/search":{"operations":{"modified":{"PUT":{"extensions":{"added":["x-sunset"]},"requestBody":{"content":{"added":["application/vnd.api+json"],"modified":{"*/*":{"schema":{"maxProps":{"from":12,"to":11}}}}}}}}}}}}}

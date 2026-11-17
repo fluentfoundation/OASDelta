@@ -1,0 +1,7 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-parameter-max-set] en ./properties/rules/request-parameter-max-set_revision.yaml
+	en API DELETE /v1/items
+		para el parámetro `header` de solicitud `"quoted"`, máximo fue establecido en `21.00`
+		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+
+

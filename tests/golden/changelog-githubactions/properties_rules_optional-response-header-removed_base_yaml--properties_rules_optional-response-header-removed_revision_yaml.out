@@ -1,0 +1,2 @@
+::notice title=optional-response-header-removed,file=./properties/rules/optional-response-header-removed_revision.yaml::in API DELETE /items/{id}.json the optional response header `x	y` removed for the status `200`
+

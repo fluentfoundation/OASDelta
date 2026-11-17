@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[optional-response-header-removed] em ./properties/rules/optional-response-header-removed_revision.yaml
+	em API DELETE /items/{id}.json
+		o cabeçalho de resposta opcional `x	y` foi removido para o status `200`
+
+

@@ -1,0 +1,20 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /ünïcode/ключ
+- :warning: the response's body exclusiveMinimum was unset from `-2.00`
+-  the response's body became not nullable
+-  the response body `application/xml` default value `80.00` was removed for the status `404`
+-  the response's body `type` was narrowed from `number, null` to `integer` for status `404`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

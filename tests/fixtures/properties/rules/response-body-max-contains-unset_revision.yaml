@@ -1,0 +1,248 @@
+# Fires response-body-max-contains-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: '#hash'
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /pets/{petId}:
+        patch:
+            operationId: patch_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            allOf:
+                                - maximum: 269
+                                  type: integer
+                                - type: string
+            responses:
+                "204":
+                    content:
+                        '*/*':
+                            schema:
+                                default: false
+                                type: boolean
+                        application/json:
+                            schema:
+                                maximum: 844
+                                type: integer
+                    description: price
+                "500":
+                    description: Ünïcode
+                default:
+                    content:
+                        multipart/form-data:
+                            schema:
+                                format: date-time
+                                minLength: 3
+                                nullable: true
+                                type: string
+                        text/plain:
+                            schema:
+                                description: Ünïcode
+                                minimum: -1
+                                nullable: true
+                                type: number
+                    description: ключ
+            security: []
+        put:
+            description: "0x1F"
+            operationId: put_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                2XX:
+                    description: tag
+                    headers:
+                        '!tag':
+                            required: false
+                            schema:
+                                maximum: 736
+                                nullable: true
+                                type: integer
+                        ? |-
+                            line1
+                            line2
+                        :   schema:
+                                type: string
+                "400":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                additionalProperties: true
+                                description: ㈓瓹䡵᣶悘጑
+                                properties:
+                                    tag:
+                                        nullable: true
+                                        type: boolean
+                                required:
+                                    - tag
+                                type: object
+                        application/vnd.api+json:
+                            schema:
+                                description: ' '
+                                maxLength: 219
+                                minLength: 0
+                                type: string
+                    description: tag
+                "500":
+                    content:
+                        application/xml:
+                            schema:
+                                enum:
+                                    - true
+                                    - false
+                                format: custom
+                                nullable: true
+                                type: boolean
+                    description: '`tick`'
+    /ünïcode/ключ:
+        patch:
+            parameters:
+                - in: query
+                  name: '%20'
+                  required: false
+                  schema:
+                    description: Ünïcode
+                    format: custom
+                    nullable: true
+                    type: boolean
+                - in: cookie
+                  name: ⵐ⟶ᰈ詌ែ
+                  required: false
+                  schema:
+                    properties:
+                        ୐ế鰾导쪁:
+                            enum:
+                                - true
+                                - false
+                            format: custom
+                            nullable: true
+                            type: boolean
+                        status:
+                            deprecated: true
+                            nullable: true
+                            type: boolean
+                        Ünïcode:
+                            enum:
+                                - 8
+                            minimum: -4
+                            type: integer
+                    type: object
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            example: <b>&amp;
+                            nullable: true
+                            type: integer
+                required: true
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                additionalProperties:
+                                    type: string
+                                properties:
+                                    id:
+                                        type: object
+                                    price:
+                                        properties:
+                                            owner:
+                                                nullable: true
+                                                type: integer
+                                            pet:
+                                                default: pet
+                                                type: string
+                                            名前:
+                                                enum:
+                                                    - 14
+                                                    - 7
+                                                minimum: -9
+                                                nullable: true
+                                                type: integer
+                                                writeOnly: true
+                                        required:
+                                            - 名前
+                                        type: object
+                                    Ünïcode:
+                                        properties:
+                                            'a: b':
+                                                enum:
+                                                    - 88.875
+                                                    - 54
+                                                format: float
+                                                minimum: 1
+                                                type: number
+                                            Ünïcode:
+                                                nullable: true
+                                                type: boolean
+                                            名前:
+                                                deprecated: true
+                                                type: string
+                                                writeOnly: true
+                                            霊ꖴ婘᧵鉓ბ式軍:
+                                                type: string
+                                        required:
+                                            - 名前
+                                            - 霊ꖴ婘᧵鉓ბ式軍
+                                            - 'a: b'
+                                            - Ünïcode
+                                        type: object
+                                    릮⪭⿍㹷᫓塞:
+                                        enum:
+                                            - 89
+                                            - -80.375
+                                            - 46
+                                        nullable: true
+                                        type: number
+                                required:
+                                    - id
+                                    - 릮⪭⿍㹷᫓塞
+                                type: object
+                        application/vnd.api+json:
+                            schema:
+                                type: boolean
+                    description: "no"
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                properties:
+                                    owner:
+                                        minimum: 7
+                                        type: number
+                                required:
+                                    - owner
+                                type: object
+                    description: created
+                default:
+                    description: ꠰ˑ檱矐꨼ೆ윔
+                    headers:
+                        owner:
+                            schema:
+                                example: Ünïcode
+                                type: string
+            security:
+                - openid: []
+            summary: f즦漤
+            tags:
+                - pet
+security:
+    - openid: []

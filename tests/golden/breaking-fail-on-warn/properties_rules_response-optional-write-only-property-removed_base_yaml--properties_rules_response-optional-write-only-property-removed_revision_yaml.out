@@ -1,0 +1,14 @@
+3 changes: 3 error, 0 warning, 0 info
+error	[response-body-type-changed] at ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+	in API PUT /pets/{petId}
+		the response's body `type` changed from `object` to `number` for status `400`
+
+error	[response-required-property-removed] at ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+	in API PUT /pets/{petId}
+		removed the required property `owner` from the response with the `400` status
+
+error	[response-required-property-removed] at ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+	in API PUT /pets/{petId}
+		removed the required property `薫鑈஼ห꼁洲㗔` from the response with the `400` status
+
+

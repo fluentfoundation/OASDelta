@@ -1,0 +1,14 @@
+3 alterações: 1 error, 0 warning, 2 info
+error	[request-body-became-required] em ./properties/rules/response-property-became-enum_revision.yaml
+	em API PUT /search
+		o corpo da requisição tornou-se obrigatório
+
+info	[response-property-became-enum] em ./properties/rules/response-property-became-enum_revision.yaml
+	em API PUT /search
+		a propriedade de resposta `items/tag/0x1F` para o status `2XX` foi restrita a uma lista de valores enum
+
+info	[response-property-became-enum] em ./properties/rules/response-property-became-enum_revision.yaml
+	em API PUT /search
+		a propriedade de resposta `items/tag/price` para o status `2XX` foi restrita a uma lista de valores enum
+
+

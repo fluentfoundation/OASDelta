@@ -1,0 +1,4 @@
+::error title=request-parameter-property-type-specialized,file=./properties/rules/response-property-min-items-set_revision.yaml::in API DELETE /pets for the `query` request parameter `tag`, the `format` of property `items/` was narrowed from `none` to `email`
+::notice title=response-body-type-specialized,file=./properties/rules/response-property-min-items-set_revision.yaml::in API DELETE /pets the response's body `format` was narrowed from `none` to `email` for status `default`
+::notice title=response-property-min-items-set,file=./properties/rules/response-property-min-items-set_revision.yaml,line=12,col=25::in API DELETE /pets the `anyOf[subschema #2]/0x1F` response property's minItems was set to `10` for the response status `default`
+

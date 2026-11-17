@@ -1,0 +1,219 @@
+# Fires response-header-min-items-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: tag
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /store/order:
+        patch:
+            operationId: patch_store_order
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            additionalProperties:
+                                type: string
+                            properties:
+                                status:
+                                    enum:
+                                        - true
+                                        - false
+                                    type:
+                                        - boolean
+                                        - "null"
+                            required:
+                                - status
+                            type: object
+                    multipart/form-data:
+                        schema:
+                            properties:
+                                '*star':
+                                    properties:
+                                        owner:
+                                            type: string
+                                    type: object
+                                '@at':
+                                    description: "yes"
+                                    type: object
+                                tag:
+                                    format: int32
+                                    type:
+                                        - integer
+                                        - "null"
+                            required:
+                                - tag
+                                - '@at'
+                            type: object
+            responses:
+                2XX:
+                    content:
+                        '*/*':
+                            schema:
+                                oneOf:
+                                    - format: double
+                                      type: number
+                                    - format: int64
+                                      type: integer
+                                    - properties:
+                                        status:
+                                            type:
+                                                - boolean
+                                                - "null"
+                                        tag:
+                                            type:
+                                                - boolean
+                                                - "null"
+                                        Ünïcode:
+                                            description: status
+                                            type:
+                                                - string
+                                                - "null"
+                                      required:
+                                        - status
+                                      type: object
+                                      x-extensible-enum:
+                                        - tag
+                                        - ᝫ
+                    description: '*star'
+                "404":
+                    content:
+                        '*/*':
+                            schema:
+                                example: kind
+                                type:
+                                    - boolean
+                                    - "null"
+                        multipart/form-data:
+                            schema:
+                                default: 49
+                                deprecated: true
+                                type: integer
+                                writeOnly: true
+                    description: 'a: b'
+                    headers:
+                        kind:
+                            schema:
+                                format: float
+                                minItems: 6
+                                type:
+                                    - number
+                                    - "null"
+                        status:
+                            schema:
+                                type: boolean
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    type: object
+                                type: array
+                        text/plain:
+                            schema:
+                                type: object
+                    description: |-
+                        line1
+                        line2
+        put:
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            properties:
+                                Ünïcode:
+                                    enum:
+                                        - -82.125
+                                    maximum: 634
+                                    type: number
+                            type: object
+                    application/json:
+                        schema:
+                            items:
+                                items:
+                                    description: '**bold**'
+                                    maximum: 355
+                                    minimum: -4
+                                    type:
+                                        - number
+                                        - "null"
+                                minItems: 3
+                                type: array
+                            maxItems: 74
+                            minItems: 1
+                            type: array
+            responses:
+                "204":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                description: ключ
+                                type:
+                                    - number
+                                    - "null"
+                    description: '[bracket]'
+    /v1/items:
+        patch:
+            operationId: patch_v1_items
+            parameters:
+                - in: cookie
+                  name: kind
+                  schema:
+                    allOf:
+                        - type: boolean
+                        - format: double
+                          maximum: 585
+                          type: number
+                - in: query
+                  name: created
+                  schema:
+                    items:
+                        type:
+                            - boolean
+                            - "null"
+                    type: array
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                type: number
+                                writeOnly: true
+                        text/plain:
+                            schema:
+                                deprecated: true
+                                properties:
+                                     nbsp:
+                                        items:
+                                            description: '%20'
+                                            format: byte
+                                            type: string
+                                        maxItems: 91
+                                        type: array
+                                        uniqueItems: true
+                                    id:
+                                        description: status
+                                        format: int32
+                                        minimum: 1
+                                        type: integer
+                                    status:
+                                        type: object
+                                    Ünïcode:
+                                        properties:
+                                            tag:
+                                                type: boolean
+                                                writeOnly: true
+                                        type: object
+                                required:
+                                    -  nbsp
+                                    - id
+                                type: object
+                    description: _under_
+                    headers:
+                        Ünïcode:
+                            schema:
+                                enum:
+                                    - 蹱뀸觵縥괊뜏
+                                format: uuid
+                                maxLength: 97
+                                type: string
+            x-stability-level: stable

@@ -1,0 +1,21 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /items/{id}.json
+- Responses changed
+  - Modified response: default
+    - Content changed
+      - Modified media type: application/json; charset=utf-8
+        - Schema changed
+          - Type changed from 'array' to 'boolean'
+          - UniqueItems changed from true to false
+          - MaxItems changed from 83 to null
+          - Items changed
+            - Schema deleted
+
+

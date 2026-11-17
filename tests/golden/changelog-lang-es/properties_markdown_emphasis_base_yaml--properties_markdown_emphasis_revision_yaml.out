@@ -1,0 +1,247 @@
+49 cambios: 49 error, 0 warning, 0 info
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `(~a~)` a la propiedad de respuesta `p16` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `***~a~***` a la propiedad de respuesta `p22` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `*-a-*` a la propiedad de respuesta `p34` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `*~a~*` a la propiedad de respuesta `p23` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `+*a*+` a la propiedad de respuesta `p35` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `-~abb1*~~ ~ a--*\.` a la propiedad de respuesta `p37` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `[ ] a` a la propiedad de respuesta `p42` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `[X]c` a la propiedad de respuesta `p45` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `[x] b` a la propiedad de respuesta `p43` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `\~~a~~` a la propiedad de respuesta `p40` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum ``~a~`` a la propiedad de respuesta `p25` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `a ~b~ c` a la propiedad de respuesta `p18` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `a\~~b~~` a la propiedad de respuesta `p39` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `a~` a la propiedad de respuesta `p7` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `a~b` a la propiedad de respuesta `combo` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `a~b` a la propiedad de respuesta `p1` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `a~b c~d` a la propiedad de respuesta `p5` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `a~b-1` a la propiedad de respuesta `combo` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `a~~b~~c` a la propiedad de respuesta `p14` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `a~~~b~~~c` a la propiedad de respuesta `p28` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `b~-a~` a la propiedad de respuesta `p33` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `d~` a la propiedad de respuesta `combo` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `x**-y**` a la propiedad de respuesta `p30` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `x*+y*` a la propiedad de respuesta `p31` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `x*-y*` a la propiedad de respuesta `p29` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `x_-y_` a la propiedad de respuesta `p36` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `x~-y~` a la propiedad de respuesta `p32` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `x~~y~z` a la propiedad de respuesta `p11` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `z [ ]` a la propiedad de respuesta `p44` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~` a la propiedad de respuesta `p13` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~ a ~` a la propiedad de respuesta `p8` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~(a)~` a la propiedad de respuesta `p17` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~*a*~` a la propiedad de respuesta `p24` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~1~2` a la propiedad de respuesta `p21` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~a` a la propiedad de respuesta `p6` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~a\~` a la propiedad de respuesta `p26` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~a\~~` a la propiedad de respuesta `p41` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~a~` a la propiedad de respuesta `p2` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~a~b~` a la propiedad de respuesta `p15` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~a~~` a la propiedad de respuesta `p10` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~c` a la propiedad de respuesta `combo` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~~` a la propiedad de respuesta `p12` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~~. ~a)bé\~~~` a la propiedad de respuesta `p38` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~~a~` a la propiedad de respuesta `p9` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~~a~~` a la propiedad de respuesta `p3` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~~a~~~` a la propiedad de respuesta `p19` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~~~a~~~` a la propiedad de respuesta `p4` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `~~~~` a la propiedad de respuesta `p27` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+error	[response-property-enum-value-added] en ./properties/markdown_emphasis_revision.yaml
+	en API GET /items
+		agregado el nuevo valor enum `é~ü~` a la propiedad de respuesta `p20` para el estado `200`
+		El servidor ahora puede devolver un valor que el contrato anterior excluía, por lo que un cliente escrito contra él puede no manejar la respuesta. Si el conjunto de valores está destinado a crecer, decláralo con x-extensible-enum.
+
+

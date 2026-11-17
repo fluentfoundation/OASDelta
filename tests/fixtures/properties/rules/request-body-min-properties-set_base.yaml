@@ -1,0 +1,80 @@
+# Fires request-body-min-properties-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: 戌㻲쇙㔞铎赸ꞃ
+    version: v1
+openapi: 3.0.3
+paths:
+    /search:
+        patch:
+            operationId: patch_search
+            parameters:
+                - in: query
+                  name: kind
+                  required: true
+                  schema:
+                    oneOf:
+                        - enum:
+                            - 45
+                            - 14
+                          type: number
+                        - deprecated: true
+                          minimum: 7
+                          type: integer
+                        - default: -46.875
+                          type: number
+                - in: header
+                  name: ‮abc
+                  required: false
+                  schema:
+                    items:
+                        description: _under_
+                        maxLength: 203
+                        type: string
+                    type: array
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            deprecated: true
+                            description: 'a: b'
+                            format: date
+                            maxLength: 194
+                            nullable: true
+                            type: string
+                    text/plain:
+                        schema:
+                            description: 侄䔦ᡄ嶢碅䛁
+                            minProperties: 0
+                            type: object
+            responses:
+                "204":
+                    description: tag
+            x-stability-level: stable
+    /v1/items:
+        delete:
+            parameters:
+                - in: query
+                  name: pet
+                  schema:
+                    items:
+                        format: password
+                        maxLength: 54
+                        type: string
+                    type: array
+                  style: pipeDelimited
+            responses:
+                "204":
+                    description: ' leading'
+                "400":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                anyOf:
+                                    - additionalProperties: true
+                                      type: object
+                                    - type: object
+                                discriminator:
+                                    propertyName: |-
+                                        line1
+                                        line2
+                    description: name

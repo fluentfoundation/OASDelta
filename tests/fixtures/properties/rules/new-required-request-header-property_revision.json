@@ -1,0 +1,167 @@
+{
+  "info": {
+    "title": "|",
+    "version": "v1"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/items/{id}.json": {
+      "delete": {
+        "operationId": "delete_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "tag",
+            "schema": {
+              "oneOf": [
+                {
+                  "enum": [
+                    16
+                  ],
+                  "format": "int32",
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                {
+                  "enum": [
+                    9.625,
+                    2
+                  ],
+                  "format": "double",
+                  "properties": {
+                    "kind": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "kind"
+                  ],
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "description": "price",
+                  "format": "double",
+                  "minimum": 3,
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "enum": [
+                    7,
+                    3
+                  ],
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "'single'"
+          }
+        },
+        "summary": "kind"
+      },
+      "patch": {
+        "operationId": "patch_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset=utf-8": {
+              "schema": {
+                "format": "date-time",
+                "pattern": "\\d{3}",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "2XX": {
+            "description": "➦뼬Ꮢꐀᠺ첗⸰㏊"
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/vnd.api+json": {
+              "schema": {
+                "format": "double",
+                "readOnly": true,
+                "type": "number"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "pet"
+          }
+        },
+        "tags": [
+          "名前"
+        ]
+      }
+    }
+  }
+}

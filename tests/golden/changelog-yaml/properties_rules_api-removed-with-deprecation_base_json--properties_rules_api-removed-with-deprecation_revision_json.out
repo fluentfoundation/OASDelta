@@ -1,0 +1,11 @@
+- id: api-removed-with-deprecation
+  text: api removed with deprecation
+  level: 1
+  operation: DELETE
+  operationId: delete_pets
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/api-removed-with-deprecation_base.json
+  fingerprint: f5e5772675f6
+

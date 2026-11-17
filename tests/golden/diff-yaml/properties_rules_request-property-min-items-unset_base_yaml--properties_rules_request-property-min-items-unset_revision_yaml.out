@@ -1,0 +1,29 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json; charset=utf-8:
+                                        schema:
+                                            additionalProperties:
+                                                minItems:
+                                                    from: 14
+                                                    to: 0
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /items/{id}.json
+        :   requestBody:
+                content:
+                    modified:
+                        application/json; charset=utf-8:
+                            schema:
+                                additionalProperties:
+                                    minItems:
+                                        from: 14
+                                        to: 0
+

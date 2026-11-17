@@ -1,0 +1,138 @@
+# Fires response-write-only-property-became-required (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            properties:
+                created:
+                    default: 44
+                    deprecated: true
+                    type:
+                        - integer
+                        - "null"
+                price:
+                    properties:
+                        '%20':
+                            $ref: '#/components/schemas/Owner'
+                        '&anchor':
+                            $ref: '#/components/schemas/Owner'
+                        id:
+                            deprecated: true
+                            minLength: 5
+                            type: string
+                    required:
+                        - '&anchor'
+                        - '%20'
+                        - id
+                    type: object
+            required:
+                - created
+            type: object
+        Owner:
+            type:
+                - string
+                - "null"
+            writeOnly: true
+info:
+    title: '#hash'
+    version: v1
+openapi: 3.1.0
+paths:
+    /owners/{ownerId}/pets:
+        put:
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - explode: true
+                  in: query
+                  name: kind
+                  required: true
+                  schema:
+                    type:
+                        - boolean
+                        - "null"
+                    writeOnly: true
+            responses:
+                "201":
+                    content:
+                        '*/*':
+                            schema:
+                                items:
+                                    items:
+                                        deprecated: true
+                                        description: status
+                                        type: integer
+                                    maxItems: 20
+                                    type: array
+                                type: array
+                    description: "no"
+            tags:
+                - created
+                - 名前
+    /pets/{petId}:
+        post:
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: a~b
+                  schema:
+                    properties:
+                        ' leading':
+                            $ref: '#/components/schemas/Owner'
+                        price:
+                            description: 'trailing '
+                            maximum: 945
+                            type:
+                                - number
+                                - "null"
+                        tag:
+                            format: uuid
+                            readOnly: true
+                            type:
+                                - string
+                                - "null"
+                    required:
+                        - ' leading'
+                    type: object
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            items:
+                                properties:
+                                    kind:
+                                        type: boolean
+                                    Ünïcode:
+                                        $ref: '#/components/schemas/Error'
+                                required:
+                                    - Ünïcode
+                                    - kind
+                                type: object
+                            type: array
+                required: true
+            responses:
+                "204":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                $ref: '#/components/schemas/Error'
+                        application/xml:
+                            schema:
+                                properties:
+                                    "no":
+                                        items:
+                                            $ref: '#/components/schemas/Error'
+                                        type: array
+                                type: object
+                    description: pet
+                "404":
+                    description: '!tag'
+            summary: tag
+servers:
+    - url: https://api.example.com/v2

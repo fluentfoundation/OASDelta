@@ -1,0 +1,21 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /pets/{petId}
+- :warning: removed the media type `application/json; charset=utf-8` for the response with the status `200`
+
+
+### PATCH /pets/{petId}
+-  request body became optional
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

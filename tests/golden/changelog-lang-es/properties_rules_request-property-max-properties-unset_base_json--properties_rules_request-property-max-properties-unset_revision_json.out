@@ -1,0 +1,18 @@
+4 cambios: 1 error, 2 warning, 1 info
+error	[request-property-type-changed] en ./properties/rules/request-property-max-properties-unset_revision.json
+	en API POST /ünïcode/ключ
+		el `items/` de la propiedad de solicitud `type` fue cambiado de `object` a `string`
+
+warning	[request-property-removed] en ./properties/rules/request-property-max-properties-unset_revision.json
+	en API POST /ünïcode/ключ
+		removida la propiedad de solicitud `items/Ünïcode`
+
+warning	[request-property-removed] en ./properties/rules/request-property-max-properties-unset_revision.json
+	en API POST /ünïcode/ключ
+		removida la propiedad de solicitud `items/傓`
+
+info	[request-property-max-properties-unset] en ./properties/rules/request-property-max-properties-unset_revision.json
+	en API POST /ünïcode/ключ
+		el valor maxProperties de la propiedad de solicitud `items/` fue removido de `20`
+
+

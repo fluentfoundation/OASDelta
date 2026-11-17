@@ -1,0 +1,14 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /pets
+-  api tag `created` removed
+-  for the `query` request parameter `ключ`, the minContains was unset from `1`
+
+
+
+
+
+

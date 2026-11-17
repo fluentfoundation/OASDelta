@@ -1,0 +1,154 @@
+# Fires request-property-type-compatible (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            nullable: true
+            type: boolean
+        Pet:
+            enum:
+                - true
+                - false
+            nullable: true
+            type: boolean
+            writeOnly: true
+info:
+    title: id
+    version: v1
+openapi: 3.0.3
+paths:
+    /owners/{ownerId}/pets:
+        get:
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - deprecated: true
+                  description: _under_
+                  in: query
+                  name: ' '
+                  schema:
+                    nullable: true
+                    type: boolean
+                - in: cookie
+                  name: ключ
+                  schema:
+                    default: false
+                    description: pet
+                    type: boolean
+                - in: query
+                  name: empty
+                  schema:
+                    properties:
+                        '*star':
+                            $ref: '#/components/schemas/Owner'
+                        pet:
+                            deprecated: true
+                            description: status
+                            nullable: true
+                            type: string
+                        ключ:
+                            description: '"quoted"'
+                            type: integer
+                    required:
+                        - '*star'
+                        - ключ
+                    type: object
+            responses:
+                default:
+                    description: ԕ໘턃齵낅
+                    headers:
+                        owner:
+                            schema:
+                                type: boolean
+                                writeOnly: true
+        patch:
+            deprecated: true
+            operationId: patch_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - in: header
+                  name: tag
+                  schema:
+                    format: float
+                    maximum: 856
+                    minimum: -10
+                    nullable: true
+                    type: number
+                - in: query
+                  name: "a\r\nb"
+                  schema:
+                    default: -9223372036854775808
+                    deprecated: true
+                    nullable: true
+                    readOnly: true
+                    type: number
+                - description: <b>&amp;
+                  in: cookie
+                  name: name
+                  schema:
+                    $ref: '#/components/schemas/Owner'
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            properties:
+                                kind:
+                                    default: ключ
+                                    format: password
+                                    readOnly: true
+                                    type: string
+                                轅謽䩷颐ᜩ䂆:
+                                    type: boolean
+                            required:
+                                - kind
+                                - 轅謽䩷颐ᜩ䂆
+                            type: object
+            responses:
+                default:
+                    description: created
+            summary: 名前
+    /pets/{petId}:
+        post:
+            operationId: post_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    text/plain:
+                        schema:
+                            properties:
+                                id:
+                                    type: string
+                            type: object
+                required: true
+            responses:
+                2XX:
+                    content:
+                        '*/*':
+                            schema:
+                                properties:
+                                    price:
+                                        items:
+                                            nullable: true
+                                            type: string
+                                        type: array
+                                type: object
+                        application/json:
+                            schema:
+                                description: ключ
+                                example: kind
+                                nullable: true
+                                type: number
+                    description: 서뉋
+                "400":
+                    description: '[bracket]'

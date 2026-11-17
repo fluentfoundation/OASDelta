@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /pets
+- :warning: for the `cookie` request parameter `price`, the multipleOf was set to `2.00`
+
+
+
+
+
+

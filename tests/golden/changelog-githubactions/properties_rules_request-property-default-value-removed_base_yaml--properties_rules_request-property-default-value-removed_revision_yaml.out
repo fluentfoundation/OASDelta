@@ -1,0 +1,5 @@
+::notice title=request-property-default-value-removed,file=./properties/rules/request-property-default-value-removed_revision.yaml::in API POST /pets the `` request property default value `9007199254740992.00` was removed
+::notice title=request-property-min-unset,file=./properties/rules/request-property-default-value-removed_revision.yaml::in API POST /pets the `status/oneOf[subschema #3]/` request property's min was unset from `7.00`
+::notice title=request-property-reactivated,file=./properties/rules/request-property-default-value-removed_revision.yaml::in API POST /pets request property `status/oneOf[subschema #3]/` reactivated
+::notice title=request-property-type-generalized,file=./properties/rules/request-property-default-value-removed_revision.yaml::in API POST /pets the `status/oneOf[subschema #3]/` request property `type/format` was widened from `integer, null/int64` to `any`
+

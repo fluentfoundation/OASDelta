@@ -1,0 +1,10 @@
+components:
+    securitySchemes:
+        modified:
+            oauth:
+                OAuthFlows:
+                    authorizationCode:
+                        authorizationURL:
+                            from: https://auth.example.com/authorize
+                            to: https://auth1.example.com/authorizationUrl
+

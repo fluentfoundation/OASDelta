@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./properties/rules/response-property-min-properties-set_revision.yaml, in API PATCH /owners/{ownerId}/pets the `anyOf[subschema #2]/a~b` response property's minProperties was set to `14` for the response status `201` [response-property-min-properties-set]. 
+
+

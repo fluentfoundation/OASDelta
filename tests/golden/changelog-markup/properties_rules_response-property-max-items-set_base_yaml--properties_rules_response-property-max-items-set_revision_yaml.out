@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PUT /search
+-  the `oneOf[subschema #1]/a: b` response property's maxItems was set to `19` for the response status `500`
+
+
+
+
+
+

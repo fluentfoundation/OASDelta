@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="response-property-max-length-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `>/>` response property's maxLength was unset from `104` for the response status `204`</failure>
+    </testcase>
+    <testcase name="response-property-min-length-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `>/>` response property's minLength was unset from `2` for the response status `204`</failure>
+    </testcase>
+    <testcase name="response-property-all-of-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added `subschema #1, subschema #2` to the `>/>` response property `allOf` list for the response status `204`</failure>
+    </testcase>
+    <testcase name="response-property-type-specialized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `>/>` response's property `type` was narrowed from `string` to `any` for status `204`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

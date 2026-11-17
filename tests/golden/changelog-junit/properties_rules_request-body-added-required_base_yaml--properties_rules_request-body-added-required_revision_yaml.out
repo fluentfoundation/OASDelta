@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-body-added-required" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added required request body</failure>
+    </testcase>
+    <testcase name="response-header-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response header `*star` was added for the status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

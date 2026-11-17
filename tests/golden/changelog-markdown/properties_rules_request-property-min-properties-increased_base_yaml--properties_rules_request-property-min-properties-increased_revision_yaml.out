@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /store/order
+- :warning: the `name` request property's minProperties was increased to `3`
+-  the optional response header `ૉ硡쇲䦨員䒗` removed for the status `2XX`
+
+
+
+
+
+

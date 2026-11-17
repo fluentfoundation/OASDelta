@@ -1,0 +1,48 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PUT /pets/{petId}</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 400
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: text/plain
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'object' to 'number'</li>
+<li>AdditionalProperties changed from true to null</li>
+<li>Required changed
+<ul>
+<li>Deleted required property: owner</li>
+<li>Deleted required property: price</li>
+<li>Deleted required property: 薫鑈஼ห꼁洲㗔</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>Deleted property: <!-- raw HTML omitted -->&amp;</li>
+<li>Deleted property: owner</li>
+<li>Deleted property: price</li>
+<li>Deleted property: 薫鑈஼ห꼁洲㗔</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Deprecated changed from false to true</li>
+</ul>
+

@@ -1,0 +1,75 @@
+# Fires request-body-exclusive-max-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: tag
+            type: apiKey
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: ꅩぃ⻫ꥊ㥫䂣乩
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /owners/{ownerId}/pets:
+        put:
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: status
+                  schema:
+                    type: string
+                - description: 瑘䙕觛騁䊻Ⳋ
+                  in: query
+                  name: created
+                  schema:
+                    enum:
+                        - 42
+                        - 94
+                        - 84
+                    exclusiveMaximum: 1802
+                    exclusiveMinimum: -6
+                    maximum: 538
+                    type: number
+                  style: form
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            default: 82
+                            description: 沗웭켰ꜥ⋣뢥
+                            exclusiveMaximum: 1585
+                            format: int64
+                            minimum: 5
+                            type:
+                                - integer
+                                - "null"
+                    text/plain:
+                        schema:
+                            description: pet
+                            properties:
+                                status:
+                                    description: price
+                                    readOnly: true
+                                    type: boolean
+                                庇㝤뭽싼㽂:
+                                    items:
+                                        type:
+                                            - boolean
+                                            - "null"
+                                    maxItems: 14
+                                    type: array
+                            type: object
+            responses:
+                "204":
+                    description: 喿骒迊竦ո换郬
+                "404":
+                    description: '|'
+                default:
+                    description: created

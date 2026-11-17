@@ -1,0 +1,14 @@
+3 cambios: 2 error, 0 warning, 1 info
+error	[response-body-contains-removed] en ./properties/rules/response-body-max-contains-unset_revision.yaml
+	en API PATCH /pets/{petId}
+		removida la restricción 'contains' del cuerpo de respuesta para el estado `204`
+
+error	[response-body-max-contains-unset] en ./properties/rules/response-body-max-contains-unset_revision.yaml
+	en API PATCH /pets/{petId}
+		el valor maxContains del cuerpo de respuesta fue removido de `0`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/items/{id}.json":{"operations":{"modified":{"PUT":{"requestBody":{"content":{"modified":{"application/xml":{"schema":{"properties":{"modified":{"status":{"maxProps":{"from":8,"to":11}}}}}}}}}}}}}}}}

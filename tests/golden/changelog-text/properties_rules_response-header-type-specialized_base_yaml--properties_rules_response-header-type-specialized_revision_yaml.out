@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-header-type-specialized] at ./properties/rules/response-header-type-specialized_revision.yaml
+	in API PATCH /v1/items
+		the `id` response header's `type` was narrowed from `string` to `any` for the status `2XX`
+
+

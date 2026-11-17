@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-header-max-items-unset] en ./properties/rules/response-header-max-items-unset_revision.yaml
+	en API GET /owners/{ownerId}/pets
+		el valor maxItems del encabezado de respuesta `kind` fue removido de `3` para el estado `204`
+
+

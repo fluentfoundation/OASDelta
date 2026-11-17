@@ -27,6 +27,7 @@ export default defineConfig({
           { text: 'Getting started', link: '/guide/getting-started' },
           { text: 'Commands & flags', link: '/guide/usage' },
           { text: 'Compatibility with oasdiff', link: '/guide/compatibility' },
+          { text: 'Checker-rule coverage', link: '/guide/coverage' },
         ],
       },
       {

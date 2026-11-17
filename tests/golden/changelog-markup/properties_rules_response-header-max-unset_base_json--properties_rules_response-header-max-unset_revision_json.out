@@ -1,0 +1,19 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /search
+- :warning: the `null` response header's max was unset from `31.00` for the status `200`
+- :warning: the `null` response header's min was unset from `8.00` for the status `200`
+-  the schema of the response header `null` became `false` for the status `200`: no value passes validation
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

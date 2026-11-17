@@ -1,0 +1,17 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /v1/items
+- Responses changed
+  - Modified response: default
+    - Headers changed
+      - Modified header: **bold**
+        - Schema changed
+          - Max changed from null to 6
+
+

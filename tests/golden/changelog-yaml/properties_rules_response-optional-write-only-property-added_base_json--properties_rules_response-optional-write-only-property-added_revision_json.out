@@ -1,0 +1,9 @@
+- id: response-optional-write-only-property-added
+  text: 'added the optional write-only property `a: b/items/kind` to the response with the `2XX` status'
+  level: 1
+  operation: POST
+  operationId: post_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  fingerprint: c9ec34841e09
+

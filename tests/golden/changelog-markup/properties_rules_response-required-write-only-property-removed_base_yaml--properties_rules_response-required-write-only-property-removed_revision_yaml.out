@@ -1,0 +1,20 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /added/kind
+-  endpoint added
+
+
+### DELETE /v1/items
+- :warning: the response's body `type` changed from `object` to `string` for status `500`
+- :warning: removed the required property `pet` from the response with the `500` status
+- :warning: removed the required property `瀒` from the response with the `500` status
+-  removed the required write-only property `id` from the response with the `500` status
+
+
+
+
+
+

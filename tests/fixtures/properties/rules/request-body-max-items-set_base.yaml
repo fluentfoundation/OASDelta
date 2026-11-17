@@ -1,0 +1,143 @@
+# Fires request-body-max-items-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            type: object
+        Pet:
+            enum:
+                - 65
+                - -5
+                - 40
+            format: double
+            nullable: true
+            readOnly: true
+            type: number
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: <b>&amp;
+            type: apiKey
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: owner
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /pets:
+        get:
+            description: pet
+            responses:
+                "201":
+                    description: 鯣ꡡ対睌⟣Ь
+        post:
+            responses:
+                "204":
+                    content:
+                        text/plain:
+                            schema:
+                                properties:
+                                    pet:
+                                        properties:
+                                            pet:
+                                                format: password
+                                                type: string
+                                            status:
+                                                $ref: '#/components/schemas/Error'
+                                            "yes":
+                                                type: integer
+                                            ꃿ裖㤻:
+                                                example: '%20'
+                                                format: double
+                                                minimum: -6
+                                                type: number
+                                                writeOnly: true
+                                        required:
+                                            - "yes"
+                                            - pet
+                                        type: object
+                                    status:
+                                        nullable: true
+                                        type: number
+                                required:
+                                    - status
+                                    - pet
+                                type: object
+                    description: 名前
+                "500":
+                    description: owner
+                    headers:
+                        '*star':
+                            schema:
+                                description: status
+                                enum:
+                                    - true
+                                    - false
+                                type: boolean
+                        瘳↮ꡙ:
+                            schema:
+                                example: pet
+                                maxLength: 96
+                                nullable: true
+                                pattern: ^.*$
+                                type: string
+            summary: id
+        put:
+            deprecated: true
+            operationId: owner
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            allOf:
+                                - items:
+                                    $ref: '#/components/schemas/Error'
+                                  type: array
+                                - nullable: true
+                                  type: integer
+                required: false
+            responses:
+                "204":
+                    description: price
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                minLength: 2
+                                type: string
+                    description: id
+                    headers:
+                        created:
+                            required: true
+                            schema:
+                                minLength: 1
+                                nullable: true
+                                type: string
+                        pet:
+                            schema:
+                                type: string
+                default:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                discriminator:
+                                    propertyName: kind
+                                oneOf:
+                                    - description: 쫢堂⒟槹곴ᮙ瀴
+                                      type: object
+                                    - properties:
+                                        id:
+                                            $ref: '#/components/schemas/Pet'
+                                      type: object
+                        text/plain:
+                            schema:
+                                items:
+                                    items:
+                                        default: ключ
+                                        deprecated: true
+                                        readOnly: true
+                                        type: string
+                                    type: array
+                                type: array
+                    description: pet

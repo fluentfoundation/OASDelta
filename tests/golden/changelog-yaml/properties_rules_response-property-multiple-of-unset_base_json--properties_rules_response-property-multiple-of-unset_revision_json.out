@@ -1,0 +1,9 @@
+- id: response-property-multiple-of-unset
+  text: the `pet` response property's multipleOf was unset from `3.00` for the response status `200`
+  level: 3
+  operation: GET
+  operationId: get_v1_items
+  path: /v1/items
+  section: paths
+  fingerprint: 8a1bcb0f67ab
+

@@ -1,0 +1,17 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /ünïcode/ключ
+- :warning: the `-/items/` response property's minProperties was unset from `2` for the response status `default` (shared schema: `Owner`, also at `status/status/items/`)
+- :warning: the `-/items/` response's property `type` changed from `object` to `any` for status `default` (shared schema: `Owner`, also at `status/status/items/`)
+-  removed the optional property `-/items/Ṁᨂ緛슺` from the response with the `default` status (shared schema: `Owner`, also at `status/status/items/Ṁᨂ緛슺`)
+-  removed the deprecated required property `-/items/#hash` from the response with the `default` status (shared schema: `Owner`, also at `status/status/items/#hash`)
+-  removed the deprecated required property `-/items/id` from the response with the `default` status (shared schema: `Owner`, also at `status/status/items/id`)
+
+
+
+
+
+

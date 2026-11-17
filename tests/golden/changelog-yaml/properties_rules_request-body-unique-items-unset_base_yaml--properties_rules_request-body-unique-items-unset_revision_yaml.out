@@ -1,0 +1,26 @@
+- id: request-body-type-changed
+  text: the request's body `type` changed from `array<array<string, null/password>>` to `string`
+  level: 3
+  operation: PUT
+  operationId: put_store_order
+  path: /store/order
+  section: paths
+  revisionSource:
+    file: ./properties/rules/request-body-unique-items-unset_revision.yaml
+    line: 36
+    column: 29
+  fingerprint: 71d83578cb75
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-body-unique-items-unset
+  text: the request's body uniqueItems was unset
+  level: 1
+  operation: PUT
+  operationId: put_store_order
+  path: /store/order
+  section: paths
+  fingerprint: 47219470b571
+

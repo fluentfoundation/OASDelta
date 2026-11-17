@@ -45,20 +45,41 @@ grep -v '^batch:' <<< "$result"
 pass=$(sed -nE 's/^batch: pass=([0-9]+) fail=([0-9]+)$/\1/p' <<< "$result"); pass=${pass:-0}
 fail=$(sed -nE 's/^batch: pass=([0-9]+) fail=([0-9]+)$/\2/p' <<< "$result"); fail=${fail:-0}
 
-IDS=$(grep -oE '"[a-z0-9-]+";$' "$ROOT/src/OasDelta/Checker/Generated/RuleIds.g.cs" | tr -d '";' | sort -u)
-rules=$(grep -c . <<< "$IDS")
-# grep -r, not cat with a glob: ~10k paths exceed the argument-length limit on macOS
-fired=$(grep -rhoE '"id": ?"[a-z0-9-]+"' --include='*.out' "$ROOT/tests/golden" | sed -E 's/.*"([a-z0-9-]+)"$/\1/' | sort -u | grep -cxFf <(echo "$IDS"))
+# Every rule, the generated bound rules too: the binary's own list, which CheckerRulesMatchOasdiff keeps equal to oasdiff's
+"$BIN" checks changelog -f json | grep -oE '"id":"[a-z0-9-]+"' | cut -d'"' -f4 | sort -u > "$WORK/rules"
+rules=$(grep -c . "$WORK/rules")
+# The rules that fire in the JSON goldens. grep -r, not cat with a glob: ~10k paths exceed the argument-length limit on macOS
+fired_ids() { sed -E 's/.*"([a-z0-9-]+)"$/\1/' | sort -u | grep -xFf "$WORK/rules"; }
+grep -rhoE '"id": ?"[a-z0-9-]+"' --include='*.out' "$ROOT/tests/golden" | fired_ids > "$WORK/fired"
+fired=$(grep -c . "$WORK/fired")
 floor=$(tr -d '[:space:]' < "$ROOT/tests/rule-coverage-floor.txt")
 known=$(grep -c . "$WORK/known" || true)
 echo "golden: pass=$pass fail=$fail of $total in $sets sets; rules firing: $fired of $rules (floor $floor); known cases: $known"
 if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+  # On a pull request, the rules the goldens of its base branch fire, to show what the PR gains or loses
+  base=""
+  if [ -n "${GITHUB_BASE_REF:-}" ] && git -C "$ROOT" fetch -q --depth=1 origin "$GITHUB_BASE_REF" 2>/dev/null; then
+    git -C "$ROOT" grep -hoE '"id": ?"[a-z0-9-]+"' FETCH_HEAD -- 'tests/golden/*.out' | fired_ids > "$WORK/base-fired" && base=$GITHUB_BASE_REF
+  fi
   {
     echo "### Golden comparisons ($(basename "$BIN"))"
     echo
     echo "| Comparisons | Passed | Failed | Sets | Rules firing in goldens | Known cases |"
     echo "|---:|---:|---:|---:|---:|---:|"
     echo "| $total | $pass | $fail | $sets | $fired of $rules (floor $floor) | $known |"
+    echo
+    if [ -n "$base" ]; then
+      gained=$(comm -13 "$WORK/base-fired" "$WORK/fired"); lost=$(comm -23 "$WORK/base-fired" "$WORK/fired")
+      echo "Against \`$base\`: $(grep -c . <<< "$gained") rules gained, $(grep -c . <<< "$lost") lost."
+      [ -z "$gained" ] || { echo; echo "Gained:"; sed 's/.*/- `&`/' <<< "$gained"; }
+      [ -z "$lost" ] || { echo; echo "Lost:"; sed 's/.*/- `&`/' <<< "$lost"; }
+      echo
+    fi
+    echo "<details><summary>$((rules - fired)) rules no golden fires (also on the <a href=\"https://fluentfoundation.github.io/OASDelta/guide/coverage\">coverage page</a>)</summary>"
+    echo
+    comm -23 "$WORK/rules" "$WORK/fired" | sed 's/.*/- `&`/'
+    echo
+    echo "</details>"
     echo
   } >> "$GITHUB_STEP_SUMMARY"
 fi

@@ -1,0 +1,30 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+DELETE /search
+- Modified header param: created
+  - Schema changed
+    - Properties changed
+      - Modified property: ключ
+        - Type changed from 'string' to 'object'
+
+PUT /search
+- Request body changed
+  - Content changed
+    - Modified media type: */*
+      - Schema changed
+        - Min changed from 0 to -2
+    - Modified media type: application/xml
+      - Schema changed
+        - Properties changed
+          - Modified property: tag
+            - Properties changed
+              - Modified property: id
+                - Type changed from 'string' to 'object'
+
+

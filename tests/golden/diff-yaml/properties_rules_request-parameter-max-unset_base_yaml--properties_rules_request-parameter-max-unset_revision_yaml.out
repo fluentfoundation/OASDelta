@@ -1,0 +1,53 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    PUT:
+                        parameters:
+                            modified:
+                                query:
+                                    ключ:
+                                        schema:
+                                            oneOf:
+                                                added:
+                                                    - index: 0
+                                                    - index: 1
+                                            type:
+                                                deleted:
+                                                    - number
+                                            nullable:
+                                                from: true
+                                                to: false
+                                            max:
+                                                from: 132
+                                                to: null
+                                            listOfTypes:
+                                                added:
+                                                    - boolean
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /pets
+        :   parameters:
+                modified:
+                    query:
+                        ключ:
+                            schema:
+                                oneOf:
+                                    added:
+                                        - index: 0
+                                        - index: 1
+                                type:
+                                    deleted:
+                                        - number
+                                nullable:
+                                    from: true
+                                    to: false
+                                max:
+                                    from: 132
+                                    to: null
+                                listOfTypes:
+                                    added:
+                                        - boolean
+

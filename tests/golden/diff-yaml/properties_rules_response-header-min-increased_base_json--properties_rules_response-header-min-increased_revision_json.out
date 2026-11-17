@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "400":
+                                    headers:
+                                        modified:
+                                            name:
+                                                schema:
+                                                    min:
+                                                        from: -8
+                                                        to: -7
+endpoints:
+    modified:
+        ?   method: GET
+            path: /store/order
+        :   responses:
+                modified:
+                    "400":
+                        headers:
+                            modified:
+                                name:
+                                    schema:
+                                        min:
+                                            from: -8
+                                            to: -7
+

@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-header-max-properties-set] en ./properties/rules/response-header-max-properties-set_revision.yaml
+	en API PUT /v1/items
+		el valor maxProperties del encabezado de respuesta `id` fue establecido en `19` para el estado `204`
+
+

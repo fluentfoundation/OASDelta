@@ -1,0 +1,229 @@
+{
+  "components": {
+    "schemas": {
+      "Owner": {
+        "allOf": [
+          {
+            "items": {
+              "default": 72,
+              "deprecated": true,
+              "nullable": true,
+              "type": "number"
+            },
+            "maxItems": 82,
+            "minItems": 1,
+            "type": "array"
+          },
+          {
+            "oneOf": [
+              {
+                "description": "ключ",
+                "nullable": true,
+                "type": "boolean"
+              },
+              {
+                "enum": [
+                  "created",
+                  "tag",
+                  "1e3"
+                ],
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Ꮝฤס",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/ünïcode/ключ": {
+      "patch": {
+        "operationId": "名前",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "default": "created",
+                "format": "uuid",
+                "type": "string"
+              }
+            },
+            "application/json; charset=utf-8": {
+              "schema": {
+                "format": "int64",
+                "maximum": 338,
+                "type": "integer"
+              }
+            }
+          },
+          "description": "澗賘",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "-": {
+                        "$ref": "#/components/schemas/Owner"
+                      },
+                      "~": {
+                        "description": "@at",
+                        "format": "date",
+                        "type": "string"
+                      },
+                      "Ünïcode": {
+                        "type": "string"
+                      },
+                      "ключ": {
+                        "description": "콦邌",
+                        "enum": [
+                          -8.625
+                        ],
+                        "minimum": -9,
+                        "nullable": true,
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "-",
+                      "Ünïcode",
+                      "~",
+                      "ключ"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "0x1F": {
+                      "description": "yes",
+                      "minLength": 2,
+                      "readOnly": true,
+                      "type": "string"
+                    },
+                    "pet": {
+                      "properties": {
+                        "created": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "format": "double",
+                          "nullable": true,
+                          "type": "number"
+                        },
+                        "Ünïcode": {
+                          "enum": [
+                            true,
+                            false
+                          ],
+                          "nullable": true,
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "owner",
+                        "Ünïcode",
+                        "created"
+                      ],
+                      "type": "object"
+                    },
+                    "status": {
+                      "enum": [
+                        45
+                      ],
+                      "nullable": true,
+                      "readOnly": true,
+                      "type": "number"
+                    },
+                    "~": {
+                      "nullable": true,
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "~"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "pet"
+          }
+        },
+        "tags": [
+          "id"
+        ]
+      },
+      "put": {
+        "deprecated": true,
+        "operationId": "put_ünïcode_ключ",
+        "parameters": [
+          {
+            "explode": false,
+            "in": "query",
+            "name": "a/b",
+            "schema": {
+              "type": "number"
+            },
+            "style": "spaceDelimited"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "maxProperties": 14,
+                "type": "object",
+                "x-extensible-enum": [
+                  "created"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "items": {
+                    "maxLength": 119,
+                    "type": "string",
+                    "writeOnly": true
+                  },
+                  "type": "array"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "maximum": 148,
+                  "nullable": true,
+                  "type": "integer"
+                }
+              }
+            },
+            "description": "এ胅黠붪刲惙"
+          },
+          "2XX": {
+            "description": "a~b"
+          },
+          "500": {
+            "description": "名前"
+          }
+        },
+        "summary": "‮abc"
+      }
+    }
+  }
+}

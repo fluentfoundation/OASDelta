@@ -1,0 +1,118 @@
+# Fires response-property-max-items-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            items:
+                format: float
+                minimum: 0
+                nullable: true
+                type: number
+            type: array
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: 䎰
+            type: apiKey
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: 名前
+    version: v1
+openapi: 3.0.3
+paths:
+    /search:
+        put:
+            operationId: put_search
+            parameters:
+                - in: header
+                  name: owner
+                  required: false
+                  schema:
+                    properties:
+                        "~":
+                            description: ' '
+                            minimum: 1
+                            nullable: true
+                            type: number
+                            writeOnly: true
+                        pet:
+                            enum:
+                                - true
+                                - false
+                            format: custom
+                            type: boolean
+                    type: object
+                  style: simple
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            description: status
+                            example: pet
+                            nullable: true
+                            type: string
+                    multipart/form-data:
+                        schema:
+                            properties:
+                                Đ᪸원骜⿥:
+                                    nullable: true
+                                    type: string
+                                娢ꫭ⦹:
+                                    deprecated: true
+                                    format: int32
+                                    nullable: true
+                                    type: integer
+                            required:
+                                - 娢ꫭ⦹
+                            type: object
+                required: false
+            responses:
+                "404":
+                    description: tag
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                oneOf:
+                                    - properties:
+                                        ? "a\r\nb"
+                                        :   deprecated: true
+                                            format: custom
+                                            nullable: true
+                                            type: boolean
+                                        'a: b':
+                                            enum:
+                                                - 31.75
+                                            maxItems: 19
+                                            maximum: 803
+                                            type: number
+                                        price:
+                                            format: int64
+                                            nullable: true
+                                            type: integer
+                                        名前:
+                                            nullable: true
+                                            type: integer
+                                      required:
+                                        - "a\r\nb"
+                                        - 'a: b'
+                                      type: object
+                                    - items:
+                                        deprecated: true
+                                        minimum: -8
+                                        nullable: true
+                                        type: number
+                                      type: array
+                        text/plain:
+                            schema:
+                                enum:
+                                    - 29.75
+                                    - 4
+                                maximum: 56
+                                type: number
+                    description: status
+            security:
+                - api_key: []
+servers:
+    - url: https://api.example.com

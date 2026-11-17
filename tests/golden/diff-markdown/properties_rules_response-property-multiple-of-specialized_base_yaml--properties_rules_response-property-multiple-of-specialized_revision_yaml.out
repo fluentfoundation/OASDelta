@@ -1,0 +1,29 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+DELETE /pets
+- Responses changed
+  - Modified response: 500
+    - Content changed
+      - Modified media type: multipart/form-data
+        - Schema changed
+          - Property 'OneOf' changed
+            - Modified schema: subschema #1
+              - Property 'AnyOf' changed
+                - Modified schema: subschema #2
+                  - MultipleOf changed from 2 to 4
+              - Format changed from '' to 'float'
+
+PATCH /search
+- Responses changed
+  - Modified response: 500
+    - Description changed from '名前' to null
+    - Headers changed
+      - Deleted header: 퉈祅闄췱
+
+

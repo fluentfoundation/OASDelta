@@ -1,0 +1,2 @@
+::notice title=response-property-min-length-increased,file=./properties/rules/response-property-min-length-increased_revision.yaml,line=172,col=41::in API PUT /pets/{petId} the `anyOf[subschema #2]/items/` response property's minLength was increased from `1` to `4` for the response status `200`
+

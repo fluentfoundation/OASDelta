@@ -1,0 +1,133 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    PATCH:
+                        parameters:
+                            modified:
+                                query:
+                                    owner:
+                                        schema:
+                                            anyOf:
+                                                modified:
+                                                    - base:
+                                                        index: 2
+                                                      revision:
+                                                        index: 2
+                                                      diff:
+                                                        properties:
+                                                            modified:
+                                                                '*star':
+                                                                    maxLength:
+                                                                        from: 3
+                                                                        to: 107
+                                                                id:
+                                                                    not:
+                                                                        schemaDeleted: true
+                        responses:
+                            modified:
+                                default:
+                                    content:
+                                        modified:
+                                            '*/*':
+                                                schema:
+                                                    contentMediaType:
+                                                        from: application/json
+                                                        to: ""
+                                                    contentSchema:
+                                                        schemaDeleted: true
+                                            application/json; charset=utf-8:
+                                                schema:
+                                                    anyOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 2
+                                                              revision:
+                                                                index: 2
+                                                              diff:
+                                                                properties:
+                                                                    modified:
+                                                                        '*star':
+                                                                            maxLength:
+                                                                                from: 3
+                                                                                to: 107
+                                                                        id:
+                                                                            not:
+                                                                                schemaDeleted: true
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /ünïcode/ключ
+        :   parameters:
+                modified:
+                    query:
+                        owner:
+                            schema:
+                                anyOf:
+                                    modified:
+                                        - base:
+                                            index: 2
+                                          revision:
+                                            index: 2
+                                          diff:
+                                            properties:
+                                                modified:
+                                                    '*star':
+                                                        maxLength:
+                                                            from: 3
+                                                            to: 107
+                                                    id:
+                                                        not:
+                                                            schemaDeleted: true
+            responses:
+                modified:
+                    default:
+                        content:
+                            modified:
+                                '*/*':
+                                    schema:
+                                        contentMediaType:
+                                            from: application/json
+                                            to: ""
+                                        contentSchema:
+                                            schemaDeleted: true
+                                application/json; charset=utf-8:
+                                    schema:
+                                        anyOf:
+                                            modified:
+                                                - base:
+                                                    index: 2
+                                                  revision:
+                                                    index: 2
+                                                  diff:
+                                                    properties:
+                                                        modified:
+                                                            '*star':
+                                                                maxLength:
+                                                                    from: 3
+                                                                    to: 107
+                                                            id:
+                                                                not:
+                                                                    schemaDeleted: true
+components:
+    schemas:
+        modified:
+            Owner:
+                anyOf:
+                    modified:
+                        - base:
+                            index: 2
+                          revision:
+                            index: 2
+                          diff:
+                            properties:
+                                modified:
+                                    '*star':
+                                        maxLength:
+                                            from: 3
+                                            to: 107
+                                    id:
+                                        not:
+                                            schemaDeleted: true
+

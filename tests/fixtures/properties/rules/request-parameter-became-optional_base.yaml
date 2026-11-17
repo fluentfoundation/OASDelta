@@ -1,0 +1,67 @@
+# Fires request-parameter-became-optional (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            description: name
+            type: string
+        Item:
+            items:
+                $ref: '#/components/schemas/Error'
+            minItems: 2
+            type: array
+    securitySchemes:
+        api_key:
+            in: query
+            name: Ünïcode
+            type: apiKey
+        bearer:
+            scheme: basic
+            type: http
+info:
+    title: name
+    version: v1
+openapi: 3.1.0
+paths:
+    /v1/items:
+        post:
+            operationId: post_v1_items
+            parameters:
+                - description: pet
+                  in: cookie
+                  name: kind
+                  required: false
+                  schema:
+                    properties:
+                        "null":
+                            format: double
+                            type:
+                                - number
+                                - "null"
+                        status:
+                            description: ключ
+                            readOnly: true
+                            type:
+                                - number
+                                - "null"
+                    required:
+                        - status
+                    type: object
+                - in: header
+                  name: tag
+                  required: true
+                  schema:
+                    items:
+                        enum:
+                            - true
+                            - false
+                        type:
+                            - boolean
+                            - "null"
+                    type: array
+            responses:
+                default:
+                    description: 名前
+                    headers:
+                        Ünïcode:
+                            schema:
+                                type: string

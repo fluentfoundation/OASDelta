@@ -1,0 +1,19 @@
+# The same document with the merges spelled out, and one change: /a's schema gets minLength 2.
+openapi: 3.0.3
+info:
+  title: merge keys
+  version: '1'
+  x-quoted: {"<<": kept, b: 2}
+paths:
+  /a:
+    get:
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema: {type: object, maxLength: 3, description: own, minLength: 2}
+  /b:
+    get:
+      responses:
+        '200': {description: plain}

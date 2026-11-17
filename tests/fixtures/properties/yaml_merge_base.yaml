@@ -1,0 +1,24 @@
+# YAML merge keys (<<), as go-yaml v3 reads them: a mapping, or a sequence of mappings where the first wins; the
+# mapping's own keys win over merged ones. A quoted "<<" is an ordinary key. The merges are inline: with an alias,
+# oasdiff reports the anchor's source location for the whole mapping (#55).
+openapi: 3.0.3
+info:
+  title: merge keys
+  version: '1'
+  x-quoted: {"<<": kept, b: 2}
+paths:
+  /a:
+    get:
+      responses:
+        '200':
+          <<: {description: ok}
+          content:
+            application/json:
+              schema:
+                <<: [{type: object, description: from merge}, {type: string, maxLength: 3}]
+                description: own
+                minLength: 1
+  /b:
+    get:
+      responses:
+        '200': {<<: [], description: plain}

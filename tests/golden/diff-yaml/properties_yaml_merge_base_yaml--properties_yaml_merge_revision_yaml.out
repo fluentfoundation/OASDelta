@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /a:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    minLength:
+                                                        from: 1
+                                                        to: 2
+endpoints:
+    modified:
+        ?   method: GET
+            path: /a
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        minLength:
+                                            from: 1
+                                            to: 2
+

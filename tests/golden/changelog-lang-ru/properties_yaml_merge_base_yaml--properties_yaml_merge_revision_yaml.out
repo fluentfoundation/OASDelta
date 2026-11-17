@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-body-min-length-increased] в ./properties/yaml_merge_revision.yaml
+	в API GET /a
+		значение minLength у тела ответа увеличено с `1` до `2`
+
+

@@ -34,6 +34,8 @@ gen_slug() {
 
 ONLY=" ${*:3} "
 if [ "$ONLY" == "  " ]; then rm -rf "$ROOT/tests/golden"; fi
+# the rule list, which the coverage page and tests/OasDelta.Tests (CheckerRulesMatchOasdiff) read
+mkdir -p "$ROOT/tests/golden"; "$GO" checks changelog -f json > "$ROOT/tests/golden/checks-changelog.json"
 while IFS='|' read -r slug args; do
   [[ -z "$slug" || "$slug" == \#* ]] && continue
   if [ "$ONLY" != "  " ]; then

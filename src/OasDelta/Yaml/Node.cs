@@ -312,8 +312,10 @@ public static class NodeReader
                     if (k.Kind == NodeKind.Scalar && k.Plain && k.Text == "<<")
                     {
                         merges ??= [];
+                        // go-yaml rejects any other value (null, a scalar, a sequence with a non-mapping item)
                         if (v.IsMapping) merges.AddRange(v.Pairs!);
-                        else if (v.IsSequence) foreach (var m in v.Items!) if (m.IsMapping) merges.AddRange(m.Pairs!);
+                        else if (v.IsSequence && v.Items!.TrueForAll(m => m.IsMapping)) foreach (var m in v.Items!) merges.AddRange(m.Pairs!);
+                        else throw new YamlParseException("yaml: map merge requires map or sequence of maps as the value");
                         continue;
                     }
                     // duplicate keys: last wins (matches json semantics)

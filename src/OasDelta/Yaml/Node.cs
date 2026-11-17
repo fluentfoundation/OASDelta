@@ -238,16 +238,26 @@ public static class NodeReader
     {
         private List<int>? _starts;
 
-        public string Line(int line) // 1-based, without its line break
+        // 1-based, without its line break. Lines are counted as YAML counts them, as YamlDotNet's marks and go-yaml do:
+        // a raw NEL, LS or PS in a quoted scalar is a line break too, and so is a lone CR
+        public string Line(int line)
         {
             if (_starts is null)
             {
                 _starts = [0];
-                for (int i = 0; i < text.Length; i++) if (text[i] == '\n') _starts.Add(i + 1);
+                for (int i = 0; i < text.Length; i++)
+                {
+                    if (text[i] == '\r' && i + 1 < text.Length && text[i + 1] == '\n') i++;
+                    if (text[i] is '\n' or '\r' or '\u0085' or '\u2028' or '\u2029') _starts.Add(i + 1);
+                }
             }
             if (line < 1 || line > _starts.Count) return "";
-            int start = _starts[line - 1], end = line < _starts.Count ? _starts[line] - 1 : text.Length;
-            if (end > start && text[end - 1] == '\r') end--;
+            int start = _starts[line - 1], end = text.Length;
+            if (line < _starts.Count)
+            {
+                end = _starts[line] - 1; // the line break (the \n of a \r\n)
+                if (end > start && text[end] == '\n' && text[end - 1] == '\r') end--;
+            }
             return text[start..end];
         }
 

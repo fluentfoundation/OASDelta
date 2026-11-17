@@ -50,7 +50,8 @@ public class OracleProperties(ITestOutputHelper output)
     private const int MaxShrunk = 5;
     private const int KeptPerKind = 3;
 
-    /// <summary>One kind of mismatch: how often it was seen after it was found, and its smallest case so far.</summary>
+    /// <summary>One kind of mismatch: how often it was seen after it was found, and its smallest case so far. Shrunk:
+    /// shrinking from its seed found a smaller case.</summary>
     private sealed class Mismatch(string kind)
     {
         public string Kind { get; } = kind;
@@ -118,7 +119,12 @@ public class OracleProperties(ITestOutputHelper output)
                         if (fails(kind)) throw new MismatchException(kind, what);
                         var m = mismatches.GetOrAdd(kind, k => new Mismatch(k));
                         Interlocked.Increment(ref m.SeenAgain);
-                        if (Interlocked.Increment(ref m.Kept) <= KeptPerKind) Support.Keep("mismatch-again", p, what);
+                        if (Interlocked.Increment(ref m.Kept) <= KeptPerKind)
+                        {
+                            var kept = Support.Keep("mismatch-again", p, what);
+                            // first seen while another kind was being shrunk: reported as it is, with no seed
+                            lock (m) m.Case ??= $"(found while another kind was being shrunk; not shrunk)\n{what}\n{p}\nkept in {kept}";
+                        }
                         continue;
                     }
                     if (agreement == Support.Agreement.Reordered) Interlocked.Increment(ref reordered);
@@ -172,7 +178,12 @@ public class OracleProperties(ITestOutputHelper output)
                 {
                     fails = kind => kind == m.Kind;
                     try { gen.Sample(Check, seed: m.Seed, time: shrink, print: Print); }
-                    catch (CsCheckException e) when (e.InnerException is MismatchException x && x.Kind == m.Kind) { Found(e, x); m.Shrunk = true; }
+                    catch (CsCheckException e) when (e.InnerException is MismatchException x && x.Kind == m.Kind)
+                    {
+                        var before = m.Seed;
+                        Found(e, x);
+                        m.Shrunk = m.Seed != before; // CsCheck reports the seed's own case again when it finds no smaller one
+                    }
                 }
                 fails = _ => false;
 
@@ -212,7 +223,7 @@ public class OracleProperties(ITestOutputHelper output)
         {
             sb.Append("\n| Kind of mismatch | Command lines after it was found | Seed | Shrunk from its seed |\n|---|---:|---|---|\n");
             foreach (var m in found)
-                sb.Append(inv, $"| {m.Kind} | {m.SeenAgain} | `{m.Seed}` | {(m.Shrunk ? "yes" : "no")} |\n");
+                sb.Append(inv, $"| {m.Kind} | {m.SeenAgain} | {(m.Seed is null ? "none" : $"`{m.Seed}`")} | {(m.Shrunk ? "yes" : "no")} |\n");
         }
         if (!promoted.IsEmpty)
         {

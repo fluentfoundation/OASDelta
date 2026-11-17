@@ -38,6 +38,10 @@ public sealed partial class SpecLoader
     private readonly Dictionary<(Document, string), (Document Doc, Node Node)> _kinResolved = new(DocRefComparer.Instance);
     private readonly HashSet<(Document, string, Must)> _kinKinds = [];
 
+    // the $refs (by the document holding them and the $ref as written) whose target kin resolves without origins: see
+    // KinKeepsOrigins
+    private readonly HashSet<(Document, string)> _kinNoOrigin = new(DocRefComparer.Instance);
+
     private sealed class DocRefComparer : IEqualityComparer<(Document, string)>
     {
         public static readonly DocRefComparer Instance = new();
@@ -91,8 +95,10 @@ public sealed partial class SpecLoader
             throw new LoadException($"bad data in {Fmt.GoQuote(fragmentRef)} (expecting {Readable(kind)})");
 
         (Document, Node) result;
+        bool untyped; // reached as a generic map: kin decodes it with a JSON round trip, which loses its origins
         if (TypedDrill(target, tokens) is { } t)
         {
+            untyped = t.Kind != KindOf(kind);
             if (t.Kind == KindOf(kind))
             {
                 // a typed nil: kin panics copying it. Absent: not found; a null: resolves to nothing
@@ -106,14 +112,38 @@ public sealed partial class SpecLoader
         else
         {
             // kin reads the referencing document (path) here; the pointer is the target's
+            untyped = true;
             var node = RawDrill(target.Root, tokens, reference);
             if (node is null) result = (target, NullNode);
             else if (node.IsMapping) result = (target, node);
             else throw new LoadException($"bad data in {Fmt.GoQuote(fragmentRef)} (expecting {Readable(kind)})");
         }
+        if (untyped && !KinKeepsOrigins(target, tokens)) _kinNoOrigin.Add((from, reference));
         _kinResolved[(from, reference)] = result;
         _kinKinds.Add((from, reference, kind));
         return result;
+    }
+
+    /// <summary>
+    /// Whether kin gives back the origins of a target it reached as a generic map (attachOriginToResolved). The JSON
+    /// round trip that decodes such a map drops every origin in it, and kin re-attaches them from the document's
+    /// origin tree, which it keeps only for a document with top-level keys T doesn't know (rememberOriginTree). It
+    /// walks that tree by the fragment's tokens through mappings only, so a fragment through a sequence
+    /// (<c>parameters/0</c>) or through a $ref (<c>components/schemas/R/properties/x</c>, R a $ref) gets none either.
+    /// Without origins, oasdiff locates a change in the target at the operation, or not at all (#60): for instance a
+    /// schema $ref to a response header's schema, which the typed drill can't reach (Header embeds Parameter).
+    /// </summary>
+    private static bool KinKeepsOrigins(Document target, string[] tokens)
+    {
+        if (target.Root is not { IsMapping: true } root || root.Pairs!.All(p => StructFields[KT.Doc].ContainsKey(p.Key.KeyString))) return false;
+        var cur = root;
+        foreach (var token in tokens)
+        {
+            if (token.Length == 0) continue; // kin trims and skips empty parts
+            if (!cur.IsMapping || cur[token] is not { } next) return false;
+            cur = next;
+        }
+        return true;
     }
 
     /// <summary>kin's failedToResolveRefFragmentPart, with drillIntoField's error; the reference as written, so that

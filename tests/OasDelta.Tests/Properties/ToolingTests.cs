@@ -55,3 +55,49 @@ public class SharedSchemaAliasTests
         Assert.Equal("removed `#/components/schemas/Item`", Support.WithCanonicalSharedSchemaNames("removed `#/components/schemas/Item`", Aliases));
     }
 }
+
+/// <summary>How the oracle sorts mismatches into kinds (Support.MismatchKind), so a known one (#60: source locations
+/// under a $ref) doesn't end the run before others are found. The outputs are the nightly's of 2026-11-16/17.</summary>
+public class MismatchKindTests
+{
+    private static string Kind(string[] cmd, string want, string got, int wantCode = 0, int gotCode = 0) =>
+        Support.MismatchKind(cmd, new Outcome(gotCode, got), new Outcome(wantCode, want), s => s);
+
+    [Fact]
+    public void JsonThatDiffersOnlyInSourcesIsSourceLocations()
+    {
+        const string oasdiff = """[{"id":"request-parameter-became-enum","text":"t","level":3,"operation":"POST","path":"/p","section":"paths","fingerprint":"20e29ae185d7"},{"id":"response-media-type-removed","level":3,"section":"paths","baseSource":{"file":"a.yaml","line":186,"column":25,"endLine":196,"endColumn":44},"fingerprint":"a67ab9919ac5"}]""";
+        const string oasdelta = """[{"id":"request-parameter-became-enum","text":"t","level":3,"operation":"POST","path":"/p","section":"paths","revisionSource":{"file":"b.yaml","line":185,"column":33},"fingerprint":"20e29ae185d7"},{"id":"response-media-type-removed","level":3,"section":"paths","baseSource":{"file":"a.yaml","line":186,"column":25,"endLine":196,"endColumn":44},"fingerprint":"a67ab9919ac5"}]""";
+        Assert.Equal("source locations only: changelog -f json", Kind(["changelog", "-f", "json", "--stability-level", "beta"], oasdiff, oasdelta));
+    }
+
+    [Fact]
+    public void GithubActionsThatDiffersOnlyInSourcesIsSourceLocations()
+    {
+        const string oasdiff = "::error title=request-parameter-type-changed,file=/tmp/r.yaml,line=78,col=9::in API GET /pets the type changed\n::notice title=request-parameter-became-nullable,file=/tmp/r.yaml,line=78,col=9::in API GET /pets became nullable\n";
+        const string oasdelta = "::error title=request-parameter-type-changed,file=/tmp/r.yaml,line=187,col=33::in API GET /pets the type changed\n::notice title=request-parameter-became-nullable,file=/tmp/r.yaml::in API GET /pets became nullable\n";
+        Assert.Equal("source locations only: changelog -f githubactions", Kind(["changelog", "-f", "githubactions"], oasdiff, oasdelta));
+    }
+
+    [Fact]
+    public void YamlThatDiffersOnlyInSourcesIsSourceLocations()
+    {
+        const string oasdiff = "- id: a\n  level: 3\n  baseSource:\n    file: ./b.yaml\n    line: 11\n    column: 11\n  fingerprint: x\n";
+        const string oasdelta = "- id: a\n  level: 3\n  baseSource:\n    file: ./b.yaml\n    line: 12\n    column: 3\n  revisionSource:\n    file: ./r.yaml\n    line: 4\n    column: 3\n  fingerprint: x\n";
+        Assert.Equal("source locations only: changelog -f yaml", Kind(["changelog", "-f", "yaml"], oasdiff, oasdelta));
+    }
+
+    [Fact]
+    public void AnyOtherDifferenceIsOutputAndExitCodesComeFirst()
+    {
+        // the same sources, a different change: not a source-location mismatch
+        Assert.Equal("output: changelog -f json", Kind(["changelog", "-f", "json"],
+            """[{"id":"a","baseSource":{"file":"x","line":1,"column":1}}]""", """[{"id":"b","baseSource":{"file":"x","line":1,"column":1}}]"""));
+        Assert.Equal("output: breaking", Kind(["breaking", "--fail-on", "WARN"], "a\n", "b\n"));
+        Assert.Equal("exit code 0 where oasdiff exits 102: diff -f yaml", Kind(["diff", "-f", "yaml"], "", "x\n", wantCode: 102));
+    }
+
+    [Fact]
+    public void TheSeedOfACsCheckFailure() =>
+        Assert.Equal("b1fwLTMaeFL7", Support.SeedOf("Set seed: \"b1fwLTMaeFL7\" or -e CsCheck_Seed=b1fwLTMaeFL7 to reproduce (0 shrinks, 47 skipped, 1,557 total)."));
+}

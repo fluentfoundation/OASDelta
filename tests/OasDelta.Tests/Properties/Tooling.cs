@@ -285,6 +285,48 @@ internal static partial class Support
         return sb.ToString();
     }
 
+    /// <summary>What kind of mismatch two outputs of one command line are, so the oracle can count each kind and keep
+    /// looking for others: a different exit code; the same changes in different source locations (baseSource /
+    /// revisionSource, or GitHub Actions' file/line/col); or any other output. Each kind is per command and format
+    /// ("changelog -f json"), as one bug tends to show in some formats and not others. <paramref name="normalize"/>
+    /// applies the allowances the comparison already makes (aliased schema names).</summary>
+    public static string MismatchKind(string[] cmd, Outcome got, Outcome want, Func<string, string> normalize)
+    {
+        var where = CommandFamily(cmd);
+        if (got.Code != want.Code) return $"exit code {got.Code} where oasdiff exits {want.Code}: {where}";
+        return Compare(normalize(WithoutSources(want.Out)), normalize(WithoutSources(got.Out))) != Agreement.Different
+            ? $"source locations only: {where}"
+            : $"output: {where}";
+    }
+
+    /// <summary>The command and its output format: "changelog -f json", "breaking" (text). Other options are left out.</summary>
+    public static string CommandFamily(string[] cmd)
+    {
+        var f = Array.FindIndex(cmd, a => a is "-f" or "--format");
+        return f >= 0 && f + 1 < cmd.Length ? $"{cmd[0]} -f {cmd[f + 1]}" : cmd[0];
+    }
+
+    /// <summary>The output without source locations: JSON and YAML baseSource/revisionSource entries, and the file,
+    /// line and col properties of GitHub Actions annotations. Formats without sources come back unchanged.</summary>
+    public static string WithoutSources(string output) =>
+        GithubActionsSource().Replace(YamlSource().Replace(JsonSource().Replace(output, ""), ""), "");
+
+    [GeneratedRegex(@",""(?:base|revision)Source"":\{[^{}]*\}")]
+    private static partial Regex JsonSource();
+
+    [GeneratedRegex(@"^([ \t]*)(?:base|revision)Source:\r?\n(?:\1[ \t]+[^\n]*\n)*", RegexOptions.Multiline)]
+    private static partial Regex YamlSource();
+
+    // in an annotation's properties, ',' and ':' are escaped (%2C, %3A), so a value ends at either
+    [GeneratedRegex(@",(?:file|line|col)=[^,:\n]*")]
+    private static partial Regex GithubActionsSource();
+
+    /// <summary>The seed a CsCheck failure reports ("Set seed: "b1fwLTMaeFL7" or ..."), or null.</summary>
+    public static string? SeedOf(string csCheckMessage) => CsCheckSeed().Match(csCheckMessage) is { Success: true } m ? m.Groups[1].Value : null;
+
+    [GeneratedRegex(@"Set seed: ""([^""]+)""")]
+    private static partial Regex CsCheckSeed();
+
     /// <summary>Whether a discriminator mapping of the document is a local JSON pointer ("#/...") to nothing.</summary>
     public static bool HasDanglingMapping(Map doc)
     {

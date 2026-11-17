@@ -106,24 +106,37 @@ public partial class SpecProperties
     /// <summary>Parsing what the emitters write and emitting it again gives the same text (YAML and JSON), for
     /// documents and for arbitrary values with hostile strings.
     ///
-    /// One exception, go-yaml's own: a string that needs a block scalar with an indentation indicator ("|4-", for a
-    /// leading space or line break), as a sequence item ("- |4-", "- - |4-") or as the key of a mapping that is a
-    /// sequence item ("- ? |4-"), is written with its text indented from the enclosing node rather than from the dash,
-    /// and go-yaml cannot read that back ("did not find expected '-' indicator", "did not find expected key"). oasdiff
-    /// rejects such a spec (exit 102), and OasDelta reproduces both the writing and the reading (checked against
-    /// oasdiff 1.35.0's diff -f yaml, which writes the same bytes and cannot load them).</summary>
+    /// A YAML round trip that fails is not counted in these cases; the JSON round trip is still checked:
+    /// - go-yaml's own: a string that needs a block scalar with an indentation indicator ("|4-", for a leading space or
+    ///   line break) inside a sequence item is written with its text indented from the sequence rather than from the
+    ///   node that holds it. Where the two differ, go-yaml cannot read its own output back ("did not find expected '-'
+    ///   indicator", "did not find expected key"): an item ("- |4-", "- a:\n    - |4-"), the key of a mapping that is
+    ///   an item ("- ? |4-"), or any value of such a mapping ("- b: |4-", "- a: 1\n  b: |4-"). If the text starts
+    ///   with spaces, it reads back a different string instead: two of them are lost.
+    /// - go-yaml's own: a "&lt;&lt;" key is written plain, so it reads back as a merge key. That merges the value
+    ///   into its mapping, or fails ("map merge requires map or sequence of maps as the value").
+    /// - YamlDotNet's (#54): a plain key with a word that starts with "*" ("a *b: 1") runs on past its ": ".
+    /// oasdiff rejects or misreads such a spec; for go-yaml's cases, OasDelta reproduces both the writing and the
+    /// reading (checked against oasdiff 1.35.0, whose flatten -f yaml and diff -f yaml write the same bytes).</summary>
     [Fact]
     public void EmitParseEmitIsStable() =>
         Gen.Frequency<object?>((1, SpecGen.Spec.Select(m => (object?)m)), (2, AnyValue)).Select(AsParsed).Sample(v =>
         {
             var yaml = YamlEmitter.Emit(v);
-            Node? parsed;
-            try { parsed = NodeReader.Parse(yaml); }
-            catch (YamlParseException) when (GoYamlCannotReadBack().IsMatch(yaml)) { return; }
-            var again = YamlEmitter.Emit(parsed?.ToValue());
-            if (again != yaml) throw new PropertyException($"YAML parsed and emitted again differs; {Support.FirstDifference(yaml, again)}");
+            string? yamlFailure;
+            try
+            {
+                var again = YamlEmitter.Emit(NodeReader.Parse(yaml)?.ToValue());
+                yamlFailure = again == yaml ? null : $"YAML parsed and emitted again differs; {Support.FirstDifference(yaml, again)}";
+            }
+            catch (YamlParseException e) { yamlFailure = "YAML does not parse back: " + e.Message; }
+            if (yamlFailure is not null && !GoYamlMisindents().IsMatch(yaml) && !MergeKey().IsMatch(yaml) && !PlainWordStartingWithStar().IsMatch(yaml))
+                throw new PropertyException(yamlFailure);
             var json = JsonEmitter.Emit(v);
-            // like the loader: the JSON fast path takes objects and arrays, anything else goes to the YAML parser
+            // like the loader: the JSON fast path takes objects and arrays, anything else goes to the YAML parser. YAML
+            // (go-yaml too) reads a raw NEL, LS or PS in a quoted string as a line break and folds it, so a top-level
+            // string with one doesn't round-trip that way. No spec is a top-level string.
+            if (v is string s && s.AsSpan().IndexOfAny('\u0085', '\u2028', '\u2029') >= 0) return;
             var node = JsonNodeReader.TryParse(json, out var n) ? n : NodeReader.Parse(json);
             var jsonAgain = JsonEmitter.Emit(node?.ToValue());
             if (jsonAgain != json) throw new PropertyException($"JSON parsed and emitted again differs; {Support.FirstDifference(json, jsonAgain)}");
@@ -131,8 +144,18 @@ public partial class SpecProperties
 
     // ------------------------------------------------------------------ helpers
 
-    [System.Text.RegularExpressions.GeneratedRegex(@"^ *(- )+(\? )?[|>][1-9][-+]?$", System.Text.RegularExpressions.RegexOptions.Multiline)]
-    private static partial System.Text.RegularExpressions.Regex GoYamlCannotReadBack();
+    /// <summary>A block scalar with an indentation indicator, on a line after a sequence item's "- " (which may follow
+    /// a complex key's "? " or ": ").</summary>
+    [System.Text.RegularExpressions.GeneratedRegex(@"^[ ?:]*- (?s:.*)(?<![^ \n])[|>][1-9][-+]?$", System.Text.RegularExpressions.RegexOptions.Multiline)]
+    private static partial System.Text.RegularExpressions.Regex GoYamlMisindents();
+
+    /// <summary>A plain "&lt;&lt;" key.</summary>
+    [System.Text.RegularExpressions.GeneratedRegex(@"^ *(?:- |\? |: +)*<<:(?: |$)", System.Text.RegularExpressions.RegexOptions.Multiline)]
+    private static partial System.Text.RegularExpressions.Regex MergeKey();
+
+    /// <summary>A plain scalar with a word that starts with "*", followed by ": " (#54).</summary>
+    [System.Text.RegularExpressions.GeneratedRegex(@"^ *(?:- |\? |: +)*[^ \n""'][^\n]* \*[^\n]*:(?: |$)", System.Text.RegularExpressions.RegexOptions.Multiline)]
+    private static partial System.Text.RegularExpressions.Regex PlainWordStartingWithStar();
 
     private static readonly Gen<string> AnyString = Gen.Frequency<string>(
         (3, SpecGen.Text),

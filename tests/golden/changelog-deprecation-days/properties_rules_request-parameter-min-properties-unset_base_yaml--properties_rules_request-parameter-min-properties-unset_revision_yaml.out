@@ -1,0 +1,1 @@
+[{"id":"request-parameter-min-properties-unset","text":"for the `header` request parameter `owner`, the minProperties was unset from `2`","level":1,"operation":"PATCH","path":"/owners/{ownerId}/pets","section":"paths","baseSource":{"file":"./properties/rules/request-parameter-min-properties-unset_base.yaml","line":74,"column":21},"fingerprint":"bbead52bda6a"}]

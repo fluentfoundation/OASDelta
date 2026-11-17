@@ -1,0 +1,132 @@
+# Fires request-read-only-property-enum-value-removed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            properties:
+                price:
+                    additionalProperties: true
+                    properties:
+                        䯄஗Ꜵ䟐│㖵:
+                            enum:
+                                - 15
+                                - 15
+                            exclusiveMinimum: -1
+                            readOnly: true
+                            type: number
+                    required:
+                        - 䯄஗Ꜵ䟐│㖵
+                    type: object
+            type: object
+        Owner:
+            items:
+                $ref: '#/components/schemas/Owner'
+            minItems: 3
+            type: array
+        Pet:
+            format: int32
+            type:
+                - integer
+                - "null"
+info:
+    title: 밡癇쨈꘍
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /owners/{ownerId}/pets:
+        post:
+            description: ключ
+            operationId: post_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "404":
+                    description: ключ
+                    headers:
+                        created:
+                            schema:
+                                format: custom
+                                type:
+                                    - boolean
+                                    - "null"
+                                uniqueItems: true
+    /ünïcode/ключ:
+        post:
+            operationId: post_ünïcode_ключ
+            parameters:
+                - in: query
+                  name: id
+                  required: false
+                  schema:
+                    oneOf:
+                        - format: byte
+                          minLength: 5
+                          type:
+                            - string
+                            - "null"
+                        - description: Ünïcode
+                          exclusiveMinimum: 0
+                          format: float
+                          type: number
+                          writeOnly: true
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            oneOf:
+                                - $ref: '#/components/schemas/Item'
+                                - description: owner
+                                  properties:
+                                    pet:
+                                        enum:
+                                            - 14.625
+                                            - 9223372036854775807
+                                            - 1.23456789125e+08
+                                        maximum: 581
+                                        type: number
+                                        writeOnly: true
+                                    status:
+                                        deprecated: true
+                                        type: integer
+                                    Ünïcode:
+                                        description: ключ
+                                        enum:
+                                            - status
+                                            - kind
+                                            - "null"
+                                            - name
+                                        maxLength: 237
+                                        minLength: 1
+                                        readOnly: true
+                                        type: string
+                                  required:
+                                    - pet
+                                  type: object
+                                - items:
+                                    default: -0
+                                    example: ключ
+                                    type: number
+                                  type: array
+                    multipart/form-data:
+                        schema:
+                            description: kind
+                            maxProperties: 6
+                            properties:
+                                owner:
+                                    $ref: '#/components/schemas/Pet'
+                                pet:
+                                    multipleOf: 5
+                                    type:
+                                        - number
+                                        - "null"
+                            type: object
+                required: true
+            responses:
+                "200":
+                    description: '{brace}'
+                "201":
+                    description: ключ
+        summary: pet

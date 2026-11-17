@@ -1,0 +1,129 @@
+# Fires response-header-max-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            enum:
+                - '| table |'
+            type: string
+        Item:
+            enum:
+                - pet
+            type:
+                - string
+                - "null"
+        Owner:
+            items:
+                format: int32
+                type:
+                    - integer
+                    - "null"
+            type: array
+info:
+    title: 突ၬ喱
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /v1/items:
+        get:
+            operationId: get_v1_items
+            responses:
+                2XX:
+                    description: tag
+                "200":
+                    content:
+                        text/plain:
+                            schema:
+                                $ref: '#/components/schemas/Error'
+                    description: Ünïcode
+            summary: pet
+            tags:
+                - kind
+        put:
+            parameters:
+                - in: cookie
+                  name: ключ
+                  required: false
+                  schema:
+                    type: number
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            anyOf:
+                                - default: -22
+                                  description: ⦒
+                                  format: float
+                                  type: number
+                                - enum:
+                                    - true
+                                    - false
+                                  type: boolean
+                                  writeOnly: true
+                                - items:
+                                    description: ключ
+                                    enum:
+                                        - 93
+                                        - -68.25
+                                    example: ключ
+                                    type: number
+                                  type: array
+                    application/vnd.api+json:
+                        schema:
+                            type: object
+                description: tag
+            responses:
+                "400":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                items:
+                                    oneOf:
+                                        - enum:
+                                            - 㻌ᰓ
+                                            - 'a: b'
+                                          type: string
+                                        - $ref: '#/components/schemas/Owner'
+                                        - $ref: '#/components/schemas/Item'
+                                type: array
+                    description: status
+                "500":
+                    description: 名前
+                    headers:
+                        '&anchor':
+                            schema:
+                                description: 名前
+                                example: name
+                                maximum: 607
+                                type:
+                                    - integer
+                                    - "null"
+                default:
+                    content:
+                        '*/*':
+                            schema:
+                                description: ꤭쐨纆駉
+                                properties:
+                                    '**bold**':
+                                        format: double
+                                        maximum: 424
+                                        type: number
+                                    燨ඁ篙:
+                                        description: kind
+                                        type: string
+                                required:
+                                    - '**bold**'
+                                type: object
+                    description: id
+                    headers:
+                        '**bold**':
+                            schema:
+                                default: 43
+                                format: float
+                                maximum: 6
+                                minimum: -5
+                                type: number
+            summary: pet
+            x-stability-level: beta
+tags:
+    - name: kind
+    - name: name

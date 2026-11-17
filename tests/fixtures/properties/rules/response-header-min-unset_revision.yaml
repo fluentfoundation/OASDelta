@@ -1,0 +1,189 @@
+{
+  "info": {
+    "title": "kind",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/items/{id}.json": {
+      "patch": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "deprecated": true,
+            "description": "\u003cb\u003e\u0026amp;",
+            "in": "header",
+            "name": "...",
+            "schema": {
+              "properties": {
+                "name": {
+                  "default": false,
+                  "nullable": true,
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "schema": {
+              "default": 9223372036854775807,
+              "nullable": true,
+              "type": "number"
+            },
+            "style": "simple"
+          },
+          {
+            "in": "query",
+            "name": "price",
+            "schema": {
+              "anyOf": [
+                {
+                  "description": "| table |",
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "nullable": true,
+                  "type": "boolean",
+                  "writeOnly": true
+                },
+                {
+                  "default": 4,
+                  "format": "double",
+                  "type": "number"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset=utf-8": {
+              "schema": {
+                "description": "Ünïcode",
+                "enum": [
+                  "status"
+                ],
+                "format": "password",
+                "nullable": true,
+                "type": "string"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "deprecated": true,
+                "description": "%20",
+                "format": "float",
+                "nullable": true,
+                "type": "number"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "deprecated": true,
+                  "format": "password",
+                  "nullable": true,
+                  "type": "string"
+                }
+              },
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "properties": {
+                    "[bracket]": {
+                      "properties": {
+                        "id": {
+                          "default": 1e+300,
+                          "nullable": true,
+                          "type": "integer"
+                        },
+                        "Ünïcode": {
+                          "deprecated": true,
+                          "enum": [
+                            46
+                          ],
+                          "minimum": 10,
+                          "nullable": true,
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "id"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "[bracket]"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "..."
+          },
+          "204": {
+            "description": "Ünïcode",
+            "headers": {
+              "a\r\nb": {
+                "schema": {
+                  "nullable": true,
+                  "type": "number"
+                }
+              },
+              "Ünïcode": {
+                "required": false,
+                "schema": {
+                  "nullable": true,
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/owners/{ownerId}/pets": {
+      "delete": {
+        "deprecated": true,
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ownerId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "null"
+          },
+          "400": {
+            "description": "_under_"
+          }
+        },
+        "summary": "핬⮿걿썟쿼阾焉"
+      }
+    }
+  }
+}

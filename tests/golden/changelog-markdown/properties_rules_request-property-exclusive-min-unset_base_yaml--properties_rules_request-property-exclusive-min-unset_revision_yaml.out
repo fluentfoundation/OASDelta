@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /owners/{ownerId}/pets
+-  the `pet` request property's exclusiveMinimum was unset from `true`
+
+
+
+
+
+

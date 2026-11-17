@@ -1,0 +1,3 @@
+::error title=response-header-exclusive-min-unset,file=./properties/rules/response-header-exclusive-min-unset_revision.yaml,line=76,col=9::in API PATCH /ünïcode/ключ the `owner` response header's exclusiveMinimum was unset from `true` for the status `2XX`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

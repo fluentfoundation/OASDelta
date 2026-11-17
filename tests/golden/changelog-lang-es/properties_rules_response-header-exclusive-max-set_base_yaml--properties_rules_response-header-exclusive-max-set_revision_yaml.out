@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[response-header-became-not-nullable] en ./properties/rules/response-header-exclusive-max-set_revision.yaml
+	en API PUT /store/order
+		el encabezado de respuesta ``tick`` se volvió no nulable para el estado `204`
+
+info	[response-header-exclusive-max-set] en ./properties/rules/response-header-exclusive-max-set_revision.yaml
+	en API PUT /store/order
+		el valor exclusiveMaximum del encabezado de respuesta ``tick`` fue establecido en `38.00` para el estado `204`
+
+

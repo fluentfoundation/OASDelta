@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-property-exclusive-min-increased] en ./properties/rules/response-property-exclusive-min-increased_revision.json
+	en API GET /owners/{ownerId}/pets
+		el valor exclusiveMinimum de la propiedad de respuesta `anyOf[subschema #2]/items/` fue incrementado de `-10.00` a `-7.00` para el estado `400`
+
+

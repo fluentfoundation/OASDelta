@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="request-property-any-of-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added `subschema #1, subschema #2` to the `owner/status` request property `anyOf` list</failure>
+    </testcase>
+    <testcase name="request-property-min-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `owner/status` request property's min was unset from `2.00`</failure>
+    </testcase>
+    <testcase name="request-property-type-generalized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `owner/status` request property `type` was widened from `integer` to `any`</failure>
+    </testcase>
+    <testcase name="request-required-property-became-not-write-only" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request required property `owner/status` became not write-only</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

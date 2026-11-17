@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="request-property-min-items-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `'single'` request property's minItems was increased to `2`</failure>
+    </testcase>
+    <testcase name="new-request-path-parameter" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new path request parameter `id`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `header` request parameter `id`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `path` request parameter `petId`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

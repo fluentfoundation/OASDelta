@@ -1,0 +1,2 @@
+::notice title=response-property-min-properties-increased,file=./properties/rules/response-property-min-properties-increased_revision.yaml,line=175,col=37::in API DELETE /pets/{petId} the `items/` response property's minProperties was increased from `1` to `6` for the response status `500`
+

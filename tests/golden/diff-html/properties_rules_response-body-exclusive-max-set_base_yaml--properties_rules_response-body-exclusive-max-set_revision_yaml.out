@@ -1,0 +1,72 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-3">Modified Endpoints: 3</h3>
+<hr>
+<p>GET /search</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 2XX
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/vnd.api+json
+<ul>
+<li>Schema changed
+<ul>
+<li>ExclusiveMax changed from null to 23</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>PUT /search</p>
+<ul>
+<li>Modified query param: pet
+<ul>
+<li>Required changed from false to true</li>
+</ul>
+</li>
+</ul>
+<p>DELETE /v1/items</p>
+<ul>
+<li>Modified cookie param: 孱
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from '' to 'null'</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 201
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/vnd.api+json
+<ul>
+<li>Schema changed
+<ul>
+<li>ExclusiveMax changed from null to 23</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

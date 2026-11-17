@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/v1/items":{"operations":{"modified":{"PATCH":{"parameters":{"modified":{"query":{"price":{"schema":{"minLength":{"from":0,"to":18}}}}}}}}}}}}}

@@ -1,0 +1,18 @@
+4 cambios: 2 error, 0 warning, 2 info
+error	[response-media-type-removed] en ./properties/rules/request-read-only-property-min-increased_revision.json
+	en API POST /pets
+		removido el tipo de media `application/json` de la respuesta con estado `500`
+
+error	[request-body-media-type-removed] en ./properties/rules/request-read-only-property-min-increased_revision.json
+	en API PUT /ünïcode/ключ
+		removido el tipo de media `application/json; charset=utf-8` del cuerpo de solicitud
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[request-read-only-property-min-increased] en ./properties/rules/request-read-only-property-min-increased_revision.json
+	en API PUT /ünïcode/ключ
+		el valor mínimo de la propiedad de solicitud de solo lectura `叚։⋋媣塦/anyOf[subschema #2]/` fue aumentado a `-8.00`
+
+

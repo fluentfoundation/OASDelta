@@ -1,0 +1,1 @@
+[{"id":"response-body-type-changed","text":"the response's body `type` changed from `integer` to `string` for status `201`","level":3,"operation":"GET","path":"/v1/items","section":"paths","revisionSource":{"file":"./properties/rules/response-body-default-value-removed_revision.yaml","line":85,"column":33},"fingerprint":"8cdee63c18d4"}]

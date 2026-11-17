@@ -1,0 +1,14 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PUT /items/{id}.json
+-  added `subschema #1` to the response body `allOf` list for the response status `201`
+-  the response's body min was increased from `-6.00` to `-3.00`
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+3 cambios: 1 error, 0 warning, 2 info
+error	[response-media-type-removed] en ./properties/rules/response-body-max-decreased_revision.yaml
+	en API PUT /owners/{ownerId}/pets
+		removido el tipo de media `application/json` de la respuesta con estado `default`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[response-body-max-decreased] en ./properties/rules/response-body-max-decreased_revision.yaml
+	en API PATCH /owners/{ownerId}/pets
+		el valor max del cuerpo de respuesta fue reducido de `244.00` a `241.00`
+
+

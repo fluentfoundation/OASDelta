@@ -1,0 +1,3 @@
+::error title=response-property-exclusive-max-unset,file=./properties/rules/request-property-exclusive-max-unset_revision.json::in API DELETE /ünïcode/ключ the `name` response property's exclusiveMaximum was unset from `28.00` for the response status `200`
+::notice title=request-property-exclusive-max-unset,file=./properties/rules/request-property-exclusive-max-unset_revision.json::in API POST /ünïcode/ключ the `ключ/name` request property's exclusiveMaximum was unset from `28.00`
+

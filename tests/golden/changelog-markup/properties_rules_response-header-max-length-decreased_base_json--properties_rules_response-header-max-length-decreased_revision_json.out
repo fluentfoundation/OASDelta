@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PUT /ünïcode/ключ
+-  the `條졿꽐` response header's maxLength was decreased from `104` to `9` for the status `404`
+
+
+
+
+
+

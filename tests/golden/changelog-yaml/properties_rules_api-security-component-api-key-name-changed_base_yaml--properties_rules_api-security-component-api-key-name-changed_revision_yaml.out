@@ -1,0 +1,18 @@
+- id: api-security-component-api-key-name-changed
+  text: the component security scheme `api_key` api key name changed from `owner` to `status`
+  level: 3
+  section: components
+  baseSource:
+    file: ./properties/rules/api-security-component-api-key-name-changed_base.yaml
+    line: 4
+    column: 9
+    endLine: 7
+    endColumn: 25
+  revisionSource:
+    file: ./properties/rules/api-security-component-api-key-name-changed_revision.yaml
+    line: 4
+    column: 9
+    endLine: 7
+    endColumn: 25
+  fingerprint: 643367ac039b
+

@@ -1,0 +1,108 @@
+# Fires response-body-min-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: 'a: b'
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /pets:
+        delete:
+            parameters:
+                - in: cookie
+                  name: owner
+                  schema:
+                    items:
+                        format: custom
+                        nullable: true
+                        type: boolean
+                    type: array
+                  style: form
+                - description: '[bracket]'
+                  in: header
+                  name: created
+                  schema:
+                    format: double
+                    minimum: 6
+                    type: number
+                - in: header
+                  name: kind
+                  required: false
+                  schema:
+                    format: double
+                    nullable: true
+                    readOnly: true
+                    type: number
+            responses:
+                "200":
+                    content:
+                        application/xml:
+                            schema:
+                                type: number
+                    description: tag
+                "204":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                maximum: 460
+                                nullable: true
+                                type: integer
+                    description: Ünïcode
+                    headers:
+                        崺듻䕔坫㕍뻕姹ᦶ:
+                            schema:
+                                enum:
+                                    - 18
+                                    - 16
+                                format: int32
+                                maximum: 204
+                                type: integer
+                default:
+                    content:
+                        application/xml:
+                            schema:
+                                format: custom
+                                type: boolean
+                    description: ключ
+                    headers:
+                        ключ:
+                            required: true
+                            schema:
+                                nullable: true
+                                type: integer
+            summary: price
+            tags:
+                - 名前
+                - tag
+        put:
+            operationId: put_pets
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            properties:
+                                '#hash':
+                                    description:  nbsp
+                                    enum:
+                                        - true
+                                        - false
+                                    format: custom
+                                    type: boolean
+                                name:
+                                    readOnly: true
+                                    type: number
+                                owner:
+                                    items:
+                                        nullable: true
+                                        type: boolean
+                                        writeOnly: true
+                                    maxItems: 57
+                                    type: array
+                            required:
+                                - owner
+                                - name
+                            type: object
+                description: 名前
+                required: true
+            responses:
+                "200":
+                    description: '`tick`'
+            summary: 名前

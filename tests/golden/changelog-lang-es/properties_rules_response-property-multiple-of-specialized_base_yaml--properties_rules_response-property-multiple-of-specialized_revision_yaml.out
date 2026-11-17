@@ -1,0 +1,20 @@
+4 cambios: 0 error, 1 warning, 3 info
+warning	[api-security-component-openid-connect-url-changed]
+	en components/securitySchemes
+		la URL de OpenID Connect del esquema de seguridad `openid` fue cambiada de `https://auth.example.com/.well-known/openid-configuration` a `https://id0.example.com/.well-known/openid-configuration`
+		Esta es una advertencia porque la especificación no indica si las credenciales obtenidas a través de la URL anterior siguen siendo aceptadas.
+
+info	[response-property-multiple-of-specialized] en ./properties/rules/response-property-multiple-of-specialized_revision.yaml
+	en API DELETE /pets
+		el valor multipleOf de la propiedad de respuesta `oneOf[subschema #1]/anyOf[subschema #2]/` fue especializado de `2.00` a `4.00` para el estado `500`
+		Este cambio no es incompatible porque el nuevo multipleOf es un múltiplo entero del anterior, por lo que todos los valores que el servidor puede producir ya eran válidos antes.
+
+info	[response-property-type-specialized] en ./properties/rules/response-property-multiple-of-specialized_revision.yaml
+	en API DELETE /pets
+		el `oneOf[subschema #1]/` de la propiedad de respuesta `format` fue reducido de `none` a `float` para el estado `500`
+
+info	[optional-response-header-removed] en ./properties/rules/response-property-multiple-of-specialized_revision.yaml
+	en API PATCH /search
+		removido el encabezado de respuesta opcional `퉈祅闄췱` para el estado `500`
+
+

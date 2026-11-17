@@ -1,0 +1,15 @@
+- id: request-parameter-list-of-types-widened
+  text: '`cookie` request parameter `!tag` list-of-types was widened by adding types `integer`'
+  level: 1
+  operation: PUT
+  path: /search
+  section: paths
+  fingerprint: 37ebb00ba625
+- id: request-parameter-min-items-unset
+  text: for the `cookie` request parameter `!tag`, the minItems was unset from `3`
+  level: 1
+  operation: PUT
+  path: /search
+  section: paths
+  fingerprint: 32a636d806b7
+

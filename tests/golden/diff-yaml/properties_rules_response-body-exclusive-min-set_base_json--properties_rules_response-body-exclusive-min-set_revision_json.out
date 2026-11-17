@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            multipart/form-data:
+                                                schema:
+                                                    exclusiveMin:
+                                                        from: null
+                                                        to: -3
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /search
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                multipart/form-data:
+                                    schema:
+                                        exclusiveMin:
+                                            from: null
+                                            to: -3
+

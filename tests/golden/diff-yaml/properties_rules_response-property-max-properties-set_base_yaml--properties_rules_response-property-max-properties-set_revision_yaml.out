@@ -1,0 +1,50 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    DELETE:
+                        description:
+                            from: ""
+                            to: kind
+                    POST:
+                        parameters:
+                            added:
+                                cookie:
+                                    - '*star'
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    items:
+                                                        maxProps:
+                                                            from: null
+                                                            to: 13
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /pets/{petId}
+        :   description:
+                from: ""
+                to: kind
+        ?   method: POST
+            path: /pets/{petId}
+        :   parameters:
+                added:
+                    cookie:
+                        - '*star'
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        items:
+                                            maxProps:
+                                                from: null
+                                                to: 13
+

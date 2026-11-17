@@ -1,0 +1,9 @@
+- id: request-body-min-properties-unset
+  text: the request's body minProperties was unset from `2`
+  level: 1
+  operation: POST
+  operationId: post_pets_{petId}
+  path: /pets/{petId}
+  section: paths
+  fingerprint: 8675146a971b
+

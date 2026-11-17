@@ -1,0 +1,84 @@
+# Fires request-parameter-exclusive-max-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: id
+    version: v1
+openapi: 3.1.0
+paths:
+    /pets/{petId}:
+        post:
+            operationId: name
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - deprecated: true
+                  in: header
+                  name: ключ
+                  schema:
+                    items:
+                        enum:
+                            - 9
+                            - 20
+                            - 12
+                            - -1
+                        format: int64
+                        minimum: 1
+                        type: integer
+                    type: array
+                    uniqueItems: true
+                - in: cookie
+                  name: created
+                  schema:
+                    description: ' leading'
+                    type:
+                        - string
+                        - "null"
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            type: object
+            responses:
+                "200":
+                    content:
+                        text/plain:
+                            schema:
+                                properties:
+                                    '#hash':
+                                        type: boolean
+                                    '`tick`':
+                                        type:
+                                            - string
+                                            - "null"
+                                    created:
+                                        description: price
+                                        enum:
+                                            - 12
+                                            - 14
+                                            - 8
+                                            - 5
+                                        type: integer
+                                    pet:
+                                        type: object
+                                required:
+                                    - '`tick`'
+                                    - created
+                                type: object
+                    description: '%20'
+                "500":
+                    content:
+                        application/xml:
+                            schema:
+                                type: object
+                        text/plain:
+                            schema:
+                                default: 1e+300
+                                type:
+                                    - number
+                                    - "null"
+                    description: 谕⟙謵鋹
+tags:
+    - name: owner
+    - name: 名前

@@ -1,0 +1,18 @@
+# Path item $ref cycles: a path item that is a $ref to itself, two that refer to each other, and the same for
+# webhooks. kin-openapi stops at the $ref that leads back into the chain and leaves that path
+# item empty; OasDelta overflowed the stack (found by RulePromotion).
+openapi: 3.1.0
+info: {title: path item cycles, version: "1"}
+paths:
+  /self:
+    $ref: '#/paths/~1self'
+  /a:
+    $ref: '#/paths/~1b'
+  /b:
+    summary: b
+    $ref: '#/paths/~1a'
+webhooks:
+  w1:
+    $ref: '#/webhooks/w2'
+  w2:
+    $ref: '#/webhooks/w1'

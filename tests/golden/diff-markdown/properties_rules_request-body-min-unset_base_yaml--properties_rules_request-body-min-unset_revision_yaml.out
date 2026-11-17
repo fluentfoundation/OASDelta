@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /v1/items
+- Request body changed
+  - Content changed
+    - Modified media type: multipart/form-data
+      - Schema changed
+        - Type changed from 'null, number' to 'boolean'
+        - Default changed from -26.125 to null
+        - ReadOnly changed from true to false
+        - Min changed from -2 to null
+
+

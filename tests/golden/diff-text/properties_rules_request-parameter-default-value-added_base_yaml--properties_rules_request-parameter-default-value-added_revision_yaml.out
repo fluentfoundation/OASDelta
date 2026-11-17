@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /owners/{ownerId}/pets
+- Modified query param: ⵃ㗩客೺
+  - Schema changed
+    - Type changed from '' to 'null'
+
+PUT /v1/items
+- Modified query param: created
+  - Schema changed
+    - Default changed from null to 731
+
+

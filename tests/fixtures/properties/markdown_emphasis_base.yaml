@@ -1,0 +1,61 @@
+# Enum values the HTML diff report (goldmark, GFM) renders as Markdown: strikethrough with one or two tildes,
+# CommonMark flanking around - and +, runs of three tildes, escaped tildes, and task-list checkboxes.
+openapi: 3.0.3
+info: {title: markdown emphasis, version: "1"}
+paths:
+  /items:
+    get:
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  p1: {type: string, enum: [x]}
+                  p2: {type: string, enum: [x]}
+                  p3: {type: string, enum: [x]}
+                  p4: {type: string, enum: [x]}
+                  p5: {type: string, enum: [x]}
+                  p6: {type: string, enum: [x]}
+                  p7: {type: string, enum: [x]}
+                  p8: {type: string, enum: [x]}
+                  p9: {type: string, enum: [x]}
+                  p10: {type: string, enum: [x]}
+                  p11: {type: string, enum: [x]}
+                  p12: {type: string, enum: [x]}
+                  p13: {type: string, enum: [x]}
+                  p14: {type: string, enum: [x]}
+                  p15: {type: string, enum: [x]}
+                  p16: {type: string, enum: [x]}
+                  p17: {type: string, enum: [x]}
+                  p18: {type: string, enum: [x]}
+                  p19: {type: string, enum: [x]}
+                  p20: {type: string, enum: [x]}
+                  p21: {type: string, enum: [x]}
+                  p22: {type: string, enum: [x]}
+                  p23: {type: string, enum: [x]}
+                  p24: {type: string, enum: [x]}
+                  p25: {type: string, enum: [x]}
+                  p26: {type: string, enum: [x]}
+                  p27: {type: string, enum: [x]}
+                  p28: {type: string, enum: [x]}
+                  p29: {type: string, enum: [x]}
+                  p30: {type: string, enum: [x]}
+                  p31: {type: string, enum: [x]}
+                  p32: {type: string, enum: [x]}
+                  p33: {type: string, enum: [x]}
+                  p34: {type: string, enum: [x]}
+                  p35: {type: string, enum: [x]}
+                  p36: {type: string, enum: [x]}
+                  p37: {type: string, enum: [x]}
+                  p38: {type: string, enum: [x]}
+                  p39: {type: string, enum: [x]}
+                  p40: {type: string, enum: [x]}
+                  p41: {type: string, enum: [x]}
+                  p42: {type: string, enum: [x]}
+                  p43: {type: string, enum: [x]}
+                  p44: {type: string, enum: [x]}
+                  p45: {type: string, enum: [x]}
+                  combo: {type: string, enum: [x]}

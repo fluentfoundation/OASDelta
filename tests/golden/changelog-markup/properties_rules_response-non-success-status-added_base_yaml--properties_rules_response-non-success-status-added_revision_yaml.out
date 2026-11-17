@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /store/order
+-  added the non-success response with the status `400`
+
+
+
+
+
+

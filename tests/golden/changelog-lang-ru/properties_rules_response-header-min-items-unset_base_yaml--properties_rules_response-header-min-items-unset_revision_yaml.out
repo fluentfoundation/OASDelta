@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[response-header-min-items-unset] в ./properties/rules/response-header-min-items-unset_revision.yaml
+	в API DELETE /v1/items
+		значение minItems у заголовка ответа `졳恂낭` удалено, предыдущее значение - `10`, для статуса `200`
+
+

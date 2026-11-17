@@ -1,0 +1,61 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/vnd.api+json:
+                                        schema:
+                                            items:
+                                                type:
+                                                    added:
+                                                        - string
+                                                    deleted:
+                                                        - object
+                                                description:
+                                                    from: pet
+                                                    to: ""
+                                                required:
+                                                    stringsdiff:
+                                                        deleted:
+                                                            - Ünïcode
+                                                properties:
+                                                    deleted:
+                                                        - Ünïcode
+                                                        - 傓
+                                                maxProps:
+                                                    from: 20
+                                                    to: null
+endpoints:
+    modified:
+        ?   method: POST
+            path: /ünïcode/ключ
+        :   requestBody:
+                content:
+                    modified:
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    type:
+                                        added:
+                                            - string
+                                        deleted:
+                                            - object
+                                    description:
+                                        from: pet
+                                        to: ""
+                                    required:
+                                        stringsdiff:
+                                            deleted:
+                                                - Ünïcode
+                                    properties:
+                                        deleted:
+                                            - Ünïcode
+                                            - 傓
+                                    maxProps:
+                                        from: 20
+                                        to: null
+

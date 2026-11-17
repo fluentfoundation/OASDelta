@@ -1,0 +1,2 @@
+::notice title=response-body-const-added,file=./properties/rules/response-body-const-added_revision.yaml::in API GET /v1/items the response body `application/vnd.api+json` const value `kind` was added for the status `500`
+

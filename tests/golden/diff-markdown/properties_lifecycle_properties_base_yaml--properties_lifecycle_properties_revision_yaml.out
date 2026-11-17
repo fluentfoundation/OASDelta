@@ -1,0 +1,66 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /r
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Properties changed
+          - Deleted property: removed
+          - Modified property: decreased
+            - Extensions changed
+              - Modified extension: x-stability-level
+                - Modified value from 'stable' to 'beta'
+          - Modified property: increased
+            - Extensions changed
+              - Modified extension: x-stability-level
+                - Modified value from 'beta' to 'stable'
+          - Modified property: invalid
+            - Extensions changed
+              - New extension: x-sunset
+            - Deprecated changed from false to true
+          - Modified property: missing
+            - Deprecated changed from false to true
+          - Modified property: too-small
+            - Extensions changed
+              - New extension: x-sunset
+            - Deprecated changed from false to true
+          - Modified property: with-sunset
+            - Extensions changed
+              - New extension: x-sunset
+            - Deprecated changed from false to true
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Required changed
+            - Deleted required property: required-removed
+          - Properties changed
+            - Deleted property: required-removed
+            - Modified property: decreased
+              - Extensions changed
+                - Modified extension: x-stability-level
+                  - Modified value from 'stable' to 'beta'
+            - Modified property: increased
+              - Extensions changed
+                - Modified extension: x-stability-level
+                  - Modified value from 'beta' to 'stable'
+            - Modified property: invalid
+              - Extensions changed
+                - New extension: x-sunset
+              - Deprecated changed from false to true
+            - Modified property: missing
+              - Deprecated changed from false to true
+            - Modified property: with-sunset
+              - Extensions changed
+                - New extension: x-sunset
+              - Deprecated changed from false to true
+
+

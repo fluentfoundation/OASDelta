@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                header:
+                                    a~b:
+                                        schema:
+                                            contains:
+                                                schemaAdded: true
+                                            maxContains:
+                                                from: null
+                                                to: 3
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   parameters:
+                modified:
+                    header:
+                        a~b:
+                            schema:
+                                contains:
+                                    schemaAdded: true
+                                maxContains:
+                                    from: null
+                                    to: 3
+

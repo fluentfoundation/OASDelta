@@ -1,0 +1,10 @@
+- id: optional-response-header-removed
+  text: "the optional response header `x\ty` removed for the status `200`"
+  level: 1
+  operation: DELETE
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/optional-response-header-removed_base.yaml
+  fingerprint: 5a653ae747de
+

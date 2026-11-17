@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-body-max-set] en ./properties/rules/response-body-max-set_revision.json
+	en API PATCH /owners/{ownerId}/pets
+		el valor max del cuerpo de respuesta fue establecido en `21.00`
+
+

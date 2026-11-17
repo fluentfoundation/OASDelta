@@ -1,0 +1,2 @@
+::error title=request-parameter-max-items-set,file=./properties/rules/request-parameter-max-items-set_revision.yaml::in API GET /search for the `query` request parameter `tag`, the maxItems was set to `15`
+

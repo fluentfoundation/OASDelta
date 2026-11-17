@@ -1,0 +1,63 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    multipart/form-data:
+                                        schema:
+                                            anyOf:
+                                                added:
+                                                    - index: 0
+                                                    - index: 1
+                                            type:
+                                                deleted:
+                                                    - boolean
+                                            format:
+                                                from: custom
+                                                to: ""
+                                            description:
+                                                from: "no"
+                                                to: ""
+                                            enum:
+                                                enumDeleted: true
+                                                deleted:
+                                                    - true
+                                                    - false
+                                            listOfTypes:
+                                                added:
+                                                    - integer
+endpoints:
+    modified:
+        ?   method: POST
+            path: /search
+        :   requestBody:
+                content:
+                    modified:
+                        multipart/form-data:
+                            schema:
+                                anyOf:
+                                    added:
+                                        - index: 0
+                                        - index: 1
+                                type:
+                                    deleted:
+                                        - boolean
+                                format:
+                                    from: custom
+                                    to: ""
+                                description:
+                                    from: "no"
+                                    to: ""
+                                enum:
+                                    enumDeleted: true
+                                    deleted:
+                                        - true
+                                        - false
+                                listOfTypes:
+                                    added:
+                                        - integer
+

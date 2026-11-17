@@ -1,0 +1,63 @@
+# Fires request-parameter-max-properties-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Pet:
+            enum:
+                - true
+                - false
+            type:
+                - boolean
+                - "null"
+    securitySchemes:
+        bearer:
+            scheme: basic
+            type: http
+info:
+    title: "~"
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /ünïcode/ключ:
+        patch:
+            operationId: owner
+            parameters:
+                - in: cookie
+                  name: Ünïcode
+                  schema:
+                    description: name
+                    maxProperties: 6
+                    type: object
+                - in: header
+                  name: name
+                  required: true
+                  schema:
+                    type:
+                        - integer
+                        - "null"
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            const: tag
+                            format: password
+                            type: string
+                    multipart/form-data:
+                        schema:
+                            items:
+                                type:
+                                    - number
+                                    - "null"
+                            type: array
+                required: true
+            responses:
+                2XX:
+                    description: id
+                    headers:
+                        "\U0001F600":
+                            required: true
+                            schema:
+                                deprecated: true
+                                format: int64
+                                type:
+                                    - integer
+                                    - "null"

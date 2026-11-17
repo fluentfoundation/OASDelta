@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-body-max-decreased] en ./properties/rules/request-body-max-decreased_revision.yaml
+	en API POST /items/{id}.json
+		el valor máximo del cuerpo de solicitud fue disminuido a `115.00`
+
+

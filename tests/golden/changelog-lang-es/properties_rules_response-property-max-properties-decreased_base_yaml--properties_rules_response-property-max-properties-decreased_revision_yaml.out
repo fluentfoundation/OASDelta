@@ -1,0 +1,11 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[api-security-component-api-key-name-changed]
+	en components/securitySchemes
+		el nombre de la clave API del esquema de seguridad `api_key` fue cambiado de `trailing ` a `id`
+
+info	[response-property-max-properties-decreased] en ./properties/rules/response-property-max-properties-decreased_revision.yaml
+	en API GET /owners/{ownerId}/pets
+		el valor maxProperties de la propiedad de respuesta `allOf[subschema #3]/` fue reducido de `5` a `4` para el estado `204`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+

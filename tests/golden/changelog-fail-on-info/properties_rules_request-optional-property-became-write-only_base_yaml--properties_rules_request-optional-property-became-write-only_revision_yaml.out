@@ -1,0 +1,1 @@
+[{"id":"request-optional-property-became-write-only","text":"the request optional property `items/owner` became write-only","level":1,"operation":"POST","operationId":"post_v1_items","path":"/v1/items","section":"paths","revisionSource":{"file":"./properties/rules/request-optional-property-became-write-only_revision.yaml","line":20,"column":41},"fingerprint":"c1f444becebd"}]

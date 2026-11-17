@@ -1,0 +1,31 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PATCH /items/{id}.json</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 201
+<ul>
+<li>Headers changed
+<ul>
+<li>Modified header: ünïcode
+<ul>
+<li>Schema changed
+<ul>
+<li>MultipleOf changed from 7 to null</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

@@ -1,0 +1,53 @@
+# Fires request-optional-property-became-write-only (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: '>'
+    version: v1
+openapi: 3.0.3
+paths:
+    /v1/items:
+        post:
+            description: created
+            operationId: post_v1_items
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            items:
+                                properties:
+                                    owner:
+                                        maxLength: 203
+                                        type: string
+                                        writeOnly: true
+                                    딇臷⮢䑠맆䃮:
+                                        description: 名前
+                                        type: number
+                                required:
+                                    - 딇臷⮢䑠맆䃮
+                                type: object
+                            type: array
+                    application/vnd.api+json:
+                        schema:
+                            enum:
+                                - 76
+                            type: number
+                required: true
+            responses:
+                "204":
+                    description: pet
+                default:
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    nullable: true
+                                    type: string
+                                type: array
+                        text/plain:
+                            schema:
+                                example: created
+                                nullable: true
+                                type: boolean
+                                writeOnly: true
+                    description: 名前
+            tags:
+                - created

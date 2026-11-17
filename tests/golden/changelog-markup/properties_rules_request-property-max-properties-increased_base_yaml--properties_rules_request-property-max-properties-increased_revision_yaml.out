@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /items/{id}.json
+-  the `status` request property's maxProperties was increased from `8` to `11`
+
+
+
+
+
+

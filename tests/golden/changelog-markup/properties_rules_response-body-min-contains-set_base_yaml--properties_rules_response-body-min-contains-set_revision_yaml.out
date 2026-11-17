@@ -1,0 +1,14 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /store/order
+-  added 'contains' constraint to the response body for the status `201`
+-  the response's body minContains was set to `2`
+
+
+
+
+
+

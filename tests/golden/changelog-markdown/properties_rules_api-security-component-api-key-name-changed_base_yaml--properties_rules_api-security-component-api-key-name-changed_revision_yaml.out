@@ -1,0 +1,10 @@
+# API Changelog 2.0 vs. 2.0
+
+
+
+## Components
+- :warning: the component security scheme `api_key` api key name changed from `owner` to `status`
+
+
+
+

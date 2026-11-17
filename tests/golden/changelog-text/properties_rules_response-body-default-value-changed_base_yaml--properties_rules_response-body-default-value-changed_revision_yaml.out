@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-body-default-value-changed] at ./properties/rules/response-body-default-value-changed_revision.yaml
+	in API PATCH /search
+		the response body `text/plain` default value changed from `61.00` to `id` for the status `201`
+
+

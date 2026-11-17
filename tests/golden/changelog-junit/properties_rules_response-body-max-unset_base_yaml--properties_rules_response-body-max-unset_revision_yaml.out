@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="response-body-max-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body max was unset from `59.00`</failure>
+    </testcase>
+    <testcase name="response-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body `type/format` changed from `number, null/double` to `string` for status `200`</failure>
+    </testcase>
+    <testcase name="response-body-became-not-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body became not nullable</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,13 @@
+- id: request-property-exclusive-min-unset
+  text: the `pet` request property's exclusiveMinimum was unset from `true`
+  level: 1
+  operation: POST
+  operationId: post_owners_{ownerId}_pets
+  path: /owners/{ownerId}/pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-property-exclusive-min-unset_base.yaml
+    line: 139
+    column: 37
+  fingerprint: 729967e35f95
+

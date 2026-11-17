@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error, in components/securitySchemes the component security scheme `api_key` api key name changed from `owner` to `status` [api-security-component-api-key-name-changed]. 
+
+

@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /store/order
+-  the `items/` request property's max was unset from `-4.00`
+
+
+
+
+
+

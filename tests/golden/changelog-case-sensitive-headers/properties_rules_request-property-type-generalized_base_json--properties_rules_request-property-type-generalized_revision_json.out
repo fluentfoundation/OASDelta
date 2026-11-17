@@ -1,0 +1,1 @@
+[{"id":"request-property-type-generalized","text":"the `anyOf[subschema #1]/items/` request property `type` was widened from `string` to `any`","level":1,"operation":"PATCH","operationId":"patch_pets_{petId}","path":"/pets/{petId}","section":"paths","fingerprint":"343729459d3f"}]

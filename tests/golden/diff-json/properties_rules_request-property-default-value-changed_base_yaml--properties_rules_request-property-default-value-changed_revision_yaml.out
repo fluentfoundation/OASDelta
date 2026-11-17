@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets/{petId}":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"*/*":{"schema":{"properties":{"modified":{"[bracket]":{"default":{"from":"pet","to":91}}}}}}}}}}}}}}}}

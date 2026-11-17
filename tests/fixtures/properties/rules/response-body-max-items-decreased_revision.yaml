@@ -1,0 +1,165 @@
+# Fires response-body-max-items-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Pet:
+            items:
+                properties:
+                    '---':
+                        type:
+                            - boolean
+                            - "null"
+                    owner:
+                        format: custom
+                        readOnly: true
+                        type:
+                            - boolean
+                            - "null"
+                    price:
+                        description: created
+                        format: password
+                        readOnly: true
+                        type: string
+                required:
+                    - price
+                type: object
+            type: array
+    securitySchemes:
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: 名前
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /search:
+        patch:
+            parameters:
+                - in: cookie
+                  name: '''single'''
+                  required: false
+                  schema:
+                    enum:
+                        - Ünïcode
+                    minLength: 4
+                    type:
+                        - string
+                        - "null"
+                - description: 㓂ꕂ록ꔸ聶㬵즞
+                  in: header
+                  name: "null"
+                  schema:
+                    description: 㚔덥昍湗죽剩ㄣݕ
+                    properties:
+                        status:
+                            maximum: 694
+                            type: integer
+                        Ünïcode:
+                            enum:
+                                - 3
+                                - 6
+                            format: int64
+                            type:
+                                - integer
+                                - "null"
+                    required:
+                        - status
+                    type: object
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            type:
+                                - integer
+                                - "null"
+            responses:
+                "200":
+                    description: '!tag'
+                "201":
+                    description: ' '
+                "500":
+                    content:
+                        application/vnd.api+json:
+                            itemSchema:
+                                type: string
+                            schema:
+                                items:
+                                    properties:
+                                        name:
+                                            default: 27
+                                            description: Ünïcode
+                                            format: int64
+                                            maximum: 747
+                                            type:
+                                                - integer
+                                                - "null"
+                                        pet:
+                                            description: '`tick`'
+                                            enum:
+                                                - true
+                                                - false
+                                            type:
+                                                - boolean
+                                                - "null"
+                                    required:
+                                        - name
+                                    type: object
+                                maxItems: 2
+                                type: array
+                        text/plain:
+                            schema:
+                                allOf:
+                                    - type: object
+                                    - deprecated: true
+                                      type: object
+                    description: id
+            security: []
+            summary: tag
+        post:
+            operationId: post_search
+            parameters:
+                - in: cookie
+                  name: tag
+                  schema:
+                    items:
+                        description: tag
+                        type:
+                            - boolean
+                            - "null"
+                    type: array
+            responses:
+                "500":
+                    description: ключ
+        put:
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            enum:
+                                - true
+                                - false
+                            type: boolean
+            responses:
+                "204":
+                    content:
+                        '*/*':
+                            schema:
+                                type: object
+                        application/json:
+                            schema:
+                                items:
+                                    anyOf:
+                                        - enum:
+                                            - 61
+                                            - 40
+                                          type:
+                                            - number
+                                            - "null"
+                                        - type: integer
+                                maxItems: 25
+                                type: array
+                    description: a~b
+security:
+    - bearer: []
+servers:
+    - url: https://api.example.com

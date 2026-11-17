@@ -1,0 +1,8 @@
+- id: response-body-min-unset
+  text: the response's body min was unset from `-8.00`
+  level: 3
+  operation: DELETE
+  path: /pets
+  section: paths
+  fingerprint: 43088ebd3910
+

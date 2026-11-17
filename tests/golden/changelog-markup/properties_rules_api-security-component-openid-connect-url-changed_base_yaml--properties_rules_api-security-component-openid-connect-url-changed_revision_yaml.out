@@ -1,0 +1,17 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /items/{id}.json
+- :warning: api path removed without deprecation
+
+
+
+
+## Components
+- :warning: the component security scheme `openid` OpenID Connect url changed from `https://auth.example.com/.well-known/openid-configuration` to `https://id2.example.com/.well-known/openid-configuration`
+
+
+
+

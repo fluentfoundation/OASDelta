@@ -1,0 +1,58 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>POST /pets/{petId}</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Deleted media type: application/xml</li>
+<li>Modified media type: text/plain
+<ul>
+<li>Schema changed
+<ul>
+<li>Required changed
+<ul>
+<li>Deleted required property: 'single'</li>
+<li>Deleted required property: line1<br>
+line2</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>Deleted property: 'single'</li>
+<li>Deleted property: line1<br>
+line2</li>
+<li>Deleted property: pet</li>
+<li>Modified property: id
+<ul>
+<li>Type changed from 'object' to 'string'</li>
+<li>Required changed
+<ul>
+<li>Deleted required property: tag</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>Deleted property: no</li>
+<li>Deleted property: tag</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

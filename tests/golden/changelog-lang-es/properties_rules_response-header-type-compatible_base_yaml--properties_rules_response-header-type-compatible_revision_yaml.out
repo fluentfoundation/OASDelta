@@ -1,0 +1,7 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-header-type-compatible] en ./properties/rules/response-header-type-compatible_revision.yaml
+	en API PATCH /ünïcode/ключ
+		el `0x1f` del encabezado de respuesta `type` cambió de `string` a `object` para el estado `200` (retrocompatible)
+		Este cambio es retrocompatible porque el valor de un encabezado se transmite como texto, por lo que cualquier tipo puede representarse como una cadena y no se impone en el envío.
+
+

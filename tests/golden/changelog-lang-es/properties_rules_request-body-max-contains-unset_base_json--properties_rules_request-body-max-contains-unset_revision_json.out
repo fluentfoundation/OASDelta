@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[request-body-contains-removed] en ./properties/rules/request-body-max-contains-unset_revision.json
+	en API PUT /search
+		removida la restricción 'contains' del cuerpo de solicitud
+
+info	[request-body-max-contains-unset] en ./properties/rules/request-body-max-contains-unset_revision.json
+	en API PUT /search
+		el valor maxContains del cuerpo de solicitud fue removido de `4`
+
+

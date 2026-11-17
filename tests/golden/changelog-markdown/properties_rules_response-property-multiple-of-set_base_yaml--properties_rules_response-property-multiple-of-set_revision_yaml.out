@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### DELETE /search
+-  the `若὾Ÿ⶜` response property's multipleOf was set to `2.00` for the response status `2XX`
+
+
+
+
+
+

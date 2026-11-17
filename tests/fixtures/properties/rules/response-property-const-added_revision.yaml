@@ -1,0 +1,86 @@
+# Fires response-property-const-added (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: '**bold**'
+    version: v1
+openapi: 3.0.3
+paths:
+    /pets:
+        get:
+            responses:
+                "204":
+                    content:
+                        '*/*':
+                            schema:
+                                format: float
+                                minimum: 9
+                                nullable: true
+                                type: number
+                        multipart/form-data:
+                            schema:
+                                default: -74.125
+                                example: '| table |'
+                                type: number
+                    description: ключ
+                    headers:
+                        "~":
+                            schema:
+                                type: integer
+                        name:
+                            schema:
+                                description: '**bold**'
+                                nullable: true
+                                type: number
+                "404":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                items:
+                                    allOf:
+                                        - const: tag
+                                          maxLength: 17
+                                          nullable: true
+                                          type: string
+                                        - readOnly: true
+                                          type: string
+                                type: array
+                    description: name
+        post:
+            description: Ünïcode
+            operationId: post_pets
+            parameters:
+                - in: query
+                  name: price
+                  schema:
+                    items:
+                        nullable: true
+                        type: boolean
+                    type: array
+                    uniqueItems: true
+                - in: cookie
+                  name: ключ
+                  required: false
+                  schema:
+                    items:
+                        default: 63
+                        description: 䉀Ӛ䥍
+                        format: int64
+                        minimum: 3
+                        nullable: true
+                        type: integer
+                    type: array
+                - in: query
+                  name: status
+                  schema:
+                    description: created
+                    type: number
+                    writeOnly: true
+            responses:
+                "200":
+                    description: tag
+                    headers:
+                        '''single''':
+                            schema:
+                                minLength: 4
+                                nullable: true
+                                type: string
+            x-stability-level: draft

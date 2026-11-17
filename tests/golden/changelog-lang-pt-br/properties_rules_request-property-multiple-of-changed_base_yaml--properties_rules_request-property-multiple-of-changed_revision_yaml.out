@@ -1,0 +1,17 @@
+3 alterações: 0 error, 1 warning, 2 info
+warning	[request-property-multiple-of-changed] em ./properties/rules/request-property-multiple-of-changed_revision.yaml
+	em API PUT /owners/{ownerId}/pets
+		o valor multipleOf da propriedade de requisição `items/` foi alterado de `5.00` para `2.00`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-required-property-became-read-only] em ./properties/rules/request-property-multiple-of-changed_revision.yaml
+	em API PATCH /items/{id}.json
+		a propriedade obrigatória `` tornou-se somente leitura para o status `404`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[request-property-all-of-added-annotation-only] em ./properties/rules/request-property-multiple-of-changed_revision.yaml
+	em API PUT /owners/{ownerId}/pets
+		`subschema #1` (apenas de anotação) foi adicionado à lista `allOf` da propriedade de requisição `items/`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+

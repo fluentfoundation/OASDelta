@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets/{petId}":{"operations":{"modified":{"GET":{"responses":{"modified":{"200":{"content":{"deleted":["application/json; charset=utf-8"]}}}}},"PATCH":{"requestBody":{"description":{"from":"","to":"id"},"required":{"from":true,"to":false}}}}}}}}}

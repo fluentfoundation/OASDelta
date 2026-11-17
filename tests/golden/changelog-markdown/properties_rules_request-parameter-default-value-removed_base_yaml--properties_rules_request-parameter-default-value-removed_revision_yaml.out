@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PUT /items/{id}.json
+- :warning: the schema of the `cookie` request parameter `price` became `false`: no value passes validation
+-  for the `cookie` request parameter `price`, default value `44.00` was removed
+
+
+
+
+
+

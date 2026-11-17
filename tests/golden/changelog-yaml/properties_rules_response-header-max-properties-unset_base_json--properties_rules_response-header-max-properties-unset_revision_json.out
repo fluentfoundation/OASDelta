@@ -1,0 +1,13 @@
+- id: response-header-max-properties-unset
+  text: "the `a\r\nb` response header's maxProperties was unset from `1` for the status `default`"
+  level: 3
+  operation: DELETE
+  path: /items/{id}.json
+  section: paths
+  fingerprint: 695a8bbc5c56
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+

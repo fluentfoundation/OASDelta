@@ -1,0 +1,27 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /store/order
+- Extensions changed
+  - New extension: x-sunset
+- Responses changed
+  - Modified response: 400
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Items changed
+            - Properties changed
+              - Modified property: owner
+                - Property 'AllOf' changed
+                  - Modified schema: subschema #2
+                    - Properties changed
+                      - Modified property: !tag
+                        - MaxLength changed from null to 13
+- Deprecated changed from false to true
+
+

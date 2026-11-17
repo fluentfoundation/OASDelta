@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/store/order":{"operations":{"modified":{"GET":{"parameters":{"added":{"path":["pet"]},"deleted":{"cookie":["pet"]}}}}}}}}}

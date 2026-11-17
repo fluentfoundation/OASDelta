@@ -1,0 +1,111 @@
+{
+  "components": {
+    "securitySchemes": {
+      "openid": {
+        "openIdConnectUrl": "https://auth.example.com/.well-known/openid-configuration",
+        "type": "openIdConnect"
+      }
+    }
+  },
+  "info": {
+    "title": "'single'",
+    "version": "2.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/v1/items": {
+      "get": {
+        "operationId": "get_v1_items",
+        "parameters": [
+          {
+            "description": "a: b",
+            "in": "query",
+            "name": "😀",
+            "schema": {
+              "items": {
+                "enum": [
+                  true,
+                  false
+                ],
+                "type": "boolean"
+              },
+              "type": "array"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "properties": {
+                    "pet": {
+                      "format": "int32",
+                      "minimum": 2,
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "pet"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "ключ",
+            "headers": {
+              "status": {
+                "required": true,
+                "schema": {
+                  "format": "byte",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "minimum": 1,
+                  "nullable": true,
+                  "type": "number"
+                }
+              }
+            },
+            "description": "ключ"
+          },
+          "default": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "items": {
+                    "type": "object"
+                  },
+                  "minItems": 1,
+                  "type": "array"
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "default": false,
+                  "format": "custom",
+                  "type": "boolean"
+                }
+              }
+            },
+            "description": "name"
+          }
+        },
+        "tags": [
+          "id"
+        ]
+      }
+    }
+  },
+  "security": [
+    {
+      "openid": []
+    }
+  ]
+}

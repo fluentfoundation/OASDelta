@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /owners/{ownerId}/pets
+- :warning: the `null` response header's `format` changed from `float` to `none` for the status `400`
+
+
+
+
+
+

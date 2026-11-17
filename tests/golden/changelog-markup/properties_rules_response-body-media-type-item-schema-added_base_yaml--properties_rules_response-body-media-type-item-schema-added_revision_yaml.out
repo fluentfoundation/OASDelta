@@ -1,0 +1,17 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /added/kind
+-  endpoint added
+
+
+### POST /pets/{petId}
+-  added an item schema to the media type `text/plain` for the response with the status `2XX`
+
+
+
+
+
+

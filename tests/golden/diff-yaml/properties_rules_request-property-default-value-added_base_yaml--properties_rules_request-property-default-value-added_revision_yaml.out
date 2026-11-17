@@ -1,0 +1,41 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/xml:
+                                        schema:
+                                            allOf:
+                                                modified:
+                                                    - base:
+                                                        index: 1
+                                                      revision:
+                                                        index: 1
+                                                      diff:
+                                                        default:
+                                                            from: null
+                                                            to: 77
+endpoints:
+    modified:
+        ?   method: POST
+            path: /store/order
+        :   requestBody:
+                content:
+                    modified:
+                        application/xml:
+                            schema:
+                                allOf:
+                                    modified:
+                                        - base:
+                                            index: 1
+                                          revision:
+                                            index: 1
+                                          diff:
+                                            default:
+                                                from: null
+                                                to: 77
+

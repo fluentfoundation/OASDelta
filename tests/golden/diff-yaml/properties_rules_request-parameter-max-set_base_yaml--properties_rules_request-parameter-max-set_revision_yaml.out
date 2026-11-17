@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    DELETE:
+                        parameters:
+                            modified:
+                                header:
+                                    '"quoted"':
+                                        schema:
+                                            max:
+                                                from: null
+                                                to: 21
+                        responses:
+                            modified:
+                                "201":
+                                    headers:
+                                        modified:
+                                            owner:
+                                                schema:
+                                                    discriminatorDiff:
+                                                        added: true
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /v1/items
+        :   parameters:
+                modified:
+                    header:
+                        '"quoted"':
+                            schema:
+                                max:
+                                    from: null
+                                    to: 21
+            responses:
+                modified:
+                    "201":
+                        headers:
+                            modified:
+                                owner:
+                                    schema:
+                                        discriminatorDiff:
+                                            added: true
+

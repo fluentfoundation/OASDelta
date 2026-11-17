@@ -1,0 +1,99 @@
+# Fires request-parameter-max-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            items:
+                deprecated: true
+                description: kind
+                properties:
+                    owner:
+                        format: custom
+                        type: boolean
+                type: object
+            type: array
+        Owner:
+            items:
+                deprecated: true
+                nullable: true
+                type: integer
+            type: array
+        Pet:
+            $ref: '#/components/schemas/Owner'
+    securitySchemes:
+        bearer:
+            bearerFormat: JWT
+            scheme: bearer
+            type: http
+info:
+    title: ⠍㈸䆹蠌㪩
+    version: v1
+openapi: 3.0.3
+paths:
+    /v1/items:
+        delete:
+            parameters:
+                - description: id
+                  in: query
+                  name: Ünïcode
+                  required: true
+                  schema:
+                    default: '*star'
+                    maxLength: 143
+                    pattern: \d{3}
+                    type: string
+                - in: header
+                  name: '"quoted"'
+                  schema:
+                    items:
+                        description: kind
+                        type: boolean
+                    maximum: 21
+                    type: array
+                - in: cookie
+                  name: owner
+                  schema:
+                    default: status
+                    deprecated: true
+                    type: string
+            responses:
+                2XX:
+                    description: price
+                "200":
+                    content:
+                        application/xml:
+                            schema:
+                                properties:
+                                    owner:
+                                        oneOf:
+                                            - nullable: true
+                                              type: string
+                                            - maxLength: 180
+                                              nullable: true
+                                              type: string
+                                            - $ref: '#/components/schemas/Pet'
+                                required:
+                                    - owner
+                                type: object
+                    description: 䴹䫡
+                "201":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                $ref: '#/components/schemas/Pet'
+                    description: status
+                    headers:
+                        created:
+                            required: false
+                            schema:
+                                type: boolean
+                        owner:
+                            schema:
+                                deprecated: true
+                                discriminator:
+                                    propertyName: status
+                                example: "yes"
+                                nullable: true
+                                readOnly: true
+                                type: integer
+tags:
+    - name: created

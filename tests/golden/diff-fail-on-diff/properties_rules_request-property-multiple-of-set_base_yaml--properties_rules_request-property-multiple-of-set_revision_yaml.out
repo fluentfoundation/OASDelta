@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/v1/items":{"operations":{"modified":{"PATCH":{"requestBody":{"content":{"modified":{"application/xml":{"schema":{"properties":{"modified":{"{brace}":{"oneOf":{"modified":[{"base":{"index":1},"revision":{"index":1},"diff":{"multipleOf":{"from":null,"to":4}}}]}}}}}}}}}}}}}}}}

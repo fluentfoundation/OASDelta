@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /v1/items
+- :warning: the request's body maxProperties was set to `11`
+
+
+
+
+
+

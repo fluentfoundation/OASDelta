@@ -1,0 +1,1 @@
+[{"id":"request-body-const-added","text":"the request body `*/*` const value `tag` was added","level":3,"operation":"PATCH","operationId":"patch_pets_{petId}","path":"/pets/{petId}","section":"paths","fingerprint":"9685bddcfcdd"}]

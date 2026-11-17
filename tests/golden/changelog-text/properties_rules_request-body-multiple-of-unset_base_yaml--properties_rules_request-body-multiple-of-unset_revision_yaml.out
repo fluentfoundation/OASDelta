@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[request-body-multiple-of-unset] at ./properties/rules/request-body-multiple-of-unset_revision.yaml
+	in API PATCH /owners/{ownerId}/pets
+		the request's body multipleOf was unset from `5.00`
+
+

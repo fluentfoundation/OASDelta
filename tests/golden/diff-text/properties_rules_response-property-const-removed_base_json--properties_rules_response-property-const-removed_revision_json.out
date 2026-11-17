@@ -1,0 +1,30 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+PATCH /store/order
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: owner
+              - Properties changed
+                - Modified property: 名前
+
+PUT /store/order
+- Request body changed
+  - Content changed
+    - Modified media type: application/json; charset=utf-8
+      - Schema changed
+        - Required changed
+          - Deleted required property: _under_
+        - Properties changed
+          - Deleted property: _under_
+
+

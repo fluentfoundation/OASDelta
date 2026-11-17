@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            ? "a\r\nb"
+                                                            :   readOnly:
+                                                                    from: false
+                                                                    to: true
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                ? "a\r\nb"
+                                                :   readOnly:
+                                                        from: false
+                                                        to: true
+

@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/xml:
+                                        schema:
+                                            format:
+                                                from: float
+                                                to: ""
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /v1/items
+        :   requestBody:
+                content:
+                    modified:
+                        application/xml:
+                            schema:
+                                format:
+                                    from: float
+                                    to: ""
+

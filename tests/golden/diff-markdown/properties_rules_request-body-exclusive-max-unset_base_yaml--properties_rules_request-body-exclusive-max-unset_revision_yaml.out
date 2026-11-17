@@ -1,0 +1,21 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /owners/{ownerId}/pets
+- Request body changed
+  - Content changed
+    - Modified media type: multipart/form-data
+      - Schema changed
+        - Type changed from 'integer, null' to 'number'
+        - Format changed from 'int64' to ''
+        - Description changed from '沗웭켰ꜥ⋣뢥' to ''
+        - Default changed from 82 to null
+        - ExclusiveMax changed from 1585 to null
+        - Min changed from 5 to null
+
+

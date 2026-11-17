@@ -1,0 +1,18 @@
+### New Endpoints: 3
+--------------------
+DELETE /pets/{petId}  
+GET /pets/{petId}  
+POST /pets/{petId}  
+
+### Deleted Endpoints: 3
+------------------------
+DELETE /pets/{petId}/v2  
+GET /pets/{petId}/v2  
+POST /pets/{petId}/v2  
+
+### Modified Endpoints: 1
+-------------------------
+PUT /owners/{ownerId}/pets
+- New path param: ownerId
+
+

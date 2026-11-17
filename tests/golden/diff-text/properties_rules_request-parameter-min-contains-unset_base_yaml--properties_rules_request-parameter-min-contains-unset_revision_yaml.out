@@ -1,0 +1,16 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /pets
+- Tags changed from 'created' to ''
+- Modified query param: ключ
+  - Schema changed
+- Modified cookie param: created
+  - Explode changed from true to null
+
+

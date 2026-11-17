@@ -1,0 +1,82 @@
+# Fires request-property-removed-with-deprecation (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        api_key:
+            in: query
+            name: _under_
+            type: apiKey
+        oauth:
+            flows:
+                clientCredentials:
+                    scopes:
+                        read: read access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: pet
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /store/order:
+        get:
+            operationId: get_store_order
+            responses:
+                "400":
+                    description: kind
+        put:
+            deprecated: true
+            description: ключ
+            parameters:
+                - description: pet
+                  in: cookie
+                  name: '**bold**'
+                  schema:
+                    deprecated: true
+                    nullable: true
+                    type: integer
+                - in: cookie
+                  name: a~b
+                  schema:
+                    items:
+                        nullable: true
+                        type: number
+                    maxItems: 17
+                    type: array
+                - in: header
+                  name: ྐ괩⾁㡭
+                  required: true
+                  schema:
+                    description: 名前
+                    properties:
+                        "1e3":
+                            enum:
+                                - kind
+                                - "0x1F"
+                                - ᣰ◁怌ꔄ岧
+                                - tag
+                            nullable: true
+                            type: string
+                        名前:
+                            default: 35
+                            readOnly: true
+                            type: number
+                    required:
+                        - 名前
+                    type: object
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            items:
+                                type: string
+                            type: array
+            responses:
+                "200":
+                    description: kind
+                "201":
+                    description: kind
+            security:
+                - api_key: []
+            tags:
+                - tag
+                - pet

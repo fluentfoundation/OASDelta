@@ -1,0 +1,1 @@
+[{"id":"response-header-added","text":"the response header `owner` was added for the status `204`","level":1,"operation":"DELETE","path":"/ünïcode/ключ","section":"paths","revisionSource":{"file":"./properties/rules/response-header-added_revision.yaml","line":34,"column":25,"endLine":37,"endColumn":46},"fingerprint":"f65816e953e6"}]

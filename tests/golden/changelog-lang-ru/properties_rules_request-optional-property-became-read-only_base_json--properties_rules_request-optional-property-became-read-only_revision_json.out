@@ -1,0 +1,7 @@
+1 изменений: 0 error, 1 warning, 0 info
+warning	[request-optional-property-became-read-only] в ./properties/rules/request-optional-property-became-read-only_revision.json
+	в API PATCH /store/order
+		необязательное поле запроса `created/items/@at` стало только для чтения (общая схема: `Pet`, также в `pet/name/items/@at`)
+		Это предупреждение, потому что свойство только для чтения не должно отправляться в запросе, а спецификация оставляет серверу решать, игнорировать его или отклонить запрос. Клиенты, которые его отправляют, могут получить отказ или обнаружить, что отправленное значение больше не используется.
+
+

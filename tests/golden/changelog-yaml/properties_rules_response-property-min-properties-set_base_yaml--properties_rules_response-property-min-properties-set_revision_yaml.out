@@ -1,0 +1,8 @@
+- id: response-property-min-properties-set
+  text: 'the `anyOf[subschema #2]/a~b` response property''s minProperties was set to `14` for the response status `201`'
+  level: 1
+  operation: PATCH
+  path: /owners/{ownerId}/pets
+  section: paths
+  fingerprint: 022a18ce0660
+

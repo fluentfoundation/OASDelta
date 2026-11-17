@@ -1,0 +1,2 @@
+::notice title=response-body-max-properties-decreased,file=./properties/rules/response-body-max-properties-decreased_revision.json::in API DELETE /store/order the response's body maxProperties was decreased from `15` to `13`
+

@@ -1,0 +1,7 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-optional-property-became-read-only] en ./properties/rules/response-optional-property-became-read-only_revision.yaml
+	en API PUT /items/{id}.json
+		la propiedad opcional `a
+b` se volvió de solo lectura para el estado `204`
+
+

@@ -1,0 +1,161 @@
+# Fires request-body-min-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            items:
+                oneOf:
+                    - type: boolean
+                    - type:
+                        - boolean
+                        - "null"
+                    - readOnly: true
+                      type:
+                        - integer
+                        - "null"
+            type: array
+        Item:
+            properties:
+                '&anchor':
+                    items:
+                        enum:
+                            - true
+                            - false
+                        format: custom
+                        type:
+                            - boolean
+                            - "null"
+                    type: array
+                嫚汾:
+                    properties:
+                        '|':
+                            type:
+                                - boolean
+                                - "null"
+                        created:
+                            deprecated: true
+                            readOnly: true
+                            type: boolean
+                        tag:
+                            type: string
+                        ключ:
+                            description: '|'
+                            type: string
+                    required:
+                        - '|'
+                        - ключ
+                    type: object
+            type: object
+        Owner:
+            items:
+                type:
+                    - number
+                    - "null"
+            type: array
+info:
+    title: tag
+    version: v1
+openapi: 3.1.0
+paths:
+    /v1/items:
+        get:
+            operationId: get_v1_items
+            parameters:
+                - in: header
+                  name: '-'
+                  schema:
+                    properties:
+                        'a: b':
+                            description: id
+                            readOnly: true
+                            type:
+                                - string
+                                - "null"
+                        Ünïcode:
+                            default: 28
+                            description: 躭퍬휄芆钰⼄鉭∤
+                            type: number
+                            writeOnly: true
+                    required:
+                        - 'a: b'
+                    type: object
+                - description: 'trailing '
+                  in: header
+                  name: status
+                  schema:
+                    properties:
+                        '-':
+                            deprecated: true
+                            enum:
+                                - true
+                                - false
+                            type: boolean
+                            writeOnly: true
+                        名前:
+                            format: int64
+                            type: integer
+                    required:
+                        - '-'
+                    type: object
+                - in: cookie
+                  name: ‮abc
+                  schema:
+                    items:
+                        description: status
+                        enum:
+                            - name
+                        format: password
+                        readOnly: true
+                        type:
+                            - string
+                            - "null"
+                    type: array
+            responses:
+                "204":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                description: '%20'
+                                type:
+                                    - integer
+                                    - "null"
+                                writeOnly: true
+                    description: price
+                    headers:
+                        ' leading':
+                            schema:
+                                type: boolean
+                "404":
+                    description: 名前
+            x-stability-level: alpha
+        patch:
+            parameters:
+                - in: query
+                  name: ключ
+                  schema:
+                    deprecated: true
+                    properties:
+                        price:
+                            enum:
+                                - -40.125
+                            minimum: -1
+                            type:
+                                - number
+                                - "null"
+                    type: object
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            default: -26.125
+                            minimum: -2
+                            readOnly: true
+                            type:
+                                - number
+                                - "null"
+            responses:
+                default:
+                    content:
+                        multipart/form-data:
+                            schema:
+                                $ref: '#/components/schemas/Error'
+                    description: "0x1F"

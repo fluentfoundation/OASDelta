@@ -1,0 +1,15 @@
+- id: required-response-header-removed
+  text: the mandatory response header `<b>&amp;` removed for the status `404`
+  level: 3
+  operation: GET
+  operationId: get_pets_{petId}
+  path: /pets/{petId}
+  section: paths
+  baseSource:
+    file: ./properties/rules/required-response-header-removed_base.yaml
+    line: 34
+    column: 25
+    endLine: 40
+    endColumn: 45
+  fingerprint: a2c358a8ae4e
+

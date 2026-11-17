@@ -1,0 +1,43 @@
+- id: request-parameter-removed
+  text: deleted the `query` request parameter `䔫䪐뫑襖`
+  comment: This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+  level: 2
+  operation: GET
+  path: /v1/items
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-removed-with-deprecation_base.yaml
+    line: 118
+    column: 19
+    endLine: 134
+    endColumn: 32
+  fingerprint: f15e5cba8412
+- id: new-optional-request-parameter
+  text: added the new optional `cookie` request parameter `**bold**`
+  level: 1
+  operation: GET
+  operationId: get_pets_{petId}
+  path: /pets/{petId}
+  section: paths
+  revisionSource:
+    file: ./properties/rules/request-parameter-removed-with-deprecation_revision.yaml
+    line: 65
+    column: 19
+    endLine: 75
+    endColumn: 33
+  fingerprint: 289266fe5d61
+- id: request-parameter-removed-with-deprecation
+  text: deleted the `query` request parameter `**bold**` with deprecation
+  level: 1
+  operation: GET
+  operationId: get_pets_{petId}
+  path: /pets/{petId}
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-removed-with-deprecation_base.yaml
+    line: 65
+    column: 19
+    endLine: 75
+    endColumn: 33
+  fingerprint: 13769b4f82c3
+

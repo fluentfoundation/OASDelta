@@ -1,0 +1,31 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+PATCH /items/{id}.json
+- Responses changed
+  - Modified response: 200
+    - Headers changed
+      - Modified header: >
+        - Schema changed
+          - Min changed from 4 to 2
+
+PUT /items/{id}.json
+- Deleted header param: owner
+- Modified path param: id
+  - Description changed from '' to 'price'
+- Responses changed
+  - Modified response: 201
+    - Content changed
+      - Modified media type: */*
+        - Schema changed
+          - Properties changed
+            - Modified property: _under_
+              - Items changed
+                - Format changed from '' to 'byte'
+
+

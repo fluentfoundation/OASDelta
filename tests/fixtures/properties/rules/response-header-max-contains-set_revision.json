@@ -1,0 +1,154 @@
+{
+  "components": {
+    "schemas": {
+      "Error": {
+        "deprecated": true,
+        "description": "‮abc",
+        "properties": {
+          "a\r\nb": {
+            "items": {
+              "default": 51,
+              "format": "double",
+              "maximum": 875,
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "kind": {
+            "description": "trailing ",
+            "format": "int32",
+            "nullable": true,
+            "type": "integer"
+          },
+          " nbsp": {
+            "maximum": 962,
+            "nullable": true,
+            "type": "integer"
+          },
+          "傐ᮄ鋷䲲쎌㻙舋絵": {
+            "properties": {
+              "@at": {
+                "format": "double",
+                "type": "number"
+              },
+              "created": {
+                "nullable": true,
+                "type": "boolean",
+                "writeOnly": true
+              },
+              "owner": {
+                "nullable": true,
+                "type": "string"
+              }
+            },
+            "required": [
+              "created"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "a\r\nb",
+          "kind",
+          " nbsp",
+          "傐ᮄ鋷䲲쎌㻙舋絵"
+        ],
+        "type": "object"
+      },
+      "Item": {
+        "items": {
+          "deprecated": true,
+          "nullable": true,
+          "type": "integer"
+        },
+        "type": "array",
+        "uniqueItems": true
+      },
+      "Pet": {
+        "items": {
+          "type": "object"
+        },
+        "type": "array"
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "bearerFormat": "JWT",
+        "scheme": "bearer",
+        "type": "http"
+      },
+      "oauth": {
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://auth.example.com/authorize",
+            "scopes": {
+              "admin": "admin access",
+              "write": "write access"
+            },
+            "tokenUrl": "https://auth.example.com/token"
+          },
+          "clientCredentials": {
+            "scopes": {
+              "admin": "admin access",
+              "write": "write access"
+            },
+            "tokenUrl": "https://auth.example.com/token"
+          }
+        },
+        "type": "oauth2"
+      }
+    }
+  },
+  "info": {
+    "title": "Ünïcode",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/pets/{petId}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "petId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "2XX": {
+            "description": "#hash"
+          },
+          "404": {
+            "description": "id",
+            "headers": {
+              "owner": {
+                "schema": {
+                  "nullable": true,
+                  "readOnly": true,
+                  "type": "number"
+                }
+              },
+              "妏": {
+                "schema": {
+                  "contains": {
+                    "type": "boolean"
+                  },
+                  "maxContains": 1,
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "oauth": []
+    }
+  ]
+}

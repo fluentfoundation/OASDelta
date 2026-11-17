@@ -1,0 +1,10 @@
+2 alterações: 2 error, 0 warning, 0 info
+error	[response-body-max-items-unset] em ./properties/rules/response-body-max-items-unset_revision.json
+	em API PATCH /items/{id}.json
+		o valor maxItems do corpo da resposta foi removido de `50`
+
+error	[response-body-type-changed] em ./properties/rules/response-body-max-items-unset_revision.json
+	em API PATCH /items/{id}.json
+		o `type` do corpo da resposta foi alterado de `array<integer>` para `object` para o status `200`
+
+

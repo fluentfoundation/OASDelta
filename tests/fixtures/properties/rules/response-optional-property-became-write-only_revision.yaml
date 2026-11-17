@@ -1,0 +1,244 @@
+{
+  "info": {
+    "title": "銛鑣䶰辈紨",
+    "version": "2.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/v1/items": {
+      "get": {
+        "description": "created",
+        "operationId": "get_v1_items",
+        "responses": {
+          "204": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "|": {
+                      "description": "id",
+                      "format": "int64",
+                      "nullable": true,
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "created"
+          },
+          "2XX": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "description": "C:\\path",
+                  "format": "byte",
+                  "type": "string"
+                }
+              }
+            },
+            "description": "status"
+          }
+        }
+      },
+      "patch": {
+        "operationId": "patch_v1_items",
+        "responses": {
+          "400": {
+            "description": "---"
+          },
+          "default": {
+            "description": "name"
+          }
+        },
+        "summary": "price",
+        "tags": [
+          "tag",
+          "name"
+        ]
+      },
+      "post": {
+        "operationId": "post_v1_items",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "owner",
+            "schema": {
+              "enum": [
+                16
+              ],
+              "maximum": 350,
+              "nullable": true,
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "items": {
+                  "properties": {
+                    "C:\\path": {
+                      "format": "custom",
+                      "nullable": true,
+                      "type": "boolean"
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "minItems": 2,
+                "type": "array"
+              }
+            }
+          },
+          "description": "😀",
+          "required": true
+        },
+        "responses": {
+          "500": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "description": "\"quoted\"",
+                  "properties": {
+                    "%20": {
+                      "deprecated": true,
+                      "properties": {
+                        "Ünïcode": {
+                          "description": "owner",
+                          "nullable": true,
+                          "type": "integer"
+                        }
+                      },
+                      "type": "object",
+                      "writeOnly": true
+                    },
+                    "price": {
+                      "type": "boolean"
+                    },
+                    "名前": {
+                      "items": {
+                        "enum": [
+                          "娘눀훥鐘糣䎒긒꥞",
+                          "ключ"
+                        ],
+                        "format": "date-time",
+                        "maxLength": 28,
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "price"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "名前"
+          },
+          "default": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "properties": {
+                    "name": {
+                      "properties": {
+                        " ": {
+                          "maximum": 584,
+                          "minimum": -10,
+                          "nullable": true,
+                          "type": "integer"
+                        },
+                        "`tick`": {
+                          "description": "status",
+                          "nullable": true,
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "price": {
+                      "maxLength": 49,
+                      "type": "string"
+                    },
+                    "ключ": {
+                      "properties": {
+                        "**bold**": {
+                          "description": " nbsp",
+                          "nullable": true,
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "ꦬ꾙婄": {
+                      "additionalProperties": true,
+                      "properties": {
+                        "a: b": {
+                          "default": 97,
+                          "minimum": 0,
+                          "nullable": true,
+                          "readOnly": true,
+                          "type": "number"
+                        },
+                        "owner": {
+                          "enum": [
+                            true,
+                            false
+                          ],
+                          "type": "boolean"
+                        },
+                        "tag": {
+                          "format": "custom",
+                          "nullable": true,
+                          "type": "boolean"
+                        },
+                        "名前": {
+                          "description": "똾蟄橓兖",
+                          "nullable": true,
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "owner",
+                        "tag"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "price"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "盠ŕ"
+          }
+        },
+        "tags": [
+          "名前"
+        ]
+      }
+    }
+  }
+}

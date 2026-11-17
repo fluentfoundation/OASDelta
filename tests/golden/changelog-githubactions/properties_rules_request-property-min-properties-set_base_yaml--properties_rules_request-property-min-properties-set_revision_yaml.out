@@ -1,0 +1,2 @@
+::error title=request-property-min-properties-set,file=./properties/rules/request-property-min-properties-set_revision.yaml,line=141,col=37::in API POST /v1/items the `items/items/` request property's minProperties was set to `4`
+

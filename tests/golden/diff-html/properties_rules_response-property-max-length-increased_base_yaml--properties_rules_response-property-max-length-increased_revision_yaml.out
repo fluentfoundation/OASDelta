@@ -1,0 +1,95 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PATCH /ünïcode/ключ</p>
+<ul>
+<li>Modified query param: owner
+<ul>
+<li>Schema changed
+<ul>
+<li>Property 'AnyOf' changed
+<ul>
+<li>Modified schema: subschema #3
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: *star
+<ul>
+<li>MaxLength changed from 3 to 107</li>
+</ul>
+</li>
+<li>Modified property: id
+<ul>
+<li>Property 'Not' changed
+<ul>
+<li>Schema deleted</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Modified response: default
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: <em>/</em>
+<ul>
+<li>Schema changed</li>
+</ul>
+</li>
+<li>Modified media type: application/json; charset=utf-8
+<ul>
+<li>Schema changed
+<ul>
+<li>Property 'AnyOf' changed
+<ul>
+<li>Modified schema: subschema #3
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: *star
+<ul>
+<li>MaxLength changed from 3 to 107</li>
+</ul>
+</li>
+<li>Modified property: id
+<ul>
+<li>Property 'Not' changed
+<ul>
+<li>Schema deleted</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

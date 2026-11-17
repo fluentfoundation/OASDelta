@@ -1,0 +1,24 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /ünïcode/ключ
+- Request body changed
+  - Content changed
+    - Modified media type: application/vnd.api+json
+      - Schema changed
+        - Items changed
+          - Type changed from 'object' to 'string'
+          - Description changed from 'pet' to ''
+          - Required changed
+            - Deleted required property: Ünïcode
+          - MaxProps changed from 20 to null
+          - Properties changed
+            - Deleted property: Ünïcode
+            - Deleted property: 傓
+
+

@@ -1,0 +1,3 @@
+::warning title=request-body-max-items-set,file=./properties/rules/request-body-max-items-set_revision.yaml,line=99,col=29::in API PUT /pets the request's body maxItems was set to `11`
+::notice title=response-optional-property-added,file=./properties/rules/request-body-max-items-set_revision.yaml,line=143,col=41::in API PUT /pets added the optional property `items/즤ꇔ缦䎖糀䱢렄꧑` to the response with the `default` status
+

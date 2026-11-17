@@ -1,0 +1,109 @@
+{
+  "components": {
+    "securitySchemes": {
+      "api_key": {
+        "in": "cookie",
+        "name": "😀",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "C:\\path",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/store/order": {
+      "get": {
+        "operationId": "get_store_order",
+        "responses": {
+          "2XX": {
+            "description": "name"
+          }
+        }
+      },
+      "post": {
+        "description": "0x1F",
+        "responses": {
+          "201": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "items": {
+                    "minProperties": 0,
+                    "properties": {
+                      "[bracket]": {
+                        "deprecated": true,
+                        "enum": [
+                          "-",
+                          "䫏명Ϧ狹윿⨩崄"
+                        ],
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      "name": {
+                        "allOf": [
+                          {
+                            "description": "ఄ쿲䣴"
+                          }
+                        ],
+                        "enum": [
+                          true,
+                          false
+                        ],
+                        "nullable": true,
+                        "type": "boolean"
+                      },
+                      "pet": {
+                        "deprecated": true,
+                        "enum": [
+                          true,
+                          false
+                        ],
+                        "type": "boolean"
+                      },
+                      "‮abc": {
+                        "minimum": 0,
+                        "readOnly": true,
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "pet"
+                    ],
+                    "type": "object"
+                  },
+                  "maxItems": 13,
+                  "minItems": 0,
+                  "type": "array"
+                }
+              },
+              "application/vnd.api+json": {
+                "schema": {
+                  "description": "'single'",
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "format": "custom",
+                  "type": "boolean"
+                }
+              }
+            },
+            "description": " leading"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "/relative"
+    },
+    {
+      "url": "https://api.example.com/v2"
+    }
+  ]
+}

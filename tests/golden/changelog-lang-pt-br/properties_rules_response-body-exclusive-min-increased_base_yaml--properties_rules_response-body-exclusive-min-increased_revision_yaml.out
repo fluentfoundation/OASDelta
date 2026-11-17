@@ -1,0 +1,15 @@
+3 alterações: 1 error, 0 warning, 2 info
+error	[request-parameter-max-set] em ./properties/rules/response-body-exclusive-min-increased_revision.yaml
+	em API DELETE /pets/{petId}
+		no parâmetro de requisição do tipo `path` e nome `petId`, o valor máximo foi definido como `21.00`
+		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+
+info	[response-body-exclusive-min-increased] em ./properties/rules/response-body-exclusive-min-increased_revision.yaml
+	em API DELETE /pets/{petId}
+		o valor exclusiveMinimum do corpo da resposta foi aumentado de `-7.00` para `-5.00`
+
+info	[response-header-added] em ./properties/rules/response-body-exclusive-min-increased_revision.yaml
+	em API DELETE /pets/{petId}
+		o cabeçalho de resposta `tag` foi adicionado para o status `2XX`
+
+

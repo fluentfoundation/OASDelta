@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /items/{id}.json
+- Request body changed
+  - Content changed
+    - Modified media type: application/json; charset=utf-8
+      - Schema changed
+        - Items changed
+          - Properties changed
+            - Modified property: null
+              - MaxLength changed from 9 to null
+
+

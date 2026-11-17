@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./properties/rules/request-body-max-properties-set_revision.json, in API POST /v1/items the request's body maxProperties was set to `11` [request-body-max-properties-set]. Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+

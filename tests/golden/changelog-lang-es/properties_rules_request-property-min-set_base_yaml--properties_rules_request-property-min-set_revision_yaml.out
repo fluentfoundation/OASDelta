@@ -1,0 +1,7 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-property-min-set] en ./properties/rules/request-property-min-set_revision.yaml
+	en API POST /ünïcode/ключ
+		el valor mínimo de la propiedad de solicitud `items/null` fue establecido en `-5.00`
+		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+
+

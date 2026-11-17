@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="new-required-request-header-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new required `tag` request header's property `oneOf[subschema #2]/kind`</failure>
+    </testcase>
+    <testcase name="request-header-property-became-required" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `tag` request header's property `oneOf[subschema #2]/kind` became required</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

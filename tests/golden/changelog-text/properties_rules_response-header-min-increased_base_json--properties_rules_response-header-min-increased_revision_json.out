@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-header-min-increased] at ./properties/rules/response-header-min-increased_revision.json
+	in API GET /store/order
+		the `name` response header's min was increased from `-8.00` to `-7.00` for the status `400`
+
+

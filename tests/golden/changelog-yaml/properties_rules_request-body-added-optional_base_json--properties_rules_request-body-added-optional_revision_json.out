@@ -1,0 +1,9 @@
+- id: request-body-added-optional
+  text: added optional request body
+  level: 1
+  operation: PATCH
+  operationId: patch_v1_items
+  path: /v1/items
+  section: paths
+  fingerprint: bc7511f7ecb5
+

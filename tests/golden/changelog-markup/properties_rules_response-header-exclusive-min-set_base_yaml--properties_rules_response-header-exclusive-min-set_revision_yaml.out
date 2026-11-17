@@ -1,0 +1,17 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /pets
+- :warning: api removed without deprecation
+
+
+### PATCH /store/order
+-  the `%20` response header's exclusiveMinimum was set to `true` for the status `201`
+
+
+
+
+
+

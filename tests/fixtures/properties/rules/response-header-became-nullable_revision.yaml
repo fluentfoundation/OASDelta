@@ -1,0 +1,87 @@
+# Fires response-header-became-nullable (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: status
+    version: v1
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        patch:
+            operationId: patch_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            type: object
+                required: true
+            responses:
+                2XX:
+                    description: pet
+                    headers:
+                        id:
+                            schema:
+                                enum:
+                                    - -3
+                                    - 7
+                                    - 2
+                                    - 16
+                                maximum: 450
+                                nullable: true
+                                readOnly: true
+                                type: integer
+                "204":
+                    content:
+                        '*/*':
+                            schema:
+                                description: "~"
+                                type: number
+                    description: Ünïcode
+                default:
+                    content:
+                        application/xml:
+                            schema:
+                                description: "0x1F"
+                                type: string
+                    description: |-
+                        line1
+                        line2
+                    headers:
+                        "\a":
+                            required: true
+                            schema:
+                                maximum: 719
+                                nullable: true
+                                type: number
+            tags:
+                - created
+                - price
+        post:
+            operationId: post_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - description: tag
+                  in: query
+                  name: kind
+                  schema:
+                    description: kind
+                    type: boolean
+                - in: cookie
+                  name: ключ
+                  schema:
+                    properties:
+                        created:
+                            minimum: 2
+                            type: integer
+                    type: object
+            responses:
+                "500":
+                    description: status

@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json; charset=utf-8:
+                                        schema:
+                                            minProps:
+                                                from: 2
+                                                to: 0
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets/{petId}
+        :   requestBody:
+                content:
+                    modified:
+                        application/json; charset=utf-8:
+                            schema:
+                                minProps:
+                                    from: 2
+                                    to: 0
+

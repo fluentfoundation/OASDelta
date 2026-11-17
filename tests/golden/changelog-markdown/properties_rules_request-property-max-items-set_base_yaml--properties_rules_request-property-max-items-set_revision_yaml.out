@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /items/{id}.json
+- :warning: the `-/anyOf[subschema #2]/` request property's maxItems was set to `1`
+
+
+
+
+
+

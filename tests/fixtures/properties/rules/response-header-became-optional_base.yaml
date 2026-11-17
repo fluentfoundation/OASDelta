@@ -1,0 +1,117 @@
+{
+  "components": {
+    "schemas": {
+      "Owner": {
+        "enum": [
+          true,
+          false
+        ],
+        "nullable": true,
+        "type": "boolean"
+      }
+    }
+  },
+  "info": {
+    "title": "*star",
+    "version": "2.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/owners/{ownerId}/pets": {
+      "delete": {
+        "operationId": "delete_owners_{ownerId}_pets",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ownerId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "explode": false,
+            "in": "header",
+            "name": "owner",
+            "schema": {
+              "description": "owner",
+              "properties": {
+                "tag": {
+                  "$ref": "#/components/schemas/Owner"
+                }
+              },
+              "required": [
+                "tag"
+              ],
+              "type": "object"
+            },
+            "style": "pipeDelimited"
+          },
+          {
+            "description": "name",
+            "in": "cookie",
+            "name": "ключ",
+            "required": false,
+            "schema": {
+              "description": "\u003cb\u003e\u0026amp;",
+              "nullable": true,
+              "type": "number"
+            }
+          },
+          {
+            "in": "header",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Owner"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "example": "0x1F",
+                  "format": "int64",
+                  "type": "integer"
+                }
+              }
+            },
+            "description": "'single'",
+            "headers": {
+              "owner": {
+                "schema": {
+                  "example": "tag",
+                  "maximum": 420,
+                  "nullable": true,
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "2XX": {
+            "description": "owner",
+            "headers": {
+              "#hash": {
+                "required": true,
+                "schema": {
+                  "example": "name",
+                  "nullable": true,
+                  "type": "number"
+                }
+              },
+              "名前": {
+                "required": true,
+                "schema": {
+                  "description": "owner",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

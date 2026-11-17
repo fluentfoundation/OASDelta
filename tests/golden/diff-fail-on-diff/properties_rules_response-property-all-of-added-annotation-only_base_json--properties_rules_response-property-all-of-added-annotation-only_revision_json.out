@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/store/order":{"operations":{"modified":{"POST":{"responses":{"modified":{"201":{"content":{"modified":{"application/json; charset=utf-8":{"schema":{"items":{"properties":{"modified":{"name":{"allOf":{"added":[{"index":0}]}}}}}}}}}}}}}}}}}}}

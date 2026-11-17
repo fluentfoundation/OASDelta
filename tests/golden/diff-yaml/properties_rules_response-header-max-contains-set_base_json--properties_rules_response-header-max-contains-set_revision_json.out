@@ -1,0 +1,35 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "404":
+                                    headers:
+                                        modified:
+                                            妏:
+                                                schema:
+                                                    contains:
+                                                        schemaAdded: true
+                                                    maxContains:
+                                                        from: null
+                                                        to: 1
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets/{petId}
+        :   responses:
+                modified:
+                    "404":
+                        headers:
+                            modified:
+                                妏:
+                                    schema:
+                                        contains:
+                                            schemaAdded: true
+                                        maxContains:
+                                            from: null
+                                            to: 1
+

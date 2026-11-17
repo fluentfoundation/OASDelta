@@ -1,0 +1,16 @@
+### New Endpoints: 1
+--------------------
+GET /added/kind  
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /pets/{petId}
+- Responses changed
+  - Modified response: 2XX
+    - Content changed
+      - Modified media type: text/plain
+
+

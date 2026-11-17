@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /search
+- Modified header param: price
+  - Schema changed
+    - Property 'AllOf' changed
+      - Schemas added: subschema #1, subschema #2
+      - Schemas deleted: subschema #1, subschema #2, subschema #3
+
+POST /store/order
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - MaxItems changed from 51 to 5
+
+

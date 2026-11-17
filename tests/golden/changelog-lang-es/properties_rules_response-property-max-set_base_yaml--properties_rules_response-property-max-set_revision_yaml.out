@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-property-max-set] en ./properties/rules/response-property-max-set_revision.yaml
+	en API DELETE /items/{id}.json
+		el valor max de la propiedad de respuesta `anyOf[subschema #2]/` fue establecido en `1.00` para el estado `400`
+
+

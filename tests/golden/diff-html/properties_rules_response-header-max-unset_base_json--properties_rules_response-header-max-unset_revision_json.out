@@ -1,0 +1,34 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>POST /search</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Headers changed
+<ul>
+<li>Modified header: null
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'number' to ''</li>
+<li>Format changed from 'double' to ''</li>
+<li>Min changed from 8 to null</li>
+<li>Max changed from 31 to null</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

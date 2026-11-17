@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "500":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    const:
+                                                        from: null
+                                                        to: kind
+endpoints:
+    modified:
+        ?   method: GET
+            path: /v1/items
+        :   responses:
+                modified:
+                    "500":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        const:
+                                            from: null
+                                            to: kind
+

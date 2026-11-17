@@ -1,0 +1,85 @@
+# Fires response-property-max-length-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            anyOf:
+                - $ref: '#/components/schemas/Owner'
+                - description: "\U0001F600"
+                  format: int64
+                  minimum: -2
+                  multipleOf: 2
+                  type: integer
+                - properties:
+                    '*star':
+                        format: byte
+                        maxLength: 107
+                        type:
+                            - string
+                            - "null"
+                    id:
+                        type:
+                            - boolean
+                            - "null"
+                    tag:
+                        description: owner
+                        enum:
+                            - 16
+                            - -2
+                            - 0
+                        example: '...'
+                        type: integer
+                  required:
+                    - tag
+                  type: object
+            discriminator:
+                mapping:
+                    a: '#/components/schemas/Owner'
+                propertyName: owner
+    securitySchemes:
+        api_key:
+            in: header
+            name: created
+            type: apiKey
+        bearer:
+            bearerFormat: JWT
+            scheme: basic
+            type: http
+info:
+    title: price
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /ünïcode/ключ:
+        patch:
+            parameters:
+                - in: query
+                  name: owner
+                  required: false
+                  schema:
+                    $ref: '#/components/schemas/Owner'
+            responses:
+                "201":
+                    description: '**bold**'
+                    headers:
+                        price:
+                            deprecated: true
+                            schema:
+                                type: integer
+                "204":
+                    description: tag
+                default:
+                    content:
+                        '*/*':
+                            schema:
+                                items:
+                                    type:
+                                        - integer
+                                        - "null"
+                                type: array
+                        application/json; charset=utf-8:
+                            schema:
+                                $ref: '#/components/schemas/Owner'
+                    description: 鷕옆办係Ꜷ儰駕
+            security:
+                - bearer: []
+                - api_key: []

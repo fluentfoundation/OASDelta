@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-required-write-only-property-added] en ./properties/rules/response-required-write-only-property-added_revision.json
+	en API PUT /search
+		agregada la propiedad requerida de solo escritura `[bracket]` a la respuesta con estado `201`
+
+

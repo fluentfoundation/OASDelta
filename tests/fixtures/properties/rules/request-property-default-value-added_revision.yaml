@@ -1,0 +1,83 @@
+# Fires request-property-default-value-added (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: "a\r\nb"
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /store/order:
+        post:
+            parameters:
+                - deprecated: true
+                  description: status
+                  in: cookie
+                  name: kind
+                  schema:
+                    items:
+                        description: '**bold**'
+                        enum:
+                            - created
+                            - "\U0001F600"
+                            - ""
+                        format: date-time
+                        type: string
+                    type: array
+                - description: ключ
+                  in: query
+                  name: 瞹톫
+                  schema:
+                    type: boolean
+                  style: deepObject
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            description: 名前
+                            enum:
+                                - -58.125
+                            format: float
+                            type: number
+                    application/xml:
+                        schema:
+                            allOf:
+                                - type:
+                                    - boolean
+                                    - "null"
+                                - default: 77
+                                  items:
+                                    enum:
+                                        - true
+                                        - false
+                                    type:
+                                        - boolean
+                                        - "null"
+                                  type: array
+                required: true
+            responses:
+                "400":
+                    content:
+                        application/xml:
+                            schema:
+                                properties:
+                                    name:
+                                        properties:
+                                            '#hash':
+                                                description: created
+                                                format: float
+                                                minimum: 8
+                                                type: number
+                                            Ünïcode:
+                                                type:
+                                                    - integer
+                                                    - "null"
+                                        required:
+                                            - Ünïcode
+                                        type: object
+                                    "no":
+                                        description: Ünïcode
+                                        type:
+                                            - string
+                                            - "null"
+                                type: object
+                    description: "~"
+servers:
+    - url: https://api.example.com

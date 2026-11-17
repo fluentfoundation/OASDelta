@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[optional-response-header-removed] в ./properties/rules/optional-response-header-removed_revision.yaml
+	в API DELETE /items/{id}.json
+		удалён ранее необязательный заголовок ответа `x	y` для ответа со статусом `200`
+
+

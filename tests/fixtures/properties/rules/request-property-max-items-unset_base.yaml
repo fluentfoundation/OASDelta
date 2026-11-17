@@ -1,0 +1,158 @@
+# Fires request-property-max-items-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Pet:
+            type: number
+info:
+    title: 名前
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /pets:
+        patch:
+            deprecated: true
+            operationId: patch_pets
+            parameters:
+                - in: cookie
+                  name: "1e3"
+                  required: false
+                  schema:
+                    oneOf:
+                        - description: '[bracket]'
+                          enum:
+                            - 11
+                            - 14
+                          format: int64
+                          type: integer
+                        - description: Ünïcode
+                          format: custom
+                          readOnly: true
+                          type: boolean
+                - description: 罫㢭쉑뚗ろ姼
+                  in: query
+                  name: id
+                  schema:
+                    type: boolean
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            description: ключ
+                            nullable: true
+                            type: boolean
+                    multipart/form-data:
+                        schema:
+                            allOf:
+                                - anyOf:
+                                    - format: custom
+                                      readOnly: true
+                                      type: boolean
+                                    - type: string
+                                    - $ref: '#/components/schemas/Pet'
+                                  maxItems: 11
+                                - $ref: '#/components/schemas/Pet'
+                                - description: 名前
+                                  type: object
+                required: true
+            responses:
+                2XX:
+                    description: owner
+                "200":
+                    description: name
+                "204":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                maxProperties: 14
+                                type: object
+                    description: 䎸켐脝通烚
+    /search:
+        get:
+            parameters:
+                - in: cookie
+                  name: '|'
+                  required: false
+                  schema:
+                    nullable: true
+                    type: string
+                - description: kind
+                  in: header
+                  name: '`tick`'
+                  required: true
+                  schema:
+                    type: object
+            responses:
+                "200":
+                    content:
+                        '*/*':
+                            schema:
+                                nullable: true
+                                type: number
+                    description: ‑曷媧
+                "404":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                nullable: true
+                                type: string
+                    description: kind
+                "500":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                description: 鯌萱傿㨁㙯
+                                type: string
+                    description: status
+            summary: created
+        put:
+            operationId: put_search
+            parameters:
+                - description: ключ
+                  in: query
+                  name: 紤”ԡ䶦蛎䗵듟
+                  schema:
+                    items:
+                        format: password
+                        readOnly: true
+                        type: string
+                    type: array
+                - in: query
+                  name: name
+                  schema:
+                    type: object
+                - in: query
+                  name: ключ
+                  required: true
+                  schema:
+                    items:
+                        description: name
+                        format: uuid
+                        readOnly: true
+                        type: string
+                    maxItems: 63
+                    type: array
+                  style: pipeDelimited
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            items:
+                                description: tag
+                                maximum: 486
+                                nullable: true
+                                type: integer
+                            minItems: 3
+                            type: array
+                    multipart/form-data:
+                        schema:
+                            description: C:\path
+                            minimum: 2
+                            nullable: true
+                            type: integer
+                required: true
+            responses:
+                "201":
+                    description:  nbsp
+                default:
+                    description: '!tag'
+            summary: 啲䫸酎镲

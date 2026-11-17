@@ -1,0 +1,7 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-property-all-of-removed-annotation-only] en ./properties/rules/request-property-all-of-removed-annotation-only_revision.yaml
+	en API PUT /owners/{ownerId}/pets
+		`subschema #1` (solo de anotación) fue removido de la lista `allOf` de la propiedad de solicitud `a: b/oneOf[subschema #3]/`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+

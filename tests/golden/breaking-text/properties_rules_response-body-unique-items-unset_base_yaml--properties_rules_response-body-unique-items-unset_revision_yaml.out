@@ -1,0 +1,14 @@
+3 changes: 3 error, 0 warning, 0 info
+error	[response-body-max-items-unset] at ./properties/rules/response-body-unique-items-unset_revision.yaml
+	in API POST /items/{id}.json
+		the response's body maxItems was unset from `83`
+
+error	[response-body-type-changed] at ./properties/rules/response-body-unique-items-unset_revision.yaml
+	in API POST /items/{id}.json
+		the response's body `type` changed from `array<object>` to `boolean` for status `default`
+
+error	[response-body-unique-items-unset] at ./properties/rules/response-body-unique-items-unset_revision.yaml
+	in API POST /items/{id}.json
+		the response's body uniqueItems was unset
+
+

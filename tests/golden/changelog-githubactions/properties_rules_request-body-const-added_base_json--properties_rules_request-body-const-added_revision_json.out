@@ -1,0 +1,2 @@
+::error title=request-body-const-added,file=./properties/rules/request-body-const-added_revision.json::in API PATCH /pets/{petId} the request body `*/*` const value `tag` was added
+

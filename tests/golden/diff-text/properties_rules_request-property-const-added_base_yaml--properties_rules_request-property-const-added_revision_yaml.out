@@ -1,0 +1,27 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: 1
+------------------------
+GET /store/order  
+
+### Modified Endpoints: 2
+-------------------------
+POST /pets/{petId}
+- Request body changed
+  - Content changed
+    - Modified media type: multipart/form-data
+      - Schema changed
+        - Properties changed
+          - Modified property: price
+
+PUT /store/order
+- Responses changed
+  - Modified response: 201
+    - Content changed
+      - Modified media type: application/xml
+        - Schema changed
+          - Property 'OneOf' changed
+            - Schemas added: subschema #1
+
+

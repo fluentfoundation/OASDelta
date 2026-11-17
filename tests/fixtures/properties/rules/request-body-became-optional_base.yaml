@@ -1,0 +1,301 @@
+{
+  "components": {
+    "securitySchemes": {
+      "api_key": {
+        "in": "header",
+        "name": "id",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "created",
+    "version": "1.0.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/pets/{petId}": {
+      "get": {
+        "operationId": "get_pets_{petId}",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "petId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "created",
+            "in": "header",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "allOf": [
+                {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                {
+                  "default": 43,
+                  "format": "int64",
+                  "minimum": -5,
+                  "type": "integer",
+                  "writeOnly": true
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "properties": {
+                    "\u003cb\u003e\u0026amp;": {
+                      "minLength": 3,
+                      "readOnly": true,
+                      "type": "string"
+                    },
+                    "kind": {
+                      "items": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "type": "array"
+                    },
+                    "pet": {
+                      "default": "created",
+                      "description": "price",
+                      "maxLength": 241,
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "price": {
+                      "properties": {
+                        "created": {
+                          "type": "integer"
+                        },
+                        "id": {
+                          "enum": [
+                            51.375,
+                            11.625,
+                            -25.375
+                          ],
+                          "type": "number"
+                        },
+                        "owner": {
+                          "description": "x\ty",
+                          "enum": [
+                            68,
+                            -90.375,
+                            -9223372036854775808
+                          ],
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "owner",
+                        "created",
+                        "id"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "pet",
+                    "kind"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "瀑죙瀡젌옥"
+          }
+        },
+        "summary": "---"
+      },
+      "patch": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "petId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "deprecated": true,
+            "in": "cookie",
+            "name": "tag",
+            "schema": {
+              "format": "double",
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          {
+            "explode": true,
+            "in": "query",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "oneOf": [
+                {
+                  "maximum": 760,
+                  "readOnly": true,
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                {
+                  "description": "pet",
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "deprecated": true,
+            "in": "query",
+            "name": " leading",
+            "schema": {
+              "description": " leading",
+              "minimum": 4,
+              "type": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "format": "date-time",
+                "maxLength": 215,
+                "type": "string"
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "deprecated": true,
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "status"
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "petId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "---"
+          },
+          "400": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "format": "custom",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    {
+                      "items": {
+                        "enum": [
+                          94.625
+                        ],
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "format": "int32",
+                      "type": "integer",
+                      "writeOnly": true
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "\u003cb\u003e\u0026amp;"
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "example": "ключ",
+                  "maximum": 56,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "C:\\path",
+            "headers": {
+              "ключ": {
+                "deprecated": true,
+                "schema": {
+                  "format": "float",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

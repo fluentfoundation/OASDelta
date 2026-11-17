@@ -1,0 +1,115 @@
+# Fires request-body-max-properties-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: status
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /search:
+        put:
+            deprecated: true
+            operationId: put_search
+            parameters:
+                - in: cookie
+                  name: C:\path
+                  schema:
+                    deprecated: true
+                    type: object
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            additionalProperties: false
+                            maxProperties: 12
+                            properties:
+                                "no":
+                                    type:
+                                        - number
+                                        - "null"
+                            required:
+                                - "no"
+                            type: object
+                    multipart/form-data:
+                        schema:
+                            items:
+                                description: pet
+                                minProperties: 2
+                                type: object
+                            type: array
+                required: true
+            responses:
+                2XX:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                allOf:
+                                    - description: kind
+                                      type:
+                                        - boolean
+                                        - "null"
+                                    - enum:
+                                        - Ünïcode
+                                        - "null"
+                                        - price
+                                        - '*star'
+                                      type:
+                                        - string
+                                        - "null"
+                                    - items:
+                                        readOnly: true
+                                        type: string
+                                      type: array
+                        text/plain:
+                            schema:
+                                properties:
+                                    ключ:
+                                        properties:
+                                            '{brace}':
+                                                maximum: 915
+                                                multipleOf: 5
+                                                type:
+                                                    - integer
+                                                    - "null"
+                                            created:
+                                                type: number
+                                            owner:
+                                                enum:
+                                                    - 18
+                                                    - -3
+                                                    - 3
+                                                    - 6
+                                                format: int64
+                                                minimum: 2
+                                                type: integer
+                                            ム䱬䡹:
+                                                description: tag
+                                                format: custom
+                                                type:
+                                                    - boolean
+                                                    - "null"
+                                        required:
+                                            - owner
+                                        type: object
+                                type: object
+                    description: ключ
+                    headers:
+                        name:
+                            schema:
+                                description: 名前
+                                maximum: 811
+                                type:
+                                    - integer
+                                    - "null"
+                                writeOnly: true
+                "500":
+                    content:
+                        text/plain:
+                            schema:
+                                description: id
+                                enum:
+                                    - name
+                                type:
+                                    - string
+                                    - "null"
+                    description: status
+servers:
+    - url: https://api.example.com/v2

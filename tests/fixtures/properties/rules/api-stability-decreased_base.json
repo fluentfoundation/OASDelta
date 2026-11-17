@@ -1,0 +1,27 @@
+{
+  "info": {
+    "title": "Ünïcode",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/ünïcode/ключ": {
+      "delete": {
+        "operationId": "ключ",
+        "responses": {
+          "204": {
+            "description": "name"
+          },
+          "default": {
+            "description": "a: b"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "kind"
+    }
+  ]
+}

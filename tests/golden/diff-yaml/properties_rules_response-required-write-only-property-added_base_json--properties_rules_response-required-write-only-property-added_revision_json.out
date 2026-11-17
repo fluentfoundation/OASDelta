@@ -1,0 +1,39 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            '*/*':
+                                                schema:
+                                                    required:
+                                                        stringsdiff:
+                                                            added:
+                                                                - '[bracket]'
+                                                    properties:
+                                                        added:
+                                                            - '[bracket]'
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /search
+        :   responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                '*/*':
+                                    schema:
+                                        required:
+                                            stringsdiff:
+                                                added:
+                                                    - '[bracket]'
+                                        properties:
+                                            added:
+                                                - '[bracket]'
+

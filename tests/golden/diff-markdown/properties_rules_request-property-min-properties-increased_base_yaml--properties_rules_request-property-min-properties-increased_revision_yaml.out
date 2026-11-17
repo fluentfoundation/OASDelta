@@ -1,0 +1,22 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /store/order
+- Request body changed
+  - Content changed
+    - Modified media type: */*
+      - Schema changed
+        - Properties changed
+          - Modified property: name
+            - MinProps changed from 1 to 3
+- Responses changed
+  - Modified response: 2XX
+    - Headers changed
+      - Deleted header: ૉ硡쇲䦨員䒗
+
+

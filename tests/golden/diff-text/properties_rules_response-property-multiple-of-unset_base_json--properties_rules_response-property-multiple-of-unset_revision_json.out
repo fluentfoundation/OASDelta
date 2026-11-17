@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /v1/items
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Properties changed
+            - Modified property: pet
+              - MultipleOf changed from 3 to null
+
+

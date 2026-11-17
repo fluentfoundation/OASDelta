@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/store/order":{"operations":{"modified":{"PUT":{"requestBody":{"content":{"modified":{"application/xml":{"schema":{"items":{"anyOf":{"modified":[{"base":{"index":1},"revision":{"index":1},"diff":{"contentMediaType":{"from":"application/json","to":""},"contentSchema":{"schemaDeleted":true}}}]}}}}}}}}}}}}}}

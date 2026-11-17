@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error, in components/securitySchemes the component security scheme `api_key` api key location changed from `query` to `cookie` [api-security-component-api-key-in-changed]. 
+
+

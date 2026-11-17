@@ -1,0 +1,194 @@
+{
+  "info": {
+    "title": "tag",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/v1/items": {
+      "delete": {
+        "operationId": "delete_v1_items",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "Ünïcode",
+            "required": false,
+            "schema": {
+              "properties": {
+                "kind": {
+                  "description": "price",
+                  "format": "double",
+                  "maximum": 525,
+                  "nullable": true,
+                  "type": "number"
+                },
+                "owner": {
+                  "enum": [
+                    14
+                  ],
+                  "maximum": 693,
+                  "type": "integer"
+                },
+                "tag": {
+                  "enum": [
+                    19,
+                    12,
+                    0,
+                    4
+                  ],
+                  "format": "int64",
+                  "nullable": true,
+                  "readOnly": true,
+                  "type": "integer"
+                },
+                "࿀฾腶ꬑ㡗": {
+                  "maxLength": 37,
+                  "nullable": true,
+                  "pattern": "\\d{3}",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "owner",
+                "tag"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "in": "header",
+            "name": "owner",
+            "schema": {
+              "additionalProperties": true,
+              "properties": {
+                "kind": {
+                  "maximum": 328,
+                  "nullable": true,
+                  "type": "integer"
+                },
+                "pet": {
+                  "nullable": true,
+                  "type": "string",
+                  "writeOnly": true
+                },
+                "tag": {
+                  "format": "int32",
+                  "minimum": 6,
+                  "nullable": true,
+                  "readOnly": true,
+                  "type": "integer"
+                }
+              },
+              "type": "object"
+            }
+          },
+          {
+            "description": "owner",
+            "in": "query",
+            "name": "created",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "諿闭哒潋퐨",
+            "headers": {
+              "Ünïcode": {
+                "schema": {
+                  "example": "kind",
+                  "nullable": true,
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Ünïcode",
+          "id"
+        ]
+      },
+      "patch": {
+        "operationId": "patch_v1_items",
+        "parameters": [
+          {
+            "description": "tag",
+            "in": "cookie",
+            "name": "owner",
+            "schema": {
+              "description": "a/b",
+              "enum": [
+                11,
+                19
+              ],
+              "nullable": true,
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "옣ࡻ眠铟썜": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "format": "float",
+                  "minimum": 2,
+                  "nullable": true,
+                  "type": "number"
+                }
+              }
+            },
+            "description": " nbsp"
+          },
+          "201": {
+            "description": "status",
+            "headers": {
+              "created": {
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "default": {
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "items": {
+                    "format": "double",
+                    "maximum": 885,
+                    "type": "number",
+                    "writeOnly": true
+                  },
+                  "maxItems": 9,
+                  "type": "array"
+                }
+              }
+            },
+            "description": "‮abc"
+          }
+        },
+        "tags": [
+          "tag"
+        ]
+      }
+    }
+  }
+}

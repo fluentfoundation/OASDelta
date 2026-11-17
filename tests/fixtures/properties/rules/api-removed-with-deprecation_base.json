@@ -1,0 +1,83 @@
+{
+  "components": {
+    "schemas": {
+      "Owner": {
+        "items": {
+          "deprecated": true,
+          "type": "boolean"
+        },
+        "minItems": 1,
+        "type": "array"
+      }
+    }
+  },
+  "info": {
+    "title": "price",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/pets": {
+      "delete": {
+        "deprecated": true,
+        "operationId": "delete_pets",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "pet",
+            "required": true,
+            "schema": {
+              "properties": {
+                "\u0026anchor": {
+                  "format": "double",
+                  "maximum": 384,
+                  "nullable": true,
+                  "type": "number",
+                  "writeOnly": true
+                },
+                "id": {
+                  "deprecated": true,
+                  "format": "double",
+                  "maximum": 666,
+                  "minimum": 6,
+                  "nullable": true,
+                  "type": "number"
+                },
+                "kind": {
+                  "format": "uuid",
+                  "readOnly": true,
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "@at",
+            "schema": {
+              "$ref": "#/components/schemas/Owner"
+            },
+            "style": "simple"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "price"
+          }
+        },
+        "tags": [
+          "name"
+        ]
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com/v2"
+    },
+    {
+      "url": "https://api.example.com"
+    }
+  ]
+}

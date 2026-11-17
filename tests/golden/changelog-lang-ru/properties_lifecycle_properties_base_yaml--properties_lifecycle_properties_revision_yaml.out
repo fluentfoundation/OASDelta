@@ -1,0 +1,54 @@
+13 изменений: 7 error, 0 warning, 6 info
+error	[request-property-deprecated-sunset-invalid] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		поле запроса `invalid` устарело с недействительной датой прекращения: `sunset date doesn't conform with RFC3339: not a date`
+
+error	[request-property-removed-before-sunset] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		удалено поле запроса `removed` до даты прекращения действия `2099-12-31`
+
+error	[request-property-stability-decreased] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		уровень стабильности свойства запроса `decreased` уменьшен с `stable` до `beta`
+
+error	[request-property-sunset-date-too-small] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		дата прекращения `too-small` поля запроса `2020-01-01` слишком ранняя, должно быть как минимум `0` дней от текущего дня
+
+error	[response-property-deprecated-sunset-invalid] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		поле ответа `invalid` устарело с недействительной датой прекращения: `sunset date doesn't conform with RFC3339: not a date`
+
+error	[response-property-stability-decreased] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		уровень стабильности свойства ответа `decreased` уменьшен с `stable` до `beta`
+
+error	[response-required-property-removed-before-sunset] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		удалено обязательное поле ответа `required-removed` из ответа со статусом `200` до даты прекращения действия `2099-12-31`
+
+info	[request-property-deprecated] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		поле запроса `missing` устарело
+
+info	[request-property-deprecated-with-sunset] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		поле запроса `with-sunset` устарело с датой прекращения `2099-12-31`
+
+info	[request-property-stability-increased] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		уровень стабильности свойства запроса `increased` увеличен с `beta` до `stable`
+
+info	[response-property-deprecated] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		поле ответа `missing` устарело
+
+info	[response-property-deprecated-with-sunset] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		поле ответа `with-sunset` устарело с датой прекращения `2099-12-31`
+
+info	[response-property-stability-increased] в ./properties/lifecycle_properties_revision.yaml
+	в API POST /r
+		уровень стабильности свойства ответа `increased` увеличен с `beta` до `stable`
+
+

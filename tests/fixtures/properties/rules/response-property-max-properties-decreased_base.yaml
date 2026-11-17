@@ -1,0 +1,122 @@
+# Fires response-property-max-properties-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            deprecated: true
+            format: custom
+            nullable: true
+            type: boolean
+    securitySchemes:
+        api_key:
+            in: header
+            name: 'trailing '
+            type: apiKey
+        bearer:
+            scheme: basic
+            type: http
+info:
+    title: tag
+    version: v1
+openapi: 3.0.3
+paths:
+    /owners/{ownerId}/pets:
+        get:
+            operationId: get_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: '''single'''
+                  schema:
+                    allOf:
+                        - default: 1
+                          type: integer
+                        - type: number
+                - in: cookie
+                  name: 名前
+                  required: true
+                  schema:
+                    items:
+                        $ref: '#/components/schemas/Item'
+                    type: array
+                - in: cookie
+                  name: name
+                  required: true
+                  schema:
+                    $ref: '#/components/schemas/Item'
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                additionalProperties: true
+                                deprecated: true
+                                description: Ünïcode
+                                type: object
+                    description: owner
+                "204":
+                    content:
+                        text/plain:
+                            schema:
+                                allOf:
+                                    - allOf:
+                                        - minLength: 3
+                                          nullable: true
+                                          type: string
+                                        - $ref: '#/components/schemas/Item'
+                                    - maxLength: 69
+                                      nullable: true
+                                      type: string
+                                    - maxProperties: 5
+                                      type: object
+                    description: 磾➳葖ᯔ
+        post:
+            operationId: post_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - explode: false
+                  in: header
+                  name: 名前
+                  required: false
+                  schema:
+                    maximum: 983
+                    minimum: 10
+                    nullable: true
+                    type: number
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            properties:
+                                '`tick`':
+                                    additionalProperties: false
+                                    description: "\U0001F600"
+                                    type: object
+                            required:
+                                - '`tick`'
+                            type: object
+            responses:
+                "200":
+                    description: '---'
+                default:
+                    content:
+                        application/json:
+                            schema:
+                                default: 94
+                                type: integer
+                        application/xml:
+                            schema:
+                                description: "~"
+                                format: custom
+                                readOnly: true
+                                type: boolean
+                    description: "0x1F"
+            tags:
+                - created

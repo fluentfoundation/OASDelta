@@ -1,0 +1,153 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                default:
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            '-':
+                                                                items:
+                                                                    type:
+                                                                        deleted:
+                                                                            - object
+                                                                    description:
+                                                                        from: owner
+                                                                        to: ""
+                                                                    required:
+                                                                        stringsdiff:
+                                                                            deleted:
+                                                                                - '#hash'
+                                                                                - id
+                                                                    properties:
+                                                                        deleted:
+                                                                            - '#hash'
+                                                                            - id
+                                                                            - Ṁᨂ緛슺
+                                                                    minProps:
+                                                                        from: 2
+                                                                        to: 0
+                                                                    additionalProperties:
+                                                                        schemaDeleted: true
+                                                            status:
+                                                                properties:
+                                                                    modified:
+                                                                        status:
+                                                                            items:
+                                                                                type:
+                                                                                    deleted:
+                                                                                        - object
+                                                                                description:
+                                                                                    from: owner
+                                                                                    to: ""
+                                                                                required:
+                                                                                    stringsdiff:
+                                                                                        deleted:
+                                                                                            - '#hash'
+                                                                                            - id
+                                                                                properties:
+                                                                                    deleted:
+                                                                                        - '#hash'
+                                                                                        - id
+                                                                                        - Ṁᨂ緛슺
+                                                                                minProps:
+                                                                                    from: 2
+                                                                                    to: 0
+                                                                                additionalProperties:
+                                                                                    schemaDeleted: true
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    default:
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                '-':
+                                                    items:
+                                                        type:
+                                                            deleted:
+                                                                - object
+                                                        description:
+                                                            from: owner
+                                                            to: ""
+                                                        required:
+                                                            stringsdiff:
+                                                                deleted:
+                                                                    - '#hash'
+                                                                    - id
+                                                        properties:
+                                                            deleted:
+                                                                - '#hash'
+                                                                - id
+                                                                - Ṁᨂ緛슺
+                                                        minProps:
+                                                            from: 2
+                                                            to: 0
+                                                        additionalProperties:
+                                                            schemaDeleted: true
+                                                status:
+                                                    properties:
+                                                        modified:
+                                                            status:
+                                                                items:
+                                                                    type:
+                                                                        deleted:
+                                                                            - object
+                                                                    description:
+                                                                        from: owner
+                                                                        to: ""
+                                                                    required:
+                                                                        stringsdiff:
+                                                                            deleted:
+                                                                                - '#hash'
+                                                                                - id
+                                                                    properties:
+                                                                        deleted:
+                                                                            - '#hash'
+                                                                            - id
+                                                                            - Ṁᨂ緛슺
+                                                                    minProps:
+                                                                        from: 2
+                                                                        to: 0
+                                                                    additionalProperties:
+                                                                        schemaDeleted: true
+components:
+    schemas:
+        modified:
+            Owner:
+                items:
+                    type:
+                        deleted:
+                            - object
+                    description:
+                        from: owner
+                        to: ""
+                    required:
+                        stringsdiff:
+                            deleted:
+                                - '#hash'
+                                - id
+                    properties:
+                        deleted:
+                            - '#hash'
+                            - id
+                            - Ṁᨂ緛슺
+                    minProps:
+                        from: 2
+                        to: 0
+                    additionalProperties:
+                        schemaDeleted: true
+

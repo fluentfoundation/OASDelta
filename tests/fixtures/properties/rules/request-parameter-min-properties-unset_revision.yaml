@@ -1,0 +1,113 @@
+# Fires request-parameter-min-properties-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            items:
+                allOf:
+                    - enum:
+                        - 'trailing '
+                      maxLength: 231
+                      type:
+                        - string
+                        - "null"
+                    - description: 名前
+                      type: boolean
+                    - description: ' leading'
+                      format: date-time
+                      minProperties: 18
+                      type: string
+            type: array
+        Owner:
+            format: custom
+            type:
+                - boolean
+                - "null"
+        Pet:
+            items:
+                anyOf:
+                    - description: 名前
+                      pattern: '[^\n]'
+                      type: string
+                      writeOnly: true
+                    - default: ❷먓喓
+                      enum:
+                        - status
+                        - price
+                      format: uuid
+                      minLength: 1
+                      type: string
+                    - format: int32
+                      readOnly: true
+                      type: integer
+            type: array
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: ᘧ䏮䢫릀緥ꁜ⹋癆
+    version: v1
+openapi: 3.1.0
+paths:
+    /owners/{ownerId}/pets:
+        patch:
+            description: owner
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: owner
+                  schema:
+                    exclusiveMinimum: -4
+                    format: int32
+                    type: integer
+                - in: cookie
+                  name: created
+                  schema:
+                    type: string
+                - in: header
+                  name: owner
+                  required: true
+                  schema:
+                    properties:
+                        '**bold**':
+                            description: 씚流䏽ʬ涱獄ᩤ呥
+                            type:
+                                - boolean
+                                - "null"
+                        갬鴄ᛦ⛰:
+                            type:
+                                - boolean
+                                - "null"
+                    required:
+                        - 갬鴄ᛦ⛰
+                        - '**bold**'
+                    type: object
+            responses:
+                "404":
+                    description: "a\r\nb"
+                    headers:
+                        䖱:
+                            required: true
+                            schema:
+                                maxLength: 22
+                                type: string
+                        薱쪾趸⪯:
+                            schema:
+                                maxLength: 96
+                                type:
+                                    - string
+                                    - "null"
+            tags:
+                - created
+                - status
+security:
+    - openid: []
+servers:
+    - url: https://api.example.com
+tags:
+    - name: price
+    - name: created

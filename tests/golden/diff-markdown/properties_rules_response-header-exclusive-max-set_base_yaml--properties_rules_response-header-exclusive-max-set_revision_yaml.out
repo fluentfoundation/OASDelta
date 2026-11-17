@@ -1,0 +1,18 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /store/order
+- Responses changed
+  - Modified response: 204
+    - Headers changed
+      - Modified header: `tick`
+        - Schema changed
+          - Type changed from 'null' to ''
+          - ExclusiveMax changed from null to 38
+
+

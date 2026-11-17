@@ -1,0 +1,49 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "404":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - integer
+                                                        deleted:
+                                                            - "null"
+                                                            - number
+                                                    default:
+                                                        from: 80
+                                                        to: null
+                                                    exclusiveMin:
+                                                        from: -2
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: GET
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "404":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        type:
+                                            added:
+                                                - integer
+                                            deleted:
+                                                - "null"
+                                                - number
+                                        default:
+                                            from: 80
+                                            to: null
+                                        exclusiveMin:
+                                            from: -2
+                                            to: null
+

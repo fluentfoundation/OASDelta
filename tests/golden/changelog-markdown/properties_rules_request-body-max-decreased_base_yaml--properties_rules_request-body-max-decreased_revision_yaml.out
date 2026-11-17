@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /items/{id}.json
+- :warning: the request's body max was decreased to `115.00`
+
+
+
+
+
+

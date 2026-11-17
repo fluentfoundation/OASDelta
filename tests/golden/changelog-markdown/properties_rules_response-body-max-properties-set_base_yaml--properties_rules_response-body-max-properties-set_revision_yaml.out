@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /search
+-  the response's body maxProperties was set to `11`
+
+
+
+
+
+

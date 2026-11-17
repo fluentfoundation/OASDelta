@@ -1,0 +1,198 @@
+# Fires response-property-min-length-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            items:
+                items:
+                    $ref: '#/components/schemas/Error'
+                type: array
+            type: array
+    securitySchemes:
+        api_key:
+            in: query
+            name: name
+            type: apiKey
+        oauth:
+            flows:
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: price
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /pets/{petId}:
+        delete:
+            operationId: delete_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - deprecated: true
+                  in: cookie
+                  name: ô婘ᇤ၈ꇛ䤀⑼
+                  required: true
+                  schema:
+                    items:
+                        $ref: '#/components/schemas/Error'
+                    type: array
+                  style: deepObject
+            responses:
+                2XX:
+                    description: "yes"
+                    headers:
+                        pet:
+                            deprecated: true
+                            schema:
+                                nullable: true
+                                type: string
+                                writeOnly: true
+                        㳑광:
+                            schema:
+                                description: kind
+                                example: '>'
+                                nullable: true
+                                type: string
+            x-stability-level: alpha
+        patch:
+            operationId: patch_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "500":
+                    description: 䟧
+                default:
+                    content:
+                        application/xml:
+                            schema:
+                                $ref: '#/components/schemas/Error'
+                    description: 퍮
+                    headers:
+                        '#hash':
+                            schema:
+                                default: 16.375
+                                deprecated: true
+                                format: int32
+                                minimum: -8
+                                nullable: true
+                                type: integer
+                        쏂ꈸම:
+                            deprecated: true
+                            schema:
+                                enum:
+                                    - true
+                                    - false
+                                format: custom
+                                nullable: true
+                                type: boolean
+            summary: 名前
+            x-stability-level: alpha
+        put:
+            operationId: put_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - description: kind
+                  in: query
+                  name: '|'
+                  required: false
+                  schema:
+                    enum:
+                        - 76
+                    maximum: 284
+                    multipleOf: 2
+                    nullable: true
+                    type: number
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                properties:
+                                    '`tick`':
+                                        maxProperties: 20
+                                        properties:
+                                            ' leading':
+                                                $ref: '#/components/schemas/Error'
+                                            ♗箇᷄匯⤃隐:
+                                                nullable: true
+                                                type: integer
+                                            ключ:
+                                                $ref: '#/components/schemas/Error'
+                                            名前:
+                                                type: boolean
+                                        required:
+                                            - ключ
+                                            - ' leading'
+                                            - 名前
+                                        type: object
+                                    empty:
+                                        additionalProperties:
+                                            type: string
+                                        properties:
+                                            C:\path:
+                                                $ref: '#/components/schemas/Error'
+                                        required:
+                                            - C:\path
+                                        type: object
+                                    name:
+                                        description: '...'
+                                        example: owner
+                                        type: number
+                                    tag:
+                                        $ref: '#/components/schemas/Error'
+                                required:
+                                    - tag
+                                    - '`tick`'
+                                    - name
+                                    - empty
+                                type: object
+                        application/vnd.api+json:
+                            schema:
+                                anyOf:
+                                    - format: custom
+                                      type: boolean
+                                    - items:
+                                        deprecated: true
+                                        example: tag
+                                        minLength: 4
+                                        type: string
+                                      type: array
+                    description: "\U0001F600"
+                    headers:
+                        name:
+                            schema:
+                                type: string
+                "204":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    description: owner
+                                    type: object
+                                minItems: 1
+                                type: array
+                        multipart/form-data:
+                            schema:
+                                enum:
+                                    - true
+                                    - false
+                                format: custom
+                                type: boolean
+                    description: ""
+                "404":
+                    description: status

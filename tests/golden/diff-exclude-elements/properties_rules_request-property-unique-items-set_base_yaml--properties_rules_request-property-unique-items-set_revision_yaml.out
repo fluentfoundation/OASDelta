@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets":{"operations":{"deleted":["DELETE"],"modified":{"PUT":{"requestBody":{"content":{"modified":{"text/plain":{"schema":{"extensions":{"added":["x-status"]},"items":{"uniqueItems":{"from":false,"to":true}}}}}}}}}}}}}}

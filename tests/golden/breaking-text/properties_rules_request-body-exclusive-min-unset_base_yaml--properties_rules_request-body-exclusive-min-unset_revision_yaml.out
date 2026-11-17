@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[request-body-media-type-removed] at ./properties/rules/request-body-exclusive-min-unset_revision.yaml
+	in API PATCH /pets/{petId}
+		removed the media type `multipart/form-data` from the request body
+
+error	[request-body-type-changed] at ./properties/rules/request-body-exclusive-min-unset_revision.yaml
+	in API PATCH /pets/{petId}
+		the request's body `type/format` changed from `number/float` to `object`
+
+

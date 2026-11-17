@@ -1,0 +1,5 @@
+::error title=request-body-enum-value-removed,file=./properties/rules/request-body-enum-value-removed_revision.yaml::in API POST /search request body enum value removed `false`
+::error title=request-body-enum-value-removed,file=./properties/rules/request-body-enum-value-removed_revision.yaml::in API POST /search request body enum value removed `true`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-body-list-of-types-widened,file=./properties/rules/request-body-enum-value-removed_revision.yaml::in API POST /search request body list-of-types was widened by adding types `integer` to media type `multipart/form-data`
+

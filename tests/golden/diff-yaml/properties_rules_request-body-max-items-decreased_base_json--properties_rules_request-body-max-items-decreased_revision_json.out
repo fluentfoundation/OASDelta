@@ -1,0 +1,62 @@
+openAPI:
+    from: 3.1.0
+    to: 3.0.3
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                header:
+                                    price:
+                                        schema:
+                                            allOf:
+                                                added:
+                                                    - index: 0
+                                                    - index: 1
+                                                deleted:
+                                                    - index: 0
+                                                    - index: 1
+                                                    - index: 2
+        /store/order:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            maxItems:
+                                                from: 51
+                                                to: 5
+endpoints:
+    modified:
+        ?   method: GET
+            path: /search
+        :   parameters:
+                modified:
+                    header:
+                        price:
+                            schema:
+                                allOf:
+                                    added:
+                                        - index: 0
+                                        - index: 1
+                                    deleted:
+                                        - index: 0
+                                        - index: 1
+                                        - index: 2
+        ?   method: POST
+            path: /store/order
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                maxItems:
+                                    from: 51
+                                    to: 5
+

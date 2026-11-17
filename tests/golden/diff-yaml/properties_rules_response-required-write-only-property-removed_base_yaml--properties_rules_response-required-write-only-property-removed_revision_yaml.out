@@ -1,0 +1,62 @@
+paths:
+    added:
+        - /added/kind
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "500":
+                                    content:
+                                        modified:
+                                            multipart/form-data:
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - string
+                                                        deleted:
+                                                            - object
+                                                    required:
+                                                        stringsdiff:
+                                                            deleted:
+                                                                - id
+                                                                - pet
+                                                                - 瀒
+                                                    properties:
+                                                        deleted:
+                                                            - id
+                                                            - pet
+                                                            - 瀒
+endpoints:
+    added:
+        - method: GET
+          path: /added/kind
+    modified:
+        ?   method: DELETE
+            path: /v1/items
+        :   responses:
+                modified:
+                    "500":
+                        content:
+                            modified:
+                                multipart/form-data:
+                                    schema:
+                                        type:
+                                            added:
+                                                - string
+                                            deleted:
+                                                - object
+                                        required:
+                                            stringsdiff:
+                                                deleted:
+                                                    - id
+                                                    - pet
+                                                    - 瀒
+                                        properties:
+                                            deleted:
+                                                - id
+                                                - pet
+                                                - 瀒
+

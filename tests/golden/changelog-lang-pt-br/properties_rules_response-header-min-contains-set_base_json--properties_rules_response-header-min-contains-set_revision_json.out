@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[response-header-min-contains-set] em ./properties/rules/response-header-min-contains-set_revision.json
+	em API POST /search
+		o valor minContains do cabeçalho de resposta `a/b` foi definido como `0` para o status `204`
+
+

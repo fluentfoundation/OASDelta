@@ -1,0 +1,96 @@
+# Fires response-body-max-length-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: created
+    version: v1
+openapi: 3.1.0
+paths:
+    /store/order:
+        delete:
+            operationId: delete_store_order
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                type: number
+                        application/xml:
+                            schema:
+                                properties:
+                                    status:
+                                        description: a~b
+                                        type: object
+                                    짠㭬䔺豍ꨩ뽥:
+                                        properties:
+                                            pet:
+                                                type: number
+                                            ꇹ:
+                                                maxLength: 94
+                                                type: string
+                                        required:
+                                            - ꇹ
+                                            - pet
+                                        type: object
+                                required:
+                                    - status
+                                type: object
+                    description: owner
+                    headers:
+                        status:
+                            schema:
+                                enum:
+                                    - 8
+                                    - 9
+                                    - 1
+                                    - 15
+                                format: int64
+                                type: integer
+                        名前:
+                            required: true
+                            schema:
+                                type: number
+                "400":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                additionalProperties: true
+                                description: kind
+                                type: object
+                    description: created
+                "404":
+                    description: '|'
+    /v1/items:
+        get:
+            operationId: ключ
+            parameters:
+                - in: cookie
+                  name: 輟긴
+                  schema:
+                    default: 9007199254740993
+                    format: double
+                    type:
+                        - number
+                        - "null"
+                - in: cookie
+                  name: owner
+                  schema:
+                    items:
+                        type:
+                            - boolean
+                            - "null"
+                    type: array
+                - in: header
+                  name: status
+                  schema:
+                    format: custom
+                    type:
+                        - boolean
+                        - "null"
+            responses:
+                default:
+                    description: kind
+            x-stability-level: stable
+servers:
+    - url: https://api.example.com/v2
+tags:
+    - name: tag
+    - name: pet

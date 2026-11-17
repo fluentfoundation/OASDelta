@@ -1,0 +1,61 @@
+# Enum values the HTML diff report (goldmark, GFM) renders as Markdown: strikethrough with one or two tildes,
+# CommonMark flanking around - and +, runs of three tildes, escaped tildes, and task-list checkboxes.
+openapi: 3.0.3
+info: {title: markdown emphasis, version: "1"}
+paths:
+  /items:
+    get:
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  p1: {type: string, enum: [x, 'a~b']}
+                  p2: {type: string, enum: [x, '~a~']}
+                  p3: {type: string, enum: [x, '~~a~~']}
+                  p4: {type: string, enum: [x, '~~~a~~~']}
+                  p5: {type: string, enum: [x, 'a~b c~d']}
+                  p6: {type: string, enum: [x, '~a']}
+                  p7: {type: string, enum: [x, 'a~']}
+                  p8: {type: string, enum: [x, '~ a ~']}
+                  p9: {type: string, enum: [x, '~~a~']}
+                  p10: {type: string, enum: [x, '~a~~']}
+                  p11: {type: string, enum: [x, 'x~~y~z']}
+                  p12: {type: string, enum: [x, '~~']}
+                  p13: {type: string, enum: [x, '~']}
+                  p14: {type: string, enum: [x, 'a~~b~~c']}
+                  p15: {type: string, enum: [x, '~a~b~']}
+                  p16: {type: string, enum: [x, '(~a~)']}
+                  p17: {type: string, enum: [x, '~(a)~']}
+                  p18: {type: string, enum: [x, 'a ~b~ c']}
+                  p19: {type: string, enum: [x, '~~a~~~']}
+                  p20: {type: string, enum: [x, 'é~ü~']}
+                  p21: {type: string, enum: [x, '~1~2']}
+                  p22: {type: string, enum: [x, '***~a~***']}
+                  p23: {type: string, enum: [x, '*~a~*']}
+                  p24: {type: string, enum: [x, '~*a*~']}
+                  p25: {type: string, enum: [x, '`~a~`']}
+                  p26: {type: string, enum: [x, '~a\~']}
+                  p27: {type: string, enum: [x, '~~~~']}
+                  p28: {type: string, enum: [x, 'a~~~b~~~c']}
+                  p29: {type: string, enum: [x, 'x*-y*']}
+                  p30: {type: string, enum: [x, 'x**-y**']}
+                  p31: {type: string, enum: [x, 'x*+y*']}
+                  p32: {type: string, enum: [x, 'x~-y~']}
+                  p33: {type: string, enum: [x, 'b~-a~']}
+                  p34: {type: string, enum: [x, '*-a-*']}
+                  p35: {type: string, enum: [x, '+*a*+']}
+                  p36: {type: string, enum: [x, 'x_-y_']}
+                  p37: {type: string, enum: [x, '-~abb1*~~ ~ a--*\.']}
+                  p38: {type: string, enum: [x, '~~. ~a)bé\~~~']}
+                  p39: {type: string, enum: [x, 'a\~~b~~']}
+                  p40: {type: string, enum: [x, '\~~a~~']}
+                  p41: {type: string, enum: [x, '~a\~~']}
+                  p42: {type: string, enum: [x, '[ ] a']}
+                  p43: {type: string, enum: [x, '[x] b']}
+                  p44: {type: string, enum: [x, 'z [ ]']}
+                  p45: {type: string, enum: [x, '[X]c']}
+                  combo: {type: string, enum: [x, 'a~b-1', 'a~b', '~c', 'd~']}

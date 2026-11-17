@@ -1,0 +1,5 @@
+::warning title=response-property-max-length-unset,file=./properties/rules/response-property-max-length-unset_revision.yaml::in API POST /ünïcode/ключ the `>/>` response property's maxLength was unset from `104` for the response status `204`
+::warning title=response-property-min-length-unset,file=./properties/rules/response-property-max-length-unset_revision.yaml::in API POST /ünïcode/ключ the `>/>` response property's minLength was unset from `2` for the response status `204`
+::notice title=response-property-all-of-added,file=./properties/rules/response-property-max-length-unset_revision.yaml,line=205,col=55::in API POST /ünïcode/ключ added `subschema #1, subschema #2` to the `>/>` response property `allOf` list for the response status `204`
+::notice title=response-property-type-specialized,file=./properties/rules/response-property-max-length-unset_revision.yaml::in API POST /ünïcode/ключ the `>/>` response's property `type` was narrowed from `string` to `any` for status `204`
+

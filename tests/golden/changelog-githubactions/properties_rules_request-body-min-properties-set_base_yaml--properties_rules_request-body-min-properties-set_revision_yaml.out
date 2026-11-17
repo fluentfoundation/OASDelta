@@ -1,0 +1,2 @@
+::error title=request-body-min-properties-set,file=./properties/rules/request-body-min-properties-set_revision.yaml,line=47,col=29::in API PATCH /search the request's body minProperties was set to `2`
+

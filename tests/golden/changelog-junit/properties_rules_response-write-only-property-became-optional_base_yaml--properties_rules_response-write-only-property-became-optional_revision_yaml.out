@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="16" errors="0" failures="16" name="OASDiff">
+    <testcase name="response-property-became-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became nullable for the status `204`</failure>
+    </testcase>
+    <testcase name="response-property-became-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response property `items/items/allOf[subschema #3]/ключ` became nullable for the status `404` (media type: application/vnd.api+json)</failure>
+    </testcase>
+    <testcase name="response-property-became-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response property `名前/items/allOf[subschema #3]/ключ` became nullable for the status `404` (media type: application/json; charset=utf-8)</failure>
+    </testcase>
+    <testcase name="response-property-type-generalized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `items/items/allOf[subschema #3]/ключ` response's property `type/format` was widened from `string` to `string, null/byte` for status `404` (media type: application/vnd.api+json)</failure>
+    </testcase>
+    <testcase name="response-property-became-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response property `名前/items/allOf[subschema #3]/ключ` became nullable for the status `404`</failure>
+    </testcase>
+    <testcase name="response-property-type-compatible" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` response's property `type/format` changed from `string` to `string, null/byte` for status `204` (backward compatible)</failure>
+    </testcase>
+    <testcase name="response-property-type-compatible" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `名前/items/allOf[subschema #3]/ключ` response's property `type/format` changed from `string` to `string, null/byte` for status `404` (backward compatible) (media type: application/json; charset=utf-8)</failure>
+    </testcase>
+    <testcase name="response-required-property-became-not-write-only" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response required property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became not write-only for the status `204`</failure>
+    </testcase>
+    <testcase name="response-required-property-became-not-write-only" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response required property `items/items/allOf[subschema #3]/ключ` became not write-only for the status `404` (media type: application/vnd.api+json)</failure>
+    </testcase>
+    <testcase name="response-required-property-became-not-write-only" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response required property `名前/items/allOf[subschema #3]/ключ` became not write-only for the status `404` (media type: application/json; charset=utf-8)</failure>
+    </testcase>
+    <testcase name="response-write-only-property-became-optional" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response write-only property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became optional for the status `204`</failure>
+    </testcase>
+    <testcase name="response-write-only-property-became-optional" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response write-only property `items/items/allOf[subschema #3]/ключ` became optional for the status `404` (media type: application/vnd.api+json)</failure>
+    </testcase>
+    <testcase name="response-write-only-property-became-optional" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response write-only property `名前/items/allOf[subschema #3]/ключ` became optional for the status `404` (media type: application/json; charset=utf-8)</failure>
+    </testcase>
+    <testcase name="response-property-type-compatible" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `名前/items/allOf[subschema #3]/ключ` response's property `type/format` changed from `string` to `string, null/byte` for status `404` (backward compatible)</failure>
+    </testcase>
+    <testcase name="response-required-property-became-not-write-only" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response required property `名前/items/allOf[subschema #3]/ключ` became not write-only for the status `404`</failure>
+    </testcase>
+    <testcase name="response-write-only-property-became-optional" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response write-only property `名前/items/allOf[subschema #3]/ключ` became optional for the status `404`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

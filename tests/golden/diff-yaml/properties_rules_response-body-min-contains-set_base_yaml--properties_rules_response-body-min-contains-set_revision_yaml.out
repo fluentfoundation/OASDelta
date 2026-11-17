@@ -1,0 +1,49 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    status:
+                                        description:
+                                            from: ""
+                                            to: created
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    contains:
+                                                        schemaAdded: true
+                                                    minContains:
+                                                        from: null
+                                                        to: 2
+endpoints:
+    modified:
+        ?   method: GET
+            path: /store/order
+        :   parameters:
+                modified:
+                    query:
+                        status:
+                            description:
+                                from: ""
+                                to: created
+            responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        contains:
+                                            schemaAdded: true
+                                        minContains:
+                                            from: null
+                                            to: 2
+

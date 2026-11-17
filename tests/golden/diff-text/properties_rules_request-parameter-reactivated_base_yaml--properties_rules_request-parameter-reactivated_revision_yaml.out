@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /items/{id}.json
+- New header param: id
+- Deleted path param: id
+- Modified query param: status
+  - Deprecated changed from true to false
+  - Schema changed
+    - Items changed
+      - MinItems changed from 0 to 12
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/xml
+        - Example changed from null to 'status'
+
+

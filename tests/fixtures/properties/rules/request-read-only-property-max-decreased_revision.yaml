@@ -1,0 +1,225 @@
+# Fires request-read-only-property-max-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            items:
+                enum:
+                    - 12
+                    - 17
+                nullable: true
+                type: integer
+            type: array
+        Item:
+            additionalProperties: false
+            description: '@at'
+            properties:
+                price:
+                    items:
+                        nullable: true
+                        type: number
+                        writeOnly: true
+                    type: array
+                ключ:
+                    additionalProperties: true
+                    properties:
+                        "~":
+                            maximum: 41
+                            minimum: 6
+                            type: number
+                            writeOnly: true
+                    required:
+                        - "~"
+                    type: object
+            required:
+                - ключ
+            type: object
+        Pet:
+            nullable: true
+            type: number
+info:
+    title: Ünïcode
+    version: v1
+openapi: 3.0.3
+paths:
+    /store/order:
+        delete:
+            description: price
+            operationId: tag
+            responses:
+                "201":
+                    content:
+                        '*/*':
+                            schema:
+                                nullable: true
+                                type: boolean
+                    description: ᡱ
+                "400":
+                    description: pet
+                default:
+                    content:
+                        application/xml:
+                            schema:
+                                default: -97.125
+                                description: status
+                                format: int32
+                                type: integer
+                        multipart/form-data:
+                            schema:
+                                type: integer
+                    description: 䓙脗㢵짞圃⋭曧炯
+            tags:
+                - status
+    /v1/items:
+        delete:
+            operationId: delete_v1_items
+            parameters:
+                - in: header
+                  name: pet
+                  required: false
+                  schema:
+                    $ref: '#/components/schemas/Item'
+            responses:
+                default:
+                    description: 씇搊䲩᰺엖㋫彳臥
+        patch:
+            parameters:
+                - in: query
+                  name: created
+                  schema:
+                    nullable: true
+                    type: integer
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            enum:
+                                - true
+                                - false
+                            type: boolean
+                    application/xml:
+                        schema:
+                            allOf:
+                                - items:
+                                    description: '%20'
+                                    maximum: 802
+                                    minimum: 2
+                                    nullable: true
+                                    type: number
+                                  type: array
+                                - example: created
+                                  nullable: true
+                                  type: integer
+                                - additionalProperties: true
+                                  minProperties: 0
+                                  properties:
+                                    a/b:
+                                        enum:
+                                            - pet
+                                        nullable: true
+                                        type: string
+                                    price:
+                                        minLength: 3
+                                        type: string
+                                    tag:
+                                        $ref: '#/components/schemas/Pet'
+                                  required:
+                                    - a/b
+                                    - price
+                                    - tag
+                                  type: object
+                description: status
+                required: false
+            responses:
+                "204":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Error'
+                    description: 㵷
+                "500":
+                    description: price
+            tags:
+                - price
+                - 名前
+        post:
+            description: Ünïcode
+            operationId: post_v1_items
+            parameters:
+                - deprecated: true
+                  in: header
+                  name: 名前
+                  required: false
+                  schema:
+                    nullable: true
+                    type: boolean
+                - in: header
+                  name: kind
+                  schema:
+                    default: 91
+                    nullable: true
+                    type: integer
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            $ref: '#/components/schemas/Error'
+                    application/json:
+                        schema:
+                            properties:
+                                '%20':
+                                    properties:
+                                        '|':
+                                            const: '-'
+                                            enum:
+                                                - status
+                                                - Ünïcode
+                                            pattern: '[^\n]'
+                                            type: string
+                                        created:
+                                            default: -24.375
+                                            maximum: 209
+                                            nullable: true
+                                            readOnly: true
+                                            type: integer
+                                        id:
+                                            description: ⏹
+                                            enum:
+                                                - true
+                                                - false
+                                            nullable: true
+                                            type: boolean
+                                        鿱೅炋꟎絷:
+                                            description: '{brace}'
+                                            format: int64
+                                            maximum: 241
+                                            nullable: true
+                                            type: integer
+                                    type: object
+                                kind:
+                                    items:
+                                        default: 0.1
+                                        type: integer
+                                    type: array
+                                名前:
+                                    default: 14
+                                    multipleOf: 5
+                                    type: number
+                            required:
+                                - '%20'
+                            type: object
+            responses:
+                "404":
+                    description: name
+                    headers:
+                        id:
+                            schema:
+                                const: name
+                                enum:
+                                    - 䓑ʼ鈦됨滒
+                                    - Ünïcode
+                                format: uuid
+                                nullable: true
+                                type: string
+                "500":
+                    description: '!tag'
+            summary: Ünïcode

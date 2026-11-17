@@ -1,0 +1,30 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /pets
+- Modified query param: | table |
+  - Schema changed
+    - Discriminator changed
+
+POST /store/order
+- Request body changed
+  - Content changed
+    - Modified media type: application/xml
+      - Schema changed
+        - UniqueItems changed from false to true
+- Responses changed
+  - Modified response: 201
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Type changed from 'null, number' to 'array'
+          - Description changed from 'null' to ''
+          - Items changed
+            - Schema added
+
+

@@ -1,0 +1,217 @@
+paths:
+    modified:
+        /r:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            properties:
+                                                deleted:
+                                                    - removed
+                                                modified:
+                                                    decreased:
+                                                        extensions:
+                                                            modified:
+                                                                x-stability-level:
+                                                                    - oldValue: stable
+                                                                      value: beta
+                                                                      op: replace
+                                                                      from: ""
+                                                                      path: ""
+                                                    increased:
+                                                        extensions:
+                                                            modified:
+                                                                x-stability-level:
+                                                                    - oldValue: beta
+                                                                      value: stable
+                                                                      op: replace
+                                                                      from: ""
+                                                                      path: ""
+                                                    invalid:
+                                                        extensions:
+                                                            added:
+                                                                - x-sunset
+                                                        deprecated:
+                                                            from: false
+                                                            to: true
+                                                    missing:
+                                                        deprecated:
+                                                            from: false
+                                                            to: true
+                                                    too-small:
+                                                        extensions:
+                                                            added:
+                                                                - x-sunset
+                                                        deprecated:
+                                                            from: false
+                                                            to: true
+                                                    with-sunset:
+                                                        extensions:
+                                                            added:
+                                                                - x-sunset
+                                                        deprecated:
+                                                            from: false
+                                                            to: true
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    required:
+                                                        stringsdiff:
+                                                            deleted:
+                                                                - required-removed
+                                                    properties:
+                                                        deleted:
+                                                            - required-removed
+                                                        modified:
+                                                            decreased:
+                                                                extensions:
+                                                                    modified:
+                                                                        x-stability-level:
+                                                                            - oldValue: stable
+                                                                              value: beta
+                                                                              op: replace
+                                                                              from: ""
+                                                                              path: ""
+                                                            increased:
+                                                                extensions:
+                                                                    modified:
+                                                                        x-stability-level:
+                                                                            - oldValue: beta
+                                                                              value: stable
+                                                                              op: replace
+                                                                              from: ""
+                                                                              path: ""
+                                                            invalid:
+                                                                extensions:
+                                                                    added:
+                                                                        - x-sunset
+                                                                deprecated:
+                                                                    from: false
+                                                                    to: true
+                                                            missing:
+                                                                deprecated:
+                                                                    from: false
+                                                                    to: true
+                                                            with-sunset:
+                                                                extensions:
+                                                                    added:
+                                                                        - x-sunset
+                                                                deprecated:
+                                                                    from: false
+                                                                    to: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /r
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                properties:
+                                    deleted:
+                                        - removed
+                                    modified:
+                                        decreased:
+                                            extensions:
+                                                modified:
+                                                    x-stability-level:
+                                                        - oldValue: stable
+                                                          value: beta
+                                                          op: replace
+                                                          from: ""
+                                                          path: ""
+                                        increased:
+                                            extensions:
+                                                modified:
+                                                    x-stability-level:
+                                                        - oldValue: beta
+                                                          value: stable
+                                                          op: replace
+                                                          from: ""
+                                                          path: ""
+                                        invalid:
+                                            extensions:
+                                                added:
+                                                    - x-sunset
+                                            deprecated:
+                                                from: false
+                                                to: true
+                                        missing:
+                                            deprecated:
+                                                from: false
+                                                to: true
+                                        too-small:
+                                            extensions:
+                                                added:
+                                                    - x-sunset
+                                            deprecated:
+                                                from: false
+                                                to: true
+                                        with-sunset:
+                                            extensions:
+                                                added:
+                                                    - x-sunset
+                                            deprecated:
+                                                from: false
+                                                to: true
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        required:
+                                            stringsdiff:
+                                                deleted:
+                                                    - required-removed
+                                        properties:
+                                            deleted:
+                                                - required-removed
+                                            modified:
+                                                decreased:
+                                                    extensions:
+                                                        modified:
+                                                            x-stability-level:
+                                                                - oldValue: stable
+                                                                  value: beta
+                                                                  op: replace
+                                                                  from: ""
+                                                                  path: ""
+                                                increased:
+                                                    extensions:
+                                                        modified:
+                                                            x-stability-level:
+                                                                - oldValue: beta
+                                                                  value: stable
+                                                                  op: replace
+                                                                  from: ""
+                                                                  path: ""
+                                                invalid:
+                                                    extensions:
+                                                        added:
+                                                            - x-sunset
+                                                    deprecated:
+                                                        from: false
+                                                        to: true
+                                                missing:
+                                                    deprecated:
+                                                        from: false
+                                                        to: true
+                                                with-sunset:
+                                                    extensions:
+                                                        added:
+                                                            - x-sunset
+                                                    deprecated:
+                                                        from: false
+                                                        to: true
+

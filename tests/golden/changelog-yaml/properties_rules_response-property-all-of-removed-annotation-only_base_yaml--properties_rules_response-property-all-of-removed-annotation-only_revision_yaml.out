@@ -1,0 +1,18 @@
+- id: response-property-all-of-removed-annotation-only
+  text: 'removed annotation-only `subschema #1` from the `items/` response property `allOf` list for the response status `201`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: PATCH
+  operationId: '`tick`'
+  path: /store/order
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-property-all-of-removed-annotation-only_base.yaml
+    line: 73
+    column: 43
+    endLine: 73
+    endColumn: 61
+  fingerprint: 721a3097e804
+

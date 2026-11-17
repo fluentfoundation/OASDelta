@@ -1,0 +1,14 @@
+3 изменений: 0 error, 0 warning, 3 info
+info	[api-tag-added] в ./properties/rules/api-tag-added_base.yaml
+	в API DELETE /items/{id}.json
+		тег API `id` добавлен
+
+info	[endpoint-deprecated-with-sunset] в ./properties/rules/api-tag-added_revision.yaml
+	в API DELETE /items/{id}.json
+		эндпоинт устарел с датой прекращения `2099-12-31`
+
+info	[response-property-enum-value-removed] в ./properties/rules/api-tag-added_revision.yaml
+	в API PUT /pets
+		удалено значение перечисления `19.00` из свойства ответа `owner` для статуса ответа `204`.
+
+

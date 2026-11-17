@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/v1/items":{"operations":{"modified":{"DELETE":{"responses":{"modified":{"400":{"headers":{"modified":{"名前":{"schema":{"type":{"added":["number"],"deleted":["integer"]}}}}}}}}}}}}}}}

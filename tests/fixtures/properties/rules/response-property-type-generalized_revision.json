@@ -1,0 +1,219 @@
+{
+  "components": {
+    "schemas": {
+      "Error": {
+        "enum": [
+          64,
+          95.875,
+          123456789.125
+        ],
+        "nullable": true,
+        "readOnly": true,
+        "type": "number"
+      },
+      "Owner": {
+        "properties": {
+          "a\r\nb": {
+            "enum": [
+              73
+            ],
+            "nullable": true,
+            "type": "number"
+          },
+          "name": {
+            "format": "date",
+            "type": "string"
+          },
+          "pet": {
+            "$ref": "#/components/schemas/Pet"
+          },
+          "tag": {
+            "items": {
+              "maximum": 972,
+              "type": "number"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "pet",
+          "name"
+        ],
+        "type": "object"
+      },
+      "Pet": {
+        "oneOf": [
+          {
+            "items": {
+              "enum": [
+                -24.375
+              ],
+              "type": "number"
+            },
+            "type": "array"
+          },
+          {
+            "description": "owner",
+            "type": "boolean"
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "C:\\path",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/store/order": {
+      "patch": {
+        "operationId": "patch_store_order",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "`tick`",
+            "required": false,
+            "schema": {
+              "items": {
+                "description": "price",
+                "format": "double",
+                "type": "number"
+              },
+              "type": "array"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "properties": {
+                  "\u0026anchor": {
+                    "default": -86.5,
+                    "format": "float",
+                    "nullable": true,
+                    "type": "number"
+                  },
+                  "id": {
+                    "$ref": "#/components/schemas/Owner"
+                  },
+                  "x\ty": {
+                    "default": false,
+                    "enum": [
+                      true,
+                      false
+                    ],
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "x\ty",
+                  "\u0026anchor"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "翻겼띐ࡋ緧爑趾": {
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "items": {
+                        "deprecated": true,
+                        "description": "|",
+                        "enum": [
+                          19,
+                          10,
+                          5
+                        ],
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      "minItems": 0,
+                      "type": "array"
+                    },
+                    {
+                      "items": {
+                        "example": "-",
+                        "format": "double",
+                        "type": "number"
+                      },
+                      "minItems": 3,
+                      "type": "array"
+                    }
+                  ]
+                }
+              },
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "items": {
+                    "default": 72,
+                    "enum": [
+                      15,
+                      18,
+                      -1
+                    ],
+                    "maximum": 733,
+                    "nullable": true,
+                    "type": "number"
+                  },
+                  "maxItems": 59,
+                  "type": "array",
+                  "uniqueItems": true
+                }
+              }
+            },
+            "description": "ключ"
+          },
+          "404": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "\"quoted\"": {
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      "a: b": {
+                        "description": "名前",
+                        "nullable": true,
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "a: b",
+                      "\"quoted\""
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "null"
+          }
+        },
+        "summary": "status"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com"
+    }
+  ]
+}

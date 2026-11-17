@@ -1,0 +1,1 @@
+{"extensions":{"deleted":["x-name"]},"paths":{"added":["/search"],"modified":{"/items/{id}.json":{"operations":{"modified":{"PUT":{"responses":{"modified":{"204":{"content":{"modified":{"application/xml":{"schema":{"properties":{"modified":{"name":{"anyOf":{"modified":[{"base":{"index":0},"revision":{"index":0},"diff":{"multipleOf":{"from":10,"to":5}}}]}}}}}}}}}}}}}}}}}}

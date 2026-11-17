@@ -1,0 +1,39 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PATCH /items/{id}.json</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json; charset=utf-8
+<ul>
+<li>Schema changed
+<ul>
+<li>Items changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: null
+<ul>
+<li>MaxLength changed from 9 to null</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

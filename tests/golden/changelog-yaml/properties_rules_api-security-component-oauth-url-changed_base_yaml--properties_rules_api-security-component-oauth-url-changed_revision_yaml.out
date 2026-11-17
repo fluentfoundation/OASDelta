@@ -1,0 +1,19 @@
+- id: api-security-component-oauth-url-changed
+  text: the component security scheme `oauth` oauth `authorizationCode` flow authorization url changed from `https://auth.example.com/authorize` to `https://auth1.example.com/authorizationUrl`
+  comment: This is a warning because the spec does not say whether credentials obtained through the previous URL are still accepted.
+  level: 2
+  section: components
+  baseSource:
+    file: ./properties/rules/api-security-component-oauth-url-changed_base.yaml
+    line: 11
+    column: 9
+    endLine: 24
+    endColumn: 25
+  revisionSource:
+    file: ./properties/rules/api-security-component-oauth-url-changed_revision.yaml
+    line: 11
+    column: 9
+    endLine: 24
+    endColumn: 25
+  fingerprint: f64fb4696c1e
+

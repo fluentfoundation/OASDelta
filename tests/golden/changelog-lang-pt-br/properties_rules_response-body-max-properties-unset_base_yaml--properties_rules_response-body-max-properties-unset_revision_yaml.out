@@ -1,0 +1,18 @@
+4 alterações: 2 error, 0 warning, 2 info
+error	[response-body-max-properties-unset] em ./properties/rules/response-body-max-properties-unset_revision.yaml
+	em API GET /pets
+		o valor maxProperties do corpo da resposta foi removido de `19`
+
+error	[response-body-type-changed] em ./properties/rules/response-body-max-properties-unset_revision.yaml
+	em API GET /pets
+		o `type` do corpo da resposta foi alterado de `object` para `array<string>` para o status `200`
+
+info	[response-optional-property-removed] em ./properties/rules/response-body-max-properties-unset_revision.yaml
+	em API GET /pets
+		a propriedade opcional `created` foi removida da resposta com o status `200`
+
+info	[response-optional-property-removed] em ./properties/rules/response-body-max-properties-unset_revision.yaml
+	em API GET /pets
+		a propriedade opcional `첧縱ᤳ앸䧤` foi removida da resposta com o status `200`
+
+

@@ -1,0 +1,10 @@
+2 cambios: 2 error, 0 warning, 0 info
+error	[new-required-request-header-property] en ./properties/rules/new-required-request-header-property_revision.json
+	en API DELETE /items/{id}.json
+		agregada la nueva propiedad `tag` requerida del encabezado de solicitud `oneOf[subschema #2]/kind`
+
+error	[request-header-property-became-required] en ./properties/rules/new-required-request-header-property_revision.json
+	en API DELETE /items/{id}.json
+		la propiedad `tag` del encabezado de solicitud `oneOf[subschema #2]/kind` se volvió requerida
+
+

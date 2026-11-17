@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/items/{id}.json":{"operations":{"modified":{"POST":{"parameters":{"modified":{"path":{"id":{"schema":{"contains":{"schemaDeleted":true},"maxContains":{"from":4,"to":null}}}}}},"requestBody":{"content":{"modified":{"multipart/form-data":{"schema":{"properties":{"modified":{"owner":{"items":{"extensions":{"deleted":["x-id"]}}}}}}}}}}}}}}}}}

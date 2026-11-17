@@ -1,0 +1,15 @@
+3 cambios: 0 error, 1 warning, 2 info
+warning	[request-parameter-removed] en ./properties/rules/request-parameter-removed-with-deprecation_revision.yaml
+	en API GET /v1/items
+		eliminado el parámetro `query` de solicitud `䔫䪐뫑襖`
+		Esto es una advertencia porque algunas aplicaciones pueden devolver un error al recibir un parámetro que no esperan. Se recomienda deprecar el parámetro primero.
+
+info	[new-optional-request-parameter] en ./properties/rules/request-parameter-removed-with-deprecation_revision.yaml
+	en API GET /pets/{petId}
+		agregado el nuevo parámetro `cookie` de solicitud opcional `**bold**`
+
+info	[request-parameter-removed-with-deprecation] en ./properties/rules/request-parameter-removed-with-deprecation_revision.yaml
+	en API GET /pets/{petId}
+		eliminado el parámetro `query` de solicitud `**bold**` con deprecación
+
+

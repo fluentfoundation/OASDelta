@@ -1,0 +1,14 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /store/order
+-  endpoint deprecated with sunset date `2099-12-31`
+-  the `items/owner/allOf[subschema #2]/!tag` response property's maxLength was set to `13` for the response status `400`
+
+
+
+
+
+

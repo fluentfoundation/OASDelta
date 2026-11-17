@@ -1,0 +1,210 @@
+{
+  "components": {
+    "securitySchemes": {
+      "oauth": {
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://auth.example.com/authorize",
+            "scopes": {
+              "admin": "admin access",
+              "read": "read access",
+              "write": "write access"
+            },
+            "tokenUrl": "https://auth.example.com/token"
+          },
+          "clientCredentials": {
+            "refreshUrl": "https://auth.example.com/refresh",
+            "scopes": {
+              "admin": "admin access",
+              "read": "read access",
+              "write": "write access"
+            },
+            "tokenUrl": "https://auth.example.com/token"
+          }
+        },
+        "type": "oauth2"
+      }
+    }
+  },
+  "info": {
+    "title": "price",
+    "version": "v1"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/v1/items": {
+      "patch": {
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "price",
+            "required": false,
+            "schema": {
+              "additionalProperties": true,
+              "properties": {
+                "status": {
+                  "description": "ключ",
+                  "format": "date",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "status"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "text/plain": {
+              "schema": {
+                "contains": {
+                  "type": "number"
+                },
+                "minContains": 3,
+                "oneOf": [
+                  {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+                  {
+                    "enum": [
+                      -15.125,
+                      1e-7
+                    ],
+                    "format": "float",
+                    "maximum": 397,
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  {
+                    "description": "kind",
+                    "exclusiveMinimum": -10,
+                    "maximum": 998,
+                    "type": "integer"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "㷣̚笕遵",
+            "headers": {
+              "\u003cb\u003e\u0026amp;": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_v1_items",
+        "responses": {
+          "204": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "!tag": {
+                        "type": "integer"
+                      },
+                      "status": {
+                        "default": false,
+                        "enum": [
+                          true,
+                          false
+                        ],
+                        "type": "boolean"
+                      },
+                      "{brace}": {
+                        "minLength": 5,
+                        "type": "string"
+                      },
+                      "名前": {
+                        "type": [
+                          "boolean",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "status",
+                      "{brace}"
+                    ],
+                    "type": "object"
+                  },
+                  "maxItems": 46,
+                  "type": "array"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "default": -97.25,
+                  "enum": [
+                    -39.125,
+                    21,
+                    57.125
+                  ],
+                  "exclusiveMaximum": 1894,
+                  "exclusiveMinimum": -3,
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "룬䁒臗쎁ᰶ"
+          },
+          "400": {
+            "description": "name"
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "\u0007",
+                  "exclusiveMinimum": -10,
+                  "format": "int64",
+                  "minimum": -8,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "tag"
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "oauth": []
+    }
+  ]
+}

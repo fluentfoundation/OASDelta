@@ -1,0 +1,10 @@
+2 changes: 0 error, 0 warning, 2 info
+info	[api-path-removed-with-deprecation] at ./properties/rules/api-path-removed-with-deprecation_base.yaml
+	in API GET /v1/items
+		api path removed with deprecation
+
+info	[endpoint-added] at ./properties/rules/api-path-removed-with-deprecation_revision.yaml
+	in API GET /v1/items/v2
+		endpoint added
+
+

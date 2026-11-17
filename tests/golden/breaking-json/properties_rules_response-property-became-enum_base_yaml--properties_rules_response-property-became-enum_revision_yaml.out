@@ -1,0 +1,1 @@
+[{"id":"request-body-became-required","text":"request body became required","level":3,"operation":"PUT","path":"/search","section":"paths","revisionSource":{"file":"./properties/rules/response-property-became-enum_revision.yaml","line":73,"column":17},"fingerprint":"aa6da9f8f88e"}]

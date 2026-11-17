@@ -1,0 +1,135 @@
+# Fires api-global-security-scope-added (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            description: 㧻ȡ⒥
+            properties:
+                '| table |':
+                    description: ключ
+                    type:
+                        - boolean
+                        - "null"
+                status:
+                    format: int64
+                    maximum: 511
+                    type:
+                        - integer
+                        - "null"
+                'trailing ':
+                    properties:
+                        "\a":
+                            deprecated: true
+                            type: boolean
+                        '| table |':
+                            type: boolean
+                        owner:
+                            readOnly: true
+                            type: number
+                        tag:
+                            description: _under_
+                            enum:
+                                - 4
+                                - 12
+                                - 8
+                            exclusiveMinimum: -7
+                            format: int32
+                            type: integer
+                    required:
+                        - '| table |'
+                        - owner
+                    type: object
+            required:
+                - '| table |'
+                - 'trailing '
+            type: object
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: kind
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /ünïcode/ключ:
+        put:
+            deprecated: true
+            parameters:
+                - in: header
+                  name: "null"
+                  schema:
+                    description: C:\path
+                    properties:
+                        '-':
+                            description: name
+                            type: integer
+                        ключ:
+                            multipleOf: 10
+                            type: integer
+                        羄ᥘ泴돯:
+                            $ref: '#/components/schemas/Error'
+                    required:
+                        - ключ
+                    type: object
+                - description: kind
+                  in: header
+                  name: <b>&amp;
+                  schema:
+                    items:
+                        enum:
+                            - 33
+                        minimum: -7
+                        type: number
+                    maxItems: 35
+                    minItems: 2
+                    type: array
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            description: 'a: b'
+                            maxProperties: 10
+                            properties:
+                                owner:
+                                    enum:
+                                        - 17
+                                        - 8
+                                        - 9
+                                    format: int32
+                                    minimum: 8
+                                    type: integer
+                                status:
+                                    type: number
+                                ключ:
+                                    deprecated: true
+                                    format: password
+                                    type: string
+                            type: object
+                    application/xml:
+                        schema:
+                            deprecated: true
+                            type: object
+                required: true
+            responses:
+                "200":
+                    content:
+                        application/xml:
+                            schema:
+                                $ref: '#/components/schemas/Error'
+                        text/plain:
+                            schema:
+                                enum:
+                                    - 名前
+                                    - status
+                                    -  nbsp
+                                format: byte
+                                type: string
+                    description: ""
+            x-stability-level: draft
+security:
+    - openid: []
+servers:
+    - url: https://api.example.com/v2
+    - url: /relative
+tags:
+    - name: owner

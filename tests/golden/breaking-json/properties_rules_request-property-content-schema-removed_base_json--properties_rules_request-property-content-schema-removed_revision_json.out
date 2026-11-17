@@ -1,0 +1,1 @@
+[{"id":"request-property-content-media-type-changed","text":"the `items/anyOf[subschema #2]/` request property contentMediaType changed from `application/json` to ``","level":3,"operation":"PUT","path":"/store/order","section":"paths","fingerprint":"93d04f5bb81a"}]

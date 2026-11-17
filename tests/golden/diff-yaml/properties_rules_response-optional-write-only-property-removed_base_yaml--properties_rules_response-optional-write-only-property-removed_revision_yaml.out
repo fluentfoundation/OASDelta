@@ -1,0 +1,71 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "400":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - number
+                                                        deleted:
+                                                            - object
+                                                    additionalPropertiesAllowed:
+                                                        from: true
+                                                        to: null
+                                                    required:
+                                                        stringsdiff:
+                                                            deleted:
+                                                                - owner
+                                                                - price
+                                                                - 薫鑈஼ห꼁洲㗔
+                                                    properties:
+                                                        deleted:
+                                                            - <b>&amp;
+                                                            - owner
+                                                            - price
+                                                            - 薫鑈஼ห꼁洲㗔
+                        deprecated:
+                            from: false
+                            to: true
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /pets/{petId}
+        :   responses:
+                modified:
+                    "400":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        type:
+                                            added:
+                                                - number
+                                            deleted:
+                                                - object
+                                        additionalPropertiesAllowed:
+                                            from: true
+                                            to: null
+                                        required:
+                                            stringsdiff:
+                                                deleted:
+                                                    - owner
+                                                    - price
+                                                    - 薫鑈஼ห꼁洲㗔
+                                        properties:
+                                            deleted:
+                                                - <b>&amp;
+                                                - owner
+                                                - price
+                                                - 薫鑈஼ห꼁洲㗔
+            deprecated:
+                from: false
+                to: true
+

@@ -1,0 +1,2 @@
+::error title=response-header-became-nullable,file=./properties/rules/response-header-became-nullable_revision.yaml,line=26,col=25::in API PATCH /items/{id}.json the response header `id` became nullable for the status `2XX`
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-body-all-of-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed `subschema #1, subschema #2, subschema #3` from the response body `allOf` list for the response status `default`</failure>
+    </testcase>
+    <testcase name="response-body-type-specialized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body `type` was narrowed from `any` to `object` for status `default`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

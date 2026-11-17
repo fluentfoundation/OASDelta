@@ -1,0 +1,25 @@
+- id: response-body-contains-added
+  text: added 'contains' constraint to the response body for the status `201`
+  level: 1
+  operation: GET
+  operationId: get_store_order
+  path: /store/order
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-min-contains-set_revision.yaml
+    line: 68
+    column: 33
+  fingerprint: 86372cd6575e
+- id: response-body-min-contains-set
+  text: the response's body minContains was set to `2`
+  level: 1
+  operation: GET
+  operationId: get_store_order
+  path: /store/order
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-min-contains-set_revision.yaml
+    line: 70
+    column: 33
+  fingerprint: 72380916c9c2
+

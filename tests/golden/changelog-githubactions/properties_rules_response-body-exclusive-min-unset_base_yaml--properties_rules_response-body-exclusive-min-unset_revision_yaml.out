@@ -1,0 +1,6 @@
+::error title=response-body-exclusive-min-unset,file=./properties/rules/response-body-exclusive-min-unset_revision.yaml::in API GET /ünïcode/ключ the response's body exclusiveMinimum was unset from `-2.00`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-body-became-not-nullable,file=./properties/rules/response-body-exclusive-min-unset_revision.yaml::in API GET /ünïcode/ключ the response's body became not nullable
+::notice title=response-body-default-value-removed,file=./properties/rules/response-body-exclusive-min-unset_revision.yaml::in API GET /ünïcode/ключ the response body `application/xml` default value `80.00` was removed for the status `404`
+::notice title=response-body-type-specialized,file=./properties/rules/response-body-exclusive-min-unset_revision.yaml,line=83,col=33::in API GET /ünïcode/ключ the response's body `type` was narrowed from `number, null` to `integer` for status `404`
+

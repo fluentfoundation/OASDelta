@@ -1,0 +1,29 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json; charset=utf-8:
+                                        schema:
+                                            items:
+                                                uniqueItems:
+                                                    from: true
+                                                    to: false
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /store/order
+        :   requestBody:
+                content:
+                    modified:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    uniqueItems:
+                                        from: true
+                                        to: false
+

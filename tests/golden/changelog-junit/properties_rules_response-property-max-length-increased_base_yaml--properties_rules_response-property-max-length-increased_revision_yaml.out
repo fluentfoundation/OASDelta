@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="response-body-content-media-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response body contentMediaType changed from `application/json` to `` for the status `default` (media type: */*)</failure>
+    </testcase>
+    <testcase name="response-body-content-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed 'contentSchema' from the response body for the status `default` (media type: */*)</failure>
+    </testcase>
+    <testcase name="response-property-max-length-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `anyOf[subschema #3]/*star` response property's maxLength was increased from `3` to `107` for the response status `default` (media type: application/json; charset=utf-8)</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

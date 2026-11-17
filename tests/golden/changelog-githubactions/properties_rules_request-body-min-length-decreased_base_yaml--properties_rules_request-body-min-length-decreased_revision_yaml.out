@@ -1,0 +1,3 @@
+::notice title=request-body-min-length-decreased,file=./properties/rules/request-body-min-length-decreased_revision.yaml,line=40,col=29::in API POST /pets the request's body minLength was decreased from `3` to `2`
+::notice title=response-header-added,file=./properties/rules/request-body-min-length-decreased_revision.yaml,line=54,col=25::in API POST /pets the response header `kind` was added for the status `404`
+

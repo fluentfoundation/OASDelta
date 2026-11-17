@@ -1,0 +1,11 @@
+2 changes: 0 error, 0 warning, 2 info
+info	[request-body-max-items-unset] at ./properties/rules/request-body-max-items-unset_revision.yaml
+	in API POST /pets/{petId}
+		the request's body maxItems was unset from `81`
+
+info	[request-property-type-compatible] at ./properties/rules/request-body-max-items-unset_revision.yaml
+	in API POST /pets/{petId}
+		the `items/` request property `type` changed from `array<boolean/custom>` to `string` (backward compatible)
+		This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking.
+
+

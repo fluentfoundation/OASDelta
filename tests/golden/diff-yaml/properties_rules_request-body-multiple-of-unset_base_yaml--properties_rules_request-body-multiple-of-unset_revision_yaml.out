@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            content:
+                                modified:
+                                    '*/*':
+                                        schema:
+                                            multipleOf:
+                                                from: 5
+                                                to: null
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /owners/{ownerId}/pets
+        :   requestBody:
+                content:
+                    modified:
+                        '*/*':
+                            schema:
+                                multipleOf:
+                                    from: 5
+                                    to: null
+

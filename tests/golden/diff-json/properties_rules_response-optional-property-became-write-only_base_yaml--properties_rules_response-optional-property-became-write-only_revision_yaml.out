@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/v1/items":{"operations":{"modified":{"POST":{"responses":{"modified":{"500":{"content":{"modified":{"text/plain":{"schema":{"properties":{"modified":{"%20":{"writeOnly":{"from":false,"to":true}}}}}}}}}}}}}}}}}}

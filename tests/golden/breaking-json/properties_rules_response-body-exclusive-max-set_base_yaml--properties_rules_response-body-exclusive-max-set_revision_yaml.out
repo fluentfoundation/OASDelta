@@ -1,0 +1,1 @@
+[{"id":"request-parameter-became-required","text":"the `query` request parameter `pet` became required","level":3,"operation":"PUT","operationId":"put_search","path":"/search","section":"paths","fingerprint":"fbeda14c1e2c"}]

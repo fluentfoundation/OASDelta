@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /items/{id}.json
+- :warning: added the new required `tag` request header's property `oneOf[subschema #2]/kind`
+- :warning: the `tag` request header's property `oneOf[subschema #2]/kind` became required
+
+
+
+
+
+

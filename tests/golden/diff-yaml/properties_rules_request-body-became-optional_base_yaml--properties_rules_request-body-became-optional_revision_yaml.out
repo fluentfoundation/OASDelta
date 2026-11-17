@@ -1,0 +1,40 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        deleted:
+                                            - application/json; charset=utf-8
+                    PATCH:
+                        requestBody:
+                            description:
+                                from: ""
+                                to: id
+                            required:
+                                from: true
+                                to: false
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets/{petId}
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            deleted:
+                                - application/json; charset=utf-8
+        ?   method: PATCH
+            path: /pets/{petId}
+        :   requestBody:
+                description:
+                    from: ""
+                    to: id
+                required:
+                    from: true
+                    to: false
+

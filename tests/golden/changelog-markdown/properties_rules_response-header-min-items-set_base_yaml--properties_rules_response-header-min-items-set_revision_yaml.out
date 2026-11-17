@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /store/order
+-  the `kind` response header's minItems was set to `6` for the status `404`
+
+
+
+
+
+

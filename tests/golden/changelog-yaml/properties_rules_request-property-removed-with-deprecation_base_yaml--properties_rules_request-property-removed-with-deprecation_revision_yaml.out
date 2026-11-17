@@ -1,0 +1,45 @@
+- id: request-body-type-changed
+  text: the request's body `type` changed from `object` to `array<string>`
+  level: 3
+  operation: PUT
+  path: /store/order
+  section: paths
+  revisionSource:
+    file: ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+    line: 72
+    column: 29
+  fingerprint: af31e7bde117
+- id: request-property-removed
+  text: removed the request property `...`
+  level: 2
+  operation: PUT
+  path: /store/order
+  section: paths
+  fingerprint: 98cbf76a0108
+- id: request-property-removed
+  text: removed the request property `C:\path`
+  level: 2
+  operation: PUT
+  path: /store/order
+  section: paths
+  fingerprint: 4d49911153c3
+- id: request-property-removed
+  text: removed the request property `kind`
+  level: 2
+  operation: PUT
+  path: /store/order
+  section: paths
+  fingerprint: ddc30de8c67f
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: request-property-removed-with-deprecation
+  text: removed the deprecated request property `id`
+  level: 1
+  operation: PUT
+  path: /store/order
+  section: paths
+  fingerprint: 31e4530e83a8
+

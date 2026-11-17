@@ -1,0 +1,3 @@
+::error title=response-body-type-changed,file=./properties/rules/response-body-min-set_revision.yaml,line=27,col=21::in API PATCH /items/{id}.json the response's body `type` changed from `object` to `integer` for status `204`
+::notice title=response-body-min-set,file=./properties/rules/response-body-min-set_revision.yaml,line=26,col=21::in API PATCH /items/{id}.json the response's body min was set to `4.00`
+

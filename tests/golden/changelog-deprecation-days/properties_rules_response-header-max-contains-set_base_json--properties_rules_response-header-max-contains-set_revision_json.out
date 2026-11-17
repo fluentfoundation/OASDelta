@@ -1,0 +1,1 @@
+[{"id":"response-header-max-contains-set","text":"the `妏` response header's maxContains was set to `1` for the status `404`","level":1,"operation":"GET","path":"/pets/{petId}","section":"paths","fingerprint":"423e034f875a"}]

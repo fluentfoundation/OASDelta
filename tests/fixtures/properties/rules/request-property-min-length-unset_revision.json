@@ -1,0 +1,316 @@
+{
+  "components": {
+    "schemas": {
+      "Item": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "deprecated": true,
+            "enum": [
+              15
+            ],
+            "format": "int32",
+            "maximum": 942,
+            "type": "integer",
+            "writeOnly": true
+          },
+          {}
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "created",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/store/order": {
+      "patch": {
+        "operationId": "patch_store_order",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "name",
+            "required": false,
+            "schema": {
+              "format": "custom",
+              "nullable": true,
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "名前",
+            "required": true,
+            "schema": {
+              "description": "C:\\path",
+              "nullable": true,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "default": -28.5,
+                  "deprecated": true,
+                  "nullable": true,
+                  "type": "integer"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "description": "kind",
+                  "properties": {
+                    "pet": {
+                      "$ref": "#/components/schemas/Item"
+                    }
+                  },
+                  "required": [
+                    "pet"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "'single'"
+          }
+        },
+        "tags": [
+          "created",
+          "created"
+        ]
+      }
+    },
+    "/v1/items": {
+      "post": {
+        "description": "trailing ",
+        "operationId": "post_v1_items",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "no",
+            "required": true,
+            "schema": {
+              "enum": [
+                true,
+                false
+              ],
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "2XX": {
+            "description": "pet"
+          },
+          "404": {
+            "description": "owner"
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "owner",
+            "required": true,
+            "schema": {
+              "properties": {
+                "created": {
+                  "description": "owner",
+                  "nullable": true,
+                  "type": "integer"
+                },
+                "ключ": {
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "format": "custom",
+                  "nullable": true,
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "created",
+                "ключ"
+              ],
+              "type": "object"
+            },
+            "style": "simple"
+          },
+          {
+            "in": "header",
+            "name": "䥚",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "\"quoted\"",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "properties": {
+                  "0x1F": {
+                    "description": "꺌",
+                    "format": "int32",
+                    "nullable": true,
+                    "type": "integer"
+                  },
+                  "created": {
+                    "items": {
+                      "enum": [
+                        "怪玝句⧪㛶",
+                        " nbsp"
+                      ],
+                      "nullable": true,
+                      "type": "string"
+                    },
+                    "maxItems": 88,
+                    "type": "array"
+                  },
+                  "㺓崠讆": {
+                    "additionalProperties": true,
+                    "description": "|",
+                    "properties": {
+                      "...": {
+                        "enum": [
+                          -99.125,
+                          72,
+                          -37.875
+                        ],
+                        "maximum": 718,
+                        "nullable": true,
+                        "type": "number"
+                      },
+                      "id": {
+                        "$ref": "#/components/schemas/Item"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "0x1F"
+                ],
+                "type": "object"
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "oneOf": [
+                  {
+                    "items": {
+                      "description": "a/b",
+                      "example": "created",
+                      "nullable": true,
+                      "readOnly": true,
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "anyOf": [
+                      {
+                        "default": "price",
+                        "maxLength": 98,
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "format": "uuid",
+                        "type": "string"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "2XX": {
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "items": {
+                    "description": "%20",
+                    "properties": {
+                      "\u003e": {
+                        "enum": [
+                          true,
+                          false
+                        ],
+                        "type": "boolean"
+                      },
+                      "id": {
+                        "description": "a: b",
+                        "minimum": -5,
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "~"
+          },
+          "500": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "nullable": true,
+                  "type": "string"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "properties": {
+                    "쐞ቼ㙨럻馠吞阌ᬪ": {
+                      "description": "status",
+                      "format": "double",
+                      "nullable": true,
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "쐞ቼ㙨럻馠吞阌ᬪ"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "ключ"
+          }
+        }
+      }
+    }
+  }
+}

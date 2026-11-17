@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="7" errors="0" failures="7" name="OASDiff">
+    <testcase name="request-body-media-type-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the media type `application/xml` from the request body</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `'single'`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `id/no`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `id/tag`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `line1
+line2`</failure>
+    </testcase>
+    <testcase name="request-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the request property `pet`</failure>
+    </testcase>
+    <testcase name="request-property-type-compatible" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `id` request property `type` changed from `object` to `string` (backward compatible)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

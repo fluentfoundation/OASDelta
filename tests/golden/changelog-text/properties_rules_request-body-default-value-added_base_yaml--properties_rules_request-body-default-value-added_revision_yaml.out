@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[request-body-default-value-added] at ./properties/rules/request-body-default-value-added_revision.yaml
+	in API PUT /v1/items
+		the request body `application/json` default value `---` was added
+
+

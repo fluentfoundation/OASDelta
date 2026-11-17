@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /pets
+-  the `` response property const value `tag` was added for the status `404`
+
+
+
+
+
+

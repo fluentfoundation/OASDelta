@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-body-max-set] в ./properties/rules/response-body-max-set_revision.json
+	в API PATCH /owners/{ownerId}/pets
+		у тела ответа задано значение max в `21.00`
+
+

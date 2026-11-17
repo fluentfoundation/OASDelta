@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="request-parameter-became-required" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `query` request parameter `pet` became required</failure>
+    </testcase>
+    <testcase name="request-parameter-became-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `cookie` request parameter `孱` became nullable</failure>
+    </testcase>
+    <testcase name="response-body-exclusive-max-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body exclusiveMaximum was set to `23.00`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

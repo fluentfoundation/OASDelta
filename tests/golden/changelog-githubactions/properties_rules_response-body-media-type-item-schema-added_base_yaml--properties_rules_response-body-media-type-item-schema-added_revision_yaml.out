@@ -1,0 +1,3 @@
+::notice title=endpoint-added,file=./properties/rules/response-body-media-type-item-schema-added_revision.yaml,line=38,col=9::in API GET /added/kind endpoint added
+::notice title=response-body-media-type-item-schema-added,file=./properties/rules/response-body-media-type-item-schema-added_revision.yaml,line=77,col=25::in API POST /pets/{petId} added an item schema to the media type `text/plain` for the response with the status `2XX`
+

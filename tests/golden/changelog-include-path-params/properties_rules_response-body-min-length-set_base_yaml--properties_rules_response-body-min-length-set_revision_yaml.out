@@ -1,0 +1,1 @@
+[{"id":"response-body-min-length-set","text":"the response's body minLength was set to `14`","level":1,"operation":"POST","path":"/pets","section":"paths","revisionSource":{"file":"./properties/rules/response-body-min-length-set_revision.yaml","line":33,"column":33},"fingerprint":"20c6cdbf0160"}]

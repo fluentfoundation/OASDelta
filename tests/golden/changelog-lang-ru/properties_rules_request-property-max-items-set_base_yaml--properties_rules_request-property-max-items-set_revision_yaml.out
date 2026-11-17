@@ -1,0 +1,7 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[request-property-max-items-set] в ./properties/rules/request-property-max-items-set_revision.yaml
+	в API POST /items/{id}.json
+		значение maxItems у поля запроса `-/anyOf[subschema #2]/` задано в `1`
+		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+
+

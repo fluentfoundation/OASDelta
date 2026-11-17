@@ -1,0 +1,78 @@
+{
+  "info": {
+    "title": "status",
+    "version": "2.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/v1/items": {
+      "put": {
+        "deprecated": true,
+        "parameters": [
+          {
+            "deprecated": true,
+            "in": "cookie",
+            "name": " nbsp",
+            "schema": {
+              "allOf": [
+                {
+                  "description": "Ünïcode",
+                  "format": "custom",
+                  "type": "boolean"
+                },
+                {
+                  "type": "boolean"
+                },
+                {
+                  "description": " leading",
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "type": "boolean"
+                }
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "ꕒอ鼽银澜鵼偝炲",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "format": "email",
+                  "pattern": "\\d{3}",
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Ünïcode",
+            "headers": {
+              "id": {
+                "schema": {
+                  "maxProperties": 19,
+                  "type": "boolean"
+                }
+              },
+              "烖龉閙": {
+                "schema": {
+                  "minLength": 4,
+                  "nullable": true,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Ünïcode"
+      }
+    }
+  }
+}

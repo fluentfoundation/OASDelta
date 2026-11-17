@@ -1,0 +1,18 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /v1/items
+- :warning: the response's body minProperties was unset from `8`
+
+
+### POST /v1/items
+-  the request's body minProperties was unset from `8` (media type: */*)
+-  the `%20/created` request read-only property's max was decreased to `209.00` (media type: application/json)
+
+
+
+
+
+

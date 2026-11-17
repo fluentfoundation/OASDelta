@@ -1,0 +1,2 @@
+::notice title=response-property-min-increased,file=./properties/rules/response-property-min-increased_revision.yaml,line=153,col=45::in API PUT /items/{id}.json the `items/!tag` response property's min was increased from `-10.00` to `-8.00` for the response status `500`
+

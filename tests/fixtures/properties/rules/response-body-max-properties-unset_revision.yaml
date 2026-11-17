@@ -1,0 +1,53 @@
+# Fires response-body-max-properties-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: "\U0001F600"
+    version: v1
+openapi: 3.0.3
+paths:
+    /owners/{ownerId}/pets:
+        patch:
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "204":
+                    description: '@at'
+                "404":
+                    description: created
+    /pets:
+        get:
+            description: Ünïcode
+            operationId: get_pets
+            responses:
+                "200":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    type: string
+                                type: array
+                    description: id
+                "400":
+                    description: status
+    /v1/items:
+        post:
+            parameters:
+                - in: cookie
+                  name: kind
+                  schema:
+                    properties:
+                        status:
+                            nullable: true
+                            type: number
+                        tag:
+                            type: boolean
+                    type: object
+            responses:
+                "204":
+                    description: kind
+            summary: ключ
+servers:
+    - url: /relative

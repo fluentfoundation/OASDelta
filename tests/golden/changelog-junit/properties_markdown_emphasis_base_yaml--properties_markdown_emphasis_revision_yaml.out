@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="49" errors="0" failures="49" name="OASDiff">
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `(~a~)` enum value to the `p16` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `***~a~***` enum value to the `p22` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `*-a-*` enum value to the `p34` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `*~a~*` enum value to the `p23` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `+*a*+` enum value to the `p35` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `-~abb1*~~ ~ a--*\.` enum value to the `p37` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `[ ] a` enum value to the `p42` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `[X]c` enum value to the `p45` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `[x] b` enum value to the `p43` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `\~~a~~` enum value to the `p40` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new ``~a~`` enum value to the `p25` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `a ~b~ c` enum value to the `p18` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `a\~~b~~` enum value to the `p39` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `a~` enum value to the `p7` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `a~b` enum value to the `combo` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `a~b` enum value to the `p1` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `a~b c~d` enum value to the `p5` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `a~b-1` enum value to the `combo` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `a~~b~~c` enum value to the `p14` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `a~~~b~~~c` enum value to the `p28` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `b~-a~` enum value to the `p33` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `d~` enum value to the `combo` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `x**-y**` enum value to the `p30` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `x*+y*` enum value to the `p31` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `x*-y*` enum value to the `p29` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `x_-y_` enum value to the `p36` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `x~-y~` enum value to the `p32` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `x~~y~z` enum value to the `p11` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `z [ ]` enum value to the `p44` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~` enum value to the `p13` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~ a ~` enum value to the `p8` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~(a)~` enum value to the `p17` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~*a*~` enum value to the `p24` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~1~2` enum value to the `p21` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~a` enum value to the `p6` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~a\~` enum value to the `p26` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~a\~~` enum value to the `p41` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~a~` enum value to the `p2` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~a~b~` enum value to the `p15` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~a~~` enum value to the `p10` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~c` enum value to the `combo` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~~` enum value to the `p12` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~~. ~a)bé\~~~` enum value to the `p38` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~~a~` enum value to the `p9` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~~a~~` enum value to the `p3` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~~a~~~` enum value to the `p19` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~~~a~~~` enum value to the `p4` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `~~~~` enum value to the `p27` response property for the response status `200`</failure>
+    </testcase>
+    <testcase name="response-property-enum-value-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new `é~ü~` enum value to the `p20` response property for the response status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

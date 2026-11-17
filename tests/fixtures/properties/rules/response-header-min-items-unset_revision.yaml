@@ -1,0 +1,106 @@
+# Fires response-header-min-items-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        bearer:
+            bearerFormat: JWT
+            scheme: bearer
+            type: http
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: ключ
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /v1/items:
+        delete:
+            description: pet
+            operationId: delete_v1_items
+            responses:
+                "200":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                properties:
+                                    '&anchor':
+                                        items:
+                                            enum:
+                                                - 'a: b'
+                                                - '|'
+                                            format: password
+                                            type:
+                                                - string
+                                                - "null"
+                                        type: array
+                                    '[bracket]':
+                                        maxLength: 159
+                                        type: string
+                                    created:
+                                        items:
+                                            maxLength: 114
+                                            type:
+                                                - string
+                                                - "null"
+                                        type: array
+                                required:
+                                    - '[bracket]'
+                                type: object
+                    description: Ünïcode
+                    headers:
+                        졳恂낭:
+                            required: false
+                            schema:
+                                deprecated: true
+                                type:
+                                    - boolean
+                                    - "null"
+                "201":
+                    description: status
+                    headers:
+                        kind:
+                            required: true
+                            schema:
+                                type:
+                                    - string
+                                    - "null"
+                        블:
+                            schema:
+                                type: boolean
+                "404":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    maximum: 824
+                                    minimum: 7
+                                    type:
+                                        - number
+                                        - "null"
+                                maxItems: 53
+                                type: array
+                        application/vnd.api+json:
+                            schema:
+                                enum:
+                                    - 19
+                                exclusiveMinimum: -4
+                                type: integer
+                    description: id
+                    headers:
+                        '`tick`':
+                            required: true
+                            schema:
+                                description: Ünïcode
+                                format: custom
+                                type:
+                                    - boolean
+                                    - "null"
+                        名前:
+                            deprecated: true
+                            schema:
+                                format: custom
+                                type: boolean
+            security: []
+            tags:
+                - name
+                - tag

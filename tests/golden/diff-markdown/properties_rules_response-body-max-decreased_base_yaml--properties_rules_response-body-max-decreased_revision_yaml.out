@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+PATCH /owners/{ownerId}/pets
+- Responses changed
+  - Modified response: 400
+    - Content changed
+      - Modified media type: */*
+        - Schema changed
+          - Max changed from 244 to 241
+
+PUT /owners/{ownerId}/pets
+- Responses changed
+  - Modified response: default
+    - Content changed
+      - Deleted media type: application/json
+
+

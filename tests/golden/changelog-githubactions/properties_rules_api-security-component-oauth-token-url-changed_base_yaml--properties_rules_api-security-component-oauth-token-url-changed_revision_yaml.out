@@ -1,0 +1,4 @@
+::warning title=api-security-component-oauth-token-url-changed,file=./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml,line=4,col=9::in API   the component security scheme `oauth` oauth `authorizationCode` flow token url changed from `https://auth.example.com/token` to `https://auth0.example.com/tokenUrl`
+::warning title=api-security-component-oauth-token-url-changed,file=./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml,line=4,col=9::in API   the component security scheme `oauth` oauth `clientCredentials` flow token url changed from `https://auth.example.com/token` to `https://auth0.example.com/tokenUrl`
+::notice title=request-parameter-type-generalized,file=./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml::in API PATCH /search for the `cookie` request parameter `id`, the `type` was widened from `array<integer/int64>` to `any`
+

@@ -1,0 +1,128 @@
+{
+  "components": {
+    "schemas": {
+      "Item": {
+        "description": "Ünïcode",
+        "format": "custom",
+        "type": "boolean"
+      }
+    },
+    "securitySchemes": {
+      "openid": {
+        "openIdConnectUrl": "https://auth.example.com/.well-known/openid-configuration",
+        "type": "openIdConnect"
+      }
+    }
+  },
+  "info": {
+    "title": "kind",
+    "version": "2.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/owners/{ownerId}/pets": {
+      "put": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ownerId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "name",
+            "in": "query",
+            "name": "⭏嚯翁",
+            "schema": {
+              "$ref": "#/components/schemas/Item"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/vnd.api+json": {
+              "schema": {
+                "items": {
+                  "description": "kind",
+                  "minProperties": 0,
+                  "properties": {
+                    "-": {
+                      "$ref": "#/components/schemas/Item"
+                    }
+                  },
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              }
+            }
+          },
+          "description": "{brace}"
+        },
+        "responses": {
+          "200": {
+            "description": "\u003e"
+          },
+          "2XX": {
+            "description": "name"
+          },
+          "400": {
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/Item"
+                    },
+                    {
+                      "format": "custom",
+                      "nullable": true,
+                      "type": "boolean"
+                    },
+                    {
+                      "properties": {
+                        "kind": {
+                          "format": "date",
+                          "type": "string"
+                        },
+                        "tag": {
+                          "description": "pet",
+                          "type": "boolean"
+                        },
+                        "x\ty": {
+                          "type": "string"
+                        },
+                        "ࡾ鞛멵塍섫幕": {
+                          "$ref": "#/components/schemas/Item"
+                        }
+                      },
+                      "required": [
+                        "ࡾ鞛멵塍섫幕",
+                        "tag",
+                        "x\ty"
+                      ],
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "1e3"
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "openid": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.example.com/v2"
+    }
+  ]
+}

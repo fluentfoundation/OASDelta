@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/ünïcode/ключ":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/vnd.api+json":{"schema":{"items":{"type":{"added":["string"],"deleted":["object"]},"required":{"deleted":["Ünïcode"]},"properties":{"deleted":["Ünïcode","傓"]},"maxProps":{"from":20,"to":null}}}}}}}}}}}}}}

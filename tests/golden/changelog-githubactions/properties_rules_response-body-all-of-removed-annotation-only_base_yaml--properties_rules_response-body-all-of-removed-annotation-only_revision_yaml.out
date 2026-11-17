@@ -1,0 +1,2 @@
+::notice title=response-body-all-of-removed-annotation-only,file=./properties/rules/response-body-all-of-removed-annotation-only_revision.yaml::in API POST /ünïcode/ключ removed annotation-only `subschema #1` from the response body `allOf` list for the response status `default`
+

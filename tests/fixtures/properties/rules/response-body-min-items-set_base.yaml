@@ -1,0 +1,144 @@
+# Fires response-body-min-items-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        api_key:
+            in: query
+            name: 名前
+            type: apiKey
+info:
+    title: '|'
+    version: v1
+openapi: 3.1.0
+paths:
+    /search:
+        patch:
+            parameters:
+                - in: query
+                  name: 名前
+                  schema:
+                    properties:
+                        ключ:
+                            type: number
+                    required:
+                        - ключ
+                    type: object
+                - deprecated: true
+                  in: query
+                  name: tag
+                  required: true
+                  schema:
+                    pattern: ^.*$
+                    type: string
+                - description: owner
+                  in: query
+                  name: 珺첸큑龑Ɏ
+                  schema:
+                    default: 72.5
+                    description: owner
+                    example: Ünïcode
+                    format: int32
+                    minimum: -5
+                    type:
+                        - integer
+                        - "null"
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            items:
+                                maxLength: 68
+                                type:
+                                    - string
+                                    - "null"
+                            maxItems: 59
+                            type: array
+                description: created
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    example: 名前
+                                    type: boolean
+                                type: array
+                        multipart/form-data:
+                            schema:
+                                items:
+                                    properties:
+                                        '[bracket]':
+                                            maximum: 502
+                                            type:
+                                                - number
+                                                - "null"
+                                        pet:
+                                            description: pet
+                                            format: uuid
+                                            type:
+                                                - string
+                                                - "null"
+                                            writeOnly: true
+                                    required:
+                                        - pet
+                                        - '[bracket]'
+                                    type: object
+                                type: array
+                    description: "yes"
+                    headers:
+                        id:
+                            schema:
+                                description: ꂨ繑奭淾祼촘獻
+                                format: int32
+                                type: integer
+                "201":
+                    description: 'a: b'
+                "500":
+                    description: price
+            security: []
+        put:
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            format: binary
+                            maxLength: 159
+                            type: string
+                    multipart/form-data:
+                        schema:
+                            properties:
+                                名前:
+                                    anyOf:
+                                        - format: byte
+                                          maxLength: 145
+                                          type:
+                                            - string
+                                            - "null"
+                                        - description: 名前
+                                          format: int64
+                                          type: integer
+                                        - example: '-'
+                                          type: number
+                                    discriminator:
+                                        propertyName: 얽
+                            required:
+                                - 名前
+                            type: object
+                description: ' '
+                required: false
+            responses:
+                "200":
+                    description: created
+                "201":
+                    description: ключ
+                default:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                format: custom
+                                type: boolean
+                    description: '{brace}'
+            security:
+                - api_key: []
+servers:
+    - url: /relative
+    - url: https://api.example.com

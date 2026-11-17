@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /ünïcode/ключ
+- :warning: the `oneOf[subschema #1]/` response property's minItems was decreased from `3` to `2` for the response status `204`
+
+
+
+
+
+

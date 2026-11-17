@@ -1,0 +1,33 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /pets/{petId}
+-  endpoint added
+
+
+### GET /pets/{petId}
+-  endpoint added
+
+
+### POST /pets/{petId}
+-  endpoint added
+
+
+### DELETE /pets/{petId}/v2
+-  api path removed with deprecation
+
+
+### GET /pets/{petId}/v2
+- :warning: api path removed without deprecation
+
+
+### POST /pets/{petId}/v2
+- :warning: api path removed before the sunset date `2099-12-31`
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+1 alterações: 1 error, 0 warning, 0 info
+error	[required-response-header-removed] em ./properties/rules/required-response-header-removed_revision.yaml
+	em API GET /pets/{petId}
+		o cabeçalho de resposta obrigatório `<b>&amp;` foi removido para o status `404`
+
+

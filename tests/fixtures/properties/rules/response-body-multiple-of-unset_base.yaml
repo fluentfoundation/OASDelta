@@ -1,0 +1,43 @@
+# Fires response-body-multiple-of-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: 螜Ṏ闿⑀쭧麶
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /pets:
+        put:
+            operationId: put_pets
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            description: '!tag'
+                            format: custom
+                            type: boolean
+                            writeOnly: true
+                    text/plain:
+                        schema:
+                            items:
+                                maxLength: 67
+                                minLength: 5
+                                pattern: '[^\n]'
+                                type: string
+                            maxItems: 5
+                            type: array
+                required: false
+            responses:
+                "400":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                multipleOf: 5
+                                type:
+                                    - number
+                                    - "null"
+                    description: "no"
+            summary: 名前
+servers:
+    - url: /relative
+tags:
+    - name: name
+    - name: id

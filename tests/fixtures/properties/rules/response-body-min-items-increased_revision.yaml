@@ -1,0 +1,121 @@
+# Fires response-body-min-items-increased, response-property-min-items-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            items:
+                format: float
+                nullable: true
+                type: number
+            minItems: 4
+            type: array
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: owner
+            type: apiKey
+info:
+    title: ключ
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /search:
+        post:
+            operationId: post_search
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                format: float
+                                nullable: true
+                                type: number
+                        application/xml:
+                            schema:
+                                description: ‮abc
+                                properties:
+                                    owner:
+                                        description: status
+                                        format: byte
+                                        type: string
+                                        writeOnly: true
+                                    pet:
+                                        type: string
+                                    名前:
+                                        $ref: '#/components/schemas/Owner'
+                                required:
+                                    - pet
+                                type: object
+                    description: tag
+        put:
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            default: 84
+                            description: created
+                            format: float
+                            multipleOf: 2
+                            nullable: true
+                            type: number
+                    multipart/form-data:
+                        schema:
+                            description: owner
+                            maximum: 685
+                            nullable: true
+                            type: integer
+                required: true
+            responses:
+                "404":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    items:
+                                        deprecated: true
+                                        enum:
+                                            - 2
+                                            - -1
+                                            - 14
+                                        format: int64
+                                        type: integer
+                                    type: array
+                                    uniqueItems: true
+                                maxItems: 68
+                                type: array
+                        multipart/form-data:
+                            schema:
+                                properties:
+                                     nbsp:
+                                        items:
+                                            enum:
+                                                - true
+                                                - false
+                                            nullable: true
+                                            type: boolean
+                                        type: array
+                                    status:
+                                        format: date
+                                        nullable: true
+                                        type: string
+                                    名前:
+                                        default: 12
+                                        type: number
+                                type: object
+                    description: ключ
+                default:
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    description: ""
+                                    maximum: 563
+                                    type: integer
+                                type: array
+                        multipart/form-data:
+                            schema:
+                                $ref: '#/components/schemas/Owner'
+                    description: owner
+            summary: "no"
+servers:
+    - url: https://api.example.com/v2
+    - url: /relative

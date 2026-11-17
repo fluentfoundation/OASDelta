@@ -1,0 +1,51 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            content:
+                                modified:
+                                    multipart/form-data:
+                                        schema:
+                                            type:
+                                                added:
+                                                    - boolean
+                                                deleted:
+                                                    - "null"
+                                                    - number
+                                            default:
+                                                from: -26.125
+                                                to: null
+                                            readOnly:
+                                                from: true
+                                                to: false
+                                            min:
+                                                from: -2
+                                                to: null
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /v1/items
+        :   requestBody:
+                content:
+                    modified:
+                        multipart/form-data:
+                            schema:
+                                type:
+                                    added:
+                                        - boolean
+                                    deleted:
+                                        - "null"
+                                        - number
+                                default:
+                                    from: -26.125
+                                    to: null
+                                readOnly:
+                                    from: true
+                                    to: false
+                                min:
+                                    from: -2
+                                    to: null
+

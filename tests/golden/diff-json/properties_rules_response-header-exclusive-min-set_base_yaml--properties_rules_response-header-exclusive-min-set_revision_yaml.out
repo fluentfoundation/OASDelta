@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets":{"operations":{"deleted":["GET"]}},"/store/order":{"operations":{"modified":{"PATCH":{"parameters":{"modified":{"header":{"name":{"allowReserved":{"from":false,"to":true}}}}},"responses":{"modified":{"201":{"headers":{"modified":{"%20":{"schema":{"exclusiveMin":{"from":null,"to":true}}}}}}}}}}}}}}}

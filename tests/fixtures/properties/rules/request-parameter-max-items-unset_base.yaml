@@ -1,0 +1,113 @@
+# Fires request-parameter-max-items-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        bearer:
+            scheme: basic
+            type: http
+info:
+    title: 铋唗ᣅ䊐旱篂켲듀
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /search:
+        delete:
+            description: id
+            parameters:
+                - in: cookie
+                  name: 뻩씃쑶䘎冘
+                  required: true
+                  schema:
+                    items:
+                        enum:
+                            - 14
+                            - -2
+                        nullable: true
+                        type: integer
+                    maxItems: 92
+                    minItems: 3
+                    type: array
+            responses:
+                "201":
+                    content:
+                        application/xml:
+                            schema:
+                                enum:
+                                    - 7
+                                    - 14
+                                    - 0
+                                    - 20
+                                nullable: true
+                                type: integer
+                    description: created
+                "400":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                format: int64
+                                minimum: 1
+                                type: integer
+                        application/xml:
+                            schema:
+                                properties:
+                                    "\a":
+                                        items:
+                                            description: price
+                                            nullable: true
+                                            readOnly: true
+                                            type: integer
+                                        type: array
+                                    kind:
+                                        items:
+                                            example: "yes"
+                                            type: boolean
+                                        type: array
+                                    穳궚臤ᜂ䶺帏:
+                                        type: boolean
+                                required:
+                                    - kind
+                                    - "\a"
+                                type: object
+                    description: tag
+        patch:
+            parameters:
+                - in: query
+                  name: empty
+                  schema:
+                    items:
+                        description: created
+                        nullable: true
+                        type: integer
+                    type: array
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            enum:
+                                - 19
+                                - 17
+                            nullable: true
+                            type: integer
+                    text/plain:
+                        schema:
+                            description: 名前
+                            enum:
+                                - 3
+                                - 7
+                                - 9
+                            nullable: true
+                            type: integer
+                required: false
+            responses:
+                "201":
+                    description: "no"
+                default:
+                    description: ключ
+                    headers:
+                        ᙗ⏈␪व:
+                            schema:
+                                deprecated: true
+                                enum:
+                                    - true
+                                    - false
+                                type: boolean
+            security: []

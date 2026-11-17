@@ -1,0 +1,41 @@
+- id: response-body-max-items-unset
+  text: the response's body maxItems was unset from `83`
+  level: 3
+  operation: POST
+  operationId: post_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-body-unique-items-unset_base.yaml
+    line: 106
+    column: 33
+  fingerprint: e12ab534681d
+- id: response-body-type-changed
+  text: the response's body `type` changed from `array<object>` to `boolean` for status `default`
+  level: 3
+  operation: POST
+  operationId: post_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-body-unique-items-unset_base.yaml
+    line: 107
+    column: 33
+  revisionSource:
+    file: ./properties/rules/response-body-unique-items-unset_revision.yaml
+    line: 96
+    column: 33
+  fingerprint: 001dba79872e
+- id: response-body-unique-items-unset
+  text: the response's body uniqueItems was unset
+  level: 3
+  operation: POST
+  operationId: post_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-body-unique-items-unset_base.yaml
+    line: 108
+    column: 33
+  fingerprint: 5064e95621d2
+

@@ -1,0 +1,33 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    items:
+                                                        exclusiveMin:
+                                                            from: true
+                                                            to: null
+endpoints:
+    modified:
+        ?   method: GET
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        items:
+                                            exclusiveMin:
+                                                from: true
+                                                to: null
+

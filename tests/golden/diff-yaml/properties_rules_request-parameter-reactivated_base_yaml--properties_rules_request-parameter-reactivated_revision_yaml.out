@@ -1,0 +1,65 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            added:
+                                header:
+                                    - id
+                            deleted:
+                                path:
+                                    - id
+                            modified:
+                                query:
+                                    status:
+                                        deprecated:
+                                            from: true
+                                            to: false
+                                        schema:
+                                            items:
+                                                minItems:
+                                                    from: 0
+                                                    to: 12
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                example:
+                                                    from: null
+                                                    to: status
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items/{id}.json
+        :   parameters:
+                added:
+                    header:
+                        - id
+                deleted:
+                    path:
+                        - id
+                modified:
+                    query:
+                        status:
+                            deprecated:
+                                from: true
+                                to: false
+                            schema:
+                                items:
+                                    minItems:
+                                        from: 0
+                                        to: 12
+            responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/xml:
+                                    example:
+                                        from: null
+                                        to: status
+

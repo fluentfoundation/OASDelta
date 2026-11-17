@@ -1,0 +1,156 @@
+# Fires request-parameter-min-properties-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            properties:
+                '[bracket]':
+                    deprecated: true
+                    example: 名前
+                    nullable: true
+                    type: integer
+                "no":
+                    description: tag
+                    properties:
+                        price:
+                            type: boolean
+                    required:
+                        - price
+                    type: object
+            required:
+                - '[bracket]'
+            type: object
+        Item:
+            properties:
+                status:
+                    properties:
+                        '@at':
+                            $ref: '#/components/schemas/Owner'
+                        price:
+                            type: boolean
+                    required:
+                        - price
+                    type: object
+                ключ:
+                    oneOf:
+                        - description: 名前
+                          type: boolean
+                        - description: ᄙ䨩苺眸
+                          enum:
+                            - tag
+                          nullable: true
+                          type: string
+                        - type: integer
+                          writeOnly: true
+            type: object
+        Owner:
+            type: number
+    securitySchemes:
+        api_key:
+            in: header
+            name: id
+            type: apiKey
+info:
+    title: '#hash'
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /store/order:
+        post:
+            deprecated: true
+            operationId: post_store_order
+            parameters:
+                - in: query
+                  name: tag
+                  required: false
+                  schema:
+                    properties:
+                        ᪌囪쓋⒇끕:
+                            nullable: true
+                            readOnly: true
+                            type: integer
+                        Ünïcode:
+                            default: kind
+                            maxLength: 218
+                            readOnly: true
+                            type: string
+                        癄놺ꃆ:
+                            type: boolean
+                    required:
+                        - 癄놺ꃆ
+                    type: object
+                - in: header
+                  name: ключ
+                  schema:
+                    description: ۺ핤゛軄ꕮ㷻೾㶻
+                    format: int64
+                    maximum: 512
+                    nullable: true
+                    type: integer
+                - in: header
+                  name: status
+                  schema:
+                    default: ᴣ蓽괕Ё੗⿍돇ೣ
+                    deprecated: true
+                    nullable: true
+                    type: string
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            anyOf:
+                                - format: custom
+                                  type: boolean
+                                - discriminator:
+                                    propertyName: ключ
+                                  oneOf:
+                                    - enum:
+                                        - 6
+                                      maximum: 495
+                                      type: integer
+                                    - format: float
+                                      maximum: 450
+                                      minimum: 4
+                                      nullable: true
+                                      type: number
+                                - $ref: '#/components/schemas/Owner'
+                            discriminator:
+                                propertyName: name
+                    application/vnd.api+json:
+                        schema:
+                            items:
+                                properties:
+                                    '#hash':
+                                        $ref: '#/components/schemas/Owner'
+                                    created:
+                                        format: float
+                                        nullable: true
+                                        type: number
+                                    뻘샘:
+                                        nullable: true
+                                        type: string
+                                required:
+                                    - 뻘샘
+                                type: object
+                            type: array
+                required: true
+            responses:
+                2XX:
+                    description: ключ
+                "201":
+                    description: 델侦馏
+                "404":
+                    content:
+                        application/json:
+                            schema:
+                                maxLength: 137
+                                type: string
+                    description: kind
+                    headers:
+                        ‮abc:
+                            schema:
+                                example: owner
+                                type: boolean
+                        㪒櫡彔鞿ဵ뉶:
+                            required: false
+                            schema:
+                                type: integer

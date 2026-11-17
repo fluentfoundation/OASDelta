@@ -1,0 +1,18 @@
+4 cambios: 2 error, 0 warning, 2 info
+error	[response-body-max-length-unset] en ./properties/rules/response-body-max-length-unset_revision.yaml
+	en API DELETE /store/order
+		la longitud máxima del cuerpo de respuesta fue removida de `200` (media type: application/json)
+
+error	[response-body-type-changed] en ./properties/rules/response-body-max-length-unset_revision.yaml
+	en API DELETE /store/order
+		el `type` del cuerpo de respuesta fue cambiado de `string, null` a `number` para el estado `201` (media type: application/json)
+
+info	[response-body-became-not-nullable] en ./properties/rules/response-body-max-length-unset_revision.yaml
+	en API DELETE /store/order
+		el cuerpo de respuesta se volvió no nulable (media type: application/json)
+
+info	[response-required-property-added] en ./properties/rules/response-body-max-length-unset_revision.yaml
+	en API DELETE /store/order
+		agregada la propiedad requerida `짠㭬䔺豍ꨩ뽥/pet` a la respuesta con estado `201` (media type: application/xml)
+
+

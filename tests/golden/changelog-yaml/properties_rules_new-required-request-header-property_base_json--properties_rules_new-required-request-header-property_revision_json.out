@@ -1,0 +1,17 @@
+- id: new-required-request-header-property
+  text: 'added the new required `tag` request header''s property `oneOf[subschema #2]/kind`'
+  level: 3
+  operation: DELETE
+  operationId: delete_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  fingerprint: 8fd286a470e3
+- id: request-header-property-became-required
+  text: 'the `tag` request header''s property `oneOf[subschema #2]/kind` became required'
+  level: 3
+  operation: DELETE
+  operationId: delete_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  fingerprint: a1efd8622f18
+

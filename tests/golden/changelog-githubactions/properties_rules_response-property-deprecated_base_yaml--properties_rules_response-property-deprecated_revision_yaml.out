@@ -1,0 +1,3 @@
+::notice title=response-property-deprecated,file=./properties/rules/response-property-deprecated_revision.yaml,line=52,col=41::in API DELETE /v1/items response property `created` deprecated (media type: application/vnd.api+json)
+::notice title=response-property-discriminator-added,file=./properties/rules/response-property-deprecated_revision.yaml,line=39,col=41::in API DELETE /v1/items added discriminator to `㎖㹈ꃿ즡` response property for the response status `200` (media type: */*)
+

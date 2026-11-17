@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/owners/{ownerId}/pets":{"operations":{"modified":{"PATCH":{"parameters":{"modified":{"header":{"owner":{"schema":{"minProps":{"from":2,"to":0}}}}}}}}}}}},"components":{"schemas":{"modified":{"Error":{"items":{"allOf":{"modified":[{"base":{"index":2},"revision":{"index":2},"diff":{"minProps":{"from":0,"to":18}}}]}}}}}}}

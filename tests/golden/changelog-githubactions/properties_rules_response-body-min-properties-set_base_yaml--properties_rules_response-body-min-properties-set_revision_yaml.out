@@ -1,0 +1,2 @@
+::notice title=response-body-min-properties-set,file=./properties/rules/response-body-min-properties-set_revision.yaml,line=56,col=33::in API DELETE /store/order the response's body minProperties was set to `10`
+

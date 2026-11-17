@@ -1,0 +1,1 @@
+[{"id":"request-property-const-added","text":"the `price` request property const value `%20` was added","level":3,"operation":"POST","operationId":"post_pets_{petId}","path":"/pets/{petId}","section":"paths","revisionSource":{"file":"./properties/rules/request-property-const-added_revision.yaml","line":52,"column":37},"fingerprint":"4e5a09bff6ac"}]

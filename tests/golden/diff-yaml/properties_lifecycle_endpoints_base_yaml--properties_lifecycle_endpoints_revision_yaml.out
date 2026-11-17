@@ -1,0 +1,93 @@
+paths:
+    deleted:
+        - /removed-path
+        - /removed-path-bad-sunset
+    modified:
+        /deprecated-bad-sunset:
+            operations:
+                modified:
+                    GET:
+                        extensions:
+                            added:
+                                - x-sunset
+                        deprecated:
+                            from: false
+                            to: true
+        /removed-endpoint:
+            operations:
+                deleted:
+                    - GET
+        /stability:
+            operations:
+                modified:
+                    GET:
+                        extensions:
+                            modified:
+                                x-stability-level:
+                                    - oldValue: beta
+                                      value: experimental-ish
+                                      op: replace
+                                      from: ""
+                                      path: ""
+        /sunset-deleted:
+            operations:
+                modified:
+                    GET:
+                        extensions:
+                            deleted:
+                                - x-sunset
+        /sunset-earlier:
+            operations:
+                modified:
+                    GET:
+                        extensions:
+                            modified:
+                                x-sunset:
+                                    - oldValue: "2099-12-31"
+                                      value: "2020-01-01"
+                                      op: replace
+                                      from: ""
+                                      path: ""
+endpoints:
+    deleted:
+        - method: GET
+          path: /removed-endpoint
+        - method: GET
+          path: /removed-path
+        - method: GET
+          path: /removed-path-bad-sunset
+    modified:
+        ?   method: GET
+            path: /deprecated-bad-sunset
+        :   extensions:
+                added:
+                    - x-sunset
+            deprecated:
+                from: false
+                to: true
+        ?   method: GET
+            path: /stability
+        :   extensions:
+                modified:
+                    x-stability-level:
+                        - oldValue: beta
+                          value: experimental-ish
+                          op: replace
+                          from: ""
+                          path: ""
+        ?   method: GET
+            path: /sunset-deleted
+        :   extensions:
+                deleted:
+                    - x-sunset
+        ?   method: GET
+            path: /sunset-earlier
+        :   extensions:
+                modified:
+                    x-sunset:
+                        - oldValue: "2099-12-31"
+                          value: "2020-01-01"
+                          op: replace
+                          from: ""
+                          path: ""
+

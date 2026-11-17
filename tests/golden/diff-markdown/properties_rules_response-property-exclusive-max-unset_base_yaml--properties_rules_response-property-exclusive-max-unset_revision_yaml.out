@@ -1,0 +1,21 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /search
+- Responses changed
+  - Modified response: 204
+    - Content changed
+      - Modified media type: application/vnd.api+json
+        - Schema changed
+          - Properties changed
+            - Modified property: kind
+              - Property 'OneOf' changed
+                - Modified schema: subschema #3
+                  - ExclusiveMax changed from 1272 to null
+
+

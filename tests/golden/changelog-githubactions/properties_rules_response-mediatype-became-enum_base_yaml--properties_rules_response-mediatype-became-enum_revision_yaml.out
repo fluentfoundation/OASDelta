@@ -1,0 +1,2 @@
+::notice title=response-mediatype-became-enum,file=./properties/rules/response-mediatype-became-enum_revision.yaml,line=25,col=33::in API POST /store/order the response schema `*/*` for the response status `400` was restricted to a list of enum values
+

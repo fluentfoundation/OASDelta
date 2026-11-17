@@ -1,0 +1,221 @@
+# Fires request-property-max-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            items:
+                properties:
+                    ? "a\r\nb"
+                    :   default: tag
+                        description: ᡬ陶锾睌᜕䌆
+                        format: date
+                        type: string
+                    pet:
+                        nullable: true
+                        type: number
+                required:
+                    - "a\r\nb"
+                    - pet
+                type: object
+            maxItems: 72
+            type: array
+        Owner:
+            type: object
+        Pet:
+            type: boolean
+info:
+    title: "0x1F"
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /pets:
+        put:
+            parameters:
+                - deprecated: true
+                  in: cookie
+                  name: pet
+                  required: true
+                  schema:
+                    properties:
+                        created:
+                            description: 쳾䖰Ꭰ땡
+                            maxLength: 122
+                            type: string
+                        name:
+                            description: pet
+                            minimum: -10
+                            readOnly: true
+                            type: integer
+                        Ünïcode:
+                            const: Ünïcode
+                            enum:
+                                - kind
+                                - price
+                                - a~b
+                                - 欣⍼踒駷㕪橽鴵빿
+                            format: email
+                            type: string
+                    required:
+                        - created
+                    type: object
+            responses:
+                "204":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    maximum: 736
+                                    type: integer
+                                type: array
+                        application/xml:
+                            schema:
+                                description: status
+                                nullable: true
+                                type: number
+                    description: '"quoted"'
+                    headers:
+                        _under_:
+                            required: true
+                            schema:
+                                default: 13.375
+                                description: tag
+                                enum:
+                                    - -68.5
+                                format: double
+                                maximum: 599
+                                type: number
+                        kind:
+                            schema:
+                                description: "no"
+                                minLength: 1
+                                nullable: true
+                                type: string
+    /pets/{petId}:
+        get:
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - description: 名前
+                  explode: false
+                  in: query
+                  name: price
+                  required: true
+                  schema:
+                    description: 'a: b'
+                    type: string
+                - in: header
+                  name: ' leading'
+                  schema:
+                    format: email
+                    type: string
+            responses:
+                "201":
+                    content:
+                        application/xml:
+                            schema:
+                                items:
+                                    description: 魞ꪽ
+                                    type: object
+                                type: array
+                    description: ключ
+                    headers:
+                        '%20':
+                            deprecated: true
+                            required: true
+                            schema:
+                                description: "1e3"
+                                minimum: 0
+                                nullable: true
+                                type: number
+                "204":
+                    description: "a\r\nb"
+                "400":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                description: tag
+                                properties:
+                                    Ünïcode:
+                                        $ref: '#/components/schemas/Item'
+                                type: object
+                    description: created
+            x-stability-level: stable
+        post:
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: pet
+                  schema:
+                    oneOf:
+                        - $ref: '#/components/schemas/Item'
+                        - description: name
+                          type: number
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            properties:
+                                owner:
+                                    oneOf:
+                                        - format: int32
+                                          type: integer
+                                        - nullable: true
+                                          type: integer
+                                        - $ref: '#/components/schemas/Owner'
+                                price:
+                                    items:
+                                        enum:
+                                            - id
+                                            - name
+                                            - 名前
+                                        format: email
+                                        type: string
+                                    type: array
+                                tag:
+                                    nullable: true
+                                    type: string
+                            type: object
+                    text/plain:
+                        schema:
+                            anyOf:
+                                - oneOf:
+                                    - type: number
+                                    - format: int32
+                                      nullable: true
+                                      type: integer
+                                    - description: 욵
+                                      maximum: 596
+                                      type: integer
+                                - description: 妢
+                                  nullable: true
+                                  type: string
+                                - description: tag
+                                  maximum: 186
+                                  readOnly: true
+                                  type: number
+                required: false
+            responses:
+                "200":
+                    description: price
+                "400":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                $ref: '#/components/schemas/Pet'
+                    description: price
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                $ref: '#/components/schemas/Item'
+                        application/xml:
+                            schema:
+                                type: string
+                    description: '| table |'
+            x-stability-level: stable

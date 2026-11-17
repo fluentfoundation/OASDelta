@@ -1,0 +1,8 @@
+- id: api-stability-increased
+  text: endpoint stability level increased from `beta` to `stable`
+  level: 1
+  operation: DELETE
+  path: /store/order
+  section: paths
+  fingerprint: e45f0f9ac97b
+

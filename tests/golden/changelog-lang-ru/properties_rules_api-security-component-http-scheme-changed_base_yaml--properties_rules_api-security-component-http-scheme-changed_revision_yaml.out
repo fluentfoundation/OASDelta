@@ -1,0 +1,10 @@
+2 изменений: 1 error, 0 warning, 1 info
+error	[api-security-component-http-scheme-changed]
+	в components/securitySchemes
+		http схема компонента схемы безопасности `bearer` была изменена с `basic` на `bearer`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+

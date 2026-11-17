@@ -1,0 +1,2 @@
+::notice title=request-property-min-items-unset,file=./properties/rules/request-property-min-items-unset_revision.yaml::in API PATCH /items/{id}.json the `additionalProperties/` request property's minItems was unset from `14`
+

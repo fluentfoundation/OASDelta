@@ -1,0 +1,3 @@
+::notice title=endpoint-deprecated-with-sunset,file=./properties/rules/response-property-max-length-set_revision.yaml,line=78,col=13::in API PATCH /store/order endpoint deprecated with sunset date `2099-12-31`
+::notice title=response-property-max-length-set,file=./properties/rules/response-property-max-length-set_revision.yaml,line=57,col=25::in API PATCH /store/order the `items/owner/allOf[subschema #2]/!tag` response property's maxLength was set to `13` for the response status `400`
+

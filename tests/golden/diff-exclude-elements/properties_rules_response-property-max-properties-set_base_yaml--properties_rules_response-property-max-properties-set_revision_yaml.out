@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets/{petId}":{"operations":{"modified":{"POST":{"parameters":{"added":{"cookie":["*star"]}},"responses":{"modified":{"200":{"content":{"modified":{"application/vnd.api+json":{"schema":{"items":{"maxProps":{"from":null,"to":13}}}}}}}}}}}}}}}}

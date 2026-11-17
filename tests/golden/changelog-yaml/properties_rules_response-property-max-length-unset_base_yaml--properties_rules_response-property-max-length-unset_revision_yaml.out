@@ -1,0 +1,59 @@
+- id: response-property-max-length-unset
+  text: the `>/>` response property's maxLength was unset from `104` for the response status `204`
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: POST
+  path: /ünïcode/ключ
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-property-max-length-unset_base.yaml
+    line: 203
+    column: 49
+  fingerprint: 5b414667d08f
+- id: response-property-min-length-unset
+  text: the `>/>` response property's minLength was unset from `2` for the response status `204`
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: POST
+  path: /ünïcode/ключ
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-property-max-length-unset_base.yaml
+    line: 204
+    column: 49
+  fingerprint: a4cf3b906b2e
+- id: response-property-all-of-added
+  text: 'added `subschema #1, subschema #2` to the `>/>` response property `allOf` list for the response status `204`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: POST
+  path: /ünïcode/ключ
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-property-max-length-unset_revision.yaml
+    line: 205
+    column: 55
+    endLine: 207
+    endColumn: 67
+  fingerprint: 0664c5043764
+- id: response-property-type-specialized
+  text: the `>/>` response's property `type` was narrowed from `string` to `any` for status `204`
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: POST
+  path: /ünïcode/ключ
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-property-max-length-unset_base.yaml
+    line: 205
+    column: 49
+  fingerprint: f76e6be65bbd
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">api path removed without deprecation</failure>
+    </testcase>
+    <testcase name="api-security-component-openid-connect-url-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `openid` OpenID Connect url changed from `https://auth.example.com/.well-known/openid-configuration` to `https://id2.example.com/.well-known/openid-configuration`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

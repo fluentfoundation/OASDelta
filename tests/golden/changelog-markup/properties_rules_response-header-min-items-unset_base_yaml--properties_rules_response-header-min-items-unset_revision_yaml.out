@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /v1/items
+- :warning: the `졳恂낭` response header's minItems was unset from `10` for the status `200`
+
+
+
+
+
+

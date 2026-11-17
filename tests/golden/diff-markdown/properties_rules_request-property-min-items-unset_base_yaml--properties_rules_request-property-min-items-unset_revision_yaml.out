@@ -1,0 +1,17 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /items/{id}.json
+- Request body changed
+  - Content changed
+    - Modified media type: application/json; charset=utf-8
+      - Schema changed
+        - AdditionalProperties changed
+          - MinItems changed from 14 to 0
+
+

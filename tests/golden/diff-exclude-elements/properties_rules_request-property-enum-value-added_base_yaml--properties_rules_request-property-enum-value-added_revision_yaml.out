@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/store/order":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json; charset=utf-8":{"schema":{"properties":{"modified":{"@at":{"enum":{"enumAdded":true,"added":["created-1","created"]}}}}}}}}}}}}}}}}

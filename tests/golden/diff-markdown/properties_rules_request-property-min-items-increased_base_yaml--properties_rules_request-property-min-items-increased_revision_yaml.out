@@ -1,0 +1,30 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 3
+-------------------------
+PATCH /items/{id}.json
+- Request body changed
+  - Content changed
+    - Modified media type: application/json; charset=utf-8
+      - Schema changed
+        - Properties changed
+          - Modified property: 'single'
+            - MinItems changed from 1 to 2
+
+DELETE /pets/{petId}
+- New path param: id
+- Deleted header param: id
+- Responses changed
+  - Modified response: 500
+    - Headers changed
+      - Modified header: _under_
+        - Required changed from false to true
+
+PATCH /pets/{petId}
+- Deleted path param: petId
+
+

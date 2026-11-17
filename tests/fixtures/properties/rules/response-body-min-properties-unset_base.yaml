@@ -1,0 +1,144 @@
+# Fires response-body-min-properties-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            properties:
+                kind:
+                    items:
+                        description: tag
+                        format: int64
+                        minimum: -3
+                        readOnly: true
+                        type:
+                            - integer
+                            - "null"
+                    type: array
+                名前:
+                    format: int32
+                    minimum: -5
+                    multipleOf: 10
+                    type:
+                        - integer
+                        - "null"
+                    writeOnly: true
+            required:
+                - 名前
+            type: object
+    securitySchemes:
+        bearer:
+            scheme: basic
+            type: http
+info:
+    title: '{brace}'
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /store/order:
+        delete:
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    items:
+                                        enum:
+                                            - true
+                                            - false
+                                        type:
+                                            - boolean
+                                            - "null"
+                                    type: array
+                                type: array
+                        application/xml:
+                            schema:
+                                format: custom
+                                type:
+                                    - boolean
+                                    - "null"
+                    description: pet
+                    headers:
+                        status:
+                            schema:
+                                description: ⸣瑜ᆡ뎛춵믒
+                                readOnly: true
+                                type:
+                                    - number
+                                    - "null"
+        put:
+            deprecated: true
+            parameters:
+                - in: cookie
+                  name: "a\r\nb"
+                  required: false
+                  schema:
+                    type: object
+                    x-extensible-enum:
+                        - '%20'
+                - in: cookie
+                  name: tag
+                  schema:
+                    type: boolean
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            items:
+                                $ref: '#/components/schemas/Error'
+                            type: array
+                            uniqueItems: true
+                    application/xml:
+                        schema:
+                            properties:
+                                '|':
+                                    type: boolean
+                                price:
+                                    additionalProperties: false
+                                    properties:
+                                        ' ':
+                                            format: double
+                                            readOnly: true
+                                            type: number
+                                    type: object
+                            required:
+                                - '|'
+                                - price
+                            type: object
+                required: false
+            responses:
+                "400":
+                    content:
+                        '*/*':
+                            schema:
+                                items:
+                                    anyOf:
+                                        - format: double
+                                          type: number
+                                        - format: float
+                                          minimum: -8
+                                          readOnly: true
+                                          type:
+                                            - number
+                                            - "null"
+                                type: array
+                        application/vnd.api+json:
+                            schema:
+                                minProperties: 1
+                                properties:
+                                    created:
+                                        items:
+                                            description: 'trailing '
+                                            type:
+                                                - integer
+                                                - "null"
+                                        type: array
+                                    empty:
+                                        format: int32
+                                        type: integer
+                                type: object
+                                x-extensible-enum:
+                                    - 彧
+                                    - status
+                    description: '{brace}'
+security:
+    - bearer: []

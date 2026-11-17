@@ -1,0 +1,3 @@
+::error title=request-property-min-properties-increased,file=./properties/rules/request-property-min-properties-increased_revision.yaml,line=122,col=37::in API POST /store/order the `name` request property's minProperties was increased to `3`
+::notice title=optional-response-header-removed,file=./properties/rules/request-property-min-properties-increased_revision.yaml::in API POST /store/order the optional response header `ૉ硡쇲䦨員䒗` removed for the status `2XX`
+

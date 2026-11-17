@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
+    <testcase name="response-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body `type` changed from `object` to `string` for status `500`</failure>
+    </testcase>
+    <testcase name="response-required-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the required property `pet` from the response with the `500` status</failure>
+    </testcase>
+    <testcase name="response-required-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the required property `瀒` from the response with the `500` status</failure>
+    </testcase>
+    <testcase name="endpoint-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">endpoint added</failure>
+    </testcase>
+    <testcase name="response-required-write-only-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the required write-only property `id` from the response with the `500` status</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

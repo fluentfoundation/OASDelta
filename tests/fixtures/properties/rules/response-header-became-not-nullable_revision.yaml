@@ -1,0 +1,250 @@
+{
+  "components": {
+    "schemas": {
+      "Pet": {
+        "items": {
+          "default": true,
+          "enum": [
+            true,
+            false
+          ],
+          "type": "boolean"
+        },
+        "type": "array"
+      }
+    }
+  },
+  "info": {
+    "title": "status",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/items/{id}.json": {
+      "delete": {
+        "operationId": "delete_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "춑豞槄",
+            "in": "header",
+            "name": "pet",
+            "required": true,
+            "schema": {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {
+                "tag": {
+                  "maxLength": 237,
+                  "nullable": true,
+                  "type": "string",
+                  "writeOnly": true
+                }
+              },
+              "type": "object"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "id",
+            "schema": {
+              "items": {
+                "default": 1e-7,
+                "description": "pet",
+                "nullable": true,
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "created",
+            "required": true,
+            "schema": {
+              "additionalProperties": true,
+              "properties": {
+                "**bold**": {
+                  "$ref": "#/components/schemas/Pet"
+                },
+                "噪螗钌듊晍턡啶㪉": {
+                  "nullable": true,
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "噪螗钌듊晍턡啶㪉"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "2XX": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "additionalProperties": true,
+                  "description": "C:\\path",
+                  "properties": {
+                    "created": {
+                      "properties": {
+                        "tag": {
+                          "description": "᳋Β",
+                          "format": "double",
+                          "type": "number"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "ключ",
+            "headers": {
+              "名前": {
+                "deprecated": true,
+                "schema": {
+                  "nullable": true,
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": " nbsp"
+          },
+          "500": {
+            "description": "Ünïcode"
+          }
+        },
+        "tags": [
+          "name"
+        ],
+        "x-stability-level": "beta"
+      },
+      "patch": {
+        "operationId": "patch_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset=utf-8": {
+              "schema": {
+                "description": "ключ",
+                "enum": [
+                  "a~b",
+                  "럧㎌茹ᎃᮿ퀯锟"
+                ],
+                "format": "uuid",
+                "nullable": true,
+                "type": "string"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "description": "%20",
+                "properties": {
+                  "1e3": {
+                    "deprecated": true,
+                    "format": "double",
+                    "type": "number"
+                  },
+                  "`tick`": {
+                    "allOf": [
+                      {
+                        "maximum": 410,
+                        "minimum": -7,
+                        "type": "number"
+                      },
+                      {
+                        "default": 26,
+                        "format": "int64",
+                        "maximum": 396,
+                        "type": "integer"
+                      }
+                    ]
+                  },
+                  "⚃闐耏芓챈": {
+                    "items": {
+                      "description": "%20",
+                      "maximum": 57,
+                      "type": "integer",
+                      "writeOnly": true
+                    },
+                    "maxItems": 53,
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "`tick`"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "created"
+          },
+          "2XX": {
+            "description": "name",
+            "headers": {
+              "owner": {
+                "schema": {
+                  "description": "status",
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "**bold**"
+          }
+        },
+        "tags": [
+          "price"
+        ]
+      },
+      "post": {
+        "description": "原ꘖ❆",
+        "operationId": "post_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "name"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            type:
+                                                added:
+                                                    - object
+                                                deleted:
+                                                    - array
+                                            minItems:
+                                                from: 2
+                                                to: 0
+                                            maxItems:
+                                                from: 95
+                                                to: null
+                                            items:
+                                                schemaDeleted: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                type:
+                                    added:
+                                        - object
+                                    deleted:
+                                        - array
+                                minItems:
+                                    from: 2
+                                    to: 0
+                                maxItems:
+                                    from: 95
+                                    to: null
+                                items:
+                                    schemaDeleted: true
+

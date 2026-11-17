@@ -1,0 +1,180 @@
+# Fires request-property-multiple-of-generalized (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        api_key:
+            in: header
+            name: "\a"
+            type: apiKey
+        oauth:
+            flows:
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        read: read access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: 䠘蘓爂캹걿῭⫲
+    version: v1
+openapi: 3.0.3
+paths:
+    /search:
+        get:
+            parameters:
+                - in: header
+                  name: status
+                  schema:
+                    allOf:
+                        - deprecated: true
+                          type: string
+                        - format: float
+                          type: number
+                        - example: owner
+                          nullable: true
+                          type: integer
+                - in: header
+                  name: created
+                  schema:
+                    type: object
+            responses:
+                "200":
+                    description: '| table |'
+                "400":
+                    description: name
+    /v1/items:
+        patch:
+            deprecated: true
+            operationId: patch_v1_items
+            responses:
+                2XX:
+                    content:
+                        '*/*':
+                            schema:
+                                description: ᛬ၪ伻뵕
+                                minLength: 3
+                                readOnly: true
+                                type: string
+                    description: name
+                "404":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    description: ключ
+                                    properties:
+                                        '!tag':
+                                            nullable: true
+                                            readOnly: true
+                                            type: number
+                                        kind:
+                                            default: false
+                                            type: boolean
+                                        ключ:
+                                            description: 名前
+                                            nullable: true
+                                            type: integer
+                                    required:
+                                        - ключ
+                                    type: object
+                                type: array
+                        application/xml:
+                            schema:
+                                format: int32
+                                maximum: 979
+                                type: integer
+                                writeOnly: true
+                    description: Ünïcode
+                default:
+                    content:
+                        '*/*':
+                            schema:
+                                description: '"quoted"'
+                                format: double
+                                nullable: true
+                                type: number
+                    description: name
+        put:
+            operationId: put_v1_items
+            parameters:
+                - explode: false
+                  in: cookie
+                  name: Ünïcode
+                  schema:
+                    items:
+                        type: number
+                    maxItems: 79
+                    minItems: 1
+                    type: array
+                    uniqueItems: true
+                - deprecated: true
+                  in: query
+                  name: kind
+                  schema:
+                    items:
+                        enum:
+                            - 87
+                        maximum: 108
+                        minimum: 7
+                        type: number
+                    maxItems: 70
+                    type: array
+                - in: query
+                  name: 名前
+                  required: true
+                  schema:
+                    description: 名前
+                    nullable: true
+                    type: boolean
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                    multipart/form-data:
+                        schema:
+                            properties:
+                                ' ':
+                                    anyOf:
+                                        - nullable: true
+                                          type: number
+                                        - description: ключ
+                                          maxLength: 57
+                                          minLength: 4
+                                          nullable: true
+                                          type: string
+                                        - nullable: true
+                                          type: boolean
+                                ‮abc:
+                                    anyOf:
+                                        - minimum: -1
+                                          nullable: true
+                                          type: number
+                                          writeOnly: true
+                                        - maximum: 659
+                                          multipleOf: 2
+                                          type: integer
+                                    discriminator:
+                                        propertyName: "\a"
+                                먘:
+                                    properties:
+                                        琲ꪹ늏㗽ਕ턾벂:
+                                            type: integer
+                                    type: object
+                            type: object
+            responses:
+                "200":
+                    content:
+                        '*/*':
+                            schema:
+                                type: string
+                        application/vnd.api+json:
+                            schema:
+                                maxLength: 11
+                                pattern: ^[a-z]+$
+                                type: string
+                                writeOnly: true
+                    description: ࣾ魘줼
+            tags:
+                - id
+tags:
+    - name: ключ

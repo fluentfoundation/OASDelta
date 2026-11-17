@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[response-header-max-length-unset] at ./properties/rules/response-header-max-length-unset_revision.yaml
+	in API DELETE /search
+		the `꣧ਏ哪᷸∄肱瘝ㆺ` response header's maxLength was unset from `135` for the status `201`
+
+

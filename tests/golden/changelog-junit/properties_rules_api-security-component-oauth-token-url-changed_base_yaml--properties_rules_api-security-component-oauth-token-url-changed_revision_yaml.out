@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="api-security-component-oauth-token-url-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `oauth` oauth `authorizationCode` flow token url changed from `https://auth.example.com/token` to `https://auth0.example.com/tokenUrl`</failure>
+    </testcase>
+    <testcase name="api-security-component-oauth-token-url-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `oauth` oauth `clientCredentials` flow token url changed from `https://auth.example.com/token` to `https://auth0.example.com/tokenUrl`</failure>
+    </testcase>
+    <testcase name="request-parameter-type-generalized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `cookie` request parameter `id`, the `type` was widened from `array<integer/int64>` to `any`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,22 @@
+4 изменений: 0 error, 2 warning, 2 info
+warning	[response-property-max-length-unset] в ./properties/rules/response-property-max-length-unset_revision.yaml
+	в API POST /ünïcode/ключ
+		у поля ответа `>/>` maxLength был удалён, предыдущее значение - `104`, для ответа со статусом `204`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+warning	[response-property-min-length-unset] в ./properties/rules/response-property-max-length-unset_revision.yaml
+	в API POST /ünïcode/ключ
+		значение minLength у поля ответа `>/>` удалено, предыдущее значение - `2`, для ответа со статусом `204`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[response-property-all-of-added] в ./properties/rules/response-property-max-length-unset_revision.yaml
+	в API POST /ünïcode/ключ
+		добавлено `subschema #1, subschema #2` в список `allOf` свойства ответа `>/>` для статуса ответа `204`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[response-property-type-specialized] в ./properties/rules/response-property-max-length-unset_revision.yaml
+	в API POST /ünïcode/ключ
+		у свойства ответа `>/>` `type` сужен с `string` до `any` для статуса `204`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

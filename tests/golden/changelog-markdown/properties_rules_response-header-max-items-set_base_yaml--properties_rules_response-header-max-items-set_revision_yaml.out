@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### DELETE /pets/{petId}
+-  the `kind` response header's maxItems was set to `11` for the status `404`
+
+
+
+
+
+

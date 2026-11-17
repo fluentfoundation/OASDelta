@@ -1,0 +1,53 @@
+{
+  "info": {
+    "title": "%20",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/items/{id}.json": {
+      "get": {
+        "operationId": "get_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "price",
+            "in": "query",
+            "name": "#hash",
+            "schema": {
+              "format": "float",
+              "type": "number"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "a/b",
+            "required": true,
+            "schema": {
+              "description": "price",
+              "minLength": 5,
+              "type": "string"
+            },
+            "style": "deepObject"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "id"
+          },
+          "400": {
+            "description": "id"
+          }
+        },
+        "summary": "price"
+      }
+    }
+  }
+}

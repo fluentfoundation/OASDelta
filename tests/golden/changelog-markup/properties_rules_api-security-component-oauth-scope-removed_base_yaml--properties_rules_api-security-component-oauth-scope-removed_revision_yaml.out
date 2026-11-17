@@ -1,0 +1,22 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /added/%C2%A0nbsp
+-  endpoint added
+
+
+### PATCH /owners/{ownerId}/pets
+-  added the new optional `query` request parameter `㿢몜짐躘훕綏冔⌰`
+-  deleted the `query` request parameter `pet` with deprecation
+
+
+
+
+## Components
+-  the component security scheme `oauth` oauth `clientCredentials` flow scope `write` was removed
+
+
+
+

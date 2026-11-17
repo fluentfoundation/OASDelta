@@ -1,0 +1,11 @@
+### New Endpoints: 1
+--------------------
+GET /v1/items/v2  
+
+### Deleted Endpoints: 1
+------------------------
+GET /v1/items  
+
+### Modified Endpoints: None
+----------------------------
+

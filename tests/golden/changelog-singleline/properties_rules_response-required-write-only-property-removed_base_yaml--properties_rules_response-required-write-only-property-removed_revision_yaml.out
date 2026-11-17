@@ -1,0 +1,12 @@
+5 changes: 3 error, 0 warning, 2 info
+error at ./properties/rules/response-required-write-only-property-removed_revision.yaml, in API DELETE /v1/items the response's body `type` changed from `object` to `string` for status `500` [response-body-type-changed]. 
+
+error at ./properties/rules/response-required-write-only-property-removed_revision.yaml, in API DELETE /v1/items removed the required property `pet` from the response with the `500` status [response-required-property-removed]. 
+
+error at ./properties/rules/response-required-write-only-property-removed_revision.yaml, in API DELETE /v1/items removed the required property `瀒` from the response with the `500` status [response-required-property-removed]. 
+
+info at ./properties/rules/response-required-write-only-property-removed_revision.yaml, in API GET /added/kind endpoint added [endpoint-added]. 
+
+info at ./properties/rules/response-required-write-only-property-removed_revision.yaml, in API DELETE /v1/items removed the required write-only property `id` from the response with the `500` status [response-required-write-only-property-removed]. 
+
+

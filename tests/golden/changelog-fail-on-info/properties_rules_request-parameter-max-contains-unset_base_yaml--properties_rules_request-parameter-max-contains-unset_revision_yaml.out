@@ -1,0 +1,1 @@
+[{"id":"request-parameter-max-contains-unset","text":"for the `path` request parameter `id`, the maxContains was unset from `4`","level":1,"operation":"POST","path":"/items/{id}.json","section":"paths","baseSource":{"file":"./properties/rules/request-parameter-max-contains-unset_base.yaml","line":31,"column":21},"fingerprint":"df16806614b5"}]

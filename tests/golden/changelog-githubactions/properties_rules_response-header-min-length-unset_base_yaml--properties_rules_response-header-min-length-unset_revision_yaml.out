@@ -1,0 +1,4 @@
+::error title=response-header-min-length-unset,file=./properties/rules/response-header-min-length-unset_revision.yaml::in API GET /store/order the `id` response header's minLength was unset from `5` for the status `500`
+::error title=response-header-type-changed,file=./properties/rules/response-header-min-length-unset_revision.yaml,line=93,col=25::in API GET /store/order the `id` response header's `type` changed from `string, null` to `any` for the status `500`
+::notice title=response-property-const-added,file=./properties/rules/response-header-min-length-unset_revision.yaml,line=11,col=13::in API DELETE /store/order the `` response property const value `name` was added for the status `404`
+

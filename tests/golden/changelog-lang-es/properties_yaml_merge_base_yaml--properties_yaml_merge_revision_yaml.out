@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-body-min-length-increased] en ./properties/yaml_merge_revision.yaml
+	en API GET /a
+		el valor minLength del cuerpo de respuesta fue incrementado de `1` a `2`
+
+

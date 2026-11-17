@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "400":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    additionalProperties:
+                                                        type:
+                                                            added:
+                                                                - integer
+                                                            deleted:
+                                                                - string
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "400":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        additionalProperties:
+                                            type:
+                                                added:
+                                                    - integer
+                                                deleted:
+                                                    - string
+

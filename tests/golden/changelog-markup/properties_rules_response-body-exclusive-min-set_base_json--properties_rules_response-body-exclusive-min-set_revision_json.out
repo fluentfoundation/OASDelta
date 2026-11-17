@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /search
+-  the response's body exclusiveMinimum was set to `-3.00`
+
+
+
+
+
+

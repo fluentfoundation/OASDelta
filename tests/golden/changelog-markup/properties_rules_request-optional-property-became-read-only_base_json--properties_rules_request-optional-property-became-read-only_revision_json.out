@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /store/order
+- :warning: the request optional property `created/items/@at` became read-only (shared schema: `Pet`, also at `pet/name/items/@at`)
+
+
+
+
+
+

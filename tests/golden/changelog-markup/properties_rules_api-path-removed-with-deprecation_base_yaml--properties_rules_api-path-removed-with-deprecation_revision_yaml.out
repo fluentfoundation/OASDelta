@@ -1,0 +1,17 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /v1/items
+-  api path removed with deprecation
+
+
+### GET /v1/items/v2
+-  endpoint added
+
+
+
+
+
+

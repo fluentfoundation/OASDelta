@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./properties/rules/request-parameter-default-value-added_revision.yaml, in API PUT /v1/items for the `query` request parameter `created`, default value `731.00` was added [request-parameter-default-value-added]. 
+
+

@@ -1,0 +1,47 @@
+11 изменений: 7 error, 0 warning, 4 info
+error	[response-body-exclusive-max-unset] в ./properties/rules/response-body-exclusive-max-unset_revision.yaml
+	в API POST /v1/items
+		значение exclusiveMaximum у тела ответа удалено, предыдущее значение - `1017.00`
+
+error	[response-body-min-unset] в ./properties/rules/response-body-exclusive-max-unset_revision.yaml
+	в API POST /v1/items
+		значение min у тела ответа удалено, предыдущее значение - `-5.00`
+
+error	[response-body-multiple-of-unset] в ./properties/rules/response-body-exclusive-max-unset_revision.yaml
+	в API POST /v1/items
+		значение multipleOf у тела ответа удалено, предыдущее значение - `5.00`
+
+error	[response-body-type-changed] в ./properties/rules/response-body-exclusive-max-unset_revision.yaml
+	в API POST /v1/items
+		`type` тела ответа изменён с `integer, null` на `string` для статуса `204`
+
+error	[response-mediatype-became-not-enum] в ./properties/rules/response-body-exclusive-max-unset_revision.yaml
+	в API POST /v1/items
+		удалено ограничение enum схемы ответа `multipart/form-data` для статуса ответа `204`
+		Сервер теперь может вернуть любое значение типа схемы, включая значения, которые исключал прежний enum, поэтому клиент, написанный по нему, может не обработать ответ.
+
+error	[request-body-media-type-removed] в ./properties/rules/response-body-exclusive-max-unset_revision.yaml
+	в API PUT /ünïcode/ключ
+		удален тип медиа для тела запроса `application/json; charset=utf-8`
+
+error	[request-body-media-type-removed] в ./properties/rules/response-body-exclusive-max-unset_revision.yaml
+	в API PUT /ünïcode/ключ
+		удален тип медиа для тела запроса `text/plain`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[response-body-became-not-nullable] в ./properties/rules/response-body-exclusive-max-unset_revision.yaml
+	в API POST /v1/items
+		тело ответа стало необнуляемым
+
+info	[response-body-default-value-removed] в ./properties/rules/response-body-exclusive-max-unset_revision.yaml
+	в API POST /v1/items
+		удалено значение по умолчанию `multipart/form-data` для тела ответа для статуса `0.00`%!(EXTRA string=`204`)
+
+info	[request-body-media-type-added] в ./properties/rules/response-body-exclusive-max-unset_revision.yaml
+	в API PUT /ünïcode/ключ
+		добавлен тип медиа для тела запроса `*/*`
+
+

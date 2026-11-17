@@ -1,0 +1,54 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/xml:
+                                        schema:
+                                            allOf:
+                                                modified:
+                                                    - base:
+                                                        index: 2
+                                                      revision:
+                                                        index: 2
+                                                      diff:
+                                                        properties:
+                                                            modified:
+                                                                릇䍱琨압蝪颯:
+                                                                    readOnly:
+                                                                        from: false
+                                                                        to: true
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /pets/{petId}
+        :   requestBody:
+                content:
+                    modified:
+                        application/xml:
+                            schema:
+                                allOf:
+                                    modified:
+                                        - base:
+                                            index: 2
+                                          revision:
+                                            index: 2
+                                          diff:
+                                            properties:
+                                                modified:
+                                                    릇䍱琨압蝪颯:
+                                                        readOnly:
+                                                            from: false
+                                                            to: true
+components:
+    schemas:
+        modified:
+            Item:
+                readOnly:
+                    from: false
+                    to: true
+

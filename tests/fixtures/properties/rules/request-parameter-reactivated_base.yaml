@@ -1,0 +1,145 @@
+# Fires request-parameter-reactivated (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: ' '
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        post:
+            operationId: post_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: 名前
+                  required: true
+                  schema:
+                    type: number
+                    writeOnly: true
+                - in: header
+                  name: 'a: b'
+                  schema:
+                    properties:
+                        price:
+                            format: int32
+                            type: integer
+                        Ünïcode:
+                            nullable: true
+                            type: string
+                    required:
+                        - price
+                    type: object
+                - deprecated: true
+                  explode: false
+                  in: query
+                  name: status
+                  schema:
+                    items:
+                        format: int32
+                        nullable: true
+                        type: integer
+                    minItems: 0
+                    type: array
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            items:
+                                properties:
+                                    '@at':
+                                        nullable: true
+                                        type: boolean
+                                    name:
+                                        format: custom
+                                        type: boolean
+                                    owner:
+                                        enum:
+                                            - true
+                                            - false
+                                        format: custom
+                                        nullable: true
+                                        type: boolean
+                                required:
+                                    - '@at'
+                                type: object
+                            type: array
+            responses:
+                2XX:
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                properties:
+                                    '''single''':
+                                        enum:
+                                            - ключ
+                                            - pet
+                                        type: string
+                                    name:
+                                        anyOf:
+                                            - description: '"quoted"'
+                                              format: email
+                                              nullable: true
+                                              type: string
+                                              writeOnly: true
+                                            - type: number
+                                    Ünïcode:
+                                        allOf:
+                                            - type: number
+                                            - type: integer
+                                required:
+                                    - name
+                                    - '''single'''
+                                type: object
+                                x-extensible-enum:
+                                    - status
+                                    - kind
+                        text/plain:
+                            schema:
+                                allOf:
+                                    - enum:
+                                        - 8
+                                        - -3
+                                        - 13
+                                      minimum: -5
+                                      nullable: true
+                                      type: integer
+                                    - items:
+                                        maxLength: 40
+                                        type: string
+                                        writeOnly: true
+                                      type: array
+                    description: '#hash'
+                "200":
+                    content:
+                        application/xml:
+                            schema:
+                                anyOf:
+                                    - deprecated: true
+                                      type: boolean
+                                    - additionalProperties: false
+                                      properties:
+                                        '#hash':
+                                            format: custom
+                                            nullable: true
+                                            readOnly: true
+                                            type: boolean
+                                        '@at':
+                                            type: boolean
+                                      required:
+                                        - '#hash'
+                                      type: object
+                                    - items:
+                                        default: true
+                                        nullable: true
+                                        type: boolean
+                                      type: array
+                        multipart/form-data:
+                            schema:
+                                format: binary
+                                maxLength: 166
+                                nullable: true
+                                type: string
+                    description: '>'

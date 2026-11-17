@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="request-body-became-enum" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">request body was restricted to a list of enum values</failure>
+    </testcase>
+    <testcase name="request-body-min-length-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body minLength was set to `5`</failure>
+    </testcase>
+    <testcase name="request-body-became-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body became nullable</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

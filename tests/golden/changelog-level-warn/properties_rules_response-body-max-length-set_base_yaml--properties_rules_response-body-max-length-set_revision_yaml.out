@@ -1,0 +1,1 @@
+[{"id":"response-body-type-changed","text":"the response's body `type` changed from `boolean` to `string` for status `default`","level":3,"operation":"PATCH","operationId":"patch_pets_{petId}","path":"/pets/{petId}","section":"paths","baseSource":{"file":"./properties/rules/response-body-max-length-set_base.yaml","line":57,"column":33},"fingerprint":"5b19d1f9e273"}]

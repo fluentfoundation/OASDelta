@@ -1,0 +1,115 @@
+# Fires response-property-max-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: 簦٭⇬絛椽
+    version: v1
+openapi: 3.1.0
+paths:
+    /items/{id}.json:
+        delete:
+            operationId: delete_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - explode: false
+                  in: header
+                  name: '&anchor'
+                  required: true
+                  schema:
+                    type: object
+            responses:
+                "201":
+                    content:
+                        application/xml:
+                            schema:
+                                type: object
+                    description: tag
+                "400":
+                    content:
+                        application/json:
+                            schema:
+                                anyOf:
+                                    - type: number
+                                    - format: double
+                                      type:
+                                        - number
+                                        - "null"
+                                    - additionalProperties: false
+                                      type: object
+                        application/xml:
+                            schema:
+                                items:
+                                    items:
+                                        format: int32
+                                        type:
+                                            - integer
+                                            - "null"
+                                    type: array
+                                minItems: 1
+                                type: array
+                    description: pet
+        put:
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - description: 名前
+                  in: header
+                  name: <b>&amp;
+                  required: true
+                  schema:
+                    additionalProperties: true
+                    properties:
+                        pet:
+                            type:
+                                - string
+                                - "null"
+                        名前:
+                            enum:
+                                - 0
+                                - 5
+                                - 3
+                            example: kind
+                            format: int32
+                            type:
+                                - integer
+                                - "null"
+                    required:
+                        - pet
+                    type: object
+                  style: simple
+                - in: cookie
+                  name: 名前
+                  schema:
+                    deprecated: true
+                    type: object
+                - in: cookie
+                  name: owner
+                  schema:
+                    type: object
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type:
+                                - integer
+                                - "null"
+                    application/vnd.api+json:
+                        schema:
+                            minLength: 1
+                            type:
+                                - string
+                                - "null"
+            responses:
+                "500":
+                    description: kind
+                    headers:
+                        a/b:
+                            schema:
+                                description: status
+                                readOnly: true
+                                type: boolean

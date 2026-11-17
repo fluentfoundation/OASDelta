@@ -1,0 +1,6 @@
+1 alterações: 1 error, 0 warning, 0 info
+error	[response-header-type-changed] em ./properties/rules/response-header-type-changed_revision.yaml
+	em API DELETE /owners/{ownerId}/pets
+		o `null` do cabeçalho de resposta `format` foi alterado de `float` para `none` para o status `400`
+
+

@@ -1,0 +1,41 @@
+- id: response-header-became-not-nullable
+  text: the response header ``tick`` became not nullable for the status `204`
+  level: 1
+  operation: PUT
+  operationId: put_store_order
+  path: /store/order
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-header-exclusive-max-set_base.yaml
+    line: 91
+    column: 25
+    endLine: 98
+    endColumn: 45
+  revisionSource:
+    file: ./properties/rules/response-header-exclusive-max-set_revision.yaml
+    line: 91
+    column: 25
+    endLine: 97
+    endColumn: 46
+  fingerprint: 19c171cff637
+- id: response-header-exclusive-max-set
+  text: the ``tick`` response header's exclusiveMaximum was set to `38.00` for the status `204`
+  level: 1
+  operation: PUT
+  operationId: put_store_order
+  path: /store/order
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-header-exclusive-max-set_base.yaml
+    line: 44
+    column: 9
+    endLine: 123
+    endColumn: 24
+  revisionSource:
+    file: ./properties/rules/response-header-exclusive-max-set_revision.yaml
+    line: 44
+    column: 9
+    endLine: 122
+    endColumn: 24
+  fingerprint: 69bcf4263d20
+

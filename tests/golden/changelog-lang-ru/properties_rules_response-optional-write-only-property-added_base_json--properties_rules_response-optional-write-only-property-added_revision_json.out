@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-optional-write-only-property-added] в ./properties/rules/response-optional-write-only-property-added_revision.json
+	в API POST /items/{id}.json
+		добавлено необязательное свойство только для записи `a: b/items/kind` в ответе со статусом `2XX`
+
+

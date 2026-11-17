@@ -1,0 +1,2 @@
+::error title=response-header-min-items-unset,file=./properties/rules/response-header-min-items-unset_revision.yaml,line=17,col=9::in API DELETE /v1/items the `졳恂낭` response header's minItems was unset from `10` for the status `200`
+

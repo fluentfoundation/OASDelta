@@ -1,0 +1,9 @@
+- id: response-body-exclusive-min-set
+  text: the response's body exclusiveMinimum was set to `-3.00`
+  level: 1
+  operation: DELETE
+  operationId: delete_search
+  path: /search
+  section: paths
+  fingerprint: 5f7211fd2603
+

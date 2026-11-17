@@ -1,0 +1,1 @@
+{"paths":{"added":["/pets/{petId}"],"deleted":["/pets/{petId}/v2"],"modified":{"/owners/{ownerId}/pets":{"operations":{"modified":{"PUT":{"parameters":{"added":{"path":["ownerId"]}}}}}}}}}

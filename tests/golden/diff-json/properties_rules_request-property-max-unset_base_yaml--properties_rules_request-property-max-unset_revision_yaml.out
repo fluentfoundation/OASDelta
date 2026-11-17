@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/store/order":{"operations":{"modified":{"PATCH":{"requestBody":{"content":{"modified":{"application/json; charset=utf-8":{"schema":{"deprecated":{"from":true,"to":false},"items":{"max":{"from":-4,"to":null}}}}}}}}}}}}}}

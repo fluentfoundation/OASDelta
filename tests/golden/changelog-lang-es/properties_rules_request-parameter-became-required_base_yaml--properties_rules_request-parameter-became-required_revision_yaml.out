@@ -1,0 +1,10 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[request-parameter-became-required] en ./properties/rules/request-parameter-became-required_revision.yaml
+	en API DELETE /search
+		el parámetro `query` de solicitud `◊愽貺䫔` se volvió requerido
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

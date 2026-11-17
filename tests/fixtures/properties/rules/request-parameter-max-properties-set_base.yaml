@@ -1,0 +1,58 @@
+# Fires request-parameter-max-properties-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            items:
+                $ref: '#/components/schemas/Owner'
+            type: array
+    securitySchemes:
+        oauth:
+            flows:
+                clientCredentials:
+                    scopes:
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: pet
+    version: v1
+openapi: 3.0.3
+paths:
+    /v1/items:
+        get:
+            operationId: get_v1_items
+            parameters:
+                - in: cookie
+                  name: ключ
+                  required: false
+                  schema:
+                    type: integer
+                - in: header
+                  name: owner
+                  schema:
+                    type: object
+            responses:
+                "201":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                allOf:
+                                    - items:
+                                        default: true
+                                        type: boolean
+                                      type: array
+                                      uniqueItems: true
+                                    - anyOf:
+                                        - default: ключ
+                                          description: tag
+                                          format: byte
+                                          maxLength: 180
+                                          type: string
+                                        - default: false
+                                          description: price
+                                          nullable: true
+                                          type: boolean
+                                        - type: string
+                                          writeOnly: true
+                    description: name

@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-body-multiple-of-changed] at ./properties/rules/request-body-multiple-of-changed_revision.yaml
+	in API POST /ünïcode/ключ
+		the request's body multipleOf was changed from `10.00` to `6.00`
+
+

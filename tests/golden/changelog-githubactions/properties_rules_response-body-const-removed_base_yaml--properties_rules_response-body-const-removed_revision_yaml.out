@@ -1,0 +1,5 @@
+::error title=response-body-const-removed,file=./properties/rules/response-body-const-removed_revision.yaml::in API DELETE /store/order the response body `text/plain` const value `䮼멀ቀ楬` was removed for the status `400`
+::error title=response-body-min-length-unset,file=./properties/rules/response-body-const-removed_revision.yaml::in API DELETE /store/order the response's body minLength was unset from `4`
+::error title=response-body-type-changed,file=./properties/rules/response-body-const-removed_revision.yaml,line=37,col=33::in API DELETE /store/order the response's body `type/format` changed from `string/password` to `integer` for status `400`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

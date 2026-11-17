@@ -1,0 +1,5 @@
+::error title=request-parameter-property-type-specialized,file=./properties/rules/request-body-min-decreased_revision.yaml,line=43,col=13::in API DELETE /search for the `header` request parameter `created`, the `type` of property `ключ` was narrowed from `string` to `object`
+::error title=request-property-type-changed,file=./properties/rules/request-body-min-decreased_revision.yaml,line=43,col=13::in API PUT /search the `tag/id` request property `type` changed from `string` to `object` (media type: application/xml)
+::notice title=api-security-component-added,file=./properties/rules/request-body-min-decreased_revision.yaml,line=45,col=9::in API   the component security scheme `api_key` was added
+::notice title=request-body-min-decreased,file=./properties/rules/request-body-min-decreased_revision.yaml,line=123,col=29::in API PUT /search the request's body min was decreased to from `0.00` to `-2.00` (media type: */*)
+

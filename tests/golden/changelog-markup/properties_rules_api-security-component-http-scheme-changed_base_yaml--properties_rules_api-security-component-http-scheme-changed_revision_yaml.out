@@ -1,0 +1,14 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+
+## Components
+- :warning: the component security scheme `bearer` http scheme changed from `basic` to `bearer`
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

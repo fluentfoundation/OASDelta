@@ -1,0 +1,67 @@
+# Fires request-property-deprecated (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: kind
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /owners/{ownerId}/pets:
+        put:
+            deprecated: true
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - description: tag
+                  in: query
+                  name: Ünïcode
+                  schema:
+                    items:
+                        format: int64
+                        type: integer
+                    type: array
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            default: price
+                            description: ' leading'
+                            enum:
+                                - ключ
+                                - "a\r\nb"
+                                - Ünïcode
+                                -  nbsp
+                            type: string
+                    application/vnd.api+json:
+                        schema:
+                            items:
+                                deprecated: true
+                                items:
+                                    minLength: 0
+                                    nullable: true
+                                    type: string
+                                type: array
+                            minItems: 2
+                            type: array
+                required: false
+            responses:
+                "500":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    type: number
+                                type: array
+                        multipart/form-data:
+                            schema:
+                                nullable: true
+                                type: string
+                    description: "\a"
+                    headers:
+                        tag:
+                            schema:
+                                deprecated: true
+                                format: int64
+                                nullable: true
+                                type: integer

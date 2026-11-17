@@ -30,7 +30,7 @@ For other platforms, use `-r osx-arm64`, `-r win-x64` and so on.
 
 Toolchain notes:
 
-- **SDK.** The build uses SDK 10.0.1xx. It needs NuGet access for YamlDotNet and Markdig.
+- **SDK.** The build uses a .NET 10 SDK (10.0.100 or later). `global.json` pins major version 10, so a newer SDK installed alongside, such as 11, isn't picked. It needs NuGet access for YamlDotNet and Markdig.
 - **C# version.** SDK 10.0.1xx offers C# 14 plus `preview`, so the project uses `LangVersion=preview`. That is C# 15 wherever the compiler supports it.
 
 ## Usage

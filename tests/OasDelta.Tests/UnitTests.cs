@@ -88,6 +88,25 @@ public class YamlTests
     [InlineData(".5_0")]
     public void NonNumbersStayStrings(string text) => Assert.IsType<string>(Node.ResolveScalar(text, true, null));
 
+    [Theory] // go-yaml v3 merges only a mapping or a sequence of mappings
+    [InlineData("<<: null")]
+    [InlineData("<<: ~")]
+    [InlineData("<<: 1")]
+    [InlineData("<<: [{a: 1}, 2]")]
+    public void AMergeOfAnythingElseFails(string merge)
+    {
+        var e = Assert.Throws<YamlParseException>(() => NodeReader.Parse($"x:\n  {merge}\n  b: 2\n"));
+        Assert.Equal("yaml: map merge requires map or sequence of maps as the value", e.Message);
+    }
+
+    [Theory] // the same JSON as oasdiff 1.35.0 flatten
+    [InlineData("<<: {a: 1, b: 9}", "{\"x\":{\"a\":1,\"b\":2}}")]
+    [InlineData("<<: [{a: 1}, {a: 3, c: 4}]", "{\"x\":{\"a\":1,\"b\":2,\"c\":4}}")]
+    [InlineData("<<: []", "{\"x\":{\"b\":2}}")]
+    [InlineData("\"<<\": null", "{\"x\":{\"\\u003c\\u003c\":null,\"b\":2}}")] // quoted: an ordinary key (escaped as encoding/json does)
+    public void AMergeOfMappingsKeepsTheMappingsOwnKeys(string merge, string json) =>
+        Assert.Equal(json, JsonEmitter.Emit(NodeReader.Parse($"x:\n  {merge}\n  b: 2\n")!.ToValue()));
+
     [Fact]
     public void QuotesStringsThatWouldResolveAsOtherTypes()
     {

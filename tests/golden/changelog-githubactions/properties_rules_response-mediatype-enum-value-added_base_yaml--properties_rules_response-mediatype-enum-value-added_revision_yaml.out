@@ -1,0 +1,2 @@
+::error title=response-mediatype-enum-value-added,file=./properties/rules/response-mediatype-enum-value-added_revision.yaml,line=70,col=39::in API PATCH /items/{id}.json added the new `created` enum value to the response schema `text/plain` for the response status `404`
+

@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /ünïcode/ключ
+-  for the `cookie` request parameter `Ünïcode`, the maxProperties was increased from `6` to `9`
+
+
+
+
+
+

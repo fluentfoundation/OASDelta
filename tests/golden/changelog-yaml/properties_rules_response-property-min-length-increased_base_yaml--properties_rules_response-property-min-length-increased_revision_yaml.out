@@ -1,0 +1,17 @@
+- id: response-property-min-length-increased
+  text: 'the `anyOf[subschema #2]/items/` response property''s minLength was increased from `1` to `4` for the response status `200`'
+  level: 1
+  operation: PUT
+  operationId: put_pets_{petId}
+  path: /pets/{petId}
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-property-min-length-increased_base.yaml
+    line: 172
+    column: 41
+  revisionSource:
+    file: ./properties/rules/response-property-min-length-increased_revision.yaml
+    line: 172
+    column: 41
+  fingerprint: 5478263ce7c3
+

@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    PUT:
+                        parameters:
+                            modified:
+                                header:
+                                    id:
+                                        schema:
+                                            properties:
+                                                added:
+                                                    - '[bracket]'
+                        requestBody:
+                            content:
+                                modified:
+                                    application/vnd.api+json:
+                                        schema:
+                                            maxProps:
+                                                from: 11
+                                                to: 13
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /store/order
+        :   parameters:
+                modified:
+                    header:
+                        id:
+                            schema:
+                                properties:
+                                    added:
+                                        - '[bracket]'
+            requestBody:
+                content:
+                    modified:
+                        application/vnd.api+json:
+                            schema:
+                                maxProps:
+                                    from: 11
+                                    to: 13
+

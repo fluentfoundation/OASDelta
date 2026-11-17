@@ -1,0 +1,78 @@
+# Fires response-header-added (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            type: object
+info:
+    title: tag
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /ünïcode/ключ:
+        delete:
+            parameters:
+                - in: cookie
+                  name: '!tag'
+                  required: false
+                  schema:
+                    $ref: '#/components/schemas/Owner'
+            responses:
+                "204":
+                    content:
+                        '*/*':
+                            schema:
+                                $ref: '#/components/schemas/Owner'
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    items:
+                                        type: number
+                                    type: array
+                                type: array
+                    description: 鿾漋璊껙쨮䱄蹺惦
+                    headers:
+                        owner:
+                            required: false
+                            schema:
+                                type: boolean
+        put:
+            parameters:
+                - in: cookie
+                  name: 檒만襮∸
+                  required: false
+                  schema:
+                    readOnly: true
+                    type: integer
+            requestBody:
+                content:
+                    text/plain:
+                        schema:
+                            pattern: ^[a-z]+$
+                            type: string
+                required: false
+            responses:
+                "200":
+                    description: 名前
+                "404":
+                    content:
+                        '*/*':
+                            schema:
+                                properties:
+                                    උ泎Ț:
+                                        description: status
+                                        format: int32
+                                        type: integer
+                                type: object
+                        multipart/form-data:
+                            schema:
+                                nullable: true
+                                type: boolean
+                    description: price
+                    headers:
+                        Ünïcode:
+                            schema:
+                                maximum: 460
+                                minimum: -8
+                                type: number
+                                writeOnly: true
+            summary: '>'

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-property-min-properties-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `name` request property's minProperties was increased to `3`</failure>
+    </testcase>
+    <testcase name="optional-response-header-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the optional response header `ૉ硡쇲䦨員䒗` removed for the status `2XX`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

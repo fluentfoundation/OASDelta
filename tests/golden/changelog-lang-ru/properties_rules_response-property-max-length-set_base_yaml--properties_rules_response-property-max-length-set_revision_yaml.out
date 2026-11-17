@@ -1,0 +1,11 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[endpoint-deprecated-with-sunset] в ./properties/rules/response-property-max-length-set_revision.yaml
+	в API PATCH /store/order
+		эндпоинт устарел с датой прекращения `2099-12-31`
+
+info	[response-property-max-length-set] в ./properties/rules/response-property-max-length-set_revision.yaml
+	в API PATCH /store/order
+		у поля ответа `items/owner/allOf[subschema #2]/!tag` задано значение maxLength в `13`, для ответа со статусом `400`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

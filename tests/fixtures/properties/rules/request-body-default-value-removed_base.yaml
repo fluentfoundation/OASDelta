@@ -1,0 +1,35 @@
+# Fires request-body-default-value-removed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        bearer:
+            scheme: basic
+            type: http
+info:
+    title: 猧쿪াṜ腙豴힗⯁
+    version: v1
+openapi: 3.0.3
+paths:
+    /search:
+        put:
+            description: 킸蜲諪嬭鑌
+            operationId: put_search
+            parameters:
+                - in: query
+                  name: ключ
+                  schema:
+                    description: id
+                    nullable: true
+                    type: integer
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            default: 14
+                            format: double
+                            type: number
+            responses:
+                "201":
+                    description: '|'
+            summary: price
+security:
+    - bearer: []

@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-header-max-decreased] en ./properties/rules/response-header-max-decreased_revision.yaml
+	en API GET /ünïcode/ключ
+		el valor max del encabezado de respuesta `x	y` fue reducido de `764.00` a `16.00` para el estado `500`
+
+

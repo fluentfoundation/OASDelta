@@ -1,0 +1,12 @@
+::error title=response-body-exclusive-max-unset,file=./properties/rules/response-body-exclusive-max-unset_revision.yaml::in API POST /v1/items the response's body exclusiveMaximum was unset from `1017.00`
+::error title=response-body-min-unset,file=./properties/rules/response-body-exclusive-max-unset_revision.yaml::in API POST /v1/items the response's body min was unset from `-5.00`
+::error title=response-body-multiple-of-unset,file=./properties/rules/response-body-exclusive-max-unset_revision.yaml::in API POST /v1/items the response's body multipleOf was unset from `5.00`
+::error title=response-body-type-changed,file=./properties/rules/response-body-exclusive-max-unset_revision.yaml,line=90,col=33::in API POST /v1/items the response's body `type` changed from `integer, null` to `string` for status `204`
+::error title=response-mediatype-became-not-enum,file=./properties/rules/response-body-exclusive-max-unset_revision.yaml::in API POST /v1/items removed the enum constraint from the response schema `multipart/form-data` for the response status `204`
+::error title=request-body-media-type-removed,file=./properties/rules/response-body-exclusive-max-unset_revision.yaml::in API PUT /ünïcode/ключ removed the media type `application/json; charset=utf-8` from the request body
+::error title=request-body-media-type-removed,file=./properties/rules/response-body-exclusive-max-unset_revision.yaml::in API PUT /ünïcode/ключ removed the media type `text/plain` from the request body
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-body-became-not-nullable,file=./properties/rules/response-body-exclusive-max-unset_revision.yaml::in API POST /v1/items the response's body became not nullable
+::notice title=response-body-default-value-removed,file=./properties/rules/response-body-exclusive-max-unset_revision.yaml::in API POST /v1/items the response body `multipart/form-data` default value `0.00` was removed for the status `204`
+::notice title=request-body-media-type-added,file=./properties/rules/response-body-exclusive-max-unset_revision.yaml,line=117,col=21::in API PUT /ünïcode/ключ added the media type `*/*` to the request body
+

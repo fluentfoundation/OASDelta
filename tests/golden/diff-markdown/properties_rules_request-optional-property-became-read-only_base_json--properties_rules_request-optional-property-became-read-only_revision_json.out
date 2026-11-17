@@ -1,0 +1,44 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /owners/{ownerId}/pets
+- Modified query param: status
+  - Schema changed
+    - Items changed
+      - Properties changed
+        - Modified property: @at
+          - ReadOnly changed from false to true
+- Modified header param: kind
+  - Schema changed
+    - Properties changed
+      - Modified property: ~
+        - Items changed
+          - Properties changed
+            - Modified property: @at
+              - ReadOnly changed from false to true
+
+PATCH /store/order
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Properties changed
+          - Modified property: created
+            - Items changed
+              - Properties changed
+                - Modified property: @at
+                  - ReadOnly changed from false to true
+          - Modified property: pet
+            - Properties changed
+              - Modified property: name
+                - Items changed
+                  - Properties changed
+                    - Modified property: @at
+                      - ReadOnly changed from false to true
+
+

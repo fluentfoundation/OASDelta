@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
+    <testcase name="request-parameter-removed-before-sunset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `query` request parameter `removed` before the sunset date `2099-12-31`</failure>
+    </testcase>
+    <testcase name="request-parameter-sunset-date-changed-too-small" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">`query` request parameter `earlier` sunset date changed to an earlier date, from `2099-12-31` to `2020-01-01`, new sunset date must be not earlier than `2099-12-31` and at least `0` days from now</failure>
+    </testcase>
+    <testcase name="request-parameter-sunset-date-too-small" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">`query` request parameter `too-small` sunset date `2020-01-01` is too small, must be at least `0` days from now</failure>
+    </testcase>
+    <testcase name="request-parameter-sunset-deleted" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">`query` request parameter `deleted` sunset date deleted, but deprecated=true kept</failure>
+    </testcase>
+    <testcase name="request-parameter-sunset-parse" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">failed to parse sunset date for the `query` request parameter `bad`: `sunset date doesn't conform with RFC3339: not a date`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

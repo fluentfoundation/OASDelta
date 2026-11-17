@@ -1,0 +1,31 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: 3
+------------------------
+GET /removed-endpoint  
+GET /removed-path  
+GET /removed-path-bad-sunset  
+
+### Modified Endpoints: 4
+-------------------------
+GET /deprecated-bad-sunset
+- Extensions changed
+  - New extension: x-sunset
+- Deprecated changed from false to true
+
+GET /stability
+- Extensions changed
+  - Modified extension: x-stability-level
+    - Modified value from 'beta' to 'experimental-ish'
+
+GET /sunset-deleted
+- Extensions changed
+  - Deleted extension: x-sunset
+
+GET /sunset-earlier
+- Extensions changed
+  - Modified extension: x-sunset
+    - Modified value from '2099-12-31' to '2020-01-01'
+
+

@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                2XX:
+                                    headers:
+                                        modified:
+                                            status:
+                                                schema:
+                                                    maxLength:
+                                                        from: 209
+                                                        to: 210
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /store/order
+        :   responses:
+                modified:
+                    2XX:
+                        headers:
+                            modified:
+                                status:
+                                    schema:
+                                        maxLength:
+                                            from: 209
+                                            to: 210
+

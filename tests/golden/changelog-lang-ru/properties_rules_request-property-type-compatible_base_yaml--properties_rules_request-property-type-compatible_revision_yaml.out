@@ -1,0 +1,32 @@
+7 изменений: 1 error, 5 warning, 1 info
+error	[request-body-media-type-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+	в API POST /pets/{petId}
+		удален тип медиа для тела запроса `application/xml`
+
+warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+	в API POST /pets/{petId}
+		удалено поле запроса `'single'`
+
+warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+	в API POST /pets/{petId}
+		удалено поле запроса `id/no`
+
+warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+	в API POST /pets/{petId}
+		удалено поле запроса `id/tag`
+
+warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+	в API POST /pets/{petId}
+		удалено поле запроса `line1
+line2`
+
+warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+	в API POST /pets/{petId}
+		удалено поле запроса `pet`
+
+info	[request-property-type-compatible] в ./properties/rules/request-property-type-compatible_revision.yaml
+	в API POST /pets/{petId}
+		у поля запроса `id` `type` изменён с `object` до `string` (обратно совместимо)
+		Это изменение обратно совместимо, потому что тип медиа не является строго типизированным (например XML), где любое значение может быть представлено как текст, поэтому тип не проверяется при передаче. При строго типизированном типе медиа, таком как JSON, это же изменение было бы ломающим.
+
+

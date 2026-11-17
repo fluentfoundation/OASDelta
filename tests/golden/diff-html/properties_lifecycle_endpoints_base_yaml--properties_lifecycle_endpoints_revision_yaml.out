@@ -1,0 +1,51 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-3">Deleted Endpoints: 3</h3>
+<hr>
+<p>GET /removed-endpoint<br>
+GET /removed-path<br>
+GET /removed-path-bad-sunset</p>
+<h3 id="modified-endpoints-4">Modified Endpoints: 4</h3>
+<hr>
+<p>GET /deprecated-bad-sunset</p>
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-sunset</li>
+</ul>
+</li>
+<li>Deprecated changed from false to true</li>
+</ul>
+<p>GET /stability</p>
+<ul>
+<li>Extensions changed
+<ul>
+<li>Modified extension: x-stability-level
+<ul>
+<li>Modified value from 'beta' to 'experimental-ish'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>GET /sunset-deleted</p>
+<ul>
+<li>Extensions changed
+<ul>
+<li>Deleted extension: x-sunset</li>
+</ul>
+</li>
+</ul>
+<p>GET /sunset-earlier</p>
+<ul>
+<li>Extensions changed
+<ul>
+<li>Modified extension: x-sunset
+<ul>
+<li>Modified value from '2099-12-31' to '2020-01-01'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

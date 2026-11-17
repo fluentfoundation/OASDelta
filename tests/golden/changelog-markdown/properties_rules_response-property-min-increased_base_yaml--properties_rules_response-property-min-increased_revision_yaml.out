@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PUT /items/{id}.json
+-  the `items/!tag` response property's min was increased from `-10.00` to `-8.00` for the response status `500`
+
+
+
+
+
+

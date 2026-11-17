@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /v1/items
+-  the `**bold**` response header's max was set to `6.00` for the status `default`
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                cookie:
+                                    name:
+                                        schema:
+                                            items:
+                                                type:
+                                                    deleted:
+                                                        - string
+                                                description:
+                                                    from: kind
+                                                    to: ""
+                                                always:
+                                                    from: null
+                                                    to: false
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items/{id}.json
+        :   parameters:
+                modified:
+                    cookie:
+                        name:
+                            schema:
+                                items:
+                                    type:
+                                        deleted:
+                                            - string
+                                    description:
+                                        from: kind
+                                        to: ""
+                                    always:
+                                        from: null
+                                        to: false
+

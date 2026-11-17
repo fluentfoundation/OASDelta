@@ -1,0 +1,175 @@
+{
+  "components": {
+    "schemas": {
+      "Item": {
+        "properties": {
+          "status": {
+            "enum": [
+              "名前"
+            ],
+            "format": "binary",
+            "nullable": true,
+            "type": "string"
+          },
+          "Ünïcode": {
+            "properties": {
+              "ключ": {
+                "type": "string"
+              },
+              "몫롵γ簡㑽꺙鯲": {
+                "description": "❜⨠ɯ隸",
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "ключ"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "status"
+        ],
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "title": "price",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/v1/items": {
+      "post": {
+        "description": "pet",
+        "operationId": "post_v1_items",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "id",
+            "schema": {
+              "items": {
+                "nullable": true,
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "in": "header",
+            "name": "1e3",
+            "schema": {
+              "properties": {
+                "C:\\path": {
+                  "multipleOf": 10,
+                  "nullable": true,
+                  "type": "integer"
+                },
+                "owner": {
+                  "format": "custom",
+                  "nullable": true,
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "C:\\path"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Item"
+                }
+              },
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "format": "custom",
+                  "nullable": true,
+                  "type": "boolean"
+                }
+              }
+            },
+            "description": "0x1F"
+          }
+        },
+        "tags": [
+          "kind"
+        ]
+      }
+    },
+    "/ünïcode/ключ": {
+      "delete": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "schema": {
+              "properties": {
+                "id": {
+                  "format": "double",
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            }
+          },
+          {
+            "in": "header",
+            "name": "ключ",
+            "schema": {
+              "items": {
+                "description": "Ünïcode",
+                "maximum": 276,
+                "nullable": true,
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "ឱ裷蠅"
+          },
+          "400": {
+            "description": "ꬆ奰"
+          },
+          "500": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "properties": {
+                    "\u003cb\u003e\u0026amp;": {
+                      "readOnly": true,
+                      "type": "boolean"
+                    },
+                    "a~b": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            },
+            "description": "!tag"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "components": {
+    "securitySchemes": {
+      "api_key": {
+        "in": "cookie",
+        "name": "null",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "status",
+    "version": "2.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/owners/{ownerId}/pets": {
+      "patch": {
+        "description": "no",
+        "operationId": "patch_owners_{ownerId}_pets",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ownerId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/vnd.api+json": {
+              "schema": {
+                "items": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "type": "array"
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "items": {
+                  "properties": {
+                    "owner": {
+                      "default": 81,
+                      "format": "float",
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "炘搗꿛軰난踑簱": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "炘搗꿛軰난踑簱"
+                  ],
+                  "type": "object"
+                },
+                "maxItems": 46,
+                "type": "array"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "description": "price",
+                  "maxLength": 78,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "enum": [
+                    40.25,
+                    79.375,
+                    29.375
+                  ],
+                  "maximum": 121,
+                  "minimum": -1,
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "!tag"
+          },
+          "default": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "default": 66,
+                  "enum": [
+                    5,
+                    20
+                  ],
+                  "readOnly": true,
+                  "type": "integer"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "properties": {
+                    "\u0007": {
+                      "oneOf": [
+                        {
+                          "example": "ключ",
+                          "type": "number",
+                          "writeOnly": true
+                        },
+                        {
+                          "default": -96.875,
+                          "deprecated": true,
+                          "format": "double",
+                          "minimum": 0,
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        }
+                      ]
+                    },
+                    "0x1F": {
+                      "properties": {
+                        "ꮾ⇏藯눏骝폭": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "writeOnly": true
+                        }
+                      },
+                      "required": [
+                        "ꮾ⇏藯눏骝폭"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "\u0007"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "名前",
+            "headers": {
+              "pet": {
+                "schema": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "summary": "price"
+      }
+    }
+  }
+}

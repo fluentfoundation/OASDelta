@@ -1,0 +1,51 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "400":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    anyOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 2
+                                                              revision:
+                                                                index: 2
+                                                              diff:
+                                                                properties:
+                                                                    modified:
+                                                                        "x\ty":
+                                                                            readOnly:
+                                                                                from: true
+                                                                                to: false
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /owners/{ownerId}/pets
+        :   responses:
+                modified:
+                    "400":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        anyOf:
+                                            modified:
+                                                - base:
+                                                    index: 2
+                                                  revision:
+                                                    index: 2
+                                                  diff:
+                                                    properties:
+                                                        modified:
+                                                            "x\ty":
+                                                                readOnly:
+                                                                    from: true
+                                                                    to: false
+

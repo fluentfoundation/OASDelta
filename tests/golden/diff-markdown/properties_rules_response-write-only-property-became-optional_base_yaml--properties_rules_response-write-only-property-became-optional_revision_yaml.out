@@ -1,0 +1,77 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /pets
+- Responses changed
+  - Modified response: 204
+    - Content changed
+      - Modified media type: application/xml
+        - Schema changed
+          - Properties changed
+            - Modified property: !tag
+              - Property 'AnyOf' changed
+                - Modified schema: #/components/schemas/Pet
+                  - Property 'AllOf' changed
+                    - Modified schema: subschema #3
+                      - Required changed
+                        - Deleted required property: ключ
+                      - Properties changed
+                        - Modified property: ключ
+                          - Type changed from '' to 'null'
+                          - Format changed from '' to 'byte'
+                          - WriteOnly changed from true to false
+  - Modified response: 404
+    - Content changed
+      - Modified media type: application/json; charset=utf-8
+        - Schema changed
+          - Properties changed
+            - Modified property: 名前
+              - Items changed
+                - Property 'AllOf' changed
+                  - Modified schema: subschema #3
+                    - Required changed
+                      - Deleted required property: ключ
+                    - Properties changed
+                      - Modified property: ключ
+                        - Type changed from '' to 'null'
+                        - Format changed from '' to 'byte'
+                        - WriteOnly changed from true to false
+      - Modified media type: application/vnd.api+json
+        - Schema changed
+          - Items changed
+            - Items changed
+              - Property 'AllOf' changed
+                - Modified schema: subschema #3
+                  - Required changed
+                    - Deleted required property: ключ
+                  - Properties changed
+                    - Modified property: ключ
+                      - Type changed from '' to 'null'
+                      - Format changed from '' to 'byte'
+                      - WriteOnly changed from true to false
+
+GET /ünïcode/ключ
+- Responses changed
+  - Modified response: 404
+    - Content changed
+      - Modified media type: application/xml
+        - Schema changed
+          - Properties changed
+            - Modified property: 名前
+              - Items changed
+                - Property 'AllOf' changed
+                  - Modified schema: subschema #3
+                    - Required changed
+                      - Deleted required property: ключ
+                    - Properties changed
+                      - Modified property: ключ
+                        - Type changed from '' to 'null'
+                        - Format changed from '' to 'byte'
+                        - WriteOnly changed from true to false
+
+

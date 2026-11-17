@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[request-parameter-max-properties-decreased] в ./properties/rules/request-parameter-max-properties-decreased_revision.yaml
+	в API GET /items/{id}.json
+		значение maxProperties в `cookie` параметре запроса `名前` уменьшено с `15` до `13`
+
+

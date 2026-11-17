@@ -1,0 +1,21 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /store/order
+- :warning: the `名前` response property const value `䞈ᗝ싋⋁쐾诚` was removed for the status `200`
+
+
+### PUT /store/order
+- :warning: removed the request property `_under_`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

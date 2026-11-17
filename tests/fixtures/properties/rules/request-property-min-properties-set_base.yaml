@@ -1,0 +1,172 @@
+# Fires request-property-min-properties-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            description: "\U0001F600"
+            minimum: -2
+            type: number
+        Item:
+            example: id
+            format: custom
+            type: boolean
+    securitySchemes:
+        api_key:
+            in: query
+            name: '{brace}'
+            type: apiKey
+info:
+    title: 텯磤൵閎휰缱腩璙
+    version: v1
+openapi: 3.0.3
+paths:
+    /v1/items:
+        patch:
+            description: |-
+                line1
+                line2
+            operationId: patch_v1_items
+            parameters:
+                - description: "\a"
+                  in: cookie
+                  name: tag
+                  schema:
+                    description: ䷘␽↯ꥊ̻뻍銵
+                    format: password
+                    type: string
+                    writeOnly: true
+                - in: cookie
+                  name: id
+                  required: false
+                  schema:
+                    type: boolean
+                - description: "0x1F"
+                  in: header
+                  name: C:\path
+                  schema:
+                    deprecated: true
+                    description: status
+                    minProperties: 2
+                    properties:
+                        '>':
+                            maximum: 684
+                            minimum: -2
+                            readOnly: true
+                            type: number
+                        '@at':
+                            default: 1e+300
+                            format: int32
+                            nullable: true
+                            type: integer
+                         nbsp:
+                            $ref: '#/components/schemas/Error'
+                        price:
+                            format: byte
+                            type: string
+                    required:
+                        - '@at'
+                    type: object
+            responses:
+                "200":
+                    content:
+                        '*/*':
+                            schema:
+                                properties:
+                                    ' ':
+                                        properties:
+                                            '''single''':
+                                                minimum: 3
+                                                type: integer
+                                            '-':
+                                                description: status
+                                                nullable: true
+                                                type: number
+                                            pet:
+                                                nullable: true
+                                                type: boolean
+                                                writeOnly: true
+                                            price:
+                                                enum:
+                                                    - true
+                                                    - false
+                                                nullable: true
+                                                type: boolean
+                                        required:
+                                            - '''single'''
+                                        type: object
+                                    '"quoted"':
+                                        type: string
+                                    name:
+                                        minimum: -7
+                                        type: integer
+                                    名前:
+                                        discriminator:
+                                            mapping:
+                                                a: '#/components/schemas/Item'
+                                            propertyName: '`tick`'
+                                        oneOf:
+                                            - nullable: true
+                                              readOnly: true
+                                              type: string
+                                            - nullable: true
+                                              readOnly: true
+                                              type: integer
+                                required:
+                                    - name
+                                    - '"quoted"'
+                                    - 名前
+                                type: object
+                        text/plain:
+                            schema:
+                                enum:
+                                    - 76
+                                    - 54
+                                    - 21
+                                format: float
+                                readOnly: true
+                                type: number
+                    description: ключ
+                default:
+                    description: ⺓኶ᖞ
+            security: []
+        post:
+            description: ключ
+            operationId: post_v1_items
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            items:
+                                items:
+                                    deprecated: true
+                                    nullable: true
+                                    type: boolean
+                                maxItems: 37
+                                type: array
+                            type: array
+                required: false
+            responses:
+                "201":
+                    description: '>'
+        put:
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/Error'
+                    text/plain:
+                        schema:
+                            enum:
+                                - price
+                            type: string
+                description: 元
+            responses:
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                nullable: true
+                                type: boolean
+                    description: '|'
+            summary: Ünïcode
+            tags:
+                - id

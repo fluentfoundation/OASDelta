@@ -1,0 +1,16 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /items/{id}.json
+-  added `subschema #1, subschema #2` to the `owner/status` request property `anyOf` list
+-  the `owner/status` request property's min was unset from `2.00`
+-  the `owner/status` request property `type` was widened from `integer` to `any`
+-  the request required property `owner/status` became not write-only
+
+
+
+
+
+

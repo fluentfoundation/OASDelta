@@ -1,0 +1,16 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /ünïcode/ключ
+- :warning: the `>/>` response property's maxLength was unset from `104` for the response status `204`
+- :warning: the `>/>` response property's minLength was unset from `2` for the response status `204`
+-  added `subschema #1, subschema #2` to the `>/>` response property `allOf` list for the response status `204`
+-  the `>/>` response's property `type` was narrowed from `string` to `any` for status `204`
+
+
+
+
+
+

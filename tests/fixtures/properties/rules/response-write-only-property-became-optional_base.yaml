@@ -1,0 +1,160 @@
+# Fires response-write-only-property-became-optional (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            description: created
+            properties:
+                名前:
+                    items:
+                        $ref: '#/components/schemas/Pet'
+                    type: array
+            type: object
+        Pet:
+            allOf:
+                - deprecated: true
+                  enum:
+                    - 34
+                  format: double
+                  maximum: 919
+                  readOnly: true
+                  type:
+                    - number
+                    - "null"
+                - items:
+                    description: price
+                    enum:
+                        - true
+                        - false
+                    type: boolean
+                  type: array
+                - properties:
+                    ключ:
+                        type: string
+                        writeOnly: true
+                  required:
+                    - ключ
+                  type: object
+info:
+    title: "no"
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /pets:
+        get:
+            parameters:
+                - in: cookie
+                  name: pet
+                  schema:
+                    maxProperties: 14
+                    properties:
+                        owner:
+                            deprecated: true
+                            multipleOf: 10
+                            type:
+                                - number
+                                - "null"
+                        彮듨፷彾恇˛ᡀ㼳:
+                            type:
+                                - integer
+                                - "null"
+                    required:
+                        - 彮듨፷彾恇˛ᡀ㼳
+                        - owner
+                    type: object
+                - deprecated: true
+                  in: header
+                  name: Ünïcode
+                  required: false
+                  schema:
+                    enum:
+                        - 10
+                        - 14
+                        - 12
+                    maximum: 35
+                    type:
+                        - integer
+                        - "null"
+            responses:
+                "200":
+                    description: status
+                    headers:
+                        tag:
+                            required: false
+                            schema:
+                                multipleOf: 2
+                                type:
+                                    - integer
+                                    - "null"
+                        "x\ty":
+                            schema:
+                                description: tag
+                                enum:
+                                    - 4
+                                    - 1
+                                    - 20
+                                format: int64
+                                type: integer
+                "204":
+                    content:
+                        application/xml:
+                            schema:
+                                properties:
+                                    '!tag':
+                                        anyOf:
+                                            - $ref: '#/components/schemas/Pet'
+                                            - example: Ünïcode
+                                              type: boolean
+                                required:
+                                    - '!tag'
+                                type: object
+                    description: 㪭緩졉芒꡿嶛
+                "404":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                $ref: '#/components/schemas/Item'
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    items:
+                                        $ref: '#/components/schemas/Pet'
+                                    type: array
+                                maxItems: 95
+                                type: array
+                    description: "yes"
+                    headers:
+                        tag:
+                            required: false
+                            schema:
+                                deprecated: true
+                                type:
+                                    - boolean
+                                    - "null"
+            tags:
+                - ключ
+                - created
+    /ünïcode/ключ:
+        get:
+            description: ""
+            operationId: get_ünïcode_ключ
+            parameters:
+                - deprecated: true
+                  in: query
+                  name: created
+                  schema:
+                    items:
+                        format: custom
+                        type: boolean
+                    type: array
+            responses:
+                "201":
+                    description: kind
+                "404":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                type: boolean
+                        application/xml:
+                            schema:
+                                $ref: '#/components/schemas/Item'
+                    description: 名前

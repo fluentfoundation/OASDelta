@@ -1,0 +1,79 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    multipart/form-data:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    status:
+                                                        oneOf:
+                                                            modified:
+                                                                - base:
+                                                                    index: 2
+                                                                  revision:
+                                                                    index: 2
+                                                                  diff:
+                                                                    type:
+                                                                        deleted:
+                                                                            - integer
+                                                                            - "null"
+                                                                    format:
+                                                                        from: int64
+                                                                        to: ""
+                                                                    default:
+                                                                        from: 9.007199254740992e+15
+                                                                        to: null
+                                                                    writeOnly:
+                                                                        from: true
+                                                                        to: false
+                                                                    deprecated:
+                                                                        from: true
+                                                                        to: false
+                                                                    min:
+                                                                        from: 7
+                                                                        to: null
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        multipart/form-data:
+                            schema:
+                                properties:
+                                    modified:
+                                        status:
+                                            oneOf:
+                                                modified:
+                                                    - base:
+                                                        index: 2
+                                                      revision:
+                                                        index: 2
+                                                      diff:
+                                                        type:
+                                                            deleted:
+                                                                - integer
+                                                                - "null"
+                                                        format:
+                                                            from: int64
+                                                            to: ""
+                                                        default:
+                                                            from: 9.007199254740992e+15
+                                                            to: null
+                                                        writeOnly:
+                                                            from: true
+                                                            to: false
+                                                        deprecated:
+                                                            from: true
+                                                            to: false
+                                                        min:
+                                                            from: 7
+                                                            to: null
+

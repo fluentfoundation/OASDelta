@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="api-security-component-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `oauth` was added</failure>
+    </testcase>
+    <testcase name="request-body-media-type-item-schema-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the item schema from the media type `application/xml` of the request body</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

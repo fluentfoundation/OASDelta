@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/items/{id}.json":{"operations":{"modified":{"PUT":{"responses":{"modified":{"201":{"content":{"modified":{"application/xml":{"schema":{"allOf":{"added":[{"index":0}]}}}}}},"400":{"content":{"modified":{"text/plain":{"schema":{"min":{"from":-6,"to":-3}}}}}}}}}}}}}}}

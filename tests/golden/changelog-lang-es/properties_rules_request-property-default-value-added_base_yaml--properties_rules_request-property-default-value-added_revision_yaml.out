@@ -1,0 +1,7 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-property-default-value-added] en ./properties/rules/request-property-default-value-added_revision.yaml
+	en API POST /store/order
+		el valor por defecto `` fue agregado a la propiedad de solicitud `77.00`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+

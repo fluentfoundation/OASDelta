@@ -1,0 +1,84 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                path:
+                                    petId:
+                                        style:
+                                            from: label
+                                            to: ""
+        /store/order:
+            operations:
+                modified:
+                    DELETE:
+                        parameters:
+                            modified:
+                                query:
+                                    owner:
+                                        style:
+                                            from: matrix
+                                            to: ""
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/xml:
+                                        schema:
+                                            anyOf:
+                                                modified:
+                                                    - base:
+                                                        index: 0
+                                                      revision:
+                                                        index: 0
+                                                      diff:
+                                                        properties:
+                                                            modified:
+                                                                C:\path:
+                                                                    minLength:
+                                                                        from: 5
+                                                                        to: 4
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets/{petId}
+        :   parameters:
+                modified:
+                    path:
+                        petId:
+                            style:
+                                from: label
+                                to: ""
+        ?   method: DELETE
+            path: /store/order
+        :   parameters:
+                modified:
+                    query:
+                        owner:
+                            style:
+                                from: matrix
+                                to: ""
+        ?   method: POST
+            path: /store/order
+        :   requestBody:
+                content:
+                    modified:
+                        application/xml:
+                            schema:
+                                anyOf:
+                                    modified:
+                                        - base:
+                                            index: 0
+                                          revision:
+                                            index: 0
+                                          diff:
+                                            properties:
+                                                modified:
+                                                    C:\path:
+                                                        minLength:
+                                                            from: 5
+                                                            to: 4
+

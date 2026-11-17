@@ -1,0 +1,17 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+DELETE /store/order
+- Responses changed
+  - Modified response: 2XX
+    - Headers changed
+      - Modified header: status
+        - Schema changed
+          - MaxLength changed from 209 to 210
+
+

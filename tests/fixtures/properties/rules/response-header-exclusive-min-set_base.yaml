@@ -1,0 +1,81 @@
+# Fires response-header-exclusive-min-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            nullable: true
+            type: boolean
+        Item:
+            properties:
+                name:
+                    enum:
+                        - true
+                        - false
+                    nullable: true
+                    readOnly: true
+                    type: boolean
+            required:
+                - name
+            type: object
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: ключ
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /pets:
+        get:
+            parameters:
+                - explode: true
+                  in: query
+                  name: '!tag'
+                  schema:
+                    enum:
+                        - 68
+                        - 5.5
+                        - 29
+                    type: number
+                    writeOnly: true
+            responses:
+                "204":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                deprecated: true
+                                description: "null"
+                                enum:
+                                    - true
+                                    - false
+                                nullable: true
+                                type: boolean
+                    description: Ünïcode
+    /store/order:
+        patch:
+            deprecated: true
+            parameters:
+                - explode: false
+                  in: header
+                  name: name
+                  required: true
+                  schema:
+                    nullable: true
+                    readOnly: true
+                    type: string
+            responses:
+                "201":
+                    description: Ünïcode
+                    headers:
+                        '%20':
+                            schema:
+                                enum:
+                                    - true
+                                    - false
+                                format: custom
+                                nullable: true
+                                type: boolean
+            tags:
+                - name
+servers:
+    - url: https://api.example.com

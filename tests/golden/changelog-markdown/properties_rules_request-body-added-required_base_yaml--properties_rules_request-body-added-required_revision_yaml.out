@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /store/order
+- :warning: added required request body
+-  the response header `*star` was added for the status `200`
+
+
+
+
+
+

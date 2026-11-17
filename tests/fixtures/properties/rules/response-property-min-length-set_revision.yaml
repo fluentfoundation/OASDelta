@@ -1,0 +1,77 @@
+# Fires response-property-min-length-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: name
+    version: v1
+openapi: 3.0.3
+paths:
+    /owners/{ownerId}/pets:
+        post:
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: "null"
+                  required: true
+                  schema:
+                    anyOf:
+                        - format: custom
+                          type: boolean
+                          writeOnly: true
+                        - minLength: 4
+                          pattern: (
+                          type: string
+                  style: pipeDelimited
+                - in: header
+                  name: "1e3"
+                  schema:
+                    oneOf:
+                        - nullable: true
+                          readOnly: true
+                          type: string
+                        - type: integer
+                          writeOnly: true
+                        - example:  nbsp
+                          format: binary
+                          nullable: true
+                          type: string
+                - explode: false
+                  in: query
+                  name: id
+                  schema:
+                    example: status
+                    minimum: 0
+                    type: integer
+            responses:
+                2XX:
+                    description: <b>&amp;
+                "400":
+                    content:
+                        application/xml:
+                            schema:
+                                items:
+                                    $ref: '#/paths/~1owners~1{ownerId}~1pets/post/parameters/1/schema/anyOf/1'
+                                type: array
+                        multipart/form-data:
+                            schema:
+                                items:
+                                    items:
+                                        default: ' '
+                                        format: binary
+                                        nullable: true
+                                        type: string
+                                    maxItems: 43
+                                    type: array
+                                maxItems: 97
+                                type: array
+                    description: Ünïcode
+                "404":
+                    description: pet
+                    headers:
+                        '>':
+                            required: false
+                            schema:
+                                nullable: true
+                                type: string

@@ -1,0 +1,3 @@
+::error title=request-body-type-changed,file=./properties/rules/api-security-component-oauth-refresh-url-changed_revision.yaml,line=93,col=29::in API POST /owners/{ownerId}/pets the request's body `type` changed from `array<array<string/date-time>>` to `boolean`
+::warning title=api-security-component-oauth-refresh-url-changed,file=./properties/rules/api-security-component-oauth-refresh-url-changed_revision.yaml,line=52,col=9::in API   the component security scheme `oauth` oauth `clientCredentials` flow refresh url changed from `https://auth.example.com/refresh` to ``
+

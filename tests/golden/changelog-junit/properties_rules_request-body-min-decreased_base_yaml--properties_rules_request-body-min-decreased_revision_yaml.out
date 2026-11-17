@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="request-parameter-property-type-specialized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `header` request parameter `created`, the `type` of property `ключ` was narrowed from `string` to `object`</failure>
+    </testcase>
+    <testcase name="request-property-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `tag/id` request property `type` changed from `string` to `object` (media type: application/xml)</failure>
+    </testcase>
+    <testcase name="api-security-component-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `api_key` was added</failure>
+    </testcase>
+    <testcase name="request-body-min-decreased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the request's body min was decreased to from `0.00` to `-2.00` (media type: */*)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

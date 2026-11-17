@@ -1,0 +1,384 @@
+{
+  "info": {
+    "title": "名前",
+    "version": "v1"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/search": {
+      "delete": {
+        "operationId": "delete_search",
+        "parameters": [
+          {
+            "description": "a\r\nb",
+            "in": "header",
+            "name": "목箕慒ᤣ㓾",
+            "schema": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "format": "custom",
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "owner"
+          },
+          "default": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "description": "pet",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": " leading"
+          }
+        },
+        "summary": "ʌ蛬䊭"
+      },
+      "post": {
+        "operationId": "post_search",
+        "responses": {
+          "204": {
+            "description": "name",
+            "headers": {
+              "kind": {
+                "schema": {
+                  "enum": [
+                    "ꜚ⥳⠺俌韓ᾍ渱뤹",
+                    "驙",
+                    "tag"
+                  ],
+                  "pattern": "(",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "2XX": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "description": "名前",
+                      "minProperties": 0,
+                      "type": "object"
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "deprecated": true,
+                          "description": "஁䑮럁Ⰱ磻",
+                          "format": "binary",
+                          "type": "string"
+                        },
+                        {
+                          "exclusiveMaximum": 1848,
+                          "format": "int64",
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        }
+                      ],
+                      "discriminator": {
+                        "propertyName": "yes"
+                      }
+                    },
+                    {
+                      "properties": {
+                        "name": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        }
+                      },
+                      "type": "object"
+                    }
+                  ]
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "minProperties": 1,
+                  "properties": {
+                    "price": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "| table |": {
+                      "allOf": [
+                        {
+                          "maximum": 128,
+                          "type": "integer"
+                        },
+                        {
+                          "type": "boolean"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "| table |",
+                    "price"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "a: b"
+          },
+          "400": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "description": "line1\nline2",
+                  "properties": {
+                    "id": {
+                      "items": {
+                        "enum": [
+                          "---",
+                          "status"
+                        ],
+                        "format": "date",
+                        "pattern": "\\d{3}",
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "type": "array"
+                    },
+                    "pet": {
+                      "items": {
+                        "format": "int64",
+                        "maximum": 711,
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "type": "array"
+                    },
+                    "Ünïcode": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "type": "object",
+                  "x-extensible-enum": [
+                    "status"
+                  ]
+                }
+              }
+            },
+            "description": "null"
+          }
+        },
+        "summary": "tag"
+      },
+      "put": {
+        "operationId": "put_search",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ключ",
+            "schema": {
+              "additionalProperties": false,
+              "maxProperties": 6,
+              "properties": {
+                "'single'": {
+                  "default": 1e+300,
+                  "format": "double",
+                  "minimum": 4,
+                  "type": "number"
+                },
+                "created": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "tag": {
+                  "type": "number"
+                },
+                "trailing ": {
+                  "minimum": 10,
+                  "type": "number"
+                }
+              },
+              "required": [
+                "trailing "
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "in": "query",
+            "name": "剧病䰛꯳⎒וꉥ脈",
+            "schema": {
+              "format": "date-time",
+              "pattern": "\\d{3}",
+              "type": "string",
+              "writeOnly": true
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "ヅ꾋",
+            "schema": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "writeOnly": true
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "items": {
+                  "description": "\"quoted\"",
+                  "properties": {
+                    "\u0026anchor": {
+                      "description": "tag",
+                      "enum": [
+                        90.875,
+                        36
+                      ],
+                      "minimum": -6,
+                      "multipleOf": 5,
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "0x1F": {
+                      "description": "谱돰",
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "0x1F"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "format": "custom",
+                  "properties": {
+                    "[bracket]": {
+                      "type": "string",
+                      "writeOnly": true
+                    }
+                  },
+                  "required": [
+                    "[bracket]"
+                  ],
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "名前",
+            "headers": {
+              "a: b": {
+                "schema": {
+                  "deprecated": true,
+                  "type": "string"
+                }
+              },
+              "名前": {
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "description": "名前",
+                  "properties": {
+                    " ": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "owner": {
+                      "description": "kind",
+                      "type": "boolean"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "price"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "/relative"
+    },
+    {
+      "url": "https://api.example.com/v2"
+    }
+  ]
+}

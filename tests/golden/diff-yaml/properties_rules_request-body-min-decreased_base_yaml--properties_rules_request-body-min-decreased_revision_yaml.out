@@ -1,0 +1,94 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    DELETE:
+                        parameters:
+                            modified:
+                                header:
+                                    created:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    ключ:
+                                                        type:
+                                                            added:
+                                                                - object
+                                                            deleted:
+                                                                - string
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    '*/*':
+                                        schema:
+                                            min:
+                                                from: 0
+                                                to: -2
+                                    application/xml:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    tag:
+                                                        properties:
+                                                            modified:
+                                                                id:
+                                                                    type:
+                                                                        added:
+                                                                            - object
+                                                                        deleted:
+                                                                            - string
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /search
+        :   parameters:
+                modified:
+                    header:
+                        created:
+                            schema:
+                                properties:
+                                    modified:
+                                        ключ:
+                                            type:
+                                                added:
+                                                    - object
+                                                deleted:
+                                                    - string
+        ?   method: PUT
+            path: /search
+        :   requestBody:
+                content:
+                    modified:
+                        '*/*':
+                            schema:
+                                min:
+                                    from: 0
+                                    to: -2
+                        application/xml:
+                            schema:
+                                properties:
+                                    modified:
+                                        tag:
+                                            properties:
+                                                modified:
+                                                    id:
+                                                        type:
+                                                            added:
+                                                                - object
+                                                            deleted:
+                                                                - string
+components:
+    schemas:
+        modified:
+            Pet:
+                type:
+                    added:
+                        - object
+                    deleted:
+                        - string
+    securitySchemes:
+        added:
+            - api_key
+

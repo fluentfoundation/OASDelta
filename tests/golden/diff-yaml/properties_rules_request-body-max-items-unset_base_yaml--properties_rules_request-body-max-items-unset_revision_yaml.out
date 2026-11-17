@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    multipart/form-data:
+                                        schema:
+                                            maxItems:
+                                                from: 81
+                                                to: null
+                                            items:
+                                                type:
+                                                    added:
+                                                        - string
+                                                    deleted:
+                                                        - array
+                                                items:
+                                                    schemaDeleted: true
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets/{petId}
+        :   requestBody:
+                content:
+                    modified:
+                        multipart/form-data:
+                            schema:
+                                maxItems:
+                                    from: 81
+                                    to: null
+                                items:
+                                    type:
+                                        added:
+                                            - string
+                                        deleted:
+                                            - array
+                                    items:
+                                        schemaDeleted: true
+

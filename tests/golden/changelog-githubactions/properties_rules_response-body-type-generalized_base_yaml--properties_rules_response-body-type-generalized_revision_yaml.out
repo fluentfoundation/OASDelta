@@ -1,0 +1,6 @@
+::error title=response-body-max-unset,file=./properties/rules/response-body-type-generalized_revision.yaml::in API DELETE /ünïcode/ключ the response's body max was unset from `886.00`
+::error title=response-body-min-unset,file=./properties/rules/response-body-type-generalized_revision.yaml::in API DELETE /ünïcode/ключ the response's body min was unset from `1.00`
+::error title=response-body-type-generalized,file=./properties/rules/response-body-type-generalized_revision.yaml,line=53,col=33::in API DELETE /ünïcode/ключ the response's body `type/format` was widened from `integer/int64` to `number` for status `204`
+::error title=response-media-type-removed,file=./properties/rules/response-body-type-generalized_revision.yaml::in API DELETE /ünïcode/ключ removed the media type `text/plain` for the response with the status `default`
+::notice title=response-body-type-compatible,file=./properties/rules/response-body-type-generalized_revision.yaml,line=59,col=33::in API DELETE /ünïcode/ключ the response's body `type` changed from `string` to `number` for status `default` (backward compatible)
+

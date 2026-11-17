@@ -1,0 +1,29 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+DELETE /store/order
+- Responses changed
+  - Modified response: 404
+    - Content changed
+      - Modified media type: application/json; charset=utf-8
+        - Schema changed
+          - Property 'AllOf' changed
+            - Modified schema: #/components/schemas/Item
+
+GET /store/order
+- Responses changed
+  - Modified response: 500
+    - Headers changed
+      - Modified header: id
+        - Schema changed
+          - Property 'OneOf' changed
+            - Schemas added: subschema #1, subschema #2
+          - Type changed from 'null, string' to ''
+          - MinLength changed from 5 to 0
+
+

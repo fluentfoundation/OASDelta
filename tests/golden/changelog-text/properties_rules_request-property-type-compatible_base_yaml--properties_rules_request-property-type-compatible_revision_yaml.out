@@ -1,0 +1,32 @@
+7 changes: 1 error, 5 warning, 1 info
+error	[request-body-media-type-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+	in API POST /pets/{petId}
+		removed the media type `application/xml` from the request body
+
+warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+	in API POST /pets/{petId}
+		removed the request property `'single'`
+
+warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+	in API POST /pets/{petId}
+		removed the request property `id/no`
+
+warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+	in API POST /pets/{petId}
+		removed the request property `id/tag`
+
+warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+	in API POST /pets/{petId}
+		removed the request property `line1
+line2`
+
+warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+	in API POST /pets/{petId}
+		removed the request property `pet`
+
+info	[request-property-type-compatible] at ./properties/rules/request-property-type-compatible_revision.yaml
+	in API POST /pets/{petId}
+		the `id` request property `type` changed from `object` to `string` (backward compatible)
+		This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking.
+
+

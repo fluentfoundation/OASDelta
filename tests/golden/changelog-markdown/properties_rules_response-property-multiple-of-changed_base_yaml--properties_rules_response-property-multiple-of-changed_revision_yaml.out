@@ -1,0 +1,25 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PUT /items/{id}.json
+- :warning: the `name/anyOf[subschema #1]/` response property's multipleOf was changed from `10.00` to `5.00` for the response status `204`
+
+
+### PATCH /search
+-  endpoint added
+
+
+### POST /search
+-  endpoint added
+
+
+### PUT /search
+-  endpoint added
+
+
+
+
+
+

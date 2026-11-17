@@ -1,0 +1,7 @@
+1 changes: 0 error, 1 warning, 0 info
+warning	[request-body-max-items-set] at ./properties/rules/request-body-max-items-set_revision.yaml
+	in API PUT /pets
+		the request's body maxItems was set to `11`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+
+

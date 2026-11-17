@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /v1/items
+-  the response optional property `Ünïcode/몫롵γ簡㑽꺙鯲` became not read-only for the status `204`
+
+
+
+
+
+

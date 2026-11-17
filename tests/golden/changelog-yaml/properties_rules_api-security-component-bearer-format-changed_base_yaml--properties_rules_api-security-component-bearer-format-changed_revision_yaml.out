@@ -1,0 +1,12 @@
+- id: api-security-component-bearer-format-changed
+  text: the component security scheme `oauth` bearer format changed from `` to `...`
+  level: 1
+  section: components
+  revisionSource:
+    file: ./properties/rules/api-security-component-bearer-format-changed_revision.yaml
+    line: 8
+    column: 9
+    endLine: 15
+    endColumn: 25
+  fingerprint: b655375e9f03
+

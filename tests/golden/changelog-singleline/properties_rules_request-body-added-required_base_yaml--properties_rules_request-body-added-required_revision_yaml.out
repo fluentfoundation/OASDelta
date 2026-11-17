@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./properties/rules/request-body-added-required_revision.yaml, in API PATCH /store/order added required request body [request-body-added-required]. 
+
+info at ./properties/rules/request-body-added-required_revision.yaml, in API PATCH /store/order the response header `*star` was added for the status `200` [response-header-added]. 
+
+

@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            type:
+                                                added:
+                                                    - number
+                                                deleted:
+                                                    - string
+                                            minLength:
+                                                from: 5
+                                                to: 0
+                                            maxLength:
+                                                from: 240
+                                                to: null
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /v1/items
+        :   requestBody:
+                content:
+                    modified:
+                        text/plain:
+                            schema:
+                                type:
+                                    added:
+                                        - number
+                                    deleted:
+                                        - string
+                                minLength:
+                                    from: 5
+                                    to: 0
+                                maxLength:
+                                    from: 240
+                                    to: null
+

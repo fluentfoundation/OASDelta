@@ -1,0 +1,1 @@
+[{"id":"response-property-exclusive-min-set","text":"the `items/` response property's exclusiveMinimum was set to `17.00` for the response status `204`","level":1,"operation":"DELETE","operationId":"delete_owners_{ownerId}_pets","path":"/owners/{ownerId}/pets","section":"paths","fingerprint":"4b61faf87e26"}]

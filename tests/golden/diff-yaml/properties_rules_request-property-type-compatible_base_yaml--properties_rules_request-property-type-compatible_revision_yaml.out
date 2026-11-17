@@ -1,0 +1,83 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                deleted:
+                                    - application/xml
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            required:
+                                                stringsdiff:
+                                                    deleted:
+                                                        - '''single'''
+                                                        - |-
+                                                          line1
+                                                          line2
+                                            properties:
+                                                deleted:
+                                                    - '''single'''
+                                                    - |-
+                                                      line1
+                                                      line2
+                                                    - pet
+                                                modified:
+                                                    id:
+                                                        type:
+                                                            added:
+                                                                - string
+                                                            deleted:
+                                                                - object
+                                                        required:
+                                                            stringsdiff:
+                                                                deleted:
+                                                                    - tag
+                                                        properties:
+                                                            deleted:
+                                                                - "no"
+                                                                - tag
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets/{petId}
+        :   requestBody:
+                content:
+                    deleted:
+                        - application/xml
+                    modified:
+                        text/plain:
+                            schema:
+                                required:
+                                    stringsdiff:
+                                        deleted:
+                                            - '''single'''
+                                            - |-
+                                              line1
+                                              line2
+                                properties:
+                                    deleted:
+                                        - '''single'''
+                                        - |-
+                                          line1
+                                          line2
+                                        - pet
+                                    modified:
+                                        id:
+                                            type:
+                                                added:
+                                                    - string
+                                                deleted:
+                                                    - object
+                                            required:
+                                                stringsdiff:
+                                                    deleted:
+                                                        - tag
+                                            properties:
+                                                deleted:
+                                                    - "no"
+                                                    - tag
+

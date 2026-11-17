@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-property-min-length-decreased] en ./properties/rules/request-property-min-length-decreased_revision.json
+	en API POST /store/order
+		la longitud mínima de la propiedad de solicitud `anyOf[subschema #1]/C:\path` fue disminuida de `5` a `4`
+
+

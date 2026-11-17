@@ -1,0 +1,21 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /pets/{petId}
+- :warning: the `price` request property const value `%20` was added
+
+
+### GET /store/order
+- :warning: api removed without deprecation
+
+
+### PUT /store/order
+- :warning: added `subschema #1` to the response body `oneOf` list for the response status `201`
+
+
+
+
+
+

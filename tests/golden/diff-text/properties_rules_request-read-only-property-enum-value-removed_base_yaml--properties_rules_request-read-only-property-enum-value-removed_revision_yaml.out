@@ -1,0 +1,33 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+POST /owners/{ownerId}/pets
+- Responses changed
+  - Modified response: 404
+    - Headers changed
+      - Modified header: created
+        - Schema changed
+          - UniqueItems changed from false to true
+
+POST /ünïcode/ключ
+- Request body changed
+  - Content changed
+    - Modified media type: application/json; charset=utf-8
+      - Schema changed
+        - Property 'OneOf' changed
+          - Modified schema: #/components/schemas/Item
+            - Properties changed
+              - Modified property: price
+                - Properties changed
+                  - Modified property: 䯄஗Ꜵ䟐│㖵
+                    - Deleted enum values: [49]
+    - Modified media type: multipart/form-data
+      - Schema changed
+        - Description changed from '' to 'kind'
+
+

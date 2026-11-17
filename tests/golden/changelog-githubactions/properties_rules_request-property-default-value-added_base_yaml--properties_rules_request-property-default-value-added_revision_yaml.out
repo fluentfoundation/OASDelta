@@ -1,0 +1,2 @@
+::notice title=request-property-default-value-added,file=./properties/rules/request-property-default-value-added_revision.yaml,line=45,col=35::in API POST /store/order the `` request property default value `77.00` was added
+

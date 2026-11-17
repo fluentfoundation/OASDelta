@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PUT /search
+- :warning: the request's body maxProperties was decreased to `11`
+-  added the media type `application/vnd.api+json` to the request body
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

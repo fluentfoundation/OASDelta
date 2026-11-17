@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /store/order
+- :warning: for the `header` request parameter `status`, the minProperties was set to `14`
+
+
+
+
+
+

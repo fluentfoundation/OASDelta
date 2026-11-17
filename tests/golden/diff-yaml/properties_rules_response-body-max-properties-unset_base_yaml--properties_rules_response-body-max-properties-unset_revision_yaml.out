@@ -1,0 +1,53 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - array
+                                                        deleted:
+                                                            - object
+                                                    items:
+                                                        schemaAdded: true
+                                                    properties:
+                                                        deleted:
+                                                            - created
+                                                            - 첧縱ᤳ앸䧤
+                                                    maxProps:
+                                                        from: 19
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        type:
+                                            added:
+                                                - array
+                                            deleted:
+                                                - object
+                                        items:
+                                            schemaAdded: true
+                                        properties:
+                                            deleted:
+                                                - created
+                                                - 첧縱ᤳ앸䧤
+                                        maxProps:
+                                            from: 19
+                                            to: null
+

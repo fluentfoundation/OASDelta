@@ -1,0 +1,7 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-property-all-of-removed-annotation-only] en ./properties/rules/response-property-all-of-removed-annotation-only_revision.yaml
+	en API PATCH /store/order
+		`subschema #1` (solo de anotación) fue removido de la lista `allOf` de la propiedad de respuesta `items/` para el estado `201`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+

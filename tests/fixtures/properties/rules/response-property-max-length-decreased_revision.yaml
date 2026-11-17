@@ -1,0 +1,188 @@
+# Fires response-property-max-length-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            type: number
+        Owner:
+            description: "yes"
+            maximum: 857
+            nullable: true
+            type: integer
+            writeOnly: true
+        Pet:
+            items:
+                nullable: true
+                type: number
+                writeOnly: true
+            type: array
+    securitySchemes:
+        api_key:
+            in: query
+            name: kind
+            type: apiKey
+        oauth:
+            flows:
+                authorizationCode:
+                    authorizationUrl: https://auth.example.com/authorize
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: id
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        delete:
+            description: Ünïcode
+            operationId: delete_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - deprecated: true
+                  in: query
+                  name: '**bold**'
+                  schema:
+                    items:
+                        $ref: '#/components/schemas/Pet'
+                    type: array
+                - description: 鈞⨴ث
+                  in: header
+                  name: ключ
+                  schema:
+                    properties:
+                        name:
+                            description: name
+                            type: integer
+                        status:
+                            format: byte
+                            maxLength: 15
+                            type: string
+                    type: object
+                - in: cookie
+                  name: status
+                  required: false
+                  schema:
+                    properties:
+                        '`tick`':
+                            nullable: true
+                            type: integer
+                            writeOnly: true
+                        '{brace}':
+                            enum:
+                                - 2
+                                - 15
+                                - 8
+                                - 16
+                            maximum: 180
+                            nullable: true
+                            type: integer
+                        a~b:
+                            $ref: '#/components/schemas/Owner'
+                        맗욟䘼๶༃ᖳᛴ箌:
+                            default: 30
+                            maximum: 711
+                            type: integer
+                    required:
+                        - 맗욟䘼๶༃ᖳᛴ箌
+                        - '`tick`'
+                    type: object
+                  style: spaceDelimited
+            responses:
+                2XX:
+                    description: Ünïcode
+    /pets:
+        get:
+            operationId: get_pets
+            parameters:
+                - description: 縠阇仟춬韦眿쓓䆁
+                  in: query
+                  name: '>'
+                  schema:
+                    description: created
+                    enum:
+                        - -3
+                        - 18
+                        - 11
+                        - 9
+                    format: int32
+                    maximum: 788
+                    type: integer
+            responses:
+                2XX:
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    additionalProperties: false
+                                    properties:
+                                        ' ':
+                                            enum:
+                                                - ᡂ露僔ꬾ膎붫쒄
+                                                - 니띖冭䄬衩镜⎌儃
+                                                - ключ
+                                            maxLength: 76
+                                            nullable: true
+                                            pattern: ^[a-z]+$
+                                            readOnly: true
+                                            type: string
+                                        pet:
+                                            enum:
+                                                - owner
+                                                - 名前
+                                            format: date-time
+                                            nullable: true
+                                            type: string
+                                    required:
+                                        - ' '
+                                        - pet
+                                    type: object
+                                type: array
+                        multipart/form-data:
+                            schema:
+                                items:
+                                    items:
+                                        type: integer
+                                    type: array
+                                minItems: 1
+                                type: array
+                    description: "yes"
+            security:
+                - api_key: []
+                - oauth: []
+    /search:
+        patch:
+            operationId: ' '
+            parameters:
+                - in: cookie
+                  name: price
+                  required: true
+                  schema:
+                    type: integer
+                - deprecated: true
+                  explode: true
+                  in: cookie
+                  name: name
+                  schema:
+                    default: 62
+                    enum:
+                        - 19
+                        - 11
+                    type: integer
+            responses:
+                "201":
+                    description: '|'
+servers:
+    - url: https://api.example.com

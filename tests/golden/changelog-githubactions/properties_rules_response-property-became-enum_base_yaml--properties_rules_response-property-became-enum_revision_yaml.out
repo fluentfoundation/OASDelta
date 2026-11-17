@@ -1,0 +1,4 @@
+::error title=request-body-became-required,file=./properties/rules/response-property-became-enum_revision.yaml,line=73,col=17::in API PUT /search request body became required
+::notice title=response-property-became-enum,file=./properties/rules/response-property-became-enum_revision.yaml,line=19,col=29::in API PUT /search the `items/tag/0x1F` response property for the response status `2XX` was restricted to a list of enum values
+::notice title=response-property-became-enum,file=./properties/rules/response-property-became-enum_revision.yaml,line=30,col=29::in API PUT /search the `items/tag/price` response property for the response status `2XX` was restricted to a list of enum values
+

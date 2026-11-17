@@ -1,0 +1,39 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            added:
+                                cookie:
+                                    - '**bold**'
+                            deleted:
+                                query:
+                                    - '**bold**'
+        /v1/items:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            deleted:
+                                query:
+                                    - 䔫䪐뫑襖
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets/{petId}
+        :   parameters:
+                added:
+                    cookie:
+                        - '**bold**'
+                deleted:
+                    query:
+                        - '**bold**'
+        ?   method: GET
+            path: /v1/items
+        :   parameters:
+                deleted:
+                    query:
+                        - 䔫䪐뫑襖
+

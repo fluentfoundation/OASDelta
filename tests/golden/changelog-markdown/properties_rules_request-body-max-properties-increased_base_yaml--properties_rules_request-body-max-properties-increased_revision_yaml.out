@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PUT /store/order
+-  the request's body maxProperties was increased from `11` to `13`
+
+
+
+
+
+

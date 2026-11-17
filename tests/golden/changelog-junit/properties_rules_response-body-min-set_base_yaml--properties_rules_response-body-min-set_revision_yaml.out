@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body `type` changed from `object` to `integer` for status `204`</failure>
+    </testcase>
+    <testcase name="response-body-min-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body min was set to `4.00`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

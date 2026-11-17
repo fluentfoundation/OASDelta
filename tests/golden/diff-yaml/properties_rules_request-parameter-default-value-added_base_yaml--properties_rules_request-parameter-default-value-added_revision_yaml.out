@@ -1,0 +1,49 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    ⵃ㗩客೺:
+                                        schema:
+                                            type:
+                                                added:
+                                                    - "null"
+        /v1/items:
+            operations:
+                modified:
+                    PUT:
+                        parameters:
+                            modified:
+                                query:
+                                    created:
+                                        schema:
+                                            default:
+                                                from: null
+                                                to: 731
+endpoints:
+    modified:
+        ?   method: GET
+            path: /owners/{ownerId}/pets
+        :   parameters:
+                modified:
+                    query:
+                        ⵃ㗩客೺:
+                            schema:
+                                type:
+                                    added:
+                                        - "null"
+        ?   method: PUT
+            path: /v1/items
+        :   parameters:
+                modified:
+                    query:
+                        created:
+                            schema:
+                                default:
+                                    from: null
+                                    to: 731
+

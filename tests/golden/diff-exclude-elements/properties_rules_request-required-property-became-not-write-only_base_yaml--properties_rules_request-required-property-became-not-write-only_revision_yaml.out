@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/items/{id}.json":{"operations":{"modified":{"PUT":{"requestBody":{"content":{"modified":{"application/xml":{"schema":{"properties":{"modified":{"owner":{"properties":{"modified":{"status":{"anyOf":{"added":[{"index":0},{"index":1}]},"type":{"deleted":["integer"]},"writeOnly":{"from":true,"to":false},"min":{"from":2,"to":null}}}}}}}}}}}}}}}}}}}

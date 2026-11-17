@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/v1/items":{"operations":{"modified":{"PUT":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"default":{"from":null,"to":"---"}}}}}}}}}}}}}

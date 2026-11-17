@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+DELETE /items/{id}.json
+- Modified header param: tag
+  - Schema changed
+    - Property 'OneOf' changed
+      - Modified schema: subschema #2
+        - Required changed
+          - New required property: kind
+        - Properties changed
+          - New property: kind
+
+

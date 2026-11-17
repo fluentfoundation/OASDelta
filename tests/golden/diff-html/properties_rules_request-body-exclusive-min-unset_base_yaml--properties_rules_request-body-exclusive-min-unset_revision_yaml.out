@@ -1,0 +1,37 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PATCH /pets/{petId}</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Deleted media type: multipart/form-data</li>
+<li>Modified media type: application/vnd.api+json
+<ul>
+<li>Name changed from 'application/json; charset=utf-8' to 'application/vnd.api+json'</li>
+<li>Schema changed
+<ul>
+<li>Type changed from 'number' to 'object'</li>
+<li>Format changed from 'float' to ''</li>
+<li>ExclusiveMin changed from -8 to null</li>
+<li>Min changed from -5 to null</li>
+<li>Properties changed
+<ul>
+<li>New property: ---</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

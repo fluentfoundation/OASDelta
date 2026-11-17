@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            ключ:
+                                                                writeOnly:
+                                                                    from: true
+                                                                    to: false
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /pets/{petId}
+        :   responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                ключ:
+                                                    writeOnly:
+                                                        from: true
+                                                        to: false
+

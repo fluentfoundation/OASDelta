@@ -1,0 +1,2 @@
+::notice title=request-body-min-properties-unset,file=./properties/rules/request-body-min-properties-unset_revision.json::in API POST /pets/{petId} the request's body minProperties was unset from `2`
+

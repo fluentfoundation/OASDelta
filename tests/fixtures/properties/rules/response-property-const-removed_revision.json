@@ -1,0 +1,346 @@
+{
+  "components": {
+    "schemas": {
+      "Item": {
+        "deprecated": true,
+        "type": "boolean"
+      }
+    },
+    "securitySchemes": {
+      "api_key": {
+        "in": "query",
+        "name": "tag",
+        "type": "apiKey"
+      }
+    }
+  },
+  "info": {
+    "title": "name",
+    "version": "1.0.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/store/order": {
+      "delete": {
+        "operationId": "delete_store_order",
+        "parameters": [
+          {
+            "explode": false,
+            "in": "query",
+            "name": "price",
+            "schema": {
+              "default": 88,
+              "deprecated": true,
+              "description": "id",
+              "format": "int32",
+              "maximum": 869,
+              "readOnly": true,
+              "type": "integer"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "pet",
+            "schema": {
+              "format": "date",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Ünïcode",
+                  "type": "integer"
+                }
+              }
+            },
+            "description": "status",
+            "headers": {
+              "#hash": {
+                "schema": {
+                  "const": "id",
+                  "type": "string"
+                }
+              },
+              "ދᯚ䀁": {
+                "schema": {
+                  "description": "pet",
+                  "format": "date",
+                  "maxLength": 179,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "operationId": "patch_store_order",
+        "parameters": [
+          {
+            "description": "名前",
+            "in": "header",
+            "name": "a\r\nb",
+            "required": true,
+            "schema": {
+              "properties": {
+                "\u003e": {
+                  "deprecated": true,
+                  "enum": [
+                    "tag"
+                  ],
+                  "maxLength": 98,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "\u003e"
+              ],
+              "type": "object",
+              "x-extensible-enum": [
+                "name"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "text/plain": {
+              "schema": {
+                "default": "owner",
+                "description": "kind",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "maxProperties": 8,
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "owner": {
+                      "properties": {
+                        "名前": {
+                          "exclusiveMaximum": 1321,
+                          "multipleOf": 10,
+                          "type": "number"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "price": {
+                      "default": true,
+                      "description": "䎺ᙎ䣢셿ᆯꆬ㽠",
+                      "type": "boolean",
+                      "writeOnly": true
+                    },
+                    "Ünïcode": {
+                      "allOf": [
+                        {
+                          "format": "uuid",
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        {
+                          "default": 7,
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "owner",
+                    "price"
+                  ],
+                  "type": "object"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            },
+            "description": "|",
+            "headers": {
+              "name": {
+                "required": true,
+                "schema": {
+                  "default": -4,
+                  "enum": [
+                    81,
+                    -77.5
+                  ],
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "2XX": {
+            "description": "㢛綋驥ᒠ悉",
+            "headers": {
+              "trailing ": {
+                "schema": {
+                  "enum": [
+                    5,
+                    19,
+                    9
+                  ],
+                  "exclusiveMinimum": -3,
+                  "type": "integer"
+                }
+              },
+              "Ünïcode": {
+                "schema": {
+                  "format": "custom",
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "kind"
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "status",
+            "schema": {
+              "oneOf": [
+                {
+                  "exclusiveMinimum": -2,
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "trailing ",
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    35
+                  ],
+                  "minimum": 5,
+                  "type": "number"
+                },
+                {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                {
+                  "minimum": 1,
+                  "multipleOf": 2,
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              ],
+              "discriminator": {
+                "mapping": {
+                  "a": "#/components/schemas/Item"
+                },
+                "propertyName": "ключ"
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset=utf-8": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "$ref": "#/components/schemas/Item"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "description": "ключ",
+                  "properties": {
+                    "旰屈ⷪ䄅誯䙒ᵢ": {
+                      "example": "tag",
+                      "format": "byte",
+                      "minLength": 1,
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "\u0026anchor"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    }
+  },
+  "security": [
+    {
+      "api_key": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://api.example.com/v2"
+    }
+  ]
+}

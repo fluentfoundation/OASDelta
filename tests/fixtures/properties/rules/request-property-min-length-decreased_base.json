@@ -1,0 +1,282 @@
+{
+  "components": {
+    "schemas": {
+      "Owner": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/Owner"
+          },
+          {
+            "items": {
+              "enum": [
+                "名前",
+                "id",
+                "ꉙ꜈哻⩮믫奵떲",
+                "C:\\path"
+              ],
+              "minLength": 0,
+              "type": [
+                "string",
+                "null"
+              ],
+              "writeOnly": true
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        ]
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "bearerFormat": "JWT",
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "title": "created",
+    "version": "2.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/pets/{petId}": {
+      "get": {
+        "operationId": "get_pets_{petId}",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "petId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "label"
+          },
+          {
+            "in": "header",
+            "name": "ключ",
+            "schema": {
+              "enum": [
+                80,
+                99
+              ],
+              "maximum": 313,
+              "minimum": -1,
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "style": "deepObject"
+          },
+          {
+            "in": "header",
+            "name": "created",
+            "schema": {
+              "$ref": "#/components/schemas/Owner"
+            }
+          },
+          {
+            "deprecated": true,
+            "in": "query",
+            "name": "名前",
+            "schema": {
+              "allOf": [
+                {
+                  "minLength": 4,
+                  "type": "string",
+                  "writeOnly": true
+                },
+                {
+                  "deprecated": true,
+                  "type": "integer"
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "format": "int64",
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "pet"
+          },
+          "204": {
+            "description": "㘫"
+          }
+        }
+      }
+    },
+    "/store/order": {
+      "delete": {
+        "operationId": "delete_store_order",
+        "parameters": [
+          {
+            "description": "名前",
+            "in": "query",
+            "name": "owner",
+            "schema": {
+              "type": "object"
+            },
+            "style": "matrix"
+          },
+          {
+            "in": "cookie",
+            "name": "...",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Owner"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "items": {
+                    "minProperties": 2,
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": " nbsp"
+          }
+        },
+        "tags": [
+          "tag",
+          "status"
+        ]
+      },
+      "post": {
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "kind",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "spaceDelimited"
+          },
+          {
+            "in": "header",
+            "name": " ",
+            "schema": {
+              "description": "툑⇷",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/xml": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "description": "tag",
+                    "properties": {
+                      "\u003e": {
+                        "default": true,
+                        "description": "pet",
+                        "type": "boolean"
+                      },
+                      "C:\\path": {
+                        "description": "name",
+                        "minLength": 5,
+                        "type": "string"
+                      },
+                      "ключ": {
+                        "format": "custom",
+                        "type": "boolean"
+                      },
+                      "曦伹": {
+                        "enum": [
+                          -65.5
+                        ],
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "ключ"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "description": "名前",
+                    "enum": [
+                      "#hash",
+                      "a: b",
+                      " "
+                    ],
+                    "format": "date-time",
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "404": {
+            "description": "%20"
+          },
+          "default": {
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "format": "float",
+                  "maximum": 98,
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": " nbsp"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    }
+  },
+  "security": [
+    {
+      "bearer": []
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+1 changes: 1 error, 0 warning, 0 info
+error at ./properties/rules/request-body-max-items-decreased_revision.json, in API POST /store/order the request's body maxItems was decreased to `5` [request-body-max-items-decreased]. 
+
+

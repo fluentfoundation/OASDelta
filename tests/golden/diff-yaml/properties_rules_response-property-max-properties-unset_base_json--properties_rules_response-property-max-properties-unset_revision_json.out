@@ -1,0 +1,51 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            pet:
+                                                                allOf:
+                                                                    modified:
+                                                                        - base:
+                                                                            index: 0
+                                                                          revision:
+                                                                            index: 0
+                                                                          diff:
+                                                                            maxProps:
+                                                                                from: 13
+                                                                                to: null
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /pets
+        :   responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                pet:
+                                                    allOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 0
+                                                              revision:
+                                                                index: 0
+                                                              diff:
+                                                                maxProps:
+                                                                    from: 13
+                                                                    to: null
+

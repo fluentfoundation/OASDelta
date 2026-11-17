@@ -1,0 +1,17 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /ünïcode/ключ
+-  the response's body multipleOf was specialized from `5.00` to `10.00`
+
+
+### PUT /ünïcode/ключ
+-  the optional response header `x-added` removed for the status `200`
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+::error title=request-parameter-max-properties-set,file=./properties/rules/request-parameter-max-properties-set_revision.yaml,line=30,col=21::in API GET /v1/items for the `cookie` request parameter `ключ`, the maxProperties was set to `1`
+::error title=request-parameter-type-changed,file=./properties/rules/request-parameter-max-properties-set_revision.yaml,line=31,col=21::in API GET /v1/items for the `cookie` request parameter `ключ`, the `type` was changed from `integer` to `object`
+

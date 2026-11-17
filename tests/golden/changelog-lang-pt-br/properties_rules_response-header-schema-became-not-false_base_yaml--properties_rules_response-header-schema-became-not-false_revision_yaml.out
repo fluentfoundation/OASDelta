@@ -1,0 +1,6 @@
+1 alterações: 1 error, 0 warning, 0 info
+error	[response-header-schema-became-not-false] em ./properties/rules/response-header-schema-became-not-false_revision.yaml
+	em API PUT /owners/{ownerId}/pets
+		o esquema do cabeçalho de resposta `...` não é mais `false` para o status `default` e volta a permitir valores
+
+

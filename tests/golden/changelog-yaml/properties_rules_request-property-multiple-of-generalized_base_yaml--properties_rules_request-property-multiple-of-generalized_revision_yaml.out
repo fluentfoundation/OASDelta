@@ -1,0 +1,18 @@
+- id: request-property-multiple-of-generalized
+  text: 'the `‮abc/anyOf[subschema #2]/` request property''s multipleOf was generalized from `2.00` to `1.00`'
+  comment: This change is not breaking because the old multipleOf is an integer multiple of the new one, so every previously valid value remains valid.
+  level: 1
+  operation: PUT
+  operationId: put_v1_items
+  path: /v1/items
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-property-multiple-of-generalized_base.yaml
+    line: 154
+    column: 43
+  revisionSource:
+    file: ./properties/rules/request-property-multiple-of-generalized_revision.yaml
+    line: 154
+    column: 43
+  fingerprint: af80b07dc6ae
+

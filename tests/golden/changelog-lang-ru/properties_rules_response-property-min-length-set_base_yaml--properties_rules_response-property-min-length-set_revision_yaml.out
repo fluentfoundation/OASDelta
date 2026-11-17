@@ -1,0 +1,18 @@
+4 изменений: 1 error, 0 warning, 3 info
+error	[response-property-type-changed] в ./properties/rules/response-property-min-length-set_revision.yaml
+	в API POST /owners/{ownerId}/pets
+		у свойства ответа `items/` `type` изменён с `boolean` на `string` для статуса `400`
+
+info	[response-property-default-value-removed] в ./properties/rules/response-property-min-length-set_revision.yaml
+	в API POST /owners/{ownerId}/pets
+		удалено значение по умолчанию `` для свойства ответа `false` для статуса `400`
+
+info	[response-property-min-length-set] в ./properties/rules/response-property-min-length-set_revision.yaml
+	в API POST /owners/{ownerId}/pets
+		у поля ответа `items/` задано значение minLength в `4`, для ответа со статусом `400`
+
+info	[response-property-pattern-added] в ./properties/rules/response-property-min-length-set_revision.yaml
+	в API POST /owners/{ownerId}/pets
+		у свойства `items/` для ответа со статусом `(` добавлен паттерн `400`
+
+

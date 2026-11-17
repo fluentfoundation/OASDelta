@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "404":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    maxLength:
+                                                        from: 96
+                                                        to: 95
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "404":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        maxLength:
+                                            from: 96
+                                            to: 95
+

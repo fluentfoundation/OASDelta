@@ -1,0 +1,169 @@
+# Fires response-body-min-properties-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            items:
+                description: '---'
+                multipleOf: 5
+                type: integer
+            type: array
+            uniqueItems: true
+        Pet:
+            description: kind
+            maxProperties: 11
+            properties:
+                朾:
+                    $ref: '#/components/schemas/Error'
+            type: object
+info:
+    title: created
+    version: v1
+openapi: 3.1.0
+paths:
+    /v1/items:
+        get:
+            operationId: get_v1_items
+            responses:
+                2XX:
+                    description: owner
+    /ünïcode/ключ:
+        delete:
+            operationId: delete_ünïcode_ключ
+            responses:
+                "200":
+                    description: <b>&amp;
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                example: name
+                                type: string
+                        multipart/form-data:
+                            schema:
+                                properties:
+                                    price:
+                                        default: "null"
+                                        description: created
+                                        format: date
+                                        type:
+                                            - string
+                                            - "null"
+                                    tag:
+                                        properties:
+                                            "~":
+                                                format: email
+                                                type:
+                                                    - string
+                                                    - "null"
+                                            Ünïcode:
+                                                format: binary
+                                                type:
+                                                    - string
+                                                    - "null"
+                                            铹ᨓ⯉猙ᢇ崯碮:
+                                                $ref: '#/components/schemas/Pet'
+                                        required:
+                                            - Ünïcode
+                                            - 铹ᨓ⯉猙ᢇ崯碮
+                                        type: object
+                                    名前:
+                                        anyOf:
+                                            - format: double
+                                              type:
+                                                - number
+                                                - "null"
+                                            - default: 71
+                                              enum:
+                                                - 54
+                                              readOnly: true
+                                              type:
+                                                - number
+                                                - "null"
+                                            - default: -9223372036854775808
+                                              format: int64
+                                              type: integer
+                                        discriminator:
+                                            mapping:
+                                                a: '#/components/schemas/Pet'
+                                            propertyName: 'a: b'
+                                required:
+                                    - tag
+                                    - 名前
+                                type: object
+                    description: '!tag'
+            x-stability-level: stable
+        get:
+            operationId: get_ünïcode_ключ
+            parameters:
+                - in: cookie
+                  name: pet
+                  schema:
+                    type: object
+                  style: deepObject
+            responses:
+                "400":
+                    content:
+                        '*/*':
+                            schema:
+                                type:
+                                    - string
+                                    - "null"
+                        application/json; charset=utf-8:
+                            schema:
+                                minProperties: 4
+                                properties:
+                                    a/b:
+                                        deprecated: true
+                                        format: custom
+                                        type:
+                                            - boolean
+                                            - "null"
+                                    a~b:
+                                        deprecated: true
+                                        type: number
+                                required:
+                                    - a~b
+                                type: object
+                    description: "no"
+        put:
+            operationId: '"quoted"'
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            type: number
+            responses:
+                "200":
+                    description: '&anchor'
+                "201":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                minProperties: 0
+                                properties:
+                                    '**bold**':
+                                        deprecated: true
+                                        properties:
+                                            '**bold**':
+                                                $ref: '#/components/schemas/Error'
+                                        required:
+                                            - '**bold**'
+                                        type: object
+                                    '*star':
+                                        format: custom
+                                        type: boolean
+                                    畍:
+                                        additionalProperties:
+                                            type: string
+                                        description: ключ
+                                        type: object
+                                required:
+                                    - '**bold**'
+                                type: object
+                    description: 杷ᢈ浛↱撮
+                default:
+                    description: name
+            tags:
+                - status
+tags:
+    - name: created

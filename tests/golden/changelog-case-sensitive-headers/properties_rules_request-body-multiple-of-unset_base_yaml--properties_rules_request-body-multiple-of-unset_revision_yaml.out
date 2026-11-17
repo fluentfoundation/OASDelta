@@ -1,0 +1,1 @@
+[{"id":"request-body-multiple-of-unset","text":"the request's body multipleOf was unset from `5.00`","level":1,"operation":"PATCH","operationId":"ключ","path":"/owners/{ownerId}/pets","section":"paths","baseSource":{"file":"./properties/rules/request-body-multiple-of-unset_base.yaml","line":64,"column":29},"fingerprint":"f455190d1f2a"}]

@@ -1,0 +1,14 @@
+3 alterações: 1 error, 0 warning, 2 info
+error	[request-parameter-property-type-specialized] em ./properties/rules/response-property-min-items-set_revision.yaml
+	em API DELETE /pets
+		no parâmetro de requisição do tipo `query` e nome `tag`, o `format` da propriedade `items/` foi restringido de `none` para `email`
+
+info	[response-body-type-specialized] em ./properties/rules/response-property-min-items-set_revision.yaml
+	em API DELETE /pets
+		o `format` do corpo da resposta foi restringido de `none` para `email` para o status `default`
+
+info	[response-property-min-items-set] em ./properties/rules/response-property-min-items-set_revision.yaml
+	em API DELETE /pets
+		o valor minItems da propriedade de resposta `anyOf[subschema #2]/0x1F` foi definido como `10` para o status `default`
+
+

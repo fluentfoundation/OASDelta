@@ -1,0 +1,10 @@
+2 изменений: 2 error, 0 warning, 0 info
+error	[new-required-request-header-property] в ./properties/rules/new-required-request-header-property_revision.json
+	в API DELETE /items/{id}.json
+		в заголовке запроса `tag` добавлено новое обязательное поле `oneOf[subschema #2]/kind`
+
+error	[request-header-property-became-required] в ./properties/rules/new-required-request-header-property_revision.json
+	в API DELETE /items/{id}.json
+		в заголовке запроса `tag` поле `oneOf[subschema #2]/kind` стало обязательным
+
+

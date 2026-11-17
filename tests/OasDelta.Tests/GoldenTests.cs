@@ -130,15 +130,27 @@ public partial class GoldenTests
     [Fact]
     public void RuleCoverageDoesNotDrop()
     {
-        // every rule id the checker defines (the constants of Ids), the same set tools/check_golden.sh counts
-        var all = typeof(Ids).GetFields(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)
-            .Where(f => f.IsLiteral).Select(f => (string)f.GetRawConstantValue()!).ToHashSet(StringComparer.Ordinal);
+        // every rule the checker has, the generated bound rules too: the set tools/check_golden.sh counts and the
+        // coverage page (docs/guide/coverage.md) lists
+        var all = Rules.All().Select(r => r.Id).ToHashSet(StringComparer.Ordinal);
         var seen = new HashSet<string>(StringComparer.Ordinal);
         foreach (var file in Directory.EnumerateFiles(Golden, "*.out", SearchOption.AllDirectories))
             foreach (Match m in RuleIdInJson().Matches(File.ReadAllText(file)))
                 if (all.Contains(m.Groups[1].Value)) seen.Add(m.Groups[1].Value);
         int floor = int.Parse(File.ReadAllText(Path.Combine(Root, "tests", "rule-coverage-floor.txt")).Trim());
         Assert.True(seen.Count >= floor, $"rule coverage dropped: {seen.Count} of {all.Count} rules fire in the goldens, floor is {floor}");
+    }
+
+    /// <summary>The rule list (`checks changelog -f json`) is oasdiff's, byte for byte. The coverage page reads the
+    /// golden copy, so it lists exactly the rules oasdiff has.</summary>
+    [Fact]
+    public void CheckerRulesMatchOasdiff()
+    {
+        var stdout = new StringWriter { NewLine = "\n" };
+        int code = OasDelta.Cli.Cli.Run(["checks", "changelog", "-f", "json"], stdout, new StringWriter());
+        Assert.Equal(0, code);
+        var expected = File.ReadAllText(Path.Combine(Golden, "checks-changelog.json"), Encoding.UTF8);
+        Assert.True(expected == stdout.ToString(), "checks changelog -f json differs from tests/golden/checks-changelog.json" + FirstDifference(expected, stdout.ToString()));
     }
 
     /// <summary>The first differing line, shortened, so a failure says where it is without dumping whole outputs.</summary>

@@ -1,0 +1,83 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            modified:
+                                query:
+                                    '| table |':
+                                        schema:
+                                            discriminatorDiff:
+                                                added: true
+        /store/order:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/xml:
+                                        schema:
+                                            uniqueItems:
+                                                from: false
+                                                to: true
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - array
+                                                        deleted:
+                                                            - "null"
+                                                            - number
+                                                    description:
+                                                        from: "null"
+                                                        to: ""
+                                                    items:
+                                                        schemaAdded: true
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   parameters:
+                modified:
+                    query:
+                        '| table |':
+                            schema:
+                                discriminatorDiff:
+                                    added: true
+        ?   method: POST
+            path: /store/order
+        :   requestBody:
+                content:
+                    modified:
+                        application/xml:
+                            schema:
+                                uniqueItems:
+                                    from: false
+                                    to: true
+            responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        type:
+                                            added:
+                                                - array
+                                            deleted:
+                                                - "null"
+                                                - number
+                                        description:
+                                            from: "null"
+                                            to: ""
+                                        items:
+                                            schemaAdded: true
+

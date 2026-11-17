@@ -1,0 +1,1 @@
+{"paths":{"added":["/b"],"modified":{"/a":{"ref":{"from":"","to":"#/paths/~1b"},"operations":{"deleted":["GET"]}},"/self":{"ref":{"from":"","to":"#/paths/~1self"},"operations":{"deleted":["GET"]}}}},"webhooks":{"added":["w2"],"modified":{"w1":{"ref":{"from":"","to":"#/webhooks/w2"},"operations":{"deleted":["POST"]}}}}}

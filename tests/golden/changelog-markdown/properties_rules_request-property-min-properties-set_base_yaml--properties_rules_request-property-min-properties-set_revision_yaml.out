@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /v1/items
+- :warning: the `items/items/` request property's minProperties was set to `4`
+
+
+
+
+
+

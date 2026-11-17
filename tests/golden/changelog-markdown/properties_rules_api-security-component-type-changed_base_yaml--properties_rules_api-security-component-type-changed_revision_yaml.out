@@ -1,0 +1,10 @@
+# API Changelog v1 vs. v1
+
+
+
+## Components
+- :warning: the component security scheme `bearer` type changed from `http` to ``
+
+
+
+

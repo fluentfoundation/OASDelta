@@ -1,0 +1,22 @@
+4 изменений: 0 error, 0 warning, 4 info
+info	[response-property-all-of-added] в ./properties/rules/response-property-default-value-removed_revision.yaml
+	в API PATCH /ünïcode/ключ
+		добавлено `subschema #1, subschema #2` в список `allOf` свойства ответа `created/items/` для статуса ответа `201`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[response-property-became-not-nullable] в ./properties/rules/response-property-default-value-removed_revision.yaml
+	в API PATCH /ünïcode/ключ
+		поле ответа `created/items/` стало необнуляемым для ответа со статусом `201`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[response-property-default-value-removed] в ./properties/rules/response-property-default-value-removed_revision.yaml
+	в API PATCH /ünïcode/ключ
+		удалено значение по умолчанию `` для свойства ответа `pet` для статуса `201`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[response-property-type-specialized] в ./properties/rules/response-property-default-value-removed_revision.yaml
+	в API PATCH /ünïcode/ключ
+		у свойства ответа `created/items/` `type` сужен с `string` до `any` для статуса `201`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

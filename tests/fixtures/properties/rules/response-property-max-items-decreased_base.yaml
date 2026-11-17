@@ -1,0 +1,292 @@
+# Fires response-property-max-items-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            $ref: '#/components/schemas/Pet'
+        Owner:
+            $ref: '#/components/schemas/Pet'
+        Pet:
+            nullable: true
+            type: string
+    securitySchemes:
+        api_key:
+            in: query
+            name: created
+            type: apiKey
+        oauth:
+            flows:
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: owner
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        delete:
+            operationId: delete_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: header
+                  name: owner
+                  required: true
+                  schema:
+                    $ref: '#/components/schemas/Item'
+                  style: form
+                - in: query
+                  name: Ünïcode
+                  schema:
+                    type: object
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                additionalProperties:
+                                    type: string
+                                properties:
+                                    '''single''':
+                                        type: object
+                                    "~":
+                                        description: status
+                                        enum:
+                                            - 9
+                                            - -9223372036854775808
+                                            - 1.23456789125e+08
+                                        minimum: 10
+                                        type: number
+                                    ключ:
+                                        description: "no"
+                                        format: int64
+                                        readOnly: true
+                                        type: integer
+                                required:
+                                    - '''single'''
+                                type: object
+                    description: 䯮⩑촕젂觥筯ⰰ뜃
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                description: id
+                                format: date
+                                maxLength: 16
+                                nullable: true
+                                type: string
+                        text/plain:
+                            schema:
+                                additionalProperties: false
+                                properties:
+                                    콨ϩ:
+                                        example: ␽롩
+                                        format: custom
+                                        type: boolean
+                                    횜⸈:
+                                        description: kind
+                                        enum:
+                                            - 1
+                                            - 18
+                                            - 0
+                                        format: int32
+                                        maximum: 787
+                                        minimum: 4
+                                        type: integer
+                                type: object
+                    description: pet
+    /search:
+        delete:
+            operationId: tag
+            responses:
+                default:
+                    description: Ꞧ
+            tags:
+                - pet
+        get:
+            operationId: kind
+            parameters:
+                - in: header
+                  name: name
+                  required: true
+                  schema:
+                    type: boolean
+                    writeOnly: true
+                  style: simple
+                - in: header
+                  name: 왴㑱膅妇
+                  schema:
+                    items:
+                        nullable: true
+                        readOnly: true
+                        type: integer
+                    type: array
+            responses:
+                "204":
+                    description: id
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                enum:
+                                    - 9223372036854775807
+                                    - 47.25
+                                    - 19
+                                maximum: 872
+                                type: number
+                    description: name
+            security: []
+            x-stability-level: beta
+        patch:
+            operationId: patch_search
+            parameters:
+                - in: header
+                  name: owner
+                  required: false
+                  schema:
+                    description: created
+                    format: int64
+                    maximum: 430
+                    multipleOf: 10
+                    type: integer
+                - in: cookie
+                  name: "0x1F"
+                  schema:
+                    type: integer
+                - description: ключ
+                  in: header
+                  name: Ünïcode
+                  required: true
+                  schema:
+                    items:
+                        minimum: 4
+                        nullable: true
+                        type: integer
+                    type: array
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            anyOf:
+                                - items:
+                                    type: number
+                                  type: array
+                                - type: boolean
+                                - enum:
+                                    - -93.5
+                                    - 19
+                                    - -2.5
+                                  nullable: true
+                                  type: number
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    type: integer
+                                type: array
+                    description: name
+                "204":
+                    content:
+                        '*/*':
+                            schema:
+                                type: object
+                                x-extensible-enum:
+                                    - 횮ἤ
+                                    - '-'
+                        application/json; charset=utf-8:
+                            schema:
+                                properties:
+                                    '%20':
+                                        items:
+                                            nullable: true
+                                            type: number
+                                        minItems: 3
+                                        type: array
+                                    created:
+                                        description: "0x1F"
+                                        properties:
+                                            "x\ty":
+                                                enum:
+                                                    - -1
+                                                    - 17
+                                                maximum: 559
+                                                minimum: 9
+                                                nullable: true
+                                                type: integer
+                                        required:
+                                            - "x\ty"
+                                        type: object
+                                    pet:
+                                        items:
+                                            maximum: 266
+                                            multipleOf: 10
+                                            type: integer
+                                            writeOnly: true
+                                        maxItems: 67
+                                        type: array
+                                    tag:
+                                        description: ключ
+                                        properties:
+                                            tag:
+                                                format: password
+                                                type: string
+                                        required:
+                                            - tag
+                                        type: object
+                                required:
+                                    - created
+                                    - '%20'
+                                type: object
+                    description: created
+    /v1/items:
+        get:
+            description: created
+            parameters:
+                - description: "a\r\nb"
+                  in: cookie
+                  name: owner
+                  required: false
+                  schema:
+                    default: a~b
+                    type: string
+            responses:
+                "201":
+                    content:
+                        '*/*':
+                            schema:
+                                $ref: '#/components/schemas/Owner'
+                    description: '!tag'
+                "400":
+                    description: '''single'''
+    /ünïcode/ключ:
+        get:
+            operationId: get_ünïcode_ключ
+            responses:
+                default:
+                    description: 名前
+                    headers:
+                        '*star':
+                            schema:
+                                default: id
+                                nullable: true
+                                type: string
+                                writeOnly: true
+                        㵲梀䇜:
+                            schema:
+                                description: a/b
+                                format: custom
+                                nullable: true
+                                type: boolean
+            summary: 名前
+            tags:
+                - id

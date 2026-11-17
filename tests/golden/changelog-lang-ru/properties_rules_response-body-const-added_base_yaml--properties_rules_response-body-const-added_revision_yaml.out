@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-body-const-added] в ./properties/rules/response-body-const-added_revision.yaml
+	в API GET /v1/items
+		тело ответа `application/vnd.api+json` получило значение const `kind` для статуса `500`
+
+

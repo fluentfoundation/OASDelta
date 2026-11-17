@@ -1,0 +1,18 @@
+4 изменений: 0 error, 0 warning, 4 info
+info	[request-property-default-value-removed] в ./properties/rules/request-property-default-value-removed_revision.yaml
+	в API POST /pets
+		удалено значение по умолчанию `` для свойства запроса `9007199254740992.00`
+
+info	[request-property-min-unset] в ./properties/rules/request-property-default-value-removed_revision.yaml
+	в API POST /pets
+		значение min у поля запроса `status/oneOf[subschema #3]/` удалено, предыдущее значение - `7.00`
+
+info	[request-property-reactivated] в ./properties/rules/request-property-default-value-removed_revision.yaml
+	в API POST /pets
+		поле запроса `status/oneOf[subschema #3]/` реактивировано
+
+info	[request-property-type-generalized] в ./properties/rules/request-property-default-value-removed_revision.yaml
+	в API POST /pets
+		у поля запроса `status/oneOf[subschema #3]/` `type/format` расширен с `integer, null/int64` до `any`
+
+

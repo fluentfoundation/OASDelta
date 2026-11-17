@@ -1,0 +1,5 @@
+::error title=response-body-min-properties-unset,file=./properties/rules/response-body-min-properties-unset_revision.yaml::in API PUT /store/order the response's body minProperties was unset from `1`
+::error title=response-body-type-changed,file=./properties/rules/response-body-min-properties-unset_revision.yaml,line=126,col=33::in API PUT /store/order the response's body `type` changed from `object` to `string` for status `400`
+::notice title=response-optional-property-removed,file=./properties/rules/response-body-min-properties-unset_revision.yaml::in API PUT /store/order removed the optional property `created` from the response with the `400` status
+::notice title=response-optional-property-removed,file=./properties/rules/response-body-min-properties-unset_revision.yaml::in API PUT /store/order removed the optional property `empty` from the response with the `400` status
+

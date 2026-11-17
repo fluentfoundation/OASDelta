@@ -1,0 +1,51 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    anyOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 1
+                                                              revision:
+                                                                index: 1
+                                                              diff:
+                                                                properties:
+                                                                    modified:
+                                                                        a~b:
+                                                                            minProps:
+                                                                                from: 0
+                                                                                to: 14
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /owners/{ownerId}/pets
+        :   responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        anyOf:
+                                            modified:
+                                                - base:
+                                                    index: 1
+                                                  revision:
+                                                    index: 1
+                                                  diff:
+                                                    properties:
+                                                        modified:
+                                                            a~b:
+                                                                minProps:
+                                                                    from: 0
+                                                                    to: 14
+

@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "201":
+                                    headers:
+                                        modified:
+                                            ꣧ਏ哪᷸∄肱瘝ㆺ:
+                                                schema:
+                                                    maxLength:
+                                                        from: 135
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /search
+        :   responses:
+                modified:
+                    "201":
+                        headers:
+                            modified:
+                                ꣧ਏ哪᷸∄肱瘝ㆺ:
+                                    schema:
+                                        maxLength:
+                                            from: 135
+                                            to: null
+

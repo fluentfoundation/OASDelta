@@ -1,0 +1,30 @@
+7 изменений: 7 error, 0 warning, 0 info
+error	[api-deprecated-sunset-parse] в ./properties/lifecycle_endpoints_revision.yaml
+	в API GET /deprecated-bad-sunset
+		не удалось проанализировать дату заката: `sunset date doesn't conform with RFC3339: not a date`
+
+error	[api-removed-before-sunset] в ./properties/lifecycle_endpoints_base.yaml
+	в API GET /removed-endpoint
+		API удалёг до даты sunset `2099-12-31`
+
+error	[api-path-removed-before-sunset] в ./properties/lifecycle_endpoints_base.yaml
+	в API GET /removed-path
+		API path удалён до даты sunset `2099-12-31`
+
+error	[api-path-sunset-parse] в ./properties/lifecycle_endpoints_base.yaml
+	в API GET /removed-path-bad-sunset
+		не удалось проанализировать дату заката: `sunset date doesn't conform with RFC3339: not a date`
+
+error	[api-invalid-stability-level] в ./properties/lifecycle_endpoints_revision.yaml
+	в API GET /stability
+		не удалось разобрать уровень стабильности: `value is not one of draft, alpha, beta or stable: "experimental-ish"`
+
+error	[sunset-deleted] в ./properties/lifecycle_endpoints_revision.yaml
+	в API GET /sunset-deleted
+		удалена дата sunset date у API, но сохранён deprecated=true
+
+error	[api-sunset-date-changed-too-small] в ./properties/lifecycle_endpoints_revision.yaml
+	в API GET /sunset-earlier
+		дата sunset у API изменена на более раннюю с `2099-12-31` на `2020-01-01`, новая дата sunset должна быть либо не раньше `2099-12-31`, либо, как минимум, `0` дней от текущего дня
+
+

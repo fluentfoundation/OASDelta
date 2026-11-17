@@ -1,0 +1,114 @@
+# Fires response-body-max-items-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            format: int64
+            multipleOf: 5
+            type: integer
+            writeOnly: true
+    securitySchemes:
+        oauth:
+            flows:
+                clientCredentials:
+                    refreshUrl: https://auth.example.com/refresh
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: owner
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /pets:
+        patch:
+            operationId: _under_
+            parameters:
+                - deprecated: true
+                  in: query
+                  name: "~"
+                  required: false
+                  schema:
+                    default: false
+                    description: owner
+                    format: custom
+                    type: boolean
+                - in: header
+                  name: "0x1F"
+                  schema:
+                    type:
+                        - boolean
+                        - "null"
+                - in: cookie
+                  name: created
+                  schema:
+                    items:
+                        format: custom
+                        type:
+                            - boolean
+                            - "null"
+                    minItems: 1
+                    type: array
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            $ref: '#/components/schemas/Owner'
+                required: true
+            responses:
+                "201":
+                    description: status
+                    headers:
+                        '**bold**':
+                            schema:
+                                default: false
+                                type: boolean
+                "400":
+                    content:
+                        '*/*':
+                            schema:
+                                items:
+                                    enum:
+                                        - 36
+                                        - 20.125
+                                        - 98
+                                    type:
+                                        - number
+                                        - "null"
+                                maxItems: 85
+                                type: array
+                        application/vnd.api+json:
+                            schema:
+                                oneOf:
+                                    - allOf:
+                                        - $ref: '#/components/schemas/Owner'
+                                        - deprecated: true
+                                          format: date-time
+                                          type:
+                                            - string
+                                            - "null"
+                                        - $ref: '#/components/schemas/Owner'
+                                    - minProperties: 0
+                                      properties:
+                                        ' leading':
+                                            $ref: '#/components/schemas/Owner'
+                                        kind:
+                                            $ref: '#/components/schemas/Owner'
+                                        먶䱘뿩:
+                                            format: int64
+                                            maximum: 217
+                                            type: integer
+                                      required:
+                                        - ' leading'
+                                        - 먶䱘뿩
+                                        - kind
+                                      type: object
+                                    - deprecated: true
+                                      description: "~"
+                                      properties:
+                                        '|':
+                                            type: number
+                                      type: object
+                    description: price

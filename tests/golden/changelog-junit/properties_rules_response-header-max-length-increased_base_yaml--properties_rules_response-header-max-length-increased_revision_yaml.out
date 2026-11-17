@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="response-header-max-length-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `status` response header's maxLength was increased from `209` to `210` for the status `2XX`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

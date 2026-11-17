@@ -1,0 +1,16 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /pets
+- :warning: the response's body maxProperties was unset from `19`
+- :warning: the response's body `type` changed from `object` to `array<string>` for status `200`
+-  removed the optional property `created` from the response with the `200` status
+-  removed the optional property `첧縱ᤳ앸䧤` from the response with the `200` status
+
+
+
+
+
+

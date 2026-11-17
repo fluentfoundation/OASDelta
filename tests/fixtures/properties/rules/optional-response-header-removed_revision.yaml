@@ -1,0 +1,84 @@
+# Fires optional-response-header-removed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            format: int32
+            maximum: 953
+            nullable: true
+            type: integer
+        Pet:
+            format: email
+            nullable: true
+            type: string
+info:
+    title: '%20'
+    version: v1
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        delete:
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: header
+                  name: id
+                  required: true
+                  schema:
+                    maximum: 601
+                    minimum: -7
+                    type: number
+                - deprecated: true
+                  in: query
+                  name:  nbsp
+                  schema:
+                    description: tag
+                    enum:
+                        - 2
+                        - -1
+                    maximum: 371
+                    nullable: true
+                    readOnly: true
+                    type: integer
+                - in: query
+                  name: '@at'
+                  required: false
+                  schema:
+                    oneOf:
+                        - deprecated: true
+                          type: string
+                        - default: 60
+                          enum:
+                            - 83
+                          format: double
+                          nullable: true
+                          type: number
+                        - description: tag
+                          format: date-time
+                          type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    description: name
+                                    readOnly: true
+                                    type: number
+                                type: array
+                    description: id
+                    headers:
+                        Ünïcode:
+                            schema:
+                                nullable: true
+                                type: boolean
+                "404":
+                    description: |-
+                        line1
+                        line2
+            summary: 엋
+servers:
+    - url: /relative
+    - url: https://api.example.com

@@ -1,0 +1,188 @@
+{
+  "components": {
+    "schemas": {
+      "Owner": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "properties": {
+          "*star": {
+            "items": {
+              "description": "price",
+              "type": "number"
+            },
+            "maxItems": 7,
+            "type": "array"
+          },
+          "a/b": {
+            "properties": {
+              "...": {
+                "description": "tag",
+                "example": "😀",
+                "maximum": 181,
+                "type": "number"
+              },
+              "名前": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "..."
+            ],
+            "type": "object"
+          },
+          "菋膰奥⿏": {
+            "items": {
+              "description": "no",
+              "enum": [
+                "created"
+              ],
+              "maxLength": 42,
+              "nullable": true,
+              "pattern": "^[a-z]+$",
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "*star",
+          "菋膰奥⿏",
+          "a/b"
+        ],
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "api_key": {
+        "in": "cookie",
+        "name": "a\r\nb",
+        "type": "apiKey"
+      },
+      "oauth": {
+        "flows": {
+          "clientCredentials": {
+            "scopes": {
+              "admin": "admin access",
+              "read": "read access"
+            },
+            "tokenUrl": "https://auth.example.com/token"
+          }
+        },
+        "type": "oauth2"
+      }
+    }
+  },
+  "info": {
+    "title": "pet",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/added/%C2%A0nbsp": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    },
+    "/owners/{ownerId}/pets": {
+      "patch": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ownerId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "pet",
+            "in": "cookie",
+            "name": "price",
+            "required": true,
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/Owner"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "deprecated": true,
+            "in": "query",
+            "name": "㿢몜짐躘훕綏冔⌰",
+            "schema": {
+              "properties": {
+                "a~b": {
+                  "deprecated": true,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "a~b"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "text/plain": {
+              "schema": {
+                "enum": [
+                  true,
+                  false
+                ],
+                "example": "名前",
+                "type": "boolean"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "2XX": {
+            "description": "created"
+          },
+          "400": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "items": {
+                    "additionalProperties": false,
+                    "type": "object"
+                  },
+                  "minItems": 0,
+                  "type": "array",
+                  "uniqueItems": true
+                }
+              }
+            },
+            "description": "詵Ʋ废赐䀒"
+          }
+        },
+        "security": [
+          {
+            "oauth": []
+          },
+          {
+            "api_key": []
+          }
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "owner"
+    },
+    {
+      "description": "created",
+      "name": "created"
+    }
+  ]
+}

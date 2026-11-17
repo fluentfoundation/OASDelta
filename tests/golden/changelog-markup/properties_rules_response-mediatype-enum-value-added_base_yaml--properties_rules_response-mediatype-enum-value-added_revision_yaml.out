@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /items/{id}.json
+- :warning: added the new `created` enum value to the response schema `text/plain` for the response status `404`
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+::notice title=request-parameter-exclusive-max-unset,file=./properties/rules/request-parameter-exclusive-max-unset_revision.yaml::in API POST /pets/{petId} for the `path` request parameter `petId`, the exclusiveMaximum was unset from `13.00`
+::notice title=response-media-type-added,file=./properties/rules/request-parameter-exclusive-max-unset_revision.yaml,line=72,col=25::in API POST /pets/{petId} added the media type `application/xml` for the response with the status `500`
+::notice title=response-media-type-added,file=./properties/rules/request-parameter-exclusive-max-unset_revision.yaml,line=75,col=25::in API POST /pets/{petId} added the media type `text/plain` for the response with the status `500`
+::notice title=response-property-default-value-removed,file=./properties/rules/request-parameter-exclusive-max-unset_revision.yaml::in API POST /pets/{petId} the ``tick`` response's property default value `麨챗ᒏᣟꙋ钸蠠彆` was removed for the status `200`
+

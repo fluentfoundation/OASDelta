@@ -1,0 +1,52 @@
+# Fires new-request-path-parameter (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: Ünïcode
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /store/order:
+        get:
+            operationId: get_store_order
+            parameters:
+                - description: price
+                  in: cookie
+                  name: pet
+                  schema:
+                    properties:
+                        id:
+                            example: 名前
+                            format: date-time
+                            type: string
+                        status:
+                            description: price
+                            maximum: 836
+                            type:
+                                - integer
+                                - "null"
+                            writeOnly: true
+                        ключ:
+                            type:
+                                - number
+                                - "null"
+                    required:
+                        - ключ
+                    type: object
+                - in: header
+                  name: tag
+                  required: true
+                  schema:
+                    items:
+                        type: number
+                    type: array
+                - in: header
+                  name: Ünïcode
+                  schema:
+                    items:
+                        description: id
+                        format: byte
+                        type: string
+                    type: array
+            responses:
+                "204":
+                    description: 名前
+            summary: status

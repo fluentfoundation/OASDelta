@@ -1,0 +1,30 @@
+7 changes: 7 error, 0 warning, 0 info
+error	[request-property-deprecated-sunset-invalid] at ./properties/lifecycle_properties_revision.yaml
+	in API POST /r
+		request property `invalid` deprecated with invalid sunset date: `sunset date doesn't conform with RFC3339: not a date`
+
+error	[request-property-removed-before-sunset] at ./properties/lifecycle_properties_revision.yaml
+	in API POST /r
+		removed the request property `removed` before the sunset date `2099-12-31`
+
+error	[request-property-stability-decreased] at ./properties/lifecycle_properties_revision.yaml
+	in API POST /r
+		request property `decreased` stability level decreased from `stable` to `beta`
+
+error	[request-property-sunset-date-too-small] at ./properties/lifecycle_properties_revision.yaml
+	in API POST /r
+		request property `too-small` sunset date `2020-01-01` is too small, must be at least `0` days from now
+
+error	[response-property-deprecated-sunset-invalid] at ./properties/lifecycle_properties_revision.yaml
+	in API POST /r
+		response property `invalid` deprecated with invalid sunset date: `sunset date doesn't conform with RFC3339: not a date`
+
+error	[response-property-stability-decreased] at ./properties/lifecycle_properties_revision.yaml
+	in API POST /r
+		response property `decreased` stability level decreased from `stable` to `beta`
+
+error	[response-required-property-removed-before-sunset] at ./properties/lifecycle_properties_revision.yaml
+	in API POST /r
+		removed the required property `required-removed` from the response with the `200` status before the sunset date `2099-12-31`
+
+

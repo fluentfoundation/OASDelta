@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="response-header-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `null` response header's `format` changed from `float` to `none` for the status `400`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

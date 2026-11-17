@@ -1,0 +1,2 @@
+::error title=response-property-exclusive-min-unset,file=./properties/rules/response-property-exclusive-min-unset_revision.json::in API GET /ünïcode/ключ the `items/` response property's exclusiveMinimum was unset from `true` for the response status `204`
+

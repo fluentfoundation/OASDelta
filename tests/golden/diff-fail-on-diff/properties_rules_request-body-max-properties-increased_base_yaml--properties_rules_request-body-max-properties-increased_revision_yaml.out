@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/store/order":{"operations":{"modified":{"PUT":{"parameters":{"modified":{"header":{"id":{"schema":{"properties":{"added":["[bracket]"]}}}}}},"requestBody":{"content":{"modified":{"application/vnd.api+json":{"schema":{"maxProps":{"from":11,"to":13}}}}}}}}}}}}}

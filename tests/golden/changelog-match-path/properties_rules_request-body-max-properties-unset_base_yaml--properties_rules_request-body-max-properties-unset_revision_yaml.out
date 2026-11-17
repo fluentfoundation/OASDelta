@@ -1,0 +1,1 @@
+[{"id":"request-body-max-properties-unset","text":"the request's body maxProperties was unset from `11`","level":1,"operation":"POST","path":"/pets","section":"paths","baseSource":{"file":"./properties/rules/request-body-max-properties-unset_base.yaml","line":31,"column":29},"fingerprint":"7a47b83ada7e"}]

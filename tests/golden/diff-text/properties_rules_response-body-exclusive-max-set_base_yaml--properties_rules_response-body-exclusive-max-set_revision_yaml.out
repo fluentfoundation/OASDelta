@@ -1,0 +1,32 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 3
+-------------------------
+GET /search
+- Responses changed
+  - Modified response: 2XX
+    - Content changed
+      - Modified media type: application/vnd.api+json
+        - Schema changed
+          - ExclusiveMax changed from null to 23
+
+PUT /search
+- Modified query param: pet
+  - Required changed from false to true
+
+DELETE /v1/items
+- Modified cookie param: 孱
+  - Schema changed
+    - Type changed from '' to 'null'
+- Responses changed
+  - Modified response: 201
+    - Content changed
+      - Modified media type: application/vnd.api+json
+        - Schema changed
+          - ExclusiveMax changed from null to 23
+
+

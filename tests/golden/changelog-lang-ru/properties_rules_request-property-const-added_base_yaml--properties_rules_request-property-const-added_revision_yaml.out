@@ -1,0 +1,14 @@
+3 изменений: 3 error, 0 warning, 0 info
+error	[request-property-const-added] в ./properties/rules/request-property-const-added_revision.yaml
+	в API POST /pets/{petId}
+		свойство запроса `price` получило значение const `%20`
+
+error	[api-removed-without-deprecation] в ./properties/rules/request-property-const-added_base.yaml
+	в API GET /store/order
+		API удалён без deprecation
+
+error	[response-body-one-of-added] в ./properties/rules/request-property-const-added_revision.yaml
+	в API PUT /store/order
+		добавлено `subschema #1` в список `oneOf` тела ответа для статуса ответа `201`
+
+

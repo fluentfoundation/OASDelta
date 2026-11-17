@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[api-security-component-api-key-name-changed]
+	en components/securitySchemes
+		el nombre de la clave API del esquema de seguridad `api_key` fue cambiado de `owner` a `status`
+
+

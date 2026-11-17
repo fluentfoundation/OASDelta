@@ -1,0 +1,11 @@
+2 alterações: 0 error, 0 warning, 2 info
+info	[response-body-multiple-of-specialized] em ./properties/rules/response-body-multiple-of-specialized_revision.yaml
+	em API GET /ünïcode/ключ
+		o valor multipleOf do corpo da resposta foi especializado de `5.00` para `10.00`
+		Esta alteração não é incompatível porque o novo multipleOf é um múltiplo inteiro do anterior, então todos os valores que o servidor pode produzir já eram válidos antes.
+
+info	[optional-response-header-removed] em ./properties/rules/response-body-multiple-of-specialized_revision.yaml
+	em API PUT /ünïcode/ключ
+		o cabeçalho de resposta opcional `x-added` foi removido para o status `200`
+
+

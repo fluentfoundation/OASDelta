@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-property-max-properties-increased] en ./properties/rules/response-property-max-properties-increased_revision.yaml
+	en API POST /v1/items
+		el número máximo de propiedades de la propiedad de respuesta `created` fue aumentado de `11` a `12` para el estado `404`
+
+

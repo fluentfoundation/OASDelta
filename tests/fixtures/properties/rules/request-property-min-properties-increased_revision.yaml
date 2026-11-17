@@ -1,0 +1,167 @@
+# Fires request-property-min-properties-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            items:
+                items:
+                    deprecated: true
+                    enum:
+                        - 16
+                    format: int32
+                    maximum: 23
+                    minimum: 0
+                    type:
+                        - integer
+                        - "null"
+                type: array
+            type: array
+        Owner:
+            properties:
+                name:
+                    description: id
+                    type:
+                        - boolean
+                        - "null"
+                tag:
+                    $ref: '#/components/schemas/Item'
+            required:
+                - tag
+            type: object
+        Pet:
+            items:
+                description: 峈錂뚦㣻鋑㛪濤
+                type:
+                    - boolean
+                    - "null"
+            minItems: 1
+            type: array
+info:
+    title: 㒄
+    version: v1
+openapi: 3.1.0
+paths:
+    /pets/{petId}:
+        patch:
+            operationId: patch_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: 名前
+                  schema:
+                    properties:
+                        酰:
+                            enum:
+                                - 7
+                                - 4
+                                - 14
+                                - 8
+                            type: integer
+                    type: object
+            responses:
+                "500":
+                    description: kind
+            summary: tag
+            x-stability-level: stable
+    /store/order:
+        post:
+            operationId: post_store_order
+            parameters:
+                - explode: false
+                  in: header
+                  name: created
+                  required: true
+                  schema:
+                    items:
+                        format: date
+                        type:
+                            - string
+                            - "null"
+                    type: array
+                - description: kind
+                  in: cookie
+                  name: tag
+                  required: false
+                  schema:
+                    properties:
+                        '{brace}':
+                            enum:
+                                - true
+                                - false
+                            example: 名前
+                            type: boolean
+                    required:
+                        - '{brace}'
+                    type: object
+                - in: header
+                  name: 名前
+                  required: true
+                  schema:
+                    description: ключ
+                    minimum: 4
+                    type:
+                        - integer
+                        - "null"
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            properties:
+                                <b>&amp;:
+                                    maxLength: 21
+                                    readOnly: true
+                                    type: string
+                                created:
+                                    type:
+                                        - number
+                                        - "null"
+                                name:
+                                    minProperties: 3
+                                    properties:
+                                        owner:
+                                            format: int64
+                                            minimum: -1
+                                            type:
+                                                - integer
+                                                - "null"
+                                    type: object
+                                名前:
+                                    items:
+                                        type: integer
+                                    type: array
+                            required:
+                                - name
+                                - 名前
+                                - created
+                                - <b>&amp;
+                            type: object
+                    application/xml:
+                        schema:
+                            items:
+                                description: Ünïcode
+                                properties:
+                                    status:
+                                        maxLength: 72
+                                        type:
+                                            - string
+                                            - "null"
+                                    tag:
+                                        format: custom
+                                        type:
+                                            - boolean
+                                            - "null"
+                                        writeOnly: true
+                                required:
+                                    - status
+                                type: object
+                            type: array
+                required: true
+            responses:
+                2XX:
+                    description: owner
+servers:
+    - url: https://api.example.com/v2
+    - url: https://api.example.com

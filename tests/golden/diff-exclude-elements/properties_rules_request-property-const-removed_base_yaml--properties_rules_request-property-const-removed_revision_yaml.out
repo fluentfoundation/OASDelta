@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets/{petId}":{"operations":{"modified":{"PATCH":{"requestBody":{"content":{"modified":{"text/plain":{"schema":{"properties":{"modified":{"id":{"const":{"from":"pet","to":null}}}}}}}}}}}}}}}}

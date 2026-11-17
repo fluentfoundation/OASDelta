@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/store/order":{"operations":{"modified":{"PATCH":{"parameters":{"modified":{"header":{"created":{"schema":{"writeOnly":{"from":false,"to":true}}}}}},"requestBody":{"added":true},"responses":{"modified":{"200":{"headers":{"added":["*star"]}}}}}}}}}}}

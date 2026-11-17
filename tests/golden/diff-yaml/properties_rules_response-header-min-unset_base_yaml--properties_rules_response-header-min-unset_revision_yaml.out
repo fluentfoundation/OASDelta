@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "204":
+                                    headers:
+                                        modified:
+                                            ünïcode:
+                                                schema:
+                                                    min:
+                                                        from: -8
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "204":
+                        headers:
+                            modified:
+                                ünïcode:
+                                    schema:
+                                        min:
+                                            from: -8
+                                            to: null
+

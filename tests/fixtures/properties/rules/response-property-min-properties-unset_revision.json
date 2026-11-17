@@ -1,0 +1,89 @@
+{
+  "components": {
+    "schemas": {
+      "Owner": {
+        "items": {},
+        "type": "array"
+      }
+    }
+  },
+  "info": {
+    "title": "\u003cb\u003e\u0026amp;",
+    "version": "2.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/ünïcode/ключ": {
+      "delete": {
+        "operationId": "delete_ünïcode_ключ",
+        "responses": {
+          "400": {
+            "description": "ключ"
+          },
+          "default": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "items": {
+                    "oneOf": [
+                      {
+                        "description": "tag",
+                        "type": [
+                          "boolean",
+                          "null"
+                        ]
+                      },
+                      {
+                        "exclusiveMinimum": -9,
+                        "type": "number"
+                      }
+                    ]
+                  },
+                  "type": "array"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "properties": {
+                    "-": {
+                      "$ref": "#/components/schemas/Owner"
+                    },
+                    "kind": {
+                      "items": {
+                        "maxLength": 16,
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "type": "array"
+                    },
+                    "status": {
+                      "maxProperties": 5,
+                      "properties": {
+                        "status": {
+                          "$ref": "#/components/schemas/Owner"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "䕲쭋훳镥뀣턎봸궆"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "created"
+    }
+  ]
+}

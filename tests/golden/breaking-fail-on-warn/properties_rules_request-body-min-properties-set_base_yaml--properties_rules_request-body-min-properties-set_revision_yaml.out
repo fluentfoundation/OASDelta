@@ -1,0 +1,7 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-body-min-properties-set] at ./properties/rules/request-body-min-properties-set_revision.yaml
+	in API PATCH /search
+		the request's body minProperties was set to `2`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+

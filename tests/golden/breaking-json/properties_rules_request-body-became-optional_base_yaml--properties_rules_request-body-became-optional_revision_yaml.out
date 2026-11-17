@@ -1,0 +1,1 @@
+[{"id":"response-media-type-removed","text":"removed the media type `application/json; charset=utf-8` for the response with the status `200`","level":3,"operation":"GET","operationId":"get_pets_{petId}","path":"/pets/{petId}","section":"paths","fingerprint":"bbf4a5d91ea2"}]

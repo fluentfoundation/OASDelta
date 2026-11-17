@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            '*/*':
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            名前:
+                                                                properties:
+                                                                    modified:
+                                                                        owner:
+                                                                            writeOnly:
+                                                                                from: false
+                                                                                to: true
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets/{petId}
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                '*/*':
+                                    schema:
+                                        properties:
+                                            modified:
+                                                名前:
+                                                    properties:
+                                                        modified:
+                                                            owner:
+                                                                writeOnly:
+                                                                    from: false
+                                                                    to: true
+

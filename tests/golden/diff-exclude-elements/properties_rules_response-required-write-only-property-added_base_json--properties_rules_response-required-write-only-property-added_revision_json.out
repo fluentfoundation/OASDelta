@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/search":{"operations":{"modified":{"PUT":{"responses":{"modified":{"201":{"content":{"modified":{"*/*":{"schema":{"required":{"added":["[bracket]"]},"properties":{"added":["[bracket]"]}}}}}}}}}}}}}}}

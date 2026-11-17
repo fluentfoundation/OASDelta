@@ -1,0 +1,21 @@
+- id: response-header-max-length-increased
+  text: the `status` response header's maxLength was increased from `209` to `210` for the status `2XX`
+  level: 3
+  operation: DELETE
+  operationId: delete_store_order
+  path: /store/order
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-header-max-length-increased_base.yaml
+    line: 520
+    column: 9
+    endLine: 608
+    endColumn: 25
+  revisionSource:
+    file: ./properties/rules/response-header-max-length-increased_revision.yaml
+    line: 520
+    column: 9
+    endLine: 608
+    endColumn: 25
+  fingerprint: 99fc35e69d9e
+

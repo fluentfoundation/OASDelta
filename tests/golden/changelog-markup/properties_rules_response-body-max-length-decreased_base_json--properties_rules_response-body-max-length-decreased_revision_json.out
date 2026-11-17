@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /items/{id}.json
+-  the response's body maxLength was decreased from `96` to `95`
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /store/order
+- :warning: the response's body maxLength was unset from `200` (media type: application/json)
+- :warning: the response's body `type` changed from `string, null` to `number` for status `201` (media type: application/json)
+-  the response's body became not nullable (media type: application/json)
+-  added the required property `짠㭬䔺豍ꨩ뽥/pet` to the response with the `201` status (media type: application/xml)
+
+
+
+
+
+

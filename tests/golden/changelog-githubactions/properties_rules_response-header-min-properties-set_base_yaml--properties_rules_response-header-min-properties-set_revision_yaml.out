@@ -1,0 +1,2 @@
+::notice title=response-header-min-properties-set,file=./properties/rules/response-header-min-properties-set_revision.yaml,line=13,col=9::in API DELETE /ünïcode/ключ the `😀` response header's minProperties was set to `4` for the status `201`
+

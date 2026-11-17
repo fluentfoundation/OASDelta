@@ -1,0 +1,3 @@
+::notice title=api-path-removed-with-deprecation,file=./properties/rules/api-path-removed-with-deprecation_base.yaml::in API GET /v1/items api path removed with deprecation
+::notice title=endpoint-added,file=./properties/rules/api-path-removed-with-deprecation_revision.yaml::in API GET /v1/items/v2 endpoint added
+

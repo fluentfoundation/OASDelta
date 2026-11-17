@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - object
+                                                        deleted:
+                                                            - array
+                                                    maxItems:
+                                                        from: 50
+                                                        to: null
+                                                    items:
+                                                        schemaDeleted: true
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        type:
+                                            added:
+                                                - object
+                                            deleted:
+                                                - array
+                                        maxItems:
+                                            from: 50
+                                            to: null
+                                        items:
+                                            schemaDeleted: true
+

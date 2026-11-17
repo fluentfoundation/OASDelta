@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /v1/items
+- Responses changed
+  - Modified response: 500
+    - Content changed
+      - Modified media type: application/vnd.api+json
+        - Schema changed
+          - Properties changed
+            - Modified property: !tag
+              - Items changed
+
+

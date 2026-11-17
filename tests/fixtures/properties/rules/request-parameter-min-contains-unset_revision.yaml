@@ -1,0 +1,90 @@
+# Fires request-parameter-min-contains-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            description: ключ
+            properties:
+                status:
+                    type: object
+                tag:
+                    type:
+                        - string
+                        - "null"
+            required:
+                - status
+            type: object
+        Item:
+            properties:
+                price:
+                    type: number
+                tag:
+                    properties:
+                        ключ:
+                            type: string
+                    required:
+                        - ключ
+                    type: object
+            required:
+                - tag
+            type: object
+        Owner:
+            $ref: '#/components/schemas/Item'
+    securitySchemes:
+        api_key:
+            in: query
+            name: 'a: b'
+            type: apiKey
+        oauth:
+            flows:
+                clientCredentials:
+                    refreshUrl: https://auth.example.com/refresh
+                    scopes:
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: ꨭ解
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /pets:
+        patch:
+            operationId: patch_pets
+            parameters:
+                - in: query
+                  name: ключ
+                  schema:
+                    description: price
+                    minProperties: 0
+                    properties:
+                        '"quoted"':
+                            exclusiveMinimum: -7
+                            type: number
+                        "no":
+                            type: number
+                    required:
+                        - '"quoted"'
+                        - "no"
+                    type: object
+                - in: cookie
+                  name: created
+                  schema:
+                    type: object
+            requestBody:
+                content:
+                    text/plain:
+                        schema:
+                            type:
+                                - string
+                                - "null"
+                required: false
+            responses:
+                2XX:
+                    description: 名前
+                "500":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                type: object
+                    description: ‮abc

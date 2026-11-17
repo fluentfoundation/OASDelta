@@ -1,0 +1,10 @@
+2 changes: 0 error, 0 warning, 2 info
+info	[api-security-component-added]
+	in components/securitySchemes
+		the component security scheme `oauth` was added
+
+info	[request-body-media-type-item-schema-removed] at ./properties/rules/request-body-media-type-item-schema-removed_revision.yaml
+	in API PUT /owners/{ownerId}/pets
+		removed the item schema from the media type `application/xml` of the request body
+
+

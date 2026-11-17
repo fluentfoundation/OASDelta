@@ -1,0 +1,7 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[request-body-all-of-removed-annotation-only] в ./properties/rules/request-body-all-of-removed-annotation-only_revision.json
+	в API PATCH /store/order
+		удалён `subschema #1` (только аннотация) из списка `allOf` тела запроса
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

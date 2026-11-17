@@ -1,0 +1,264 @@
+# Fires response-property-min-properties-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        bearer:
+            scheme: basic
+            type: http
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: 綅
+    version: v1
+openapi: 3.0.3
+paths:
+    /owners/{ownerId}/pets:
+        delete:
+            operationId: delete_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: owner
+                  required: false
+                  schema:
+                    items:
+                        format: custom
+                        nullable: true
+                        type: boolean
+                    type: array
+                - in: header
+                  name: owner
+                  required: false
+                  schema:
+                    format: email
+                    nullable: true
+                    type: string
+            responses:
+                2XX:
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                type: object
+                    description: "\U0001F600"
+            tags:
+                - pet
+                - owner
+        patch:
+            operationId: patch_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - in: header
+                  name: status
+                  required: true
+                  schema:
+                    format: float
+                    minimum: -9
+                    nullable: true
+                    type: number
+                - in: cookie
+                  name: 'trailing '
+                  schema:
+                    description: created
+                    properties:
+                        '`tick`':
+                            enum:
+                                - '[bracket]'
+                            nullable: true
+                            type: string
+                        owner:
+                            default: true
+                            nullable: true
+                            type: boolean
+                        名前:
+                            nullable: true
+                            type: boolean
+                    required:
+                        - 名前
+                        - owner
+                    type: object
+                - in: cookie
+                  name: 椸쏬㘼ꔩ峄⎼뷓
+                  schema:
+                    properties:
+                        kind:
+                            maximum: 33
+                            minimum: 0
+                            nullable: true
+                            type: number
+                        ключ:
+                            nullable: true
+                            type: number
+                        䤧銕䲵⏽⒒ꎕ:
+                            enum:
+                                - true
+                                - false
+                            example: "~"
+                            format: custom
+                            type: boolean
+                    required:
+                        - 䤧銕䲵⏽⒒ꎕ
+                        - kind
+                        - ключ
+                    type: object
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                properties:
+                                    price:
+                                        minimum: -7
+                                        type: number
+                                required:
+                                    - price
+                                type: object
+                        application/vnd.api+json:
+                            schema:
+                                allOf:
+                                    - description: '%20'
+                                      nullable: true
+                                      type: boolean
+                                    - format: custom
+                                      type: boolean
+                    description: '#hash'
+                "201":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                oneOf:
+                                    - properties:
+                                        '---':
+                                            deprecated: true
+                                            type: string
+                                        "\U0001F600":
+                                            type: boolean
+                                      type: object
+                                    - description: pet
+                                      properties:
+                                        tag:
+                                            type: string
+                                      required:
+                                        - tag
+                                      type: object
+                    description:  nbsp
+                "400":
+                    description: status
+    /pets/{petId}:
+        delete:
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - description: status
+                  in: query
+                  name:  nbsp
+                  schema:
+                    additionalProperties: true
+                    type: object
+            responses:
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    description: 澽䯋툯鰏헨ᘚ桕
+                                    minProperties: 1
+                                    type: object
+                                type: array
+                        application/vnd.api+json:
+                            schema:
+                                description: name
+                                format: float
+                                minimum: -6
+                                nullable: true
+                                type: number
+                                writeOnly: true
+                    description: owner
+                    headers:
+                        "yes":
+                            schema:
+                                deprecated: true
+                                description: ᜠ뿻镴
+                                enum:
+                                    - 96
+                                type: number
+    /search:
+        put:
+            operationId: put_search
+            parameters:
+                - in: header
+                  name: name
+                  schema:
+                    additionalProperties: false
+                    type: object
+                  style: pipeDelimited
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            additionalProperties:
+                                type: string
+                            properties:
+                                '**bold**':
+                                    pattern: ^[a-z]+$
+                                    type: string
+                                "1e3":
+                                    description: 名前
+                                    enum:
+                                        - 37
+                                        - 71.125
+                                    type: number
+                                tag:
+                                    deprecated: true
+                                    format: double
+                                    minimum: -2
+                                    type: number
+                                名前:
+                                    type: integer
+                            required:
+                                - tag
+                                - 名前
+                            type: object
+                    multipart/form-data:
+                        schema:
+                            items:
+                                format: int32
+                                minimum: 2
+                                nullable: true
+                                readOnly: true
+                                type: integer
+                            type: array
+                required: true
+            responses:
+                "201":
+                    content:
+                        application/xml:
+                            schema:
+                                example: "null"
+                                format: double
+                                nullable: true
+                                type: number
+                    description: name
+                "204":
+                    content:
+                        application/xml:
+                            schema:
+                                items:
+                                    type: object
+                                type: array
+                    description: '{brace}'
+            tags:
+                - owner
+                - owner
+security:
+    - bearer: []

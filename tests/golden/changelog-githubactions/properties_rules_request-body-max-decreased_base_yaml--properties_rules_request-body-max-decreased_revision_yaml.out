@@ -1,0 +1,2 @@
+::error title=request-body-max-decreased,file=./properties/rules/request-body-max-decreased_revision.yaml,line=157,col=29::in API POST /items/{id}.json the request's body max was decreased to `115.00`
+

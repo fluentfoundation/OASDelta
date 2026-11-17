@@ -1,0 +1,122 @@
+# Fires request-property-max-length-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            additionalProperties:
+                type: string
+            properties:
+                name:
+                    $ref: '#/components/schemas/Error'
+                "null":
+                    type: string
+                    writeOnly: true
+            required:
+                - name
+            type: object
+    securitySchemes:
+        oauth:
+            flows:
+                authorizationCode:
+                    authorizationUrl: https://auth.example.com/authorize
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: '---'
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /items/{id}.json:
+        patch:
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            items:
+                                $ref: '#/components/schemas/Error'
+                            type: array
+                    multipart/form-data:
+                        schema:
+                            maxProperties: 16
+                            type: object
+            responses:
+                "204":
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    properties:
+                                        pet:
+                                            description: pet
+                                            minimum: -8
+                                            type:
+                                                - number
+                                                - "null"
+                                            writeOnly: true
+                                        status:
+                                            type:
+                                                - integer
+                                                - "null"
+                                        Ünïcode:
+                                            type: integer
+                                    required:
+                                        - status
+                                    type: object
+                                type: array
+                        application/xml:
+                            schema:
+                                properties:
+                                    "\a":
+                                        format: email
+                                        minLength: 4
+                                        type: string
+                                    a~b:
+                                        description: kind
+                                        type:
+                                            - number
+                                            - "null"
+                                    owner:
+                                        properties:
+                                            '...':
+                                                description: a/b
+                                                type: string
+                                        required:
+                                            - '...'
+                                        type: object
+                                    ключ:
+                                        anyOf:
+                                            - enum:
+                                                - true
+                                                - false
+                                              type: boolean
+                                            - description: 愄歯㽨
+                                              format: int64
+                                              minimum: 1
+                                              type:
+                                                - integer
+                                                - "null"
+                                required:
+                                    - "\a"
+                                    - a~b
+                                    - ключ
+                                type: object
+                    description: ключ
+                "400":
+                    description: '!tag'
+servers:
+    - url: https://api.example.com

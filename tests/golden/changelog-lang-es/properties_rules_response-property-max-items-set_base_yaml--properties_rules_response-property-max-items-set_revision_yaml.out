@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-property-max-items-set] en ./properties/rules/response-property-max-items-set_revision.yaml
+	en API PUT /search
+		el valor maxItems de la propiedad de respuesta `oneOf[subschema #1]/a: b` fue establecido en `19` para el estado `500`
+
+

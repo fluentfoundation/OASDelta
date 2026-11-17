@@ -1,0 +1,2 @@
+::notice title=api-global-security-scope-added,file=./properties/rules/api-global-security-scope-added_revision.yaml,line=129,col=1::in API   the security scope `write` was added to the global security scheme `openid`
+

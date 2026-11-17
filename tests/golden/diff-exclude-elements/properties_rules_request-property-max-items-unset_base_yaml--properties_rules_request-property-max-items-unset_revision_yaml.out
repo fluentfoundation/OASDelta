@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets":{"operations":{"modified":{"PATCH":{"requestBody":{"content":{"modified":{"multipart/form-data":{"schema":{"allOf":{"modified":[{"base":{"index":0},"revision":{"index":0},"diff":{"maxItems":{"from":11,"to":null}}}]}}}}}}}}}}}}}

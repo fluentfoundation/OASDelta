@@ -1,0 +1,83 @@
+# Fires api-security-component-api-key-name-changed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        api_key:
+            in: header
+            name: status
+            type: apiKey
+info:
+    title: '&anchor'
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /pets/{petId}:
+        delete:
+            deprecated: true
+            operationId: delete_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - description: '%20'
+                  in: query
+                  name: created
+                  schema:
+                    items:
+                        enum:
+                            - 㤕묃뜊쮭氼
+                        type:
+                            - string
+                            - "null"
+                    type: array
+            responses:
+                2XX:
+                    description: tag
+                "400":
+                    content:
+                        application/json:
+                            schema:
+                                description: price
+                                properties:
+                                    status:
+                                        format: int32
+                                        type:
+                                            - integer
+                                            - "null"
+                                    名前:
+                                        items:
+                                            deprecated: true
+                                            enum:
+                                                - "x\ty"
+                                                - price
+                                                - 名前
+                                                - '!tag'
+                                            type:
+                                                - string
+                                                - "null"
+                                        type: array
+                                type: object
+                    description: 䊈
+                "404":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    items:
+                                        default: 9223372036854775807
+                                        format: int64
+                                        type: integer
+                                    type: array
+                                type: array
+                        application/xml:
+                            schema:
+                                format: int64
+                                type: integer
+                    description: 名前
+            tags:
+                - id
+servers:
+    - url: /relative
+tags:
+    - name: tag

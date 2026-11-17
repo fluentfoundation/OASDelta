@@ -1,0 +1,15 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            added: true
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /v1/items
+        :   requestBody:
+                added: true
+

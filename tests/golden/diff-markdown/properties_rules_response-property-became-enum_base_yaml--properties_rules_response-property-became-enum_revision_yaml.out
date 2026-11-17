@@ -1,0 +1,27 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /search
+- Request body changed
+- Responses changed
+  - Modified response: 2XX
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Extensions changed
+            - New extension: x-created
+          - Items changed
+            - Properties changed
+              - Modified property: tag
+                - Properties changed
+                  - Modified property: 0x1F
+                    - New enum values: [name-1 name]
+                  - Modified property: price
+                    - New enum values: [374.5 374]
+
+

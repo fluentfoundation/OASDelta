@@ -1,0 +1,15 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /items/{id}.json
+- :warning: the response's body maxItems was unset from `83`
+- :warning: the response's body `type` changed from `array<object>` to `boolean` for status `default`
+- :warning: the response's body uniqueItems was unset
+
+
+
+
+
+

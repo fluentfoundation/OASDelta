@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /items/{id}.json
+-  the response header `owner` became not nullable for the status `2XX`
+
+
+
+
+
+

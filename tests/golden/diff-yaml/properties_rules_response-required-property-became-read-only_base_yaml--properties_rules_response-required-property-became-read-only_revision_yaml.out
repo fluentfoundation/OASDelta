@@ -1,0 +1,51 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                default:
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-8:
+                                                schema:
+                                                    anyOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 0
+                                                              revision:
+                                                                index: 0
+                                                              diff:
+                                                                properties:
+                                                                    modified:
+                                                                        created:
+                                                                            readOnly:
+                                                                                from: false
+                                                                                to: true
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /search
+        :   responses:
+                modified:
+                    default:
+                        content:
+                            modified:
+                                application/json; charset=utf-8:
+                                    schema:
+                                        anyOf:
+                                            modified:
+                                                - base:
+                                                    index: 0
+                                                  revision:
+                                                    index: 0
+                                                  diff:
+                                                    properties:
+                                                        modified:
+                                                            created:
+                                                                readOnly:
+                                                                    from: false
+                                                                    to: true
+

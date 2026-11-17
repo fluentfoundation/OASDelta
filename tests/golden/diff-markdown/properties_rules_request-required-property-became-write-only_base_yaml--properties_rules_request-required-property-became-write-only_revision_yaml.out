@@ -1,0 +1,22 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /search
+- Request body changed
+  - Content changed
+    - Modified media type: */*
+      - Schema changed
+        - Properties changed
+          - Modified property: `tick`
+            - Type changed from 'integer, null' to 'string'
+            - Description changed from ''single'' to ''
+            - Deleted enum values: [4 14]
+            - WriteOnly changed from false to true
+            - Deprecated changed from true to false
+
+

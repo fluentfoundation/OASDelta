@@ -1,0 +1,18 @@
+4 alterações: 2 error, 0 warning, 2 info
+error	[request-body-became-not-nullable] em ./properties/rules/request-body-min-unset_revision.yaml
+	em API PATCH /v1/items
+		o corpo da requisição tornou-se não anulável
+
+error	[request-body-type-changed] em ./properties/rules/request-body-min-unset_revision.yaml
+	em API PATCH /v1/items
+		o `type` do corpo da requisição foi alterado de `number, null` para `boolean`
+
+info	[request-body-default-value-removed] em ./properties/rules/request-body-min-unset_revision.yaml
+	em API PATCH /v1/items
+		o valor padrão `multipart/form-data` foi removido do corpo da requisição%!(EXTRA string=`-26.12`)
+
+info	[request-body-min-unset] em ./properties/rules/request-body-min-unset_revision.yaml
+	em API PATCH /v1/items
+		o valor min do corpo da requisição foi removido de `-2.00`
+
+

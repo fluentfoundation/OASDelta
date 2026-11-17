@@ -1,0 +1,332 @@
+{
+  "components": {
+    "schemas": {
+      "Error": {
+        "properties": {
+          "name": {
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "minItems": 3,
+            "type": "array"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "type": "object"
+      },
+      "Item": {
+        "default": 41,
+        "deprecated": true,
+        "description": "no",
+        "enum": [
+          18,
+          14,
+          19,
+          10
+        ],
+        "type": "integer"
+      }
+    }
+  },
+  "info": {
+    "title": "status",
+    "version": "v1"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/ünïcode/ключ": {
+      "delete": {
+        "operationId": "delete_ünïcode_ключ",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "흳쑭孫㚂댍땓ᮾ",
+            "schema": {
+              "enum": [
+                true,
+                false
+              ],
+              "example": "pet",
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "1e3",
+            "required": false,
+            "schema": {
+              "deprecated": true,
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "enum": [
+                    -3,
+                    16
+                  ],
+                  "minimum": 5,
+                  "type": "integer"
+                }
+              }
+            },
+            "description": "created",
+            "headers": {
+              "名前": {
+                "schema": {
+                  "enum": [
+                    5
+                  ],
+                  "maximum": 111,
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "2XX": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "items": {
+                    "default": "id",
+                    "deprecated": true,
+                    "type": "string"
+                  },
+                  "type": "array",
+                  "uniqueItems": true
+                }
+              }
+            },
+            "description": "嗵౬ࣖ㗫袴㩺㮺"
+          },
+          "404": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "deprecated": true,
+                  "description": "id",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "ключ"
+          }
+        }
+      },
+      "patch": {
+        "parameters": [
+          {
+            "description": "ключ",
+            "in": "cookie",
+            "name": "名前",
+            "schema": {
+              "deprecated": true,
+              "properties": {
+                " leading": {
+                  "default": true,
+                  "type": "boolean"
+                },
+                "no": {
+                  "$ref": "#/components/schemas/Item"
+                },
+                "status": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ],
+                  "writeOnly": true
+                },
+                "Ünïcode": {
+                  "description": "畫㲴쐈菺媠혥",
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "status",
+                "Ünïcode"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "in": "header",
+            "name": "pet",
+            "required": false,
+            "schema": {
+              "additionalProperties": true,
+              "description": "| table |",
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ключ"
+          },
+          "204": {
+            "description": "1e3"
+          },
+          "2XX": {
+            "description": "pet",
+            "headers": {
+              "pet": {
+                "schema": {
+                  "enum": [
+                    19,
+                    1,
+                    11
+                  ],
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              },
+              "볮㙴먈⹻咣흀ࠆ鼗": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "a~b",
+            "required": true,
+            "schema": {
+              "exclusiveMinimum": -8,
+              "type": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "properties": {
+                  "a: b": {
+                    "items": {
+                      "$ref": "#/components/schemas/Item"
+                    },
+                    "type": "array"
+                  },
+                  "id": {
+                    "allOf": [
+                      {
+                        "description": "name",
+                        "type": "number"
+                      },
+                      {
+                        "enum": [
+                          6,
+                          0
+                        ],
+                        "format": "int64",
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      }
+                    ]
+                  },
+                  "kind": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Item"
+                      },
+                      {
+                        "enum": [
+                          9,
+                          59
+                        ],
+                        "format": "float",
+                        "type": "number"
+                      }
+                    ]
+                  },
+                  "ключ": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "type": "object"
+              }
+            },
+            "application/json; charset=utf-8": {
+              "schema": {
+                "description": "tag",
+                "readOnly": true,
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              }
+            }
+          },
+          "description": "status",
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "deprecated": true,
+                  "format": "double",
+                  "type": "number",
+                  "writeOnly": true
+                }
+              }
+            },
+            "description": "status",
+            "headers": {
+              "챘": {
+                "deprecated": true,
+                "required": false,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "名前"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "owner"
+    },
+    {
+      "name": "id"
+    }
+  ]
+}

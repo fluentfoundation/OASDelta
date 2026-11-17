@@ -1,0 +1,124 @@
+# Fires response-header-exclusive-max-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Pet:
+            description: 'trailing '
+            type: object
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: '"quoted"'
+            type: apiKey
+        oauth:
+            flows:
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: status
+    version: v1
+openapi: 3.1.0
+paths:
+    /store/order:
+        get:
+            operationId: get_store_order
+            parameters:
+                - explode: true
+                  in: cookie
+                  name: '---'
+                  schema:
+                    additionalProperties:
+                        type: string
+                    type: object
+            responses:
+                2XX:
+                    description: '-'
+                "200":
+                    description: pet
+                "201":
+                    description: "\a"
+        put:
+            operationId: put_store_order
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            discriminator:
+                                propertyName: kind
+                            oneOf:
+                                - default: 7
+                                  enum:
+                                    - -3
+                                    - 20
+                                    - 10
+                                  type:
+                                    - integer
+                                    - "null"
+                                - type:
+                                    - string
+                                    - "null"
+                    application/xml:
+                        schema:
+                            properties:
+                                owner:
+                                    description: Ünïcode
+                                    type: object
+                                㵤訴:
+                                    type:
+                                        - boolean
+                                        - "null"
+                            required:
+                                - 㵤訴
+                                - owner
+                            type: object
+                required: true
+            responses:
+                "204":
+                    content:
+                        application/xml:
+                            schema:
+                                items:
+                                    type:
+                                        - string
+                                        - "null"
+                                type: array
+                    description: '`tick`'
+                    headers:
+                        '`tick`':
+                            schema:
+                                enum:
+                                    - 0
+                                    - 13
+                                exclusiveMaximum: 38
+                                type: integer
+                "400":
+                    description: status
+                "500":
+                    content:
+                        application/json:
+                            schema:
+                                default: 名前
+                                description: name
+                                maxLength: 251
+                                pattern: (
+                                type: string
+                        application/xml:
+                            schema:
+                                enum:
+                                    - -2
+                                    - 9
+                                    - 16
+                                type:
+                                    - integer
+                                    - "null"
+                                writeOnly: true
+                    description: <b>&amp;
+            tags:
+                - name
+                - price
+servers:
+    - url: /relative

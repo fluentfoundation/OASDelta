@@ -1,0 +1,7 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-optional-property-became-read-only] в ./properties/rules/response-optional-property-became-read-only_revision.yaml
+	в API PUT /items/{id}.json
+		необязательное свойство `a
+b` перестало быть только для чтения для ответа со статусом `204`
+
+

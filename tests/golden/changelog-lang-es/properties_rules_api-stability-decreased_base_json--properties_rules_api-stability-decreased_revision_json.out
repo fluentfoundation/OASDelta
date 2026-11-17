@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[api-stability-decreased] en ./properties/rules/api-stability-decreased_revision.json
+	en API DELETE /ünïcode/ключ
+		nivel de estabilidad del endpoint disminuido de `stable` a `alpha`
+
+

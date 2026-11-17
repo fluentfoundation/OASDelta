@@ -1,0 +1,2 @@
+::notice title=request-parameter-multiple-of-unset,file=./properties/rules/request-parameter-multiple-of-unset_revision.yaml::in API GET /pets/{petId} for the `header` request parameter `name`, the multipleOf was unset from `9.00`
+

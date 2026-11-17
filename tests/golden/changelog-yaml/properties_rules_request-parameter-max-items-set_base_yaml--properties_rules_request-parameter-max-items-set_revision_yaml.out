@@ -1,0 +1,10 @@
+- id: request-parameter-max-items-set
+  text: for the `query` request parameter `tag`, the maxItems was set to `15`
+  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  level: 3
+  operation: GET
+  operationId: name
+  path: /search
+  section: paths
+  fingerprint: c5b2ee99050c
+

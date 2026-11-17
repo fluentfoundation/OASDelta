@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[endpoint-added] в ./properties/rules/response-body-media-type-item-schema-added_revision.yaml
+	в API GET /added/kind
+		эндпоинт добавлен
+
+info	[response-body-media-type-item-schema-added] в ./properties/rules/response-body-media-type-item-schema-added_revision.yaml
+	в API POST /pets/{petId}
+		схема элемента добавлена к типу медиа `text/plain` ответа со статусом `2XX`
+
+

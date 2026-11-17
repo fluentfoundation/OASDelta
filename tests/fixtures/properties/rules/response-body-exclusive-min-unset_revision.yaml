@@ -1,0 +1,155 @@
+# Fires response-body-exclusive-min-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        bearer:
+            scheme: basic
+            type: http
+info:
+    title: '*star'
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /ünïcode/ключ:
+        get:
+            operationId: '>'
+            parameters:
+                - in: header
+                  name: "\U0001F600"
+                  schema:
+                    type:
+                        - boolean
+                        - "null"
+                  style: form
+                - in: cookie
+                  name: name
+                  schema:
+                    properties:
+                         nbsp:
+                            description: status
+                            enum:
+                                - 24
+                                - -9223372036854775808
+                                - 57
+                            maximum: 707
+                            type: number
+                        C:\path:
+                            default: 50
+                            format: double
+                            type: number
+                    required:
+                        - C:\path
+                    type: object
+                  style: spaceDelimited
+                - in: query
+                  name: pet
+                  required: false
+                  schema:
+                    description: created
+                    enum:
+                        - 1e-07
+                        - 44
+                        - -21.75
+                    minimum: 9
+                    type: number
+            responses:
+                "201":
+                    description: tag
+                    headers:
+                        㺃滷:
+                            schema:
+                                exclusiveMinimum: -5
+                                minimum: 1
+                                type:
+                                    - number
+                                    - "null"
+                "404":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    allOf:
+                                        - readOnly: true
+                                          type:
+                                            - boolean
+                                            - "null"
+                                        - deprecated: true
+                                          description: status
+                                          type:
+                                            - integer
+                                            - "null"
+                                type: array
+                        application/xml:
+                            schema:
+                                type: integer
+                    description: Ünïcode
+                    headers:
+                        price:
+                            schema:
+                                enum:
+                                    - 1.23456789125e+08
+                                    - 85.125
+                                    - 1e+300
+                                exclusiveMaximum: 1242
+                                type:
+                                    - number
+                                    - "null"
+                        Ünïcode:
+                            schema:
+                                deprecated: true
+                                minLength: 1
+                                type:
+                                    - string
+                                    - "null"
+            tags:
+                - owner
+        put:
+            operationId: '{brace}'
+            parameters:
+                - deprecated: true
+                  in: header
+                  name: 名前
+                  schema:
+                    enum:
+                        - 7
+                        - 8
+                        - 2
+                    type: integer
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            enum:
+                                - 14
+                                - -1
+                                - 1
+                            type:
+                                - integer
+                                - "null"
+                required: true
+            responses:
+                "400":
+                    description: "yes"
+                "500":
+                    content:
+                        application/xml:
+                            schema:
+                                pattern: ^[a-z]+$
+                                type:
+                                    - string
+                                    - "null"
+                    description: |-
+                        line1
+                        line2
+                default:
+                    description: '`tick`'
+                    headers:
+                        Ünïcode:
+                            required: true
+                            schema:
+                                minimum: 2
+                                type: integer
+            security:
+                - bearer: []
+            summary: '|'
+servers:
+    - url: https://api.example.com

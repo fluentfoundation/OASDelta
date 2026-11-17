@@ -1,0 +1,30 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /owners/{ownerId}/pets
+- Responses changed
+  - Modified response: 400
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Property 'AnyOf' changed
+            - Modified schema: subschema #2
+              - Items changed
+                - ExclusiveMin changed from -10 to -7
+
+PUT /ünïcode/ключ
+- Responses changed
+  - Modified response: default
+    - Content changed
+      - Modified media type: application/xml
+        - Schema changed
+          - Properties changed
+            - Modified property: tag
+              - UniqueItems changed from false to true
+
+

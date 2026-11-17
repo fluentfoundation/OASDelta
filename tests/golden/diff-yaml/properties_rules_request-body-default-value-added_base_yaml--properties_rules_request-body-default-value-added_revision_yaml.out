@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            default:
+                                                from: null
+                                                to: '---'
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /v1/items
+        :   requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                default:
+                                    from: null
+                                    to: '---'
+

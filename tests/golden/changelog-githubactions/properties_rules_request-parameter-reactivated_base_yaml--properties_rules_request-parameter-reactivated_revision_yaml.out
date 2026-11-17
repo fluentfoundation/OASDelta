@@ -1,0 +1,4 @@
+::error title=new-required-request-parameter,file=./properties/rules/request-parameter-reactivated_revision.yaml::in API POST /items/{id}.json added the new required `header` request parameter `id`
+::warning title=request-parameter-removed,file=./properties/rules/request-parameter-reactivated_revision.yaml::in API POST /items/{id}.json deleted the `path` request parameter `id`
+::notice title=request-parameter-reactivated,file=./properties/rules/request-parameter-reactivated_revision.yaml::in API POST /items/{id}.json `query` request parameter `status` was reactivated
+

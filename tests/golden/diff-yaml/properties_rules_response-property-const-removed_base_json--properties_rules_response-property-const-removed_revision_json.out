@@ -1,0 +1,70 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            owner:
+                                                                properties:
+                                                                    modified:
+                                                                        名前:
+                                                                            const:
+                                                                                from: 䞈ᗝ싋⋁쐾诚
+                                                                                to: null
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json; charset=utf-8:
+                                        schema:
+                                            required:
+                                                stringsdiff:
+                                                    deleted:
+                                                        - _under_
+                                            properties:
+                                                deleted:
+                                                    - _under_
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /store/order
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                owner:
+                                                    properties:
+                                                        modified:
+                                                            名前:
+                                                                const:
+                                                                    from: 䞈ᗝ싋⋁쐾诚
+                                                                    to: null
+        ?   method: PUT
+            path: /store/order
+        :   requestBody:
+                content:
+                    modified:
+                        application/json; charset=utf-8:
+                            schema:
+                                required:
+                                    stringsdiff:
+                                        deleted:
+                                            - _under_
+                                properties:
+                                    deleted:
+                                        - _under_
+

@@ -1,0 +1,17 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /owners/{ownerId}/pets
+- :warning: the request's body became not nullable
+- :warning: the request's body `type/format` changed from `integer, null/int64` to `number`
+-  the request body `multipart/form-data` default value `82.00` was removed
+-  the request's body exclusiveMaximum was unset from `1585.00`
+-  the request's body min was unset from `5.00`
+
+
+
+
+
+

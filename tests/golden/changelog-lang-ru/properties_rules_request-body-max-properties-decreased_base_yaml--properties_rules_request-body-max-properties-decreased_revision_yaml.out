@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[request-body-max-properties-decreased] в ./properties/rules/request-body-max-properties-decreased_revision.yaml
+	в API PUT /search
+		значение maxProperties у тела запроса уменьшено до `11`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-body-media-type-added] в ./properties/rules/request-body-max-properties-decreased_revision.yaml
+	в API PUT /search
+		добавлен тип медиа для тела запроса `application/vnd.api+json`
+
+

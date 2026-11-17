@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="request-parameter-type-generalized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `cookie` request parameter `榶河鲠Ɯ㳦཮⒚`, the `format` was widened from `date-time` to `none`</failure>
+    </testcase>
+    <testcase name="response-header-min-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `a/b` response header's min was set to `20.00` for the status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,12 @@
+5 changes: 5 error, 0 warning, 0 info
+error at ./properties/lifecycle_parameters_revision.yaml, in API GET /p deleted the `query` request parameter `removed` before the sunset date `2099-12-31` [request-parameter-removed-before-sunset]. 
+
+error at ./properties/lifecycle_parameters_revision.yaml, in API GET /p `query` request parameter `earlier` sunset date changed to an earlier date, from `2099-12-31` to `2020-01-01`, new sunset date must be not earlier than `2099-12-31` and at least `0` days from now [request-parameter-sunset-date-changed-too-small]. 
+
+error at ./properties/lifecycle_parameters_revision.yaml, in API GET /p `query` request parameter `too-small` sunset date `2020-01-01` is too small, must be at least `0` days from now [request-parameter-sunset-date-too-small]. 
+
+error at ./properties/lifecycle_parameters_revision.yaml, in API GET /p `query` request parameter `deleted` sunset date deleted, but deprecated=true kept [request-parameter-sunset-deleted]. 
+
+error at ./properties/lifecycle_parameters_revision.yaml, in API GET /p failed to parse sunset date for the `query` request parameter `bad`: `sunset date doesn't conform with RFC3339: not a date` [request-parameter-sunset-parse]. 
+
+

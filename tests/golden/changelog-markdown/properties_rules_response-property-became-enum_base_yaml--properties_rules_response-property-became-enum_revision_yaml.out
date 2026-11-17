@@ -1,0 +1,15 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /search
+- :warning: request body became required
+-  the `items/tag/0x1F` response property for the response status `2XX` was restricted to a list of enum values
+-  the `items/tag/price` response property for the response status `2XX` was restricted to a list of enum values
+
+
+
+
+
+

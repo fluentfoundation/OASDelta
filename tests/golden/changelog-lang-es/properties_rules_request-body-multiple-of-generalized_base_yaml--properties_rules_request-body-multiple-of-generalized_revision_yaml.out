@@ -1,0 +1,7 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-body-multiple-of-generalized] en ./properties/rules/request-body-multiple-of-generalized_revision.yaml
+	en API POST /ünïcode/ключ
+		el valor multipleOf del cuerpo de solicitud fue generalizado de `10.00` a `5.00`
+		Este cambio no es incompatible porque el multipleOf anterior es un múltiplo entero del nuevo, por lo que todos los valores previamente válidos siguen siendo válidos.
+
+

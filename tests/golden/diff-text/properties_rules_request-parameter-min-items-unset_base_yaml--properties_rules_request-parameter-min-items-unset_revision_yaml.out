@@ -1,0 +1,27 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /search
+- Modified query param: name
+  - Schema changed
+    - ReadOnly changed from false to true
+- Modified cookie param: !tag
+  - Schema changed
+    - Property 'OneOf' changed
+      - Schemas added: subschema #1, subschema #2
+    - Type changed from 'array' to ''
+    - MinItems changed from 3 to 0
+    - Items changed
+      - Schema deleted
+
+Other Changes
+-------------
+Servers changed
+- New server: https://2.example.com
+
+

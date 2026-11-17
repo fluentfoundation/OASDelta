@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-body-max-items-set] at ./properties/rules/response-body-max-items-set_revision.yaml
+	in API DELETE /items/{id}.json
+		the response's body maxItems was set to `11`
+
+

@@ -1,0 +1,49 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    DELETE:
+                        parameters:
+                            modified:
+                                header:
+                                    tag:
+                                        schema:
+                                            oneOf:
+                                                modified:
+                                                    - base:
+                                                        index: 1
+                                                      revision:
+                                                        index: 1
+                                                      diff:
+                                                        required:
+                                                            stringsdiff:
+                                                                added:
+                                                                    - kind
+                                                        properties:
+                                                            added:
+                                                                - kind
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /items/{id}.json
+        :   parameters:
+                modified:
+                    header:
+                        tag:
+                            schema:
+                                oneOf:
+                                    modified:
+                                        - base:
+                                            index: 1
+                                          revision:
+                                            index: 1
+                                          diff:
+                                            required:
+                                                stringsdiff:
+                                                    added:
+                                                        - kind
+                                            properties:
+                                                added:
+                                                    - kind
+

@@ -1,0 +1,13 @@
+paths:
+    added:
+        - /v1/items/v2
+    deleted:
+        - /v1/items
+endpoints:
+    added:
+        - method: GET
+          path: /v1/items/v2
+    deleted:
+        - method: GET
+          path: /v1/items
+

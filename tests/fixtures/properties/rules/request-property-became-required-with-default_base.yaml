@@ -1,0 +1,105 @@
+{
+  "components": {
+    "schemas": {
+      "Item": {
+        "format": "int32",
+        "type": "integer"
+      },
+      "Owner": {
+        "nullable": true,
+        "type": "boolean"
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "basic",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "title": "tag",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/pets": {
+      "put": {
+        "operationId": "put_pets",
+        "requestBody": {
+          "content": {
+            "application/xml": {
+              "schema": {
+                "properties": {
+                  "created": {
+                    "default": "pet",
+                    "description": "trailing ",
+                    "type": "string"
+                  },
+                  "owner": {
+                    "items": {
+                      "description": "price",
+                      "format": "custom",
+                      "nullable": true,
+                      "type": "boolean"
+                    },
+                    "type": "array"
+                  }
+                },
+                "required": [
+                  "owner"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "\u0007": {
+                      "properties": {
+                        "name": {
+                          "$ref": "#/components/schemas/Owner"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "玽誻᪇譋檜掦": {
+                      "description": "ᐾ륯韉渳쪁",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "玽誻᪇譋檜掦"
+                  ],
+                  "type": "object"
+                }
+              },
+              "application/vnd.api+json": {
+                "schema": {
+                  "description": "-",
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "type": "boolean"
+                }
+              }
+            },
+            "description": "tag"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "price"
+    }
+  ]
+}

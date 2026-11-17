@@ -1,0 +1,11 @@
+2 alterações: 2 error, 0 warning, 0 info
+error	[request-parameter-max-properties-set] em ./properties/rules/request-parameter-max-properties-set_revision.yaml
+	em API GET /v1/items
+		no parâmetro de requisição do tipo `cookie` e nome `ключ`, o valor maxProperties foi definido como `1`
+		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+
+error	[request-parameter-type-changed] em ./properties/rules/request-parameter-max-properties-set_revision.yaml
+	em API GET /v1/items
+		no parâmetro de requisição do tipo `cookie` e nome `ключ`, o `type` foi alterado de `integer` para `object`
+
+

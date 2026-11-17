@@ -1,0 +1,188 @@
+{
+  "components": {
+    "schemas": {
+      "Pet": {
+        "type": "string"
+      }
+    }
+  },
+  "info": {
+    "title": "㖧⣖䥛⬶",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/store/order": {
+      "delete": {
+        "deprecated": true,
+        "operationId": "delete_store_order",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "名前",
+            "required": false,
+            "schema": {
+              "items": {
+                "description": "a~b",
+                "nullable": true,
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "#hash",
+            "required": false,
+            "schema": {
+              "items": {
+                "deprecated": true,
+                "description": "status",
+                "minimum": -5,
+                "type": "number"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "in": "query",
+            "name": "kind",
+            "schema": {
+              "nullable": true,
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "kind",
+                  "properties": {
+                    "\u003cb\u003e\u0026amp;": {
+                      "properties": {
+                        "-": {
+                          "$ref": "#/components/schemas/Pet"
+                        },
+                        "1e3": {
+                          "type": "integer"
+                        },
+                        "name": {
+                          "$ref": "#/components/schemas/Pet"
+                        }
+                      },
+                      "required": [
+                        "name"
+                      ],
+                      "type": "object"
+                    },
+                    "status": {
+                      "properties": {
+                        "pet": {
+                          "description": "status",
+                          "nullable": true,
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "Ünïcode": {
+                      "description": " nbsp",
+                      "properties": {
+                        "a/b": {
+                          "nullable": true,
+                          "type": "number"
+                        },
+                        "owner": {
+                          "nullable": true,
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "owner",
+                        "a/b"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "\u003cb\u003e\u0026amp;",
+                    "status"
+                  ],
+                  "type": "object"
+                }
+              },
+              "application/vnd.api+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pet"
+                }
+              }
+            },
+            "description": "䂛ḅ랖壴䚱⠜ᮚడ"
+          },
+          "204": {
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            },
+            "description": "created"
+          }
+        }
+      },
+      "get": {
+        "operationId": "get_store_order",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "price",
+            "schema": {
+              "example": "😀",
+              "maximum": 41,
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": " nbsp",
+            "schema": {
+              "maxLength": 74,
+              "minLength": 5,
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "trailing ",
+            "required": false,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "2XX": {
+            "description": "status"
+          },
+          "500": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "format": "double",
+                  "minimum": -9,
+                  "nullable": true,
+                  "readOnly": true,
+                  "type": "number"
+                }
+              }
+            },
+            "description": "tag"
+          }
+        }
+      }
+    }
+  }
+}

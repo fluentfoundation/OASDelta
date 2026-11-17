@@ -1,0 +1,2 @@
+::notice title=response-body-max-items-set,file=./properties/rules/response-body-max-items-set_revision.yaml::in API DELETE /items/{id}.json the response's body maxItems was set to `11`
+

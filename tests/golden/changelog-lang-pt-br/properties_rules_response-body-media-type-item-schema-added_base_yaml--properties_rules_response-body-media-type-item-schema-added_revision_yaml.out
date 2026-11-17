@@ -1,0 +1,10 @@
+2 alterações: 0 error, 0 warning, 2 info
+info	[endpoint-added] em ./properties/rules/response-body-media-type-item-schema-added_revision.yaml
+	em API GET /added/kind
+		endpoint adicionado
+
+info	[response-body-media-type-item-schema-added] em ./properties/rules/response-body-media-type-item-schema-added_revision.yaml
+	em API POST /pets/{petId}
+		um esquema de item foi adicionado ao tipo de mídia `text/plain` da resposta com o status `2XX`
+
+

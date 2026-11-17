@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /v1/items
+- :warning: for the `cookie` request parameter `ключ`, the maxProperties was set to `1`
+- :warning: for the `cookie` request parameter `ключ`, the `type` was changed from `integer` to `object`
+
+
+
+
+
+

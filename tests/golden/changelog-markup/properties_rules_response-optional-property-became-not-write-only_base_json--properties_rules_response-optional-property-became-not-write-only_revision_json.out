@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /ünïcode/ключ
+-  the response optional property `status` became not write-only for the status `200`
+
+
+
+
+
+

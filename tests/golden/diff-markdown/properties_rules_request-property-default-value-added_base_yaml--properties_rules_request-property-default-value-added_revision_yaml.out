@@ -1,0 +1,18 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /store/order
+- Request body changed
+  - Content changed
+    - Modified media type: application/xml
+      - Schema changed
+        - Property 'AllOf' changed
+          - Modified schema: subschema #2
+            - Default changed from null to 77
+
+

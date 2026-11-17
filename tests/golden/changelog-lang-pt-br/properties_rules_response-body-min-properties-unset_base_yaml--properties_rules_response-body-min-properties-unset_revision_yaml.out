@@ -1,0 +1,18 @@
+4 alterações: 2 error, 0 warning, 2 info
+error	[response-body-min-properties-unset] em ./properties/rules/response-body-min-properties-unset_revision.yaml
+	em API PUT /store/order
+		o valor minProperties do corpo da resposta foi removido de `1`
+
+error	[response-body-type-changed] em ./properties/rules/response-body-min-properties-unset_revision.yaml
+	em API PUT /store/order
+		o `type` do corpo da resposta foi alterado de `object` para `string` para o status `400`
+
+info	[response-optional-property-removed] em ./properties/rules/response-body-min-properties-unset_revision.yaml
+	em API PUT /store/order
+		a propriedade opcional `created` foi removida da resposta com o status `400`
+
+info	[response-optional-property-removed] em ./properties/rules/response-body-min-properties-unset_revision.yaml
+	em API PUT /store/order
+		a propriedade opcional `empty` foi removida da resposta com o status `400`
+
+

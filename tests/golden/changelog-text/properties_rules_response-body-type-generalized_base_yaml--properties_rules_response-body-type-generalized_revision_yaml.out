@@ -1,0 +1,23 @@
+5 changes: 4 error, 0 warning, 1 info
+error	[response-body-max-unset] at ./properties/rules/response-body-type-generalized_revision.yaml
+	in API DELETE /ünïcode/ключ
+		the response's body max was unset from `886.00`
+
+error	[response-body-min-unset] at ./properties/rules/response-body-type-generalized_revision.yaml
+	in API DELETE /ünïcode/ключ
+		the response's body min was unset from `1.00`
+
+error	[response-body-type-generalized] at ./properties/rules/response-body-type-generalized_revision.yaml
+	in API DELETE /ünïcode/ключ
+		the response's body `type/format` was widened from `integer/int64` to `number` for status `204`
+
+error	[response-media-type-removed] at ./properties/rules/response-body-type-generalized_revision.yaml
+	in API DELETE /ünïcode/ключ
+		removed the media type `text/plain` for the response with the status `default`
+
+info	[response-body-type-compatible] at ./properties/rules/response-body-type-generalized_revision.yaml
+	in API DELETE /ünïcode/ключ
+		the response's body `type` changed from `string` to `number` for status `default` (backward compatible)
+		This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking.
+
+

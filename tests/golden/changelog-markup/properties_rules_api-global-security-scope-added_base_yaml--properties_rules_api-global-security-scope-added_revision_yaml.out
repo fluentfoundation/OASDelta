@@ -1,0 +1,10 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+
+## Security
+-  the security scope `write` was added to the global security scheme `openid`
+
+
+
+

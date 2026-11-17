@@ -1,0 +1,11 @@
+2 изменений: 0 error, 1 warning, 1 info
+warning	[request-body-max-items-set] в ./properties/rules/request-body-max-items-set_revision.yaml
+	в API PUT /pets
+		значение maxItems у тела запроса задано в `11`
+		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels. Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[response-optional-property-added] в ./properties/rules/request-body-max-items-set_revision.yaml
+	в API PUT /pets
+		добавлено необязательное свойство `items/즤ꇔ缦䎖糀䱢렄꧑` в ответе со статусом `default`
+
+

@@ -1,0 +1,16 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-2">Modified Endpoints: 2</h3>
+<hr>
+<p>GET /pets/{petId}</p>
+<ul>
+<li>New cookie param: <strong>bold</strong></li>
+<li>Deleted query param: <strong>bold</strong></li>
+</ul>
+<p>GET /v1/items</p>
+<ul>
+<li>Deleted query param: 䔫䪐뫑襖</li>
+</ul>
+

@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./properties/rules/response-body-exclusive-min-set_revision.json, in API DELETE /search the response's body exclusiveMinimum was set to `-3.00` [response-body-exclusive-min-set]. 
+
+

@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    PATCH:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json; charset=utf-8:
+                                        schema:
+                                            items:
+                                                properties:
+                                                    modified:
+                                                        "null":
+                                                            maxLength:
+                                                                from: 9
+                                                                to: null
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /items/{id}.json
+        :   requestBody:
+                content:
+                    modified:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    properties:
+                                        modified:
+                                            "null":
+                                                maxLength:
+                                                    from: 9
+                                                    to: null
+components:
+    schemas:
+        modified:
+            Error:
+                properties:
+                    modified:
+                        "null":
+                            maxLength:
+                                from: 9
+                                to: null
+

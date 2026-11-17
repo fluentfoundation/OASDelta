@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "404":
+                                    headers:
+                                        modified:
+                                            條졿꽐:
+                                                schema:
+                                                    maxLength:
+                                                        from: 104
+                                                        to: 9
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "404":
+                        headers:
+                            modified:
+                                條졿꽐:
+                                    schema:
+                                        maxLength:
+                                            from: 104
+                                            to: 9
+

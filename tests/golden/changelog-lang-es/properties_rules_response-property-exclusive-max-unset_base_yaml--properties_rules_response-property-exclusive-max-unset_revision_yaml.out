@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-property-exclusive-max-unset] en ./properties/rules/response-property-exclusive-max-unset_revision.yaml
+	en API PUT /search
+		el valor exclusiveMaximum de la propiedad de respuesta `kind/oneOf[subschema #3]/` fue removido de `1272.00` para el estado `204`
+
+

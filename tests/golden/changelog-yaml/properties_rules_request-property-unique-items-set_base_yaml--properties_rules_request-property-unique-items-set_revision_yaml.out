@@ -1,0 +1,26 @@
+- id: api-removed-without-deprecation
+  text: api removed without deprecation
+  level: 3
+  operation: DELETE
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-property-unique-items-set_base.yaml
+    line: 22
+    column: 9
+    endLine: 66
+    endColumn: 38
+  fingerprint: f59c4c486f2d
+- id: request-property-unique-items-set
+  text: the `items/` request property's uniqueItems was set to true
+  level: 3
+  operation: PUT
+  operationId: 짃ޚ濑ߋ䮸䓅흳
+  path: /pets
+  section: paths
+  revisionSource:
+    file: ./properties/rules/request-property-unique-items-set_revision.yaml
+    line: 37
+    column: 33
+  fingerprint: a43b06611ee9
+

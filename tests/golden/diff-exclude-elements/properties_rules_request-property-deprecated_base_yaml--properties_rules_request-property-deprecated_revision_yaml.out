@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/owners/{ownerId}/pets":{"operations":{"modified":{"PUT":{"requestBody":{"content":{"modified":{"application/vnd.api+json":{"schema":{"items":{"deprecated":{"from":false,"to":true}}}}}}}}}}}}}}

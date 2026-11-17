@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/search":{"operations":{"modified":{"PUT":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"contains":{"schemaDeleted":true},"maxContains":{"from":4,"to":null}}}}}}}}}}}}}

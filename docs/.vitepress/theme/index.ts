@@ -4,6 +4,7 @@ import BenchHeadline from './components/BenchHeadline.vue'
 import BenchChart from './components/BenchChart.vue'
 import BenchTable from './components/BenchTable.vue'
 import BenchMeta from './components/BenchMeta.vue'
+import RuleCoverage from './components/RuleCoverage.vue'
 import './style.css'
 
 export default {
@@ -13,5 +14,6 @@ export default {
     app.component('BenchChart', BenchChart)
     app.component('BenchTable', BenchTable)
     app.component('BenchMeta', BenchMeta)
+    app.component('RuleCoverage', RuleCoverage)
   },
 } satisfies Theme

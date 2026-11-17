@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="response-body-multiple-of-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body multipleOf was unset from `5.00`</failure>
+    </testcase>
+    <testcase name="response-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body `type` changed from `number, null` to `object` for status `400`</failure>
+    </testcase>
+    <testcase name="response-body-became-not-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body became not nullable</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

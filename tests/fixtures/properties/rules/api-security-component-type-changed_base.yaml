@@ -1,0 +1,130 @@
+# Fires api-security-component-type-changed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            enum:
+                - <b>&amp;
+                - Ünïcode
+            format: uuid
+            nullable: true
+            pattern: ^.*$
+            type: string
+        Item:
+            type: object
+        Owner:
+            additionalProperties: true
+            description: a~b
+            properties:
+                '...':
+                    nullable: true
+                    type: number
+                tag:
+                    enum:
+                        - -10
+                        - 65
+                    maximum: 77
+                    nullable: true
+                    type: number
+            required:
+                - '...'
+            type: object
+    securitySchemes:
+        api_key:
+            in: query
+            name: ' leading'
+            type: apiKey
+        bearer:
+            bearerFormat: JWT
+            scheme: basic
+            type: http
+info:
+    title: 名前
+    version: v1
+openapi: 3.0.3
+paths:
+    /search:
+        post:
+            parameters:
+                - in: cookie
+                  name: '"quoted"'
+                  required: false
+                  schema:
+                    enum:
+                        - true
+                        - false
+                    format: custom
+                    nullable: true
+                    type: boolean
+                    writeOnly: true
+                - in: cookie
+                  name: "yes"
+                  schema:
+                    properties:
+                        name:
+                            deprecated: true
+                            readOnly: true
+                            type: boolean
+                        䀨쨵㌞聡鹙薌룻뵑:
+                            nullable: true
+                            type: boolean
+                    required:
+                        - 䀨쨵㌞聡鹙薌룻뵑
+                        - name
+                    type: object
+            responses:
+                2XX:
+                    description: ключ
+                "500":
+                    content:
+                        application/xml:
+                            schema:
+                                items:
+                                    type: number
+                                type: array
+                                uniqueItems: true
+                    description: ключ
+                    headers:
+                        名前:
+                            required: false
+                            schema:
+                                format: byte
+                                type: string
+        put:
+            operationId: put_search
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            default: 88
+                            type: integer
+                required: true
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                description: '*star'
+                                properties:
+                                    ' ':
+                                        description: 崴늟같혱꧈◕Ꝝ
+                                        format: int32
+                                        nullable: true
+                                        type: integer
+                                    '---':
+                                        oneOf:
+                                            - description: tag
+                                              type: string
+                                            - description: ' leading'
+                                              type: string
+                                    "no":
+                                        $ref: '#/components/schemas/Owner'
+                                    pet:
+                                        type: object
+                                type: object
+                        text/plain:
+                            schema:
+                                maxLength: 211
+                                type: string
+                    description: '|'
+                "400":
+                    description: kind

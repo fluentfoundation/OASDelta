@@ -1,0 +1,21 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /items/{id}.json
+- Responses changed
+  - Modified response: 204
+    - Description changed from null to 'status'
+    - Content changed
+      - New media type: application/json; charset=utf-8
+
+GET /owners/{ownerId}/pets
+- Modified cookie param: owner
+  - Schema changed
+    - MaxProps changed from 11 to null
+
+

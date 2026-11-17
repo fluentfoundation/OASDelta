@@ -1,0 +1,13 @@
+<h3 id="new-endpoints-1">New Endpoints: 1</h3>
+<hr>
+<p>GET /added/%C2%A0nbsp</p>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PATCH /owners/{ownerId}/pets</p>
+<ul>
+<li>New query param: 㿢몜짐躘훕綏冔⌰</li>
+<li>Deleted query param: pet</li>
+</ul>
+

@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/owners/{ownerId}/pets":{"operations":{"modified":{"PATCH":{"requestBody":{"content":{"modified":{"application/xml":{"schema":{"contains":{"schemaAdded":true},"maxContains":{"from":null,"to":1}}}}}}}}}}}}}

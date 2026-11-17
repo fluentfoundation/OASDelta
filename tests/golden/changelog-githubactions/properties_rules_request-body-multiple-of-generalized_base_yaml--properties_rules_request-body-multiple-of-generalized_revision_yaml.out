@@ -1,0 +1,2 @@
+::notice title=request-body-multiple-of-generalized,file=./properties/rules/request-body-multiple-of-generalized_revision.yaml,line=112,col=29::in API POST /ünïcode/ключ the request's body multipleOf was generalized from `10.00` to `5.00`
+

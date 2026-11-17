@@ -1,0 +1,18 @@
+4 cambios: 0 error, 0 warning, 4 info
+info	[api-security-component-oauth-scope-removed]
+	en components/securitySchemes
+		en el esquema de seguridad `oauth`, el flujo OAuth `clientCredentials` removió el alcance `write`
+
+info	[endpoint-added] en ./properties/rules/api-security-component-oauth-scope-removed_revision.yaml
+	en API GET /added/%C2%A0nbsp
+		endpoint agregado
+
+info	[new-optional-request-parameter] en ./properties/rules/api-security-component-oauth-scope-removed_revision.yaml
+	en API PATCH /owners/{ownerId}/pets
+		agregado el nuevo parámetro `query` de solicitud opcional `㿢몜짐躘훕綏冔⌰`
+
+info	[request-parameter-removed-with-deprecation] en ./properties/rules/api-security-component-oauth-scope-removed_revision.yaml
+	en API PATCH /owners/{ownerId}/pets
+		eliminado el parámetro `query` de solicitud `pet` con deprecación
+
+

@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "400":
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-8:
+                                                schema:
+                                                    minProps:
+                                                        from: 1
+                                                        to: 4
+endpoints:
+    modified:
+        ?   method: GET
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "400":
+                        content:
+                            modified:
+                                application/json; charset=utf-8:
+                                    schema:
+                                        minProps:
+                                            from: 1
+                                            to: 4
+

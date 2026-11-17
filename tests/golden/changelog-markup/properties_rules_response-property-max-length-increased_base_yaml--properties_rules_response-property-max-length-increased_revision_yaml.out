@@ -1,0 +1,19 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /ünïcode/ключ
+- :warning: the response body contentMediaType changed from `application/json` to `` for the status `default` (media type: */*)
+- :warning: removed 'contentSchema' from the response body for the status `default` (media type: */*)
+- :warning: the `anyOf[subschema #3]/*star` response property's maxLength was increased from `3` to `107` for the response status `default` (media type: application/json; charset=utf-8)
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

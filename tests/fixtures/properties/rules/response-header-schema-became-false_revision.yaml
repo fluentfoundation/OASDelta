@@ -1,0 +1,116 @@
+# Fires response-header-schema-became-false (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        oauth:
+            flows:
+                clientCredentials:
+                    refreshUrl: https://auth.example.com/refresh
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: 名前
+    version: v1
+openapi: 3.1.0
+paths:
+    /pets:
+        delete:
+            deprecated: true
+            responses:
+                "200":
+                    content:
+                        '*/*':
+                            schema:
+                                exclusiveMaximum: 1273
+                                format: double
+                                type: number
+                        application/xml:
+                            schema:
+                                items:
+                                    items:
+                                        type:
+                                            - number
+                                            - "null"
+                                    type: array
+                                type: array
+                    description: pet
+                default:
+                    content:
+                        '*/*':
+                            schema:
+                                items:
+                                    discriminator:
+                                        propertyName: created
+                                    oneOf:
+                                        - minimum: -6
+                                          type: number
+                                        - format: float
+                                          type:
+                                            - number
+                                            - "null"
+                                type: array
+                        application/vnd.api+json:
+                            schema:
+                                enum:
+                                    - 7
+                                    - 17
+                                format: int32
+                                minimum: 10
+                                type: integer
+                    description: Ünïcode
+            summary: 名前
+        get:
+            deprecated: true
+            description: id
+            operationId: get_pets
+            responses:
+                "204":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    minimum: 10
+                                    type:
+                                        - number
+                                        - "null"
+                                maxItems: 62
+                                type: array
+                    description: tag
+                    headers:
+                        ' leading':
+                            schema: false
+                        Ünïcode:
+                            required: false
+                            schema:
+                                format: double
+                                maximum: 194
+                                type:
+                                    - number
+                                    - "null"
+            tags:
+                - 名前
+        patch:
+            parameters:
+                - in: cookie
+                  name: pet
+                  schema:
+                    anyOf:
+                        - default: false
+                          type:
+                            - boolean
+                            - "null"
+                        - minimum: -9
+                          type: number
+                        - description: Ünïcode
+                          format: binary
+                          type:
+                            - string
+                            - "null"
+            responses:
+                "200":
+                    description: price
+servers:
+    - url: https://api.example.com/v2

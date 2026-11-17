@@ -1,0 +1,33 @@
+# Fires response-body-exclusive-min-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: C:\path
+    version: v1
+openapi: 3.1.0
+paths:
+    /pets/{petId}:
+        delete:
+            operationId: delete_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                2XX:
+                    description: tag
+                "400":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                exclusiveMinimum: -7
+                                maximum: 705
+                                type:
+                                    - number
+                                    - "null"
+                    description: 칞쒀⥨䓊策
+                "404":
+                    description: "\a"
+tags:
+    - name: status
+    - name: id

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="response-header-max-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `**bold**` response header's max was set to `6.00` for the status `default`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-non-success-status-added] at ./properties/rules/response-non-success-status-added_revision.yaml
+	in API PATCH /store/order
+		added the non-success response with the status `400`
+
+

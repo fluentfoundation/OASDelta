@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[response-optional-write-only-property-added] em ./properties/rules/response-optional-write-only-property-added_revision.json
+	em API POST /items/{id}.json
+		a propriedade opcional somente escrita `a: b/items/kind` foi adicionada à resposta com o status `2XX`
+
+

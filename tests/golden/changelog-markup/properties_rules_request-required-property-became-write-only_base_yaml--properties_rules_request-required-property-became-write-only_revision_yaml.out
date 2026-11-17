@@ -1,0 +1,17 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /search
+- :warning: the request property ``tick`` became not nullable
+-  removed the enum constraint from the request property ``tick``
+-  request property ``tick`` reactivated
+-  the ``tick`` request property `type` changed from `integer, null` to `string` (backward compatible)
+-  the request required property ``tick`` became write-only
+
+
+
+
+
+

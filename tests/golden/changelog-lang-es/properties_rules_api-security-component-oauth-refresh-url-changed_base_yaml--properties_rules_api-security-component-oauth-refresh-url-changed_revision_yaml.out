@@ -1,0 +1,11 @@
+2 cambios: 1 error, 1 warning, 0 info
+error	[request-body-type-changed] en ./properties/rules/api-security-component-oauth-refresh-url-changed_revision.yaml
+	en API POST /owners/{ownerId}/pets
+		el `type` del cuerpo de solicitud fue cambiado de `array<array<string/date-time>>` a `boolean`
+
+warning	[api-security-component-oauth-refresh-url-changed]
+	en components/securitySchemes
+		en el esquema de seguridad `oauth`, la URL de actualización del flujo OAuth `clientCredentials` fue cambiada de `https://auth.example.com/refresh` a ``
+		Esta es una advertencia porque la especificación no indica si las credenciales obtenidas a través de la URL anterior siguen siendo aceptadas.
+
+

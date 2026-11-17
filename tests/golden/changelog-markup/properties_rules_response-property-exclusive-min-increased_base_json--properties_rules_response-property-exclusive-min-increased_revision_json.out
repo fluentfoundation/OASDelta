@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /owners/{ownerId}/pets
+-  the `anyOf[subschema #2]/items/` response property's exclusiveMinimum was increased from `-10.00` to `-7.00` for the response status `400`
+
+
+
+
+
+

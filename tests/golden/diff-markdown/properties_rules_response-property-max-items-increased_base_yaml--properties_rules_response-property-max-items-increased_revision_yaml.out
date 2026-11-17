@@ -1,0 +1,22 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /store/order
+- Modified header param:  leading
+  - Explode changed from null to true
+
+PUT /store/order
+- Responses changed
+  - Modified response: default
+    - Content changed
+      - Modified media type: application/json; charset=utf-8
+        - Schema changed
+          - Items changed
+            - MaxItems changed from 30 to 32
+
+

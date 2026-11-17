@@ -1,0 +1,166 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-1">Deleted Endpoints: 1</h3>
+<hr>
+<p>PUT /owners/{ownerId}/pets</p>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>POST /pets/{petId}</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json; charset=utf-8
+<ul>
+<li>Schema changed
+<ul>
+<li>Items changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: Ünïcode
+<ul>
+<li>Required changed
+<ul>
+<li>New required property: price</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>Modified property: price
+<ul>
+<li>Type changed from 'object' to 'string'</li>
+<li>WriteOnly changed from false to true</li>
+<li>Required changed
+<ul>
+<li>Deleted required property: %20</li>
+<li>Deleted required property: &amp;anchor</li>
+<li>Deleted required property: id</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>Deleted property: %20</li>
+<li>Deleted property: &amp;anchor</li>
+<li>Deleted property: id</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 204
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json; charset=utf-8
+<ul>
+<li>Schema changed
+<ul>
+<li>Required changed
+<ul>
+<li>New required property: price</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>Modified property: price
+<ul>
+<li>Type changed from 'object' to 'string'</li>
+<li>WriteOnly changed from false to true</li>
+<li>Required changed
+<ul>
+<li>Deleted required property: %20</li>
+<li>Deleted required property: &amp;anchor</li>
+<li>Deleted required property: id</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>Deleted property: %20</li>
+<li>Deleted property: &amp;anchor</li>
+<li>Deleted property: id</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified media type: application/xml
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: no
+<ul>
+<li>Items changed
+<ul>
+<li>Required changed
+<ul>
+<li>New required property: price</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>Modified property: price
+<ul>
+<li>Type changed from 'object' to 'string'</li>
+<li>WriteOnly changed from false to true</li>
+<li>Required changed
+<ul>
+<li>Deleted required property: %20</li>
+<li>Deleted required property: &amp;anchor</li>
+<li>Deleted required property: id</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>Deleted property: %20</li>
+<li>Deleted property: &amp;anchor</li>
+<li>Deleted property: id</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

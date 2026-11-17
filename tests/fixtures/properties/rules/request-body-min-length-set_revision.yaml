@@ -1,0 +1,253 @@
+# Fires request-body-min-length-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            format: double
+            nullable: true
+            type: number
+        Item:
+            allOf:
+                - maximum: 778
+                  type: number
+                - oneOf:
+                    - maximum: 58
+                      minimum: 10
+                      nullable: true
+                      type: integer
+                    - default: false
+                      description: created
+                      format: custom
+                      nullable: true
+                      type: boolean
+                      writeOnly: true
+                    - format: int64
+                      type: integer
+        Pet:
+            nullable: true
+            type: boolean
+    securitySchemes:
+        bearer:
+            scheme: basic
+            type: http
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: price
+    version: v1
+openapi: 3.0.3
+paths:
+    /pets/{petId}:
+        delete:
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - explode: false
+                  in: header
+                  name: price
+                  schema:
+                    description: ' '
+                    nullable: true
+                    type: number
+            responses:
+                "204":
+                    description: kind
+            summary: "yes"
+        get:
+            deprecated: true
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "404":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                items:
+                                    maximum: 261
+                                    nullable: true
+                                    type: number
+                                minItems: 3
+                                type: array
+                    description: ключ
+                default:
+                    content:
+                        '*/*':
+                            schema:
+                                maximum: 748
+                                type: integer
+                        application/vnd.api+json:
+                            schema:
+                                type: boolean
+                    description: tag
+            security:
+                - bearer: []
+                - openid: []
+            summary: kind
+        put:
+            operationId: pet
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: empty
+                  required: false
+                  schema:
+                    nullable: true
+                    readOnly: true
+                    type: boolean
+                - in: header
+                  name: '...'
+                  required: false
+                  schema:
+                    items:
+                        description: 名前
+                        type: integer
+                    type: array
+                    uniqueItems: true
+                - in: query
+                  name: 名前
+                  schema:
+                    enum:
+                        - true
+                        - false
+                    example: name
+                    type: boolean
+            requestBody:
+                content:
+                    text/plain:
+                        schema:
+                            enum:
+                                - 名前
+                            format: binary
+                            minLength: 2
+                            type: string
+                required: false
+            responses:
+                "400":
+                    description: '|'
+                "404":
+                    description: '%20'
+    /ünïcode/ключ:
+        delete:
+            operationId: delete_ünïcode_ключ
+            responses:
+                "204":
+                    description: pet
+                "400":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                description: 'trailing '
+                                type: object
+                        multipart/form-data:
+                            schema:
+                                nullable: true
+                                type: boolean
+                    description: price
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                deprecated: true
+                                type: string
+                    description: a/b
+        patch:
+            operationId: patch_ünïcode_ключ
+            parameters:
+                - description: a/b
+                  in: header
+                  name: a~b
+                  required: false
+                  schema:
+                    description: id
+                    properties:
+                        kind:
+                            description: 名前
+                            maximum: 129
+                            nullable: true
+                            readOnly: true
+                            type: number
+                    required:
+                        - kind
+                    type: object
+            responses:
+                "200":
+                    description: 名前
+                "400":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                format: custom
+                                nullable: true
+                                type: boolean
+                        application/vnd.api+json:
+                            schema:
+                                properties:
+                                    pet:
+                                        items:
+                                            format: double
+                                            nullable: true
+                                            type: number
+                                        minItems: 3
+                                        type: array
+                                        uniqueItems: true
+                                    tag:
+                                        enum:
+                                            - 13
+                                        example: ꞯ賈㱘곹⩊憒麝
+                                        type: integer
+                                required:
+                                    - pet
+                                type: object
+                    description: tag
+                    headers:
+                        status:
+                            schema:
+                                format: int32
+                                type: integer
+        post:
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            deprecated: true
+                            enum:
+                                - price
+                                - a/b
+                                - kind
+                            minLength: 5
+                            nullable: true
+                            readOnly: true
+                            type: string
+                required: true
+            responses:
+                2XX:
+                    content:
+                        multipart/form-data:
+                            schema:
+                                description: ключ
+                                nullable: true
+                                type: number
+                        text/plain:
+                            schema:
+                                format: int32
+                                maximum: 706
+                                minimum: 9
+                                type: integer
+                    description: id
+            security:
+                - bearer: []
+                - openid: []
+tags:
+    - name: owner
+    - name: status

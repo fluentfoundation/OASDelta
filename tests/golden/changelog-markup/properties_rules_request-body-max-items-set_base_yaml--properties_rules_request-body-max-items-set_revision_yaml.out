@@ -1,0 +1,14 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /pets
+- :warning: the request's body maxItems was set to `11`
+-  added the optional property `items/즤ꇔ缦䎖糀䱢렄꧑` to the response with the `default` status
+
+
+
+
+
+

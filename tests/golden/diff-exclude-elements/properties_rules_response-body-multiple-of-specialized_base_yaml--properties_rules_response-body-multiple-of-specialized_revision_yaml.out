@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/ünïcode/ключ":{"operations":{"modified":{"GET":{"responses":{"modified":{"2XX":{"content":{"modified":{"application/json":{"schema":{"multipleOf":{"from":5,"to":10}}}}}}}}},"PUT":{"responses":{"modified":{"200":{"headers":{"deleted":["x-added"]}}}}}}}}}}}

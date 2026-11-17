@@ -1,0 +1,1 @@
+[{"id":"request-body-max-items-decreased","text":"the request's body maxItems was decreased to `5`","level":3,"operation":"POST","operationId":"post_store_order","path":"/store/order","section":"paths","fingerprint":"38cd89a9342b"}]

@@ -1,0 +1,65 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-2">Modified Endpoints: 2</h3>
+<hr>
+<p>DELETE /pets</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 500
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: multipart/form-data
+<ul>
+<li>Schema changed
+<ul>
+<li>Property 'OneOf' changed
+<ul>
+<li>Modified schema: subschema #1
+<ul>
+<li>Property 'AnyOf' changed
+<ul>
+<li>Modified schema: subschema #2
+<ul>
+<li>MultipleOf changed from 2 to 4</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Format changed from '' to 'float'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>PATCH /search</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 500
+<ul>
+<li>Description changed from '名前' to null</li>
+<li>Headers changed
+<ul>
+<li>Deleted header: 퉈祅闄췱</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

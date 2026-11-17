@@ -1,0 +1,66 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-2">Modified Endpoints: 2</h3>
+<hr>
+<p>GET /pets</p>
+<ul>
+<li>Modified query param: | table |
+<ul>
+<li>Schema changed
+<ul>
+<li>Discriminator changed</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>POST /store/order</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/xml
+<ul>
+<li>Schema changed
+<ul>
+<li>UniqueItems changed from false to true</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 201
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: text/plain
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'null, number' to 'array'</li>
+<li>Description changed from 'null' to ''</li>
+<li>Items changed
+<ul>
+<li>Schema added</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

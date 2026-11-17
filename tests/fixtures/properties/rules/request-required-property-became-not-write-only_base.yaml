@@ -1,0 +1,80 @@
+# Fires request-required-property-became-not-write-only (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: "\U0001F600"
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        put:
+            operationId: put_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            enum:
+                                - 4
+                                - 10
+                                - 0
+                            maximum: 308
+                            nullable: true
+                            type: integer
+                    application/xml:
+                        schema:
+                            properties:
+                                owner:
+                                    description: C:\path
+                                    properties:
+                                        kind:
+                                            description: pet
+                                            example: '''single'''
+                                            format: uuid
+                                            nullable: true
+                                            type: string
+                                            writeOnly: true
+                                        status:
+                                            minimum: 2
+                                            type: integer
+                                            writeOnly: true
+                                        'trailing ':
+                                            description: price
+                                            type: boolean
+                                        ключ:
+                                            nullable: true
+                                            type: boolean
+                                    required:
+                                        - kind
+                                        - status
+                                        - 'trailing '
+                                    type: object
+                            required:
+                                - owner
+                            type: object
+                            x-extensible-enum:
+                                - pet
+            responses:
+                "200":
+                    description: "~"
+                default:
+                    content:
+                        application/xml:
+                            schema:
+                                nullable: true
+                                type: integer
+                        multipart/form-data:
+                            schema:
+                                nullable: true
+                                type: string
+                    description: tag
+                    headers:
+                        tag:
+                            schema:
+                                description: status
+                                minimum: 1
+                                nullable: true
+                                type: integer

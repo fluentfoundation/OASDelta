@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    maxItems:
+                                                        from: null
+                                                        to: 11
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        maxItems:
+                                            from: null
+                                            to: 11
+

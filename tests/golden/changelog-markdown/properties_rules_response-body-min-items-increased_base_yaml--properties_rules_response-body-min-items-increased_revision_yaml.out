@@ -1,0 +1,17 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /search
+-  the `名前` response property's minItems was increased from `1` to `4` for the response status `200`
+
+
+### PUT /search
+-  the response's body minItems was increased from `1` to `4`
+
+
+
+
+
+

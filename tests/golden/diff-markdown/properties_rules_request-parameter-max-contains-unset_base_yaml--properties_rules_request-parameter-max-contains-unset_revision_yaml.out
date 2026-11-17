@@ -1,0 +1,24 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /items/{id}.json
+- Modified path param: id
+  - Schema changed
+- Modified header param: ключ
+  - Example changed from '暔퐝求㝍蹥䦋' to null
+- Request body changed
+  - Content changed
+    - Modified media type: multipart/form-data
+      - Schema changed
+        - Properties changed
+          - Modified property: owner
+            - Items changed
+              - Extensions changed
+                - Deleted extension: x-id
+
+

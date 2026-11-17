@@ -1,0 +1,30 @@
+{
+  "components": {
+    "schemas": {
+      "Owner": {
+        "items": {
+          "deprecated": true,
+          "type": "boolean"
+        },
+        "minItems": 1,
+        "type": "array"
+      }
+    }
+  },
+  "info": {
+    "title": "price",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/pets": {}
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com/v2"
+    },
+    {
+      "url": "https://api.example.com"
+    }
+  ]
+}

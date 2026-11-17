@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/xml:
+                                        schema:
+                                            contains:
+                                                schemaDeleted: true
+                                            minContains:
+                                                from: 2
+                                                to: null
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /v1/items
+        :   requestBody:
+                content:
+                    modified:
+                        application/xml:
+                            schema:
+                                contains:
+                                    schemaDeleted: true
+                                minContains:
+                                    from: 2
+                                    to: null
+

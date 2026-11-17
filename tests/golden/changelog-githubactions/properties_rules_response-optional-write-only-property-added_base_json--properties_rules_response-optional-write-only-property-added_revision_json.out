@@ -1,0 +1,2 @@
+::notice title=response-optional-write-only-property-added,file=./properties/rules/response-optional-write-only-property-added_revision.json::in API POST /items/{id}.json added the optional write-only property `a: b/items/kind` to the response with the `2XX` status
+

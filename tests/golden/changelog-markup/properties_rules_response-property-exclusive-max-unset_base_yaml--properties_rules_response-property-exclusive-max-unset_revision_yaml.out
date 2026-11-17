@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /search
+- :warning: the `kind/oneOf[subschema #3]/` response property's exclusiveMaximum was unset from `1272.00` for the response status `204`
+
+
+
+
+
+

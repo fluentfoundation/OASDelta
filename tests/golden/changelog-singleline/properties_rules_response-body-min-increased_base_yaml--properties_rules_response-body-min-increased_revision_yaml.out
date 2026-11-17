@@ -1,0 +1,6 @@
+2 changes: 0 error, 0 warning, 2 info
+info at ./properties/rules/response-body-min-increased_revision.yaml, in API PUT /items/{id}.json added `subschema #1` to the response body `allOf` list for the response status `201` [response-body-all-of-added]. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+
+info at ./properties/rules/response-body-min-increased_revision.yaml, in API PUT /items/{id}.json the response's body min was increased from `-6.00` to `-3.00` [response-body-min-increased]. 
+
+

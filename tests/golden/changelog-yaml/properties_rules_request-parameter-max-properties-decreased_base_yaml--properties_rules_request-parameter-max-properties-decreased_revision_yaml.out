@@ -1,0 +1,17 @@
+- id: request-parameter-max-properties-decreased
+  text: for the `cookie` request parameter `名前`, the maxProperties was decreased from `15` to `13`
+  level: 3
+  operation: GET
+  operationId: ключ
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-max-properties-decreased_base.yaml
+    line: 34
+    column: 21
+  revisionSource:
+    file: ./properties/rules/request-parameter-max-properties-decreased_revision.yaml
+    line: 34
+    column: 21
+  fingerprint: 25b088b5a979
+

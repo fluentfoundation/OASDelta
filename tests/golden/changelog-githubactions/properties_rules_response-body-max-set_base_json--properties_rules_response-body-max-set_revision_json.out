@@ -1,0 +1,2 @@
+::notice title=response-body-max-set,file=./properties/rules/response-body-max-set_revision.json::in API PATCH /owners/{ownerId}/pets the response's body max was set to `21.00`
+

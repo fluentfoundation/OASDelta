@@ -1,0 +1,22 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /items/{id}.json
+- :warning: the `'single'` request property's minItems was increased to `2`
+
+
+### DELETE /pets/{petId}
+- :warning: added the new path request parameter `id`
+- :warning: deleted the `header` request parameter `id`
+
+
+### PATCH /pets/{petId}
+- :warning: deleted the `path` request parameter `petId`
+
+
+
+
+
+

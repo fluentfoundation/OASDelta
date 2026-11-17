@@ -1,0 +1,81 @@
+19 изменений: 2 error, 2 warning, 15 info
+error	[api-removed-without-deprecation] в ./properties/rules/response-write-only-property-became-required_base.yaml
+	в API PUT /owners/{ownerId}/pets
+		API удалён без deprecation
+
+error	[request-property-became-required] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		поле запроса `items/Ünïcode/price` стало обязательным
+
+warning	[request-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		удалено поле запроса `items/Ünïcode/price/%20`
+
+warning	[request-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		удалено поле запроса `items/Ünïcode/price/&anchor`
+
+info	[request-optional-property-became-write-only] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		необязательное поле запроса `items/Ünïcode/price` стало только для записи
+
+info	[request-property-removed-with-deprecation] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		удалено устаревшее поле запроса `items/Ünïcode/price/id`
+
+info	[request-property-type-compatible] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		у поля запроса `items/Ünïcode/price` `type` изменён с `object` до `string` (обратно совместимо)
+		Это изменение обратно совместимо, потому что тип медиа не является строго типизированным (например XML), где любое значение может быть представлено как текст, поэтому тип не проверяется при передаче. При строго типизированном типе медиа, таком как JSON, это же изменение было бы ломающим.
+
+info	[response-optional-property-became-write-only] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		необязательное свойство `no/items/price` перестало быть только для записи для ответа со статусом `204` (media type: application/xml)
+
+info	[response-optional-property-became-write-only] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		необязательное свойство `price` перестало быть только для записи для ответа со статусом `204` (media type: application/json; charset=utf-8)
+
+info	[response-property-became-required] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		свойство `no/items/price` перестало быть необязательным для ответа со статусом `204` (media type: application/xml)
+
+info	[response-property-type-changed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		у свойства ответа `no/items/price` `type` изменён с `object` на `string` для статуса `204` (media type: application/xml)
+		Свойство доступно только для записи, поэтому оно не встречается в ответах, и это изменение не может сделать ответ недействительным.
+
+info	[response-property-type-changed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		у свойства ответа `price` `type` изменён с `object` на `string` для статуса `204` (media type: application/json; charset=utf-8)
+		Свойство доступно только для записи, поэтому оно не встречается в ответах, и это изменение не может сделать ответ недействительным.
+
+info	[response-required-property-removed-with-deprecation] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		удалено устаревшее обязательное поле ответа `no/items/price/id` из ответа со статусом `204` (media type: application/xml)
+
+info	[response-required-property-removed-with-deprecation] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		удалено устаревшее обязательное поле ответа `price/id` из ответа со статусом `204` (media type: application/json; charset=utf-8)
+
+info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		удалено обязательное свойство только для записи `no/items/price/%20` из ответа со статусом `204` (media type: application/xml)
+
+info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		удалено обязательное свойство только для записи `no/items/price/&anchor` из ответа со статусом `204` (media type: application/xml)
+
+info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		удалено обязательное свойство только для записи `price/%20` из ответа со статусом `204` (media type: application/json; charset=utf-8)
+
+info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		удалено обязательное свойство только для записи `price/&anchor` из ответа со статусом `204` (media type: application/json; charset=utf-8)
+
+info	[response-write-only-property-became-required] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+	в API POST /pets/{petId}
+		свойство только для записи `price` перестало быть необязательным для ответа со статусом `204` (media type: application/json; charset=utf-8)
+
+

@@ -108,6 +108,17 @@ internal sealed class SpecPair
         return sb.ToString();
     }
 
+    private SpecPair(Map @base, Map revision, Edit[] edits, List<string> applied, bool baseJson, bool revisionJson, string stem)
+    {
+        (Base, Revision, Edits, Applied, BaseJson, RevisionJson, Stem) = (@base, revision, edits, applied, baseJson, revisionJson, stem);
+    }
+
+    /// <summary>The same two documents the other way round: the revision as the base.</summary>
+    public SpecPair Reversed() => new(Revision, Base, Edits, [.. Applied.Select(a => "reversed: " + a)], RevisionJson, BaseJson, Stem);
+
+    /// <summary>The same pair with the revision written in the base's encoding.</summary>
+    public SpecPair SameEncoding() => RevisionJson == BaseJson ? this : new(Base, Revision, Edits, Applied, BaseJson, BaseJson, Stem);
+
     public static string Serialize(Map doc, bool json) => json ? JsonEmitter.Emit(doc, indent: true) + "\n" : YamlEmitter.Emit(doc);
 }
 
@@ -272,6 +283,32 @@ internal static partial class Support
         sb.Append("  - ").Append(i < e.Length ? Edits.Show(e[i]) : "(end)").Append('\n');
         sb.Append("  + ").Append(i < a.Length ? Edits.Show(a[i]) : "(end)").Append('\n');
         return sb.ToString();
+    }
+
+    /// <summary>Whether a discriminator mapping of the document is a local JSON pointer ("#/...") to nothing.</summary>
+    public static bool HasDanglingMapping(Map doc)
+    {
+        bool Resolves(string pointer)
+        {
+            object? cur = doc;
+            foreach (var raw in pointer[2..].Split('/'))
+            {
+                var token = Uri.UnescapeDataString(raw).Replace("~1", "/", StringComparison.Ordinal).Replace("~0", "~", StringComparison.Ordinal);
+                if (cur is Map m && m.TryGetValue(token, out var next)) cur = next;
+                else if (cur is List<object?> l && int.TryParse(token, System.Globalization.CultureInfo.InvariantCulture, out var i) && i >= 0 && i < l.Count) cur = l[i];
+                else return false;
+            }
+            return true;
+        }
+        bool Walk(object? node) => node switch
+        {
+            Map m when m.GetValueOrDefault("discriminator") is Map d && d.GetValueOrDefault("mapping") is Map mapping
+                && mapping.Values.OfType<string>().Any(v => v.StartsWith("#/", StringComparison.Ordinal) && !Resolves(v)) => true,
+            Map m => m.Values.Any(Walk),
+            List<object?> l => l.Any(Walk),
+            _ => false,
+        };
+        return Walk(doc);
     }
 
     public static string Clip(string s, int max = 1500) => s.Length <= max ? s : s[..max] + $"\n... ({s.Length - max} more characters)";

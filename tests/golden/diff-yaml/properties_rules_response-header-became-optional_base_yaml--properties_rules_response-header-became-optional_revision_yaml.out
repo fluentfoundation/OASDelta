@@ -1,0 +1,29 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                2XX:
+                                    headers:
+                                        modified:
+                                            名前:
+                                                required:
+                                                    from: true
+                                                    to: false
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /owners/{ownerId}/pets
+        :   responses:
+                modified:
+                    2XX:
+                        headers:
+                            modified:
+                                名前:
+                                    required:
+                                        from: true
+                                        to: false
+

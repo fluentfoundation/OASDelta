@@ -1,0 +1,10 @@
+2 cambios: 0 error, 0 warning, 2 info
+info	[response-body-contains-added] en ./properties/rules/response-body-min-contains-set_revision.yaml
+	en API GET /store/order
+		agregada la restricción 'contains' al cuerpo de respuesta para el estado `201`
+
+info	[response-body-min-contains-set] en ./properties/rules/response-body-min-contains-set_revision.yaml
+	en API GET /store/order
+		el valor minContains del cuerpo de respuesta fue establecido en `2`
+
+

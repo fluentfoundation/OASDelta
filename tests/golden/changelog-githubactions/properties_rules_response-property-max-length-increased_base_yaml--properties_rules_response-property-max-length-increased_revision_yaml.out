@@ -1,0 +1,5 @@
+::error title=response-body-content-media-type-changed,file=./properties/rules/response-property-max-length-increased_revision.yaml::in API PATCH /ünïcode/ключ the response body contentMediaType changed from `application/json` to `` for the status `default` (media type: */*)
+::error title=response-body-content-schema-removed,file=./properties/rules/response-property-max-length-increased_revision.yaml::in API PATCH /ünïcode/ключ removed 'contentSchema' from the response body for the status `default` (media type: */*)
+::error title=response-property-max-length-increased,file=./properties/rules/response-property-max-length-increased_revision.yaml,line=15,col=25::in API PATCH /ünïcode/ключ the `anyOf[subschema #3]/*star` response property's maxLength was increased from `3` to `107` for the response status `default` (media type: application/json; charset=utf-8)
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+

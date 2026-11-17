@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-body-default-value-added] at ./properties/rules/response-body-default-value-added_revision.json
+	in API DELETE /search
+		the response body `application/json; charset=utf-8` default value `pet` was added for the status `2XX`
+
+

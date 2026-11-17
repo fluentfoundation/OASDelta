@@ -1,0 +1,67 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            名前:
+                                                                minItems:
+                                                                    from: 1
+                                                                    to: 4
+                    PUT:
+                        responses:
+                            modified:
+                                default:
+                                    content:
+                                        modified:
+                                            multipart/form-data:
+                                                schema:
+                                                    minItems:
+                                                        from: 1
+                                                        to: 4
+endpoints:
+    modified:
+        ?   method: POST
+            path: /search
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                名前:
+                                                    minItems:
+                                                        from: 1
+                                                        to: 4
+        ?   method: PUT
+            path: /search
+        :   responses:
+                modified:
+                    default:
+                        content:
+                            modified:
+                                multipart/form-data:
+                                    schema:
+                                        minItems:
+                                            from: 1
+                                            to: 4
+components:
+    schemas:
+        modified:
+            Owner:
+                minItems:
+                    from: 1
+                    to: 4
+

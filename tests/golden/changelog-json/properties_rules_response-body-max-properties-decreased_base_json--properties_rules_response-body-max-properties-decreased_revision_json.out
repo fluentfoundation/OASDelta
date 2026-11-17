@@ -1,0 +1,1 @@
+[{"id":"response-body-max-properties-decreased","text":"the response's body maxProperties was decreased from `15` to `13`","level":1,"operation":"DELETE","path":"/store/order","section":"paths","fingerprint":"cff679a8f053"}]

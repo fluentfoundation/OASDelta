@@ -1,0 +1,19 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### DELETE /store/order
+- :warning: the response body `text/plain` const value `䮼멀ቀ楬` was removed for the status `400`
+- :warning: the response's body minLength was unset from `4`
+- :warning: the response's body `type/format` changed from `string/password` to `integer` for status `400`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

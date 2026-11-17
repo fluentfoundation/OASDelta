@@ -1,0 +1,4 @@
+::error title=response-media-type-removed,file=./properties/rules/request-body-became-optional_revision.yaml::in API GET /pets/{petId} removed the media type `application/json; charset=utf-8` for the response with the status `200`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-body-became-optional,file=./properties/rules/request-body-became-optional_revision.yaml,line=93,col=17::in API PATCH /pets/{petId} request body became optional
+

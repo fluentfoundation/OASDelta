@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /pets
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/vnd.api+json
+        - Schema changed
+          - Type changed from 'object' to 'array'
+          - Items changed
+            - Schema added
+          - MaxProps changed from 19 to null
+          - Properties changed
+            - Deleted property: created
+            - Deleted property: 첧縱ᤳ앸䧤
+
+

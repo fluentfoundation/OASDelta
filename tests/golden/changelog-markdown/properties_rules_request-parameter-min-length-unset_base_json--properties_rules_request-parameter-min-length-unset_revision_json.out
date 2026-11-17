@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /items/{id}.json
+-  for the `cookie` request parameter `a/b`, the minLength was unset from `5`
+
+
+
+
+
+

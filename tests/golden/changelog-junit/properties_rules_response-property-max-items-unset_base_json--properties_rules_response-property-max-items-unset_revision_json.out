@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="response-property-list-of-types-widened" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">response property `items/` list-of-types was widened by adding types `integer` to media type `multipart/form-data` of response `500`</failure>
+    </testcase>
+    <testcase name="response-property-max-items-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `items/` response property's maxItems was unset from `32` for the response status `500`</failure>
+    </testcase>
+    <testcase name="response-property-min-items-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `items/` response property's minItems was unset from `3` for the response status `500`</failure>
+    </testcase>
+    <testcase name="response-property-unique-items-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `items/` response property's uniqueItems was unset for the response status `500`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,23 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "404":
+                                    headers:
+                                        deleted:
+                                            - <b>&amp;
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets/{petId}
+        :   responses:
+                modified:
+                    "404":
+                        headers:
+                            deleted:
+                                - <b>&amp;
+

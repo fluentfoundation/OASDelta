@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/owners/{ownerId}/pets":{"operations":{"modified":{"DELETE":{"responses":{"modified":{"204":{"content":{"modified":{"multipart/form-data":{"schema":{"items":{"exclusiveMin":{"from":null,"to":17}}}}}}}}}}}}}}}}

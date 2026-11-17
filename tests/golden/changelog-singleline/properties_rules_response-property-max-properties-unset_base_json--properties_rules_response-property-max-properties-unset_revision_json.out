@@ -1,0 +1,4 @@
+1 changes: 0 error, 1 warning, 0 info
+warning at ./properties/rules/response-property-max-properties-unset_revision.json, in API PUT /pets the `pet/allOf[subschema #1]/` response property's maxProperties was unset from `13` for the response status `201` [response-property-max-properties-unset]. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+
+

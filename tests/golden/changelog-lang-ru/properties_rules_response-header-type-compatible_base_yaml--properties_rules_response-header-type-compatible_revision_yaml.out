@@ -1,0 +1,7 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-header-type-compatible] в ./properties/rules/response-header-type-compatible_revision.yaml
+	в API PATCH /ünïcode/ключ
+		у заголовка ответа `0x1f` `type` изменён с `string` до `object` для статуса `200` (обратно совместимо)
+		Это изменение обратно совместимо, потому что значение заголовка передаётся как текст, поэтому любой тип может быть представлен строкой и не проверяется при передаче.
+
+

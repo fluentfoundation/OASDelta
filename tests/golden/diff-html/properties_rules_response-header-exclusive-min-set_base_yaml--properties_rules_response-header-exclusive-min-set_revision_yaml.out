@@ -1,0 +1,37 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-1">Deleted Endpoints: 1</h3>
+<hr>
+<p>GET /pets</p>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PATCH /store/order</p>
+<ul>
+<li>Modified header param: name
+<ul>
+<li>AllowReserved changed from false to true</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 201
+<ul>
+<li>Headers changed
+<ul>
+<li>Modified header: %20
+<ul>
+<li>Schema changed
+<ul>
+<li>ExclusiveMin changed from null to true</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

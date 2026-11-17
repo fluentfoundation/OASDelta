@@ -1,0 +1,23 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "200":
+                                    headers:
+                                        deleted:
+                                            - "x\ty"
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "200":
+                        headers:
+                            deleted:
+                                - "x\ty"
+

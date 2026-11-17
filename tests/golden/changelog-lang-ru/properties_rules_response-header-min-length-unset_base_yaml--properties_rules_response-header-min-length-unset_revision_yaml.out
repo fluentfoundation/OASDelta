@@ -1,0 +1,15 @@
+3 изменений: 2 error, 0 warning, 1 info
+error	[response-header-min-length-unset] в ./properties/rules/response-header-min-length-unset_revision.yaml
+	в API GET /store/order
+		значение minLength у заголовка ответа `id` удалено, предыдущее значение - `5`, для статуса `500`
+
+error	[response-header-type-changed] в ./properties/rules/response-header-min-length-unset_revision.yaml
+	в API GET /store/order
+		у заголовка ответа `id` `type` изменён с `string, null` на `any` для статуса `500`
+
+info	[response-property-const-added] в ./properties/rules/response-header-min-length-unset_revision.yaml
+	в API DELETE /store/order
+		свойство ответа `` получило значение const `name` для статуса `404`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

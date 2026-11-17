@@ -1,0 +1,17 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    DELETE:
+                        extensions:
+                            deleted:
+                                - x-stability-level
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /store/order
+        :   extensions:
+                deleted:
+                    - x-stability-level
+

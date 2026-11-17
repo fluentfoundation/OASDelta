@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[api-tag-removed] в ./properties/rules/request-parameter-min-contains-unset_base.yaml
+	в API PATCH /pets
+		Тег API `created` удален
+
+info	[request-parameter-min-contains-unset] в ./properties/rules/request-parameter-min-contains-unset_revision.yaml
+	в API PATCH /pets
+		значение minContains в `query` параметре запроса `ключ` удалено, предыдущее значение - `1`
+
+

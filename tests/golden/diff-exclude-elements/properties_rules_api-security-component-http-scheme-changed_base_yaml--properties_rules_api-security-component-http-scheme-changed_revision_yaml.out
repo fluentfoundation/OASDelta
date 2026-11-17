@@ -1,0 +1,1 @@
+{"components":{"schemas":{"modified":{"Error":{"items":{"items":{"discriminatorDiff":{"added":true}}}}}},"securitySchemes":{"modified":{"bearer":{"scheme":{"from":"basic","to":"bearer"}}}}}}

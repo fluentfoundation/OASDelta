@@ -1,0 +1,76 @@
+# Fires response-mediatype-enum-value-added (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            items:
+                nullable: true
+                type: boolean
+            minItems: 0
+            type: array
+    securitySchemes:
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: price
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        patch:
+            operationId: price
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - description: "x\ty"
+                  explode: false
+                  in: query
+                  name: name
+                  required: true
+                  schema:
+                    type: boolean
+            responses:
+                2XX:
+                    description: ключ
+                "404":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                additionalProperties:
+                                    type: string
+                                properties:
+                                    '%20':
+                                        nullable: true
+                                        type: string
+                                    tag:
+                                        type: object
+                                    ключ:
+                                        properties:
+                                            owner:
+                                                enum:
+                                                    - 75
+                                                type: number
+                                            ключ:
+                                                minLength: 4
+                                                type: string
+                                        type: object
+                                required:
+                                    - ключ
+                                    - tag
+                                type: object
+                        text/plain:
+                            schema:
+                                enum:
+                                    - tag
+                                    - ' leading'
+                                    - '@at'
+                                type: string
+                    description: price
+                default:
+                    description: status
+            security:
+                - bearer: []
+            summary: 颡⓻驒ᖪᡦЅ唭

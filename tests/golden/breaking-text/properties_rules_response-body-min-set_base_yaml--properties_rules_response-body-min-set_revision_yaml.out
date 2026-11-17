@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[response-body-type-changed] at ./properties/rules/response-body-min-set_revision.yaml
+	in API PATCH /items/{id}.json
+		the response's body `type` changed from `object` to `integer` for status `204`
+
+

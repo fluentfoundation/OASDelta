@@ -1,0 +1,24 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /items/{id}.json
+- Request body changed
+  - Content changed
+    - Modified media type: application/xml
+      - Schema changed
+        - Properties changed
+          - Modified property: owner
+            - Properties changed
+              - Modified property: status
+                - Property 'AnyOf' changed
+                  - Schemas added: subschema #1, subschema #2
+                - Type changed from 'integer' to ''
+                - WriteOnly changed from true to false
+                - Min changed from 2 to null
+
+

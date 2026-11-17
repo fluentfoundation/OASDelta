@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /pets/{petId}
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Deleted media type: application/json; charset=utf-8
+
+PATCH /pets/{petId}
+- Request body changed
+  - Description changed from '' to 'id'
+
+

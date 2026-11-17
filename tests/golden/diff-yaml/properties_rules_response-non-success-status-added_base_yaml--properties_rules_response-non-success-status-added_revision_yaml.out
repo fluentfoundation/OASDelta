@@ -1,0 +1,17 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            added:
+                                - "400"
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /store/order
+        :   responses:
+                added:
+                    - "400"
+

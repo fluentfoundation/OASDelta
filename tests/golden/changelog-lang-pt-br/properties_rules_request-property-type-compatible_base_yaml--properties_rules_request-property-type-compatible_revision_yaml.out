@@ -1,0 +1,32 @@
+7 alterações: 1 error, 5 warning, 1 info
+error	[request-body-media-type-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+	em API POST /pets/{petId}
+		o tipo de mídia `application/xml` foi removido do corpo da requisição
+
+warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade de requisição `'single'` foi removida
+
+warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade de requisição `id/no` foi removida
+
+warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade de requisição `id/tag` foi removida
+
+warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade de requisição `line1
+line2` foi removida
+
+warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade de requisição `pet` foi removida
+
+info	[request-property-type-compatible] em ./properties/rules/request-property-type-compatible_revision.yaml
+	em API POST /pets/{petId}
+		o `id` da propriedade de requisição `type` mudou de `object` para `string` (retrocompatível)
+		Esta mudança é retrocompatível porque o tipo de mídia não é fortemente tipado (por exemplo XML), onde qualquer valor pode ser representado como texto, então o tipo não é imposto na transmissão. Com um tipo de mídia fortemente tipado como JSON a mesma mudança seria incompatível.
+
+

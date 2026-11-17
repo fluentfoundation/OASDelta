@@ -1,0 +1,29 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+POST /v1/items
+- Responses changed
+  - Modified response: 204
+    - Content changed
+      - Modified media type: multipart/form-data
+        - Schema changed
+          - Type changed from 'integer, null' to 'string'
+          - Deleted enum values: [8]
+          - Default changed from 0 to null
+          - ExclusiveMax changed from 1017 to null
+          - Min changed from -5 to null
+          - MultipleOf changed from 5 to null
+
+PUT /ünïcode/ключ
+- Request body changed
+  - Content changed
+    - New media type: */*
+    - Deleted media type: application/json; charset=utf-8
+    - Deleted media type: text/plain
+
+

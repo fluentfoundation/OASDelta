@@ -1,0 +1,218 @@
+# Fires request-parameter-property-schema-became-not-false (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: kind
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /pets/{petId}:
+        delete:
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - deprecated: true
+                  explode: false
+                  in: cookie
+                  name: id
+                  required: false
+                  schema:
+                    description: 名前
+                    format: int64
+                    readOnly: true
+                    type:
+                        - integer
+                        - "null"
+                - in: query
+                  name: ключ
+                  schema:
+                    anyOf:
+                        - enum:
+                            - true
+                            - false
+                          format: custom
+                          type:
+                            - boolean
+                            - "null"
+                        - description: created
+                          type: string
+                - deprecated: true
+                  in: cookie
+                  name: '| table |'
+                  required: false
+                  schema:
+                    items:
+                        description: 拸ꜽ苨
+                        enum:
+                            - -71
+                            - -34
+                            - -5
+                        format: double
+                        type: number
+                    type: array
+            responses:
+                "201":
+                    description: tag
+                    headers:
+                        볂吐瞆:
+                            schema:
+                                type: string
+                "204":
+                    description: '#hash'
+            security:
+                - openid: []
+            tags:
+                - pet
+                - name
+        get:
+            operationId: get_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - deprecated: true
+                  in: cookie
+                  name: price
+                  required: true
+                  schema:
+                    properties:
+                        '|':
+                            format: float
+                            type:
+                                - number
+                                - "null"
+                            writeOnly: true
+                        ключ:
+                            maxLength: 171
+                            type:
+                                - string
+                                - "null"
+                    required:
+                        - ключ
+                        - '|'
+                    type: object
+                - in: query
+                  name: id
+                  schema:
+                    format: custom
+                    type: boolean
+                - in: query
+                  name: owner
+                  required: false
+                  schema:
+                    format: float
+                    minimum: -1
+                    type: number
+            responses:
+                "200":
+                    description: '&anchor'
+                "204":
+                    description: kind
+                "404":
+                    description: '`tick`'
+        post:
+            operationId: post_pets_{petId}
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - explode: false
+                  in: header
+                  name: Ünïcode
+                  schema:
+                    type: string
+                - description: 獩ꥏ㣴㚹⎥
+                  in: query
+                  name: price
+                  schema:
+                    description: "~"
+                    format: custom
+                    type: boolean
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            properties:
+                                '!tag':
+                                    deprecated: true
+                                    enum:
+                                        - 8
+                                        - -62.25
+                                    format: double
+                                    type:
+                                        - number
+                                        - "null"
+                                    writeOnly: true
+                                a~b:
+                                    deprecated: true
+                                    example: |-
+                                        line1
+                                        line2
+                                    type: boolean
+                                created:
+                                    items:
+                                        description:  nbsp
+                                        exclusiveMaximum: 1444
+                                        type: integer
+                                    minItems: 2
+                                    type: array
+                                ? |-
+                                    line1
+                                    line2
+                                :   properties:
+                                        '*star':
+                                            format: int32
+                                            type: integer
+                                        "1e3":
+                                            description: id
+                                            type: string
+                                        tag:
+                                            default: 42
+                                            description: ' '
+                                            type: integer
+                                    required:
+                                        - tag
+                                    type: object
+                            required:
+                                - '!tag'
+                            type: object
+                    text/plain:
+                        schema:
+                            description: "\U0001F600"
+                            enum:
+                                - 16
+                                - 14
+                                - 15
+                            format: int32
+                            type:
+                                - integer
+                                - "null"
+                description: tag
+            responses:
+                "204":
+                    description: owner
+            summary: ੊妎探蚁魧粥
+    /store/order:
+        get:
+            operationId: tag
+            responses:
+                "400":
+                    description: "null"
+                "404":
+                    description: kind
+            security:
+                - openid: []
+security:
+    - openid: []
+servers:
+    - url: https://api.example.com

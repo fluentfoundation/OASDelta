@@ -1,0 +1,42 @@
+# Fires response-body-min-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        bearer:
+            bearerFormat: JWT
+            scheme: bearer
+            type: http
+info:
+    title: name
+    version: v1
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        patch:
+            deprecated: true
+            operationId: price
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: header
+                  name: ключ
+                  schema:
+                    minimum: 4
+                    type: integer
+            responses:
+                "204":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                $ref: '#/paths/~1items~1{id}.json/patch/parameters/1/schema'
+                        application/xml:
+                            schema:
+                                type: object
+                    description: status
+            tags:
+                - status
+                - ключ
+security:
+    - bearer: []

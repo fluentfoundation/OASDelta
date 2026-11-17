@@ -1,0 +1,91 @@
+{
+  "components": {
+    "schemas": {
+      "Error": {
+        "properties": {
+          "status": {
+            "description": "status",
+            "properties": {
+              "status": {
+                "type": "boolean"
+              },
+              "ꗷ豠㑺빽ꕫ": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "status",
+              "ꗷ豠㑺빽ꕫ"
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "title": "kind",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/v1/items": {
+      "put": {
+        "description": "kind",
+        "operationId": "put_v1_items",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "ключ",
+            "schema": {
+              "format": "custom",
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "header",
+            "name": " leading",
+            "schema": {
+              "allOf": [
+                {
+                  "default": true,
+                  "type": "boolean"
+                },
+                {
+                  "description": "1e3",
+                  "example": "kind",
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "kind"
+          }
+        },
+        "tags": [
+          "price",
+          "Ünïcode"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+[{"id":"request-optional-property-became-not-write-only","text":"the request optional property `㸢` became not write-only","level":1,"operation":"POST","path":"/items/{id}.json","section":"paths","baseSource":{"file":"./properties/rules/request-optional-property-became-not-write-only_base.yaml","line":89,"column":37},"fingerprint":"259107dcf99c"}]

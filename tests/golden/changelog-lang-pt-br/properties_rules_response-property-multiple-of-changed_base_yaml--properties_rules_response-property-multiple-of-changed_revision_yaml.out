@@ -1,0 +1,18 @@
+4 alterações: 1 error, 0 warning, 3 info
+error	[response-property-multiple-of-changed] em ./properties/rules/response-property-multiple-of-changed_revision.yaml
+	em API PUT /items/{id}.json
+		o valor multipleOf da propriedade de resposta `name/anyOf[subschema #1]/` foi alterado de `10.00` para `5.00` para o status `204`
+
+info	[endpoint-added] em ./properties/rules/response-property-multiple-of-changed_revision.yaml
+	em API PATCH /search
+		endpoint adicionado
+
+info	[endpoint-added] em ./properties/rules/response-property-multiple-of-changed_revision.yaml
+	em API POST /search
+		endpoint adicionado
+
+info	[endpoint-added] em ./properties/rules/response-property-multiple-of-changed_revision.yaml
+	em API PUT /search
+		endpoint adicionado
+
+

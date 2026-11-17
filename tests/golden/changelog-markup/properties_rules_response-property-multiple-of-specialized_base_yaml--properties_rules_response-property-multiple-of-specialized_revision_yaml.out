@@ -1,0 +1,22 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /pets
+-  the `oneOf[subschema #1]/anyOf[subschema #2]/` response property's multipleOf was specialized from `2.00` to `4.00` for the response status `500`
+-  the `oneOf[subschema #1]/` response's property `format` was narrowed from `none` to `float` for status `500`
+
+
+### PATCH /search
+-  the optional response header `퉈祅闄췱` removed for the status `500`
+
+
+
+
+## Components
+- :warning: the component security scheme `openid` OpenID Connect url changed from `https://auth.example.com/.well-known/openid-configuration` to `https://id0.example.com/.well-known/openid-configuration`
+
+
+
+

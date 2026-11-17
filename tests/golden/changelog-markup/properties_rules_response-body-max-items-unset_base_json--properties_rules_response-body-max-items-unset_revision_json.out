@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /items/{id}.json
+- :warning: the response's body maxItems was unset from `50`
+- :warning: the response's body `type` changed from `array<integer>` to `object` for status `200`
+
+
+
+
+
+

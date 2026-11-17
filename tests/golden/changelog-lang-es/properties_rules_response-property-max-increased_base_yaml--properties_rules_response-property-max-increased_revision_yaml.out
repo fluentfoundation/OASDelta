@@ -1,0 +1,10 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[response-property-max-increased] en ./properties/rules/response-property-max-increased_revision.yaml
+	en API DELETE /search
+		el valor máximo de la propiedad de respuesta `anyOf[subschema #2]/&anchor` fue aumentado de `570.00` a `572.00` para el estado `default`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

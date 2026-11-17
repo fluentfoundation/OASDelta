@@ -1,0 +1,15 @@
+3 alterações: 2 error, 0 warning, 1 info
+error	[request-body-became-enum] em ./properties/rules/request-body-min-length-set_revision.yaml
+	em API POST /ünïcode/ключ
+		o corpo da requisição foi restrito a uma lista de valores enum
+
+error	[request-body-min-length-set] em ./properties/rules/request-body-min-length-set_revision.yaml
+	em API POST /ünïcode/ключ
+		o valor minLength do corpo da requisição foi definido como `5`
+		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+
+info	[request-body-became-nullable] em ./properties/rules/request-body-min-length-set_revision.yaml
+	em API POST /ünïcode/ключ
+		o corpo da requisição tornou-se anulável
+
+

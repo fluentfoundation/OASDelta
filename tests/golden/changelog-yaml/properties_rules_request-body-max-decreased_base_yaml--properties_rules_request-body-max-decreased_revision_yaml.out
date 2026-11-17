@@ -1,0 +1,17 @@
+- id: request-body-max-decreased
+  text: the request's body max was decreased to `115.00`
+  level: 3
+  operation: POST
+  operationId: post_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-body-max-decreased_base.yaml
+    line: 157
+    column: 29
+  revisionSource:
+    file: ./properties/rules/request-body-max-decreased_revision.yaml
+    line: 157
+    column: 29
+  fingerprint: c42f7ed782d9
+

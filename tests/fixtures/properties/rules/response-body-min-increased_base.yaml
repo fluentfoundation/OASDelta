@@ -1,0 +1,71 @@
+# Fires response-body-min-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: Ünïcode
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /items/{id}.json:
+        put:
+            operationId: created
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                format: password
+                                type:
+                                    - string
+                                    - "null"
+                    description: "\a"
+                    headers:
+                        pet:
+                            schema:
+                                type: boolean
+                "201":
+                    content:
+                        '*/*':
+                            schema:
+                                default: 7.375
+                                enum:
+                                    - 67
+                                    - 59.5
+                                type: number
+                                writeOnly: true
+                        application/xml:
+                            schema:
+                                properties:
+                                    疋醔韇ট:
+                                        default: 94
+                                        deprecated: true
+                                        type: integer
+                                required:
+                                    - 疋醔韇ট
+                                type: object
+                    description: tag
+                    headers:
+                        C:\path:
+                            schema:
+                                deprecated: true
+                                type: integer
+                "400":
+                    content:
+                        text/plain:
+                            schema:
+                                minimum: -6
+                                type:
+                                    - integer
+                                    - "null"
+                    description: ключ
+            security:
+                - bearer: []

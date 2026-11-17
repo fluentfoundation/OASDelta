@@ -1,0 +1,69 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "500":
+                                    content:
+                                        deleted:
+                                            - application/json
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                deleted:
+                                    - application/json; charset=utf-8
+                                modified:
+                                    application/xml:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    叚։⋋媣塦:
+                                                        anyOf:
+                                                            modified:
+                                                                - base:
+                                                                    index: 1
+                                                                  revision:
+                                                                    index: 1
+                                                                  diff:
+                                                                    min:
+                                                                        from: -10
+                                                                        to: -8
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   responses:
+                modified:
+                    "500":
+                        content:
+                            deleted:
+                                - application/json
+        ?   method: PUT
+            path: /ünïcode/ключ
+        :   requestBody:
+                content:
+                    deleted:
+                        - application/json; charset=utf-8
+                    modified:
+                        application/xml:
+                            schema:
+                                properties:
+                                    modified:
+                                        叚։⋋媣塦:
+                                            anyOf:
+                                                modified:
+                                                    - base:
+                                                        index: 1
+                                                      revision:
+                                                        index: 1
+                                                      diff:
+                                                        min:
+                                                            from: -10
+                                                            to: -8
+

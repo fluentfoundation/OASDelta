@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets":{"operations":{"modified":{"DELETE":{"responses":{"modified":{"201":{"content":{"modified":{"application/json; charset=utf-8":{"schema":{"maxLength":{"from":11,"to":14}}}}}}}}}}}}}}}

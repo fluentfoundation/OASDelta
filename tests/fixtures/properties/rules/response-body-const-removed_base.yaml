@@ -1,0 +1,49 @@
+# Fires response-body-const-removed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: status
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /store/order:
+        delete:
+            operationId: delete_store_order
+            parameters:
+                - in: header
+                  name: ключ
+                  schema:
+                    items:
+                        default: ключ
+                        nullable: true
+                        readOnly: true
+                        type: string
+                    type: array
+                - in: cookie
+                  name: Ünïcode
+                  schema:
+                    items:
+                        nullable: true
+                        type: boolean
+                    type: array
+            responses:
+                "400":
+                    content:
+                        text/plain:
+                            schema:
+                                const: 䮼멀ቀ楬
+                                format: password
+                                minLength: 4
+                                pattern: ^.*$
+                                type: string
+                    description: ключ
+                default:
+                    description: 'a: b'
+            summary: a~b
+security:
+    - openid: []
+servers:
+    - url: /relative

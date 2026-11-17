@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="response-body-max-properties-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body maxProperties was unset from `19`</failure>
+    </testcase>
+    <testcase name="response-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body `type` changed from `object` to `array<string>` for status `200`</failure>
+    </testcase>
+    <testcase name="response-optional-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the optional property `created` from the response with the `200` status</failure>
+    </testcase>
+    <testcase name="response-optional-property-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the optional property `첧縱ᤳ앸䧤` from the response with the `200` status</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

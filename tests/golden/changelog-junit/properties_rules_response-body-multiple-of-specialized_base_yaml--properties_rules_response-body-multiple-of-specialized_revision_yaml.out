@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-body-multiple-of-specialized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body multipleOf was specialized from `5.00` to `10.00`</failure>
+    </testcase>
+    <testcase name="optional-response-header-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the optional response header `x-added` removed for the status `200`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

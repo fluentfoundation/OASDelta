@@ -1,0 +1,4 @@
+::warning title=request-property-multiple-of-changed,file=./properties/rules/request-property-multiple-of-changed_revision.yaml,line=267,col=33::in API PUT /owners/{ownerId}/pets the `items/` request property's multipleOf was changed from `5.00` to `2.00`
+::notice title=response-required-property-became-read-only,file=./properties/rules/request-property-multiple-of-changed_revision.yaml,line=70,col=41::in API PATCH /items/{id}.json the response required property `` became read-only for the status `404`
+::notice title=request-property-all-of-added-annotation-only,file=./properties/rules/request-property-multiple-of-changed_revision.yaml,line=266,col=39::in API PUT /owners/{ownerId}/pets added annotation-only `subschema #1` to the `items/` request property `allOf` list
+

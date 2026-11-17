@@ -1,0 +1,33 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    multipart/form-data:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    '>':
+                                                        max:
+                                                            from: 238
+                                                            to: 237
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        multipart/form-data:
+                            schema:
+                                properties:
+                                    modified:
+                                        '>':
+                                            max:
+                                                from: 238
+                                                to: 237
+

@@ -1,0 +1,14 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /search
+-  the response's body maxItems was decreased from `4` to `2`
+-  added an item schema to the media type `application/vnd.api+json` for the response with the status `500`
+
+
+
+
+
+

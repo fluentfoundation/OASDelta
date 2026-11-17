@@ -1,0 +1,6 @@
+1 alterações: 0 error, 0 warning, 1 info
+info	[response-body-max-length-decreased] em ./properties/rules/response-body-max-length-decreased_revision.json
+	em API POST /items/{id}.json
+		o valor maxLength do corpo da resposta foi reduzido de `96` para `95`
+
+

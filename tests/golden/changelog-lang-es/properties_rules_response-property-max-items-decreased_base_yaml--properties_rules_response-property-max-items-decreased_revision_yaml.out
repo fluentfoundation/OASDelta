@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-property-max-items-decreased] en ./properties/rules/response-property-max-items-decreased_revision.yaml
+	en API PATCH /search
+		el valor maxItems de la propiedad de respuesta `pet` fue reducido de `67` a `64` para el estado `204`
+
+

@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/items/{id}.json":{"operations":{"modified":{"GET":{"responses":{"modified":{"204":{"content":{"deleted":["application/xml"]}}}}},"POST":{"requestBody":{"content":{"modified":{"application/xml":{"schema":{"properties":{"modified":{"㸢":{"writeOnly":{"from":true,"to":false}}}}}}}}}}}}}}}}

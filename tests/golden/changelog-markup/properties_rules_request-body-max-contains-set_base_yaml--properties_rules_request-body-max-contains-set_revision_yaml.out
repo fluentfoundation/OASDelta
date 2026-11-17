@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /owners/{ownerId}/pets
+- :warning: added 'contains' constraint to the request body
+- :warning: the request's body maxContains was set to `1`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

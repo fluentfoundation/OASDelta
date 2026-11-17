@@ -1,0 +1,34 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PUT /owners/{ownerId}/pets
+- :warning: api removed without deprecation
+
+
+### POST /pets/{petId}
+- :warning: the request property `items/Ünïcode/price` became required
+- :warning: removed the request property `items/Ünïcode/price/%20`
+- :warning: removed the request property `items/Ünïcode/price/&anchor`
+-  the request optional property `items/Ünïcode/price` became write-only
+-  removed the deprecated request property `items/Ünïcode/price/id`
+-  the `items/Ünïcode/price` request property `type` changed from `object` to `string` (backward compatible)
+-  the response optional property `no/items/price` became write-only for the status `204` (media type: application/xml)
+-  the response optional property `price` became write-only for the status `204` (media type: application/json; charset=utf-8)
+-  the response property `no/items/price` became required for the status `204` (media type: application/xml)
+-  the `no/items/price` response's property `type` changed from `object` to `string` for status `204` (media type: application/xml)
+-  the `price` response's property `type` changed from `object` to `string` for status `204` (media type: application/json; charset=utf-8)
+-  removed the deprecated required property `no/items/price/id` from the response with the `204` status (media type: application/xml)
+-  removed the deprecated required property `price/id` from the response with the `204` status (media type: application/json; charset=utf-8)
+-  removed the required write-only property `no/items/price/%20` from the response with the `204` status (media type: application/xml)
+-  removed the required write-only property `no/items/price/&anchor` from the response with the `204` status (media type: application/xml)
+-  removed the required write-only property `price/%20` from the response with the `204` status (media type: application/json; charset=utf-8)
+-  removed the required write-only property `price/&anchor` from the response with the `204` status (media type: application/json; charset=utf-8)
+-  the response write-only property `price` became required for the status `204` (media type: application/json; charset=utf-8)
+
+
+
+
+
+

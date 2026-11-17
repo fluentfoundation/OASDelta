@@ -1,0 +1,2 @@
+::notice title=request-body-multiple-of-unset,file=./properties/rules/request-body-multiple-of-unset_revision.yaml::in API PATCH /owners/{ownerId}/pets the request's body multipleOf was unset from `5.00`
+

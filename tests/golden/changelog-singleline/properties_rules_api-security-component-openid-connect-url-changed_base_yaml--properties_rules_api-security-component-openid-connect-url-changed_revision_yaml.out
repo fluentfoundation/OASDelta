@@ -1,0 +1,6 @@
+2 changes: 1 error, 1 warning, 0 info
+error at ./properties/rules/api-security-component-openid-connect-url-changed_base.yaml, in API POST /items/{id}.json api path removed without deprecation [api-path-removed-without-deprecation]. 
+
+warning, in components/securitySchemes the component security scheme `openid` OpenID Connect url changed from `https://auth.example.com/.well-known/openid-configuration` to `https://id2.example.com/.well-known/openid-configuration` [api-security-component-openid-connect-url-changed]. This is a warning because the spec does not say whether credentials obtained through the previous URL are still accepted.
+
+

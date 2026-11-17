@@ -1,0 +1,21 @@
+- id: response-header-type-generalized
+  text: the `名前` response header's `type` was widened from `integer` to `number` for the status `400`
+  level: 3
+  operation: DELETE
+  operationId: delete_v1_items
+  path: /v1/items
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-header-type-generalized_base.yaml
+    line: 99
+    column: 25
+    endLine: 105
+    endColumn: 46
+  revisionSource:
+    file: ./properties/rules/response-header-type-generalized_revision.yaml
+    line: 99
+    column: 25
+    endLine: 105
+    endColumn: 45
+  fingerprint: f4759a87831a
+

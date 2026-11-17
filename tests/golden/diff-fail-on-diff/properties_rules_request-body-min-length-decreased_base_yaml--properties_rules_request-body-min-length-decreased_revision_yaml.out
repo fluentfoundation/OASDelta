@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/vnd.api+json":{"schema":{"minLength":{"from":3,"to":2}}}}}},"responses":{"modified":{"404":{"headers":{"added":["kind"]}}}}}}}}}}}

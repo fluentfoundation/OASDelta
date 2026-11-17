@@ -1,0 +1,19 @@
+4 alterações: 1 error, 1 warning, 2 info
+error	[response-header-min-decreased] em ./properties/rules/response-header-min-decreased_revision.yaml
+	em API PATCH /items/{id}.json
+		o valor min do cabeçalho de resposta `>` foi reduzido de `4.00` para `2.00` para o status `200`
+
+warning	[request-parameter-removed] em ./properties/rules/response-header-min-decreased_revision.yaml
+	em API PUT /items/{id}.json
+		parâmetro de requisição do tipo `header` e nome `owner` removido
+		Este é um aviso porque alguns aplicativos podem retornar um erro ao receber um parâmetro que não esperam. Recomenda-se depreciar o parâmetro primeiro.
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+info	[response-property-type-specialized] em ./properties/rules/response-header-min-decreased_revision.yaml
+	em API PUT /items/{id}.json
+		o `_under_/items/` da propriedade de resposta `format` foi restringido de `none` para `byte` para o status `201`
+
+

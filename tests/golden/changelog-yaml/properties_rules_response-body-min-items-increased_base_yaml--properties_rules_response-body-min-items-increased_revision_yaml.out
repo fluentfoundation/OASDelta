@@ -1,0 +1,32 @@
+- id: response-property-min-items-increased
+  text: the `名前` response property's minItems was increased from `1` to `4` for the response status `200`
+  level: 1
+  operation: POST
+  operationId: post_search
+  path: /search
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-body-min-items-increased_base.yaml
+    line: 9
+    column: 13
+  revisionSource:
+    file: ./properties/rules/response-body-min-items-increased_revision.yaml
+    line: 9
+    column: 13
+  fingerprint: 43a319aefd24
+- id: response-body-min-items-increased
+  text: the response's body minItems was increased from `1` to `4`
+  level: 1
+  operation: PUT
+  path: /search
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-body-min-items-increased_base.yaml
+    line: 9
+    column: 13
+  revisionSource:
+    file: ./properties/rules/response-body-min-items-increased_revision.yaml
+    line: 9
+    column: 13
+  fingerprint: f6e43b0ba7dc
+

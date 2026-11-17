@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-parameter-max-properties-increased] en ./properties/rules/request-parameter-max-properties-increased_revision.yaml
+	en API PATCH /ünïcode/ключ
+		para el parámetro `cookie` de solicitud `Ünïcode`, el valor maxProperties fue incrementado de `6` a `9`
+
+

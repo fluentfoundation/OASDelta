@@ -1,0 +1,11 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[response-body-multiple-of-specialized] в ./properties/rules/response-body-multiple-of-specialized_revision.yaml
+	в API GET /ünïcode/ключ
+		значение multipleOf у тела ответа сужено с `5.00` на `10.00`
+		Это изменение не является ломающим: новое значение multipleOf кратно старому, поэтому все значения, которые сервер может вернуть, были допустимы и раньше.
+
+info	[optional-response-header-removed] в ./properties/rules/response-body-multiple-of-specialized_revision.yaml
+	в API PUT /ünïcode/ключ
+		удалён ранее необязательный заголовок ответа `x-added` для ответа со статусом `200`
+
+

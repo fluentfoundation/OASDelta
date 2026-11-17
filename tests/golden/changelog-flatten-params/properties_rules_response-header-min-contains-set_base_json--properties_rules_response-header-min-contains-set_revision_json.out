@@ -1,0 +1,1 @@
+[{"id":"response-header-min-contains-set","text":"the `a/b` response header's minContains was set to `0` for the status `204`","level":1,"operation":"POST","path":"/search","section":"paths","fingerprint":"e134b2f0a044"}]

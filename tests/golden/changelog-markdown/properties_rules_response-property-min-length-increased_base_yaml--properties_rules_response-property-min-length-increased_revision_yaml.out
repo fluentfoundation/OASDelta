@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /pets/{petId}
+-  the `anyOf[subschema #2]/items/` response property's minLength was increased from `1` to `4` for the response status `200`
+
+
+
+
+
+

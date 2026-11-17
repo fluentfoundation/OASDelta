@@ -1,0 +1,25 @@
+- id: response-media-type-added
+  text: added the media type `application/json; charset=utf-8` for the response with the status `204`
+  level: 1
+  operation: GET
+  path: /items/{id}.json
+  section: paths
+  revisionSource:
+    file: ./properties/rules/request-parameter-max-properties-unset_revision.yaml
+    line: 44
+    column: 25
+    endLine: 53
+    endColumn: 44
+  fingerprint: b37130129172
+- id: request-parameter-max-properties-unset
+  text: for the `cookie` request parameter `owner`, the maxProperties was unset from `11`
+  level: 1
+  operation: GET
+  path: /owners/{ownerId}/pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-max-properties-unset_base.yaml
+    line: 76
+    column: 21
+  fingerprint: c8252ebc0e0a
+

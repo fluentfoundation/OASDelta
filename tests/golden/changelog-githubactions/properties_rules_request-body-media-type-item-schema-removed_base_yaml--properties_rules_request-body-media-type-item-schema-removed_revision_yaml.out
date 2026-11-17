@@ -1,0 +1,3 @@
+::notice title=api-security-component-added,file=./properties/rules/request-body-media-type-item-schema-removed_revision.yaml,line=12,col=9::in API   the component security scheme `oauth` was added
+::notice title=request-body-media-type-item-schema-removed,file=./properties/rules/request-body-media-type-item-schema-removed_revision.yaml::in API PUT /owners/{ownerId}/pets removed the item schema from the media type `application/xml` of the request body
+

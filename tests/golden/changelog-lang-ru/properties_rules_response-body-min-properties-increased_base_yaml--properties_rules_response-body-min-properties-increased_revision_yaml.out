@@ -1,0 +1,6 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-body-min-properties-increased] в ./properties/rules/response-body-min-properties-increased_revision.yaml
+	в API GET /ünïcode/ключ
+		значение minProperties у тела ответа увеличено с `1` до `4`
+
+

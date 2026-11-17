@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[response-body-contains-added] в ./properties/rules/response-body-min-contains-set_revision.yaml
+	в API GET /store/order
+		добавлено ограничение 'contains' в тело ответа для статуса `201`
+
+info	[response-body-min-contains-set] в ./properties/rules/response-body-min-contains-set_revision.yaml
+	в API GET /store/order
+		у тела ответа задано значение minContains в `2`
+
+

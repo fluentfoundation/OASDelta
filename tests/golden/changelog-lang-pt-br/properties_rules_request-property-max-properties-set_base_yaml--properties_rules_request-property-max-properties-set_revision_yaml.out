@@ -1,0 +1,11 @@
+2 alterações: 2 error, 0 warning, 0 info
+error	[request-property-max-properties-set] em ./properties/rules/request-property-max-properties-set_revision.yaml
+	em API PUT /ünïcode/ключ
+		o número máximo de propriedades da propriedade de requisição `items/` foi definido como `7`
+		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+
+error	[request-property-type-changed] em ./properties/rules/request-property-max-properties-set_revision.yaml
+	em API PUT /ünïcode/ключ
+		o `items/` da propriedade de requisição `type` foi alterado de `string` para `object`
+
+

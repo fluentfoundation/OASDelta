@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /pets
+-  the request's body maxProperties was unset from `11`
+
+
+
+
+
+

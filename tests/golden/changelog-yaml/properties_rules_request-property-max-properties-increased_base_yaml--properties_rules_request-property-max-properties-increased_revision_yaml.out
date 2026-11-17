@@ -1,0 +1,17 @@
+- id: request-property-max-properties-increased
+  text: the `status` request property's maxProperties was increased from `8` to `11`
+  level: 1
+  operation: PUT
+  operationId: put_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-property-max-properties-increased_base.yaml
+    line: 186
+    column: 37
+  revisionSource:
+    file: ./properties/rules/request-property-max-properties-increased_revision.yaml
+    line: 186
+    column: 37
+  fingerprint: 28ea6482b662
+

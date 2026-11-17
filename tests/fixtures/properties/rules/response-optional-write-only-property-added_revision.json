@@ -1,0 +1,227 @@
+{
+  "info": {
+    "title": "Ünïcode",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/items/{id}.json": {
+      "post": {
+        "operationId": "post_items_{id}.json",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "!tag",
+            "required": false,
+            "schema": {
+              "additionalProperties": true,
+              "properties": {
+                "0x1F": {
+                  "maxLength": 206,
+                  "minLength": 5,
+                  "type": "string"
+                },
+                "‮abc": {
+                  "description": "status",
+                  "format": "int64",
+                  "nullable": true,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "‮abc"
+              ],
+              "type": "object"
+            }
+          },
+          {
+            "in": "query",
+            "name": "---",
+            "schema": {
+              "properties": {
+                "Ĭ굸爪俶㮳": {
+                  "nullable": true,
+                  "type": "integer"
+                },
+                "名前": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "名前"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "kind": {
+                        "format": "password",
+                        "maxLength": 141,
+                        "type": "string"
+                      },
+                      "null": {
+                        "format": "int64",
+                        "type": "integer"
+                      },
+                      "ключ": {
+                        "type": "integer"
+                      },
+                      "铲紖": {
+                        "deprecated": true,
+                        "enum": [
+                          9,
+                          11
+                        ],
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "ключ",
+                      "kind",
+                      "铲紖"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "anyOf": [
+                      {
+                        "maximum": 191,
+                        "type": "number",
+                        "writeOnly": true
+                      },
+                      {
+                        "enum": [
+                          "😀"
+                        ],
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      {
+                        "example": "yes",
+                        "type": "boolean"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ],
+                "discriminator": {
+                  "propertyName": "price"
+                }
+              }
+            },
+            "application/vnd.api+json": {
+              "schema": {
+                "properties": {
+                  "Ünïcode": {
+                    "description": "‮abc",
+                    "example": "created",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "2XX": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "properties": {
+                    "name": {
+                      "properties": {
+                        "no": {
+                          "description": "id",
+                          "readOnly": true,
+                          "type": "number"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "ключ": {
+                      "const": "뷥",
+                      "minLength": 4,
+                      "nullable": true,
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "properties": {
+                    "a: b": {
+                      "items": {
+                        "format": "int64",
+                        "properties": {
+                          "kind": {
+                            "type": "string",
+                            "writeOnly": true
+                          }
+                        },
+                        "readOnly": true,
+                        "type": "integer"
+                      },
+                      "minItems": 2,
+                      "type": "array"
+                    },
+                    "id": {
+                      "anyOf": [
+                        {
+                          "enum": [
+                            10.625
+                          ],
+                          "format": "float",
+                          "nullable": true,
+                          "type": "number",
+                          "writeOnly": true
+                        },
+                        {
+                          "type": "boolean"
+                        }
+                      ]
+                    },
+                    "名前": {
+                      "enum": [
+                        true,
+                        false
+                      ],
+                      "type": "boolean"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "tag"
+          },
+          "404": {
+            "description": "‮abc"
+          },
+          "default": {
+            "description": "1e3"
+          }
+        }
+      }
+    }
+  }
+}

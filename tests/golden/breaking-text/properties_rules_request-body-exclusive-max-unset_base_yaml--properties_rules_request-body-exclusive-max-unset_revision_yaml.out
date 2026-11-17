@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[request-body-became-not-nullable] at ./properties/rules/request-body-exclusive-max-unset_revision.yaml
+	in API PUT /owners/{ownerId}/pets
+		the request's body became not nullable
+
+error	[request-body-type-changed] at ./properties/rules/request-body-exclusive-max-unset_revision.yaml
+	in API PUT /owners/{ownerId}/pets
+		the request's body `type/format` changed from `integer, null/int64` to `number`
+
+

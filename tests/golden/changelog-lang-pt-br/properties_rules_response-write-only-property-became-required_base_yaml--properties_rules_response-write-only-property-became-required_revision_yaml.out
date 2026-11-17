@@ -1,0 +1,81 @@
+19 alterações: 2 error, 2 warning, 15 info
+error	[api-removed-without-deprecation] em ./properties/rules/response-write-only-property-became-required_base.yaml
+	em API PUT /owners/{ownerId}/pets
+		api removida sem depreciação
+
+error	[request-property-became-required] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade de requisição `items/Ünïcode/price` tornou-se obrigatória
+
+warning	[request-property-removed] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade de requisição `items/Ünïcode/price/%20` foi removida
+
+warning	[request-property-removed] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade de requisição `items/Ünïcode/price/&anchor` foi removida
+
+info	[request-optional-property-became-write-only] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade opcional de requisição `items/Ünïcode/price` tornou-se somente escrita
+
+info	[request-property-removed-with-deprecation] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade de requisição depreciada `items/Ünïcode/price/id` foi removida
+
+info	[request-property-type-compatible] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		o `items/Ünïcode/price` da propriedade de requisição `type` mudou de `object` para `string` (retrocompatível)
+		Esta mudança é retrocompatível porque o tipo de mídia não é fortemente tipado (por exemplo XML), onde qualquer valor pode ser representado como texto, então o tipo não é imposto na transmissão. Com um tipo de mídia fortemente tipado como JSON a mesma mudança seria incompatível.
+
+info	[response-optional-property-became-write-only] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade opcional `no/items/price` tornou-se somente escrita para o status `204` (media type: application/xml)
+
+info	[response-optional-property-became-write-only] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade opcional `price` tornou-se somente escrita para o status `204` (media type: application/json; charset=utf-8)
+
+info	[response-property-became-required] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade de resposta `no/items/price` tornou-se obrigatória para o status `204` (media type: application/xml)
+
+info	[response-property-type-changed] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		o `no/items/price` da propriedade de resposta `type` foi alterado de `object` para `string` para o status `204` (media type: application/xml)
+		A propriedade é somente escrita, portanto nunca aparece em respostas e esta mudança não pode invalidar nenhuma.
+
+info	[response-property-type-changed] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		o `price` da propriedade de resposta `type` foi alterado de `object` para `string` para o status `204` (media type: application/json; charset=utf-8)
+		A propriedade é somente escrita, portanto nunca aparece em respostas e esta mudança não pode invalidar nenhuma.
+
+info	[response-required-property-removed-with-deprecation] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade obrigatória depreciada `no/items/price/id` foi removida da resposta com o status `204` (media type: application/xml)
+
+info	[response-required-property-removed-with-deprecation] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade obrigatória depreciada `price/id` foi removida da resposta com o status `204` (media type: application/json; charset=utf-8)
+
+info	[response-required-write-only-property-removed] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade obrigatória somente escrita `no/items/price/%20` foi removida da resposta com o status `204` (media type: application/xml)
+
+info	[response-required-write-only-property-removed] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade obrigatória somente escrita `no/items/price/&anchor` foi removida da resposta com o status `204` (media type: application/xml)
+
+info	[response-required-write-only-property-removed] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade obrigatória somente escrita `price/%20` foi removida da resposta com o status `204` (media type: application/json; charset=utf-8)
+
+info	[response-required-write-only-property-removed] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade obrigatória somente escrita `price/&anchor` foi removida da resposta com o status `204` (media type: application/json; charset=utf-8)
+
+info	[response-write-only-property-became-required] em ./properties/rules/response-write-only-property-became-required_revision.yaml
+	em API POST /pets/{petId}
+		a propriedade somente escrita `price` tornou-se obrigatória para o status `204` (media type: application/json; charset=utf-8)
+
+

@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[request-body-min-increased] в ./properties/rules/request-body-min-increased_revision.yaml
+	в API PUT /items/{id}.json
+		значение min у тела запроса увеличено до `10.00`
+
+

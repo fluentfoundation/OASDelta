@@ -1,0 +1,2 @@
+::notice title=response-body-min-properties-increased,file=./properties/rules/response-body-min-properties-increased_revision.yaml,line=113,col=33::in API GET /ünïcode/ключ the response's body minProperties was increased from `1` to `4`
+

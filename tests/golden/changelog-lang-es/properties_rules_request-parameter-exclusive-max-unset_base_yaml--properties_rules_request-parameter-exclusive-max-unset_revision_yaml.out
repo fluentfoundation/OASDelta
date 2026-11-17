@@ -1,0 +1,18 @@
+4 cambios: 0 error, 0 warning, 4 info
+info	[request-parameter-exclusive-max-unset] en ./properties/rules/request-parameter-exclusive-max-unset_revision.yaml
+	en API POST /pets/{petId}
+		para el parámetro `path` de solicitud `petId`, el valor exclusiveMaximum fue removido de `13.00`
+
+info	[response-media-type-added] en ./properties/rules/request-parameter-exclusive-max-unset_revision.yaml
+	en API POST /pets/{petId}
+		agregado el tipo de media `application/xml` a la respuesta con estado `500`
+
+info	[response-media-type-added] en ./properties/rules/request-parameter-exclusive-max-unset_revision.yaml
+	en API POST /pets/{petId}
+		agregado el tipo de media `text/plain` a la respuesta con estado `500`
+
+info	[response-property-default-value-removed] en ./properties/rules/request-parameter-exclusive-max-unset_revision.yaml
+	en API POST /pets/{petId}
+		el valor por defecto ``tick`` fue removido de la propiedad de respuesta `麨챗ᒏᣟꙋ钸蠠彆` para el estado `200`
+
+

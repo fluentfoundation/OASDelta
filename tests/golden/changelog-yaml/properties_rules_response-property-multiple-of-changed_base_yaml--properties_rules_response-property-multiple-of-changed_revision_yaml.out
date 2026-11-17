@@ -1,0 +1,57 @@
+- id: response-property-multiple-of-changed
+  text: 'the `name/anyOf[subschema #1]/` response property''s multipleOf was changed from `10.00` to `5.00` for the response status `204`'
+  level: 3
+  operation: PUT
+  operationId: put_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-property-multiple-of-changed_base.yaml
+    line: 305
+    column: 47
+  revisionSource:
+    file: ./properties/rules/response-property-multiple-of-changed_revision.yaml
+    line: 305
+    column: 47
+  fingerprint: 9132a563bf60
+- id: endpoint-added
+  text: endpoint added
+  level: 1
+  operation: PATCH
+  path: /search
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-property-multiple-of-changed_revision.yaml
+    line: 549
+    column: 9
+    endLine: 664
+    endColumn: 21
+  fingerprint: 397c3b96f911
+- id: endpoint-added
+  text: endpoint added
+  level: 1
+  operation: POST
+  operationId: 쭤袑枻鮍䎁㥫䷮雃
+  path: /search
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-property-multiple-of-changed_revision.yaml
+    line: 665
+    column: 9
+    endLine: 754
+    endColumn: 24
+  fingerprint: d6428dc06c01
+- id: endpoint-added
+  text: endpoint added
+  level: 1
+  operation: PUT
+  path: /search
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-property-multiple-of-changed_revision.yaml
+    line: 755
+    column: 9
+    endLine: 795
+    endColumn: 22
+  fingerprint: 2c3a4f9eccba
+

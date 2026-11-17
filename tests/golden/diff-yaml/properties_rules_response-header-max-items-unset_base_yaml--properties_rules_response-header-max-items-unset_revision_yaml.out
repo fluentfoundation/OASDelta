@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "204":
+                                    headers:
+                                        modified:
+                                            kind:
+                                                schema:
+                                                    maxItems:
+                                                        from: 3
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: GET
+            path: /owners/{ownerId}/pets
+        :   responses:
+                modified:
+                    "204":
+                        headers:
+                            modified:
+                                kind:
+                                    schema:
+                                        maxItems:
+                                            from: 3
+                                            to: null
+

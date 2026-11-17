@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /ünïcode/ключ
+-  the response's body minProperties was increased from `1` to `4`
+
+
+
+
+
+

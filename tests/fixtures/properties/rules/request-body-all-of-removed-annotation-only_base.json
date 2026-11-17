@@ -1,0 +1,896 @@
+{
+  "components": {
+    "schemas": {
+      "Item": {
+        "items": {
+          "description": "\u003e",
+          "nullable": true,
+          "type": "boolean"
+        },
+        "type": "array"
+      }
+    }
+  },
+  "info": {
+    "title": "created",
+    "version": "2.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/owners/{ownerId}/pets": {
+      "get": {
+        "operationId": "get_owners_{ownerId}_pets",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ownerId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "pet"
+          },
+          "404": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "properties": {
+                    "created": {
+                      "multipleOf": 5,
+                      "type": "number"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "type": "boolean"
+                }
+              }
+            },
+            "description": "price",
+            "headers": {
+              "kind": {
+                "deprecated": true,
+                "required": true,
+                "schema": {
+                  "type": "boolean",
+                  "writeOnly": true
+                }
+              },
+              "null": {
+                "required": true,
+                "schema": {
+                  "description": "pet",
+                  "format": "int64",
+                  "nullable": true,
+                  "type": "integer",
+                  "writeOnly": true
+                }
+              }
+            }
+          }
+        },
+        "summary": "⡎㳃"
+      },
+      "post": {
+        "operationId": "post_owners_{ownerId}_pets",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ownerId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "id",
+            "schema": {
+              "maxProperties": 8,
+              "properties": {
+                "%20": {
+                  "default": -10.375,
+                  "maximum": 460,
+                  "minimum": 0,
+                  "nullable": true,
+                  "type": "number"
+                },
+                "pet": {
+                  "deprecated": true,
+                  "description": " leading",
+                  "nullable": true,
+                  "type": "integer"
+                },
+                "|": {
+                  "$ref": "#/components/schemas/Item"
+                },
+                "| table |": {
+                  "deprecated": true,
+                  "format": "date-time",
+                  "pattern": "\\d{3}",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "|",
+                "pet",
+                "%20"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "created": {
+                    "nullable": true,
+                    "type": "boolean"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "application/vnd.api+json": {
+              "schema": {
+                "items": {
+                  "minProperties": 1,
+                  "properties": {
+                    "\u0026anchor": {
+                      "default": 59.125,
+                      "type": "number"
+                    },
+                    "pet": {
+                      "example": "pet",
+                      "nullable": true,
+                      "type": "boolean"
+                    },
+                    "x\ty": {
+                      "format": "custom",
+                      "readOnly": true,
+                      "type": "boolean"
+                    },
+                    "ключ": {
+                      "description": "...",
+                      "format": "password",
+                      "pattern": "\\d{3}",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "x\ty"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 3,
+                "type": "array"
+              }
+            }
+          },
+          "description": "id"
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "deprecated": true,
+                  "type": "integer"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "description": "no",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "kind"
+          }
+        }
+      }
+    },
+    "/pets": {
+      "delete": {
+        "deprecated": true,
+        "description": " nbsp",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "price",
+            "required": true,
+            "schema": {
+              "anyOf": [
+                {
+                  "default": 96.875,
+                  "maximum": 837,
+                  "nullable": true,
+                  "type": "integer"
+                },
+                {
+                  "readOnly": true,
+                  "type": "integer"
+                }
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "name": "pet",
+            "schema": {
+              "description": "Ünïcode",
+              "enum": [
+                18,
+                14
+              ],
+              "nullable": true,
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "2XX": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object"
+                }
+              }
+            },
+            "description": "名前"
+          },
+          "default": {
+            "description": "pet"
+          }
+        },
+        "summary": "名前"
+      },
+      "get": {
+        "operationId": "get_pets",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "tag",
+            "schema": {
+              "format": "int32",
+              "maximum": 449,
+              "nullable": true,
+              "type": "integer"
+            },
+            "style": "deepObject"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "屨ध潊鄅辍"
+          },
+          "default": {
+            "description": "名前"
+          }
+        },
+        "summary": "price",
+        "tags": [
+          "ключ"
+        ]
+      },
+      "patch": {
+        "operationId": "patch_pets",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "兟ػㆡ",
+            "schema": {
+              "enum": [
+                "created",
+                "Ünïcode",
+                "name"
+              ],
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "owner",
+            "schema": {
+              "items": {
+                "nullable": true,
+                "type": "integer"
+              },
+              "minItems": 0,
+              "type": "array",
+              "uniqueItems": true
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "default": 37,
+                "deprecated": true,
+                "maximum": 164,
+                "nullable": true,
+                "type": "number"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "---",
+            "headers": {
+              "tag": {
+                "schema": {
+                  "enum": [
+                    22,
+                    15.25,
+                    91.75
+                  ],
+                  "multipleOf": 5,
+                  "nullable": true,
+                  "readOnly": true,
+                  "type": "number"
+                }
+              },
+              "名前": {
+                "schema": {
+                  "description": "Ⴍⷴ讄",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "%20"
+          },
+          "default": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "empty": {
+                        "format": "email",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      "kind": {
+                        "nullable": true,
+                        "type": "number"
+                      },
+                      "Ünïcode": {
+                        "default": false,
+                        "type": "boolean"
+                      },
+                      "漗䞤覧풧꙳乥ⱏ": {
+                        "format": "byte",
+                        "maxLength": 79,
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "漗䞤覧풧꙳乥ⱏ",
+                      "Ünïcode",
+                      "kind"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "owner"
+          }
+        },
+        "summary": "status"
+      }
+    },
+    "/store/order": {
+      "delete": {
+        "operationId": "delete_store_order",
+        "parameters": [
+          {
+            "description": "硖댐",
+            "in": "query",
+            "name": "status",
+            "required": true,
+            "schema": {
+              "maximum": 484,
+              "minimum": 2,
+              "type": "number"
+            }
+          },
+          {
+            "in": "header",
+            "name": "kind",
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "in": "header",
+            "name": "寠獘밿캱䘇郂帴",
+            "schema": {
+              "additionalProperties": true,
+              "description": "\"quoted\"",
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "owner"
+          },
+          "400": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "description": "id",
+                  "maximum": 309,
+                  "minimum": 0,
+                  "type": "integer"
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "minimum": -2,
+                  "multipleOf": 10,
+                  "nullable": true,
+                  "type": "integer"
+                }
+              }
+            },
+            "description": "零ꋿ"
+          },
+          "500": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "$ref": "#/components/schemas/Item"
+                }
+              }
+            },
+            "description": ""
+          }
+        },
+        "summary": "名前"
+      },
+      "patch": {
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "庋ᢼ",
+            "schema": {
+              "properties": {
+                "a: b": {
+                  "type": "string"
+                },
+                "created": {
+                  "type": "number"
+                },
+                "{brace}": {
+                  "format": "custom",
+                  "nullable": true,
+                  "type": "boolean",
+                  "writeOnly": true
+                },
+                "😀": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "nullable": true,
+                "type": "integer"
+              }
+            },
+            "application/json; charset=utf-8": {
+              "schema": {
+                "allOf": [
+                  {
+                    "description": "owner"
+                  }
+                ],
+                "description": "status",
+                "properties": {
+                  "봗瀘": {
+                    "properties": {
+                      "id": {
+                        "nullable": true,
+                        "type": "number"
+                      },
+                      "Ünïcode": {
+                        "$ref": "#/components/schemas/Item"
+                      },
+                      "ключ": {
+                        "description": "null",
+                        "nullable": true,
+                        "type": "boolean"
+                      },
+                      "名前": {
+                        "const": "pet",
+                        "description": "名前",
+                        "format": "byte",
+                        "maxLength": 182,
+                        "nullable": true,
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "ключ"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "204": {
+            "description": "id"
+          },
+          "404": {
+            "description": "*star"
+          },
+          "500": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "pet": {
+                        "description": "status",
+                        "maxLength": 139,
+                        "nullable": true,
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array",
+                  "uniqueItems": true
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "a\r\nb"
+          }
+        }
+      },
+      "post": {
+        "operationId": "id",
+        "parameters": [
+          {
+            "description": "名前",
+            "in": "query",
+            "name": " ",
+            "schema": {
+              "items": {
+                "nullable": true,
+                "type": "boolean"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "in": "query",
+            "name": "a~b",
+            "required": false,
+            "schema": {
+              "deprecated": true,
+              "maximum": 310,
+              "nullable": true,
+              "type": "number"
+            },
+            "style": "deepObject"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset=utf-8": {
+              "schema": {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "maxProperties": 7,
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      35
+                    ],
+                    "nullable": true,
+                    "type": "number"
+                  },
+                  "price": {
+                    "allOf": [
+                      {
+                        "enum": [
+                          19,
+                          10,
+                          11
+                        ],
+                        "format": "int64",
+                        "nullable": true,
+                        "type": "integer"
+                      },
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "enum": [
+                          11,
+                          -3,
+                          2,
+                          14
+                        ],
+                        "minimum": 8,
+                        "type": "integer"
+                      }
+                    ]
+                  },
+                  "Ünïcode": {
+                    "items": {
+                      "maximum": 246,
+                      "type": "number"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "application/vnd.api+json": {
+              "schema": {
+                "minProperties": 2,
+                "properties": {
+                  "id": {
+                    "default": 61,
+                    "deprecated": true,
+                    "format": "double",
+                    "type": "number"
+                  },
+                  "status": {
+                    "items": {
+                      "nullable": true,
+                      "type": "boolean",
+                      "writeOnly": true
+                    },
+                    "type": "array"
+                  },
+                  "ᓯ": {
+                    "properties": {
+                      "created": {
+                        "minimum": 4,
+                        "type": "number"
+                      },
+                      "name": {
+                        "format": "date",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      "{brace}": {
+                        "nullable": true,
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "created"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "ᓯ"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "500": {
+            "description": "Ünïcode",
+            "headers": {
+              "status": {
+                "schema": {
+                  "default": 0.1,
+                  "enum": [
+                    8,
+                    9,
+                    12
+                  ],
+                  "format": "int64",
+                  "minimum": 5,
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ünïcode/ключ": {
+      "delete": {
+        "operationId": "delete_ünïcode_ключ",
+        "parameters": [
+          {
+            "in": "cookie",
+            "name": "tag",
+            "schema": {
+              "oneOf": [
+                {
+                  "format": "int32",
+                  "nullable": true,
+                  "type": "integer"
+                },
+                {
+                  "$ref": "#/components/schemas/Item"
+                },
+                {
+                  "enum": [
+                    -82.5
+                  ],
+                  "format": "double",
+                  "minimum": -9,
+                  "nullable": true,
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "anyOf": [
+                        {
+                          "const": " ",
+                          "nullable": true,
+                          "type": "string"
+                        },
+                        {
+                          "format": "int64",
+                          "type": "integer"
+                        }
+                      ]
+                    },
+                    {
+                      "items": {
+                        "$ref": "#/components/schemas/Item"
+                      },
+                      "maxItems": 29,
+                      "type": "array"
+                    },
+                    {
+                      "items": {
+                        "$ref": "#/components/schemas/Item"
+                      },
+                      "type": "array"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "id"
+          }
+        },
+        "summary": "tag",
+        "tags": [
+          "owner",
+          "created"
+        ]
+      },
+      "get": {
+        "operationId": "get_ünïcode_ключ",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "owner",
+            "schema": {
+              "format": "custom",
+              "nullable": true,
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "header",
+            "name": "price",
+            "schema": {
+              "enum": [
+                123456789.125,
+                55
+              ],
+              "type": "number"
+            }
+          },
+          {
+            "in": "header",
+            "name": "kind",
+            "required": false,
+            "schema": {
+              "properties": {
+                "_under_": {
+                  "description": "_under_",
+                  "nullable": true,
+                  "type": "string"
+                },
+                "id": {
+                  "format": "float",
+                  "type": "number"
+                },
+                " nbsp": {
+                  "deprecated": true,
+                  "format": "byte",
+                  "maxLength": 135,
+                  "pattern": "(",
+                  "type": "string"
+                },
+                "ключ": {
+                  "$ref": "#/components/schemas/Item"
+                }
+              },
+              "type": "object"
+            },
+            "style": "simple"
+          }
+        ],
+        "responses": {
+          "201": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "default": -89.5,
+                  "description": "😀",
+                  "minimum": -6,
+                  "type": "integer"
+                }
+              }
+            },
+            "description": "0x1F"
+          }
+        },
+        "tags": [
+          "price",
+          "tag"
+        ]
+      }
+    }
+  }
+}

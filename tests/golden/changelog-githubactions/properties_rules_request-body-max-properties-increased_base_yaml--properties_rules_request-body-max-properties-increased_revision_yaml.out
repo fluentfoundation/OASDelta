@@ -1,0 +1,2 @@
+::notice title=request-body-max-properties-increased,file=./properties/rules/request-body-max-properties-increased_revision.yaml,line=164,col=29::in API PUT /store/order the request's body maxProperties was increased from `11` to `13`
+

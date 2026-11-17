@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="response-header-max-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `null` response header's max was unset from `31.00` for the status `200`</failure>
+    </testcase>
+    <testcase name="response-header-min-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `null` response header's min was unset from `8.00` for the status `200`</failure>
+    </testcase>
+    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
+    </testcase>
+    <testcase name="response-header-schema-became-false" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the schema of the response header `null` became `false` for the status `200`: no value passes validation</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

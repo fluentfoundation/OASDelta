@@ -1,0 +1,17 @@
+- id: request-body-min-increased
+  text: the request's body min was increased to `10.00`
+  level: 3
+  operation: PUT
+  operationId: put_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-body-min-increased_base.yaml
+    line: 111
+    column: 29
+  revisionSource:
+    file: ./properties/rules/request-body-min-increased_revision.yaml
+    line: 111
+    column: 29
+  fingerprint: f40d52fd89c3
+

@@ -1,0 +1,28 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 3
+-------------------------
+GET /pets/{petId}
+- Modified path param: petId
+  - Style changed from 'label' to ''
+
+DELETE /store/order
+- Modified query param: owner
+  - Style changed from 'matrix' to ''
+
+POST /store/order
+- Request body changed
+  - Content changed
+    - Modified media type: application/xml
+      - Schema changed
+        - Property 'AnyOf' changed
+          - Modified schema: subschema #1
+            - Properties changed
+              - Modified property: C:\path
+                - MinLength changed from 5 to 4
+
+

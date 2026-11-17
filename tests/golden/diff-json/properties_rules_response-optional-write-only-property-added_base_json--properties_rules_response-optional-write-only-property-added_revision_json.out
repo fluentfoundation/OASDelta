@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/items/{id}.json":{"operations":{"modified":{"POST":{"responses":{"modified":{"2XX":{"content":{"modified":{"application/json; charset=utf-8":{"schema":{"properties":{"modified":{"a: b":{"items":{"properties":{"added":["kind"]}}}}}}}}}}}}}}}}}}}

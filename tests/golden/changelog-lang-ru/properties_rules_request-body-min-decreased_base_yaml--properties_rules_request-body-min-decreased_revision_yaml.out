@@ -1,0 +1,18 @@
+4 изменений: 2 error, 0 warning, 2 info
+error	[request-parameter-property-type-specialized] в ./properties/rules/request-body-min-decreased_revision.yaml
+	в API DELETE /search
+		в параметре запроса `header` `created` `type` свойства `ключ` сужен с `string` на `object`
+
+error	[request-property-type-changed] в ./properties/rules/request-body-min-decreased_revision.yaml
+	в API PUT /search
+		у поля запроса `tag/id` `type` изменён с `string` на `object` (media type: application/xml)
+
+info	[api-security-component-added]
+	в components/securitySchemes
+		компонент схемы безопасности `api_key` был добавлен
+
+info	[request-body-min-decreased] в ./properties/rules/request-body-min-decreased_revision.yaml
+	в API PUT /search
+		минимум тела запроса был уменьшен с `0.00` до `-2.00` (media type: */*)
+
+

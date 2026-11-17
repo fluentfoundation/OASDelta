@@ -1,0 +1,18 @@
+4 changes: 3 error, 0 warning, 1 info
+error	[response-body-const-removed] at ./properties/rules/response-body-const-removed_revision.yaml
+	in API DELETE /store/order
+		the response body `text/plain` const value `䮼멀ቀ楬` was removed for the status `400`
+
+error	[response-body-min-length-unset] at ./properties/rules/response-body-const-removed_revision.yaml
+	in API DELETE /store/order
+		the response's body minLength was unset from `4`
+
+error	[response-body-type-changed] at ./properties/rules/response-body-const-removed_revision.yaml
+	in API DELETE /store/order
+		the response's body `type/format` changed from `string/password` to `integer` for status `400`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+

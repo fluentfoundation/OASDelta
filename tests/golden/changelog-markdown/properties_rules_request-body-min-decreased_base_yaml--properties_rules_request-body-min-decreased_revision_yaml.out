@@ -1,0 +1,22 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /search
+- :warning: for the `header` request parameter `created`, the `type` of property `ключ` was narrowed from `string` to `object`
+
+
+### PUT /search
+- :warning: the `tag/id` request property `type` changed from `string` to `object` (media type: application/xml)
+-  the request's body min was decreased to from `0.00` to `-2.00` (media type: */*)
+
+
+
+
+## Components
+-  the component security scheme `api_key` was added
+
+
+
+

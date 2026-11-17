@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./properties/rules/request-parameter-default-value-removed_revision.yaml, in API PUT /items/{id}.json the schema of the `cookie` request parameter `price` became `false`: no value passes validation [request-parameter-schema-became-false]. 
+
+info at ./properties/rules/request-parameter-default-value-removed_revision.yaml, in API PUT /items/{id}.json for the `cookie` request parameter `price`, default value `44.00` was removed [request-parameter-default-value-removed]. 
+
+

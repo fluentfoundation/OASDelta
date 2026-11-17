@@ -1,0 +1,27 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+PUT /pets
+- Modified cookie param: pet
+  - Schema changed
+    - Properties changed
+      - New property: >
+
+POST /pets/{petId}
+- Deleted cookie param: pet
+- Request body changed
+  - Content changed
+    - Modified media type: text/plain
+      - Schema changed
+        - Property 'AnyOf' changed
+          - Modified schema: subschema #1
+            - Property 'OneOf' changed
+              - Modified schema: subschema #3
+                - Max changed from 596 to 597
+
+

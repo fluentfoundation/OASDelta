@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-8:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            pet:
+                                                                maxItems:
+                                                                    from: 67
+                                                                    to: 64
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /search
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                application/json; charset=utf-8:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                pet:
+                                                    maxItems:
+                                                        from: 67
+                                                        to: 64
+

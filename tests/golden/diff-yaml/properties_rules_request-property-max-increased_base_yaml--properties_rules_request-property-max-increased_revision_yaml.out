@@ -1,0 +1,89 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    PUT:
+                        parameters:
+                            modified:
+                                cookie:
+                                    pet:
+                                        schema:
+                                            properties:
+                                                added:
+                                                    - '>'
+            parameters:
+                added:
+                    query:
+                        - pet
+        /pets/{petId}:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            deleted:
+                                cookie:
+                                    - pet
+                        requestBody:
+                            content:
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            anyOf:
+                                                modified:
+                                                    - base:
+                                                        index: 0
+                                                      revision:
+                                                        index: 0
+                                                      diff:
+                                                        oneOf:
+                                                            modified:
+                                                                - base:
+                                                                    index: 2
+                                                                  revision:
+                                                                    index: 2
+                                                                  diff:
+                                                                    max:
+                                                                        from: 596
+                                                                        to: 597
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /pets
+        :   parameters:
+                modified:
+                    cookie:
+                        pet:
+                            schema:
+                                properties:
+                                    added:
+                                        - '>'
+        ?   method: POST
+            path: /pets/{petId}
+        :   parameters:
+                deleted:
+                    cookie:
+                        - pet
+            requestBody:
+                content:
+                    modified:
+                        text/plain:
+                            schema:
+                                anyOf:
+                                    modified:
+                                        - base:
+                                            index: 0
+                                          revision:
+                                            index: 0
+                                          diff:
+                                            oneOf:
+                                                modified:
+                                                    - base:
+                                                        index: 2
+                                                      revision:
+                                                        index: 2
+                                                      diff:
+                                                        max:
+                                                            from: 596
+                                                            to: 597
+

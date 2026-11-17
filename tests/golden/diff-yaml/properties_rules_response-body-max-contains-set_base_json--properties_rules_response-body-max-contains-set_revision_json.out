@@ -1,0 +1,35 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    contains:
+                                                        schemaAdded: true
+                                                    maxContains:
+                                                        from: null
+                                                        to: 4
+endpoints:
+    modified:
+        ?   method: GET
+            path: /store/order
+        :   responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        contains:
+                                            schemaAdded: true
+                                        maxContains:
+                                            from: null
+                                            to: 4
+

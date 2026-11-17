@@ -1,0 +1,12 @@
+- id: request-parameter-property-schema-became-false
+  text: 'the schema of the `items/` property of the `cookie` request parameter `name` became `false`: no value passes validation'
+  level: 3
+  operation: POST
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-property-schema-became-false_base.yaml
+    line: 151
+    column: 25
+  fingerprint: 84f1a95c4dfe
+

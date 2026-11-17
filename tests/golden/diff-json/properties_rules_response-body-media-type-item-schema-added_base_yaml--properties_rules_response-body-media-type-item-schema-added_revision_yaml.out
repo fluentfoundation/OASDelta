@@ -1,0 +1,1 @@
+{"paths":{"added":["/added/kind"],"modified":{"/pets/{petId}":{"operations":{"modified":{"POST":{"responses":{"modified":{"2XX":{"content":{"modified":{"text/plain":{"itemSchema":{"schemaAdded":true}}}}}}}}}}}}}}

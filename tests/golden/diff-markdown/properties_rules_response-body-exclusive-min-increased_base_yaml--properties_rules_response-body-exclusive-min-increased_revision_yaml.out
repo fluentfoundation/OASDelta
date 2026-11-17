@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+DELETE /pets/{petId}
+- Modified path param: petId
+  - Schema changed
+    - Max changed from null to 21
+- Responses changed
+  - Modified response: 2XX
+    - Headers changed
+      - New header: tag
+  - Modified response: 400
+    - Content changed
+      - Modified media type: application/vnd.api+json
+        - Schema changed
+          - ExclusiveMin changed from -7 to -5
+
+

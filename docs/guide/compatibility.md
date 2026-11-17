@@ -9,9 +9,9 @@ code as the Go binary.
   option combinations ([`tools/golden-commands.txt`](https://github.com/fluentfoundation/OASDelta/blob/main/tools/golden-commands.txt)):
   every output format of `diff`, `summary`, `changelog` and `breaking`; `--lang` es, pt-br and ru; and option sets
   such as `--level`, `--fail-on`, `--flatten-params`, `--include-path-params`, `--match-path`, `--prefix-revision`
-  and deprecation days. They run over 471 fixture pairs: the upstream test data paired by file name, the pairs
+  and deprecation days. They run over 633 fixture pairs: the upstream test data paired by file name, the pairs
   upstream's own checker tests compare (`tests/extra-pairs.txt`), and regression cases found by the property-based
-  tests. That is 15,543 comparisons, in which 549 of oasdiff's 778 checker rules fire. The
+  tests. That is 20,889 comparisons, in which 712 of oasdiff's 778 checker rules fire. The
   [coverage page](./coverage) lists the rules no golden fires. `dotnet test` replays them in
   process. CI replays them with the NativeAOT binary
   (`tools/check_golden.sh`) on Linux and Windows, and the release workflow replays them on all six release
@@ -99,6 +99,11 @@ of its size.
 
   A `$ref` to a `null` still resolves to nothing, as in oasdiff (for a schema, `diff failed: revision schema value
   is nil`).
+- **A discriminator mapping that points at nothing.** oasdiff 1.35.0 loads both specs with one kin-openapi loader,
+  and the loader takes every document after the first for an external one. In an external document it resolves a
+  mapping's local `$ref` (`mapping: {a: '#/components/schemas/A'}`), which it skips in the root document. So when `A`
+  doesn't exist, oasdiff loads the base spec but fails on the revision (`map key "A" not found`, exit 102). The
+  port loads both, as kin does for the first one.
 - **Crashes.** Where oasdiff crashes, the port reports an error or a result instead.
   - A parameter or response that is only a reference to itself (`P: {$ref: '#/components/parameters/P'}`) makes
     oasdiff 1.35.0 panic while it lowercases header names (exit 2, with a Go stack trace). The port fails with

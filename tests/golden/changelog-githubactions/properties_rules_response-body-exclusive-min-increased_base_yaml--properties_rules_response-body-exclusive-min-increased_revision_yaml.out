@@ -1,0 +1,4 @@
+::error title=request-parameter-max-set,file=./properties/rules/response-body-exclusive-min-increased_revision.yaml,line=15,col=21::in API DELETE /pets/{petId} for the `path` request parameter `petId`, the max was set to `21.00`
+::notice title=response-body-exclusive-min-increased,file=./properties/rules/response-body-exclusive-min-increased_revision.yaml,line=29,col=33::in API DELETE /pets/{petId} the response's body exclusiveMinimum was increased from `-7.00` to `-5.00`
+::notice title=response-header-added,file=./properties/rules/response-body-exclusive-min-increased_revision.yaml,line=21,col=25::in API DELETE /pets/{petId} the response header `tag` was added for the status `2XX`
+

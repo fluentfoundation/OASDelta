@@ -1,0 +1,17 @@
+3 изменений: 0 error, 1 warning, 2 info
+warning	[request-property-multiple-of-changed] в ./properties/rules/request-property-multiple-of-changed_revision.yaml
+	в API PUT /owners/{ownerId}/pets
+		значение multipleOf у поля запроса `items/` изменено с `5.00` на `2.00`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[response-required-property-became-read-only] в ./properties/rules/request-property-multiple-of-changed_revision.yaml
+	в API PATCH /items/{id}.json
+		обязательное свойство `` перестало быть только для записи для ответа со статусом `404`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+info	[request-property-all-of-added-annotation-only] в ./properties/rules/request-property-multiple-of-changed_revision.yaml
+	в API PUT /owners/{ownerId}/pets
+		добавлено `subschema #1` (только аннотация) в список `allOf` свойства запроса `items/`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+
+

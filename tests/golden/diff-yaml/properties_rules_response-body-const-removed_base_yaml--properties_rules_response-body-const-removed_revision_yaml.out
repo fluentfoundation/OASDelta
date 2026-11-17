@@ -1,0 +1,59 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "400":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - integer
+                                                        deleted:
+                                                            - string
+                                                    format:
+                                                        from: password
+                                                        to: ""
+                                                    minLength:
+                                                        from: 4
+                                                        to: 0
+                                                    pattern:
+                                                        from: ^.*$
+                                                        to: ""
+                                                    const:
+                                                        from: 䮼멀ቀ楬
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /store/order
+        :   responses:
+                modified:
+                    "400":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        type:
+                                            added:
+                                                - integer
+                                            deleted:
+                                                - string
+                                        format:
+                                            from: password
+                                            to: ""
+                                        minLength:
+                                            from: 4
+                                            to: 0
+                                        pattern:
+                                            from: ^.*$
+                                            to: ""
+                                        const:
+                                            from: 䮼멀ቀ楬
+                                            to: null
+

@@ -1,0 +1,229 @@
+- id: response-property-became-nullable
+  text: 'the response property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became nullable for the status `204`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: GET
+  path: /pets
+  section: paths
+  fingerprint: befa0a678a0b
+- id: response-property-became-nullable
+  text: 'the response property `items/items/allOf[subschema #3]/ключ` became nullable for the status `404` (media type: application/vnd.api+json)'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: GET
+  path: /pets
+  section: paths
+  fingerprint: 41ab8ecac20a
+- id: response-property-became-nullable
+  text: 'the response property `名前/items/allOf[subschema #3]/ключ` became nullable for the status `404` (media type: application/json; charset=utf-8)'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: GET
+  path: /pets
+  section: paths
+  fingerprint: 90bc45bcbfcf
+- id: response-property-type-generalized
+  text: 'the `items/items/allOf[subschema #3]/ключ` response''s property `type/format` was widened from `string` to `string, null/byte` for status `404` (media type: application/vnd.api+json)'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 32
+    column: 25
+  revisionSource:
+    file: ./properties/rules/response-write-only-property-became-optional_revision.yaml
+    line: 33
+    column: 25
+  fingerprint: c55ca9db0d9e
+- id: response-property-became-nullable
+  text: 'the response property `名前/items/allOf[subschema #3]/ключ` became nullable for the status `404`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 2
+  operation: GET
+  operationId: get_ünïcode_ключ
+  path: /ünïcode/ключ
+  section: paths
+  fingerprint: 3d614df01961
+- id: response-property-type-compatible
+  text: 'the `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` response''s property `type/format` changed from `string` to `string, null/byte` for status `204` (backward compatible)'
+  comment: This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 32
+    column: 25
+  revisionSource:
+    file: ./properties/rules/response-write-only-property-became-optional_revision.yaml
+    line: 33
+    column: 25
+  fingerprint: 8c3a98a56de6
+- id: response-property-type-compatible
+  text: 'the `名前/items/allOf[subschema #3]/ключ` response''s property `type/format` changed from `string` to `string, null/byte` for status `404` (backward compatible) (media type: application/json; charset=utf-8)'
+  comment: This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 32
+    column: 25
+  revisionSource:
+    file: ./properties/rules/response-write-only-property-became-optional_revision.yaml
+    line: 33
+    column: 25
+  fingerprint: 2e002c8a1046
+- id: response-required-property-became-not-write-only
+  text: 'the response required property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became not write-only for the status `204`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 33
+    column: 25
+  fingerprint: 470137c155d6
+- id: response-required-property-became-not-write-only
+  text: 'the response required property `items/items/allOf[subschema #3]/ключ` became not write-only for the status `404` (media type: application/vnd.api+json)'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 33
+    column: 25
+  fingerprint: cf8f0ec241e4
+- id: response-required-property-became-not-write-only
+  text: 'the response required property `名前/items/allOf[subschema #3]/ключ` became not write-only for the status `404` (media type: application/json; charset=utf-8)'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 33
+    column: 25
+  fingerprint: a65851dfec03
+- id: response-write-only-property-became-optional
+  text: 'the response write-only property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became optional for the status `204`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 35
+    column: 23
+  fingerprint: 679b4eb01f0b
+- id: response-write-only-property-became-optional
+  text: 'the response write-only property `items/items/allOf[subschema #3]/ключ` became optional for the status `404` (media type: application/vnd.api+json)'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 35
+    column: 23
+  fingerprint: 9e2bb0f251e9
+- id: response-write-only-property-became-optional
+  text: 'the response write-only property `名前/items/allOf[subschema #3]/ключ` became optional for the status `404` (media type: application/json; charset=utf-8)'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 35
+    column: 23
+  fingerprint: 184e665707ef
+- id: response-property-type-compatible
+  text: 'the `名前/items/allOf[subschema #3]/ключ` response''s property `type/format` changed from `string` to `string, null/byte` for status `404` (backward compatible)'
+  comment: This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: GET
+  operationId: get_ünïcode_ключ
+  path: /ünïcode/ключ
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 32
+    column: 25
+  revisionSource:
+    file: ./properties/rules/response-write-only-property-became-optional_revision.yaml
+    line: 33
+    column: 25
+  fingerprint: 89685b008001
+- id: response-required-property-became-not-write-only
+  text: 'the response required property `名前/items/allOf[subschema #3]/ключ` became not write-only for the status `404`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: GET
+  operationId: get_ünïcode_ключ
+  path: /ünïcode/ключ
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 33
+    column: 25
+  fingerprint: a9bcf83ce14a
+- id: response-write-only-property-became-optional
+  text: 'the response write-only property `名前/items/allOf[subschema #3]/ключ` became optional for the status `404`'
+  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  disclaimers:
+    - all-of-not-flattened
+  level: 1
+  operation: GET
+  operationId: get_ünïcode_ключ
+  path: /ünïcode/ключ
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-write-only-property-became-optional_base.yaml
+    line: 35
+    column: 23
+  fingerprint: a145384ca390
+

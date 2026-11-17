@@ -190,6 +190,8 @@ internal static class Edits
         ? new Map { ["type"] = "array", ["items"] = new Map { ["type"] = "string" } }
         : new Map { ["type"] = type };
 
+    private static readonly string[] FlowUrls = ["tokenUrl", "authorizationUrl", "refreshUrl"];
+
     private static string[] SchemeNames(Map doc) =>
         doc.GetValueOrDefault("components") is Map c && c.GetValueOrDefault("securitySchemes") is Map s ? [.. s.Keys] : [];
 
@@ -252,6 +254,12 @@ internal static class Edits
                 MapAt(c.M, "properties")[name] = Typed(SpecGen.Types[c.A % 4]);
                 if (c.A % 3 == 0 && !ListAt(c.M, "required").Contains(name)) ListAt(c.M, "required").Add(name);
             }),
+            ("add a writeOnly property", c =>
+            {
+                var name = c.NameOr("secret");
+                MapAt(c.M, "properties")[name] = new Map { ["type"] = "string", ["writeOnly"] = true };
+                if (c.A % 2 == 0 && !ListAt(c.M, "required").Contains(name)) ListAt(c.M, "required").Add(name);
+            }),
             ("remove property", c =>
             {
                 if (c.M.GetValueOrDefault("properties") is not Map props || props.Count == 0) return;
@@ -268,6 +276,24 @@ internal static class Edits
                     : (long)(c.A % 50 - 10);
             }),
             ("set size bound", c => c.M[SizeBounds[c.A % SizeBounds.Length]] = (long)(c.A % 20)),
+            // move a bound the schema already has up or down (the increased/decreased rules, #42)
+            ("nudge a bound", c =>
+            {
+                var ks = c.M.Keys.Where(k => (NumericBounds.Contains(k) || SizeBounds.Contains(k) || k is "minContains" or "maxContains") && c.M[k] is long).ToList();
+                if (ks.Count == 0) return;
+                var k = ks[c.A % ks.Count];
+                long v = (long)c.M[k]!;
+                bool up = c.A % 2 == 0 || v <= 1;
+                // a multipleOf doubles or halves (generalized/specialized); any other bound moves by 1 to 3
+                c.M[k] = k == "multipleOf" ? (up ? v * 2 : v / 2) : up ? v + 1 + c.A % 3 : Math.Max(0, v - 1 - c.A % 3);
+            }),
+            ("change discriminator mapping", c =>
+            {
+                // to a schema that exists (Support.HasDanglingMapping)
+                var names = c.Doc.GetValueOrDefault("components") is Map comp && comp.GetValueOrDefault("schemas") is Map schemas ? schemas.Keys.ToList() : [];
+                if (names.Count > 0 && c.M.GetValueOrDefault("discriminator") is Map d)
+                    MapAt(d, "mapping")[c.NameOr("b")] = "#/components/schemas/" + Esc(names[c.A % names.Count]);
+            }),
             ("remove a bound", c =>
             {
                 var ks = c.M.Keys.Where(k => NumericBounds.Contains(k) || SizeBounds.Contains(k)).ToList();
@@ -329,6 +355,25 @@ internal static class Edits
             ("set an extension", c => c.M["x-" + SpecGen.Words[c.A % 8]] = c.T),
             ("toggle not", c => Toggle(c.M, "not", Typed(SpecGen.Types[c.A % 4]))),
             ("set const", c => c.M["const"] = c.T),
+            // keywords some rules need that a generated schema has no other way to get (#41); the rules for the
+            // other direction (unset, removed, became not false) fire on the pair reversed (RulePromotion)
+            ("set a contains bound", c =>
+            {
+                if (!c.M.ContainsKey("contains")) c.M["contains"] = Typed(SpecGen.Types[c.A % 4]);
+                c.M[c.A % 2 == 0 ? "minContains" : "maxContains"] = (long)(c.A % 5);
+            }),
+            ("toggle contentSchema", c =>
+            {
+                if (c.M.Remove("contentSchema")) { c.M.Remove("contentMediaType"); return; }
+                c.M["contentMediaType"] = "application/json";
+                c.M["contentSchema"] = Typed(SpecGen.Types[c.A % 4]);
+            }),
+            ("replace with false", c =>
+            {
+                if (c.Loc.Parent is Map m && c.Loc.Key is not null) m[c.Loc.Key] = false;
+                else if (c.Loc.Parent is List<object?> l && c.Loc.Index >= 0 && c.Loc.Index < l.Count) l[c.Loc.Index] = false;
+            }),
+            ("add an annotation-only allOf entry", c => ListAt(c.M, "allOf").Add(new Map { ["description"] = c.NameOr("note") })),
             ("change items", c =>
             {
                 if (c.M.GetValueOrDefault("items") is Map items && !items.ContainsKey("$ref")) items["type"] = SpecGen.Types[c.A % 4];
@@ -454,6 +499,7 @@ internal static class Edits
             ("remove", c => c.Loc.Remove()),
             ("set example", c => c.M["example"] = c.T),
             ("replace schema", c => c.M["schema"] = Typed(SpecGen.Types[c.A % 6])),
+            ("toggle itemSchema", c => Toggle(c.M, "itemSchema", Typed(SpecGen.Types[c.A % 4]))),
         ],
         [Kind.Response] =
         [
@@ -489,6 +535,20 @@ internal static class Edits
             ("change name", c => { if (c.M.ContainsKey("name")) c.M["name"] = c.NameOr("key"); }),
             ("change http scheme", c => { if (c.M.ContainsKey("scheme")) c.M["scheme"] = c.A % 2 == 0 ? "bearer" : "basic"; }),
             ("set bearerFormat", c => c.M["bearerFormat"] = c.T),
+            // the OAuth and OpenID Connect URLs (api-security-component-oauth-*-changed, -openid-connect-url-changed)
+            ("change a flow URL", c =>
+            {
+                foreach (var flow in (c.M.GetValueOrDefault("flows") as Map)?.Values.OfType<Map>() ?? [])
+                {
+                    string key = FlowUrls[c.A % FlowUrls.Length];
+                    if (flow.ContainsKey(key) || key == "refreshUrl") flow[key] = $"https://auth{c.A % 3}.example.com/{key}";
+                }
+            }),
+            ("remove refreshUrl", c =>
+            {
+                foreach (var flow in (c.M.GetValueOrDefault("flows") as Map)?.Values.OfType<Map>() ?? []) flow.Remove("refreshUrl");
+            }),
+            ("change openIdConnectUrl", c => { if (c.M.ContainsKey("openIdConnectUrl")) c.M["openIdConnectUrl"] = $"https://id{c.A % 3}.example.com/.well-known/openid-configuration"; }),
             ("remove", c => c.Loc.Remove()),
         ],
         [Kind.Root] =
@@ -507,6 +567,15 @@ internal static class Edits
                 c.Doc["security"] = names.Length == 0 ? new List<object?>() : new List<object?> { new Map { [names[c.A % names.Length]] = new List<object?>() } };
             }),
             ("remove security", c => c.Doc.Remove("security")),
+            // a scope added to a requirement of the global security (api-global-security-scope-added)
+            ("add a scope to global security", c =>
+            {
+                if (c.Doc.GetValueOrDefault("security") is not List<object?> requirements) return;
+                foreach (var requirement in requirements.OfType<Map>())
+                    foreach (var key in requirement.Keys.ToList())
+                        if (requirement[key] is List<object?> scopes) scopes.Add(SpecGen.Scopes[c.A % SpecGen.Scopes.Length]);
+                        else requirement[key] = new List<object?> { SpecGen.Scopes[c.A % SpecGen.Scopes.Length] };
+            }),
             ("add tag", c => ListAt(c.Doc, "tags").Add(new Map { ["name"] = c.NameOr("tag"), ["description"] = c.T })),
             ("remove tags", c => c.Doc.Remove("tags")),
             ("switch OpenAPI version", c => c.Doc["openapi"] = c.V31 ? "3.0.3" : "3.1.0"),

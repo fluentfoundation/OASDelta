@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-property-min-items-decreased] en ./properties/rules/response-property-min-items-decreased_revision.json
+	en API POST /ünïcode/ключ
+		el número mínimo de elementos de la propiedad de respuesta `oneOf[subschema #1]/` fue disminuido de `3` a `2` para el estado `204`
+
+

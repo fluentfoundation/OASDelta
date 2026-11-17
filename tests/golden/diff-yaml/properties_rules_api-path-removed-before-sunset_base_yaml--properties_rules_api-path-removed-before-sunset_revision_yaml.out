@@ -1,0 +1,37 @@
+paths:
+    added:
+        - /pets/{petId}
+    deleted:
+        - /pets/{petId}/v2
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    PUT:
+                        parameters:
+                            added:
+                                path:
+                                    - ownerId
+endpoints:
+    added:
+        - method: DELETE
+          path: /pets/{petId}
+        - method: GET
+          path: /pets/{petId}
+        - method: POST
+          path: /pets/{petId}
+    deleted:
+        - method: DELETE
+          path: /pets/{petId}/v2
+        - method: GET
+          path: /pets/{petId}/v2
+        - method: POST
+          path: /pets/{petId}/v2
+    modified:
+        ?   method: PUT
+            path: /owners/{ownerId}/pets
+        :   parameters:
+                added:
+                    path:
+                        - ownerId
+

@@ -1,0 +1,39 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "500":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            名前:
+                                                                items:
+                                                                    max:
+                                                                        from: 911
+                                                                        to: 910
+endpoints:
+    modified:
+        ?   method: GET
+            path: /v1/items
+        :   responses:
+                modified:
+                    "500":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                名前:
+                                                    items:
+                                                        max:
+                                                            from: 911
+                                                            to: 910
+

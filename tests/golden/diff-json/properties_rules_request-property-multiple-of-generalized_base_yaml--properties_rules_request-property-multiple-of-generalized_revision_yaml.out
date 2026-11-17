@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/v1/items":{"operations":{"modified":{"PUT":{"requestBody":{"content":{"modified":{"multipart/form-data":{"schema":{"properties":{"modified":{"‮abc":{"anyOf":{"modified":[{"base":{"index":1},"revision":{"index":1},"diff":{"multipleOf":{"from":2,"to":1}}}]}}}}}}}}}}}}}}}}

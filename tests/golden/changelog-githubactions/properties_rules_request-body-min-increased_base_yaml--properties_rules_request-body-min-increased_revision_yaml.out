@@ -1,0 +1,2 @@
+::error title=request-body-min-increased,file=./properties/rules/request-body-min-increased_revision.yaml,line=111,col=29::in API PUT /items/{id}.json the request's body min was increased to `10.00`
+

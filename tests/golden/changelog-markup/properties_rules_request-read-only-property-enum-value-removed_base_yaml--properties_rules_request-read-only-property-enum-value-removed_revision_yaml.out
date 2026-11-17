@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /ünïcode/ключ
+-  removed the enum value `49.00` of the request read-only property `oneOf[#/components/schemas/Item]/price/䯄஗Ꜵ䟐│㖵` (media type: application/json; charset=utf-8)
+
+
+
+
+
+

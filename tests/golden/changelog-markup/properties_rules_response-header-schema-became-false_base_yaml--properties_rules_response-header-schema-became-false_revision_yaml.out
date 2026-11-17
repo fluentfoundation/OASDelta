@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /pets
+-  the schema of the response header ` leading` became `false` for the status `204`: no value passes validation
+
+
+
+
+
+

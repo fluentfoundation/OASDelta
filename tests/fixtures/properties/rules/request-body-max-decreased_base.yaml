@@ -1,0 +1,203 @@
+# Fires request-body-max-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            description: id
+            exclusiveMinimum: -3
+            format: double
+            multipleOf: 5
+            type: number
+        Item:
+            $ref: '#/components/schemas/Error'
+        Owner:
+            deprecated: true
+            description: 孛
+            type:
+                - integer
+                - "null"
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: id
+            type: apiKey
+        oauth:
+            flows:
+                authorizationCode:
+                    authorizationUrl: https://auth.example.com/authorize
+                    scopes:
+                        admin: admin access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: name
+    version: v1
+openapi: 3.1.0
+paths:
+    /items/{id}.json:
+        delete:
+            operationId: '[bracket]'
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: id
+                  schema:
+                    properties:
+                        '"quoted"':
+                            $ref: '#/components/schemas/Item'
+                        䜛놐薾§:
+                            $ref: '#/components/schemas/Item'
+                    required:
+                        - 䜛놐薾§
+                    type: object
+            responses:
+                "404":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                format: uuid
+                                type:
+                                    - string
+                                    - "null"
+                    description: pet
+                    headers:
+                        tag:
+                            schema:
+                                type: boolean
+                "500":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Error'
+                        text/plain:
+                            schema:
+                                maximum: 899
+                                multipleOf: 2
+                                type:
+                                    - number
+                                    - "null"
+                    description: kind
+                default:
+                    description: Ünïcode
+                    headers:
+                         nbsp:
+                            schema:
+                                format: custom
+                                type: boolean
+            summary: '@at'
+            tags:
+                - price
+        post:
+            operationId: post_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: pet
+                  required: false
+                  schema:
+                    $ref: '#/components/schemas/Error'
+                - deprecated: true
+                  in: cookie
+                  name: tag
+                  schema:
+                    description: pet
+                    properties:
+                        '"quoted"':
+                            description: ключ
+                            minimum: 6
+                            type:
+                                - number
+                                - "null"
+                        status:
+                            exclusiveMinimum: -9
+                            format: float
+                            type: number
+                        ключ:
+                            $ref: '#/components/schemas/Owner'
+                        ꙅ쌢箨彆蜬:
+                            enum:
+                                - owner
+                                - 䉃爽쫀䬦媈㲈
+                                - "no"
+                            format: email
+                            type: string
+                    required:
+                        - ключ
+                        - '"quoted"'
+                    type: object
+                  style: form
+                - in: query
+                  name: name
+                  required: false
+                  schema:
+                    items:
+                        multipleOf: 10
+                        type: number
+                    maxItems: 100
+                    minItems: 1
+                    type: array
+            requestBody:
+                content:
+                    text/plain:
+                        schema:
+                            deprecated: true
+                            maximum: 118
+                            type:
+                                - integer
+                                - "null"
+                            writeOnly: true
+                required: true
+            responses:
+                "404":
+                    description: status
+            x-stability-level: beta
+        put:
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: header
+                  name: 혓茆
+                  schema:
+                    default: 87
+                    maximum: 814
+                    type:
+                        - integer
+                        - "null"
+                - in: cookie
+                  name: '-'
+                  required: false
+                  schema:
+                    items:
+                        $ref: '#/components/schemas/Item'
+                    type: array
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            description: price
+                            enum:
+                                - true
+                                - false
+                            format: custom
+                            type: boolean
+                required: false
+            responses:
+                "200":
+                    description: ☂
+            summary: _under_

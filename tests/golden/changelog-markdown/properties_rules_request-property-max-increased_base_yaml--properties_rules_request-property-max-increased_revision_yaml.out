@@ -1,0 +1,18 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /pets
+-  added the new optional `query` request parameter `pet` to all path's operations
+
+
+### POST /pets/{petId}
+- :warning: deleted the `cookie` request parameter `pet`
+-  the `anyOf[subschema #1]/oneOf[subschema #3]/` request property's max was increased from `596.00` to `597.00`
+
+
+
+
+
+

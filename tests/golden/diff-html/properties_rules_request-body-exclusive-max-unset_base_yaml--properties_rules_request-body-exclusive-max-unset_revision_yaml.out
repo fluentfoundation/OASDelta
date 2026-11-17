@@ -1,0 +1,32 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PUT /owners/{ownerId}/pets</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: multipart/form-data
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'integer, null' to 'number'</li>
+<li>Format changed from 'int64' to ''</li>
+<li>Description changed from '沗웭켰ꜥ⋣뢥' to ''</li>
+<li>Default changed from 82 to null</li>
+<li>ExclusiveMax changed from 1585 to null</li>
+<li>Min changed from 5 to null</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

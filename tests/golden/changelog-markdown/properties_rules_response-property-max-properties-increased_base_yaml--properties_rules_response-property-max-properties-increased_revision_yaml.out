@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /v1/items
+- :warning: the `created` response property's maxProperties was increased from `11` to `12` for the response status `404`
+
+
+
+
+
+

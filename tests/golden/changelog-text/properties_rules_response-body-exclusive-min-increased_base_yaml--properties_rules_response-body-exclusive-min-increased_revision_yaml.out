@@ -1,0 +1,15 @@
+3 changes: 1 error, 0 warning, 2 info
+error	[request-parameter-max-set] at ./properties/rules/response-body-exclusive-min-increased_revision.yaml
+	in API DELETE /pets/{petId}
+		for the `path` request parameter `petId`, the max was set to `21.00`
+		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+info	[response-body-exclusive-min-increased] at ./properties/rules/response-body-exclusive-min-increased_revision.yaml
+	in API DELETE /pets/{petId}
+		the response's body exclusiveMinimum was increased from `-7.00` to `-5.00`
+
+info	[response-header-added] at ./properties/rules/response-body-exclusive-min-increased_revision.yaml
+	in API DELETE /pets/{petId}
+		the response header `tag` was added for the status `2XX`
+
+

@@ -1,0 +1,39 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                2XX:
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    items:
+                                                        properties:
+                                                            modified:
+                                                                ' ':
+                                                                    maxLength:
+                                                                        from: 77
+                                                                        to: 76
+endpoints:
+    modified:
+        ?   method: GET
+            path: /pets
+        :   responses:
+                modified:
+                    2XX:
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        items:
+                                            properties:
+                                                modified:
+                                                    ' ':
+                                                        maxLength:
+                                                            from: 77
+                                                            to: 76
+

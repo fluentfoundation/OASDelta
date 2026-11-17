@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /store/order
+- :warning: the `status` response header's maxLength was increased from `209` to `210` for the status `2XX`
+
+
+
+
+
+

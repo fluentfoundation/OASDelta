@@ -1,0 +1,123 @@
+# Fires response-required-write-only-property-removed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            additionalProperties:
+                type: string
+            type: object
+info:
+    title: price
+    version: v1
+openapi: 3.0.3
+paths:
+    /store/order:
+        patch:
+            operationId: patch_store_order
+            parameters:
+                - explode: false
+                  in: header
+                  name: id
+                  schema:
+                    $ref: '#/components/schemas/Error'
+                - in: header
+                  name: '''single'''
+                  schema:
+                    $ref: '#/components/schemas/Error'
+                - in: cookie
+                  name: created
+                  required: false
+                  schema:
+                    description: ""
+                    format: float
+                    nullable: true
+                    type: number
+                    writeOnly: true
+            requestBody:
+                content:
+                    application/vnd.api+json:
+                        schema:
+                            $ref: '#/components/schemas/Error'
+            responses:
+                2XX:
+                    description: price
+                "204":
+                    description: kind
+                    headers:
+                        '`tick`':
+                            schema:
+                                deprecated: true
+                                enum:
+                                    - 1e-07
+                                readOnly: true
+                                type: number
+                        pet:
+                            schema:
+                                pattern: \d{3}
+                                type: string
+    /v1/items:
+        delete:
+            operationId: delete_v1_items
+            responses:
+                "201":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                description: '`tick`'
+                                properties:
+                                    '@at':
+                                        nullable: true
+                                        type: string
+                                type: object
+                    description: price
+                "500":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                type: object
+                        multipart/form-data:
+                            schema:
+                                properties:
+                                    id:
+                                        description: id
+                                        maxLength: 171
+                                        type: string
+                                        writeOnly: true
+                                    pet:
+                                        items:
+                                            example: kind
+                                            format: password
+                                            pattern: (
+                                            type: string
+                                        type: array
+                                    瀒:
+                                        properties:
+                                            螸䀠웍劋켨꼁:
+                                                nullable: true
+                                                type: number
+                                        required:
+                                            - 螸䀠웍劋켨꼁
+                                        type: object
+                                        x-extensible-enum:
+                                            - tag
+                                required:
+                                    - pet
+                                    - 瀒
+                                    - id
+                                type: object
+                    description: '| table |'
+                    headers:
+                        ' ':
+                            deprecated: true
+                            schema:
+                                format: int64
+                                maximum: 809
+                                type: integer
+                        '*star':
+                            schema:
+                                enum:
+                                    - 71.25
+                                    - 44.75
+                                nullable: true
+                                type: number
+            tags:
+                - price

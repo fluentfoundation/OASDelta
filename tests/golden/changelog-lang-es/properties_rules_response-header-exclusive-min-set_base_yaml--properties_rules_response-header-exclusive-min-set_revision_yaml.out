@@ -1,0 +1,10 @@
+2 cambios: 1 error, 0 warning, 1 info
+error	[api-removed-without-deprecation] en ./properties/rules/response-header-exclusive-min-set_base.yaml
+	en API GET /pets
+		api removida sin deprecación
+
+info	[response-header-exclusive-min-set] en ./properties/rules/response-header-exclusive-min-set_revision.yaml
+	en API PATCH /store/order
+		el valor exclusiveMinimum del encabezado de respuesta `%20` fue establecido en `true` para el estado `201`
+
+

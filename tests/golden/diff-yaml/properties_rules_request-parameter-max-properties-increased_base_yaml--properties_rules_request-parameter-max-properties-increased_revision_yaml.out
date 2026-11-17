@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    PATCH:
+                        parameters:
+                            modified:
+                                cookie:
+                                    Ünïcode:
+                                        schema:
+                                            maxProps:
+                                                from: 6
+                                                to: 9
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /ünïcode/ключ
+        :   parameters:
+                modified:
+                    cookie:
+                        Ünïcode:
+                            schema:
+                                maxProps:
+                                    from: 6
+                                    to: 9
+

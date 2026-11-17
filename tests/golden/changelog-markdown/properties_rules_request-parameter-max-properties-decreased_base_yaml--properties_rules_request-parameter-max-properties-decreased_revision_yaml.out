@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /items/{id}.json
+- :warning: for the `cookie` request parameter `名前`, the maxProperties was decreased from `15` to `13`
+
+
+
+
+
+

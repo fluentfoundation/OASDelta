@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[response-property-max-items-increased] в ./properties/rules/response-property-max-items-increased_revision.yaml
+	в API PUT /store/order
+		значение maxItems у поля ответа `items/` увеличено с `30` до `32` для ответа со статусом `default`
+
+

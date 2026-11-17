@@ -1,0 +1,21 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /pets/{petId}
+- :warning: removed the media type `multipart/form-data` from the request body
+- :warning: the request's body `type/format` changed from `number/float` to `object`
+-  added the new optional request property `---`
+-  the request's body exclusiveMinimum was unset from `-8.00`
+-  the request's body min was unset from `-5.00`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

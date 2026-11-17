@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            multipleOf:
+                                                from: 10
+                                                to: 5
+endpoints:
+    modified:
+        ?   method: POST
+            path: /ünïcode/ключ
+        :   requestBody:
+                content:
+                    modified:
+                        text/plain:
+                            schema:
+                                multipleOf:
+                                    from: 10
+                                    to: 5
+

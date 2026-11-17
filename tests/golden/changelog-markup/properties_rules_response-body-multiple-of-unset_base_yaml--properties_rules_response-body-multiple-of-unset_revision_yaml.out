@@ -1,0 +1,15 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /pets
+- :warning: the response's body multipleOf was unset from `5.00`
+- :warning: the response's body `type` changed from `number, null` to `object` for status `400`
+-  the response's body became not nullable
+
+
+
+
+
+

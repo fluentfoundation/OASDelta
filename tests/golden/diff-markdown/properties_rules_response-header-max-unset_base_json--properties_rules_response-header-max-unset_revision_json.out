@@ -1,0 +1,20 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /search
+- Responses changed
+  - Modified response: 200
+    - Headers changed
+      - Modified header: null
+        - Schema changed
+          - Type changed from 'number' to ''
+          - Format changed from 'double' to ''
+          - Min changed from 8 to null
+          - Max changed from 31 to null
+
+

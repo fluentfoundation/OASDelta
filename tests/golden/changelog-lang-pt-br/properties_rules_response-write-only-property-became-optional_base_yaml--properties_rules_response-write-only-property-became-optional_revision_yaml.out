@@ -1,0 +1,82 @@
+16 alterações: 0 error, 5 warning, 11 info
+warning	[response-property-became-nullable] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		a propriedade de resposta `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` tornou-se anulável para o status `204`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+warning	[response-property-became-nullable] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		a propriedade de resposta `items/items/allOf[subschema #3]/ключ` tornou-se anulável para o status `404` (media type: application/vnd.api+json)
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+warning	[response-property-became-nullable] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		a propriedade de resposta `名前/items/allOf[subschema #3]/ключ` tornou-se anulável para o status `404` (media type: application/json; charset=utf-8)
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+warning	[response-property-type-generalized] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		o `items/items/allOf[subschema #3]/ключ` da propriedade de resposta `type/format` foi expandido de `string` para `string, null/byte` para o status `404` (media type: application/vnd.api+json)
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+warning	[response-property-became-nullable] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /ünïcode/ключ
+		a propriedade de resposta `名前/items/allOf[subschema #3]/ключ` tornou-se anulável para o status `404`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-property-type-compatible] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		o `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` da propriedade de resposta `type/format` mudou de `string` para `string, null/byte` para o status `204` (retrocompatível)
+		Esta mudança é retrocompatível porque o tipo de mídia não é fortemente tipado (por exemplo XML), onde qualquer valor pode ser representado como texto, então o tipo não é imposto na transmissão. Com um tipo de mídia fortemente tipado como JSON a mesma mudança seria incompatível. Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-property-type-compatible] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		o `名前/items/allOf[subschema #3]/ключ` da propriedade de resposta `type/format` mudou de `string` para `string, null/byte` para o status `404` (retrocompatível) (media type: application/json; charset=utf-8)
+		Esta mudança é retrocompatível porque o tipo de mídia não é fortemente tipado (por exemplo XML), onde qualquer valor pode ser representado como texto, então o tipo não é imposto na transmissão. Com um tipo de mídia fortemente tipado como JSON a mesma mudança seria incompatível. Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-required-property-became-not-write-only] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		a propriedade obrigatória de resposta `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` deixou de ser somente escrita para o status `204`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-required-property-became-not-write-only] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		a propriedade obrigatória de resposta `items/items/allOf[subschema #3]/ключ` deixou de ser somente escrita para o status `404` (media type: application/vnd.api+json)
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-required-property-became-not-write-only] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		a propriedade obrigatória de resposta `名前/items/allOf[subschema #3]/ключ` deixou de ser somente escrita para o status `404` (media type: application/json; charset=utf-8)
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-write-only-property-became-optional] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		a propriedade somente escrita `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` tornou-se opcional para o status `204`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-write-only-property-became-optional] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		a propriedade somente escrita `items/items/allOf[subschema #3]/ключ` tornou-se opcional para o status `404` (media type: application/vnd.api+json)
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-write-only-property-became-optional] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /pets
+		a propriedade somente escrita `名前/items/allOf[subschema #3]/ключ` tornou-se opcional para o status `404` (media type: application/json; charset=utf-8)
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-property-type-compatible] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /ünïcode/ключ
+		o `名前/items/allOf[subschema #3]/ключ` da propriedade de resposta `type/format` mudou de `string` para `string, null/byte` para o status `404` (retrocompatível)
+		Esta mudança é retrocompatível porque o tipo de mídia não é fortemente tipado (por exemplo XML), onde qualquer valor pode ser representado como texto, então o tipo não é imposto na transmissão. Com um tipo de mídia fortemente tipado como JSON a mesma mudança seria incompatível. Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-required-property-became-not-write-only] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /ünïcode/ключ
+		a propriedade obrigatória de resposta `名前/items/allOf[subschema #3]/ключ` deixou de ser somente escrita para o status `404`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+info	[response-write-only-property-became-optional] em ./properties/rules/response-write-only-property-became-optional_revision.yaml
+	em API GET /ünïcode/ключ
+		a propriedade somente escrita `名前/items/allOf[subschema #3]/ключ` tornou-se opcional para o status `404`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+
+

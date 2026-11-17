@@ -1,0 +1,11 @@
+2 alterações: 2 error, 0 warning, 0 info
+error	[request-body-contains-added] em ./properties/rules/request-body-min-contains-set_revision.json
+	em API PATCH /v1/items
+		adicionada a restrição 'contains' ao corpo da requisição
+
+error	[request-body-min-contains-set] em ./properties/rules/request-body-min-contains-set_revision.json
+	em API PATCH /v1/items
+		o valor minContains do corpo da requisição foi definido como `3`
+		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+
+

@@ -1,0 +1,102 @@
+# Fires request-body-media-type-item-schema-removed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            nullable: true
+            type: string
+        Owner:
+            format: date
+            nullable: true
+            type: string
+    securitySchemes:
+        oauth:
+            flows:
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: tag
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /owners/{ownerId}/pets:
+        put:
+            description: price
+            operationId: put_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: a~b
+                  schema:
+                    description: id
+                    properties:
+                        "x\ty":
+                            format: custom
+                            type: boolean
+                        名前:
+                            maximum: 290
+                            nullable: true
+                            type: number
+                    required:
+                        - "x\ty"
+                    type: object
+                - description: 㯎㎿꠵倮쉒释
+                  in: cookie
+                  name: price
+                  required: true
+                  schema:
+                    maxProperties: 11
+                    minProperties: 1
+                    properties:
+                        '"quoted"':
+                            nullable: true
+                            type: number
+                            writeOnly: true
+                        '|':
+                            $ref: '#/components/schemas/Owner'
+                        owner:
+                            enum:
+                                - status
+                                - owner
+                            nullable: true
+                            type: string
+                        럦巩褎:
+                            default: 59
+                            format: int64
+                            type: integer
+                    required:
+                        - '|'
+                    type: object
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            items:
+                                minProperties: 2
+                                type: object
+                            type: array
+            responses:
+                "201":
+                    description: price
+                    headers:
+                        tag:
+                            deprecated: true
+                            required: false
+                            schema:
+                                description: name
+                                nullable: true
+                                type: integer
+            security:
+                - oauth: []
+            summary: pet
+            tags:
+                - ключ
+security:
+    - oauth: []

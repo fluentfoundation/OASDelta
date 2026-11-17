@@ -1,0 +1,9 @@
+- id: response-body-max-length-decreased
+  text: the response's body maxLength was decreased from `96` to `95`
+  level: 1
+  operation: POST
+  operationId: post_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  fingerprint: 2022e691df32
+

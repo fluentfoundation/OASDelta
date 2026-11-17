@@ -1,0 +1,31 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /pets
+- :warning: the response property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became nullable for the status `204`
+- :warning: the response property `items/items/allOf[subschema #3]/ключ` became nullable for the status `404` (media type: application/vnd.api+json)
+- :warning: the response property `名前/items/allOf[subschema #3]/ключ` became nullable for the status `404` (media type: application/json; charset=utf-8)
+- :warning: the `items/items/allOf[subschema #3]/ключ` response's property `type/format` was widened from `string` to `string, null/byte` for status `404` (media type: application/vnd.api+json)
+-  the `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` response's property `type/format` changed from `string` to `string, null/byte` for status `204` (backward compatible)
+-  the `名前/items/allOf[subschema #3]/ключ` response's property `type/format` changed from `string` to `string, null/byte` for status `404` (backward compatible) (media type: application/json; charset=utf-8)
+-  the response required property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became not write-only for the status `204`
+-  the response required property `items/items/allOf[subschema #3]/ключ` became not write-only for the status `404` (media type: application/vnd.api+json)
+-  the response required property `名前/items/allOf[subschema #3]/ключ` became not write-only for the status `404` (media type: application/json; charset=utf-8)
+-  the response write-only property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became optional for the status `204`
+-  the response write-only property `items/items/allOf[subschema #3]/ключ` became optional for the status `404` (media type: application/vnd.api+json)
+-  the response write-only property `名前/items/allOf[subschema #3]/ключ` became optional for the status `404` (media type: application/json; charset=utf-8)
+
+
+### GET /ünïcode/ключ
+- :warning: the response property `名前/items/allOf[subschema #3]/ключ` became nullable for the status `404`
+-  the `名前/items/allOf[subschema #3]/ключ` response's property `type/format` changed from `string` to `string, null/byte` for status `404` (backward compatible)
+-  the response required property `名前/items/allOf[subschema #3]/ключ` became not write-only for the status `404`
+-  the response write-only property `名前/items/allOf[subschema #3]/ключ` became optional for the status `404`
+
+
+
+
+
+

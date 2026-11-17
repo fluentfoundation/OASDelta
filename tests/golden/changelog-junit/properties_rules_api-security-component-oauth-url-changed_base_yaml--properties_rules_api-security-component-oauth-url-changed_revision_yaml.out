@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+    <testcase name="api-security-component-oauth-url-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the component security scheme `oauth` oauth `authorizationCode` flow authorization url changed from `https://auth.example.com/authorize` to `https://auth1.example.com/authorizationUrl`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

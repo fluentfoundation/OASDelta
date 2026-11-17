@@ -1,0 +1,41 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    PUT:
+                        parameters:
+                            modified:
+                                cookie:
+                                    price:
+                                        allowReserved:
+                                            from: true
+                                            to: false
+                        requestBody:
+                            content:
+                                modified:
+                                    application/xml:
+                                        itemSchema:
+                                            schemaDeleted: true
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /owners/{ownerId}/pets
+        :   parameters:
+                modified:
+                    cookie:
+                        price:
+                            allowReserved:
+                                from: true
+                                to: false
+            requestBody:
+                content:
+                    modified:
+                        application/xml:
+                            itemSchema:
+                                schemaDeleted: true
+components:
+    securitySchemes:
+        added:
+            - oauth
+

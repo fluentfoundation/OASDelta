@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /ünïcode/ключ
+-  the `x	y` response header's max was decreased from `764.00` to `16.00` for the status `500`
+
+
+
+
+
+

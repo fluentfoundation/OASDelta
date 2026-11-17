@@ -1,0 +1,184 @@
+# Fires response-body-exclusive-max-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: id
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /store/order:
+        patch:
+            deprecated: true
+            operationId: "0x1F"
+            parameters:
+                - in: cookie
+                  name: 腨萫
+                  schema:
+                    enum:
+                        - 52
+                    readOnly: true
+                    type:
+                        - number
+                        - "null"
+                - in: cookie
+                  name: 'trailing '
+                  schema:
+                    maxProperties: 9
+                    properties:
+                        empty:
+                            description: 戠窾⊗
+                            minLength: 4
+                            pattern: ^.*$
+                            type: string
+                    type: object
+                - in: cookie
+                  name: '| table |'
+                  required: true
+                  schema:
+                    anyOf:
+                        - enum:
+                            - 62
+                          type: number
+                        - deprecated: true
+                          type:
+                            - boolean
+                            - "null"
+                    discriminator:
+                        propertyName: empty
+                  style: simple
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            items:
+                                default: 42
+                                description: C:\path
+                                maximum: 952
+                                type:
+                                    - number
+                                    - "null"
+                            type: array
+                    application/vnd.api+json:
+                        schema:
+                            description: status
+                            format: int32
+                            type:
+                                - integer
+                                - "null"
+            responses:
+                "400":
+                    description: pet
+                "404":
+                    description: 뀞黋懣퍪섍
+    /v1/items:
+        post:
+            operationId: post_v1_items
+            responses:
+                "204":
+                    content:
+                        '*/*':
+                            schema:
+                                minimum: 10
+                                type:
+                                    - number
+                                    - "null"
+                        multipart/form-data:
+                            schema:
+                                default: -0
+                                enum:
+                                    - 8
+                                exclusiveMaximum: 1017
+                                minimum: -5
+                                multipleOf: 5
+                                type:
+                                    - integer
+                                    - "null"
+                    description: owner
+                "500":
+                    description: '''single'''
+                    headers:
+                        名前:
+                            required: true
+                            schema:
+                                exclusiveMaximum: 1635
+                                format: int32
+                                readOnly: true
+                                type:
+                                    - integer
+                                    - "null"
+                        鯷᩼瓒倨즟໖鱵:
+                            schema:
+                                format: float
+                                maximum: 382
+                                type: number
+            security:
+                - openid: []
+    /ünïcode/ключ:
+        put:
+            description: owner
+            operationId: put_ünïcode_ключ
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            description: '`tick`'
+                            minProperties: 0
+                            properties:
+                                kind:
+                                    type: integer
+                                ቸ釬늰:
+                                    discriminator:
+                                        propertyName: Ünïcode
+                                    oneOf:
+                                        - deprecated: true
+                                          type: boolean
+                                        - deprecated: true
+                                          format: uuid
+                                          type:
+                                            - string
+                                            - "null"
+                            required:
+                                - ቸ釬늰
+                            type: object
+                    text/plain:
+                        schema:
+                            example: 죥ሎ돋쐤
+                            type: integer
+                required: true
+            responses:
+                "200":
+                    description: id
+                "204":
+                    description: name
+                default:
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    items:
+                                        deprecated: true
+                                        enum:
+                                            - 98
+                                            - -10.75
+                                        format: double
+                                        type:
+                                            - number
+                                            - "null"
+                                    type: array
+                                type: array
+                        application/vnd.api+json:
+                            schema:
+                                properties:
+                                    status:
+                                        items:
+                                            type:
+                                                - boolean
+                                                - "null"
+                                        type: array
+                                type: object
+                    description: ꮛ傌얘ퟌ훂茭䘏쳃
+servers:
+    - url: https://api.example.com/v2

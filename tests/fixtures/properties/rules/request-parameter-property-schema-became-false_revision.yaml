@@ -1,0 +1,181 @@
+# Fires request-parameter-property-schema-became-false (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: 內獺
+    version: v1
+openapi: 3.1.0
+paths:
+    /items/{id}.json:
+        patch:
+            description: created
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            description: ключ
+                            enum:
+                                - true
+                                - false
+                            type:
+                                - boolean
+                                - "null"
+                    text/plain:
+                        schema:
+                            items:
+                                properties:
+                                    '"quoted"':
+                                        format: custom
+                                        type: boolean
+                                    created:
+                                        exclusiveMaximum: 1371
+                                        format: int64
+                                        readOnly: true
+                                        type: integer
+                                required:
+                                    - created
+                                type: object
+                            minItems: 3
+                            type: array
+                required: true
+            responses:
+                2XX:
+                    content:
+                        '*/*':
+                            schema:
+                                properties:
+                                    a~b:
+                                        properties:
+                                            pet:
+                                                format: custom
+                                                type:
+                                                    - boolean
+                                                    - "null"
+                                            tag:
+                                                type:
+                                                    - boolean
+                                                    - "null"
+                                        required:
+                                            - tag
+                                        type: object
+                                    id:
+                                        anyOf:
+                                            - deprecated: true
+                                              description: Ünïcode
+                                              minLength: 1
+                                              type:
+                                                - string
+                                                - "null"
+                                            - deprecated: true
+                                              description: '[bracket]'
+                                              format: int32
+                                              maximum: 66
+                                              type:
+                                                - integer
+                                                - "null"
+                                            - description: 名前
+                                              type: integer
+                                    owner:
+                                        additionalProperties:
+                                            type: string
+                                        type: object
+                                required:
+                                    - owner
+                                    - a~b
+                                type: object
+                        application/json; charset=utf-8:
+                            schema:
+                                format: float
+                                type: number
+                    description: name
+                "200":
+                    description: owner
+                "404":
+                    description: "1e3"
+                    headers:
+                        名前:
+                            deprecated: true
+                            schema:
+                                enum:
+                                    - pet
+                                format: date
+                                type:
+                                    - string
+                                    - "null"
+            security:
+                - bearer: []
+            tags:
+                - kind
+        post:
+            description: '>'
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - deprecated: true
+                  in: query
+                  name: ключ
+                  schema:
+                    description: price
+                    properties:
+                        '`tick`':
+                            enum:
+                                - -42.75
+                            type:
+                                - number
+                                - "null"
+                        id:
+                            default: false
+                            description: '-'
+                            format: custom
+                            type: boolean
+                    required:
+                        - '`tick`'
+                    type: object
+                - in: cookie
+                  name: name
+                  schema:
+                    items: false
+                    type: array
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            enum:
+                                - 67
+                                - 36
+                            maximum: 325
+                            minimum: 8
+                            readOnly: true
+                            type:
+                                - number
+                                - "null"
+                            writeOnly: true
+            responses:
+                "200":
+                    description: 名前
+                    headers:
+                        躛:
+                            schema:
+                                enum:
+                                    - true
+                                    - false
+                                format: custom
+                                type:
+                                    - boolean
+                                    - "null"
+            summary: created
+servers:
+    - url: https://api.example.com/v2
+    - url: https://api.example.com

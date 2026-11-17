@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /items/{id}.json
+- :warning: the `owner` response header's minProperties was unset from `8` for the status `default`
+
+
+
+
+
+

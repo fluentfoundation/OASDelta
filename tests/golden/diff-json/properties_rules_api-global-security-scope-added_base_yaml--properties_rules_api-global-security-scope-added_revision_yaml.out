@@ -1,0 +1,1 @@
+{"security":{"modified":[{"base":{"index":0,"schemes":{"openid":[]}},"revision":{"index":0,"schemes":{"openid":["write"]}},"scopes":{"openid":{"added":["write"]}}}]}}

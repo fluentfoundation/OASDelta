@@ -1,0 +1,165 @@
+# Fires request-property-min-properties-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        bearer:
+            scheme: basic
+            type: http
+info:
+    title: tag
+    version: v1
+openapi: 3.0.3
+paths:
+    /search:
+        get:
+            operationId: '{brace}'
+            responses:
+                "200":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                default: 94.625
+                                enum:
+                                    - 11
+                                    - 12
+                                    - 19
+                                type: integer
+                    description: pet
+                "201":
+                    description: 名前
+            tags:
+                - owner
+            x-stability-level: alpha
+        post:
+            description: owner
+            operationId: post_search
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                format: date-time
+                                nullable: true
+                                type: string
+                    description: 澝ポ藖뛓
+                default:
+                    description: id
+        put:
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            description: name
+                            properties:
+                                '"quoted"':
+                                    properties:
+                                        price:
+                                            enum:
+                                                - 멁膬
+                                            minProperties: 8
+                                            type: string
+                                    required:
+                                        - price
+                                    type: object
+                                name:
+                                    type: object
+                                owner:
+                                    deprecated: true
+                                    description: price
+                                    properties:
+                                        㴁퇅葵뭾鼨:
+                                            format: double
+                                            type: number
+                                    required:
+                                        - 㴁퇅葵뭾鼨
+                                    type: object
+                            required:
+                                - owner
+                                - '"quoted"'
+                            type: object
+                    application/vnd.api+json:
+                        schema:
+                            items:
+                                multipleOf: 10
+                                type: number
+                            minItems: 1
+                            type: array
+                required: false
+            responses:
+                "200":
+                    description: id
+                "201":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                enum:
+                                    - 9007199254740993
+                                    - 67
+                                    - 60.375
+                                type: number
+                        multipart/form-data:
+                            schema:
+                                description: "no"
+                                properties:
+                                    "0x1F":
+                                        anyOf:
+                                            - type: boolean
+                                              writeOnly: true
+                                            - description: price
+                                              type: integer
+                                    created:
+                                        description: '*star'
+                                        type: boolean
+                                    pet:
+                                        oneOf:
+                                            - maxLength: 12
+                                              nullable: true
+                                              type: string
+                                            - type: boolean
+                                            - default: true
+                                              nullable: true
+                                              type: boolean
+                                    Ünïcode:
+                                        maxLength: 178
+                                        nullable: true
+                                        readOnly: true
+                                        type: string
+                                required:
+                                    - created
+                                    - pet
+                                    - Ünïcode
+                                type: object
+                    description: name
+                "404":
+                    content:
+                        text/plain:
+                            schema:
+                                items:
+                                    properties:
+                                        created:
+                                            description: '|'
+                                            enum:
+                                                - -66.25
+                                                - 26
+                                                - 21
+                                            format: float
+                                            type: number
+                                        "yes":
+                                            default: name
+                                            description: name
+                                            type: string
+                                        名前:
+                                            enum:
+                                                - '**bold**'
+                                                - owner
+                                                - id
+                                            format: password
+                                            type: string
+                                    type: object
+                                type: array
+                    description: created
+                    headers:
+                        id:
+                            deprecated: true
+                            schema:
+                                type: boolean
+            summary: tag

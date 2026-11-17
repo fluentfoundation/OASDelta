@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /v1/items
+- :warning: added 'contains' constraint to the request body
+- :warning: the request's body minContains was set to `3`
+
+
+
+
+
+

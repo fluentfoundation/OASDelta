@@ -1,0 +1,20 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+PATCH /search
+- Modified cookie param: id
+  - Schema changed
+    - Type changed from 'array' to ''
+
+POST /search
+- Modified cookie param: kind
+  - Schema changed
+    - Properties changed
+      - New property: ключ
+
+

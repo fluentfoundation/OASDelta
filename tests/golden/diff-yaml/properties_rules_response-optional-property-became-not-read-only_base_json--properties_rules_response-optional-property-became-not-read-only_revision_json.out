@@ -1,0 +1,56 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            '*/*':
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            Ünïcode:
+                                                                properties:
+                                                                    modified:
+                                                                        몫롵γ簡㑽꺙鯲:
+                                                                            readOnly:
+                                                                                from: true
+                                                                                to: false
+endpoints:
+    modified:
+        ?   method: POST
+            path: /v1/items
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                '*/*':
+                                    schema:
+                                        properties:
+                                            modified:
+                                                Ünïcode:
+                                                    properties:
+                                                        modified:
+                                                            몫롵γ簡㑽꺙鯲:
+                                                                readOnly:
+                                                                    from: true
+                                                                    to: false
+components:
+    schemas:
+        modified:
+            Item:
+                properties:
+                    modified:
+                        Ünïcode:
+                            properties:
+                                modified:
+                                    몫롵γ簡㑽꺙鯲:
+                                        readOnly:
+                                            from: true
+                                            to: false
+

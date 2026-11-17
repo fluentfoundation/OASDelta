@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /items/{id}.json
+- :warning: for the `header` request parameter `~`, the minContains was set to `3`
+
+
+
+
+
+

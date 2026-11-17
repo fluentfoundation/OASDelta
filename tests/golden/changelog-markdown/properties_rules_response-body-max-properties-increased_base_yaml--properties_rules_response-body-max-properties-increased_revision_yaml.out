@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /ünïcode/ключ
+- :warning: the response's body maxProperties was increased from `11` to `14`
+
+
+
+
+
+

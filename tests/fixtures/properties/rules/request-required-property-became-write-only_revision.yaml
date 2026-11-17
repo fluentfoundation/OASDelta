@@ -1,0 +1,71 @@
+# Fires request-required-property-became-write-only (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            properties:
+                owner:
+                    deprecated: true
+                    example: '''single'''
+                    type:
+                        - boolean
+                        - "null"
+            required:
+                - owner
+            type: object
+            x-extensible-enum:
+                - _under_
+                - 'trailing '
+        Item:
+            type: number
+        Pet:
+            properties:
+                status:
+                    format: custom
+                    type: boolean
+                    writeOnly: true
+                ключ:
+                    const: status
+                    format: uuid
+                    maxLength: 37
+                    type: string
+                㙉:
+                    $ref: '#/components/schemas/Item'
+            type: object
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: 名前
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /search:
+        patch:
+            operationId: id
+            parameters:
+                - description: ключ
+                  in: query
+                  name: name
+                  required: true
+                  schema:
+                    items:
+                        type:
+                            - string
+                            - "null"
+                    type: array
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            properties:
+                                '`tick`':
+                                    type: string
+                                    writeOnly: true
+                            required:
+                                - '`tick`'
+                            type: object
+                description: status
+            responses:
+                "404":
+                    description: '{brace}'

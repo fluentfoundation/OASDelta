@@ -1,0 +1,2 @@
+::notice title=response-property-max-items-decreased,file=./properties/rules/response-property-max-items-decreased_revision.yaml,line=235,col=41::in API PATCH /search the `pet` response property's maxItems was decreased from `67` to `64` for the response status `204`
+

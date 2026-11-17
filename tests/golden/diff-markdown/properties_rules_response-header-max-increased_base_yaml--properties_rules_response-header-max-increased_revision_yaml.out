@@ -1,0 +1,31 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+DELETE /search
+- Responses changed
+  - Modified response: default
+    - Headers changed
+      - Modified header: kind
+        - Schema changed
+          - Max changed from -4 to 973
+
+GET /search
+- Modified cookie param: status
+  - Schema changed
+    - Deleted enum values: [id-1 id]
+- Responses changed
+  - Modified response: 201
+    - Content changed
+      - Modified media type: application/xml
+        - Schema changed
+          - Required changed
+            - Deleted required property: `tick`
+          - Properties changed
+            - Deleted property: `tick`
+
+

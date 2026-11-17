@@ -1,0 +1,236 @@
+{
+  "components": {
+    "schemas": {
+      "Item": {
+        "properties": {
+          "色䶂陻": {
+            "description": "a\r\nb",
+            "format": "float",
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "色䶂陻"
+        ],
+        "type": "object"
+      },
+      "Owner": {
+        "enum": [
+          "owner",
+          "pet"
+        ],
+        "readOnly": true,
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "Pet": {
+        "deprecated": true,
+        "example": "name",
+        "format": "custom",
+        "type": "boolean"
+      }
+    }
+  },
+  "info": {
+    "title": "created",
+    "version": "2.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/pets": {
+      "get": {
+        "parameters": [
+          {
+            "explode": false,
+            "in": "header",
+            "name": "ᰌⰤ뜆≿",
+            "schema": {
+              "exclusiveMinimum": -8,
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "format": "double",
+                  "minimum": 8,
+                  "readOnly": true,
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "description": "㔌",
+            "headers": {
+              "name": {
+                "schema": {
+                  "description": "\"quoted\"",
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              },
+              "ключ": {
+                "deprecated": true,
+                "schema": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "2XX": {
+            "description": "**bold**"
+          },
+          "404": {
+            "description": "pet",
+            "headers": {
+              "status": {
+                "schema": {
+                  "maxLength": 77,
+                  "minLength": 5,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "in": "header",
+            "name": "price",
+            "required": true,
+            "schema": {
+              "description": "status",
+              "enum": [
+                8.375,
+                64
+              ],
+              "maximum": 921,
+              "type": "number"
+            }
+          },
+          {
+            "in": "header",
+            "name": "status",
+            "schema": {
+              "additionalProperties": true,
+              "properties": {
+                "created": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "created"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "enum": [
+                  -35.375,
+                  53,
+                  99
+                ],
+                "minimum": 6,
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "owner",
+            "headers": {
+              "\u003cb\u003e\u0026amp;": {
+                "required": false,
+                "schema": {
+                  "deprecated": true,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "enum": [
+                    9223372036854775807,
+                    5,
+                    -26
+                  ],
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "writeOnly": true
+                }
+              },
+              "application/vnd.api+json": {
+                "schema": {
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "example": "tag",
+                  "readOnly": true,
+                  "type": "boolean"
+                }
+              }
+            },
+            "description": "kind"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Owner"
+                }
+              }
+            },
+            "description": "price"
+          }
+        },
+        "summary": "created"
+      }
+    }
+  }
+}

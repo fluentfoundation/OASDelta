@@ -1,0 +1,153 @@
+# Fires request-body-min-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            pattern: (
+            type:
+                - string
+                - "null"
+        Pet:
+            properties:
+                '*star':
+                    default: false
+                    type:
+                        - boolean
+                        - "null"
+                a/b:
+                    properties:
+                        "~":
+                            description: price
+                            format: custom
+                            type:
+                                - boolean
+                                - "null"
+                         nbsp:
+                            enum:
+                                - price
+                                - status
+                                - 唣畦㻛앐罽ॉ
+                            format: date-time
+                            minLength: 2
+                            type: string
+                    required:
+                        -  nbsp
+                        - "~"
+                    type: object
+                kind:
+                    maximum: 941
+                    minimum: -1
+                    readOnly: true
+                    type: integer
+            required:
+                - '*star'
+            type: object
+    securitySchemes:
+        api_key:
+            in: header
+            name: _under_
+            type: apiKey
+info:
+    title: owner
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /pets:
+        delete:
+            operationId: ключ
+            responses:
+                "204":
+                    description: 鮴∪չ
+            summary: '''single'''
+    /search:
+        delete:
+            operationId: delete_search
+            parameters:
+                - in: query
+                  name: ⤽෻ว
+                  schema:
+                    properties:
+                        ключ:
+                            type:
+                                - boolean
+                                - "null"
+                    required:
+                        - ключ
+                    type: object
+                  style: form
+                - description: created
+                  in: header
+                  name: created
+                  required: true
+                  schema:
+                    minProperties: 1
+                    properties:
+                        Ünïcode:
+                            maximum: 822
+                            type:
+                                - number
+                                - "null"
+                        ключ:
+                            $ref: '#/components/schemas/Pet'
+                    required:
+                        - Ünïcode
+                    type: object
+                - in: query
+                  name: status
+                  schema:
+                    items:
+                        maximum: 805
+                        type:
+                            - integer
+                            - "null"
+                    type: array
+            responses:
+                "201":
+                    description: Ünïcode
+                    headers:
+                        kind:
+                            required: true
+                            schema:
+                                example: name
+                                minLength: 0
+                                type:
+                                    - string
+                                    - "null"
+        put:
+            operationId: put_search
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            description: pet
+                            format: float
+                            minimum: -2
+                            type:
+                                - number
+                                - "null"
+                    application/xml:
+                        schema:
+                            properties:
+                                tag:
+                                    additionalProperties: true
+                                    properties:
+                                        id:
+                                            $ref: '#/components/schemas/Pet'
+                                    required:
+                                        - id
+                                    type: object
+                            required:
+                                - tag
+                            type: object
+            responses:
+                "201":
+                    description: "\a"
+    /ünïcode/ключ:
+        get:
+            operationId: name
+            responses:
+                2XX:
+                    description: tag
+                "400":
+                    description: kind
+security:
+    - api_key: []

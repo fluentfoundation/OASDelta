@@ -1,0 +1,14 @@
+3 cambios: 2 error, 0 warning, 1 info
+error	[response-body-contains-removed] en ./properties/rules/response-body-min-contains-unset_revision.yaml
+	en API PATCH /ünïcode/ключ
+		removida la restricción 'contains' del cuerpo de respuesta para el estado `default`
+
+error	[response-body-min-contains-unset] en ./properties/rules/response-body-min-contains-unset_revision.yaml
+	en API PATCH /ünïcode/ключ
+		el valor minContains del cuerpo de respuesta fue removido de `3`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+

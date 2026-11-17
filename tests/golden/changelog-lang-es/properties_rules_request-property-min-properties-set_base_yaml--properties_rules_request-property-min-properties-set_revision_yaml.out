@@ -1,0 +1,7 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-property-min-properties-set] en ./properties/rules/request-property-min-properties-set_revision.yaml
+	en API POST /v1/items
+		el valor minProperties de la propiedad de solicitud `items/items/` fue establecido en `4`
+		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+
+

@@ -1,0 +1,104 @@
+# Fires request-body-multiple-of-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            additionalProperties: true
+            properties:
+                 nbsp:
+                    items:
+                        enum:
+                            - 88
+                            - 1e+300
+                        type:
+                            - number
+                            - "null"
+                    type: array
+            required:
+                -  nbsp
+            type: object
+        Pet:
+            $ref: '#/components/schemas/Error'
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: 名前
+            type: apiKey
+info:
+    title: name
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /owners/{ownerId}/pets:
+        get:
+            operationId: get_owners_{ownerId}_pets
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "204":
+                    description: ⌥䞝팵凍ӄ祹랭
+                "400":
+                    description: 좪዇髛
+        patch:
+            operationId: ключ
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            items:
+                                exclusiveMinimum: -2
+                                multipleOf: 5
+                                type:
+                                    - integer
+                                    - "null"
+                                writeOnly: true
+                            type: array
+                            uniqueItems: true
+                    application/vnd.api+json:
+                        schema:
+                            properties:
+                                status:
+                                    $ref: '#/components/schemas/Pet'
+                            type: object
+                required: false
+            responses:
+                2XX:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                $ref: '#/components/schemas/Pet'
+                    description: price
+                "500":
+                    description: <b>&amp;
+                default:
+                    content:
+                        text/plain:
+                            schema:
+                                type: object
+                    description: |-
+                        line1
+                        line2
+                    headers:
+                        缷쁁벹䭊:
+                            schema:
+                                default: true
+                                description: "yes"
+                                format: custom
+                                type:
+                                    - boolean
+                                    - "null"
+            summary: kind
+            x-stability-level: beta
+security:
+    - api_key: []
+servers:
+    - url: https://api.example.com

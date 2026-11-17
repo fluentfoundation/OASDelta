@@ -1,0 +1,33 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+PATCH /v1/items
+- Responses changed
+  - Modified response: 204
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - MinProps changed from 8 to 0
+
+POST /v1/items
+- Modified header param: kind
+  - Description changed from '-' to ''
+- Request body changed
+  - Content changed
+    - Modified media type: */*
+      - Schema changed
+        - MinProps changed from 8 to 0
+    - Modified media type: application/json
+      - Schema changed
+        - Properties changed
+          - Modified property: %20
+            - Properties changed
+              - Modified property: created
+                - Max changed from 210 to 209
+
+

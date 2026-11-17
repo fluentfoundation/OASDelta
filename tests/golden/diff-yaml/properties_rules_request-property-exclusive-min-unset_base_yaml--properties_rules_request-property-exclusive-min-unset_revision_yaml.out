@@ -1,0 +1,51 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                path:
+                                    ownerId:
+                                        schema:
+                                            schemaAdded: true
+                                        content:
+                                            deleted:
+                                                - application/json
+                        requestBody:
+                            content:
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    pet:
+                                                        exclusiveMin:
+                                                            from: true
+                                                            to: null
+endpoints:
+    modified:
+        ?   method: POST
+            path: /owners/{ownerId}/pets
+        :   parameters:
+                modified:
+                    path:
+                        ownerId:
+                            schema:
+                                schemaAdded: true
+                            content:
+                                deleted:
+                                    - application/json
+            requestBody:
+                content:
+                    modified:
+                        text/plain:
+                            schema:
+                                properties:
+                                    modified:
+                                        pet:
+                                            exclusiveMin:
+                                                from: true
+                                                to: null
+

@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /pets
+- :warning: the `kind` response header's exclusiveMaximum was unset from `1394.00` for the status `204`
+
+
+
+
+
+

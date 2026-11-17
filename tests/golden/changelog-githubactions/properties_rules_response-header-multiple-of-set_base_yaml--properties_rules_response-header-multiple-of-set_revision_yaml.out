@@ -1,0 +1,2 @@
+::notice title=response-header-multiple-of-set,file=./properties/rules/response-header-multiple-of-set_revision.yaml,line=30,col=9::in API GET /v1/items the `‮abc` response header's multipleOf was set to `3.00` for the status `2XX`
+

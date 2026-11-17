@@ -1,0 +1,4 @@
+::error title=request-body-became-enum,file=./properties/rules/request-body-min-length-set_revision.yaml,line=224,col=29::in API POST /ünïcode/ключ request body was restricted to a list of enum values
+::error title=request-body-min-length-set,file=./properties/rules/request-body-min-length-set_revision.yaml,line=228,col=29::in API POST /ünïcode/ключ the request's body minLength was set to `5`
+::notice title=request-body-became-nullable,file=./properties/rules/request-body-min-length-set_revision.yaml,line=229,col=29::in API POST /ünïcode/ключ the request's body became nullable
+

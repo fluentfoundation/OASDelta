@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets":{"operations":{"modified":{"PATCH":{"responses":{"modified":{"400":{"content":{"modified":{"*/*":{"schema":{"maxItems":{"from":85,"to":88}}}}}}}}}}}}}}}

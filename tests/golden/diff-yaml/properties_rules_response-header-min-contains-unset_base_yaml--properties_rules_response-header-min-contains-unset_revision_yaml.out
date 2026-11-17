@@ -1,0 +1,35 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "400":
+                                    headers:
+                                        modified:
+                                            name:
+                                                schema:
+                                                    contains:
+                                                        schemaDeleted: true
+                                                    minContains:
+                                                        from: 3
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /search
+        :   responses:
+                modified:
+                    "400":
+                        headers:
+                            modified:
+                                name:
+                                    schema:
+                                        contains:
+                                            schemaDeleted: true
+                                        minContains:
+                                            from: 3
+                                            to: null
+

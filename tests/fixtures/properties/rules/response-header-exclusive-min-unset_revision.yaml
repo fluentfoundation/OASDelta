@@ -1,0 +1,153 @@
+# Fires response-header-exclusive-min-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            description: Ünïcode
+            enum:
+                - true
+                - false
+            type: boolean
+        Owner:
+            deprecated: true
+            properties:
+                '#hash':
+                    example: '''single'''
+                    minimum: -8
+                    type: integer
+                price:
+                    description: '{brace}'
+                    maximum: 36
+                    nullable: true
+                    type: number
+                    writeOnly: true
+                陽⦲נ:
+                    items:
+                        enum:
+                            - 16.25
+                        format: float
+                        maximum: 722
+                        multipleOf: 10
+                        nullable: true
+                        type: number
+                    type: array
+            type: object
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: '`tick`'
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        delete:
+            deprecated: true
+            description: owner
+            operationId: delete_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "204":
+                    description: created
+                    headers:
+                        kind:
+                            required: true
+                            schema:
+                                default: false
+                                format: custom
+                                nullable: true
+                                type: boolean
+                        ? |-
+                            line1
+                            line2
+                        :   schema:
+                                nullable: true
+                                type: boolean
+                "400":
+                    description: "~"
+                "404":
+                    description: id
+    /ünïcode/ключ:
+        patch:
+            operationId: patch_ünïcode_ключ
+            parameters:
+                - in: header
+                  name: '---'
+                  required: false
+                  schema:
+                    type: boolean
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            description: '!tag'
+                            maximum: 197
+                            nullable: true
+                            type: number
+            responses:
+                2XX:
+                    content:
+                        multipart/form-data:
+                            schema:
+                                anyOf:
+                                    - enum:
+                                        - 0
+                                      format: int64
+                                      maximum: 66
+                                      type: integer
+                                    - items:
+                                        $ref: '#/components/schemas/Owner'
+                                      type: array
+                    description: "1e3"
+                    headers:
+                        owner:
+                            schema:
+                                enum:
+                                    - -3
+                                nullable: true
+                                type: integer
+                "201":
+                    description: "~"
+                "500":
+                    content:
+                        application/json:
+                            schema:
+                                maxProperties: 16
+                                properties:
+                                    '**bold**':
+                                        $ref: '#/components/schemas/Owner'
+                                    tag:
+                                        enum:
+                                            - 50.875
+                                            - -3
+                                            - 7.875
+                                        example: '-'
+                                        nullable: true
+                                        readOnly: true
+                                        type: number
+                                required:
+                                    - '**bold**'
+                                type: object
+                        application/vnd.api+json:
+                            schema:
+                                items:
+                                    items:
+                                        format: byte
+                                        maxLength: 101
+                                        readOnly: true
+                                        type: string
+                                    type: array
+                                type: array
+                    description: id
+            security:
+                - openid: []
+security:
+    - openid: []
+servers:
+    - url: https://api.example.com
+    - url: https://api.example.com/v2

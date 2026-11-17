@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            '*/*':
+                                                schema:
+                                                    allOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 0
+                                                              revision:
+                                                                index: 0
+                                                              diff:
+                                                                exclusiveMax:
+                                                                    from: null
+                                                                    to: 1785
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /store/order
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                '*/*':
+                                    schema:
+                                        allOf:
+                                            modified:
+                                                - base:
+                                                    index: 0
+                                                  revision:
+                                                    index: 0
+                                                  diff:
+                                                    exclusiveMax:
+                                                        from: null
+                                                        to: 1785
+

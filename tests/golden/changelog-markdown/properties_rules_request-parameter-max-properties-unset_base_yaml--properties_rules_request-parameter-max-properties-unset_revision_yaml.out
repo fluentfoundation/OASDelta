@@ -1,0 +1,17 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /items/{id}.json
+-  added the media type `application/json; charset=utf-8` for the response with the status `204`
+
+
+### GET /owners/{ownerId}/pets
+-  for the `cookie` request parameter `owner`, the maxProperties was unset from `11`
+
+
+
+
+
+

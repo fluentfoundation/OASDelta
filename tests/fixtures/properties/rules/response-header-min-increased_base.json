@@ -1,0 +1,126 @@
+{
+  "components": {
+    "securitySchemes": {
+      "api_key": {
+        "in": "header",
+        "name": "⿤塰૱欶ᆍቌ਄",
+        "type": "apiKey"
+      },
+      "bearer": {
+        "scheme": "basic",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "title": "owner",
+    "version": "2.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/store/order": {
+      "get": {
+        "description": "owner",
+        "operationId": "get_store_order",
+        "parameters": [
+          {
+            "explode": false,
+            "in": "header",
+            "name": "~",
+            "schema": {
+              "description": "status",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "tag",
+            "schema": {
+              "nullable": true,
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "price",
+            "in": "query",
+            "name": "created",
+            "schema": {
+              "items": {
+                "format": "password",
+                "nullable": true,
+                "type": "string"
+              },
+              "type": "array"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "description": "kind",
+                  "format": "binary",
+                  "pattern": "^.*$",
+                  "readOnly": true,
+                  "type": "string",
+                  "writeOnly": true
+                }
+              }
+            },
+            "description": "\u003e",
+            "headers": {
+              "name": {
+                "schema": {
+                  "maximum": 915,
+                  "minimum": -8,
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "items": {
+                    "deprecated": true,
+                    "description": "trailing ",
+                    "minProperties": 1,
+                    "properties": {
+                      "a\r\nb": {
+                        "type": "boolean"
+                      },
+                      "created": {
+                        "enum": [
+                          "ключ",
+                          "a/b",
+                          "{brace}"
+                        ],
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      "坱䪞㫂塓찪饋暯噪": {
+                        "format": "int64",
+                        "maximum": 608,
+                        "type": "integer"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "pet"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com/v2"
+    }
+  ]
+}

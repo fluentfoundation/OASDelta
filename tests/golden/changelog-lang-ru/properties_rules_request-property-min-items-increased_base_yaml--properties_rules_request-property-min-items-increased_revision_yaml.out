@@ -1,0 +1,20 @@
+4 изменений: 2 error, 2 warning, 0 info
+error	[request-property-min-items-increased] в ./properties/rules/request-property-min-items-increased_revision.yaml
+	в API PATCH /items/{id}.json
+		значение minItems у поля запроса `'single'` увеличено до `2`
+
+error	[new-request-path-parameter] в ./properties/rules/request-property-min-items-increased_revision.yaml
+	в API DELETE /pets/{petId}
+		добален новый path параметр запроса `id`
+
+warning	[request-parameter-removed] в ./properties/rules/request-property-min-items-increased_revision.yaml
+	в API DELETE /pets/{petId}
+		удалён `header` параметр запроса `id`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+warning	[request-parameter-removed] в ./properties/rules/request-property-min-items-increased_revision.yaml
+	в API PATCH /pets/{petId}
+		удалён `path` параметр запроса `petId`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+

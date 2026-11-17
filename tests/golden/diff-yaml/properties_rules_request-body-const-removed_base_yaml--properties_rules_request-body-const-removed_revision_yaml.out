@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/xml:
+                                        schema:
+                                            const:
+                                                from: '@at'
+                                                to: null
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items/{id}.json
+        :   requestBody:
+                content:
+                    modified:
+                        application/xml:
+                            schema:
+                                const:
+                                    from: '@at'
+                                    to: null
+

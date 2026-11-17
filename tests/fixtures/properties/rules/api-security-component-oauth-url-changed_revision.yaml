@@ -1,0 +1,204 @@
+# Fires api-security-component-oauth-url-changed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            description: '**bold**'
+            type: boolean
+    securitySchemes:
+        bearer:
+            scheme: basic
+            type: http
+        oauth:
+            flows:
+                authorizationCode:
+                    authorizationUrl: https://auth1.example.com/authorizationUrl
+                    scopes:
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+                clientCredentials:
+                    scopes:
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: 訾
+    version: v1
+openapi: 3.0.3
+paths:
+    /items/{id}.json:
+        get:
+            operationId: get_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: cookie
+                  name: 名前
+                  required: false
+                  schema:
+                    items:
+                        example: created
+                        format: double
+                        nullable: true
+                        type: number
+                    minItems: 3
+                    type: array
+                - in: header
+                  name: price
+                  required: true
+                  schema:
+                    properties:
+                        created:
+                            minimum: -4
+                            type: number
+                    type: object
+                  style: form
+            responses:
+                "204":
+                    content:
+                        application/xml:
+                            schema:
+                                const: 名前
+                                enum:
+                                    - id
+                                    - pet
+                                    - price
+                                maxLength: 243
+                                nullable: true
+                                type: string
+                    description: price
+                    headers:
+                        _under_:
+                            schema:
+                                enum:
+                                    - true
+                                    - false
+                                nullable: true
+                                type: boolean
+            tags:
+                - price
+                - status
+        post:
+            description: name
+            operationId: status
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - description: kind
+                  in: cookie
+                  name: "\a"
+                  schema:
+                    description: "0x1F"
+                    type: integer
+                - in: query
+                  name: 名前
+                  schema:
+                    description: 뛦瀑῏
+                    type: object
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            oneOf:
+                                - allOf:
+                                    - type: number
+                                    - description: 名前
+                                      format: float
+                                      nullable: true
+                                      type: number
+                                - items:
+                                    type: boolean
+                                  type: array
+            responses:
+                "404":
+                    description: <b>&amp;
+            summary: ключ
+        put:
+            operationId: put_items_{id}.json
+            parameters:
+                - in: path
+                  name: id
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: "a\r\nb"
+                  required: true
+                  schema:
+                    anyOf:
+                        - type: integer
+                        - type: boolean
+                - description: id
+                  in: query
+                  name: tag
+                  schema:
+                    deprecated: true
+                    properties:
+                        '"quoted"':
+                            example: name
+                            minimum: 4
+                            nullable: true
+                            type: integer
+                            writeOnly: true
+                        "1e3":
+                            default: "\U0001F600"
+                            deprecated: true
+                            nullable: true
+                            type: string
+                        status:
+                            description: 名前
+                            format: email
+                            type: string
+                        "x\ty":
+                            default: false
+                            enum:
+                                - true
+                                - false
+                            type: boolean
+                    required:
+                        - "x\ty"
+                    type: object
+            responses:
+                "200":
+                    content:
+                        application/xml:
+                            schema:
+                                items:
+                                    maximum: 953
+                                    type: integer
+                                maxItems: 84
+                                type: array
+                        multipart/form-data:
+                            schema:
+                                enum:
+                                    - true
+                                    - false
+                                example: kind
+                                type: boolean
+                    description: tag
+                "201":
+                    content:
+                        text/plain:
+                            schema:
+                                description: 'trailing '
+                                format: date
+                                type: string
+                    description:  nbsp
+                    headers:
+                        kind:
+                            required: true
+                            schema:
+                                type: string
+                "500":
+                    description: status
+            security: []
+            summary: price
+security:
+    - bearer: []

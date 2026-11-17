@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-header-schema-became-false] en ./properties/rules/response-header-schema-became-false_revision.yaml
+	en API GET /pets
+		el esquema del encabezado de respuesta ` leading` se convirtió en `false` para el estado `204`: ningún valor pasa la validación
+
+

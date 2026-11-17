@@ -1,0 +1,14 @@
+3 alterações: 1 error, 0 warning, 2 info
+error	[response-body-min-properties-unset] em ./properties/rules/request-read-only-property-max-decreased_revision.yaml
+	em API PATCH /v1/items
+		o valor minProperties do corpo da resposta foi removido de `8`
+
+info	[request-body-min-properties-unset] em ./properties/rules/request-read-only-property-max-decreased_revision.yaml
+	em API POST /v1/items
+		o valor minProperties do corpo da requisição foi removido de `8` (media type: */*)
+
+info	[request-read-only-property-max-decreased] em ./properties/rules/request-read-only-property-max-decreased_revision.yaml
+	em API POST /v1/items
+		o valor máximo da propriedade de requisição somente leitura `%20/created` foi reduzido para `209.00` (media type: application/json)
+
+

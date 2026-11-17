@@ -1,0 +1,11 @@
+- id: api-global-security-scope-added
+  text: the security scope `write` was added to the global security scheme `openid`
+  comment: No endpoint inherits the API's top-level security requirements, so this change affects no client.
+  level: 1
+  section: security
+  revisionSource:
+    file: ./properties/rules/api-global-security-scope-added_revision.yaml
+    line: 129
+    column: 1
+  fingerprint: a669efd888ae
+

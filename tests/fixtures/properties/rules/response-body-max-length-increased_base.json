@@ -1,0 +1,165 @@
+{
+  "components": {
+    "schemas": {
+      "Item": {
+        "enum": [
+          "C:\\path",
+          "Ünïcode"
+        ],
+        "type": "string"
+      },
+      "Owner": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "Pet": {
+        "allOf": [
+          {
+            "readOnly": true,
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          {
+            "description": "%20",
+            "format": "double",
+            "maximum": 881,
+            "type": "number"
+          },
+          {
+            "example": "status",
+            "readOnly": true,
+            "type": [
+              "boolean",
+              "null"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "~",
+    "version": "1.0.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/pets": {
+      "delete": {
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "default": "髗뷛衛嵼ה휄",
+                  "maxLength": 11,
+                  "type": "string"
+                }
+              }
+            },
+            "description": "no",
+            "headers": {
+              "C:\\path": {
+                "schema": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              },
+              "戁拦": {
+                "schema": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "2XX": {
+            "description": "kind"
+          }
+        }
+      },
+      "get": {
+        "operationId": "get_pets",
+        "parameters": [
+          {
+            "description": "`tick`",
+            "in": "cookie",
+            "name": "@at",
+            "schema": {
+              "description": "tag",
+              "enum": [
+                76
+              ],
+              "exclusiveMinimum": 0,
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          {
+            "deprecated": true,
+            "in": "cookie",
+            "name": "id",
+            "required": false,
+            "schema": {
+              "items": {
+                "deprecated": true,
+                "maximum": 20,
+                "type": "number"
+              },
+              "type": "array"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "content": {
+              "application/xml": {
+                "schema": {
+                  "items": {
+                    "exclusiveMaximum": 1552,
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "名前"
+          },
+          "404": {
+            "description": "owner"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com/v2"
+    },
+    {
+      "url": "https://api.example.com"
+    }
+  ],
+  "tags": [
+    {
+      "name": "id"
+    }
+  ]
+}

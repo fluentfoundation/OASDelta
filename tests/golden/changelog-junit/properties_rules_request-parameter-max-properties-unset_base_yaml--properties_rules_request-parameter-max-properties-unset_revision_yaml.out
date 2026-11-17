@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="response-media-type-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the media type `application/json; charset=utf-8` for the response with the status `204`</failure>
+    </testcase>
+    <testcase name="request-parameter-max-properties-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `cookie` request parameter `owner`, the maxProperties was unset from `11`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

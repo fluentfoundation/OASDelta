@@ -1,0 +1,74 @@
+# Fires response-body-multiple-of-changed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            items:
+                anyOf:
+                    - description: 쵎똵憟ᵘ⬇粠亮᎐
+                      enum:
+                        - -29.875
+                        - 1e-07
+                        - 20
+                      nullable: true
+                      type: number
+                    - enum:
+                        - '''single'''
+                      minLength: 5
+                      type: string
+            minItems: 0
+            type: array
+info:
+    title: 앏
+    version: v1
+openapi: 3.0.3
+paths:
+    /store/order:
+        delete:
+            description: 秛딨㶻㘏໻䒢ꇲ좠
+            operationId: delete_store_order
+            parameters:
+                - in: cookie
+                  name: Ünïcode
+                  required: true
+                  schema:
+                    deprecated: true
+                    properties:
+                        kind:
+                            type: string
+                    type: object
+                - in: query
+                  name: empty
+                  schema:
+                    format: custom
+                    nullable: true
+                    type: boolean
+            responses:
+                2XX:
+                    description: '%20'
+                "204":
+                    description: id
+                    headers:
+                        "null":
+                            schema:
+                                type: integer
+                "404":
+                    content:
+                        application/json:
+                            schema:
+                                maximum: 299
+                                minimum: -7
+                                multipleOf: 5
+                                type: integer
+                        multipart/form-data:
+                            schema:
+                                items:
+                                    $ref: '#/components/schemas/Owner'
+                                type: array
+                    description: '"quoted"'
+        get:
+            responses:
+                "200":
+                    description: ключ
+tags:
+    - name: name
+    - name: owner

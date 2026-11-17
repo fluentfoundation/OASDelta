@@ -1,0 +1,54 @@
+13 alterações: 7 error, 0 warning, 6 info
+error	[request-property-deprecated-sunset-invalid] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		propriedade de requisição `invalid` depreciada com data de expiração inválida: `sunset date doesn't conform with RFC3339: not a date`
+
+error	[request-property-removed-before-sunset] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		a propriedade de requisição `removed` foi removida antes da data de expiração `2099-12-31`
+
+error	[request-property-stability-decreased] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		nível de estabilidade da propriedade de requisição `decreased` reduzido de `stable` para `beta`
+
+error	[request-property-sunset-date-too-small] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		a data de expiração `too-small` da propriedade de requisição `2020-01-01` é muito próxima, deve ser pelo menos `0` dias a partir de agora
+
+error	[response-property-deprecated-sunset-invalid] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		propriedade de resposta `invalid` depreciada com data de expiração inválida: `sunset date doesn't conform with RFC3339: not a date`
+
+error	[response-property-stability-decreased] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		nível de estabilidade da propriedade de resposta `decreased` reduzido de `stable` para `beta`
+
+error	[response-required-property-removed-before-sunset] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		a propriedade obrigatória `required-removed` foi removida da resposta com o status `200` antes da data de expiração `2099-12-31`
+
+info	[request-property-deprecated] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		propriedade de requisição `missing` depreciada
+
+info	[request-property-deprecated-with-sunset] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		propriedade de requisição `with-sunset` depreciada com data de expiração `2099-12-31`
+
+info	[request-property-stability-increased] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		nível de estabilidade da propriedade de requisição `increased` aumentado de `beta` para `stable`
+
+info	[response-property-deprecated] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		propriedade de resposta `missing` depreciada
+
+info	[response-property-deprecated-with-sunset] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		propriedade de resposta `with-sunset` depreciada com data de expiração `2099-12-31`
+
+info	[response-property-stability-increased] em ./properties/lifecycle_properties_revision.yaml
+	em API POST /r
+		nível de estabilidade da propriedade de resposta `increased` aumentado de `beta` para `stable`
+
+

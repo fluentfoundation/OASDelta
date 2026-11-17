@@ -1,0 +1,173 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>POST /r</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Deleted property: removed</li>
+<li>Modified property: decreased
+<ul>
+<li>Extensions changed
+<ul>
+<li>Modified extension: x-stability-level
+<ul>
+<li>Modified value from 'stable' to 'beta'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified property: increased
+<ul>
+<li>Extensions changed
+<ul>
+<li>Modified extension: x-stability-level
+<ul>
+<li>Modified value from 'beta' to 'stable'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified property: invalid
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-sunset</li>
+</ul>
+</li>
+<li>Deprecated changed from false to true</li>
+</ul>
+</li>
+<li>Modified property: missing
+<ul>
+<li>Deprecated changed from false to true</li>
+</ul>
+</li>
+<li>Modified property: too-small
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-sunset</li>
+</ul>
+</li>
+<li>Deprecated changed from false to true</li>
+</ul>
+</li>
+<li>Modified property: with-sunset
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-sunset</li>
+</ul>
+</li>
+<li>Deprecated changed from false to true</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Required changed
+<ul>
+<li>Deleted required property: required-removed</li>
+</ul>
+</li>
+<li>Properties changed
+<ul>
+<li>Deleted property: required-removed</li>
+<li>Modified property: decreased
+<ul>
+<li>Extensions changed
+<ul>
+<li>Modified extension: x-stability-level
+<ul>
+<li>Modified value from 'stable' to 'beta'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified property: increased
+<ul>
+<li>Extensions changed
+<ul>
+<li>Modified extension: x-stability-level
+<ul>
+<li>Modified value from 'beta' to 'stable'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified property: invalid
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-sunset</li>
+</ul>
+</li>
+<li>Deprecated changed from false to true</li>
+</ul>
+</li>
+<li>Modified property: missing
+<ul>
+<li>Deprecated changed from false to true</li>
+</ul>
+</li>
+<li>Modified property: with-sunset
+<ul>
+<li>Extensions changed
+<ul>
+<li>New extension: x-sunset</li>
+</ul>
+</li>
+<li>Deprecated changed from false to true</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

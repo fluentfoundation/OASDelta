@@ -1,0 +1,77 @@
+paths:
+    modified:
+        /p:
+            operations:
+                modified:
+                    GET:
+                        parameters:
+                            deleted:
+                                query:
+                                    - removed
+                            modified:
+                                query:
+                                    bad:
+                                        extensions:
+                                            added:
+                                                - x-sunset
+                                        deprecated:
+                                            from: false
+                                            to: true
+                                    deleted:
+                                        extensions:
+                                            deleted:
+                                                - x-sunset
+                                    earlier:
+                                        extensions:
+                                            modified:
+                                                x-sunset:
+                                                    - oldValue: "2099-12-31"
+                                                      value: "2020-01-01"
+                                                      op: replace
+                                                      from: ""
+                                                      path: ""
+                                    too-small:
+                                        extensions:
+                                            added:
+                                                - x-sunset
+                                        deprecated:
+                                            from: false
+                                            to: true
+endpoints:
+    modified:
+        ?   method: GET
+            path: /p
+        :   parameters:
+                deleted:
+                    query:
+                        - removed
+                modified:
+                    query:
+                        bad:
+                            extensions:
+                                added:
+                                    - x-sunset
+                            deprecated:
+                                from: false
+                                to: true
+                        deleted:
+                            extensions:
+                                deleted:
+                                    - x-sunset
+                        earlier:
+                            extensions:
+                                modified:
+                                    x-sunset:
+                                        - oldValue: "2099-12-31"
+                                          value: "2020-01-01"
+                                          op: replace
+                                          from: ""
+                                          path: ""
+                        too-small:
+                            extensions:
+                                added:
+                                    - x-sunset
+                            deprecated:
+                                from: false
+                                to: true
+

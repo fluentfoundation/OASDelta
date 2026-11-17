@@ -12,13 +12,26 @@ namespace OasDelta.Formatters;
 /// (goldmark with GFM, auto heading ids and hard wraps). Markdig is configured to match that output.</summary>
 public static class HtmlReport
 {
-    private static readonly MarkdownPipeline Pipeline = new MarkdownPipelineBuilder()
-        .UsePipeTables()
-        .UseEmphasisExtras(Markdig.Extensions.EmphasisExtras.EmphasisExtraOptions.Strikethrough)
-        .UseTaskLists()
-        .UseAutoLinks(new AutoLinkOptions { OpenInNewWindow = false })
-        .UseSoftlineBreakAsHardlineBreak()
-        .Build();
+    private static readonly MarkdownPipeline Pipeline = BuildPipeline();
+
+    private static MarkdownPipeline BuildPipeline()
+    {
+        var builder = new MarkdownPipelineBuilder()
+            .UsePipeTables()
+            .UseAutoLinks(new AutoLinkOptions { OpenInNewWindow = false })
+            .UseSoftlineBreakAsHardlineBreak();
+        // Emphasis as goldmark does it (GoldmarkEmphasisParser), with GFM strikethrough: a run of one or two tildes
+        // (~a~ as well as ~~a~~), rendered as <del> whatever its length. Markdig's own strikethrough takes only two, and
+        // a run of three or more, which goldmark leaves as text, would give it two: TildeRunParser keeps that literal.
+        var emphasis = new GoldmarkEmphasisParser();
+        emphasis.EmphasisDescriptors.Add(new Markdig.Parsers.Inlines.EmphasisDescriptor('~', 1, 2, true));
+        builder.InlineParsers.Replace<Markdig.Parsers.Inlines.EmphasisInlineParser>(emphasis);
+        builder.InlineParsers.InsertBefore<GoldmarkEmphasisParser>(new TildeRunParser());
+        // GFM task lists as goldmark has them, not Markdig's (UseTaskLists), which turns a [ ] anywhere in a list item
+        // into a checkbox and renders it differently
+        builder.InlineParsers.InsertBefore<Markdig.Parsers.Inlines.LinkInlineParser>(new GoldmarkTaskCheckBoxParser());
+        return builder.Build();
+    }
 
     public static string Render(string markdown)
     {
@@ -34,6 +47,12 @@ public static class HtmlReport
         renderer.ObjectRenderers.ReplaceOrAdd<Markdig.Renderers.Html.HtmlBlockRenderer>(new OmittedHtmlBlock());
         renderer.ObjectRenderers.ReplaceOrAdd<Markdig.Renderers.Html.Inlines.LineBreakInlineRenderer>(new GoldmarkLineBreak());
         renderer.ObjectRenderers.ReplaceOrAdd<Markdig.Renderers.Html.ThematicBreakRenderer>(new GoldmarkThematicBreak());
+        renderer.ObjectRenderers.Add(new GoldmarkTaskCheckBoxRenderer());
+        if (renderer.ObjectRenderers.FindExact<Markdig.Renderers.Html.Inlines.EmphasisInlineRenderer>() is { } emphasis)
+        {
+            var tag = emphasis.GetTag;
+            emphasis.GetTag = e => e.DelimiterChar == '~' ? "del" : tag(e);
+        }
         renderer.Render(doc);
         return sw.ToString();
     }
@@ -106,6 +125,98 @@ public static class HtmlReport
     private sealed class OmittedHtmlBlock : HtmlObjectRenderer<HtmlBlock>
     {
         protected override void Write(HtmlRenderer renderer, HtmlBlock obj) => renderer.EnsureLine().WriteLine("<!-- raw HTML omitted -->");
+    }
+
+    /// <summary>Markdig's emphasis parser with goldmark's flanking rules (parser.ScanDelimiter, CommonMark's). Markdig
+    /// does not count - + − † ‡ as punctuation here (CharHelper.IsPunctuationException), so it opens emphasis in
+    /// x*-y* and x~-y~ where goldmark, and the CommonMark spec, do not.</summary>
+    private sealed class GoldmarkEmphasisParser : Markdig.Parsers.Inlines.EmphasisInlineParser
+    {
+        public override bool Match(Markdig.Parsers.InlineProcessor processor, ref Markdig.Helpers.StringSlice slice)
+        {
+            int start = slice.Start;
+            var previous = processor.Inline;
+            // strikethroughParser: no delimiter right after a tilde, even an escaped one (\~~a~~ is text); Markdig
+            // allows it after a backslash
+            if (slice.CurrentChar == '~' && start > 0 && slice.Text[start - 1] == '~') return false;
+            if (!base.Match(processor, ref slice)) return false; // goldmark is never more lenient than Markdig
+            if (processor.Inline is not EmphasisDelimiterInline delimiter) return true;
+            char before = start > 0 ? slice.Text[start - 1] : '\n', after = slice.Start <= slice.End ? slice.Text[slice.Start] : '\n';
+            Markdig.Helpers.CharHelper.CheckUnicodeCategory(before, out bool beforeSpace, out bool beforePunct);
+            Markdig.Helpers.CharHelper.CheckUnicodeCategory(after, out bool afterSpace, out bool afterPunct);
+            bool left = !afterSpace && (!afterPunct || beforeSpace || beforePunct);
+            bool right = !beforeSpace && (!beforePunct || afterSpace || afterPunct);
+            bool canOpen = left, canClose = right;
+            if (delimiter.DelimiterChar == '_')
+            {
+                canOpen = left && (!right || beforePunct);
+                canClose = right && (!left || afterPunct);
+            }
+            if (!canOpen && !canClose)
+            {
+                slice.Start = start;
+                processor.Inline = previous;
+                return false; // plain text
+            }
+            delimiter.Type = (canOpen ? DelimiterType.Open : 0) | (canClose ? DelimiterType.Close : 0);
+            return true;
+        }
+    }
+
+    /// <summary>goldmark's strikethroughParser: a run of three or more tildes is no delimiter, so it stays text.</summary>
+    private sealed class TildeRunParser : Markdig.Parsers.InlineParser
+    {
+        public TildeRunParser() => OpeningCharacters = ['~'];
+
+        public override bool Match(Markdig.Parsers.InlineProcessor processor, ref Markdig.Helpers.StringSlice slice)
+        {
+            int start = slice.Start, end = start;
+            while (end <= slice.End && slice.Text[end] == '~') end++;
+            if (end - start < 3) return false; // one or two: the emphasis parser's
+            processor.Inline = new LiteralInline(new Markdig.Helpers.StringSlice(slice.Text, start, end - 1))
+            {
+                Span = new SourceSpan(processor.GetSourcePosition(start, out int line, out int column), processor.GetSourcePosition(end - 1)),
+                Line = line,
+                Column = column,
+            };
+            slice.Start = end;
+            return true;
+        }
+    }
+
+    /// <summary>goldmark's taskCheckBoxParser: [ ], [x] or [X] (then any whitespace, regexp ^\[([\sxX])\]\s*) only as
+    /// the very start of the first paragraph of a list item.</summary>
+    private sealed class GoldmarkTaskCheckBoxParser : Markdig.Parsers.InlineParser
+    {
+        public GoldmarkTaskCheckBoxParser() => OpeningCharacters = ['['];
+
+        private static bool IsGoSpace(char c) => c is ' ' or '\t' or '\n' or '\f' or '\r'; // RE2's \s
+
+        public override bool Match(Markdig.Parsers.InlineProcessor processor, ref Markdig.Helpers.StringSlice slice)
+        {
+            if (processor.Block is not ParagraphBlock paragraph || paragraph.Parent is not ListItemBlock item || item[0] != paragraph) return false;
+            if (processor.Root?.FirstChild is not null) return false; // not at the start
+            int start = slice.Start;
+            if (start + 2 > slice.End || slice.Text[start + 2] != ']') return false;
+            char value = slice.Text[start + 1];
+            if (!IsGoSpace(value) && value is not ('x' or 'X')) return false;
+            int end = start + 3;
+            while (end <= slice.End && IsGoSpace(slice.Text[end])) end++;
+            processor.Inline = new GoldmarkTaskCheckBox { Checked = value is 'x' or 'X', Span = new SourceSpan(start, end - 1) };
+            slice.Start = end;
+            return true;
+        }
+    }
+
+    private sealed class GoldmarkTaskCheckBox : LeafInline
+    {
+        public bool Checked { get; init; }
+    }
+
+    private sealed class GoldmarkTaskCheckBoxRenderer : HtmlObjectRenderer<GoldmarkTaskCheckBox>
+    {
+        protected override void Write(HtmlRenderer renderer, GoldmarkTaskCheckBox obj) =>
+            renderer.Write(obj.Checked ? "<input checked=\"\" disabled=\"\" type=\"checkbox\"> " : "<input disabled=\"\" type=\"checkbox\"> ");
     }
 
     private sealed class GoldmarkThematicBreak : HtmlObjectRenderer<ThematicBreakBlock>

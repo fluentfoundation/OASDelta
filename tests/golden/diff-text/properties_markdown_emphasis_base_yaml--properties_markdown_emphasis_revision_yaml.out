@@ -1,0 +1,109 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /items
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/json
+        - Schema changed
+          - Properties changed
+            - Modified property: combo
+              - New enum values: [a~b-1 a~b ~c d~]
+            - Modified property: p1
+              - New enum values: [a~b]
+            - Modified property: p10
+              - New enum values: [~a~~]
+            - Modified property: p11
+              - New enum values: [x~~y~z]
+            - Modified property: p12
+              - New enum values: [~~]
+            - Modified property: p13
+              - New enum values: [~]
+            - Modified property: p14
+              - New enum values: [a~~b~~c]
+            - Modified property: p15
+              - New enum values: [~a~b~]
+            - Modified property: p16
+              - New enum values: [(~a~)]
+            - Modified property: p17
+              - New enum values: [~(a)~]
+            - Modified property: p18
+              - New enum values: [a ~b~ c]
+            - Modified property: p19
+              - New enum values: [~~a~~~]
+            - Modified property: p2
+              - New enum values: [~a~]
+            - Modified property: p20
+              - New enum values: [é~ü~]
+            - Modified property: p21
+              - New enum values: [~1~2]
+            - Modified property: p22
+              - New enum values: [***~a~***]
+            - Modified property: p23
+              - New enum values: [*~a~*]
+            - Modified property: p24
+              - New enum values: [~*a*~]
+            - Modified property: p25
+              - New enum values: [`~a~`]
+            - Modified property: p26
+              - New enum values: [~a\~]
+            - Modified property: p27
+              - New enum values: [~~~~]
+            - Modified property: p28
+              - New enum values: [a~~~b~~~c]
+            - Modified property: p29
+              - New enum values: [x*-y*]
+            - Modified property: p3
+              - New enum values: [~~a~~]
+            - Modified property: p30
+              - New enum values: [x**-y**]
+            - Modified property: p31
+              - New enum values: [x*+y*]
+            - Modified property: p32
+              - New enum values: [x~-y~]
+            - Modified property: p33
+              - New enum values: [b~-a~]
+            - Modified property: p34
+              - New enum values: [*-a-*]
+            - Modified property: p35
+              - New enum values: [+*a*+]
+            - Modified property: p36
+              - New enum values: [x_-y_]
+            - Modified property: p37
+              - New enum values: [-~abb1*~~ ~ a--*\.]
+            - Modified property: p38
+              - New enum values: [~~. ~a)bé\~~~]
+            - Modified property: p39
+              - New enum values: [a\~~b~~]
+            - Modified property: p4
+              - New enum values: [~~~a~~~]
+            - Modified property: p40
+              - New enum values: [\~~a~~]
+            - Modified property: p41
+              - New enum values: [~a\~~]
+            - Modified property: p42
+              - New enum values: [[ ] a]
+            - Modified property: p43
+              - New enum values: [[x] b]
+            - Modified property: p44
+              - New enum values: [z [ ]]
+            - Modified property: p45
+              - New enum values: [[X]c]
+            - Modified property: p5
+              - New enum values: [a~b c~d]
+            - Modified property: p6
+              - New enum values: [~a]
+            - Modified property: p7
+              - New enum values: [a~]
+            - Modified property: p8
+              - New enum values: [~ a ~]
+            - Modified property: p9
+              - New enum values: [~~a~]
+
+

@@ -9,9 +9,9 @@ code as the Go binary.
   option combinations ([`tools/golden-commands.txt`](https://github.com/fluentfoundation/OASDelta/blob/main/tools/golden-commands.txt)):
   every output format of `diff`, `summary`, `changelog` and `breaking`; `--lang` es, pt-br and ru; and option sets
   such as `--level`, `--fail-on`, `--flatten-params`, `--include-path-params`, `--match-path`, `--prefix-revision`
-  and deprecation days. They run over 636 fixture pairs: the upstream test data paired by file name, the pairs
+  and deprecation days. They run over 637 fixture pairs: the upstream test data paired by file name, the pairs
   upstream's own checker tests compare (`tests/extra-pairs.txt`), and regression cases found by the property-based
-  tests. That is 20,988 comparisons, in which 733 of oasdiff's 778 checker rules fire. The
+  tests. That is 21,021 comparisons, in which 733 of oasdiff's 778 checker rules fire. The
   [coverage page](./coverage) lists the rules no golden fires. `dotnet test` replays them in
   process. CI replays them with the NativeAOT binary
   (`tools/check_golden.sh`) on Linux and Windows, and the release workflow replays them on all six release
@@ -75,6 +75,10 @@ of its size.
   belong to one schema. Which one oasdiff shows in a change's "shared schema" detail depends on Go map order and
   changes from run to run. The port always shows the first in sorted order, one of the names oasdiff shows.
 - **Template errors.** Messages for broken custom templates are shorter than Go's.
+- **Nested emphasis in the HTML diff report.** When emphasis is nested and one delimiter run is only partly used
+  (`**a* b*c*d**`), the port pairs the delimiters differently from goldmark
+  ([#46](https://github.com/fluentfoundation/OASDelta/issues/46)). Everything else in that Markdown, including
+  `~` strikethrough, task-list checkboxes and CommonMark's flanking rules, renders as goldmark renders it.
 - **A YAML word that starts with `*`** ([#54](https://github.com/fluentfoundation/OASDelta/issues/54)). The YAML
   parser, YamlDotNet, takes such a word in a plain scalar for an alias, so the `: ` after it doesn't end the scalar.
   As the first key of a mapping (`a *b: 1`), the port fails to load a spec that oasdiff reads. In a value

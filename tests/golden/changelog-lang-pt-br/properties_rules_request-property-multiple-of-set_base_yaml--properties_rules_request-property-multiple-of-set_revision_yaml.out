@@ -1,7 +1,7 @@
 1 alterações: 0 error, 0 warning, 1 info
 info	[request-property-multiple-of-set] em ./properties/rules/request-property-multiple-of-set_revision.yaml
 	em API PATCH /v1/items
-		o valor multipleOf da propriedade de requisição `{brace}/oneOf[subschema #2]/` foi definido como `4.00`
+		o valor multipleOf da propriedade de requisição `{brace}/oneOf[subschema #2]` foi definido como `4.00`
 		A propriedade é somente leitura, portanto nunca aparece em requisições e esta mudança não pode invalidar nenhuma.
 
 

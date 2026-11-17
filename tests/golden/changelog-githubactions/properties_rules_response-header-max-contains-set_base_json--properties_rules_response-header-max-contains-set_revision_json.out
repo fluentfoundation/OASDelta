@@ -1,2 +1,2 @@
-::notice title=response-header-max-contains-set,file=./properties/rules/response-header-max-contains-set_revision.json::in API GET /pets/{petId} the `妏` response header's maxContains was set to `1` for the status `404`
+::notice title=response-header-max-contains-set,file=./properties/rules/response-header-max-contains-set_revision.json,line=139,col=19::in API GET /pets/{petId} the `妏` response header's maxContains was set to `1` for the status `404`
 

@@ -1,5 +1,5 @@
 1 changes: 1 error, 0 warning, 0 info
-error	[api-security-component-type-changed]
+error	[api-security-component-type-changed] at ./properties/rules/api-security-component-type-changed_revision.yaml
 	in components/securitySchemes
 		the component security scheme `bearer` type changed from `http` to ``
 

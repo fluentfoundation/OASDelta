@@ -1,21 +1,21 @@
 5 cambios: 2 error, 0 warning, 3 info
-error	[response-property-min-properties-unset] en ./properties/rules/response-property-min-properties-unset_revision.json
+error	[response-property-min-properties-unset] en ./properties/rules/response-property-min-properties-unset_base.json
 	en API DELETE /ünïcode/ключ
-		el valor minProperties de la propiedad de respuesta `-/items/` fue removido de `2` para el estado `default` (esquema compartido: `Owner`, también en `status/status/items/`)
+		el valor minProperties de la propiedad de respuesta `-/items` fue removido de `2` para el estado `default` (esquema compartido: `Owner`, también en `status/status/items`)
 
-error	[response-property-type-changed] en ./properties/rules/response-property-min-properties-unset_revision.json
+error	[response-property-type-changed] en ./properties/rules/response-property-min-properties-unset_base.json
 	en API DELETE /ünïcode/ключ
-		el `-/items/` de la propiedad de respuesta `type` fue cambiado de `object` a `any` para el estado `default` (esquema compartido: `Owner`, también en `status/status/items/`)
+		el `-/items` de la propiedad de respuesta `type` fue cambiado de `object` a `any` para el estado `default` (esquema compartido: `Owner`, también en `status/status/items`)
 
-info	[response-optional-property-removed] en ./properties/rules/response-property-min-properties-unset_revision.json
+info	[response-optional-property-removed] en ./properties/rules/response-property-min-properties-unset_base.json
 	en API DELETE /ünïcode/ключ
 		removida la propiedad opcional `-/items/Ṁᨂ緛슺` de la respuesta con estado `default` (esquema compartido: `Owner`, también en `status/status/items/Ṁᨂ緛슺`)
 
-info	[response-required-property-removed-with-deprecation] en ./properties/rules/response-property-min-properties-unset_revision.json
+info	[response-required-property-removed-with-deprecation] en ./properties/rules/response-property-min-properties-unset_base.json
 	en API DELETE /ünïcode/ключ
 		removida la propiedad requerida deprecada `-/items/#hash` de la respuesta con estado `default` (esquema compartido: `Owner`, también en `status/status/items/#hash`)
 
-info	[response-required-property-removed-with-deprecation] en ./properties/rules/response-property-min-properties-unset_revision.json
+info	[response-required-property-removed-with-deprecation] en ./properties/rules/response-property-min-properties-unset_base.json
 	en API DELETE /ünïcode/ключ
 		removida la propiedad requerida deprecada `-/items/id` de la respuesta con estado `default` (esquema compartido: `Owner`, también en `status/status/items/id`)
 

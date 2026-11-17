@@ -5,6 +5,10 @@
   operationId: patch_items_{id}.json
   path: /items/{id}.json
   section: paths
+  baseSource:
+    file: ./properties/rules/response-body-max-items-unset_base.json
+    line: 74
+    column: 19
   fingerprint: fa8361eb100b
 - id: response-body-type-changed
   text: the response's body `type` changed from `array<integer>` to `object` for status `200`
@@ -13,5 +17,13 @@
   operationId: patch_items_{id}.json
   path: /items/{id}.json
   section: paths
+  baseSource:
+    file: ./properties/rules/response-body-max-items-unset_base.json
+    line: 75
+    column: 19
+  revisionSource:
+    file: ./properties/rules/response-body-max-items-unset_revision.json
+    line: 70
+    column: 19
   fingerprint: a8b4174b6591
 

@@ -1,5 +1,5 @@
 - id: request-property-min-items-unset
-  text: the `additionalProperties/` request property's minItems was unset from `14`
+  text: the `additionalProperties` request property's minItems was unset from `14`
   level: 1
   operation: PATCH
   path: /items/{id}.json
@@ -8,5 +8,5 @@
     file: ./properties/rules/request-property-min-items-unset_base.yaml
     line: 124
     column: 33
-  fingerprint: a0e30344222c
+  fingerprint: 2ed1e6ce65e1
 

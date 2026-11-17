@@ -2,7 +2,7 @@
 error	[request-parameter-max-set] в ./properties/rules/response-body-exclusive-min-increased_revision.yaml
 	в API DELETE /pets/{petId}
 		в `path` параметре запроса `petId`, max установлен в `21.00`
-		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+		Установка ограничения отклоняет значения, которые принимал прежний контракт, если только клиенты не укладываются в новое ограничение.
 
 info	[response-body-exclusive-min-increased] в ./properties/rules/response-body-exclusive-min-increased_revision.yaml
 	в API DELETE /pets/{petId}

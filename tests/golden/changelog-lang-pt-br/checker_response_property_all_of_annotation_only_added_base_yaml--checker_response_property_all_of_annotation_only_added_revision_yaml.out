@@ -2,6 +2,5 @@
 info	[response-body-all-of-added-annotation-only] em ./checker/response_property_all_of_annotation_only_added_revision.yaml
 	em API GET /pets
 		`subschema #1: annotation-only subschema` (apenas de anotação) foi adicionado à lista `allOf` do corpo da resposta para o status `200`
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
 

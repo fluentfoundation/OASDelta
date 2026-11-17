@@ -1,14 +1,10 @@
-3 изменений: 1 error, 0 warning, 2 info
+2 изменений: 1 error, 0 warning, 1 info
 error	[response-body-type-changed] в ./properties/rules/response-body-default-value-removed_revision.yaml
 	в API GET /v1/items
 		`type` тела ответа изменён с `integer` на `string` для статуса `201`
 
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
-
-info	[response-body-default-value-removed] в ./properties/rules/response-body-default-value-removed_revision.yaml
+info	[response-body-default-value-removed] в ./properties/rules/response-body-default-value-removed_base.yaml
 	в API GET /v1/items
-		удалено значение по умолчанию `multipart/form-data` для тела ответа для статуса `14.00`%!(EXTRA string=`201`)
+		удалено значение по умолчанию `14.00` для тела ответа `multipart/form-data` для статуса `201`
 
 

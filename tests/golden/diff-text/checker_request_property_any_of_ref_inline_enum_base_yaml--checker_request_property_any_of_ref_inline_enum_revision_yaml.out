@@ -13,6 +13,9 @@ PUT /users/{user_id}
       - Schema changed
         - Properties changed
           - Modified property: role
+            - Property 'AnyOf' changed
+              - Modified schema: subschema #1 -> subschema #1: UserRole
+                - Title changed from '' to 'UserRole'
             - Title changed from 'Role' to ''
 
 

@@ -7,29 +7,29 @@ error	[api-path-removed-without-deprecation] в openapi-test5.yaml
 	в API GET /api/{domain}/{project}/install-command
 		API path удалён без процедуры deprecation
 
-info	[api-schema-removed]
+info	[api-schema-removed] в openapi-test5.yaml
 	в components/schemas
 		удалена схема `network-policies`
 
-info	[api-schema-removed]
+info	[api-schema-removed] в openapi-test5.yaml
 	в components/schemas
 		удалена схема `requests`
 
-info	[api-schema-removed]
+info	[api-schema-removed] в openapi-test5.yaml
 	в components/schemas
 		удалена схема `rules`
 
-info	[api-security-component-removed]
+info	[api-security-component-removed] в openapi-test5.yaml
 	в components/securitySchemes
 		компонент схемы безопасности `AccessToken` был удален
 
-info	[api-security-component-removed]
+info	[api-security-component-removed] в openapi-test5.yaml
 	в components/securitySchemes
 		компонент схемы безопасности `bearerAuth` был удален
 
-info	[api-version-decreased]
+info	[api-version-changed] в openapi-test6.yaml
 	в info
-		обнаружено обратно несовместимое изменение, но версия уменьшилась с `1.0.1` до `1.0.0`
+		версия API изменилась с `1.0.1` до `1.0.0`
 
 info	[endpoint-added] в openapi-test6.yaml
 	в API GET /health

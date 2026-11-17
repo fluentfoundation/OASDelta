@@ -3,7 +3,7 @@ error	[request-parameter-became-required] в ./properties/rules/response-body-ex
 	в API PUT /search
 		ранее необязательный `query` параметр запроса `pet` стал обязательным
 
-info	[request-parameter-became-nullable] в ./properties/rules/response-body-exclusive-max-set_revision.yaml
+info	[request-parameter-became-nullable]
 	в API DELETE /v1/items
 		параметр запроса `cookie` `孱` стал обнуляемым
 

@@ -1,2 +1,2 @@
-::notice title=request-parameter-max-contains-unset,file=./properties/rules/request-parameter-max-contains-unset_revision.yaml::in API POST /items/{id}.json for the `path` request parameter `id`, the maxContains was unset from `4`
+::notice title=request-parameter-max-contains-unset,file=./properties/rules/request-parameter-max-contains-unset_base.yaml::in API POST /items/{id}.json for the `path` request parameter `id`, the maxContains was unset from `4`
 

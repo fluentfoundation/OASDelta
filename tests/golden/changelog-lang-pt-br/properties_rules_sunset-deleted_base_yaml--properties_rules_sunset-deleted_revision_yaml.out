@@ -1,7 +1,7 @@
 3 alterações: 1 error, 0 warning, 2 info
-error	[sunset-deleted] em ./properties/rules/sunset-deleted_revision.yaml
+error	[sunset-deleted] em ./properties/rules/sunset-deleted_base.yaml
 	em API PATCH /ünïcode/ключ
-		data de expiração da api excluída, mas deprecated=true mantido
+		data de expiração da API excluída, mas deprecated=true mantido
 
 info	[endpoint-added] em ./properties/rules/sunset-deleted_revision.yaml
 	em API POST /pets/{petId}

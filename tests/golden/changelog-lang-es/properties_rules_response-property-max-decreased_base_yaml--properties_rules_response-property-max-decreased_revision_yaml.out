@@ -1,6 +1,6 @@
 1 cambios: 0 error, 0 warning, 1 info
 info	[response-property-max-decreased] en ./properties/rules/response-property-max-decreased_revision.yaml
 	en API GET /v1/items
-		el valor max de la propiedad de respuesta `名前/items/` fue reducido de `911.00` a `910.00` para el estado `500`
+		el valor max de la propiedad de respuesta `名前/items` fue reducido de `911.00` a `910.00` para el estado `500`
 
 

@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `additionalProperties/` response&#39;s property `type` changed from `string` to `integer` for status `400` (backward compatible)
+        the `additionalProperties` response&#39;s property `type` changed from `string` to `integer` for status `400` (backward compatible)
         </li>
         
     </ul>

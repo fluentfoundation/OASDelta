@@ -4,12 +4,22 @@
   operation: POST
   path: /pets/{petId}
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-property-max-properties-set_revision.yaml
+    line: 100
+    column: 13
+    endLine: 105
+    endColumn: 14
   fingerprint: c30e784adddc
 - id: response-property-max-properties-set
-  text: the `items/` response property's maxProperties was set to `13` for the response status `200`
+  text: the `items` response property's maxProperties was set to `13` for the response status `200`
   level: 1
   operation: POST
   path: /pets/{petId}
   section: paths
-  fingerprint: 4daebf45d384
+  revisionSource:
+    file: ./properties/rules/response-property-max-properties-set_revision.yaml
+    line: 159
+    column: 21
+  fingerprint: f7533a2cc130
 

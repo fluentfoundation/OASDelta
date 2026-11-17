@@ -1,6 +1,6 @@
 1 изменений: 0 error, 0 warning, 1 info
-info	[request-property-unique-items-unset] в ./properties/rules/request-property-unique-items-unset_revision.yaml
+info	[request-property-unique-items-unset] в ./properties/rules/request-property-unique-items-unset_base.yaml
 	в API PUT /store/order
-		значение uniqueItems у поля запроса `items/` удалено
+		значение uniqueItems у поля запроса `items` удалено
 
 

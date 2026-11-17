@@ -1,2 +1,2 @@
-::error title=request-body-max-items-decreased,file=./properties/rules/request-body-max-items-decreased_revision.json::in API POST /store/order the request's body maxItems was decreased to `5`
+::error title=request-body-max-items-decreased,file=./properties/rules/request-body-max-items-decreased_revision.json,line=1089,col=17::in API POST /store/order the request's body maxItems was decreased to `5`
 

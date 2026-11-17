@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite package="com.oasdiff" time="0" tests="9" errors="0" failures="9" name="OASDiff">
+  <testsuite package="com.oasdiff" time="0" tests="8" errors="0" failures="8" name="OASDiff">
     <testcase name="request-body-exclusive-max-decreased" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the request's body exclusiveMaximum was decreased to `50.00`</failure>
     </testcase>
@@ -24,9 +24,6 @@
     </testcase>
     <testcase name="response-property-exclusive-max-increased" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the `price` response property's exclusiveMaximum was increased from `1000.00` to `2000.00` for the response status `200`</failure>
-    </testcase>
-    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
     </testcase>
   </testsuite>
 </testsuites>

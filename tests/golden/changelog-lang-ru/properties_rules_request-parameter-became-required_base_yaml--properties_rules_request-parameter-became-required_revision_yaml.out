@@ -1,10 +1,6 @@
-2 изменений: 1 error, 0 warning, 1 info
+1 изменений: 1 error, 0 warning, 0 info
 error	[request-parameter-became-required] в ./properties/rules/request-parameter-became-required_revision.yaml
 	в API DELETE /search
 		ранее необязательный `query` параметр запроса `◊愽貺䫔` стал обязательным
-
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
 
 

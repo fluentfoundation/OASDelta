@@ -1,5 +1,5 @@
 - id: api-security-component-api-key-in-changed
-  text: the component security scheme `api_key` api key location changed from `query` to `cookie`
+  text: the component security scheme `api_key` API key location changed from `query` to `cookie`
   level: 3
   section: components
   baseSource:

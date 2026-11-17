@@ -5,6 +5,10 @@
   operationId: post_search
   path: /search
   section: paths
+  baseSource:
+    file: ./properties/rules/response-header-max-unset_base.json
+    line: 145
+    column: 19
   fingerprint: a0044c5fb316
 - id: response-header-min-unset
   text: the `null` response header's min was unset from `8.00` for the status `200`
@@ -13,12 +17,11 @@
   operationId: post_search
   path: /search
   section: paths
+  baseSource:
+    file: ./properties/rules/response-header-max-unset_base.json
+    line: 146
+    column: 19
   fingerprint: ad77ecbce927
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: response-header-schema-became-false
   text: 'the schema of the response header `null` became `false` for the status `200`: no value passes validation'
   level: 1
@@ -26,5 +29,9 @@
   operationId: post_search
   path: /search
   section: paths
+  baseSource:
+    file: ./properties/rules/response-header-max-unset_base.json
+    line: 147
+    column: 19
   fingerprint: 4b6127fecb66
 

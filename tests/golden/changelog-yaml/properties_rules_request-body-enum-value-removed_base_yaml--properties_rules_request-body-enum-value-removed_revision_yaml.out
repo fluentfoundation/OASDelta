@@ -22,11 +22,6 @@
     line: 29
     column: 35
   fingerprint: 02aeb0d86a9c
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-body-list-of-types-widened
   text: request body list-of-types was widened by adding types `integer` to media type `multipart/form-data`
   level: 1

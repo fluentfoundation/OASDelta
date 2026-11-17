@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `{brace}/oneOf[subschema #2]/` request property&#39;s multipleOf was set to `4.00`
+        the `{brace}/oneOf[subschema #2]` request property&#39;s multipleOf was set to `4.00`
         </li>
         
     </ul>

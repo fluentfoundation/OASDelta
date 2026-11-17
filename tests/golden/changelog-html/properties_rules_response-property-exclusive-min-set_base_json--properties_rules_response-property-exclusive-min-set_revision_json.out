@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `items/` response property&#39;s exclusiveMinimum was set to `17.00` for the response status `204`
+        the `items` response property&#39;s exclusiveMinimum was set to `17.00` for the response status `204`
         </li>
         
     </ul>

@@ -4,12 +4,12 @@
 ## API Changes
 
 ### POST /items/{id}.json
-- :warning: the `oneOf[subschema #1]/` response property's minLength was unset from `1` for the response status `404`
-- :warning: the `oneOf[subschema #1]/` response's property `type` changed from `string, null` to `any` for status `404`
--  added `subschema #1, subschema #2` to the `oneOf[subschema #1]/` response property `allOf` list for the response status `404`
--  removed the ` leading` enum value from the `oneOf[subschema #1]/` response property for the response status `404`
--  removed the `| table |` enum value from the `oneOf[subschema #1]/` response property for the response status `404`
--  removed the `徴` enum value from the `oneOf[subschema #1]/` response property for the response status `404`
+- :warning: the `oneOf[subschema #1]` response property's minLength was unset from `1` for the response status `404`
+- :warning: the `oneOf[subschema #1]` response's property `type` changed from `string, null` to `any` for status `404`
+-  added `subschema #1, subschema #2` to the `oneOf[subschema #1]` response property `allOf` list for the response status `404`
+-  removed the ` leading` enum value from the `oneOf[subschema #1]` response property for the response status `404`
+-  removed the `| table |` enum value from the `oneOf[subschema #1]` response property for the response status `404`
+-  removed the `徴` enum value from the `oneOf[subschema #1]` response property for the response status `404`
 
 
 

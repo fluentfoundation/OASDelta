@@ -1,5 +1,5 @@
 1 changes: 1 error, 0 warning, 0 info
-error	[response-property-became-nullable] at ./checker/request_property_became_nullable_31_revision.yaml
+error	[response-property-became-nullable]
 	in API POST /products
 		the response property `status` became nullable for the status `200`
 

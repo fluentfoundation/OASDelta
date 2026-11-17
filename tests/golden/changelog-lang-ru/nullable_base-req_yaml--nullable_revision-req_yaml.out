@@ -1,5 +1,5 @@
 1 изменений: 1 error, 0 warning, 0 info
-error	[request-property-became-not-nullable] в ./nullable/revision-req.yaml
+error	[request-property-became-not-nullable] в ./nullable/base-req.yaml
 	в API POST /test
 		свойство запроса `id` стало недействительным
 

@@ -1,2 +1,2 @@
-::notice title=request-property-multiple-of-set,file=./properties/rules/request-property-multiple-of-set_revision.yaml,line=51,col=43::in API PATCH /v1/items the `{brace}/oneOf[subschema #2]/` request property's multipleOf was set to `4.00`
+::notice title=request-property-multiple-of-set,file=./properties/rules/request-property-multiple-of-set_revision.yaml,line=51,col=43::in API PATCH /v1/items the `{brace}/oneOf[subschema #2]` request property's multipleOf was set to `4.00`
 

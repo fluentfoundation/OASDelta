@@ -2,6 +2,6 @@
 error	[request-parameter-min-properties-set] en ./properties/rules/request-parameter-min-properties-set_revision.yaml
 	en API POST /store/order
 		para el parámetro `header` de solicitud `status`, el valor minProperties fue establecido en `14`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 

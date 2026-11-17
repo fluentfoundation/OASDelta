@@ -1,14 +1,12 @@
-6 changes: 1 error, 3 warning, 2 info
+5 changes: 1 error, 3 warning, 1 info
 error at ./properties/rules/request-property-removed-with-deprecation_revision.yaml, in API PUT /store/order the request's body `type` changed from `object` to `array<string>` [request-body-type-changed]. 
 
-warning at ./properties/rules/request-property-removed-with-deprecation_revision.yaml, in API PUT /store/order removed the request property `...` [request-property-removed]. 
+warning at ./properties/rules/request-property-removed-with-deprecation_base.yaml, in API PUT /store/order removed the request property `...` [request-property-removed]. 
 
-warning at ./properties/rules/request-property-removed-with-deprecation_revision.yaml, in API PUT /store/order removed the request property `C:\path` [request-property-removed]. 
+warning at ./properties/rules/request-property-removed-with-deprecation_base.yaml, in API PUT /store/order removed the request property `C:\path` [request-property-removed]. 
 
-warning at ./properties/rules/request-property-removed-with-deprecation_revision.yaml, in API PUT /store/order removed the request property `kind` [request-property-removed]. 
+warning at ./properties/rules/request-property-removed-with-deprecation_base.yaml, in API PUT /store/order removed the request property `kind` [request-property-removed]. 
 
-info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
-
-info at ./properties/rules/request-property-removed-with-deprecation_revision.yaml, in API PUT /store/order removed the deprecated request property `id` [request-property-removed-with-deprecation]. 
+info at ./properties/rules/request-property-removed-with-deprecation_base.yaml, in API PUT /store/order removed the deprecated request property `id` [request-property-removed-with-deprecation]. 
 
 

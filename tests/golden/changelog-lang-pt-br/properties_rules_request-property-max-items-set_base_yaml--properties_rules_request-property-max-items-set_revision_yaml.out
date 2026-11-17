@@ -1,7 +1,7 @@
 1 alterações: 1 error, 0 warning, 0 info
 error	[request-property-max-items-set] em ./properties/rules/request-property-max-items-set_revision.yaml
 	em API POST /items/{id}.json
-		o número máximo de itens da propriedade de requisição `-/anyOf[subschema #2]/` foi definido como `1`
-		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+		o número máximo de itens da propriedade de requisição `-/anyOf[subschema #2]` foi definido como `1`
+		Definir um limite rejeita valores que o contrato anterior aceitava, a menos que seus clientes respeitem o novo limite.
 
 

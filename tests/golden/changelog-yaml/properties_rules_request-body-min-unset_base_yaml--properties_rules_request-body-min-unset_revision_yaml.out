@@ -15,6 +15,10 @@
     file: ./properties/rules/request-body-min-unset_base.yaml
     line: 152
     column: 29
+  revisionSource:
+    file: ./properties/rules/request-body-min-unset_revision.yaml
+    line: 222
+    column: 17
   fingerprint: ca6532b0f155
 - id: request-body-default-value-removed
   text: the request body `multipart/form-data` default value `-26.12` was removed

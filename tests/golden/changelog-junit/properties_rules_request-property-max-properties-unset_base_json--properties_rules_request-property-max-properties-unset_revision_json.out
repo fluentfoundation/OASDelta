@@ -2,7 +2,7 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
     <testcase name="request-property-type-changed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `items/` request property `type` changed from `object` to `string`</failure>
+      <failure message="Breaking change detected">the `items` request property `type` changed from `object` to `string`</failure>
     </testcase>
     <testcase name="request-property-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">removed the request property `items/Ünïcode`</failure>
@@ -11,7 +11,7 @@
       <failure message="Breaking change detected">removed the request property `items/傓`</failure>
     </testcase>
     <testcase name="request-property-max-properties-unset" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `items/` request property's maxProperties was unset from `20`</failure>
+      <failure message="Breaking change detected">the `items` request property's maxProperties was unset from `20`</failure>
     </testcase>
   </testsuite>
 </testsuites>

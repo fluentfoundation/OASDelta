@@ -1,5 +1,5 @@
 - id: api-operation-id-removed
-  text: api operation id `x` removed and replaced with ``
+  text: API operation id `x` removed and replaced with ``
   level: 1
   operation: GET
   operationId: x

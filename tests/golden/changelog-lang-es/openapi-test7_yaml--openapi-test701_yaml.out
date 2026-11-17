@@ -1,20 +1,24 @@
-7 cambios: 0 error, 0 warning, 7 info
-info	[api-global-security-added]
+8 cambios: 0 error, 0 warning, 8 info
+info	[api-global-security-added] en openapi-test701.yaml
 	en security
-		el esquema de seguridad `bearerAuth` fue agregado a la api
+		el esquema de seguridad `bearerAuth` fue agregado a la API
 		Ningún endpoint hereda los requisitos de seguridad de nivel superior de la API, por lo que este cambio no afecta a ningún cliente.
 
-info	[api-security-component-added]
+info	[api-security-component-added] en openapi-test701.yaml
 	en components/securitySchemes
 		el esquema de seguridad `AccessToken` fue agregado
 
-info	[api-security-component-added]
+info	[api-security-component-added] en openapi-test701.yaml
 	en components/securitySchemes
 		el esquema de seguridad `OAuth` fue agregado
 
-info	[api-security-component-added]
+info	[api-security-component-added] en openapi-test701.yaml
 	en components/securitySchemes
 		el esquema de seguridad `bearerAuth` fue agregado
+
+info	[api-version-changed] en openapi-test701.yaml
+	en info
+		la versión de la API cambió de `2.0.0` a `1.0.0`
 
 info	[endpoint-added] en openapi-test701.yaml
 	en API GET /api/{domain}/{project}/badges/security-score

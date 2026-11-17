@@ -1,11 +1,11 @@
 - id: request-parameter-property-type-specialized
-  text: for the `query` request parameter `tag`, the `format` of property `items/` was narrowed from `none` to `email`
+  text: for the `query` request parameter `tag`, the `format` of property `items` was narrowed from `none` to `email`
   level: 3
   operation: DELETE
   operationId: delete_pets
   path: /pets
   section: paths
-  fingerprint: 69b6aabb5420
+  fingerprint: 3d54a56bed93
 - id: response-body-type-specialized
   text: the response's body `format` was narrowed from `none` to `email` for status `default`
   level: 1

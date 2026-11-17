@@ -1,5 +1,5 @@
 1 changes: 0 error, 0 warning, 1 info
-info	[request-body-became-nullable] at ./checker/nullable_wrap_body_revision.yaml
+info	[request-body-became-nullable]
 	in API POST /test
 		the request's body became nullable
 

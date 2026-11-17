@@ -5,5 +5,9 @@
   operationId: get_v1_items
   path: /v1/items
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-const-added_revision.yaml
+    line: 72
+    column: 19
   fingerprint: 3776a83ef688
 

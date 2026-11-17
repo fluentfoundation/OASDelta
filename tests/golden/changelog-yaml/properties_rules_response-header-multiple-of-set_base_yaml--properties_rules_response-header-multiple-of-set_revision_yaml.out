@@ -5,17 +5,9 @@
   operationId: get_v1_items
   path: /v1/items
   section: paths
-  baseSource:
-    file: ./properties/rules/response-header-multiple-of-set_base.yaml
-    line: 30
-    column: 9
-    endLine: 89
-    endColumn: 28
   revisionSource:
     file: ./properties/rules/response-header-multiple-of-set_revision.yaml
-    line: 30
-    column: 9
-    endLine: 90
-    endColumn: 28
+    line: 65
+    column: 33
   fingerprint: 781351dddcbf
 

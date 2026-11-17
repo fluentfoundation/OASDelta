@@ -2,7 +2,7 @@
 error	[request-parameter-max-set] en ./properties/rules/response-body-exclusive-min-increased_revision.yaml
 	en API DELETE /pets/{petId}
 		para el parámetro `path` de solicitud `petId`, máximo fue establecido en `21.00`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 info	[response-body-exclusive-min-increased] en ./properties/rules/response-body-exclusive-min-increased_revision.yaml
 	en API DELETE /pets/{petId}

@@ -1,2 +1,2 @@
-::notice title=response-required-property-became-not-write-only,file=./properties/rules/response-required-property-became-not-write-only_revision.json::in API DELETE /pets/{petId} the response required property `ключ` became not write-only for the status `201`
+::notice title=response-required-property-became-not-write-only,file=./properties/rules/response-required-property-became-not-write-only_base.json::in API DELETE /pets/{petId} the response required property `ключ` became not write-only for the status `201`
 

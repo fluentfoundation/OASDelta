@@ -2,6 +2,5 @@
 info	[request-body-all-of-added-annotation-only] at ./checker/request_property_all_of_annotation_only_added_revision.yaml
 	in API POST /pets
 		added annotation-only `subschema #1: annotation-only subschema` to the request body `allOf` list
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 

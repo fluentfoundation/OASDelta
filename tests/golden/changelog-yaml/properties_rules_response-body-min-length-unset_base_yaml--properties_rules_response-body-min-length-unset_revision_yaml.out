@@ -5,6 +5,10 @@
   operationId: kind
   path: /items/{id}.json
   section: paths
+  baseSource:
+    file: ./properties/rules/response-body-min-length-unset_base.yaml
+    line: 99
+    column: 19
   fingerprint: 1f69bce651ae
 - id: response-body-type-changed
   text: the response's body `type/format` changed from `string/date` to `number` for status `200`
@@ -13,14 +17,13 @@
   operationId: kind
   path: /items/{id}.json
   section: paths
+  baseSource:
+    file: ./properties/rules/response-body-min-length-unset_base.yaml
+    line: 100
+    column: 19
   revisionSource:
     file: ./properties/rules/response-body-min-length-unset_revision.yaml
     line: 69
     column: 33
   fingerprint: b8dc5065bf9e
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 

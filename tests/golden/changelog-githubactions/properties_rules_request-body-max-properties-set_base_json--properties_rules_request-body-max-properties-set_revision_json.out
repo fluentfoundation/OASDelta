@@ -1,2 +1,2 @@
-::error title=request-body-max-properties-set,file=./properties/rules/request-body-max-properties-set_revision.json::in API POST /v1/items the request's body maxProperties was set to `11`
+::error title=request-body-max-properties-set,file=./properties/rules/request-body-max-properties-set_revision.json,line=31,col=17::in API POST /v1/items the request's body maxProperties was set to `11`
 

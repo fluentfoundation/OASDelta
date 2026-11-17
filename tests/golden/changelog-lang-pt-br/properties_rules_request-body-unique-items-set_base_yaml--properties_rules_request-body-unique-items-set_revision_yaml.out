@@ -1,4 +1,4 @@
-4 alterações: 2 error, 0 warning, 2 info
+3 alterações: 2 error, 0 warning, 1 info
 error	[request-body-unique-items-set] em ./properties/rules/request-body-unique-items-set_revision.yaml
 	em API POST /store/order
 		o valor uniqueItems do corpo da requisição foi definido como true
@@ -7,11 +7,7 @@ error	[response-body-type-changed] em ./properties/rules/request-body-unique-ite
 	em API POST /store/order
 		o `type` do corpo da resposta foi alterado de `number, null` para `array<string>` para o status `201`
 
-info	[api-version-not-bumped]
-	em info
-		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
-
-info	[response-body-became-not-nullable] em ./properties/rules/request-body-unique-items-set_revision.yaml
+info	[response-body-became-not-nullable]
 	em API POST /store/order
 		o corpo da resposta tornou-se não anulável
 

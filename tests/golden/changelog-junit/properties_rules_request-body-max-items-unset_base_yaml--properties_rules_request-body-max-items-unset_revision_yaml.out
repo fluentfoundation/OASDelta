@@ -5,7 +5,7 @@
       <failure message="Breaking change detected">the request's body maxItems was unset from `81`</failure>
     </testcase>
     <testcase name="request-property-type-compatible" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `items/` request property `type` changed from `array<boolean/custom>` to `string` (backward compatible)</failure>
+      <failure message="Breaking change detected">the `items` request property `type` changed from `array<boolean/custom>` to `string` (backward compatible)</failure>
     </testcase>
   </testsuite>
 </testsuites>

@@ -4,5 +4,13 @@
   operation: GET
   path: /pets
   section: paths
+  baseSource:
+    file: ./properties/rules/response-header-min-length-increased_base.json
+    line: 107
+    column: 19
+  revisionSource:
+    file: ./properties/rules/response-header-min-length-increased_revision.json
+    line: 107
+    column: 19
   fingerprint: 5233e5ba9280
 

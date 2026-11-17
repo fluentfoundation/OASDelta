@@ -2,6 +2,6 @@
 error	[request-property-became-required-with-default] en ./properties/rules/request-property-became-required-with-default_revision.yaml
 	en API PUT /pets
 		la propiedad de solicitud `created` se volvió requerida con valor por defecto
-		Una solicitud que omite esta propiedad obligatoria es inválida según el nuevo contrato, aunque la propiedad tenga un valor por defecto. El valor por defecto es un mecanismo del servidor, no hace que la propiedad omitida sea válida. Reduce la severidad de esta verificación con --severity-levels si omitir la propiedad es seguro para tus clientes.
+		Una solicitud que omite esta propiedad obligatoria es inválida según el nuevo contrato, aunque la propiedad tenga un valor por defecto. El valor por defecto es un mecanismo del servidor, no hace que la propiedad omitida sea válida.
 
 

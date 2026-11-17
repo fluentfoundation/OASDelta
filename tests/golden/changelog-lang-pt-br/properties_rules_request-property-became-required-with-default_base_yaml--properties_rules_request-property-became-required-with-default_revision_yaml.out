@@ -2,6 +2,6 @@
 error	[request-property-became-required-with-default] em ./properties/rules/request-property-became-required-with-default_revision.yaml
 	em API PUT /pets
 		a propriedade de requisição `created` com um valor padrão tornou-se obrigatória
-		Uma requisição que omite esta propriedade obrigatória é inválida sob o novo contrato, mesmo que a propriedade tenha um valor padrão. O valor padrão é um recurso do servidor, ele não torna a propriedade omitida válida. Reduza a severidade desta verificação com --severity-levels se omitir a propriedade for seguro para os seus clientes.
+		Uma requisição que omite esta propriedade obrigatória é inválida sob o novo contrato, mesmo que a propriedade tenha um valor padrão. O valor padrão é um recurso do servidor, ele não torna a propriedade omitida válida.
 
 

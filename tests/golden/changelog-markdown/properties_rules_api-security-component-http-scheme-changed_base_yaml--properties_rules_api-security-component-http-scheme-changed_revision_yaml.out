@@ -6,9 +6,5 @@
 - :warning: the component security scheme `bearer` http scheme changed from `basic` to `bearer`
 
 
-## Info
--  a breaking change was detected but the version is still `1.0.0`
-
-
 
 

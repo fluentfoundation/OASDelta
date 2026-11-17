@@ -1,5 +1,5 @@
 1 изменений: 1 error, 0 warning, 0 info
-error	[request-body-wrapped-in-one-of] в ./checker/request_property_one_of_wrapped_revision.yaml
+error	[request-body-wrapped-in-one-of]
 	в API POST /example
 		тело запроса было реструктурировано в `oneOf`, поэтому ранее допустимая полезная нагрузка может больше не приниматься
 

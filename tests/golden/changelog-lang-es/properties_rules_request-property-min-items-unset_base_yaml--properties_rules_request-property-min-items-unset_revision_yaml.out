@@ -1,6 +1,6 @@
 1 cambios: 0 error, 0 warning, 1 info
-info	[request-property-min-items-unset] en ./properties/rules/request-property-min-items-unset_revision.yaml
+info	[request-property-min-items-unset] en ./properties/rules/request-property-min-items-unset_base.yaml
 	en API PATCH /items/{id}.json
-		el valor minItems de la propiedad de solicitud `additionalProperties/` fue removido de `14`
+		el valor minItems de la propiedad de solicitud `additionalProperties` fue removido de `14`
 
 

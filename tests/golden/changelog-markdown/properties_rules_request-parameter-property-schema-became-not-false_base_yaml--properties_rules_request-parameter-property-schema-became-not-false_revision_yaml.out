@@ -4,7 +4,7 @@
 ## API Changes
 
 ### DELETE /pets/{petId}
--  the schema of the `anyOf[subschema #2]/` property of the `query` request parameter `ключ` is no longer `false` and accepts values again
+-  the schema of the `anyOf[subschema #2]` property of the `query` request parameter `ключ` is no longer `false` and accepts values again
 
 
 

@@ -1,18 +1,18 @@
 4 изменений: 1 error, 2 warning, 1 info
 error	[request-property-type-changed] в ./properties/rules/request-property-max-properties-unset_revision.json
 	в API POST /ünïcode/ключ
-		у поля запроса `items/` `type` изменён с `object` на `string`
+		у поля запроса `items` `type` изменён с `object` на `string`
 
-warning	[request-property-removed] в ./properties/rules/request-property-max-properties-unset_revision.json
+warning	[request-property-removed] в ./properties/rules/request-property-max-properties-unset_base.json
 	в API POST /ünïcode/ключ
 		удалено поле запроса `items/Ünïcode`
 
-warning	[request-property-removed] в ./properties/rules/request-property-max-properties-unset_revision.json
+warning	[request-property-removed] в ./properties/rules/request-property-max-properties-unset_base.json
 	в API POST /ünïcode/ключ
 		удалено поле запроса `items/傓`
 
-info	[request-property-max-properties-unset] в ./properties/rules/request-property-max-properties-unset_revision.json
+info	[request-property-max-properties-unset] в ./properties/rules/request-property-max-properties-unset_base.json
 	в API POST /ünïcode/ключ
-		значение maxProperties у поля запроса `items/` удалено, предыдущее значение - `20`
+		значение maxProperties у поля запроса `items` удалено, предыдущее значение - `20`
 
 

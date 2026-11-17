@@ -5,6 +5,6 @@ error	[new-required-request-parameter] в ./properties/rules/response-property-m
 
 info	[response-property-max-properties-set] в ./properties/rules/response-property-max-properties-set_revision.yaml
 	в API POST /pets/{petId}
-		у поля ответа `items/` задано значение maxProperties в `13`, для ответа со статусом `200`
+		у поля ответа `items` задано значение maxProperties в `13`, для ответа со статусом `200`
 
 

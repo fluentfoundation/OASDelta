@@ -1,7 +1,7 @@
 3 changes: 1 error, 0 warning, 2 info
 error at ./properties/rules/response-body-exclusive-max-set_revision.yaml, in API PUT /search the `query` request parameter `pet` became required [request-parameter-became-required]. 
 
-info at ./properties/rules/response-body-exclusive-max-set_revision.yaml, in API DELETE /v1/items the `cookie` request parameter `孱` became nullable [request-parameter-became-nullable]. 
+info, in API DELETE /v1/items the `cookie` request parameter `孱` became nullable [request-parameter-became-nullable]. 
 
 info at ./properties/rules/response-body-exclusive-max-set_revision.yaml, in API DELETE /v1/items the response's body exclusiveMaximum was set to `23.00` [response-body-exclusive-max-set]. 
 

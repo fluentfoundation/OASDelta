@@ -1,7 +1,7 @@
 2 cambios: 0 error, 0 warning, 2 info
 info	[api-path-removed-with-deprecation] en ./properties/rules/api-path-removed-with-deprecation_base.yaml
 	en API GET /v1/items
-		ruta de api removida con deprecación
+		ruta de API removida con deprecación
 
 info	[endpoint-added] en ./properties/rules/api-path-removed-with-deprecation_revision.yaml
 	en API GET /v1/items/v2

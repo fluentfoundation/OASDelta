@@ -1,5 +1,4 @@
-::error title=request-parameter-became-not-nullable,file=./properties/rules/request-parameter-max-unset_revision.yaml::in API PUT /pets the `query` request parameter `ключ` became not nullable
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
-::notice title=request-parameter-list-of-types-widened,file=./properties/rules/request-parameter-max-unset_revision.yaml::in API PUT /pets `query` request parameter `ключ` list-of-types was widened by adding types `boolean`
-::notice title=request-parameter-max-unset,file=./properties/rules/request-parameter-max-unset_revision.yaml::in API PUT /pets for the `query` request parameter `ключ`, the max was unset from `132.00`
+::error title=request-parameter-became-not-nullable,file=./properties/rules/request-parameter-max-unset_base.yaml::in API PUT /pets the `query` request parameter `ключ` became not nullable
+::notice title=request-parameter-list-of-types-widened,file=./properties/rules/request-parameter-max-unset_base.yaml::in API PUT /pets `query` request parameter `ключ` list-of-types was widened by adding types `boolean`
+::notice title=request-parameter-max-unset,file=./properties/rules/request-parameter-max-unset_base.yaml::in API PUT /pets for the `query` request parameter `ключ`, the max was unset from `132.00`
 

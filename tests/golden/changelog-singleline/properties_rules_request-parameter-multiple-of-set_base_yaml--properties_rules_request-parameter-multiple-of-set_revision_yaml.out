@@ -1,4 +1,4 @@
 1 changes: 1 error, 0 warning, 0 info
-error at ./properties/rules/request-parameter-multiple-of-set_revision.yaml, in API DELETE /pets for the `cookie` request parameter `price`, the multipleOf was set to `2.00` [request-parameter-multiple-of-set]. Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+error at ./properties/rules/request-parameter-multiple-of-set_revision.yaml, in API DELETE /pets for the `cookie` request parameter `price`, the multipleOf was set to `2.00` [request-parameter-multiple-of-set]. Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
 

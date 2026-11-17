@@ -8,7 +8,7 @@
       <failure message="Breaking change detected">added the new optional `query` request parameter `pet` to all path's operations</failure>
     </testcase>
     <testcase name="request-property-max-increased" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `anyOf[subschema #1]/oneOf[subschema #3]/` request property's max was increased from `596.00` to `597.00`</failure>
+      <failure message="Breaking change detected">the `anyOf[subschema #1]/oneOf[subschema #3]` request property's max was increased from `596.00` to `597.00`</failure>
     </testcase>
   </testsuite>
 </testsuites>

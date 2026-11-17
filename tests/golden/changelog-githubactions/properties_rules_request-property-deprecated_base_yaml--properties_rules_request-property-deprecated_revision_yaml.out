@@ -1,2 +1,2 @@
-::notice title=request-property-deprecated,file=./properties/rules/request-property-deprecated_revision.yaml,line=39,col=33::in API PUT /owners/{ownerId}/pets request property `items/` deprecated
+::notice title=request-property-deprecated,file=./properties/rules/request-property-deprecated_revision.yaml,line=39,col=33::in API PUT /owners/{ownerId}/pets request property `items` deprecated
 

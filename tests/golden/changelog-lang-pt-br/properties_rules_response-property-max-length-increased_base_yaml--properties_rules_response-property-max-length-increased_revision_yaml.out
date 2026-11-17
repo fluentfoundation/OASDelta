@@ -1,18 +1,14 @@
-4 alterações: 3 error, 0 warning, 1 info
-error	[response-body-content-media-type-changed] em ./properties/rules/response-property-max-length-increased_revision.yaml
+3 alterações: 3 error, 0 warning, 0 info
+error	[response-body-content-media-type-changed] em ./properties/rules/response-property-max-length-increased_base.yaml
 	em API PATCH /ünïcode/ключ
 		o contentMediaType do corpo da resposta foi alterado de `application/json` para `` para o status `default` (media type: */*)
 
-error	[response-body-content-schema-removed] em ./properties/rules/response-property-max-length-increased_revision.yaml
+error	[response-body-content-schema-removed] em ./properties/rules/response-property-max-length-increased_base.yaml
 	em API PATCH /ünïcode/ключ
 		removido 'contentSchema' do corpo da resposta para o status `default` (media type: */*)
 
 error	[response-property-max-length-increased] em ./properties/rules/response-property-max-length-increased_revision.yaml
 	em API PATCH /ünïcode/ключ
 		o comprimento máximo da propriedade de resposta `anyOf[subschema #3]/*star` foi aumentado de `3` para `107` para o status `default` (media type: application/json; charset=utf-8)
-
-info	[api-version-not-bumped]
-	em info
-		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
 
 

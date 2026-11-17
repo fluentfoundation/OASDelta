@@ -3,7 +3,7 @@ error	[request-body-list-of-types-narrowed] at ./list-of-types/body-test-revisio
 	in API POST /test
 		request body list-of-types was narrowed by removing types `string and integer` from media type `application/json`
 
-error	[response-body-list-of-types-widened] at ./list-of-types/body-test-revision.yaml
+error	[response-body-list-of-types-widened] at ./list-of-types/body-test-base.yaml
 	in API POST /test
 		response body list-of-types was widened by adding types `integer` to media type `application/json` of response `200`
 

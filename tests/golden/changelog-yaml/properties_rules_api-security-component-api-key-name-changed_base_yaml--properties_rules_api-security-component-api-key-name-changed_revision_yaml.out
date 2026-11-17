@@ -1,5 +1,5 @@
 - id: api-security-component-api-key-name-changed
-  text: the component security scheme `api_key` api key name changed from `owner` to `status`
+  text: the component security scheme `api_key` API key name changed from `owner` to `status`
   level: 3
   section: components
   baseSource:

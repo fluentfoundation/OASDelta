@@ -5,6 +5,10 @@
   operationId: delete_ünïcode_ключ
   path: /ünïcode/ключ
   section: paths
+  baseSource:
+    file: ./properties/rules/request-property-exclusive-max-unset_base.json
+    line: 7
+    column: 13
   fingerprint: f14bc3deb956
 - id: request-property-exclusive-max-unset
   text: the `ключ/name` request property's exclusiveMaximum was unset from `28.00`
@@ -12,5 +16,9 @@
   operation: POST
   path: /ünïcode/ключ
   section: paths
+  baseSource:
+    file: ./properties/rules/request-property-exclusive-max-unset_base.json
+    line: 7
+    column: 13
   fingerprint: 65725ca140d2
 

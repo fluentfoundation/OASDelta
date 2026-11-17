@@ -2,6 +2,6 @@
 warning	[request-required-property-became-read-only] en ./properties/rules/request-required-property-became-read-only_revision.yaml
 	en API PATCH /pets/{petId}
 		la propiedad requerida de solicitud `allOf[subschema #3]/릇䍱琨압蝪颯` se volvió de solo lectura
-		Esta es una advertencia porque una propiedad de solo lectura no debería enviarse en una solicitud, y la especificación deja al servidor decidir si la ignora o rechaza la solicitud. Los clientes que la envían pueden ser rechazados, o descubrir que el valor que envían ya no se usa. Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+		Esta es una advertencia porque una propiedad de solo lectura no debería enviarse en una solicitud, y la especificación deja al servidor decidir si la ignora o rechaza la solicitud. Los clientes que la envían pueden ser rechazados, o descubrir que el valor que envían ya no se usa. Esto comparó las ramas de `allOf` una por una, así que otra rama ya puede describir lo que cambió aquí, dejando igual el esquema fusionado. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
 

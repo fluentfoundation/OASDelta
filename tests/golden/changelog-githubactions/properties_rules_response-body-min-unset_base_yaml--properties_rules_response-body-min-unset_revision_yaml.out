@@ -1,2 +1,2 @@
-::error title=response-body-min-unset,file=./properties/rules/response-body-min-unset_revision.yaml::in API DELETE /pets the response's body min was unset from `-8.00`
+::error title=response-body-min-unset,file=./properties/rules/response-body-min-unset_base.yaml::in API DELETE /pets the response's body min was unset from `-8.00`
 

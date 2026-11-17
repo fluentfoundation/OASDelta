@@ -3,7 +3,7 @@ error	[request-property-min-properties-increased] en ./properties/rules/request-
 	en API POST /store/order
 		el número mínimo de propiedades de la propiedad de solicitud `name` fue aumentado a `3`
 
-info	[optional-response-header-removed] en ./properties/rules/request-property-min-properties-increased_revision.yaml
+info	[optional-response-header-removed] en ./properties/rules/request-property-min-properties-increased_base.yaml
 	en API POST /store/order
 		removido el encabezado de respuesta opcional `ૉ硡쇲䦨員䒗` para el estado `2XX`
 

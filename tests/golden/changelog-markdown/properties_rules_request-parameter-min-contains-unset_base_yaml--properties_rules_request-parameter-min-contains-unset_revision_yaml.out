@@ -4,7 +4,7 @@
 ## API Changes
 
 ### PATCH /pets
--  api tag `created` removed
+-  API tag `created` removed
 -  for the `query` request parameter `ключ`, the minContains was unset from `1`
 
 

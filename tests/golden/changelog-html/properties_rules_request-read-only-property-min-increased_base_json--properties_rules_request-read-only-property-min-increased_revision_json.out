@@ -161,7 +161,7 @@
         
         <li class="change">
         
-        the `叚։⋋媣塦/anyOf[subschema #2]/` request read-only property&#39;s min was increased to `-8.00`
+        the `叚։⋋媣塦/anyOf[subschema #2]` request read-only property&#39;s min was increased to `-8.00`
         </li>
         
     </ul>
@@ -170,22 +170,6 @@
     
     
 
-    
-    <div class="section-title">info</div>
-    
-    <div class="endpoint">
-        
-    <ul class="endpoint-changes">
-        
-        <li class="change">
-        
-        a breaking change was detected but the version is still `1.0.0`
-        </li>
-        
-    </ul>
-    
-    </div>
-    
     
     
 </body>

@@ -5,7 +5,7 @@
 
 ### POST /pets
 - :warning: the `名前` request property's minLength was set to `12`
--  api operation id `price` was added
+-  API operation id `price` was added
 
 
 

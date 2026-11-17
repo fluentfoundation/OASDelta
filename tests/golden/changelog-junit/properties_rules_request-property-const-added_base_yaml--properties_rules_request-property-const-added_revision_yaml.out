@@ -5,7 +5,7 @@
       <failure message="Breaking change detected">the `price` request property const value `%20` was added</failure>
     </testcase>
     <testcase name="api-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api removed without deprecation</failure>
+      <failure message="Breaking change detected">API removed without deprecation</failure>
     </testcase>
     <testcase name="response-body-one-of-added" classname="OASDiff" time="0">
       <failure message="Breaking change detected">added `subschema #1` to the response body `oneOf` list for the response status `201`</failure>

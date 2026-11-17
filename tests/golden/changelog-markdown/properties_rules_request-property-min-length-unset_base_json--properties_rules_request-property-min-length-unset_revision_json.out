@@ -4,15 +4,15 @@
 ## API Changes
 
 ### PATCH /store/order
-- :warning: the `pet/anyOf[subschema #3]/` response property's minLength was unset from `1` for the response status `404`
--  the response property `pet/anyOf[subschema #3]/` became not nullable for the status `404`
--  the `pet/anyOf[subschema #3]/` response's property `type` was narrowed from `string` to `any` for status `404`
+- :warning: the `pet/anyOf[subschema #3]` response property's minLength was unset from `1` for the response status `404`
+-  the response property `pet/anyOf[subschema #3]` became not nullable for the status `404`
+-  the `pet/anyOf[subschema #3]` response's property `type` was narrowed from `string` to `any` for status `404`
 
 
 ### PUT /v1/items
-- :warning: the request property `㺓崠讆/id/anyOf[subschema #3]/` became not nullable
--  the `㺓崠讆/id/anyOf[subschema #3]/` request property's minLength was unset from `1`
--  the `㺓崠讆/id/anyOf[subschema #3]/` request property `type` was widened from `string` to `any`
+- :warning: the request property `㺓崠讆/id/anyOf[subschema #3]` became not nullable
+-  the `㺓崠讆/id/anyOf[subschema #3]` request property's minLength was unset from `1`
+-  the `㺓崠讆/id/anyOf[subschema #3]` request property `type` was widened from `string` to `any`
 
 
 

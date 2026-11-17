@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `items/` request property&#39;s max was unset from `-4.00`
+        the `items` request property&#39;s max was unset from `-4.00`
         </li>
         
     </ul>

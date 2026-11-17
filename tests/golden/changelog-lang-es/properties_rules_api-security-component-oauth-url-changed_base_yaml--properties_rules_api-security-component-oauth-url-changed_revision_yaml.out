@@ -1,5 +1,5 @@
 1 cambios: 0 error, 1 warning, 0 info
-warning	[api-security-component-oauth-url-changed]
+warning	[api-security-component-oauth-url-changed] en ./properties/rules/api-security-component-oauth-url-changed_revision.yaml
 	en components/securitySchemes
 		en el esquema de seguridad `oauth`, la URL de autorización del flujo OAuth `authorizationCode` fue cambiada de `https://auth.example.com/authorize` a `https://auth1.example.com/authorizationUrl`
 		Esta es una advertencia porque la especificación no indica si las credenciales obtenidas a través de la URL anterior siguen siendo aceptadas.

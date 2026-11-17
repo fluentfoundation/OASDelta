@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `items/` request property&#39;s uniqueItems was unset
+        the `items` request property&#39;s uniqueItems was unset
         </li>
         
     </ul>

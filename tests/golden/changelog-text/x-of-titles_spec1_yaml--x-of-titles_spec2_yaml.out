@@ -3,7 +3,7 @@ error	[response-body-any-of-added] at ./x-of-titles/spec2.yaml
 	in API GET /test
 		added `subschema #2: Title 3` to the response body `anyOf` list for the response status `200`
 
-info	[response-body-any-of-removed] at ./x-of-titles/spec2.yaml
+info	[response-body-any-of-removed] at ./x-of-titles/spec1.yaml
 	in API GET /test
 		removed `subschema #2: Title 2` from the response body `anyOf` list for the response status `200`
 

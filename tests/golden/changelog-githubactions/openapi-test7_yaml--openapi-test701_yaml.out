@@ -2,6 +2,7 @@
 ::notice title=api-security-component-added,file=openapi-test701.yaml,line=238,col=5::in API   the component security scheme `AccessToken` was added
 ::notice title=api-security-component-added,file=openapi-test701.yaml,line=241,col=5::in API   the component security scheme `OAuth` was added
 ::notice title=api-security-component-added,file=openapi-test701.yaml,line=234,col=5::in API   the component security scheme `bearerAuth` was added
+::notice title=api-version-changed,file=openapi-test701.yaml,line=3,col=3::in API   the API version changed from `2.0.0` to `1.0.0`
 ::notice title=endpoint-added,file=openapi-test701.yaml,line=33,col=5::in API GET /api/{domain}/{project}/badges/security-score endpoint added
 ::notice title=endpoint-added,file=openapi-test701.yaml,line=132,col=5::in API GET /api/{domain}/{project}/install-command endpoint added
 ::notice title=endpoint-added,file=openapi-test701.yaml,line=175,col=5::in API POST /register endpoint added

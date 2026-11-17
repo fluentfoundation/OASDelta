@@ -2,7 +2,7 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
     <testcase name="sunset-deleted" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api sunset date deleted, but deprecated=true kept</failure>
+      <failure message="Breaking change detected">API sunset date deleted, but deprecated=true kept</failure>
     </testcase>
     <testcase name="endpoint-added" classname="OASDiff" time="0">
       <failure message="Breaking change detected">endpoint added</failure>

@@ -1,16 +1,14 @@
-7 changes: 3 error, 0 warning, 4 info
-error at ./checker/if_added_prop_base.yaml, in API POST /products removed 'else' subschema from the `details` response property for the status `200` [response-property-else-removed]. 
+6 changes: 3 error, 0 warning, 3 info
+error at ./checker/if_added_prop_revision.yaml, in API POST /products removed 'else' subschema from the `details` response property for the status `200` [response-property-else-removed]. 
 
-error at ./checker/if_added_prop_base.yaml, in API POST /products removed 'if' subschema from the `details` response property for the status `200` [response-property-if-removed]. 
+error at ./checker/if_added_prop_revision.yaml, in API POST /products removed 'if' subschema from the `details` response property for the status `200` [response-property-if-removed]. 
 
-error at ./checker/if_added_prop_base.yaml, in API POST /products removed 'then' subschema from the `details` response property for the status `200` [response-property-then-removed]. 
+error at ./checker/if_added_prop_revision.yaml, in API POST /products removed 'then' subschema from the `details` response property for the status `200` [response-property-then-removed]. 
 
-info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+info at ./checker/if_added_prop_revision.yaml, in API POST /products removed 'else' subschema from the request property `details` [request-property-else-removed]. 
 
-info at ./checker/if_added_prop_base.yaml, in API POST /products removed 'else' subschema from the request property `details` [request-property-else-removed]. 
+info at ./checker/if_added_prop_revision.yaml, in API POST /products removed 'if' subschema from the request property `details` [request-property-if-removed]. 
 
-info at ./checker/if_added_prop_base.yaml, in API POST /products removed 'if' subschema from the request property `details` [request-property-if-removed]. 
-
-info at ./checker/if_added_prop_base.yaml, in API POST /products removed 'then' subschema from the request property `details` [request-property-then-removed]. 
+info at ./checker/if_added_prop_revision.yaml, in API POST /products removed 'then' subschema from the request property `details` [request-property-then-removed]. 
 
 

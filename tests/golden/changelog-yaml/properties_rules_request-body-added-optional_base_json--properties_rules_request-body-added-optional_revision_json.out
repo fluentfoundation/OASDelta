@@ -5,5 +5,11 @@
   operationId: patch_v1_items
   path: /v1/items
   section: paths
+  revisionSource:
+    file: ./properties/rules/request-body-added-optional_revision.json
+    line: 131
+    column: 9
+    endLine: 144
+    endColumn: 28
   fingerprint: bc7511f7ecb5
 

@@ -3,7 +3,7 @@ error	[response-header-min-decreased] at ./properties/rules/response-header-min-
 	in API PATCH /items/{id}.json
 		the `>` response header's min was decreased from `4.00` to `2.00` for the status `200`
 
-warning	[request-parameter-removed] at ./properties/rules/response-header-min-decreased_revision.yaml
+warning	[request-parameter-removed] at ./properties/rules/response-header-min-decreased_base.yaml
 	in API PUT /items/{id}.json
 		deleted the `header` request parameter `owner`
 		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.

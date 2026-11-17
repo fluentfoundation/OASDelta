@@ -2,22 +2,22 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="6" errors="0" failures="6" name="OASDiff">
     <testcase name="response-property-min-length-unset" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `oneOf[subschema #1]/` response property's minLength was unset from `1` for the response status `404`</failure>
+      <failure message="Breaking change detected">the `oneOf[subschema #1]` response property's minLength was unset from `1` for the response status `404`</failure>
     </testcase>
     <testcase name="response-property-type-changed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `oneOf[subschema #1]/` response's property `type` changed from `string, null` to `any` for status `404`</failure>
+      <failure message="Breaking change detected">the `oneOf[subschema #1]` response's property `type` changed from `string, null` to `any` for status `404`</failure>
     </testcase>
     <testcase name="response-property-all-of-added" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">added `subschema #1, subschema #2` to the `oneOf[subschema #1]/` response property `allOf` list for the response status `404`</failure>
+      <failure message="Breaking change detected">added `subschema #1, subschema #2` to the `oneOf[subschema #1]` response property `allOf` list for the response status `404`</failure>
     </testcase>
     <testcase name="response-property-enum-value-removed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">removed the ` leading` enum value from the `oneOf[subschema #1]/` response property for the response status `404`</failure>
+      <failure message="Breaking change detected">removed the ` leading` enum value from the `oneOf[subschema #1]` response property for the response status `404`</failure>
     </testcase>
     <testcase name="response-property-enum-value-removed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">removed the `| table |` enum value from the `oneOf[subschema #1]/` response property for the response status `404`</failure>
+      <failure message="Breaking change detected">removed the `| table |` enum value from the `oneOf[subschema #1]` response property for the response status `404`</failure>
     </testcase>
     <testcase name="response-property-enum-value-removed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">removed the `徴` enum value from the `oneOf[subschema #1]/` response property for the response status `404`</failure>
+      <failure message="Breaking change detected">removed the `徴` enum value from the `oneOf[subschema #1]` response property for the response status `404`</failure>
     </testcase>
   </testsuite>
 </testsuites>

@@ -1,6 +1,6 @@
-::error title=request-parameter-removed-before-sunset,file=./properties/lifecycle_parameters_revision.yaml::in API GET /p deleted the `query` request parameter `removed` before the sunset date `2099-12-31`
+::error title=request-parameter-removed-before-sunset,file=./properties/lifecycle_parameters_base.yaml::in API GET /p deleted the `query` request parameter `removed` before the sunset date `2099-12-31`
 ::error title=request-parameter-sunset-date-changed-too-small,file=./properties/lifecycle_parameters_revision.yaml,line=10,col=78::in API GET /p `query` request parameter `earlier` sunset date changed to an earlier date, from `2099-12-31` to `2020-01-01`, new sunset date must be not earlier than `2099-12-31` and at least `0` days from now
-::error title=request-parameter-sunset-date-too-small,file=./properties/lifecycle_parameters_revision.yaml,line=7,col=5::in API GET /p `query` request parameter `too-small` sunset date `2020-01-01` is too small, must be at least `0` days from now
-::error title=request-parameter-sunset-deleted,file=./properties/lifecycle_parameters_revision.yaml::in API GET /p `query` request parameter `deleted` sunset date deleted, but deprecated=true kept
-::error title=request-parameter-sunset-parse,file=./properties/lifecycle_parameters_revision.yaml,line=7,col=5::in API GET /p failed to parse sunset date for the `query` request parameter `bad`: `sunset date doesn't conform with RFC3339: not a date`
+::error title=request-parameter-sunset-date-too-small,file=./properties/lifecycle_parameters_revision.yaml,line=11,col=62::in API GET /p `query` request parameter `too-small` sunset date `2020-01-01` is too small, must be at least `0` days from now
+::error title=request-parameter-sunset-deleted,file=./properties/lifecycle_parameters_base.yaml::in API GET /p `query` request parameter `deleted` sunset date deleted, but deprecated=true kept
+::error title=request-parameter-sunset-parse,file=./properties/lifecycle_parameters_revision.yaml,line=13,col=56::in API GET /p sunset date of the `query` request parameter `bad` doesn't conform with RFC3339: `"not a date"`
 

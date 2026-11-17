@@ -1,6 +1,6 @@
 - id: request-property-max-properties-set
-  text: the `items/` request property's maxProperties was set to `7`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  text: the `items` request property's maxProperties was set to `7`
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: PUT
   path: /ünïcode/ключ
@@ -9,9 +9,9 @@
     file: ./properties/rules/request-property-max-properties-set_revision.yaml
     line: 138
     column: 33
-  fingerprint: 31faef9fcdcb
+  fingerprint: 804df7f8b2f0
 - id: request-property-type-changed
-  text: the `items/` request property `type` changed from `string` to `object`
+  text: the `items` request property `type` changed from `string` to `object`
   level: 3
   operation: PUT
   path: /ünïcode/ключ
@@ -24,5 +24,5 @@
     file: ./properties/rules/request-property-max-properties-set_revision.yaml
     line: 139
     column: 33
-  fingerprint: c8d9b46f8727
+  fingerprint: ab2c7c1d9a74
 

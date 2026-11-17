@@ -1,15 +1,11 @@
-3 изменений: 1 error, 1 warning, 1 info
+2 изменений: 1 error, 1 warning, 0 info
 error	[new-request-path-parameter] в ./properties/rules/new-request-path-parameter_revision.yaml
 	в API GET /store/order
 		добален новый path параметр запроса `pet`
 
-warning	[request-parameter-removed] в ./properties/rules/new-request-path-parameter_revision.yaml
+warning	[request-parameter-removed] в ./properties/rules/new-request-path-parameter_base.yaml
 	в API GET /store/order
 		удалён `cookie` параметр запроса `pet`
 		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
-
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
 
 

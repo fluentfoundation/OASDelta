@@ -7,15 +7,11 @@
   section: paths
   baseSource:
     file: ./properties/rules/response-header-max-length-increased_base.yaml
-    line: 520
-    column: 9
-    endLine: 608
-    endColumn: 25
+    line: 571
+    column: 33
   revisionSource:
     file: ./properties/rules/response-header-max-length-increased_revision.yaml
-    line: 520
-    column: 9
-    endLine: 608
-    endColumn: 25
+    line: 571
+    column: 33
   fingerprint: 99fc35e69d9e
 

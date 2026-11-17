@@ -1,5 +1,5 @@
 1 changes: 0 error, 0 warning, 1 info
-info	[request-parameter-max-contains-unset] at ./properties/rules/request-parameter-max-contains-unset_revision.yaml
+info	[request-parameter-max-contains-unset] at ./properties/rules/request-parameter-max-contains-unset_base.yaml
 	in API POST /items/{id}.json
 		for the `path` request parameter `id`, the maxContains was unset from `4`
 

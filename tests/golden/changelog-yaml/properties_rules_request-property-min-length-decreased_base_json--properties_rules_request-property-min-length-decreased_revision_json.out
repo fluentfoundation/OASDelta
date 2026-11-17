@@ -4,5 +4,13 @@
   operation: POST
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/request-property-min-length-decreased_base.json
+    line: 212
+    column: 25
+  revisionSource:
+    file: ./properties/rules/request-property-min-length-decreased_revision.json
+    line: 210
+    column: 25
   fingerprint: 94b0a67d673c
 

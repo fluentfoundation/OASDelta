@@ -1,9 +1,9 @@
 2 cambios: 1 error, 0 warning, 1 info
-error	[response-property-exclusive-max-unset] en ./properties/rules/request-property-exclusive-max-unset_revision.json
+error	[response-property-exclusive-max-unset] en ./properties/rules/request-property-exclusive-max-unset_base.json
 	en API DELETE /ünïcode/ключ
 		el valor exclusiveMaximum de la propiedad de respuesta `name` fue removido de `28.00` para el estado `200`
 
-info	[request-property-exclusive-max-unset] en ./properties/rules/request-property-exclusive-max-unset_revision.json
+info	[request-property-exclusive-max-unset] en ./properties/rules/request-property-exclusive-max-unset_base.json
 	en API POST /ünïcode/ключ
 		el valor exclusiveMaximum de la propiedad de solicitud `ключ/name` fue removido de `28.00`
 

@@ -3,7 +3,7 @@ error	[request-parameter-became-required] em ./properties/rules/response-body-ex
 	em API PUT /search
 		o parâmetro de requisição do tipo `query` e nome `pet` tornou-se obrigatório
 
-info	[request-parameter-became-nullable] em ./properties/rules/response-body-exclusive-max-set_revision.yaml
+info	[request-parameter-became-nullable]
 	em API DELETE /v1/items
 		o parâmetro de requisição `cookie` `孱` tornou-se anulável
 

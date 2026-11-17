@@ -4,7 +4,7 @@
 ## API Changes
 
 ### DELETE /pets
-- :warning: for the `query` request parameter `tag`, the `format` of property `items/` was narrowed from `none` to `email`
+- :warning: for the `query` request parameter `tag`, the `format` of property `items` was narrowed from `none` to `email`
 -  the response's body `format` was narrowed from `none` to `email` for status `default`
 -  the `anyOf[subschema #2]/0x1F` response property's minItems was set to `10` for the response status `default`
 

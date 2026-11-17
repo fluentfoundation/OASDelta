@@ -1,5 +1,4 @@
 ::error title=request-body-unique-items-set,file=./properties/rules/request-body-unique-items-set_revision.yaml,line=62,col=29::in API POST /store/order the request's body uniqueItems was set to true
 ::error title=response-body-type-changed,file=./properties/rules/request-body-unique-items-set_revision.yaml,line=77,col=33::in API POST /store/order the response's body `type` changed from `number, null` to `array<string>` for status `201`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
-::notice title=response-body-became-not-nullable,file=./properties/rules/request-body-unique-items-set_revision.yaml::in API POST /store/order the response's body became not nullable
+::notice title=response-body-became-not-nullable::in API POST /store/order the response's body became not nullable
 

@@ -4,5 +4,9 @@
   operation: PATCH
   path: /owners/{ownerId}/pets
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-property-min-properties-set_revision.yaml
+    line: 76
+    column: 27
   fingerprint: 022a18ce0660
 

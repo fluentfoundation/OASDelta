@@ -4,7 +4,7 @@
 ## API Changes
 
 ### GET /pets
-- :warning: api removed without deprecation
+- :warning: API removed without deprecation
 
 
 ### PATCH /store/order

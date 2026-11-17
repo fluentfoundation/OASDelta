@@ -12,11 +12,6 @@
     endLine: 156
     endColumn: 44
   fingerprint: 9420c4fd73e0
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: response-body-max-decreased
   text: the response's body max was decreased from `244.00` to `241.00`
   level: 1

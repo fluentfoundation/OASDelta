@@ -2,6 +2,6 @@
 info	[response-property-const-added] em ./properties/rules/response-property-const-added_revision.yaml
 	em API GET /pets
 		a propriedade de resposta `` teve o valor const `tag` adicionado para o status `404`
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+		Isto comparou os ramos do `allOf` um a um, então outro ramo já pode descrever o que mudou aqui, deixando o esquema mesclado igual. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
 

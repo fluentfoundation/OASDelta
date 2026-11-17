@@ -1,5 +1,5 @@
 1 alterações: 1 error, 0 warning, 0 info
-error	[response-header-max-length-unset] em ./properties/rules/response-header-max-length-unset_revision.yaml
+error	[response-header-max-length-unset] em ./properties/rules/response-header-max-length-unset_base.yaml
 	em API DELETE /search
 		o valor maxLength do cabeçalho de resposta `꣧ਏ哪᷸∄肱瘝ㆺ` foi removido de `135` para o status `201`
 

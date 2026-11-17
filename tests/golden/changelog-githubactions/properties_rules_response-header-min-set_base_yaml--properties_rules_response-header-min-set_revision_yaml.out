@@ -1,3 +1,3 @@
 ::notice title=request-parameter-type-generalized,file=./properties/rules/response-header-min-set_revision.yaml,line=26,col=21::in API GET /pets/{petId} for the `cookie` request parameter `榶河鲠Ɯ㳦཮⒚`, the `format` was widened from `date-time` to `none`
-::notice title=response-header-min-set,file=./properties/rules/response-header-min-set_revision.yaml,line=14,col=9::in API GET /pets/{petId} the `a/b` response header's min was set to `20.00` for the status `200`
+::notice title=response-header-min-set,file=./properties/rules/response-header-min-set_revision.yaml,line=68,col=33::in API GET /pets/{petId} the `a/b` response header's min was set to `20.00` for the status `200`
 

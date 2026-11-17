@@ -10,11 +10,6 @@
     line: 110
     column: 21
   fingerprint: c4dcab0cfea2
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-parameter-list-of-types-widened
   text: '`query` request parameter `ключ` list-of-types was widened by adding types `boolean`'
   level: 1

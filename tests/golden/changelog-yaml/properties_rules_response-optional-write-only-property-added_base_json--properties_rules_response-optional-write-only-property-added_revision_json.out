@@ -5,5 +5,11 @@
   operationId: post_items_{id}.json
   path: /items/{id}.json
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-optional-write-only-property-added_revision.json
+    line: 176
+    column: 27
+    endLine: 178
+    endColumn: 46
   fingerprint: c9ec34841e09
 

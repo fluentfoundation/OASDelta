@@ -1,6 +1,6 @@
 1 changes: 0 error, 0 warning, 1 info
 info	[api-removed-with-deprecation] at ./properties/rules/api-removed-with-deprecation_base.json
 	in API DELETE /pets
-		api removed with deprecation
+		API removed with deprecation
 
 

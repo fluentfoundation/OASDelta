@@ -1,7 +1,7 @@
 2 changes: 1 error, 0 warning, 1 info
 error	[api-removed-without-deprecation] at ./properties/rules/response-header-exclusive-min-set_base.yaml
 	in API GET /pets
-		api removed without deprecation
+		API removed without deprecation
 
 info	[response-header-exclusive-min-set] at ./properties/rules/response-header-exclusive-min-set_revision.yaml
 	in API PATCH /store/order

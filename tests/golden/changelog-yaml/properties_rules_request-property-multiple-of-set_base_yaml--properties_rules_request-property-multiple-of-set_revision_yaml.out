@@ -1,5 +1,5 @@
 - id: request-property-multiple-of-set
-  text: 'the `{brace}/oneOf[subschema #2]/` request property''s multipleOf was set to `4.00`'
+  text: 'the `{brace}/oneOf[subschema #2]` request property''s multipleOf was set to `4.00`'
   comment: The property is read-only, so it never appears in requests and this change cannot invalidate one.
   level: 1
   operation: PATCH
@@ -9,5 +9,5 @@
     file: ./properties/rules/request-property-multiple-of-set_revision.yaml
     line: 51
     column: 43
-  fingerprint: 8be4310c3809
+  fingerprint: 1c5d49e317f9
 

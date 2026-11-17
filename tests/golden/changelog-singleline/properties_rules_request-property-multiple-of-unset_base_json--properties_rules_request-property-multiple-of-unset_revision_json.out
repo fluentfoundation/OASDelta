@@ -1,4 +1,4 @@
 1 changes: 0 error, 0 warning, 1 info
-info at ./properties/rules/request-property-multiple-of-unset_revision.json, in API PATCH /v1/items the `'single'` request property's multipleOf was unset from `8.00` [request-property-multiple-of-unset]. 
+info at ./properties/rules/request-property-multiple-of-unset_base.json, in API PATCH /v1/items the `'single'` request property's multipleOf was unset from `8.00` [request-property-multiple-of-unset]. 
 
 

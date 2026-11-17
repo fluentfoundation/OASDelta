@@ -8,7 +8,7 @@
 
 
 ### GET /store/order
-- :warning: api removed without deprecation
+- :warning: API removed without deprecation
 
 
 ### PUT /store/order

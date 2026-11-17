@@ -3,12 +3,12 @@ error	[new-required-request-parameter] em ./properties/rules/request-parameter-r
 	em API POST /items/{id}.json
 		adicionado o novo parâmetro de requisição obrigatório `header` `id`
 
-warning	[request-parameter-removed] em ./properties/rules/request-parameter-reactivated_revision.yaml
+warning	[request-parameter-removed] em ./properties/rules/request-parameter-reactivated_base.yaml
 	em API POST /items/{id}.json
 		parâmetro de requisição do tipo `path` e nome `id` removido
 		Este é um aviso porque alguns aplicativos podem retornar um erro ao receber um parâmetro que não esperam. Recomenda-se depreciar o parâmetro primeiro.
 
-info	[request-parameter-reactivated] em ./properties/rules/request-parameter-reactivated_revision.yaml
+info	[request-parameter-reactivated] em ./properties/rules/request-parameter-reactivated_base.yaml
 	em API POST /items/{id}.json
 		o parâmetro de requisição do tipo `query` e nome `status` foi reativado
 

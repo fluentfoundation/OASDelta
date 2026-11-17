@@ -5,6 +5,6 @@ error	[new-required-request-parameter] en ./properties/rules/response-property-m
 
 info	[response-property-max-properties-set] en ./properties/rules/response-property-max-properties-set_revision.yaml
 	en API POST /pets/{petId}
-		el valor maxProperties de la propiedad de respuesta `items/` fue establecido en `13` para el estado `200`
+		el valor maxProperties de la propiedad de respuesta `items` fue establecido en `13` para el estado `200`
 
 

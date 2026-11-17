@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `items/` response property&#39;s minProperties was increased from `1` to `6` for the response status `500`
+        the `items` response property&#39;s minProperties was increased from `1` to `6` for the response status `500`
         </li>
         
     </ul>

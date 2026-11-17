@@ -1,8 +1,8 @@
 3 changes: 1 error, 1 warning, 1 info
 error at ./properties/rules/request-parameter-reactivated_revision.yaml, in API POST /items/{id}.json added the new required `header` request parameter `id` [new-required-request-parameter]. 
 
-warning at ./properties/rules/request-parameter-reactivated_revision.yaml, in API POST /items/{id}.json deleted the `path` request parameter `id` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+warning at ./properties/rules/request-parameter-reactivated_base.yaml, in API POST /items/{id}.json deleted the `path` request parameter `id` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
 
-info at ./properties/rules/request-parameter-reactivated_revision.yaml, in API POST /items/{id}.json `query` request parameter `status` was reactivated [request-parameter-reactivated]. 
+info at ./properties/rules/request-parameter-reactivated_base.yaml, in API POST /items/{id}.json `query` request parameter `status` was reactivated [request-parameter-reactivated]. 
 
 

@@ -6,15 +6,7 @@
   section: paths
   baseSource:
     file: ./properties/rules/response-header-max-length-unset_base.yaml
-    line: 28
-    column: 9
-    endLine: 83
-    endColumn: 41
-  revisionSource:
-    file: ./properties/rules/response-header-max-length-unset_revision.yaml
-    line: 28
-    column: 9
-    endLine: 82
-    endColumn: 41
+    line: 76
+    column: 33
   fingerprint: 41126f89a9cd
 

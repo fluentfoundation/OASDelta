@@ -1,15 +1,15 @@
 8 changes: 4 error, 0 warning, 4 info
 error	[api-path-removed-without-deprecation] at ./oas32/base.yaml
 	in API LOCK /gone
-		api path removed without deprecation
+		API path removed without deprecation
 
 error	[api-path-removed-without-deprecation] at ./oas32/base.yaml
 	in API QUERY /gone
-		api path removed without deprecation
+		API path removed without deprecation
 
 error	[api-removed-without-deprecation] at ./oas32/base.yaml
 	in API PURGE /search
-		api removed without deprecation
+		API removed without deprecation
 
 error	[request-property-type-changed] at ./oas32/revision.yaml
 	in API QUERY /search
@@ -27,7 +27,7 @@ info	[endpoint-added] at ./oas32/revision.yaml
 	in API MOVE /search
 		endpoint added
 
-info	[response-non-success-status-removed] at ./oas32/revision.yaml
+info	[response-non-success-status-removed] at ./oas32/base.yaml
 	in API QUERY /search
 		removed the non-success response with the status `418`
 

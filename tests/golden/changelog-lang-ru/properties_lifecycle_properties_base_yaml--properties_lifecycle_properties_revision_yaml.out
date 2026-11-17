@@ -1,9 +1,9 @@
 13 изменений: 7 error, 0 warning, 6 info
 error	[request-property-deprecated-sunset-invalid] в ./properties/lifecycle_properties_revision.yaml
 	в API POST /r
-		поле запроса `invalid` устарело с недействительной датой прекращения: `sunset date doesn't conform with RFC3339: not a date`
+		поле запроса `invalid` устарело с датой прекращения, не соответствующей RFC3339: `"not a date"`
 
-error	[request-property-removed-before-sunset] в ./properties/lifecycle_properties_revision.yaml
+error	[request-property-removed-before-sunset] в ./properties/lifecycle_properties_base.yaml
 	в API POST /r
 		удалено поле запроса `removed` до даты прекращения действия `2099-12-31`
 
@@ -17,13 +17,13 @@ error	[request-property-sunset-date-too-small] в ./properties/lifecycle_propert
 
 error	[response-property-deprecated-sunset-invalid] в ./properties/lifecycle_properties_revision.yaml
 	в API POST /r
-		поле ответа `invalid` устарело с недействительной датой прекращения: `sunset date doesn't conform with RFC3339: not a date`
+		поле ответа `invalid` устарело с датой прекращения, не соответствующей RFC3339: `"not a date"`
 
 error	[response-property-stability-decreased] в ./properties/lifecycle_properties_revision.yaml
 	в API POST /r
 		уровень стабильности свойства ответа `decreased` уменьшен с `stable` до `beta`
 
-error	[response-required-property-removed-before-sunset] в ./properties/lifecycle_properties_revision.yaml
+error	[response-required-property-removed-before-sunset] в ./properties/lifecycle_properties_base.yaml
 	в API POST /r
 		удалено обязательное поле ответа `required-removed` из ответа со статусом `200` до даты прекращения действия `2099-12-31`
 

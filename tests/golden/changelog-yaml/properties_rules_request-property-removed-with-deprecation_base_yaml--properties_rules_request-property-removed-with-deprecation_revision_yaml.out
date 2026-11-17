@@ -4,6 +4,10 @@
   operation: PUT
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/request-property-removed-with-deprecation_base.yaml
+    line: 143
+    column: 17
   revisionSource:
     file: ./properties/rules/request-property-removed-with-deprecation_revision.yaml
     line: 72
@@ -15,6 +19,12 @@
   operation: PUT
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/request-property-removed-with-deprecation_base.yaml
+    line: 98
+    column: 19
+    endLine: 106
+    endColumn: 36
   fingerprint: 98cbf76a0108
 - id: request-property-removed
   text: removed the request property `C:\path`
@@ -22,6 +32,12 @@
   operation: PUT
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/request-property-removed-with-deprecation_base.yaml
+    line: 108
+    column: 19
+    endLine: 116
+    endColumn: 37
   fingerprint: 4d49911153c3
 - id: request-property-removed
   text: removed the request property `kind`
@@ -29,17 +45,24 @@
   operation: PUT
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/request-property-removed-with-deprecation_base.yaml
+    line: 129
+    column: 19
+    endLine: 139
+    endColumn: 24
   fingerprint: ddc30de8c67f
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-property-removed-with-deprecation
   text: removed the deprecated request property `id`
   level: 1
   operation: PUT
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/request-property-removed-with-deprecation_base.yaml
+    line: 118
+    column: 19
+    endLine: 127
+    endColumn: 37
   fingerprint: 31e4530e83a8
 

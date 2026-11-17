@@ -1,2 +1,2 @@
-::warning title=response-property-max-properties-unset,file=./properties/rules/response-property-max-properties-unset_revision.json::in API PUT /pets the `pet/allOf[subschema #1]/` response property's maxProperties was unset from `13` for the response status `201`
+::warning title=response-property-max-properties-unset,file=./properties/rules/response-property-max-properties-unset_base.json::in API PUT /pets the `pet/allOf[subschema #1]` response property's maxProperties was unset from `13` for the response status `201`
 

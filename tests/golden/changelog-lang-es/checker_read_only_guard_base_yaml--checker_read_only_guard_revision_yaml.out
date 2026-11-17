@@ -1,4 +1,4 @@
-7 cambios: 2 error, 0 warning, 5 info
+6 cambios: 2 error, 0 warning, 4 info
 error	[request-property-pattern-added] en ./checker/read_only_guard_revision.yaml
 	en API POST /items
 		agregado el patrón `^x` a la propiedad de solicitud `name`
@@ -7,10 +7,6 @@ error	[request-property-pattern-added] en ./checker/read_only_guard_revision.yam
 error	[request-property-type-changed] en ./checker/read_only_guard_revision.yaml
 	en API POST /items
 		el `secret` de la propiedad de solicitud `type` fue cambiado de `string` a `boolean`
-
-info	[api-version-not-bumped]
-	en info
-		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
 
 info	[request-property-pattern-added] en ./checker/read_only_guard_revision.yaml
 	en API POST /items

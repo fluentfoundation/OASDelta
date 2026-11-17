@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
     <testcase name="response-body-const-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the response body `text/plain` const value `䮼멀ቀ楬` was removed for the status `400`</failure>
     </testcase>
@@ -9,9 +9,6 @@
     </testcase>
     <testcase name="response-body-type-changed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the response's body `type/format` changed from `string/password` to `integer` for status `400`</failure>
-    </testcase>
-    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
     </testcase>
   </testsuite>
 </testsuites>

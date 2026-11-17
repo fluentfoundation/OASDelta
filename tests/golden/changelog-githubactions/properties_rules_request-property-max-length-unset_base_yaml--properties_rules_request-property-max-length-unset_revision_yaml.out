@@ -1,2 +1,2 @@
-::notice title=request-property-max-length-unset,file=./properties/rules/request-property-max-length-unset_revision.yaml::in API PATCH /items/{id}.json the `items/null` request property's maxLength was unset from `9`
+::notice title=request-property-max-length-unset,file=./properties/rules/request-property-max-length-unset_base.yaml::in API PATCH /items/{id}.json the `items/null` request property's maxLength was unset from `9`
 

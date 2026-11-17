@@ -3,7 +3,7 @@ error	[request-body-media-type-item-schema-added] at ./item-schema/revision.yaml
 	in API POST /drop
 		added an item schema to the media type `application/jsonl` of the request body
 
-error	[response-body-media-type-item-schema-removed-untyped] at ./item-schema/revision.yaml
+error	[response-body-media-type-item-schema-removed-untyped] at ./item-schema/base.yaml
 	in API POST /drop
 		removed the item schema from the media type `application/jsonl` for the response with the status `200`, leaving the body with no schema
 
@@ -11,11 +11,11 @@ error	[request-property-became-required] at ./item-schema/revision.yaml
 	in API POST /ingest
 		the request property `weight` became required (item schema)
 
-error	[response-body-media-type-item-schema-removed] at ./item-schema/revision.yaml
+error	[response-body-media-type-item-schema-removed] at ./item-schema/base.yaml
 	in API GET /keep
 		removed the item schema from the media type `application/jsonl` for the response with the status `200`
 
-info	[response-property-enum-value-removed] at ./item-schema/revision.yaml
+info	[response-property-enum-value-removed] at ./item-schema/base.yaml
 	in API GET /events
 		removed the `deleted` enum value from the `kind` response property for the response status `200` (item schema)
 

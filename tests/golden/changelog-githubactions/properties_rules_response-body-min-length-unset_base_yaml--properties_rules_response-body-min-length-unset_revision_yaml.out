@@ -1,4 +1,3 @@
-::error title=response-body-min-length-unset,file=./properties/rules/response-body-min-length-unset_revision.yaml::in API DELETE /items/{id}.json the response's body minLength was unset from `2`
+::error title=response-body-min-length-unset,file=./properties/rules/response-body-min-length-unset_base.yaml::in API DELETE /items/{id}.json the response's body minLength was unset from `2`
 ::error title=response-body-type-changed,file=./properties/rules/response-body-min-length-unset_revision.yaml,line=69,col=33::in API DELETE /items/{id}.json the response's body `type/format` changed from `string/date` to `number` for status `200`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 

@@ -1,17 +1,13 @@
-5 changes: 1 error, 0 warning, 4 info
-error	[response-body-exclusive-min-unset] at ./properties/rules/response-body-exclusive-min-unset_revision.yaml
+4 changes: 1 error, 0 warning, 3 info
+error	[response-body-exclusive-min-unset] at ./properties/rules/response-body-exclusive-min-unset_base.yaml
 	in API GET /ünïcode/ключ
 		the response's body exclusiveMinimum was unset from `-2.00`
 
-info	[api-version-not-bumped]
-	in info
-		a breaking change was detected but the version is still `1.0.0`
-
-info	[response-body-became-not-nullable] at ./properties/rules/response-body-exclusive-min-unset_revision.yaml
+info	[response-body-became-not-nullable]
 	in API GET /ünïcode/ключ
 		the response's body became not nullable
 
-info	[response-body-default-value-removed] at ./properties/rules/response-body-exclusive-min-unset_revision.yaml
+info	[response-body-default-value-removed] at ./properties/rules/response-body-exclusive-min-unset_base.yaml
 	in API GET /ünïcode/ключ
 		the response body `application/xml` default value `80.00` was removed for the status `404`
 

@@ -1,4 +1,4 @@
 1 changes: 1 error, 0 warning, 0 info
-error at ./properties/rules/response-header-min-items-unset_revision.yaml, in API DELETE /v1/items the `졳恂낭` response header's minItems was unset from `10` for the status `200` [response-header-min-items-unset]. 
+error at ./properties/rules/response-header-min-items-unset_base.yaml, in API DELETE /v1/items the `졳恂낭` response header's minItems was unset from `10` for the status `200` [response-header-min-items-unset]. 
 
 

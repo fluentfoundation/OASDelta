@@ -1,4 +1,4 @@
 1 changes: 1 error, 0 warning, 0 info
-error at ./properties/rules/request-parameter-min-length-set_revision.yaml, in API PATCH /v1/items for the `query` request parameter `price`, the minLength was set to `18` [request-parameter-min-length-set]. Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+error at ./properties/rules/request-parameter-min-length-set_revision.yaml, in API PATCH /v1/items for the `query` request parameter `price`, the minLength was set to `18` [request-parameter-min-length-set]. Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
 

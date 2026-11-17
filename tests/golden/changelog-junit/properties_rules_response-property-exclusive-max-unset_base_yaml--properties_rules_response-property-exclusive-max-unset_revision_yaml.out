@@ -2,7 +2,7 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
     <testcase name="response-property-exclusive-max-unset" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `kind/oneOf[subschema #3]/` response property's exclusiveMaximum was unset from `1272.00` for the response status `204`</failure>
+      <failure message="Breaking change detected">the `kind/oneOf[subschema #3]` response property's exclusiveMaximum was unset from `1272.00` for the response status `204`</failure>
     </testcase>
   </testsuite>
 </testsuites>

@@ -17,7 +17,7 @@
     endColumn: 32
   fingerprint: 3f76f0e2e10b
 - id: response-property-multiple-of-specialized
-  text: 'the `oneOf[subschema #1]/anyOf[subschema #2]/` response property''s multipleOf was specialized from `2.00` to `4.00` for the response status `500`'
+  text: 'the `oneOf[subschema #1]/anyOf[subschema #2]` response property''s multipleOf was specialized from `2.00` to `4.00` for the response status `500`'
   comment: This change is not breaking because the new multipleOf is an integer multiple of the old one, so every value the server may now produce was already valid before.
   level: 1
   operation: DELETE
@@ -32,15 +32,15 @@
     file: ./properties/rules/response-property-multiple-of-specialized_revision.yaml
     line: 67
     column: 43
-  fingerprint: 678d1991ef2c
+  fingerprint: 06b3c8c96d0f
 - id: response-property-type-specialized
-  text: 'the `oneOf[subschema #1]/` response''s property `format` was narrowed from `none` to `float` for status `500`'
+  text: 'the `oneOf[subschema #1]` response''s property `format` was narrowed from `none` to `float` for status `500`'
   level: 1
   operation: DELETE
   operationId: delete_pets
   path: /pets
   section: paths
-  fingerprint: 21b779a45bbd
+  fingerprint: 5d325b2f16e5
 - id: optional-response-header-removed
   text: the optional response header `퉈祅闄췱` removed for the status `500`
   level: 1

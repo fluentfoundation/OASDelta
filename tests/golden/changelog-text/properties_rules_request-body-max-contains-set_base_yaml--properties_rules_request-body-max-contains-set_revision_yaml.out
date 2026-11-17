@@ -1,4 +1,4 @@
-3 changes: 2 error, 0 warning, 1 info
+2 changes: 2 error, 0 warning, 0 info
 error	[request-body-contains-added] at ./properties/rules/request-body-max-contains-set_revision.yaml
 	in API PATCH /owners/{ownerId}/pets
 		added 'contains' constraint to the request body
@@ -6,10 +6,6 @@ error	[request-body-contains-added] at ./properties/rules/request-body-max-conta
 error	[request-body-max-contains-set] at ./properties/rules/request-body-max-contains-set_revision.yaml
 	in API PATCH /owners/{ownerId}/pets
 		the request's body maxContains was set to `1`
-		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
-
-info	[api-version-not-bumped]
-	in info
-		a breaking change was detected but the version is still `1.0.0`
+		Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
 

@@ -1,4 +1,4 @@
 1 changes: 0 error, 0 warning, 1 info
-info at ./properties/rules/request-property-unique-items-unset_revision.yaml, in API PUT /store/order the `items/` request property's uniqueItems was unset [request-property-unique-items-unset]. 
+info at ./properties/rules/request-property-unique-items-unset_base.yaml, in API PUT /store/order the `items` request property's uniqueItems was unset [request-property-unique-items-unset]. 
 
 

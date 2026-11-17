@@ -3,8 +3,8 @@ error	[request-body-type-changed] em ./properties/rules/request-body-default-val
 	em API PUT /search
 		o `type/format` do corpo da requisição foi alterado de `number/double` para `boolean`
 
-info	[request-body-default-value-removed] em ./properties/rules/request-body-default-value-removed_revision.yaml
+info	[request-body-default-value-removed] em ./properties/rules/request-body-default-value-removed_base.yaml
 	em API PUT /search
-		o valor padrão `application/json; charset=utf-8` foi removido do corpo da requisição%!(EXTRA string=`14.00`)
+		o valor padrão `14.00` foi removido do corpo da requisição `application/json; charset=utf-8`
 
 

@@ -16,15 +16,15 @@
 
 
 ### DELETE /pets/{petId}/v2
--  api path removed with deprecation
+-  API path removed with deprecation
 
 
 ### GET /pets/{petId}/v2
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### POST /pets/{petId}/v2
-- :warning: api path removed before the sunset date `2099-12-31`
+- :warning: API path removed before the sunset date `2099-12-31`
 
 
 

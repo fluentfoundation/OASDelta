@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite package="com.oasdiff" time="0" tests="7" errors="0" failures="7" name="OASDiff">
+  <testsuite package="com.oasdiff" time="0" tests="8" errors="0" failures="8" name="OASDiff">
     <testcase name="api-global-security-added" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the security scheme `bearerAuth` was added to the API</failure>
     </testcase>
@@ -12,6 +12,9 @@
     </testcase>
     <testcase name="api-security-component-added" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the component security scheme `bearerAuth` was added</failure>
+    </testcase>
+    <testcase name="api-version-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the API version changed from `2.0.0` to `1.0.0`</failure>
     </testcase>
     <testcase name="endpoint-added" classname="OASDiff" time="0">
       <failure message="Breaking change detected">endpoint added</failure>

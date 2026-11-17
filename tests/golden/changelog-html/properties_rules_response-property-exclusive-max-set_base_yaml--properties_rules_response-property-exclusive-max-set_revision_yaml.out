@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `allOf[subschema #1]/` response property&#39;s exclusiveMaximum was set to `1785.00` for the response status `204`
+        the `allOf[subschema #1]` response property&#39;s exclusiveMaximum was set to `1785.00` for the response status `204`
         </li>
         
     </ul>

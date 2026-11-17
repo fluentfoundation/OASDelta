@@ -5,5 +5,9 @@
   operationId: get_v1_items
   path: /v1/items
   section: paths
+  baseSource:
+    file: ./properties/rules/response-property-multiple-of-unset_base.json
+    line: 45
+    column: 23
   fingerprint: 8a1bcb0f67ab
 

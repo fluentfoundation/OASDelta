@@ -4,5 +4,13 @@
   operation: DELETE
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/response-body-max-properties-decreased_base.json
+    line: 90
+    column: 19
+  revisionSource:
+    file: ./properties/rules/response-body-max-properties-decreased_revision.json
+    line: 90
+    column: 19
   fingerprint: cff679a8f053
 

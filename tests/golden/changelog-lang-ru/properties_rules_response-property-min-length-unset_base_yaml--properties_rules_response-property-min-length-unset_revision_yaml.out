@@ -1,32 +1,31 @@
 6 изменений: 0 error, 2 warning, 4 info
-warning	[response-property-min-length-unset] в ./properties/rules/response-property-min-length-unset_revision.yaml
+warning	[response-property-min-length-unset] в ./properties/rules/response-property-min-length-unset_base.yaml
 	в API POST /items/{id}.json
-		значение minLength у поля ответа `oneOf[subschema #1]/` удалено, предыдущее значение - `1`, для ответа со статусом `404`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		значение minLength у поля ответа `oneOf[subschema #1]` удалено, предыдущее значение - `1`, для ответа со статусом `404`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-warning	[response-property-type-changed] в ./properties/rules/response-property-min-length-unset_revision.yaml
+warning	[response-property-type-changed] в ./properties/rules/response-property-min-length-unset_base.yaml
 	в API POST /items/{id}.json
-		у свойства ответа `oneOf[subschema #1]/` `type` изменён с `string, null` на `any` для статуса `404`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		у свойства ответа `oneOf[subschema #1]` `type` изменён с `string, null` на `any` для статуса `404`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 info	[response-property-all-of-added] в ./properties/rules/response-property-min-length-unset_revision.yaml
 	в API POST /items/{id}.json
-		добавлено `subschema #1, subschema #2` в список `allOf` свойства ответа `oneOf[subschema #1]/` для статуса ответа `404`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		добавлено `subschema #1, subschema #2` в список `allOf` свойства ответа `oneOf[subschema #1]` для статуса ответа `404`
 
-info	[response-property-enum-value-removed] в ./properties/rules/response-property-min-length-unset_revision.yaml
+info	[response-property-enum-value-removed] в ./properties/rules/response-property-min-length-unset_base.yaml
 	в API POST /items/{id}.json
-		удалено значение перечисления ` leading` из свойства ответа `oneOf[subschema #1]/` для статуса ответа `404`.
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		удалено значение перечисления ` leading` из свойства ответа `oneOf[subschema #1]` для статуса ответа `404`.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-info	[response-property-enum-value-removed] в ./properties/rules/response-property-min-length-unset_revision.yaml
+info	[response-property-enum-value-removed] в ./properties/rules/response-property-min-length-unset_base.yaml
 	в API POST /items/{id}.json
-		удалено значение перечисления `| table |` из свойства ответа `oneOf[subschema #1]/` для статуса ответа `404`.
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		удалено значение перечисления `| table |` из свойства ответа `oneOf[subschema #1]` для статуса ответа `404`.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-info	[response-property-enum-value-removed] в ./properties/rules/response-property-min-length-unset_revision.yaml
+info	[response-property-enum-value-removed] в ./properties/rules/response-property-min-length-unset_base.yaml
 	в API POST /items/{id}.json
-		удалено значение перечисления `徴` из свойства ответа `oneOf[subschema #1]/` для статуса ответа `404`.
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		удалено значение перечисления `徴` из свойства ответа `oneOf[subschema #1]` для статуса ответа `404`.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 

@@ -1,26 +1,26 @@
 7 alterações: 1 error, 5 warning, 1 info
-error	[request-body-media-type-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+error	[request-body-media-type-removed] em ./properties/rules/request-property-type-compatible_base.yaml
 	em API POST /pets/{petId}
 		o tipo de mídia `application/xml` foi removido do corpo da requisição
 
-warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_base.yaml
 	em API POST /pets/{petId}
 		a propriedade de requisição `'single'` foi removida
 
-warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_base.yaml
 	em API POST /pets/{petId}
 		a propriedade de requisição `id/no` foi removida
 
-warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_base.yaml
 	em API POST /pets/{petId}
 		a propriedade de requisição `id/tag` foi removida
 
-warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_base.yaml
 	em API POST /pets/{petId}
 		a propriedade de requisição `line1
 line2` foi removida
 
-warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] em ./properties/rules/request-property-type-compatible_base.yaml
 	em API POST /pets/{petId}
 		a propriedade de requisição `pet` foi removida
 

@@ -1,6 +1,6 @@
 1 alterações: 0 error, 0 warning, 1 info
 info	[response-property-min-length-increased] em ./properties/rules/response-property-min-length-increased_revision.yaml
 	em API PUT /pets/{petId}
-		o valor minLength da propriedade de resposta `anyOf[subschema #2]/items/` foi aumentado de `1` para `4` para o status `200`
+		o valor minLength da propriedade de resposta `anyOf[subschema #2]/items` foi aumentado de `1` para `4` para o status `200`
 
 

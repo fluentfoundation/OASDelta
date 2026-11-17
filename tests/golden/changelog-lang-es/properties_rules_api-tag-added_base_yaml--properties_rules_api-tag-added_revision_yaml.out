@@ -1,13 +1,13 @@
 3 cambios: 0 error, 0 warning, 3 info
-info	[api-tag-added] en ./properties/rules/api-tag-added_base.yaml
+info	[api-tag-added] en ./properties/rules/api-tag-added_revision.yaml
 	en API DELETE /items/{id}.json
-		etiqueta de api `id` agregada
+		etiqueta de API `id` agregada
 
 info	[endpoint-deprecated-with-sunset] en ./properties/rules/api-tag-added_revision.yaml
 	en API DELETE /items/{id}.json
 		endpoint deprecado con fecha de expiración `2099-12-31`
 
-info	[response-property-enum-value-removed] en ./properties/rules/api-tag-added_revision.yaml
+info	[response-property-enum-value-removed] en ./properties/rules/api-tag-added_base.yaml
 	en API PUT /pets
 		removido el valor enum `19.00` de la propiedad de respuesta `owner` para el estado `204`
 

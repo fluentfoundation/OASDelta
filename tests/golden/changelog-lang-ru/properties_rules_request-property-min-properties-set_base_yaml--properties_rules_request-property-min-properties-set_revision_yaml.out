@@ -1,7 +1,7 @@
 1 изменений: 1 error, 0 warning, 0 info
 error	[request-property-min-properties-set] в ./properties/rules/request-property-min-properties-set_revision.yaml
 	в API POST /v1/items
-		у поля запроса `items/items/` задано значение minProperties в `4`
-		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+		у поля запроса `items/items` задано значение minProperties в `4`
+		Установка ограничения отклоняет значения, которые принимал прежний контракт, если только клиенты не укладываются в новое ограничение.
 
 

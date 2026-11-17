@@ -1,7 +1,7 @@
 1 изменений: 0 error, 1 warning, 0 info
-warning	[response-property-max-properties-unset] в ./properties/rules/response-property-max-properties-unset_revision.json
+warning	[response-property-max-properties-unset] в ./properties/rules/response-property-max-properties-unset_base.json
 	в API PUT /pets
-		значение maxProperties у поля ответа `pet/allOf[subschema #1]/` удалено, предыдущее значение - `13`, для ответа со статусом `201`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		значение maxProperties у поля ответа `pet/allOf[subschema #1]` удалено, предыдущее значение - `13`, для ответа со статусом `201`
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 

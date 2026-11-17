@@ -1,5 +1,5 @@
 1 cambios: 0 error, 0 warning, 1 info
-info	[request-parameter-min-properties-unset] en ./properties/rules/request-parameter-min-properties-unset_revision.yaml
+info	[request-parameter-min-properties-unset] en ./properties/rules/request-parameter-min-properties-unset_base.yaml
 	en API PATCH /owners/{ownerId}/pets
 		para el parámetro `header` de solicitud `owner`, el valor minProperties fue removido de `2`
 

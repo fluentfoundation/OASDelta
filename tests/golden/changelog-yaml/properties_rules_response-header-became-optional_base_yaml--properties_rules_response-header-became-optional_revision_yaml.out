@@ -7,6 +7,10 @@
   section: paths
   baseSource:
     file: ./properties/rules/response-header-became-optional_base.yaml
+    line: 104
+    column: 15
+    endLine: 108
+    endColumn: 35
   revisionSource:
     file: ./properties/rules/response-header-became-optional_revision.yaml
     line: 59

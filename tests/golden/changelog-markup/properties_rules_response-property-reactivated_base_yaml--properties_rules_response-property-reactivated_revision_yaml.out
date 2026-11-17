@@ -4,7 +4,7 @@
 ## API Changes
 
 ### PATCH /pets/{petId}
--  response property `items/` reactivated
+-  response property `items` reactivated
 
 
 

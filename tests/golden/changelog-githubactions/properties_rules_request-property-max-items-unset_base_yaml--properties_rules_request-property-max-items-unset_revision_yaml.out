@@ -1,2 +1,2 @@
-::notice title=request-property-max-items-unset,file=./properties/rules/request-property-max-items-unset_revision.yaml::in API PATCH /pets the `allOf[subschema #1]/` request property's maxItems was unset from `11`
+::notice title=request-property-max-items-unset,file=./properties/rules/request-property-max-items-unset_base.yaml::in API PATCH /pets the `allOf[subschema #1]` request property's maxItems was unset from `11`
 

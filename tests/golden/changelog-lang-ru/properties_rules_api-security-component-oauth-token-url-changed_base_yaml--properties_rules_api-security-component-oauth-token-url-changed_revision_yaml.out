@@ -1,15 +1,15 @@
 3 изменений: 0 error, 2 warning, 1 info
-warning	[api-security-component-oauth-token-url-changed]
+warning	[api-security-component-oauth-token-url-changed] в ./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml
 	в components/securitySchemes
 		в схеме безопасности `oauth` URL токена OAuth потока `authorizationCode` изменен с `https://auth.example.com/token` на `https://auth0.example.com/tokenUrl`
 		Это предупреждение, потому что спецификация не указывает, принимаются ли учетные данные, полученные через прежний URL.
 
-warning	[api-security-component-oauth-token-url-changed]
+warning	[api-security-component-oauth-token-url-changed] в ./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml
 	в components/securitySchemes
 		в схеме безопасности `oauth` URL токена OAuth потока `clientCredentials` изменен с `https://auth.example.com/token` на `https://auth0.example.com/tokenUrl`
 		Это предупреждение, потому что спецификация не указывает, принимаются ли учетные данные, полученные через прежний URL.
 
-info	[request-parameter-type-generalized] в ./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml
+info	[request-parameter-type-generalized] в ./properties/rules/api-security-component-oauth-token-url-changed_base.yaml
 	в API PATCH /search
 		в параметре запроса `cookie` `id` `type` расширен с `array<integer/int64>` до `any`
 

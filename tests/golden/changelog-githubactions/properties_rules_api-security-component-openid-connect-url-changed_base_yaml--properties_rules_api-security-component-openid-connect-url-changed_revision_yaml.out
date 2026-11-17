@@ -1,3 +1,3 @@
-::error title=api-path-removed-without-deprecation,file=./properties/rules/api-security-component-openid-connect-url-changed_base.yaml::in API POST /items/{id}.json api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=./properties/rules/api-security-component-openid-connect-url-changed_base.yaml::in API POST /items/{id}.json API path removed without deprecation
 ::warning title=api-security-component-openid-connect-url-changed,file=./properties/rules/api-security-component-openid-connect-url-changed_revision.yaml,line=56,col=9::in API   the component security scheme `openid` OpenID Connect url changed from `https://auth.example.com/.well-known/openid-configuration` to `https://id2.example.com/.well-known/openid-configuration`
 

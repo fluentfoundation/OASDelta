@@ -1,5 +1,5 @@
 1 изменений: 0 error, 0 warning, 1 info
-info	[request-optional-property-became-not-write-only] в ./properties/rules/request-optional-property-became-not-write-only_revision.yaml
+info	[request-optional-property-became-not-write-only] в ./properties/rules/request-optional-property-became-not-write-only_base.yaml
 	в API POST /items/{id}.json
 		необязательное поле запроса `㸢` перестало быть только для записи
 

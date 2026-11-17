@@ -1,5 +1,5 @@
 1 changes: 1 error, 0 warning, 0 info
-error	[response-header-multiple-of-unset] at ./properties/rules/response-header-multiple-of-unset_revision.yaml
+error	[response-header-multiple-of-unset] at ./properties/rules/response-header-multiple-of-unset_base.yaml
 	in API PATCH /items/{id}.json
 		the `ünïcode` response header's multipleOf was unset from `7.00` for the status `201`
 

@@ -5,6 +5,10 @@
   operationId: get_store_order
   path: /store/order
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-max-contains-set_revision.json
+    line: 37
+    column: 19
   fingerprint: 86372cd6575e
 - id: response-body-max-contains-set
   text: the response's body maxContains was set to `4`
@@ -13,5 +17,9 @@
   operationId: get_store_order
   path: /store/order
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-max-contains-set_revision.json
+    line: 40
+    column: 19
   fingerprint: 63515de42826
 

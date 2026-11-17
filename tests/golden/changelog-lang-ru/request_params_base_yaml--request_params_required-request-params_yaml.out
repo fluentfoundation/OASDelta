@@ -1,4 +1,4 @@
-11 изменений: 4 error, 0 warning, 7 info
+10 изменений: 4 error, 0 warning, 6 info
 error	[new-required-request-default-parameter-to-existing-path] в ./request_params/required-request-params.yaml
 	в API GET /api/test1
 		добавлен новый обязательный `query` параметр запроса `version` для всех операций пути
@@ -14,10 +14,6 @@ error	[new-required-request-default-parameter-to-existing-path] в ./request_par
 error	[new-required-request-default-parameter-to-existing-path] в ./request_params/required-request-params.yaml
 	в API GET /api/test3
 		добавлен новый обязательный `header` параметр запроса `if-none-match` для всех операций пути
-
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
 
 info	[new-optional-request-default-parameter-to-existing-path] в ./request_params/required-request-params.yaml
 	в API GET /api/test1

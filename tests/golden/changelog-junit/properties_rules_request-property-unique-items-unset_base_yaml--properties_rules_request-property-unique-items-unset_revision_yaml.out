@@ -2,7 +2,7 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
     <testcase name="request-property-unique-items-unset" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `items/` request property's uniqueItems was unset</failure>
+      <failure message="Breaking change detected">the `items` request property's uniqueItems was unset</failure>
     </testcase>
   </testsuite>
 </testsuites>

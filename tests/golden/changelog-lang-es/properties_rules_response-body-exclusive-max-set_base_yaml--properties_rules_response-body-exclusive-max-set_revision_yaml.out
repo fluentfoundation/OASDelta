@@ -3,7 +3,7 @@ error	[request-parameter-became-required] en ./properties/rules/response-body-ex
 	en API PUT /search
 		el parámetro `query` de solicitud `pet` se volvió requerido
 
-info	[request-parameter-became-nullable] en ./properties/rules/response-body-exclusive-max-set_revision.yaml
+info	[request-parameter-became-nullable]
 	en API DELETE /v1/items
 		el parámetro de solicitud `cookie` `孱` se volvió nulable
 

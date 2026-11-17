@@ -9,11 +9,6 @@
     line: 150
     column: 13
   fingerprint: 96d908990b32
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: response-media-type-added
   text: added the media type `application/json` for the response with the status `default`
   level: 1

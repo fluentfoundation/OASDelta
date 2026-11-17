@@ -2,6 +2,6 @@
 error	[request-parameter-max-items-set] en ./properties/rules/request-parameter-max-items-set_revision.yaml
 	en API GET /search
 		para el parámetro `query` de solicitud `tag`, el valor maxItems fue establecido en `15`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 

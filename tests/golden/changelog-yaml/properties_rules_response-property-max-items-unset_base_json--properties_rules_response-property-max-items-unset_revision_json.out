@@ -1,33 +1,49 @@
 - id: response-property-list-of-types-widened
-  text: response property `items/` list-of-types was widened by adding types `integer` to media type `multipart/form-data` of response `500`
+  text: response property `items` list-of-types was widened by adding types `integer` to media type `multipart/form-data` of response `500`
   level: 3
   operation: DELETE
   operationId: delete_ünïcode_ключ
   path: /ünïcode/ключ
   section: paths
-  fingerprint: 5a343e71ac31
+  baseSource:
+    file: ./properties/rules/response-property-max-items-unset_base.json
+    line: 91
+    column: 21
+  fingerprint: 69e6457a6492
 - id: response-property-max-items-unset
-  text: the `items/` response property's maxItems was unset from `32` for the response status `500`
+  text: the `items` response property's maxItems was unset from `32` for the response status `500`
   level: 3
   operation: DELETE
   operationId: delete_ünïcode_ключ
   path: /ünïcode/ключ
   section: paths
-  fingerprint: b9f7ee754061
+  baseSource:
+    file: ./properties/rules/response-property-max-items-unset_base.json
+    line: 89
+    column: 21
+  fingerprint: 8897aaa0ce85
 - id: response-property-min-items-unset
-  text: the `items/` response property's minItems was unset from `3` for the response status `500`
+  text: the `items` response property's minItems was unset from `3` for the response status `500`
   level: 3
   operation: DELETE
   operationId: delete_ünïcode_ключ
   path: /ünïcode/ключ
   section: paths
-  fingerprint: b704d3a078ee
+  baseSource:
+    file: ./properties/rules/response-property-max-items-unset_base.json
+    line: 90
+    column: 21
+  fingerprint: 5dbae1a54d42
 - id: response-property-unique-items-unset
-  text: the `items/` response property's uniqueItems was unset for the response status `500`
+  text: the `items` response property's uniqueItems was unset for the response status `500`
   level: 3
   operation: DELETE
   operationId: delete_ünïcode_ключ
   path: /ünïcode/ключ
   section: paths
-  fingerprint: 87a7b238e7f8
+  baseSource:
+    file: ./properties/rules/response-property-max-items-unset_base.json
+    line: 92
+    column: 21
+  fingerprint: 278fa7c68c63
 

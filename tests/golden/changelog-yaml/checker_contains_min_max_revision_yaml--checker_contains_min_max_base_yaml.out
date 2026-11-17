@@ -30,11 +30,6 @@
     line: 31
     column: 17
   fingerprint: 07a5d05a5060
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-body-min-contains-decreased
   text: the request body minContains was decreased from `2` to `1`
   level: 1

@@ -5,5 +5,9 @@
   operationId: get_items_{id}.json
   path: /items/{id}.json
   section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-min-length-unset_base.json
+    line: 35
+    column: 15
   fingerprint: 31fcefe1bfb4
 

@@ -4,7 +4,7 @@ info	[response-body-multiple-of-specialized] at ./properties/rules/response-body
 		the response's body multipleOf was specialized from `5.00` to `10.00`
 		This change is not breaking because the new multipleOf is an integer multiple of the old one, so every value the server may now produce was already valid before.
 
-info	[optional-response-header-removed] at ./properties/rules/response-body-multiple-of-specialized_revision.yaml
+info	[optional-response-header-removed] at ./properties/rules/response-body-multiple-of-specialized_base.yaml
 	in API PUT /ünïcode/ключ
 		the optional response header `x-added` removed for the status `200`
 

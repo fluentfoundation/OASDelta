@@ -2,25 +2,25 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="7" errors="0" failures="7" name="OASDiff">
     <testcase name="api-deprecated-sunset-parse" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">failed to parse sunset date: `sunset date doesn't conform with RFC3339: not a date`</failure>
+      <failure message="Breaking change detected">sunset date doesn't conform with RFC3339: `"not a date"`</failure>
     </testcase>
     <testcase name="api-removed-before-sunset" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api removed before the sunset date `2099-12-31`</failure>
+      <failure message="Breaking change detected">API removed before the sunset date `2099-12-31`</failure>
     </testcase>
     <testcase name="api-path-removed-before-sunset" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api path removed before the sunset date `2099-12-31`</failure>
+      <failure message="Breaking change detected">API path removed before the sunset date `2099-12-31`</failure>
     </testcase>
     <testcase name="api-path-sunset-parse" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">failed to parse sunset date: `sunset date doesn't conform with RFC3339: not a date`</failure>
+      <failure message="Breaking change detected">sunset date doesn't conform with RFC3339: `"not a date"`</failure>
     </testcase>
     <testcase name="api-invalid-stability-level" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">failed to parse stability level: `value is not one of draft, alpha, beta or stable: "experimental-ish"`</failure>
+      <failure message="Breaking change detected">stability level `"experimental-ish"` is not one of `draft`, `alpha`, `beta` or `stable`</failure>
     </testcase>
     <testcase name="sunset-deleted" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api sunset date deleted, but deprecated=true kept</failure>
+      <failure message="Breaking change detected">API sunset date deleted, but deprecated=true kept</failure>
     </testcase>
     <testcase name="api-sunset-date-changed-too-small" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api sunset date changed to an earlier date, from `2099-12-31` to `2020-01-01`, new sunset date must be not earlier than `2099-12-31` and at least `0` days from now</failure>
+      <failure message="Breaking change detected">API sunset date changed to an earlier date, from `2099-12-31` to `2020-01-01`, new sunset date must be not earlier than `2099-12-31` and at least `0` days from now</failure>
     </testcase>
   </testsuite>
 </testsuites>

@@ -1,6 +1,6 @@
 2 changes: 2 error, 0 warning, 0 info
-error at ./properties/rules/request-property-unique-items-set_base.yaml, in API DELETE /pets api removed without deprecation [api-removed-without-deprecation]. 
+error at ./properties/rules/request-property-unique-items-set_base.yaml, in API DELETE /pets API removed without deprecation [api-removed-without-deprecation]. 
 
-error at ./properties/rules/request-property-unique-items-set_revision.yaml, in API PUT /pets the `items/` request property's uniqueItems was set to true [request-property-unique-items-set]. 
+error at ./properties/rules/request-property-unique-items-set_revision.yaml, in API PUT /pets the `items` request property's uniqueItems was set to true [request-property-unique-items-set]. 
 
 

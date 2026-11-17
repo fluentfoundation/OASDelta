@@ -1,7 +1,7 @@
 7 изменений: 7 error, 0 warning, 0 info
 error	[api-deprecated-sunset-parse] в ./properties/lifecycle_endpoints_revision.yaml
 	в API GET /deprecated-bad-sunset
-		не удалось проанализировать дату заката: `sunset date doesn't conform with RFC3339: not a date`
+		дата заката не соответствует RFC3339: `"not a date"`
 
 error	[api-removed-before-sunset] в ./properties/lifecycle_endpoints_base.yaml
 	в API GET /removed-endpoint
@@ -13,13 +13,13 @@ error	[api-path-removed-before-sunset] в ./properties/lifecycle_endpoints_base.
 
 error	[api-path-sunset-parse] в ./properties/lifecycle_endpoints_base.yaml
 	в API GET /removed-path-bad-sunset
-		не удалось проанализировать дату заката: `sunset date doesn't conform with RFC3339: not a date`
+		дата заката не соответствует RFC3339: `"not a date"`
 
 error	[api-invalid-stability-level] в ./properties/lifecycle_endpoints_revision.yaml
 	в API GET /stability
-		не удалось разобрать уровень стабильности: `value is not one of draft, alpha, beta or stable: "experimental-ish"`
+		уровень стабильности `"experimental-ish"` не является одним из `draft`, `alpha`, `beta` или `stable`
 
-error	[sunset-deleted] в ./properties/lifecycle_endpoints_revision.yaml
+error	[sunset-deleted] в ./properties/lifecycle_endpoints_base.yaml
 	в API GET /sunset-deleted
 		удалена дата sunset date у API, но сохранён deprecated=true
 

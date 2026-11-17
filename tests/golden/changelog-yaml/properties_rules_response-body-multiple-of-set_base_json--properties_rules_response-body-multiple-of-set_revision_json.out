@@ -5,5 +5,9 @@
   operationId: kind
   path: /store/order
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-multiple-of-set_revision.json
+    line: 30
+    column: 19
   fingerprint: e8d9112750eb
 

@@ -23,6 +23,10 @@
 -  the component security scheme `bearerAuth` was added
 
 
+## Info
+-  the API version changed from `2.0.0` to `1.0.0`
+
+
 ## Security
 -  the security scheme `bearerAuth` was added to the API
 

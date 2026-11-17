@@ -2,6 +2,6 @@
 error	[request-property-min-set] em ./properties/rules/request-property-min-set_revision.yaml
 	em API POST /ünïcode/ключ
 		o valor mínimo da propriedade de requisição `items/null` foi definido como `-5.00`
-		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+		Definir um limite rejeita valores que o contrato anterior aceitava, a menos que seus clientes respeitem o novo limite.
 
 

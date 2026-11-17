@@ -1,6 +1,6 @@
 2 changes: 1 error, 0 warning, 1 info
 error at ./properties/rules/request-body-max-unset_revision.yaml, in API PATCH /search the request's body `type` changed from `integer` to `array<string>` [request-body-type-changed]. 
 
-info at ./properties/rules/request-body-max-unset_revision.yaml, in API PATCH /search the request's body max was unset from `938.00` [request-body-max-unset]. 
+info at ./properties/rules/request-body-max-unset_base.yaml, in API PATCH /search the request's body max was unset from `938.00` [request-body-max-unset]. 
 
 

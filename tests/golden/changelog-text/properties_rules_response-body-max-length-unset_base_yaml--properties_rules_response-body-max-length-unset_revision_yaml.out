@@ -1,5 +1,5 @@
 4 changes: 2 error, 0 warning, 2 info
-error	[response-body-max-length-unset] at ./properties/rules/response-body-max-length-unset_revision.yaml
+error	[response-body-max-length-unset] at ./properties/rules/response-body-max-length-unset_base.yaml
 	in API DELETE /store/order
 		the response's body maxLength was unset from `200` (media type: application/json)
 
@@ -7,7 +7,7 @@ error	[response-body-type-changed] at ./properties/rules/response-body-max-lengt
 	in API DELETE /store/order
 		the response's body `type` changed from `string, null` to `number` for status `201` (media type: application/json)
 
-info	[response-body-became-not-nullable] at ./properties/rules/response-body-max-length-unset_revision.yaml
+info	[response-body-became-not-nullable]
 	in API DELETE /store/order
 		the response's body became not nullable (media type: application/json)
 

@@ -4,11 +4,11 @@
 ## API Changes
 
 ### GET /api/{domain}/{project}/badges/security-score
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### GET /api/{domain}/{project}/install-command
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### GET /health
@@ -34,7 +34,7 @@
 
 
 ## Info
--  a breaking change was detected but the version decreased from `1.0.1` to `1.0.0`
+-  the API version changed from `1.0.1` to `1.0.0`
 
 
 

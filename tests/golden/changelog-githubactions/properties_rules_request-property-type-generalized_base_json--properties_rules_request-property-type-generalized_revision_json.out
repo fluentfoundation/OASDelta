@@ -1,2 +1,2 @@
-::notice title=request-property-type-generalized,file=./properties/rules/request-property-type-generalized_revision.json::in API PATCH /pets/{petId} the `anyOf[subschema #1]/items/` request property `type` was widened from `string` to `any`
+::notice title=request-property-type-generalized,file=./properties/rules/request-property-type-generalized_base.json::in API PATCH /pets/{petId} the `anyOf[subschema #1]/items` request property `type` was widened from `string` to `any`
 

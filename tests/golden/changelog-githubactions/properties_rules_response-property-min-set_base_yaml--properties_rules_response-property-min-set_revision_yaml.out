@@ -1,2 +1,2 @@
-::notice title=response-property-min-set,file=./properties/rules/response-property-min-set_revision.yaml::in API POST /v1/items the `owner/price/items/名前` response property's min was set to `20.00` for the response status `500` (shared schema: `Item`, also at `owner/ключ/items/名前`)
+::notice title=response-property-min-set,file=./properties/rules/response-property-min-set_revision.yaml,line=27,col=15::in API POST /v1/items the `owner/price/items/名前` response property's min was set to `20.00` for the response status `500` (shared schema: `Item`, also at `owner/ключ/items/名前`)
 

@@ -1,5 +1,5 @@
 1 cambios: 0 error, 0 warning, 1 info
-info	[endpoint-reactivated] en ./properties/rules/endpoint-reactivated_revision.yaml
+info	[endpoint-reactivated] en ./properties/rules/endpoint-reactivated_base.yaml
 	en API DELETE /owners/{ownerId}/pets
 		endpoint reactivado
 

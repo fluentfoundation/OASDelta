@@ -1,5 +1,5 @@
 2 changes: 1 error, 0 warning, 1 info
-error at ./properties/rules/response-body-min-items-set_revision.yaml, in API PATCH /search removed the request body [request-body-removed]. 
+error at ./properties/rules/response-body-min-items-set_base.yaml, in API PATCH /search removed the request body [request-body-removed]. 
 
 info at ./properties/rules/response-body-min-items-set_revision.yaml, in API PATCH /search the response's body minItems was set to `16` [response-body-min-items-set]. 
 

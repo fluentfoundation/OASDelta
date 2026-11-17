@@ -136,7 +136,7 @@
         
         <li class="change">
         
-        the `items/` request property `type` changed from `array&lt;boolean/custom&gt;` to `string` (backward compatible)
+        the `items` request property `type` changed from `array&lt;boolean/custom&gt;` to `string` (backward compatible)
         </li>
         
     </ul>

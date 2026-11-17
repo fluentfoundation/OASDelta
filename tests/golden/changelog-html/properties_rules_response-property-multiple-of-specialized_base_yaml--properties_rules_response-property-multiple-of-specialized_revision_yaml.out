@@ -131,12 +131,12 @@
         
         <li class="change">
         
-        the `oneOf[subschema #1]/anyOf[subschema #2]/` response property&#39;s multipleOf was specialized from `2.00` to `4.00` for the response status `500`
+        the `oneOf[subschema #1]/anyOf[subschema #2]` response property&#39;s multipleOf was specialized from `2.00` to `4.00` for the response status `500`
         </li>
         
         <li class="change">
         
-        the `oneOf[subschema #1]/` response&#39;s property `format` was narrowed from `none` to `float` for status `500`
+        the `oneOf[subschema #1]` response&#39;s property `format` was narrowed from `none` to `float` for status `500`
         </li>
         
     </ul>

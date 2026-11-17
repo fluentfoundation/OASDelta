@@ -1,16 +1,30 @@
 - id: request-property-type-changed
-  text: the `items/` request property `type` changed from `object` to `string`
+  text: the `items` request property `type` changed from `object` to `string`
   level: 3
   operation: POST
   path: /ünïcode/ключ
   section: paths
-  fingerprint: 11fda0b4b05f
+  baseSource:
+    file: ./properties/rules/request-property-max-properties-unset_base.json
+    line: 349
+    column: 19
+  revisionSource:
+    file: ./properties/rules/request-property-max-properties-unset_revision.json
+    line: 332
+    column: 19
+  fingerprint: 97c6bf63d73f
 - id: request-property-removed
   text: removed the request property `items/Ünïcode`
   level: 2
   operation: POST
   path: /ünïcode/ключ
   section: paths
+  baseSource:
+    file: ./properties/rules/request-property-max-properties-unset_base.json
+    line: 335
+    column: 21
+    endLine: 336
+    endColumn: 39
   fingerprint: acc72ebeaf8f
 - id: request-property-removed
   text: removed the request property `items/傓`
@@ -18,12 +32,22 @@
   operation: POST
   path: /ünïcode/ключ
   section: paths
+  baseSource:
+    file: ./properties/rules/request-property-max-properties-unset_base.json
+    line: 338
+    column: 21
+    endLine: 343
+    endColumn: 40
   fingerprint: 778caa6ecdac
 - id: request-property-max-properties-unset
-  text: the `items/` request property's maxProperties was unset from `20`
+  text: the `items` request property's maxProperties was unset from `20`
   level: 1
   operation: POST
   path: /ünïcode/ключ
   section: paths
-  fingerprint: 09c262a0a02f
+  baseSource:
+    file: ./properties/rules/request-property-max-properties-unset_base.json
+    line: 333
+    column: 19
+  fingerprint: 6884f6c9f09a
 

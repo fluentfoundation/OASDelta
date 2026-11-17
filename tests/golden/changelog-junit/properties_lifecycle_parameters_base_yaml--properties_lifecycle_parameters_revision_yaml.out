@@ -14,7 +14,7 @@
       <failure message="Breaking change detected">`query` request parameter `deleted` sunset date deleted, but deprecated=true kept</failure>
     </testcase>
     <testcase name="request-parameter-sunset-parse" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">failed to parse sunset date for the `query` request parameter `bad`: `sunset date doesn't conform with RFC3339: not a date`</failure>
+      <failure message="Breaking change detected">sunset date of the `query` request parameter `bad` doesn't conform with RFC3339: `"not a date"`</failure>
     </testcase>
   </testsuite>
 </testsuites>

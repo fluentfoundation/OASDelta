@@ -1,5 +1,5 @@
 - id: response-property-multiple-of-changed
-  text: 'the `name/anyOf[subschema #1]/` response property''s multipleOf was changed from `10.00` to `5.00` for the response status `204`'
+  text: 'the `name/anyOf[subschema #1]` response property''s multipleOf was changed from `10.00` to `5.00` for the response status `204`'
   level: 3
   operation: PUT
   operationId: put_items_{id}.json
@@ -13,7 +13,7 @@
     file: ./properties/rules/response-property-multiple-of-changed_revision.yaml
     line: 305
     column: 47
-  fingerprint: 9132a563bf60
+  fingerprint: be0718fb251e
 - id: endpoint-added
   text: endpoint added
   level: 1
@@ -25,7 +25,7 @@
     line: 549
     column: 9
     endLine: 664
-    endColumn: 21
+    endColumn: 25
   fingerprint: 397c3b96f911
 - id: endpoint-added
   text: endpoint added
@@ -39,7 +39,7 @@
     line: 665
     column: 9
     endLine: 754
-    endColumn: 24
+    endColumn: 28
   fingerprint: d6428dc06c01
 - id: endpoint-added
   text: endpoint added

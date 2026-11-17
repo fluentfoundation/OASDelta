@@ -2,7 +2,7 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
     <testcase name="api-tag-removed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api tag `Group` removed</failure>
+      <failure message="Breaking change detected">API tag `Group` removed</failure>
     </testcase>
     <testcase name="response-non-success-status-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">removed the non-success response with the status `409`</failure>

@@ -1,5 +1,5 @@
 3 изменений: 0 error, 1 warning, 2 info
-warning	[request-parameter-removed] в ./properties/rules/request-property-max-increased_revision.yaml
+warning	[request-parameter-removed] в ./properties/rules/request-property-max-increased_base.yaml
 	в API POST /pets/{petId}
 		удалён `cookie` параметр запроса `pet`
 		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
@@ -10,6 +10,6 @@ info	[new-optional-request-default-parameter-to-existing-path] в ./properties/r
 
 info	[request-property-max-increased] в ./properties/rules/request-property-max-increased_revision.yaml
 	в API POST /pets/{petId}
-		максимум свойства запроса `anyOf[subschema #1]/oneOf[subschema #3]/` был увеличен с `596.00` до `597.00`
+		максимум свойства запроса `anyOf[subschema #1]/oneOf[subschema #3]` был увеличен с `596.00` до `597.00`
 
 

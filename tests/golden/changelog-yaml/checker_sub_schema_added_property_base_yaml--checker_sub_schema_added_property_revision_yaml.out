@@ -26,11 +26,6 @@
     endLine: 26
     endColumn: 37
   fingerprint: 4f1b250ff183
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: new-optional-request-property
   text: added the new optional request property `data/contains/newField`
   level: 1

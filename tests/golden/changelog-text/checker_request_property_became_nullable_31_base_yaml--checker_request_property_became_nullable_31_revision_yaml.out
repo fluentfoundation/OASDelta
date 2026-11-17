@@ -1,13 +1,9 @@
-3 changes: 1 error, 0 warning, 2 info
-error	[response-property-became-nullable] at ./checker/request_property_became_nullable_31_revision.yaml
+2 changes: 1 error, 0 warning, 1 info
+error	[response-property-became-nullable]
 	in API POST /products
 		the response property `status` became nullable for the status `200`
 
-info	[api-version-not-bumped]
-	in info
-		a breaking change was detected but the version is still `1.0.0`
-
-info	[request-property-became-nullable] at ./checker/request_property_became_nullable_31_revision.yaml
+info	[request-property-became-nullable]
 	in API POST /products
 		the request property `name` became nullable
 

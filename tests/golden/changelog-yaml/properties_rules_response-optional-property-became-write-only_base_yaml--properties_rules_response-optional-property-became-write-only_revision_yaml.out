@@ -5,5 +5,9 @@
   operationId: post_v1_items
   path: /v1/items
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-optional-property-became-write-only_revision.yaml
+    line: 129
+    column: 23
   fingerprint: e88b91db108f
 

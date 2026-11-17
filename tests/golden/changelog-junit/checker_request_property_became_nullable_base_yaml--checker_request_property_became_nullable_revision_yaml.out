@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="api-version-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the API version changed from `1.0.0` to `2.0.0`</failure>
+    </testcase>
     <testcase name="request-property-became-nullable" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the request property `name` became nullable</failure>
     </testcase>

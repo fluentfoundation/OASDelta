@@ -2,6 +2,6 @@
 error	[request-body-multiple-of-set] en ./properties/rules/request-body-multiple-of-set_revision.yaml
 	en API PATCH /search
 		el valor multipleOf del cuerpo de solicitud fue establecido en `7.00`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 

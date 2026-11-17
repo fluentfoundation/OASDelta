@@ -1,4 +1,4 @@
-3 cambios: 2 error, 0 warning, 1 info
+2 cambios: 2 error, 0 warning, 0 info
 error	[request-property-list-of-types-narrowed] en ./list-of-types/list-to-single-revision.yaml
 	en API POST /test
 		lista de tipos de la propiedad `userId` de solicitud fue reducida removiendo tipos `string` del tipo de media `application/json`
@@ -6,9 +6,5 @@ error	[request-property-list-of-types-narrowed] en ./list-of-types/list-to-singl
 error	[request-property-list-of-types-narrowed] en ./list-of-types/list-to-single-revision.yaml
 	en API POST /test
 		lista de tipos de la propiedad `value` de solicitud fue reducida removiendo tipos `number and boolean` del tipo de media `application/json`
-
-info	[api-version-not-bumped]
-	en info
-		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
 
 

@@ -1,13 +1,13 @@
 5 изменений: 1 error, 0 warning, 4 info
-error	[request-property-became-not-nullable] в ./properties/rules/request-required-property-became-write-only_revision.yaml
+error	[request-property-became-not-nullable]
 	в API PATCH /search
 		свойство запроса ``tick`` стало недействительным
 
-info	[request-property-became-not-enum] в ./properties/rules/request-required-property-became-write-only_revision.yaml
+info	[request-property-became-not-enum] в ./properties/rules/request-required-property-became-write-only_base.yaml
 	в API PATCH /search
 		удалено ограничение enum у поля запроса ``tick``
 
-info	[request-property-reactivated] в ./properties/rules/request-required-property-became-write-only_revision.yaml
+info	[request-property-reactivated] в ./properties/rules/request-required-property-became-write-only_base.yaml
 	в API PATCH /search
 		поле запроса ``tick`` реактивировано
 

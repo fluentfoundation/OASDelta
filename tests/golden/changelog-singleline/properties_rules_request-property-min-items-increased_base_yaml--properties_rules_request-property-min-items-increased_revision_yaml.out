@@ -3,8 +3,8 @@ error at ./properties/rules/request-property-min-items-increased_revision.yaml, 
 
 error at ./properties/rules/request-property-min-items-increased_revision.yaml, in API DELETE /pets/{petId} added the new path request parameter `id` [new-request-path-parameter]. 
 
-warning at ./properties/rules/request-property-min-items-increased_revision.yaml, in API DELETE /pets/{petId} deleted the `header` request parameter `id` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+warning at ./properties/rules/request-property-min-items-increased_base.yaml, in API DELETE /pets/{petId} deleted the `header` request parameter `id` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
 
-warning at ./properties/rules/request-property-min-items-increased_revision.yaml, in API PATCH /pets/{petId} deleted the `path` request parameter `petId` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+warning at ./properties/rules/request-property-min-items-increased_base.yaml, in API PATCH /pets/{petId} deleted the `path` request parameter `petId` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
 
 

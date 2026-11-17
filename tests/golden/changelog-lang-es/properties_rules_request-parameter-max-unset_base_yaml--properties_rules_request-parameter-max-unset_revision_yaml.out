@@ -1,17 +1,13 @@
-4 cambios: 1 error, 0 warning, 3 info
-error	[request-parameter-became-not-nullable] en ./properties/rules/request-parameter-max-unset_revision.yaml
+3 cambios: 1 error, 0 warning, 2 info
+error	[request-parameter-became-not-nullable] en ./properties/rules/request-parameter-max-unset_base.yaml
 	en API PUT /pets
 		el parámetro de solicitud `query` `ключ` se volvió no nulable
 
-info	[api-version-not-bumped]
-	en info
-		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
-
-info	[request-parameter-list-of-types-widened] en ./properties/rules/request-parameter-max-unset_revision.yaml
+info	[request-parameter-list-of-types-widened] en ./properties/rules/request-parameter-max-unset_base.yaml
 	en API PUT /pets
 		lista de tipos del parámetro `query` de solicitud `ключ` fue ampliada agregando tipos `boolean`
 
-info	[request-parameter-max-unset] en ./properties/rules/request-parameter-max-unset_revision.yaml
+info	[request-parameter-max-unset] en ./properties/rules/request-parameter-max-unset_base.yaml
 	en API PUT /pets
 		para el parámetro `query` de solicitud `ключ`, el valor max fue removido de `132.00`
 

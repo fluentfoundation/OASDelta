@@ -1,3 +1,2 @@
 ::error title=request-parameter-max-contains-set,file=./properties/rules/request-parameter-max-contains-set_revision.yaml,line=24,col=21::in API GET /pets for the `header` request parameter `a~b`, the maxContains was set to `3`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 

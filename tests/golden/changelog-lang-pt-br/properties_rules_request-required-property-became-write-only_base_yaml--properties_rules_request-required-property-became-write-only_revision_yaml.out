@@ -1,13 +1,13 @@
 5 alterações: 1 error, 0 warning, 4 info
-error	[request-property-became-not-nullable] em ./properties/rules/request-required-property-became-write-only_revision.yaml
+error	[request-property-became-not-nullable]
 	em API PATCH /search
 		a propriedade de requisição ``tick`` tornou-se não anulável
 
-info	[request-property-became-not-enum] em ./properties/rules/request-required-property-became-write-only_revision.yaml
+info	[request-property-became-not-enum] em ./properties/rules/request-required-property-became-write-only_base.yaml
 	em API PATCH /search
 		restrição enum removida da propriedade de requisição ``tick``
 
-info	[request-property-reactivated] em ./properties/rules/request-required-property-became-write-only_revision.yaml
+info	[request-property-reactivated] em ./properties/rules/request-required-property-became-write-only_base.yaml
 	em API PATCH /search
 		propriedade de requisição ``tick`` reativada
 

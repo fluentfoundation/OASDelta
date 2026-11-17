@@ -3,7 +3,7 @@ error	[request-body-type-changed] at ./properties/rules/request-body-max-unset_r
 	in API PATCH /search
 		the request's body `type` changed from `integer` to `array<string>`
 
-info	[request-body-max-unset] at ./properties/rules/request-body-max-unset_revision.yaml
+info	[request-body-max-unset] at ./properties/rules/request-body-max-unset_base.yaml
 	in API PATCH /search
 		the request's body max was unset from `938.00`
 

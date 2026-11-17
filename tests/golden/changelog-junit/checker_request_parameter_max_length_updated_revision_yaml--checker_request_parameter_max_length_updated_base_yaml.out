@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
     <testcase name="request-parameter-max-length-decreased" classname="OASDiff" time="0">
       <failure message="Breaking change detected">for the `query` request parameter `category`, the maxLength was decreased from `15` to `10`</failure>
+    </testcase>
+    <testcase name="api-version-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the API version changed from `2.0` to `1.0`</failure>
     </testcase>
   </testsuite>
 </testsuites>

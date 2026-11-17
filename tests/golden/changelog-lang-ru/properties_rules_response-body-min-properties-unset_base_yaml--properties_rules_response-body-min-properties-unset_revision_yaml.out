@@ -1,5 +1,5 @@
 4 изменений: 2 error, 0 warning, 2 info
-error	[response-body-min-properties-unset] в ./properties/rules/response-body-min-properties-unset_revision.yaml
+error	[response-body-min-properties-unset] в ./properties/rules/response-body-min-properties-unset_base.yaml
 	в API PUT /store/order
 		значение minProperties у тела ответа удалено, предыдущее значение - `1`
 
@@ -7,11 +7,11 @@ error	[response-body-type-changed] в ./properties/rules/response-body-min-prope
 	в API PUT /store/order
 		`type` тела ответа изменён с `object` на `string` для статуса `400`
 
-info	[response-optional-property-removed] в ./properties/rules/response-body-min-properties-unset_revision.yaml
+info	[response-optional-property-removed] в ./properties/rules/response-body-min-properties-unset_base.yaml
 	в API PUT /store/order
 		удалено необязательное поле `created` из ответа со статусом `400`
 
-info	[response-optional-property-removed] в ./properties/rules/response-body-min-properties-unset_revision.yaml
+info	[response-optional-property-removed] в ./properties/rules/response-body-min-properties-unset_base.yaml
 	в API PUT /store/order
 		удалено необязательное поле `empty` из ответа со статусом `400`
 

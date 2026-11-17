@@ -2,6 +2,6 @@
 error	[request-property-max-set] at ./checker/request_property_max_set_revision.yaml
 	in API POST /pets
 		the `age` request property's max was set to `15.00`
-		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+		Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
 

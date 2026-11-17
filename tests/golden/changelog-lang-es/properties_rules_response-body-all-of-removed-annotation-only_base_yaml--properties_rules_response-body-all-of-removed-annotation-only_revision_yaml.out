@@ -1,7 +1,6 @@
 1 cambios: 0 error, 0 warning, 1 info
-info	[response-body-all-of-removed-annotation-only] en ./properties/rules/response-body-all-of-removed-annotation-only_revision.yaml
+info	[response-body-all-of-removed-annotation-only] en ./properties/rules/response-body-all-of-removed-annotation-only_base.yaml
 	en API POST /ünïcode/ключ
 		`subschema #1` (solo de anotación) fue removido de la lista `allOf` del cuerpo de respuesta para el estado `default`
-		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
 

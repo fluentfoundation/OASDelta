@@ -1,4 +1,4 @@
 1 changes: 0 error, 0 warning, 1 info
-info at ./properties/rules/request-property-type-generalized_revision.json, in API PATCH /pets/{petId} the `anyOf[subschema #1]/items/` request property `type` was widened from `string` to `any` [request-property-type-generalized]. 
+info at ./properties/rules/request-property-type-generalized_base.json, in API PATCH /pets/{petId} the `anyOf[subschema #1]/items` request property `type` was widened from `string` to `any` [request-property-type-generalized]. 
 
 

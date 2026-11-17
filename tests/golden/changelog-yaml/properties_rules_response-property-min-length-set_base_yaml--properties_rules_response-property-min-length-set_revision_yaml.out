@@ -1,5 +1,5 @@
 - id: response-property-type-changed
-  text: the `items/` response's property `type` changed from `boolean` to `string` for status `400`
+  text: the `items` response's property `type` changed from `boolean` to `string` for status `400`
   level: 3
   operation: POST
   path: /owners/{ownerId}/pets
@@ -12,7 +12,7 @@
     file: ./properties/rules/response-property-min-length-set_revision.yaml
     line: 25
     column: 27
-  fingerprint: ba3915b53b50
+  fingerprint: 600de0ccab6c
 - id: response-property-default-value-removed
   text: the `` response's property default value `false` was removed for the status `400`
   level: 1
@@ -25,7 +25,7 @@
     column: 37
   fingerprint: 22bf3d086bff
 - id: response-property-min-length-set
-  text: the `items/` response property's minLength was set to `4` for the response status `400`
+  text: the `items` response property's minLength was set to `4` for the response status `400`
   level: 1
   operation: POST
   path: /owners/{ownerId}/pets
@@ -34,9 +34,9 @@
     file: ./properties/rules/response-property-min-length-set_revision.yaml
     line: 23
     column: 27
-  fingerprint: da4a9de643fe
+  fingerprint: 756be4b30c17
 - id: response-property-pattern-added
-  text: the `items/` response's property pattern `(` was added for the status `400`
+  text: the `items` response's property pattern `(` was added for the status `400`
   level: 1
   operation: POST
   path: /owners/{ownerId}/pets
@@ -45,5 +45,5 @@
     file: ./properties/rules/response-property-min-length-set_revision.yaml
     line: 24
     column: 27
-  fingerprint: de268b94a28c
+  fingerprint: e082fc0a4647
 

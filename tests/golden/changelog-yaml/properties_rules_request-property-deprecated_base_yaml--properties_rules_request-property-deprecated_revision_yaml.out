@@ -1,5 +1,5 @@
 - id: request-property-deprecated
-  text: request property `items/` deprecated
+  text: request property `items` deprecated
   level: 1
   operation: PUT
   path: /owners/{ownerId}/pets
@@ -8,5 +8,5 @@
     file: ./properties/rules/request-property-deprecated_revision.yaml
     line: 39
     column: 33
-  fingerprint: 961ace6edb4b
+  fingerprint: 2a909e24f461
 

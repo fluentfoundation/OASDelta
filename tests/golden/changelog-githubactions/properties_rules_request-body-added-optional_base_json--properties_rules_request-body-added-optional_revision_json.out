@@ -1,2 +1,2 @@
-::notice title=request-body-added-optional,file=./properties/rules/request-body-added-optional_revision.json::in API PATCH /v1/items added optional request body
+::notice title=request-body-added-optional,file=./properties/rules/request-body-added-optional_revision.json,line=131,col=9::in API PATCH /v1/items added optional request body
 

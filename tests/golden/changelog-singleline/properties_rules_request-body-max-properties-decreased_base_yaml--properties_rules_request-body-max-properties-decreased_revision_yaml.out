@@ -1,7 +1,5 @@
-3 changes: 1 error, 0 warning, 2 info
+2 changes: 1 error, 0 warning, 1 info
 error at ./properties/rules/request-body-max-properties-decreased_revision.yaml, in API PUT /search the request's body maxProperties was decreased to `11` [request-body-max-properties-decreased]. 
-
-info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
 
 info at ./properties/rules/request-body-max-properties-decreased_revision.yaml, in API PUT /search added the media type `application/vnd.api+json` to the request body [request-body-media-type-added]. 
 

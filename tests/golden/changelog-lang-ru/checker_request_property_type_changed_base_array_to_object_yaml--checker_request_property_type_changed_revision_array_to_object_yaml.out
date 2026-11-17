@@ -1,4 +1,4 @@
-7 изменений: 6 error, 0 warning, 1 info
+6 изменений: 6 error, 0 warning, 0 info
 error	[new-required-request-property] в ./checker/request_property_type_changed_revision_array_to_object.yaml
 	в API POST /dogs
 		добавлено новое обязательное поле запроса `colors/blue`
@@ -22,9 +22,5 @@ error	[new-required-request-property] в ./checker/request_property_type_changed
 error	[request-body-type-changed] в ./checker/request_property_type_changed_revision_array_to_object.yaml
 	в API POST /pets
 		`type` тела запроса изменён с `array<object>` на `object`
-
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
 
 

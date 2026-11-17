@@ -1,7 +1,6 @@
 1 changes: 0 error, 0 warning, 1 info
-info	[response-property-all-of-removed-annotation-only] at ./properties/rules/response-property-all-of-removed-annotation-only_revision.yaml
+info	[response-property-all-of-removed-annotation-only] at ./properties/rules/response-property-all-of-removed-annotation-only_base.yaml
 	in API PATCH /store/order
-		removed annotation-only `subschema #1` from the `items/` response property `allOf` list for the response status `201`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		removed annotation-only `subschema #1` from the `items` response property `allOf` list for the response status `201`
 
 

@@ -1,5 +1,5 @@
 1 changes: 1 error, 0 warning, 0 info
-error	[api-security-component-http-scheme-changed]
+error	[api-security-component-http-scheme-changed] at ./properties/rules/api-security-component-http-scheme-changed_revision.yaml
 	in components/securitySchemes
 		the component security scheme `bearer` http scheme changed from `basic` to `bearer`
 

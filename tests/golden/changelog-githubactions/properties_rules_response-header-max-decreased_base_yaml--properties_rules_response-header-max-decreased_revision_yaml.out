@@ -1,2 +1,2 @@
-::notice title=response-header-max-decreased,file=./properties/rules/response-header-max-decreased_revision.yaml,line=183,col=9::in API GET /ünïcode/ключ the `x	y` response header's max was decreased from `764.00` to `16.00` for the status `500`
+::notice title=response-header-max-decreased,file=./properties/rules/response-header-max-decreased_revision.yaml,line=306,col=33::in API GET /ünïcode/ключ the `x	y` response header's max was decreased from `764.00` to `16.00` for the status `500`
 

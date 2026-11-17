@@ -1,5 +1,5 @@
 1 changes: 1 error, 0 warning, 0 info
-error	[request-property-became-not-nullable] at ./nullable/revision-req.yaml
+error	[request-property-became-not-nullable] at ./nullable/base-req.yaml
 	in API POST /test
 		the request property `id` became not nullable
 

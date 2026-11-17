@@ -1,3 +1,2 @@
-::error title=response-property-type-generalized,file=./properties/rules/response-property-type-generalized_revision.json::in API PATCH /store/order the `items/` response's property `type` was widened from `integer` to `number` for status `204`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::error title=response-property-type-generalized,file=./properties/rules/response-property-type-generalized_revision.json,line=171,col=21::in API PATCH /store/order the `items` response's property `type` was widened from `integer` to `number` for status `204`
 

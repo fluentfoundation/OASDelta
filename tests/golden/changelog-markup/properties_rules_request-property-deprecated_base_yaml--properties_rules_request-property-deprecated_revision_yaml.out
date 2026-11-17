@@ -4,7 +4,7 @@
 ## API Changes
 
 ### PUT /owners/{ownerId}/pets
--  request property `items/` deprecated
+-  request property `items` deprecated
 
 
 

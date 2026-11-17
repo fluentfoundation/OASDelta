@@ -11,7 +11,7 @@
     column: 37
   fingerprint: 4e5a09bff6ac
 - id: api-removed-without-deprecation
-  text: api removed without deprecation
+  text: API removed without deprecation
   level: 3
   operation: GET
   operationId: get_store_order

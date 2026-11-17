@@ -6,5 +6,4 @@
 ::error title=request-property-exclusive-min-increased,file=./checker/exclusive_min_max_revision.yaml,line=26,col=19::in API POST /products the `price` request property's exclusiveMinimum was increased to `10.00`
 ::error title=response-body-exclusive-max-increased,file=./checker/exclusive_min_max_revision.yaml,line=36,col=17::in API POST /products the response's body exclusiveMaximum was increased from `100.00` to `200.00`
 ::error title=response-property-exclusive-max-increased,file=./checker/exclusive_min_max_revision.yaml,line=41,col=21::in API POST /products the `price` response property's exclusiveMaximum was increased from `1000.00` to `2000.00` for the response status `200`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 

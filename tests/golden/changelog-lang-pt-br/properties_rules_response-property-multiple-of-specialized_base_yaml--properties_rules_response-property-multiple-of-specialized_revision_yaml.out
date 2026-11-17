@@ -1,19 +1,19 @@
 4 alterações: 0 error, 1 warning, 3 info
-warning	[api-security-component-openid-connect-url-changed]
+warning	[api-security-component-openid-connect-url-changed] em ./properties/rules/response-property-multiple-of-specialized_revision.yaml
 	em components/securitySchemes
 		a url OpenID Connect do esquema de segurança `openid` foi alterada de `https://auth.example.com/.well-known/openid-configuration` para `https://id0.example.com/.well-known/openid-configuration`
 		Este é um aviso porque a especificação não diz se as credenciais obtidas pela url anterior ainda são aceitas.
 
 info	[response-property-multiple-of-specialized] em ./properties/rules/response-property-multiple-of-specialized_revision.yaml
 	em API DELETE /pets
-		o valor multipleOf da propriedade de resposta `oneOf[subschema #1]/anyOf[subschema #2]/` foi especializado de `2.00` para `4.00` para o status `500`
+		o valor multipleOf da propriedade de resposta `oneOf[subschema #1]/anyOf[subschema #2]` foi especializado de `2.00` para `4.00` para o status `500`
 		Esta alteração não é incompatível porque o novo multipleOf é um múltiplo inteiro do anterior, então todos os valores que o servidor pode produzir já eram válidos antes.
 
-info	[response-property-type-specialized] em ./properties/rules/response-property-multiple-of-specialized_revision.yaml
+info	[response-property-type-specialized]
 	em API DELETE /pets
-		o `oneOf[subschema #1]/` da propriedade de resposta `format` foi restringido de `none` para `float` para o status `500`
+		o `oneOf[subschema #1]` da propriedade de resposta `format` foi restringido de `none` para `float` para o status `500`
 
-info	[optional-response-header-removed] em ./properties/rules/response-property-multiple-of-specialized_revision.yaml
+info	[optional-response-header-removed] em ./properties/rules/response-property-multiple-of-specialized_base.yaml
 	em API PATCH /search
 		o cabeçalho de resposta opcional `퉈祅闄췱` foi removido para o status `500`
 

@@ -1,5 +1,5 @@
 2 изменений: 2 error, 0 warning, 0 info
-error	[response-body-max-items-unset] в ./properties/rules/response-body-max-items-unset_revision.json
+error	[response-body-max-items-unset] в ./properties/rules/response-body-max-items-unset_base.json
 	в API PATCH /items/{id}.json
 		значение maxItems у тела ответа удалено, предыдущее значение - `50`
 

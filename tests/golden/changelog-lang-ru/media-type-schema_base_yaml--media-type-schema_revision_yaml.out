@@ -1,11 +1,7 @@
-3 изменений: 1 error, 0 warning, 2 info
+2 изменений: 1 error, 0 warning, 1 info
 error	[request-body-media-type-schema-added] в ./media-type-schema/revision.yaml
 	в API POST /test
 		схема добавлена к типу медиа `application/json` тела запроса
-
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
 
 info	[response-body-media-type-schema-added] в ./media-type-schema/revision.yaml
 	в API POST /test

@@ -1,6 +1,6 @@
 1 cambios: 0 error, 0 warning, 1 info
 info	[response-property-exclusive-min-set] en ./properties/rules/response-property-exclusive-min-set_revision.json
 	en API DELETE /owners/{ownerId}/pets
-		el valor exclusiveMinimum de la propiedad de respuesta `items/` fue establecido en `17.00` para el estado `204`
+		el valor exclusiveMinimum de la propiedad de respuesta `items` fue establecido en `17.00` para el estado `204`
 
 

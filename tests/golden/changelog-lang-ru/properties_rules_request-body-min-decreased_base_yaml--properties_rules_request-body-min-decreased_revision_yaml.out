@@ -7,7 +7,7 @@ error	[request-property-type-changed] в ./properties/rules/request-body-min-dec
 	в API PUT /search
 		у поля запроса `tag/id` `type` изменён с `string` на `object` (media type: application/xml)
 
-info	[api-security-component-added]
+info	[api-security-component-added] в ./properties/rules/request-body-min-decreased_revision.yaml
 	в components/securitySchemes
 		компонент схемы безопасности `api_key` был добавлен
 

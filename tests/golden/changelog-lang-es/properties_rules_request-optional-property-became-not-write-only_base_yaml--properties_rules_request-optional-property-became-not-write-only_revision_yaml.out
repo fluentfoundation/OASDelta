@@ -1,5 +1,5 @@
 1 cambios: 0 error, 0 warning, 1 info
-info	[request-optional-property-became-not-write-only] en ./properties/rules/request-optional-property-became-not-write-only_revision.yaml
+info	[request-optional-property-became-not-write-only] en ./properties/rules/request-optional-property-became-not-write-only_base.yaml
 	en API POST /items/{id}.json
 		la propiedad opcional de solicitud `㸢` dejó de ser de solo escritura
 

@@ -1,10 +1,10 @@
 4 changes: 2 error, 0 warning, 2 info
-error at ./properties/rules/response-body-max-properties-unset_revision.yaml, in API GET /pets the response's body maxProperties was unset from `19` [response-body-max-properties-unset]. 
+error at ./properties/rules/response-body-max-properties-unset_base.yaml, in API GET /pets the response's body maxProperties was unset from `19` [response-body-max-properties-unset]. 
 
 error at ./properties/rules/response-body-max-properties-unset_revision.yaml, in API GET /pets the response's body `type` changed from `object` to `array<string>` for status `200` [response-body-type-changed]. 
 
-info at ./properties/rules/response-body-max-properties-unset_revision.yaml, in API GET /pets removed the optional property `created` from the response with the `200` status [response-optional-property-removed]. 
+info at ./properties/rules/response-body-max-properties-unset_base.yaml, in API GET /pets removed the optional property `created` from the response with the `200` status [response-optional-property-removed]. 
 
-info at ./properties/rules/response-body-max-properties-unset_revision.yaml, in API GET /pets removed the optional property `첧縱ᤳ앸䧤` from the response with the `200` status [response-optional-property-removed]. 
+info at ./properties/rules/response-body-max-properties-unset_base.yaml, in API GET /pets removed the optional property `첧縱ᤳ앸䧤` from the response with the `200` status [response-optional-property-removed]. 
 
 

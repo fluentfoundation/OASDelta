@@ -1,2 +1,2 @@
-::error title=response-property-min-items-decreased,file=./properties/rules/response-property-min-items-decreased_revision.json::in API POST /ünïcode/ключ the `oneOf[subschema #1]/` response property's minItems was decreased from `3` to `2` for the response status `204`
+::error title=response-property-min-items-decreased,file=./properties/rules/response-property-min-items-decreased_revision.json,line=29,col=23::in API POST /ünïcode/ключ the `oneOf[subschema #1]` response property's minItems was decreased from `3` to `2` for the response status `204`
 

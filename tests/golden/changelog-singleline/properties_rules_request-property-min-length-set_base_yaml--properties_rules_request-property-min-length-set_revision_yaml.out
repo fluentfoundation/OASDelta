@@ -1,6 +1,6 @@
 2 changes: 0 error, 1 warning, 1 info
-warning at ./properties/rules/request-property-min-length-set_revision.yaml, in API POST /pets the `名前` request property's minLength was set to `12` [request-property-min-length-set]. Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+warning at ./properties/rules/request-property-min-length-set_revision.yaml, in API POST /pets the `名前` request property's minLength was set to `12` [request-property-min-length-set]. Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit. This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
-info at ./properties/rules/request-property-min-length-set_revision.yaml, in API POST /pets api operation id `price` was added [api-operation-id-added]. 
+info at ./properties/rules/request-property-min-length-set_revision.yaml, in API POST /pets API operation id `price` was added [api-operation-id-added]. 
 
 

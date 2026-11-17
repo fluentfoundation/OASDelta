@@ -1,5 +1,5 @@
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /health
@@ -12,7 +12,7 @@
     endColumn: 33
   fingerprint: 2441359cef10
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /health/live
@@ -25,7 +25,7 @@
     endColumn: 33
   fingerprint: a60aa31d3c5f
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   path: /health/ready
@@ -37,4 +37,17 @@
     endLine: 23
     endColumn: 33
   fingerprint: 4ce9502d79e0
+- id: api-version-changed
+  text: the API version changed from `1.0.0` to `2.0.0`
+  level: 1
+  section: info
+  baseSource:
+    file: openapi-test6.yaml
+    line: 4
+    column: 3
+  revisionSource:
+    file: openapi-test7.yaml
+    line: 4
+    column: 3
+  fingerprint: bcefc6cd3337
 

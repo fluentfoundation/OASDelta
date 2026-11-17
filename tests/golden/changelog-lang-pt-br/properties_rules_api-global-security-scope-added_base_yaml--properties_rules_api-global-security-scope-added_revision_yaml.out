@@ -1,5 +1,5 @@
 1 alterações: 0 error, 0 warning, 1 info
-info	[api-global-security-scope-added]
+info	[api-global-security-scope-added] em ./properties/rules/api-global-security-scope-added_revision.yaml
 	em security
 		o escopo de segurança `write` foi adicionado ao esquema de segurança global `openid`
 		Nenhum endpoint herda os requisitos de segurança de nível superior da API, portanto esta mudança não afeta nenhum cliente.

@@ -2,16 +2,16 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
     <testcase name="response-property-all-of-added" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">added `subschema #1, subschema #2` to the `created/items/` response property `allOf` list for the response status `201`</failure>
+      <failure message="Breaking change detected">added `subschema #1, subschema #2` to the `created/items` response property `allOf` list for the response status `201`</failure>
     </testcase>
     <testcase name="response-property-became-not-nullable" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the response property `created/items/` became not nullable for the status `201`</failure>
+      <failure message="Breaking change detected">the response property `created/items` became not nullable for the status `201`</failure>
     </testcase>
     <testcase name="response-property-default-value-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the `` response's property default value `pet` was removed for the status `201`</failure>
     </testcase>
     <testcase name="response-property-type-specialized" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `created/items/` response's property `type` was narrowed from `string` to `any` for status `201`</failure>
+      <failure message="Breaking change detected">the `created/items` response's property `type` was narrowed from `string` to `any` for status `201`</failure>
     </testcase>
   </testsuite>
 </testsuites>

@@ -1,17 +1,13 @@
-4 changes: 1 error, 0 warning, 3 info
+3 changes: 1 error, 0 warning, 2 info
 error	[request-body-type-changed] at ./properties/rules/request-body-max-length-unset_revision.json
 	in API PUT /v1/items
 		the request's body `type` changed from `string` to `number`
 
-info	[api-version-not-bumped]
-	in info
-		a breaking change was detected but the version is still `1.0.0`
-
-info	[request-body-max-length-unset] at ./properties/rules/request-body-max-length-unset_revision.json
+info	[request-body-max-length-unset] at ./properties/rules/request-body-max-length-unset_base.json
 	in API PUT /v1/items
 		the request's body maxLength was unset from `240`
 
-info	[request-body-min-length-unset] at ./properties/rules/request-body-max-length-unset_revision.json
+info	[request-body-min-length-unset] at ./properties/rules/request-body-max-length-unset_base.json
 	in API PUT /v1/items
 		the request's body minLength was unset from `5`
 

@@ -22,11 +22,6 @@
     line: 16
     column: 33
   fingerprint: 49fe2ae68275
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-property-list-of-types-widened
   text: request property `mode` list-of-types was widened by adding types `integer` to media type `application/json`
   level: 1

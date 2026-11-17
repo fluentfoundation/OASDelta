@@ -1,2 +1,2 @@
-::error title=response-header-min-contains-unset,file=./properties/rules/response-header-min-contains-unset_revision.yaml,line=79,col=9::in API PATCH /search the `name` response header's minContains was unset from `3` for the status `400`
+::error title=response-header-min-contains-unset,file=./properties/rules/response-header-min-contains-unset_base.yaml::in API PATCH /search the `name` response header's minContains was unset from `3` for the status `400`
 

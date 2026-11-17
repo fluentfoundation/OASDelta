@@ -4,5 +4,9 @@
   operation: PATCH
   path: /v1/items
   section: paths
+  baseSource:
+    file: ./properties/rules/request-property-multiple-of-unset_base.json
+    line: 96
+    column: 21
   fingerprint: 2c1b54c6deb6
 

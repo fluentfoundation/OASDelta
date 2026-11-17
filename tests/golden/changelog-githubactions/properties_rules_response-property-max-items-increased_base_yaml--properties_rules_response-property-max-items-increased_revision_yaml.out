@@ -1,2 +1,2 @@
-::error title=response-property-max-items-increased,file=./properties/rules/response-property-max-items-increased_revision.yaml,line=252,col=37::in API PUT /store/order the `items/` response property's maxItems was increased from `30` to `32` for the response status `default`
+::error title=response-property-max-items-increased,file=./properties/rules/response-property-max-items-increased_revision.yaml,line=252,col=37::in API PUT /store/order the `items` response property's maxItems was increased from `30` to `32` for the response status `default`
 

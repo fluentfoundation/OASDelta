@@ -1,6 +1,6 @@
 - id: request-body-multiple-of-set
   text: the request's body multipleOf was set to `7.00`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: PATCH
   path: /search

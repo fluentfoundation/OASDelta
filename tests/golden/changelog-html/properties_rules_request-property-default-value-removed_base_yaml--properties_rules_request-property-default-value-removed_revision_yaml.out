@@ -136,17 +136,17 @@
         
         <li class="change">
         
-        the `status/oneOf[subschema #3]/` request property&#39;s min was unset from `7.00`
+        the `status/oneOf[subschema #3]` request property&#39;s min was unset from `7.00`
         </li>
         
         <li class="change">
         
-        request property `status/oneOf[subschema #3]/` reactivated
+        request property `status/oneOf[subschema #3]` reactivated
         </li>
         
         <li class="change">
         
-        the `status/oneOf[subschema #3]/` request property `type/format` was widened from `integer, null/int64` to `any`
+        the `status/oneOf[subschema #3]` request property `type/format` was widened from `integer, null/int64` to `any`
         </li>
         
     </ul>

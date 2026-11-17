@@ -1,15 +1,23 @@
 - id: request-property-content-media-type-changed
-  text: 'the `items/anyOf[subschema #2]/` request property contentMediaType changed from `application/json` to ``'
+  text: 'the `items/anyOf[subschema #2]` request property contentMediaType changed from `application/json` to ``'
   level: 3
   operation: PUT
   path: /store/order
   section: paths
-  fingerprint: 93d04f5bb81a
+  baseSource:
+    file: ./properties/rules/request-property-content-schema-removed_base.json
+    line: 188
+    column: 23
+  fingerprint: 0c4145276fe4
 - id: request-property-content-schema-removed
-  text: 'removed ''contentSchema'' from the request property `items/anyOf[subschema #2]/`'
+  text: 'removed ''contentSchema'' from the request property `items/anyOf[subschema #2]`'
   level: 1
   operation: PUT
   path: /store/order
   section: paths
-  fingerprint: 31db549d150d
+  baseSource:
+    file: ./properties/rules/request-property-content-schema-removed_base.json
+    line: 189
+    column: 23
+  fingerprint: 3230515d1492
 

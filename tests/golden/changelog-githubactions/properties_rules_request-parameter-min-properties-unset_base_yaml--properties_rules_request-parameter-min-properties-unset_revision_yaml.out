@@ -1,2 +1,2 @@
-::notice title=request-parameter-min-properties-unset,file=./properties/rules/request-parameter-min-properties-unset_revision.yaml::in API PATCH /owners/{ownerId}/pets for the `header` request parameter `owner`, the minProperties was unset from `2`
+::notice title=request-parameter-min-properties-unset,file=./properties/rules/request-parameter-min-properties-unset_base.yaml::in API PATCH /owners/{ownerId}/pets for the `header` request parameter `owner`, the minProperties was unset from `2`
 

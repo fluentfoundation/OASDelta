@@ -1,10 +1,10 @@
 4 changes: 0 error, 0 warning, 4 info
-info at ./properties/rules/request-property-default-value-removed_revision.yaml, in API POST /pets the `` request property default value `9007199254740992.00` was removed [request-property-default-value-removed]. 
+info at ./properties/rules/request-property-default-value-removed_base.yaml, in API POST /pets the `` request property default value `9007199254740992.00` was removed [request-property-default-value-removed]. 
 
-info at ./properties/rules/request-property-default-value-removed_revision.yaml, in API POST /pets the `status/oneOf[subschema #3]/` request property's min was unset from `7.00` [request-property-min-unset]. 
+info at ./properties/rules/request-property-default-value-removed_base.yaml, in API POST /pets the `status/oneOf[subschema #3]` request property's min was unset from `7.00` [request-property-min-unset]. 
 
-info at ./properties/rules/request-property-default-value-removed_revision.yaml, in API POST /pets request property `status/oneOf[subschema #3]/` reactivated [request-property-reactivated]. 
+info at ./properties/rules/request-property-default-value-removed_base.yaml, in API POST /pets request property `status/oneOf[subschema #3]` reactivated [request-property-reactivated]. 
 
-info at ./properties/rules/request-property-default-value-removed_revision.yaml, in API POST /pets the `status/oneOf[subschema #3]/` request property `type/format` was widened from `integer, null/int64` to `any` [request-property-type-generalized]. 
+info at ./properties/rules/request-property-default-value-removed_base.yaml, in API POST /pets the `status/oneOf[subschema #3]` request property `type/format` was widened from `integer, null/int64` to `any` [request-property-type-generalized]. 
 
 

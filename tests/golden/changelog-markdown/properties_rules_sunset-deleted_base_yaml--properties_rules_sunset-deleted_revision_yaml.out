@@ -8,7 +8,7 @@
 
 
 ### PATCH /ünïcode/ключ
-- :warning: api sunset date deleted, but deprecated=true kept
+- :warning: API sunset date deleted, but deprecated=true kept
 -  added the new `1.00` enum value to the request property `tag/tag`
 
 

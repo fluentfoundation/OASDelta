@@ -1,4 +1,4 @@
 1 changes: 1 error, 0 warning, 0 info
-error at ./properties/rules/response-property-exclusive-min-unset_revision.json, in API GET /ünïcode/ключ the `items/` response property's exclusiveMinimum was unset from `true` for the response status `204` [response-property-exclusive-min-unset]. 
+error at ./properties/rules/response-property-exclusive-min-unset_base.json, in API GET /ünïcode/ключ the `items` response property's exclusiveMinimum was unset from `true` for the response status `204` [response-property-exclusive-min-unset]. 
 
 

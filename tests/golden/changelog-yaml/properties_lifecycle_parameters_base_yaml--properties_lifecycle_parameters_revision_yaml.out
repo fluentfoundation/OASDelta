@@ -32,18 +32,10 @@
   operation: GET
   path: /p
   section: paths
-  baseSource:
-    file: ./properties/lifecycle_parameters_base.yaml
-    line: 7
-    column: 5
-    endLine: 14
-    endColumn: 55
   revisionSource:
     file: ./properties/lifecycle_parameters_revision.yaml
-    line: 7
-    column: 5
-    endLine: 13
-    endColumn: 97
+    line: 11
+    column: 62
   fingerprint: cc00d28031be
 - id: request-parameter-sunset-deleted
   text: '`query` request parameter `deleted` sunset date deleted, but deprecated=true kept'
@@ -57,22 +49,14 @@
     column: 78
   fingerprint: b85831133914
 - id: request-parameter-sunset-parse
-  text: 'failed to parse sunset date for the `query` request parameter `bad`: `sunset date doesn''t conform with RFC3339: not a date`'
+  text: 'sunset date of the `query` request parameter `bad` doesn''t conform with RFC3339: `"not a date"`'
   level: 3
   operation: GET
   path: /p
   section: paths
-  baseSource:
-    file: ./properties/lifecycle_parameters_base.yaml
-    line: 7
-    column: 5
-    endLine: 14
-    endColumn: 55
   revisionSource:
     file: ./properties/lifecycle_parameters_revision.yaml
-    line: 7
-    column: 5
-    endLine: 13
-    endColumn: 97
-  fingerprint: 09fe0bf38c5c
+    line: 13
+    column: 56
+  fingerprint: a040b88da27d
 

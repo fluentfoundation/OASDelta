@@ -1,82 +1,82 @@
 16 изменений: 0 error, 5 warning, 11 info
-warning	[response-property-became-nullable] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+warning	[response-property-became-nullable]
 	в API GET /pets
 		поле ответа `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` стало обнуляемым для ответа со статусом `204`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-warning	[response-property-became-nullable] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+warning	[response-property-became-nullable]
 	в API GET /pets
 		поле ответа `items/items/allOf[subschema #3]/ключ` стало обнуляемым для ответа со статусом `404` (media type: application/vnd.api+json)
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-warning	[response-property-became-nullable] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+warning	[response-property-became-nullable]
 	в API GET /pets
 		поле ответа `名前/items/allOf[subschema #3]/ключ` стало обнуляемым для ответа со статусом `404` (media type: application/json; charset=utf-8)
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 warning	[response-property-type-generalized] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	в API GET /pets
 		у свойства ответа `items/items/allOf[subschema #3]/ключ` `type/format` расширен с `string` до `string, null/byte` для статуса `404` (media type: application/vnd.api+json)
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-warning	[response-property-became-nullable] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+warning	[response-property-became-nullable]
 	в API GET /ünïcode/ключ
 		поле ответа `名前/items/allOf[subschema #3]/ключ` стало обнуляемым для ответа со статусом `404`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 info	[response-property-type-compatible] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	в API GET /pets
 		у свойства ответа `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` `type/format` изменён с `string` до `string, null/byte` для статуса `204` (обратно совместимо)
-		Это изменение обратно совместимо, потому что тип медиа не является строго типизированным (например XML), где любое значение может быть представлено как текст, поэтому тип не проверяется при передаче. При строго типизированном типе медиа, таком как JSON, это же изменение было бы ломающим. Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Это изменение обратно совместимо, потому что тип медиа не является строго типизированным (например XML), где любое значение может быть представлено как текст, поэтому тип не проверяется при передаче. При строго типизированном типе медиа, таком как JSON, это же изменение было бы ломающим. Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 info	[response-property-type-compatible] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	в API GET /pets
 		у свойства ответа `名前/items/allOf[subschema #3]/ключ` `type/format` изменён с `string` до `string, null/byte` для статуса `404` (обратно совместимо) (media type: application/json; charset=utf-8)
-		Это изменение обратно совместимо, потому что тип медиа не является строго типизированным (например XML), где любое значение может быть представлено как текст, поэтому тип не проверяется при передаче. При строго типизированном типе медиа, таком как JSON, это же изменение было бы ломающим. Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Это изменение обратно совместимо, потому что тип медиа не является строго типизированным (например XML), где любое значение может быть представлено как текст, поэтому тип не проверяется при передаче. При строго типизированном типе медиа, таком как JSON, это же изменение было бы ломающим. Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-info	[response-required-property-became-not-write-only] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-required-property-became-not-write-only] в ./properties/rules/response-write-only-property-became-optional_base.yaml
 	в API GET /pets
 		обязательное поле ответа `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` перестало быть write-only для ответа со статусом `204`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-info	[response-required-property-became-not-write-only] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-required-property-became-not-write-only] в ./properties/rules/response-write-only-property-became-optional_base.yaml
 	в API GET /pets
 		обязательное поле ответа `items/items/allOf[subschema #3]/ключ` перестало быть write-only для ответа со статусом `404` (media type: application/vnd.api+json)
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-info	[response-required-property-became-not-write-only] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-required-property-became-not-write-only] в ./properties/rules/response-write-only-property-became-optional_base.yaml
 	в API GET /pets
 		обязательное поле ответа `名前/items/allOf[subschema #3]/ключ` перестало быть write-only для ответа со статусом `404` (media type: application/json; charset=utf-8)
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-info	[response-write-only-property-became-optional] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-write-only-property-became-optional] в ./properties/rules/response-write-only-property-became-optional_base.yaml
 	в API GET /pets
 		свойство только для записи `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` перестало быть обязательным для ответа со статусом `204`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-info	[response-write-only-property-became-optional] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-write-only-property-became-optional] в ./properties/rules/response-write-only-property-became-optional_base.yaml
 	в API GET /pets
 		свойство только для записи `items/items/allOf[subschema #3]/ключ` перестало быть обязательным для ответа со статусом `404` (media type: application/vnd.api+json)
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-info	[response-write-only-property-became-optional] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-write-only-property-became-optional] в ./properties/rules/response-write-only-property-became-optional_base.yaml
 	в API GET /pets
 		свойство только для записи `名前/items/allOf[subschema #3]/ключ` перестало быть обязательным для ответа со статусом `404` (media type: application/json; charset=utf-8)
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 info	[response-property-type-compatible] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	в API GET /ünïcode/ключ
 		у свойства ответа `名前/items/allOf[subschema #3]/ключ` `type/format` изменён с `string` до `string, null/byte` для статуса `404` (обратно совместимо)
-		Это изменение обратно совместимо, потому что тип медиа не является строго типизированным (например XML), где любое значение может быть представлено как текст, поэтому тип не проверяется при передаче. При строго типизированном типе медиа, таком как JSON, это же изменение было бы ломающим. Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Это изменение обратно совместимо, потому что тип медиа не является строго типизированным (например XML), где любое значение может быть представлено как текст, поэтому тип не проверяется при передаче. При строго типизированном типе медиа, таком как JSON, это же изменение было бы ломающим. Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-info	[response-required-property-became-not-write-only] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-required-property-became-not-write-only] в ./properties/rules/response-write-only-property-became-optional_base.yaml
 	в API GET /ünïcode/ключ
 		обязательное поле ответа `名前/items/allOf[subschema #3]/ключ` перестало быть write-only для ответа со статусом `404`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
-info	[response-write-only-property-became-optional] в ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-write-only-property-became-optional] в ./properties/rules/response-write-only-property-became-optional_base.yaml
 	в API GET /ünïcode/ключ
 		свойство только для записи `名前/items/allOf[subschema #3]/ключ` перестало быть обязательным для ответа со статусом `404`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 

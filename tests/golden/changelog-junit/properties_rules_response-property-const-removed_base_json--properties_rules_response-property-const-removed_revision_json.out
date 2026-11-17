@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
     <testcase name="response-property-const-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the `名前` response property const value `䞈ᗝ싋⋁쐾诚` was removed for the status `200`</failure>
     </testcase>
     <testcase name="request-property-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">removed the request property `_under_`</failure>
-    </testcase>
-    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
     </testcase>
   </testsuite>
 </testsuites>

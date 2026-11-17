@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
     <testcase name="response-body-contains-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">removed 'contains' constraint from the response body for the status `default`</failure>
     </testcase>
     <testcase name="response-body-min-contains-unset" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the response's body minContains was unset from `3`</failure>
-    </testcase>
-    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
     </testcase>
   </testsuite>
 </testsuites>

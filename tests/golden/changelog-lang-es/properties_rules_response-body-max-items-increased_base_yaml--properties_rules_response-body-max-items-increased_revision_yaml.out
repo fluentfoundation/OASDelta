@@ -1,10 +1,6 @@
-2 cambios: 1 error, 0 warning, 1 info
+1 cambios: 1 error, 0 warning, 0 info
 error	[response-body-max-items-increased] en ./properties/rules/response-body-max-items-increased_revision.yaml
 	en API PATCH /pets
 		el número máximo de elementos del cuerpo de respuesta fue aumentado de `85` a `88`
-
-info	[api-version-not-bumped]
-	en info
-		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
 
 

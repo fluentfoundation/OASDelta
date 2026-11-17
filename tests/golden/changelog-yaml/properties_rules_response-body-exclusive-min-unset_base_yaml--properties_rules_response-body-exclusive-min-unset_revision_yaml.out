@@ -10,11 +10,6 @@
     line: 84
     column: 33
   fingerprint: cb95f01c3aa3
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: response-body-became-not-nullable
   text: the response's body became not nullable
   level: 1

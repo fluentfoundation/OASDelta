@@ -4,8 +4,8 @@
 ## API Changes
 
 ### PUT /store/order
-- :warning: the `items/anyOf[subschema #2]/` request property contentMediaType changed from `application/json` to ``
--  removed 'contentSchema' from the request property `items/anyOf[subschema #2]/`
+- :warning: the `items/anyOf[subschema #2]` request property contentMediaType changed from `application/json` to ``
+-  removed 'contentSchema' from the request property `items/anyOf[subschema #2]`
 
 
 

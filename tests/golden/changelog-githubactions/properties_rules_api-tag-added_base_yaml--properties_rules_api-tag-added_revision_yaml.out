@@ -1,4 +1,4 @@
-::notice title=api-tag-added,file=./properties/rules/api-tag-added_revision.yaml,line=64,col=19::in API DELETE /items/{id}.json api tag `id` added
+::notice title=api-tag-added,file=./properties/rules/api-tag-added_revision.yaml,line=64,col=19::in API DELETE /items/{id}.json API tag `id` added
 ::notice title=endpoint-deprecated-with-sunset,file=./properties/rules/api-tag-added_revision.yaml,line=15,col=13::in API DELETE /items/{id}.json endpoint deprecated with sunset date `2099-12-31`
-::notice title=response-property-enum-value-removed,file=./properties/rules/api-tag-added_revision.yaml::in API PUT /pets removed the `19.00` enum value from the `owner` response property for the response status `204`
+::notice title=response-property-enum-value-removed,file=./properties/rules/api-tag-added_base.yaml::in API PUT /pets removed the `19.00` enum value from the `owner` response property for the response status `204`
 

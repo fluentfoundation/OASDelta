@@ -4,10 +4,9 @@
   operation: DELETE
   path: /items/{id}.json
   section: paths
+  baseSource:
+    file: ./properties/rules/response-header-max-properties-unset_base.json
+    line: 98
+    column: 19
   fingerprint: 695a8bbc5c56
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 

@@ -1,22 +1,21 @@
 4 cambios: 0 error, 2 warning, 2 info
-warning	[response-property-max-length-unset] en ./properties/rules/response-property-max-length-unset_revision.yaml
+warning	[response-property-max-length-unset] en ./properties/rules/response-property-max-length-unset_base.yaml
 	en API POST /ünïcode/ключ
 		la longitud máxima de la propiedad de respuesta `>/>` fue removida de `104` para el estado `204`
-		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+		Esto comparó las ramas de `allOf` una por una, así que otra rama ya puede describir lo que cambió aquí, dejando igual el esquema fusionado. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
-warning	[response-property-min-length-unset] en ./properties/rules/response-property-max-length-unset_revision.yaml
+warning	[response-property-min-length-unset] en ./properties/rules/response-property-max-length-unset_base.yaml
 	en API POST /ünïcode/ключ
 		el valor minLength de la propiedad de respuesta `>/>` fue removido de `2` para el estado `204`
-		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+		Esto comparó las ramas de `allOf` una por una, así que otra rama ya puede describir lo que cambió aquí, dejando igual el esquema fusionado. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
 info	[response-property-all-of-added] en ./properties/rules/response-property-max-length-unset_revision.yaml
 	en API POST /ünïcode/ключ
 		`subschema #1, subschema #2` fue agregado a la lista `allOf` de la propiedad de respuesta `>/>` para el estado `204`
-		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
-info	[response-property-type-specialized] en ./properties/rules/response-property-max-length-unset_revision.yaml
+info	[response-property-type-specialized] en ./properties/rules/response-property-max-length-unset_base.yaml
 	en API POST /ünïcode/ключ
 		el `>/>` de la propiedad de respuesta `type` fue reducido de `string` a `any` para el estado `204`
-		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+		Esto comparó las ramas de `allOf` una por una, así que otra rama ya puede describir lo que cambió aquí, dejando igual el esquema fusionado. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
 

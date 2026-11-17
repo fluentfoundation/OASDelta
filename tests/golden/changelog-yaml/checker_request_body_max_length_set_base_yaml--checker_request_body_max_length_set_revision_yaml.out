@@ -1,6 +1,6 @@
 - id: request-body-max-length-set
   text: the request's body maxLength was set to `15`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: addPet
@@ -11,9 +11,4 @@
     line: 14
     column: 15
   fingerprint: 53e40821ae59
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 

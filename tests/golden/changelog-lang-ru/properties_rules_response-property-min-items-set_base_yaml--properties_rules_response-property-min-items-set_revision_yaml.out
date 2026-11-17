@@ -1,9 +1,9 @@
 3 изменений: 1 error, 0 warning, 2 info
-error	[request-parameter-property-type-specialized] в ./properties/rules/response-property-min-items-set_revision.yaml
+error	[request-parameter-property-type-specialized]
 	в API DELETE /pets
-		в параметре запроса `query` `tag` `format` свойства `items/` сужен с `none` на `email`
+		в параметре запроса `query` `tag` `format` свойства `items` сужен с `none` на `email`
 
-info	[response-body-type-specialized] в ./properties/rules/response-property-min-items-set_revision.yaml
+info	[response-body-type-specialized]
 	в API DELETE /pets
 		`format` тела ответа сужен с `none` до `email` для статуса `default`
 

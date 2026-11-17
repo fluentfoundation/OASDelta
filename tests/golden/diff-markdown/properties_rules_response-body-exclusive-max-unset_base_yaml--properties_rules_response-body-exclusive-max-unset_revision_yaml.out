@@ -14,7 +14,7 @@ POST /v1/items
         - Schema changed
           - Type changed from 'integer, null' to 'string'
           - Deleted enum values: [8]
-          - Default changed from 0 to null
+          - Default changed from -0 to null
           - ExclusiveMax changed from 1017 to null
           - Min changed from -5 to null
           - MultipleOf changed from 5 to null

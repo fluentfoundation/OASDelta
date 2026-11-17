@@ -2,23 +2,23 @@
 error	[request-body-min-items-set] en ./checker/min_items_set_revision.yaml
 	en API POST /batch
 		el número mínimo de elementos del cuerpo de solicitud fue establecido en `2`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
-error	[response-body-min-items-unset] en ./checker/min_items_set_revision.yaml
+error	[response-body-min-items-unset] en ./checker/min_items_set_base.yaml
 	en API POST /batch
 		el número mínimo de elementos del cuerpo de respuesta fue removido de `2`
 
 error	[request-parameter-min-items-set] en ./checker/min_items_set_revision.yaml
 	en API POST /items
 		para el parámetro `query` de solicitud `ids`, minItems fue establecido en `3`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 error	[request-property-min-items-set] en ./checker/min_items_set_revision.yaml
 	en API POST /items
 		el número mínimo de elementos de la propiedad de solicitud `tags` fue establecido en `3`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
-error	[response-property-min-items-unset] en ./checker/min_items_set_revision.yaml
+error	[response-property-min-items-unset] en ./checker/min_items_set_base.yaml
 	en API POST /items
 		el número mínimo de elementos de la propiedad de respuesta `tags` fue removido de `3` para el estado `200`
 

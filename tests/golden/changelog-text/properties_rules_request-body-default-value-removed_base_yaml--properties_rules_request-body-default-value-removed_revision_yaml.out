@@ -3,7 +3,7 @@ error	[request-body-type-changed] at ./properties/rules/request-body-default-val
 	in API PUT /search
 		the request's body `type/format` changed from `number/double` to `boolean`
 
-info	[request-body-default-value-removed] at ./properties/rules/request-body-default-value-removed_revision.yaml
+info	[request-body-default-value-removed] at ./properties/rules/request-body-default-value-removed_base.yaml
 	in API PUT /search
 		the request body `application/json; charset=utf-8` default value `14.00` was removed
 

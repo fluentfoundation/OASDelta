@@ -4,5 +4,13 @@
   operation: PUT
   path: /v1/items
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-type-generalized_base.json
+    line: 126
+    column: 17
+  revisionSource:
+    file: ./properties/rules/request-body-type-generalized_revision.json
+    line: 125
+    column: 17
   fingerprint: 96d66e5a257d
 

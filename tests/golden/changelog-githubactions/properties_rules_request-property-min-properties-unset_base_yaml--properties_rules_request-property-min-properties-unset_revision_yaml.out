@@ -1,2 +1,2 @@
-::notice title=request-property-min-properties-unset,file=./properties/rules/request-property-min-properties-unset_revision.yaml::in API PUT /search the `"quoted"/price` request property's minProperties was unset from `8`
+::notice title=request-property-min-properties-unset,file=./properties/rules/request-property-min-properties-unset_base.yaml::in API PUT /search the `"quoted"/price` request property's minProperties was unset from `8`
 

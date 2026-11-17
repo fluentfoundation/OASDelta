@@ -1,2 +1,2 @@
-::notice title=response-property-max-set,file=./properties/rules/response-property-max-set_revision.yaml,line=36,col=39::in API DELETE /items/{id}.json the `anyOf[subschema #2]/` response property's max was set to `1.00` for the response status `400`
+::notice title=response-property-max-set,file=./properties/rules/response-property-max-set_revision.yaml,line=36,col=39::in API DELETE /items/{id}.json the `anyOf[subschema #2]` response property's max was set to `1.00` for the response status `400`
 

@@ -6,7 +6,7 @@ error	[request-body-became-enum] в ./properties/rules/request-body-min-length-s
 error	[request-body-min-length-set] в ./properties/rules/request-body-min-length-set_revision.yaml
 	в API POST /ünïcode/ключ
 		у тела запроса задано значение minLength в `5`
-		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+		Установка ограничения отклоняет значения, которые принимал прежний контракт, если только клиенты не укладываются в новое ограничение.
 
 info	[request-body-became-nullable] в ./properties/rules/request-body-min-length-set_revision.yaml
 	в API POST /ünïcode/ключ

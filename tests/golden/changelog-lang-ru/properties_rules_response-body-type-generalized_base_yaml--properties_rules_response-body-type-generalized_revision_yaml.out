@@ -1,9 +1,9 @@
 5 изменений: 4 error, 0 warning, 1 info
-error	[response-body-max-unset] в ./properties/rules/response-body-type-generalized_revision.yaml
+error	[response-body-max-unset] в ./properties/rules/response-body-type-generalized_base.yaml
 	в API DELETE /ünïcode/ключ
 		значение max у тела ответа удалено, предыдущее значение - `886.00`
 
-error	[response-body-min-unset] в ./properties/rules/response-body-type-generalized_revision.yaml
+error	[response-body-min-unset] в ./properties/rules/response-body-type-generalized_base.yaml
 	в API DELETE /ünïcode/ключ
 		значение min у тела ответа удалено, предыдущее значение - `1.00`
 
@@ -11,7 +11,7 @@ error	[response-body-type-generalized] в ./properties/rules/response-body-type-
 	в API DELETE /ünïcode/ключ
 		`type/format` тела ответа расширен с `integer/int64` до `number` для статуса `204`
 
-error	[response-media-type-removed] в ./properties/rules/response-body-type-generalized_revision.yaml
+error	[response-media-type-removed] в ./properties/rules/response-body-type-generalized_base.yaml
 	в API DELETE /ünïcode/ключ
 		удалён media type `text/plain` для ответа со статусом `default`
 

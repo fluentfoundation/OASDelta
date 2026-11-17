@@ -1,9 +1,9 @@
 2 cambios: 0 error, 0 warning, 2 info
-info	[endpoint-reactivated] en ./properties/rules/request-parameter-exclusive-min-unset_revision.yaml
+info	[endpoint-reactivated] en ./properties/rules/request-parameter-exclusive-min-unset_base.yaml
 	en API PUT /pets
 		endpoint reactivado
 
-info	[request-parameter-exclusive-min-unset] en ./properties/rules/request-parameter-exclusive-min-unset_revision.yaml
+info	[request-parameter-exclusive-min-unset] en ./properties/rules/request-parameter-exclusive-min-unset_base.yaml
 	en API PUT /pets
 		para el parámetro `cookie` de solicitud `kind`, el valor exclusiveMinimum fue removido de `true`
 

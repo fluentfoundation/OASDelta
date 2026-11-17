@@ -1,2 +1,2 @@
-::notice title=request-property-all-of-removed-annotation-only,file=./properties/rules/request-property-all-of-removed-annotation-only_revision.yaml::in API PUT /owners/{ownerId}/pets removed annotation-only `subschema #1` from the `a: b/oneOf[subschema #3]/` request property `allOf` list
+::notice title=request-property-all-of-removed-annotation-only,file=./properties/rules/request-property-all-of-removed-annotation-only_base.yaml::in API PUT /owners/{ownerId}/pets removed annotation-only `subschema #1` from the `a: b/oneOf[subschema #3]` request property `allOf` list
 

@@ -3,7 +3,7 @@ info	[response-media-type-added] в ./properties/rules/request-parameter-max-pro
 	в API GET /items/{id}.json
 		добавлен тип медиа `application/json; charset=utf-8` для ответа со статусом `204`
 
-info	[request-parameter-max-properties-unset] в ./properties/rules/request-parameter-max-properties-unset_revision.yaml
+info	[request-parameter-max-properties-unset] в ./properties/rules/request-parameter-max-properties-unset_base.yaml
 	в API GET /owners/{ownerId}/pets
 		значение maxProperties в `cookie` параметре запроса `owner` удалено, предыдущее значение - `11`
 

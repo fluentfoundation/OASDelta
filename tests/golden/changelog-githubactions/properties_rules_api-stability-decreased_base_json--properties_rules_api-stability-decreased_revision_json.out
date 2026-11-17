@@ -1,2 +1,2 @@
-::error title=api-stability-decreased,file=./properties/rules/api-stability-decreased_revision.json::in API DELETE /ünïcode/ключ endpoint stability level decreased from `stable` to `alpha`
+::error title=api-stability-decreased,file=./properties/rules/api-stability-decreased_revision.json,line=19,col=9::in API DELETE /ünïcode/ключ endpoint stability level decreased from `stable` to `alpha`
 

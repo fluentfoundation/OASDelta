@@ -1,9 +1,9 @@
 13 cambios: 7 error, 0 warning, 6 info
 error	[request-property-deprecated-sunset-invalid] en ./properties/lifecycle_properties_revision.yaml
 	en API POST /r
-		propiedad de solicitud `invalid` deprecada con fecha de expiración inválida: `sunset date doesn't conform with RFC3339: not a date`
+		propiedad de solicitud `invalid` deprecada con una fecha de expiración que no cumple con RFC3339: `"not a date"`
 
-error	[request-property-removed-before-sunset] en ./properties/lifecycle_properties_revision.yaml
+error	[request-property-removed-before-sunset] en ./properties/lifecycle_properties_base.yaml
 	en API POST /r
 		removida la propiedad de solicitud `removed` antes de la fecha de expiración `2099-12-31`
 
@@ -17,13 +17,13 @@ error	[request-property-sunset-date-too-small] en ./properties/lifecycle_propert
 
 error	[response-property-deprecated-sunset-invalid] en ./properties/lifecycle_properties_revision.yaml
 	en API POST /r
-		propiedad de respuesta `invalid` deprecada con fecha de expiración inválida: `sunset date doesn't conform with RFC3339: not a date`
+		propiedad de respuesta `invalid` deprecada con una fecha de expiración que no cumple con RFC3339: `"not a date"`
 
 error	[response-property-stability-decreased] en ./properties/lifecycle_properties_revision.yaml
 	en API POST /r
 		nivel de estabilidad de la propiedad de respuesta `decreased` disminuido de `stable` a `beta`
 
-error	[response-required-property-removed-before-sunset] en ./properties/lifecycle_properties_revision.yaml
+error	[response-required-property-removed-before-sunset] en ./properties/lifecycle_properties_base.yaml
 	en API POST /r
 		removida la propiedad requerida `required-removed` de la respuesta con estado `200` antes de la fecha de expiración `2099-12-31`
 

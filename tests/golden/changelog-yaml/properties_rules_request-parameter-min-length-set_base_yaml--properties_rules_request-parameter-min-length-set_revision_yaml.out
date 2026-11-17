@@ -1,6 +1,6 @@
 - id: request-parameter-min-length-set
   text: for the `query` request parameter `price`, the minLength was set to `18`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: PATCH
   operationId: patch_v1_items

@@ -1,5 +1,5 @@
 - id: api-path-removed-with-deprecation
-  text: api path removed with deprecation
+  text: API path removed with deprecation
   level: 1
   operation: GET
   path: /v1/items
@@ -19,5 +19,9 @@
   section: paths
   revisionSource:
     file: ./properties/rules/api-path-removed-with-deprecation_revision.yaml
+    line: 22
+    column: 7
+    endLine: 126
+    endColumn: 12
   fingerprint: a2430f369153
 

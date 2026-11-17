@@ -1,5 +1,5 @@
 1 changes: 1 error, 0 warning, 0 info
-error	[request-parameter-became-not-nullable] at ./properties/rules/request-parameter-max-unset_revision.yaml
+error	[request-parameter-became-not-nullable] at ./properties/rules/request-parameter-max-unset_base.yaml
 	in API PUT /pets
 		the `query` request parameter `ключ` became not nullable
 

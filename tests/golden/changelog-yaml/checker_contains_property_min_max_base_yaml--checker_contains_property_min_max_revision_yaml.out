@@ -30,11 +30,6 @@
     line: 38
     column: 21
   fingerprint: d8f29b71fa72
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-property-max-contains-increased
   text: the `tags` request property maxContains was increased from `3` to `5`
   level: 1

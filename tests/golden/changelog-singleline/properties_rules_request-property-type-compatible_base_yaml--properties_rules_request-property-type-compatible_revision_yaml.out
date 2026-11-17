@@ -1,16 +1,16 @@
 7 changes: 1 error, 5 warning, 1 info
-error at ./properties/rules/request-property-type-compatible_revision.yaml, in API POST /pets/{petId} removed the media type `application/xml` from the request body [request-body-media-type-removed]. 
+error at ./properties/rules/request-property-type-compatible_base.yaml, in API POST /pets/{petId} removed the media type `application/xml` from the request body [request-body-media-type-removed]. 
 
-warning at ./properties/rules/request-property-type-compatible_revision.yaml, in API POST /pets/{petId} removed the request property `'single'` [request-property-removed]. 
+warning at ./properties/rules/request-property-type-compatible_base.yaml, in API POST /pets/{petId} removed the request property `'single'` [request-property-removed]. 
 
-warning at ./properties/rules/request-property-type-compatible_revision.yaml, in API POST /pets/{petId} removed the request property `id/no` [request-property-removed]. 
+warning at ./properties/rules/request-property-type-compatible_base.yaml, in API POST /pets/{petId} removed the request property `id/no` [request-property-removed]. 
 
-warning at ./properties/rules/request-property-type-compatible_revision.yaml, in API POST /pets/{petId} removed the request property `id/tag` [request-property-removed]. 
+warning at ./properties/rules/request-property-type-compatible_base.yaml, in API POST /pets/{petId} removed the request property `id/tag` [request-property-removed]. 
 
-warning at ./properties/rules/request-property-type-compatible_revision.yaml, in API POST /pets/{petId} removed the request property `line1
+warning at ./properties/rules/request-property-type-compatible_base.yaml, in API POST /pets/{petId} removed the request property `line1
 line2` [request-property-removed]. 
 
-warning at ./properties/rules/request-property-type-compatible_revision.yaml, in API POST /pets/{petId} removed the request property `pet` [request-property-removed]. 
+warning at ./properties/rules/request-property-type-compatible_base.yaml, in API POST /pets/{petId} removed the request property `pet` [request-property-removed]. 
 
 info at ./properties/rules/request-property-type-compatible_revision.yaml, in API POST /pets/{petId} the `id` request property `type` changed from `object` to `string` (backward compatible) [request-property-type-compatible]. This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking.
 

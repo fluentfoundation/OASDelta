@@ -4,7 +4,7 @@
 ## API Changes
 
 ### GET /v1/items
--  api path removed with deprecation
+-  API path removed with deprecation
 
 
 ### GET /v1/items/v2

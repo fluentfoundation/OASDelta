@@ -3,11 +3,11 @@ error	[request-body-type-changed] at ./properties/rules/request-body-min-items-u
 	in API POST /pets
 		the request's body `type` changed from `array<object>` to `object`
 
-info	[request-body-max-items-unset] at ./properties/rules/request-body-min-items-unset_revision.yaml
+info	[request-body-max-items-unset] at ./properties/rules/request-body-min-items-unset_base.yaml
 	in API POST /pets
 		the request's body maxItems was unset from `95`
 
-info	[request-body-min-items-unset] at ./properties/rules/request-body-min-items-unset_revision.yaml
+info	[request-body-min-items-unset] at ./properties/rules/request-body-min-items-unset_base.yaml
 	in API POST /pets
 		the request's body minItems was unset from `2`
 

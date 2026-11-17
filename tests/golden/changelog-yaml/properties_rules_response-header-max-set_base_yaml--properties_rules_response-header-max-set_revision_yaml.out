@@ -4,17 +4,9 @@
   operation: PUT
   path: /v1/items
   section: paths
-  baseSource:
-    file: ./properties/rules/response-header-max-set_base.yaml
-    line: 41
-    column: 9
-    endLine: 125
-    endColumn: 36
   revisionSource:
     file: ./properties/rules/response-header-max-set_revision.yaml
-    line: 41
-    column: 9
-    endLine: 126
-    endColumn: 36
+    line: 122
+    column: 33
   fingerprint: 68f9f789f666
 

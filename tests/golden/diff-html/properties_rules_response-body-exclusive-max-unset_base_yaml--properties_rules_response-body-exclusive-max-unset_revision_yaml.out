@@ -18,7 +18,7 @@
 <ul>
 <li>Type changed from 'integer, null' to 'string'</li>
 <li>Deleted enum values: [8]</li>
-<li>Default changed from 0 to null</li>
+<li>Default changed from -0 to null</li>
 <li>ExclusiveMax changed from 1017 to null</li>
 <li>Min changed from -5 to null</li>
 <li>MultipleOf changed from 5 to null</li>

@@ -1,5 +1,5 @@
 - id: request-property-max-unset
-  text: the `items/` request property's max was unset from `-4.00`
+  text: the `items` request property's max was unset from `-4.00`
   level: 1
   operation: PATCH
   path: /store/order
@@ -8,5 +8,5 @@
     file: ./properties/rules/request-property-max-unset_base.yaml
     line: 32
     column: 33
-  fingerprint: 7ee6bd8d240f
+  fingerprint: f1f39739e9e1
 

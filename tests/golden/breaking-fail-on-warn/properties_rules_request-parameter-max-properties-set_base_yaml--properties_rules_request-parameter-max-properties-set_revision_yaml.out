@@ -2,7 +2,7 @@
 error	[request-parameter-max-properties-set] at ./properties/rules/request-parameter-max-properties-set_revision.yaml
 	in API GET /v1/items
 		for the `cookie` request parameter `ключ`, the maxProperties was set to `1`
-		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+		Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
 error	[request-parameter-type-changed] at ./properties/rules/request-parameter-max-properties-set_revision.yaml
 	in API GET /v1/items

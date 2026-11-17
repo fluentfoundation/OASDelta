@@ -5,5 +5,13 @@
   operationId: get_store_order
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/response-header-min-increased_base.json
+    line: 76
+    column: 19
+  revisionSource:
+    file: ./properties/rules/response-header-min-increased_revision.json
+    line: 76
+    column: 19
   fingerprint: ff2f7993154f
 

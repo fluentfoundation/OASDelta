@@ -1,10 +1,6 @@
-2 changes: 1 error, 0 warning, 1 info
-error	[request-property-became-required] at 
+1 changes: 1 error, 0 warning, 0 info
+error	[request-property-became-required] at ./openapi31-test2.yaml
 	in API POST webhook:newPet
 		the request property `tag` became required
-
-info	[api-version-not-bumped]
-	in info
-		a breaking change was detected but the version is still `1.0.0`
 
 

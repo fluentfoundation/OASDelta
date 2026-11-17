@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `anyOf[subschema #1]/items/` request property `type` was widened from `string` to `any`
+        the `anyOf[subschema #1]/items` request property `type` was widened from `string` to `any`
         </li>
         
     </ul>

@@ -18,6 +18,15 @@
 <ul>
 <li>Modified property: role
 <ul>
+<li>Property 'AnyOf' changed
+<ul>
+<li>Modified schema: subschema #1 -&gt; subschema #1: UserRole
+<ul>
+<li>Title changed from '' to 'UserRole'</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Title changed from 'Role' to ''</li>
 </ul>
 </li>

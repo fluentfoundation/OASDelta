@@ -1,26 +1,26 @@
 6 cambios: 2 error, 0 warning, 4 info
-error	[response-property-min-length-unset] en ./properties/rules/request-property-min-length-unset_revision.json
+error	[response-property-min-length-unset] en ./properties/rules/request-property-min-length-unset_base.json
 	en API PATCH /store/order
-		el valor minLength de la propiedad de respuesta `pet/anyOf[subschema #3]/` fue removido de `1` para el estado `404`
+		el valor minLength de la propiedad de respuesta `pet/anyOf[subschema #3]` fue removido de `1` para el estado `404`
 
-error	[request-property-became-not-nullable] en ./properties/rules/request-property-min-length-unset_revision.json
+error	[request-property-became-not-nullable] en ./properties/rules/request-property-min-length-unset_base.json
 	en API PUT /v1/items
-		la propiedad de solicitud `㺓崠讆/id/anyOf[subschema #3]/` se volvió no nulable
+		la propiedad de solicitud `㺓崠讆/id/anyOf[subschema #3]` se volvió no nulable
 
-info	[response-property-became-not-nullable] en ./properties/rules/request-property-min-length-unset_revision.json
+info	[response-property-became-not-nullable] en ./properties/rules/request-property-min-length-unset_base.json
 	en API PATCH /store/order
-		la propiedad de respuesta `pet/anyOf[subschema #3]/` se volvió no nulable para el estado `404`
+		la propiedad de respuesta `pet/anyOf[subschema #3]` se volvió no nulable para el estado `404`
 
-info	[response-property-type-specialized] en ./properties/rules/request-property-min-length-unset_revision.json
+info	[response-property-type-specialized] en ./properties/rules/request-property-min-length-unset_base.json
 	en API PATCH /store/order
-		el `pet/anyOf[subschema #3]/` de la propiedad de respuesta `type` fue reducido de `string` a `any` para el estado `404`
+		el `pet/anyOf[subschema #3]` de la propiedad de respuesta `type` fue reducido de `string` a `any` para el estado `404`
 
-info	[request-property-min-length-unset] en ./properties/rules/request-property-min-length-unset_revision.json
+info	[request-property-min-length-unset] en ./properties/rules/request-property-min-length-unset_base.json
 	en API PUT /v1/items
-		el valor minLength de la propiedad de solicitud `㺓崠讆/id/anyOf[subschema #3]/` fue removido de `1`
+		el valor minLength de la propiedad de solicitud `㺓崠讆/id/anyOf[subschema #3]` fue removido de `1`
 
-info	[request-property-type-generalized] en ./properties/rules/request-property-min-length-unset_revision.json
+info	[request-property-type-generalized] en ./properties/rules/request-property-min-length-unset_base.json
 	en API PUT /v1/items
-		el `㺓崠讆/id/anyOf[subschema #3]/` de la propiedad de solicitud `type` fue ampliado de `string` a `any`
+		el `㺓崠讆/id/anyOf[subschema #3]` de la propiedad de solicitud `type` fue ampliado de `string` a `any`
 
 

@@ -1,13 +1,13 @@
 5 changes: 1 error, 0 warning, 4 info
-error	[request-property-became-not-nullable] at ./properties/rules/request-required-property-became-write-only_revision.yaml
+error	[request-property-became-not-nullable]
 	in API PATCH /search
 		the request property ``tick`` became not nullable
 
-info	[request-property-became-not-enum] at ./properties/rules/request-required-property-became-write-only_revision.yaml
+info	[request-property-became-not-enum] at ./properties/rules/request-required-property-became-write-only_base.yaml
 	in API PATCH /search
 		removed the enum constraint from the request property ``tick``
 
-info	[request-property-reactivated] at ./properties/rules/request-required-property-became-write-only_revision.yaml
+info	[request-property-reactivated] at ./properties/rules/request-required-property-became-write-only_base.yaml
 	in API PATCH /search
 		request property ``tick`` reactivated
 

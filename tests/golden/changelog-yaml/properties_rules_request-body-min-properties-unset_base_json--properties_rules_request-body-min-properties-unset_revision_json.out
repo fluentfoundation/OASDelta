@@ -5,5 +5,9 @@
   operationId: post_pets_{petId}
   path: /pets/{petId}
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-min-properties-unset_base.json
+    line: 77
+    column: 17
   fingerprint: 8675146a971b
 

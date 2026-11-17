@@ -4,10 +4,10 @@
 ## API Changes
 
 ### POST /ünïcode/ключ
-- :warning: the `items/` request property `type` changed from `object` to `string`
+- :warning: the `items` request property `type` changed from `object` to `string`
 - :warning: removed the request property `items/Ünïcode`
 - :warning: removed the request property `items/傓`
--  the `items/` request property's maxProperties was unset from `20`
+-  the `items` request property's maxProperties was unset from `20`
 
 
 

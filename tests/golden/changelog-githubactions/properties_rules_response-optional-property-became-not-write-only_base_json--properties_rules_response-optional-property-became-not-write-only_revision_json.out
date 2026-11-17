@@ -1,2 +1,2 @@
-::notice title=response-optional-property-became-not-write-only,file=./properties/rules/response-optional-property-became-not-write-only_revision.json::in API PATCH /ünïcode/ключ the response optional property `status` became not write-only for the status `200`
+::notice title=response-optional-property-became-not-write-only,file=./properties/rules/response-optional-property-became-not-write-only_base.json::in API PATCH /ünïcode/ключ the response optional property `status` became not write-only for the status `200`
 

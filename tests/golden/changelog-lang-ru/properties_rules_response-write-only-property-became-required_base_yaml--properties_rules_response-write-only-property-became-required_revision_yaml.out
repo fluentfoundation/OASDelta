@@ -7,11 +7,11 @@ error	[request-property-became-required] в ./properties/rules/response-write-on
 	в API POST /pets/{petId}
 		поле запроса `items/Ünïcode/price` стало обязательным
 
-warning	[request-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+warning	[request-property-removed] в ./properties/rules/response-write-only-property-became-required_base.yaml
 	в API POST /pets/{petId}
 		удалено поле запроса `items/Ünïcode/price/%20`
 
-warning	[request-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+warning	[request-property-removed] в ./properties/rules/response-write-only-property-became-required_base.yaml
 	в API POST /pets/{petId}
 		удалено поле запроса `items/Ünïcode/price/&anchor`
 
@@ -19,7 +19,7 @@ info	[request-optional-property-became-write-only] в ./properties/rules/respons
 	в API POST /pets/{petId}
 		необязательное поле запроса `items/Ünïcode/price` стало только для записи
 
-info	[request-property-removed-with-deprecation] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[request-property-removed-with-deprecation] в ./properties/rules/response-write-only-property-became-required_base.yaml
 	в API POST /pets/{petId}
 		удалено устаревшее поле запроса `items/Ünïcode/price/id`
 
@@ -50,27 +50,27 @@ info	[response-property-type-changed] в ./properties/rules/response-write-only-
 		у свойства ответа `price` `type` изменён с `object` на `string` для статуса `204` (media type: application/json; charset=utf-8)
 		Свойство доступно только для записи, поэтому оно не встречается в ответах, и это изменение не может сделать ответ недействительным.
 
-info	[response-required-property-removed-with-deprecation] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-property-removed-with-deprecation] в ./properties/rules/response-write-only-property-became-required_base.yaml
 	в API POST /pets/{petId}
 		удалено устаревшее обязательное поле ответа `no/items/price/id` из ответа со статусом `204` (media type: application/xml)
 
-info	[response-required-property-removed-with-deprecation] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-property-removed-with-deprecation] в ./properties/rules/response-write-only-property-became-required_base.yaml
 	в API POST /pets/{petId}
 		удалено устаревшее обязательное поле ответа `price/id` из ответа со статусом `204` (media type: application/json; charset=utf-8)
 
-info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_base.yaml
 	в API POST /pets/{petId}
 		удалено обязательное свойство только для записи `no/items/price/%20` из ответа со статусом `204` (media type: application/xml)
 
-info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_base.yaml
 	в API POST /pets/{petId}
 		удалено обязательное свойство только для записи `no/items/price/&anchor` из ответа со статусом `204` (media type: application/xml)
 
-info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_base.yaml
 	в API POST /pets/{petId}
 		удалено обязательное свойство только для записи `price/%20` из ответа со статусом `204` (media type: application/json; charset=utf-8)
 
-info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-write-only-property-removed] в ./properties/rules/response-write-only-property-became-required_base.yaml
 	в API POST /pets/{petId}
 		удалено обязательное свойство только для записи `price/&anchor` из ответа со статусом `204` (media type: application/json; charset=utf-8)
 

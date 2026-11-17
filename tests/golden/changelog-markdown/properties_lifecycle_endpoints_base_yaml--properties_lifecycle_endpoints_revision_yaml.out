@@ -4,31 +4,31 @@
 ## API Changes
 
 ### GET /deprecated-bad-sunset
-- :warning: failed to parse sunset date: `sunset date doesn't conform with RFC3339: not a date`
+- :warning: sunset date doesn't conform with RFC3339: `"not a date"`
 
 
 ### GET /removed-endpoint
-- :warning: api removed before the sunset date `2099-12-31`
+- :warning: API removed before the sunset date `2099-12-31`
 
 
 ### GET /removed-path
-- :warning: api path removed before the sunset date `2099-12-31`
+- :warning: API path removed before the sunset date `2099-12-31`
 
 
 ### GET /removed-path-bad-sunset
-- :warning: failed to parse sunset date: `sunset date doesn't conform with RFC3339: not a date`
+- :warning: sunset date doesn't conform with RFC3339: `"not a date"`
 
 
 ### GET /stability
-- :warning: failed to parse stability level: `value is not one of draft, alpha, beta or stable: "experimental-ish"`
+- :warning: stability level `"experimental-ish"` is not one of `draft`, `alpha`, `beta` or `stable`
 
 
 ### GET /sunset-deleted
-- :warning: api sunset date deleted, but deprecated=true kept
+- :warning: API sunset date deleted, but deprecated=true kept
 
 
 ### GET /sunset-earlier
-- :warning: api sunset date changed to an earlier date, from `2099-12-31` to `2020-01-01`, new sunset date must be not earlier than `2099-12-31` and at least `0` days from now
+- :warning: API sunset date changed to an earlier date, from `2099-12-31` to `2020-01-01`, new sunset date must be not earlier than `2099-12-31` and at least `0` days from now
 
 
 

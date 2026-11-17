@@ -1,5 +1,5 @@
 1 изменений: 0 error, 0 warning, 1 info
-info	[request-parameter-property-list-of-types-widened] в ./list-of-types/param-property-base.yaml
+info	[request-parameter-property-list-of-types-widened] в ./list-of-types/param-property-revision.yaml
 	в API GET /test
 		список типов свойства `mode` `query` параметра запроса `filter` был расширен добавлением типов `integer and boolean`
 

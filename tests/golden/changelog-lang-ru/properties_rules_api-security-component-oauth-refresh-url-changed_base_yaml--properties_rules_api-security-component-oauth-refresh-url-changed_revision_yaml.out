@@ -3,7 +3,7 @@ error	[request-body-type-changed] в ./properties/rules/api-security-component-o
 	в API POST /owners/{ownerId}/pets
 		`type` тела запроса изменён с `array<array<string/date-time>>` на `boolean`
 
-warning	[api-security-component-oauth-refresh-url-changed]
+warning	[api-security-component-oauth-refresh-url-changed] в ./properties/rules/api-security-component-oauth-refresh-url-changed_revision.yaml
 	в components/securitySchemes
 		в схеме безопасности `oauth` URL обновления токена OAuth потока `clientCredentials` изменен с `https://auth.example.com/refresh` на ``
 		Это предупреждение, потому что спецификация не указывает, принимаются ли учетные данные, полученные через прежний URL.

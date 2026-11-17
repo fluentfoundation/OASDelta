@@ -34,11 +34,6 @@
     line: 21
     column: 19
   fingerprint: d7adaa4f0802
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: response-property-else-added
   text: added 'else' subschema to the `details` response property for the status `200`
   level: 1

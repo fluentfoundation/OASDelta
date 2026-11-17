@@ -22,7 +22,7 @@
   fingerprint: 38d7bb97ed1b
 - id: request-body-all-of-removed
   text: removed `#/components/schemas/Rabbit` from the request body `allOf` list
-  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  comment: This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
   disclaimers:
     - all-of-not-flattened
   level: 1
@@ -39,7 +39,7 @@
   fingerprint: cfbde209035b
 - id: request-property-all-of-removed
   text: removed `#/components/schemas/Breed3` from the `allOf[#/components/schemas/Dog]/breed` request property `allOf` list
-  comment: This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+  comment: This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
   disclaimers:
     - all-of-not-flattened
   level: 1

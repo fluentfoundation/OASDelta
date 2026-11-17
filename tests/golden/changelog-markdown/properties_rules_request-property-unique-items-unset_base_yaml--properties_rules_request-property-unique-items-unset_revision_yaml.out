@@ -4,7 +4,7 @@
 ## API Changes
 
 ### PUT /store/order
--  the `items/` request property's uniqueItems was unset
+-  the `items` request property's uniqueItems was unset
 
 
 

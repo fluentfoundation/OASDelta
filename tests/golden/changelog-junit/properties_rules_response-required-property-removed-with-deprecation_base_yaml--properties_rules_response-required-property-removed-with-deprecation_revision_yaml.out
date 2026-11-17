@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite package="com.oasdiff" time="0" tests="6" errors="0" failures="6" name="OASDiff">
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
     <testcase name="response-body-type-changed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the response's body `type` changed from `object` to `boolean` for status `404`</failure>
     </testcase>
@@ -9,9 +9,6 @@
     </testcase>
     <testcase name="response-required-property-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">removed the required property `price` from the response with the `404` status</failure>
-    </testcase>
-    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
     </testcase>
     <testcase name="response-optional-property-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">removed the optional property `ᵄ䐶憅᧤땵ᑒ` from the response with the `404` status</failure>

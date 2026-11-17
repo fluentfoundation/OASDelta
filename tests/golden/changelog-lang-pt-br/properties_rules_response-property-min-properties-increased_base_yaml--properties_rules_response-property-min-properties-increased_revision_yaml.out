@@ -1,6 +1,6 @@
 1 alterações: 0 error, 0 warning, 1 info
 info	[response-property-min-properties-increased] em ./properties/rules/response-property-min-properties-increased_revision.yaml
 	em API DELETE /pets/{petId}
-		o valor minProperties da propriedade de resposta `items/` foi aumentado de `1` para `6` para o status `500`
+		o valor minProperties da propriedade de resposta `items` foi aumentado de `1` para `6` para o status `500`
 
 

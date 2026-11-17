@@ -1,2 +1,2 @@
-::notice title=request-body-const-removed,file=./properties/rules/request-body-const-removed_revision.yaml::in API POST /items/{id}.json the request body `application/xml` const value `@at` was removed
+::notice title=request-body-const-removed,file=./properties/rules/request-body-const-removed_base.yaml::in API POST /items/{id}.json the request body `application/xml` const value `@at` was removed
 

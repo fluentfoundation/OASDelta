@@ -1,5 +1,5 @@
 1 изменений: 0 error, 0 warning, 1 info
-info	[request-property-exclusive-min-unset] в ./properties/rules/request-property-exclusive-min-unset_revision.yaml
+info	[request-property-exclusive-min-unset] в ./properties/rules/request-property-exclusive-min-unset_base.yaml
 	в API POST /owners/{ownerId}/pets
 		значение exclusiveMinimum у поля запроса `pet` удалено, предыдущее значение - `true`
 

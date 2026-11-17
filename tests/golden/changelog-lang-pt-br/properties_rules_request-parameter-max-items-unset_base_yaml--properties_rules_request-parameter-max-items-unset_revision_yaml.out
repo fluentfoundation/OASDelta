@@ -1,13 +1,13 @@
 3 alterações: 0 error, 0 warning, 3 info
-info	[request-parameter-list-of-types-widened] em ./properties/rules/request-parameter-max-items-unset_revision.yaml
+info	[request-parameter-list-of-types-widened] em ./properties/rules/request-parameter-max-items-unset_base.yaml
 	em API DELETE /search
 		lista de tipos do parâmetro `cookie` `뻩씃쑶䘎冘` da requisição foi expandida adicionando tipos `string`
 
-info	[request-parameter-max-items-unset] em ./properties/rules/request-parameter-max-items-unset_revision.yaml
+info	[request-parameter-max-items-unset] em ./properties/rules/request-parameter-max-items-unset_base.yaml
 	em API DELETE /search
 		no parâmetro de requisição do tipo `cookie` e nome `뻩씃쑶䘎冘`, o valor maxItems foi removido de `92`
 
-info	[request-parameter-min-items-unset] em ./properties/rules/request-parameter-max-items-unset_revision.yaml
+info	[request-parameter-min-items-unset] em ./properties/rules/request-parameter-max-items-unset_base.yaml
 	em API DELETE /search
 		no parâmetro de requisição do tipo `cookie` e nome `뻩씃쑶䘎冘`, o valor minItems foi removido de `3`
 

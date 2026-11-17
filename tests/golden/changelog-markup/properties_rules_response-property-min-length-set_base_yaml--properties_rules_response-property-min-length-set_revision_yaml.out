@@ -4,10 +4,10 @@
 ## API Changes
 
 ### POST /owners/{ownerId}/pets
-- :warning: the `items/` response's property `type` changed from `boolean` to `string` for status `400`
+- :warning: the `items` response's property `type` changed from `boolean` to `string` for status `400`
 -  the `` response's property default value `false` was removed for the status `400`
--  the `items/` response property's minLength was set to `4` for the response status `400`
--  the `items/` response's property pattern `(` was added for the status `400`
+-  the `items` response property's minLength was set to `4` for the response status `400`
+-  the `items` response's property pattern `(` was added for the status `400`
 
 
 

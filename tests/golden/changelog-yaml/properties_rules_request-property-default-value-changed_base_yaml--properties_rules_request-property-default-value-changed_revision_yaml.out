@@ -9,5 +9,9 @@
     file: ./properties/rules/request-property-default-value-changed_base.yaml
     line: 79
     column: 37
+  revisionSource:
+    file: ./properties/rules/request-property-default-value-changed_revision.yaml
+    line: 113
+    column: 21
   fingerprint: 44fdc473eddd
 

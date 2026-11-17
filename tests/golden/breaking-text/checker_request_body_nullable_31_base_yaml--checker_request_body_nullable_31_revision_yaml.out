@@ -1,5 +1,5 @@
 1 changes: 1 error, 0 warning, 0 info
-error	[response-body-became-nullable] at ./checker/request_body_nullable_31_revision.yaml
+error	[response-body-became-nullable]
 	in API POST /products
 		the response's body became nullable
 

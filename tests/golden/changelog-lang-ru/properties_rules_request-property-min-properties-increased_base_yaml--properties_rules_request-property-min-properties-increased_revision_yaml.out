@@ -3,7 +3,7 @@ error	[request-property-min-properties-increased] в ./properties/rules/request-
 	в API POST /store/order
 		значение minProperties у поля запроса `name` увеличено до `3`
 
-info	[optional-response-header-removed] в ./properties/rules/request-property-min-properties-increased_revision.yaml
+info	[optional-response-header-removed] в ./properties/rules/request-property-min-properties-increased_base.yaml
 	в API POST /store/order
 		удалён ранее необязательный заголовок ответа `ૉ硡쇲䦨員䒗` для ответа со статусом `2XX`
 

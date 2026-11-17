@@ -1,5 +1,5 @@
 - id: sunset-deleted
-  text: api sunset date deleted, but deprecated=true kept
+  text: API sunset date deleted, but deprecated=true kept
   level: 3
   operation: PATCH
   operationId: patch_ünïcode_ключ

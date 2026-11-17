@@ -1,5 +1,5 @@
 4 изменений: 2 error, 0 warning, 2 info
-error	[response-body-max-properties-unset] в ./properties/rules/response-body-max-properties-unset_revision.yaml
+error	[response-body-max-properties-unset] в ./properties/rules/response-body-max-properties-unset_base.yaml
 	в API GET /pets
 		значение maxProperties у тела ответа удалено, предыдущее значение - `19`
 
@@ -7,11 +7,11 @@ error	[response-body-type-changed] в ./properties/rules/response-body-max-prope
 	в API GET /pets
 		`type` тела ответа изменён с `object` на `array<string>` для статуса `200`
 
-info	[response-optional-property-removed] в ./properties/rules/response-body-max-properties-unset_revision.yaml
+info	[response-optional-property-removed] в ./properties/rules/response-body-max-properties-unset_base.yaml
 	в API GET /pets
 		удалено необязательное поле `created` из ответа со статусом `200`
 
-info	[response-optional-property-removed] в ./properties/rules/response-body-max-properties-unset_revision.yaml
+info	[response-optional-property-removed] в ./properties/rules/response-body-max-properties-unset_base.yaml
 	в API GET /pets
 		удалено необязательное поле `첧縱ᤳ앸䧤` из ответа со статусом `200`
 

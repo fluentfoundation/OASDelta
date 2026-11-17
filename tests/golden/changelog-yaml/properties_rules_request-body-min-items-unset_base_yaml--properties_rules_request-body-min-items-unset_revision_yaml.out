@@ -4,6 +4,10 @@
   operation: POST
   path: /pets
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-min-items-unset_base.yaml
+    line: 33
+    column: 9
   revisionSource:
     file: ./properties/rules/request-body-min-items-unset_revision.yaml
     line: 148
@@ -15,6 +19,10 @@
   operation: POST
   path: /pets
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-min-items-unset_base.yaml
+    line: 31
+    column: 9
   fingerprint: d8a555cae08b
 - id: request-body-min-items-unset
   text: the request's body minItems was unset from `2`
@@ -22,5 +30,9 @@
   operation: POST
   path: /pets
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-min-items-unset_base.yaml
+    line: 32
+    column: 9
   fingerprint: b8e3b7f083f0
 

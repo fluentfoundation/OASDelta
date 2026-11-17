@@ -8,14 +8,14 @@
 <ul>
 <li>Extensions changed
 <ul>
-<li>Modified extension: x-since-date
-<ul>
-<li>Modified value from '2023-01-11' to '2023-01-12'</li>
-</ul>
-</li>
 <li>Modified extension: tag
 <ul>
 <li>Modified /version from 'old' to 'new'</li>
+</ul>
+</li>
+<li>Modified extension: x-since-date
+<ul>
+<li>Modified value from '2023-01-11' to '2023-01-12'</li>
 </ul>
 </li>
 </ul>

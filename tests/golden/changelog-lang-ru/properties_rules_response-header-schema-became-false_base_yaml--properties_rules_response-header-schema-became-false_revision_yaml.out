@@ -1,5 +1,5 @@
 1 изменений: 0 error, 0 warning, 1 info
-info	[response-header-schema-became-false] в ./properties/rules/response-header-schema-became-false_revision.yaml
+info	[response-header-schema-became-false] в ./properties/rules/response-header-schema-became-false_base.yaml
 	в API GET /pets
 		схема заголовка ответа ` leading` стала `false` для статуса `204`: ни одно значение не проходит валидацию
 

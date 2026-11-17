@@ -1,6 +1,6 @@
 2 changes: 1 error, 0 warning, 1 info
-error at ./properties/rules/request-property-content-schema-removed_revision.json, in API PUT /store/order the `items/anyOf[subschema #2]/` request property contentMediaType changed from `application/json` to `` [request-property-content-media-type-changed]. 
+error at ./properties/rules/request-property-content-schema-removed_base.json, in API PUT /store/order the `items/anyOf[subschema #2]` request property contentMediaType changed from `application/json` to `` [request-property-content-media-type-changed]. 
 
-info at ./properties/rules/request-property-content-schema-removed_revision.json, in API PUT /store/order removed 'contentSchema' from the request property `items/anyOf[subschema #2]/` [request-property-content-schema-removed]. 
+info at ./properties/rules/request-property-content-schema-removed_base.json, in API PUT /store/order removed 'contentSchema' from the request property `items/anyOf[subschema #2]` [request-property-content-schema-removed]. 
 
 

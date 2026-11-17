@@ -118,7 +118,25 @@
     
 
     
-    <p>No changes to report, but the specs are different</p>
+    
+
+    
+    <div class="section-title">info</div>
+    
+    <div class="endpoint">
+        
+    <ul class="endpoint-changes">
+        
+        <li class="change">
+        
+        the API version changed from `1.0.0` to `1.0.1`
+        </li>
+        
+    </ul>
+    
+    </div>
+    
+    
     
 </body>
 

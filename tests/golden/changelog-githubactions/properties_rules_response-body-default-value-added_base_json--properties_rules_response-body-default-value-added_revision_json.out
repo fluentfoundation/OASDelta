@@ -1,2 +1,2 @@
-::notice title=response-body-default-value-added,file=./properties/rules/response-body-default-value-added_revision.json::in API DELETE /search the response body `application/json; charset=utf-8` default value `pet` was added for the status `2XX`
+::notice title=response-body-default-value-added,file=./properties/rules/response-body-default-value-added_revision.json,line=113,col=19::in API DELETE /search the response body `application/json; charset=utf-8` default value `pet` was added for the status `2XX`
 

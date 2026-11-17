@@ -6,7 +6,7 @@ error	[request-body-became-enum] en ./properties/rules/request-body-min-length-s
 error	[request-body-min-length-set] en ./properties/rules/request-body-min-length-set_revision.yaml
 	en API POST /ünïcode/ключ
 		el valor minLength del cuerpo de solicitud fue establecido en `5`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 info	[request-body-became-nullable] en ./properties/rules/request-body-min-length-set_revision.yaml
 	en API POST /ünïcode/ключ

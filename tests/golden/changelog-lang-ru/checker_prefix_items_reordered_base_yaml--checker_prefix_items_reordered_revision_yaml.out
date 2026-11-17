@@ -1,10 +1,10 @@
 2 изменений: 2 error, 0 warning, 0 info
 error	[request-property-type-changed] в ./checker/prefix_items_reordered_revision.yaml
 	в API POST /items
-		у поля запроса `/prefixItems[subschema #1]/` `type` изменён с `string` на `integer`
+		у поля запроса `/prefixItems[subschema #1]` `type` изменён с `string` на `integer`
 
 error	[request-property-type-changed] в ./checker/prefix_items_reordered_revision.yaml
 	в API POST /items
-		у поля запроса `/prefixItems[subschema #2]/` `type` изменён с `integer` на `string`
+		у поля запроса `/prefixItems[subschema #2]` `type` изменён с `integer` на `string`
 
 

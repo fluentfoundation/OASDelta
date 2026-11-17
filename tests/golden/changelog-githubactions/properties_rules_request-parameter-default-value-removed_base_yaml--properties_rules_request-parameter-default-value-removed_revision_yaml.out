@@ -1,3 +1,3 @@
-::error title=request-parameter-schema-became-false,file=./properties/rules/request-parameter-default-value-removed_revision.yaml::in API PUT /items/{id}.json the schema of the `cookie` request parameter `price` became `false`: no value passes validation
-::notice title=request-parameter-default-value-removed,file=./properties/rules/request-parameter-default-value-removed_revision.yaml::in API PUT /items/{id}.json for the `cookie` request parameter `price`, default value `44.00` was removed
+::error title=request-parameter-schema-became-false,file=./properties/rules/request-parameter-default-value-removed_base.yaml::in API PUT /items/{id}.json the schema of the `cookie` request parameter `price` became `false`: no value passes validation
+::notice title=request-parameter-default-value-removed,file=./properties/rules/request-parameter-default-value-removed_base.yaml::in API PUT /items/{id}.json for the `cookie` request parameter `price`, default value `44.00` was removed
 

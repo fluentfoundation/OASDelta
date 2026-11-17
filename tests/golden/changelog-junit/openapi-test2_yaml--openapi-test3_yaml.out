@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite package="com.oasdiff" time="0" tests="17" errors="0" failures="17" name="OASDiff">
+  <testsuite package="com.oasdiff" time="0" tests="16" errors="0" failures="16" name="OASDiff">
     <testcase name="new-required-request-parameter" classname="OASDiff" time="0">
       <failure message="Breaking change detected">added the new required `header` request parameter `x-auth-name`</failure>
     </testcase>
@@ -17,7 +17,7 @@
       <failure message="Breaking change detected">for the `query` request parameter `token`, the `type/format` was changed from `any` to `string/uuid`</failure>
     </testcase>
     <testcase name="api-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api removed without deprecation</failure>
+      <failure message="Breaking change detected">API removed without deprecation</failure>
     </testcase>
     <testcase name="request-parameter-pattern-changed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">changed the pattern of the `path` request parameter `domain` from `^(?:\d+)$` to `^(?:([a-z]+-)*([a-z]+)?)$`</failure>
@@ -28,11 +28,8 @@
     <testcase name="api-security-component-added" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the component security scheme `OAuth` was added</failure>
     </testcase>
-    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.1`</failure>
-    </testcase>
     <testcase name="api-operation-id-added" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api operation id `GetSecurityScore` was added</failure>
+      <failure message="Breaking change detected">API operation id `GetSecurityScore` was added</failure>
     </testcase>
     <testcase name="request-parameter-min-unset" classname="OASDiff" time="0">
       <failure message="Breaking change detected">for the `path` request parameter `domain`, the min was unset from `7.00`</failure>

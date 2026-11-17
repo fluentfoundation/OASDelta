@@ -1,19 +1,15 @@
-5 изменений: 1 error, 0 warning, 4 info
-error	[response-body-exclusive-min-unset] в ./properties/rules/response-body-exclusive-min-unset_revision.yaml
+4 изменений: 1 error, 0 warning, 3 info
+error	[response-body-exclusive-min-unset] в ./properties/rules/response-body-exclusive-min-unset_base.yaml
 	в API GET /ünïcode/ключ
 		значение exclusiveMinimum у тела ответа удалено, предыдущее значение - `-2.00`
 
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
-
-info	[response-body-became-not-nullable] в ./properties/rules/response-body-exclusive-min-unset_revision.yaml
+info	[response-body-became-not-nullable]
 	в API GET /ünïcode/ключ
 		тело ответа стало необнуляемым
 
-info	[response-body-default-value-removed] в ./properties/rules/response-body-exclusive-min-unset_revision.yaml
+info	[response-body-default-value-removed] в ./properties/rules/response-body-exclusive-min-unset_base.yaml
 	в API GET /ünïcode/ключ
-		удалено значение по умолчанию `application/xml` для тела ответа для статуса `80.00`%!(EXTRA string=`404`)
+		удалено значение по умолчанию `80.00` для тела ответа `application/xml` для статуса `404`
 
 info	[response-body-type-specialized] в ./properties/rules/response-body-exclusive-min-unset_revision.yaml
 	в API GET /ünïcode/ключ

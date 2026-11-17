@@ -6,5 +6,9 @@
   section: paths
   baseSource:
     file: ./properties/rules/optional-response-header-removed_base.yaml
+    line: 104
+    column: 15
+    endLine: 109
+    endColumn: 35
   fingerprint: 5a653ae747de
 

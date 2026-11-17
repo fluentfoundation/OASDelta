@@ -5,6 +5,10 @@
   operationId: put_search
   path: /search
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-exclusive-max-set_revision.yaml
+    line: 157
+    column: 13
   fingerprint: fbeda14c1e2c
 - id: request-parameter-became-nullable
   text: the `cookie` request parameter `孱` became nullable
@@ -25,5 +29,9 @@
     line2
   path: /v1/items
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-exclusive-max-set_revision.yaml
+    line: 11
+    column: 9
   fingerprint: 90e8c6bdae65
 

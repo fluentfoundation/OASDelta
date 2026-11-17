@@ -1,2 +1,2 @@
-::notice title=response-header-min-length-increased,file=./properties/rules/response-header-min-length-increased_revision.json::in API GET /pets the `status` response header's minLength was increased from `2` to `5` for the status `404`
+::notice title=response-header-min-length-increased,file=./properties/rules/response-header-min-length-increased_revision.json,line=107,col=19::in API GET /pets the `status` response header's minLength was increased from `2` to `5` for the status `404`
 

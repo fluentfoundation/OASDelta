@@ -2,7 +2,7 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="13" errors="0" failures="13" name="OASDiff">
     <testcase name="request-property-deprecated-sunset-invalid" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">request property `invalid` deprecated with invalid sunset date: `sunset date doesn't conform with RFC3339: not a date`</failure>
+      <failure message="Breaking change detected">request property `invalid` deprecated with a sunset date that doesn't conform with RFC3339: `"not a date"`</failure>
     </testcase>
     <testcase name="request-property-removed-before-sunset" classname="OASDiff" time="0">
       <failure message="Breaking change detected">removed the request property `removed` before the sunset date `2099-12-31`</failure>
@@ -14,7 +14,7 @@
       <failure message="Breaking change detected">request property `too-small` sunset date `2020-01-01` is too small, must be at least `0` days from now</failure>
     </testcase>
     <testcase name="response-property-deprecated-sunset-invalid" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">response property `invalid` deprecated with invalid sunset date: `sunset date doesn't conform with RFC3339: not a date`</failure>
+      <failure message="Breaking change detected">response property `invalid` deprecated with a sunset date that doesn't conform with RFC3339: `"not a date"`</failure>
     </testcase>
     <testcase name="response-property-stability-decreased" classname="OASDiff" time="0">
       <failure message="Breaking change detected">response property `decreased` stability level decreased from `stable` to `beta`</failure>

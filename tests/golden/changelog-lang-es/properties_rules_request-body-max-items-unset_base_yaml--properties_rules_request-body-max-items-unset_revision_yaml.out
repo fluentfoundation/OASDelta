@@ -1,11 +1,11 @@
 2 cambios: 0 error, 0 warning, 2 info
-info	[request-body-max-items-unset] en ./properties/rules/request-body-max-items-unset_revision.yaml
+info	[request-body-max-items-unset] en ./properties/rules/request-body-max-items-unset_base.yaml
 	en API POST /pets/{petId}
 		el valor maxItems del cuerpo de solicitud fue removido de `81`
 
 info	[request-property-type-compatible] en ./properties/rules/request-body-max-items-unset_revision.yaml
 	en API POST /pets/{petId}
-		el `items/` de la propiedad de solicitud `type` cambió de `array<boolean/custom>` a `string` (retrocompatible)
+		el `items` de la propiedad de solicitud `type` cambió de `array<boolean/custom>` a `string` (retrocompatible)
 		Este cambio es retrocompatible porque el tipo de medio no es fuertemente tipado (por ejemplo XML), donde cualquier valor puede representarse como texto, por lo que el tipo no se impone en la transmisión. Con un tipo de medio fuertemente tipado como JSON el mismo cambio sería incompatible.
 
 

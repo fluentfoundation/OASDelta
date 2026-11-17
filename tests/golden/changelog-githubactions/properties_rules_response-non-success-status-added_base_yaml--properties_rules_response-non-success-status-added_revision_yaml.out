@@ -1,0 +1,2 @@
+::notice title=response-non-success-status-added,file=./properties/rules/response-non-success-status-added_revision.yaml,line=40,col=17::in API PATCH /store/order added the non-success response with the status `400`
+

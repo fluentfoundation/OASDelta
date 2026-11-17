@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "404":
+                                    headers:
+                                        modified:
+                                            kind:
+                                                schema:
+                                                    minItems:
+                                                        from: 0
+                                                        to: 6
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /store/order
+        :   responses:
+                modified:
+                    "404":
+                        headers:
+                            modified:
+                                kind:
+                                    schema:
+                                        minItems:
+                                            from: 0
+                                            to: 6
+

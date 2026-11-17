@@ -1,0 +1,16 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /pets
+-  the `` request property default value `9007199254740992.00` was removed
+-  the `status/oneOf[subschema #3]/` request property's min was unset from `7.00`
+-  request property `status/oneOf[subschema #3]/` reactivated
+-  the `status/oneOf[subschema #3]/` request property `type/format` was widened from `integer, null/int64` to `any`
+
+
+
+
+
+

@@ -1,0 +1,117 @@
+# Fires api-security-component-api-key-in-changed (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Pet:
+            enum:
+                - ключ
+                - created
+                - Ünïcode
+            type: string
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: pet
+            type: apiKey
+info:
+    title: '**bold**'
+    version: v1
+openapi: 3.0.3
+paths:
+    /store/order:
+        put:
+            operationId: put_store_order
+            parameters:
+                - description: price
+                  in: header
+                  name: 螽匏༙홄㫇躐礎痔
+                  required: false
+                  schema:
+                    nullable: true
+                    readOnly: true
+                    type: integer
+                - description: created
+                  in: header
+                  name: status
+                  schema:
+                    items:
+                        default: 58.625
+                        description: '%20'
+                        type: number
+                    type: array
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            properties:
+                                id:
+                                    properties:
+                                        "\a":
+                                            description: C:\path
+                                            type: boolean
+                                        ' ':
+                                            default: '| table |'
+                                            enum:
+                                                - 뾆
+                                            nullable: true
+                                            type: string
+                                        created:
+                                            minLength: 1
+                                            nullable: true
+                                            type: string
+                                            writeOnly: true
+                                    required:
+                                        - "\a"
+                                        - created
+                                    type: object
+                                pet:
+                                    default: name
+                                    description: 名前
+                                    nullable: true
+                                    type: string
+                                名前:
+                                    additionalProperties: true
+                                    description: 怑닇
+                                    properties:
+                                        '|':
+                                            enum:
+                                                - 18
+                                                - 8
+                                            maximum: 490
+                                            type: integer
+                                        owner:
+                                            deprecated: true
+                                            type: number
+                                    type: object
+                                왐鎧:
+                                    items:
+                                        deprecated: true
+                                        description: price
+                                        readOnly: true
+                                        type: boolean
+                                    minItems: 3
+                                    type: array
+                                    uniqueItems: true
+                            required:
+                                - id
+                            type: object
+            responses:
+                "400":
+                    content:
+                        multipart/form-data:
+                            schema:
+                                default: 32
+                                type: integer
+                    description: id
+                default:
+                    description: '[bracket]'
+                    headers:
+                        ꗨ趪䉋륙니:
+                            schema:
+                                maximum: 527
+                                readOnly: true
+                                type: number
+            summary: created
+            tags:
+                - owner
+servers:
+    - url: https://api.example.com

@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /ünïcode/ключ
+-  the response header `owner` was added for the status `204`
+
+
+
+
+
+

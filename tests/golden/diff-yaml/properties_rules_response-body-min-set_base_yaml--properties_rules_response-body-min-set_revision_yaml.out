@@ -1,0 +1,41 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-8:
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - integer
+                                                        deleted:
+                                                            - object
+                                                    min:
+                                                        from: null
+                                                        to: 4
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                application/json; charset=utf-8:
+                                    schema:
+                                        type:
+                                            added:
+                                                - integer
+                                            deleted:
+                                                - object
+                                        min:
+                                            from: null
+                                            to: 4
+

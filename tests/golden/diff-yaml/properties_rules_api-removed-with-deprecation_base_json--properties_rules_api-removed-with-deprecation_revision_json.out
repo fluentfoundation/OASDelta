@@ -1,0 +1,11 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                deleted:
+                    - DELETE
+endpoints:
+    deleted:
+        - method: DELETE
+          path: /pets
+

@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./properties/rules/response-body-max-set_revision.json, in API PATCH /owners/{ownerId}/pets the response's body max was set to `21.00` [response-body-max-set]. 
+
+

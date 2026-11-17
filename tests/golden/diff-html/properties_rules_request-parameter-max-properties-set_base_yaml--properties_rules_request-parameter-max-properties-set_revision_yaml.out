@@ -1,0 +1,25 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>GET /v1/items</p>
+<ul>
+<li>Modified cookie param: ключ
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'integer' to 'object'</li>
+<li>MaxProps changed from null to 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-changes">Other Changes</h2>
+<p>Servers changed</p>
+<ul>
+<li>New server: <a href="https://2.example.com">https://2.example.com</a></li>
+</ul>
+

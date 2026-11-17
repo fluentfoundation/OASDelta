@@ -1,0 +1,19 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PUT /v1/items
+- :warning: the request's body `type` changed from `string` to `number`
+-  the request's body maxLength was unset from `240`
+-  the request's body minLength was unset from `5`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

@@ -1,0 +1,8 @@
+components:
+    securitySchemes:
+        modified:
+            api_key:
+                in:
+                    from: query
+                    to: cookie
+

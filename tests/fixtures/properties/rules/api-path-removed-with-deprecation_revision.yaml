@@ -1,0 +1,136 @@
+{
+  "components": {
+    "securitySchemes": {
+      "api_key": {
+        "in": "header",
+        "name": "*star",
+        "type": "apiKey"
+      },
+      "bearer": {
+        "scheme": "basic",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "title": "굔덱煱",
+    "version": "v1"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/v1/items/v2": {
+      "get": {
+        "deprecated": true,
+        "parameters": [
+          {
+            "in": "header",
+            "name": "id",
+            "schema": {
+              "deprecated": true,
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          {
+            "description": "\u0026anchor",
+            "explode": true,
+            "in": "query",
+            "name": "owner",
+            "required": false,
+            "schema": {
+              "items": {
+                "description": "price",
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "type": "array"
+            }
+          },
+          {
+            "description": "...",
+            "in": "cookie",
+            "name": "price",
+            "schema": {
+              "properties": {
+                "name": {
+                  "description": "@at",
+                  "type": "boolean"
+                },
+                "pet": {
+                  "enum": [
+                    -9223372036854775808
+                  ],
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "status": {
+                  "deprecated": true,
+                  "enum": [
+                    "price",
+                    "ꙷ娓"
+                  ],
+                  "minLength": 4,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "ключ": {
+                  "deprecated": true,
+                  "enum": [
+                    8,
+                    4,
+                    -1
+                  ],
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "status",
+                "name",
+                "ключ"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              },
+              "multipart/form-data": {
+                "schema": {
+                  "example": "tag",
+                  "readOnly": true,
+                  "type": "boolean"
+                }
+              }
+            },
+            "description": "!tag"
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "bearer": []
+    }
+  ]
+}

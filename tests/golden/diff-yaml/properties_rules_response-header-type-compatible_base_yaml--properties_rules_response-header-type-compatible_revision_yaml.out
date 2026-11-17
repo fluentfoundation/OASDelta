@@ -1,0 +1,35 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "200":
+                                    headers:
+                                        modified:
+                                            "0x1f":
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - object
+                                                        deleted:
+                                                            - string
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /ünïcode/ключ
+        :   responses:
+                modified:
+                    "200":
+                        headers:
+                            modified:
+                                "0x1f":
+                                    schema:
+                                        type:
+                                            added:
+                                                - object
+                                            deleted:
+                                                - string
+

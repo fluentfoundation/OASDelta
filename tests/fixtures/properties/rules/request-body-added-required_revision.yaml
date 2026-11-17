@@ -1,0 +1,68 @@
+# Fires request-body-added-required (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        bearer:
+            bearerFormat: JWT
+            scheme: bearer
+            type: http
+info:
+    title: owner
+    version: v1
+openapi: 3.0.3
+paths:
+    /store/order:
+        patch:
+            parameters:
+                - in: cookie
+                  name:  nbsp
+                  schema:
+                    properties:
+                        '*star':
+                            enum:
+                                - status
+                                - price
+                            type: string
+                        created:
+                            deprecated: true
+                            readOnly: true
+                            type: string
+                        ключ:
+                            description: 묗㪶ꡢප誂ચ뎜꿮
+                            type: boolean
+                    required:
+                        - created
+                    type: object
+                - in: header
+                  name: created
+                  schema:
+                    default: false
+                    enum:
+                        - true
+                        - false
+                    nullable: true
+                    type: boolean
+                    writeOnly: true
+            requestBody:
+                content:
+                    '*/*':
+                        example: "䝭⇐\x89쐡셴향扼"
+                        schema:
+                            properties:
+                                id:
+                                    type: number
+                            type: object
+                required: true
+            responses:
+                "200":
+                    description: '[bracket]'
+                    headers:
+                        '''single''':
+                            schema:
+                                type: string
+                        '*star':
+                            required: false
+                            schema:
+                                type: integer
+tags:
+    - name: id
+    - name: status

@@ -1,0 +1,24 @@
+- id: response-body-type-changed
+  text: the response's body `type` changed from `integer` to `string` for status `201`
+  level: 3
+  operation: GET
+  path: /v1/items
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-default-value-removed_revision.yaml
+    line: 85
+    column: 33
+  fingerprint: 8cdee63c18d4
+- id: api-version-not-bumped
+  text: a breaking change was detected but the version is still `1.0.0`
+  level: 1
+  section: info
+  fingerprint: d3f96cd643c1
+- id: response-body-default-value-removed
+  text: the response body `multipart/form-data` default value `14.00` was removed for the status `201`
+  level: 1
+  operation: GET
+  path: /v1/items
+  section: paths
+  fingerprint: f89281e4e655
+

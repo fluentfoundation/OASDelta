@@ -1,0 +1,37 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "204":
+                                    content:
+                                        modified:
+                                            application/json; charset=utf-8:
+                                                schema:
+                                                    items:
+                                                        type:
+                                                            added:
+                                                                - number
+                                                            deleted:
+                                                                - integer
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /store/order
+        :   responses:
+                modified:
+                    "204":
+                        content:
+                            modified:
+                                application/json; charset=utf-8:
+                                    schema:
+                                        items:
+                                            type:
+                                                added:
+                                                    - number
+                                                deleted:
+                                                    - integer
+

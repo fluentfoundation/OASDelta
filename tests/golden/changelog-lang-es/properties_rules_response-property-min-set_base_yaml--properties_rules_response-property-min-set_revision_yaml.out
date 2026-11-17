@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-property-min-set] en ./properties/rules/response-property-min-set_revision.yaml
+	en API POST /v1/items
+		el valor min de la propiedad de respuesta `owner/price/items/名前` fue establecido en `20.00` para el estado `500` (esquema compartido: `Item`, también en `owner/ключ/items/名前`)
+
+

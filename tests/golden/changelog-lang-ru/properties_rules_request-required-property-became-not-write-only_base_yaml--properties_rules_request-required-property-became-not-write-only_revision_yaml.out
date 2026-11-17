@@ -1,0 +1,18 @@
+4 изменений: 0 error, 0 warning, 4 info
+info	[request-property-any-of-added] в ./properties/rules/request-required-property-became-not-write-only_revision.yaml
+	в API PUT /items/{id}.json
+		добавлено `subschema #1, subschema #2` в список `anyOf` свойства запроса `owner/status`
+
+info	[request-property-min-unset] в ./properties/rules/request-required-property-became-not-write-only_revision.yaml
+	в API PUT /items/{id}.json
+		значение min у поля запроса `owner/status` удалено, предыдущее значение - `2.00`
+
+info	[request-property-type-generalized] в ./properties/rules/request-required-property-became-not-write-only_revision.yaml
+	в API PUT /items/{id}.json
+		у поля запроса `owner/status` `type` расширен с `integer` до `any`
+
+info	[request-required-property-became-not-write-only] в ./properties/rules/request-required-property-became-not-write-only_revision.yaml
+	в API PUT /items/{id}.json
+		обязательное поле запроса `owner/status` перестало быть только для записи
+
+

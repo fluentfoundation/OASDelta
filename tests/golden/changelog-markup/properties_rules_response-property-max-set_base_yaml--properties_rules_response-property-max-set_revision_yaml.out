@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /items/{id}.json
+-  the `anyOf[subschema #2]/` response property's max was set to `1.00` for the response status `400`
+
+
+
+
+
+

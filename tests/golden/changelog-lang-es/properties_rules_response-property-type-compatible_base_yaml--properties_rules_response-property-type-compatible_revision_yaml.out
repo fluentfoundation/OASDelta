@@ -1,0 +1,7 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-property-type-compatible] en ./properties/rules/response-property-type-compatible_revision.yaml
+	en API PUT /ünïcode/ключ
+		el `additionalProperties/` de la propiedad de respuesta `type` cambió de `string` a `integer` para el estado `400` (retrocompatible)
+		Este cambio es retrocompatible porque el tipo de medio no es fuertemente tipado (por ejemplo XML), donde cualquier valor puede representarse como texto, por lo que el tipo no se impone en la transmisión. Con un tipo de medio fuertemente tipado como JSON el mismo cambio sería incompatible.
+
+

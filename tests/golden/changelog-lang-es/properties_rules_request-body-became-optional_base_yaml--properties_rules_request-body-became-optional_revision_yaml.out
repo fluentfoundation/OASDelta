@@ -1,0 +1,14 @@
+3 cambios: 1 error, 0 warning, 2 info
+error	[response-media-type-removed] en ./properties/rules/request-body-became-optional_revision.yaml
+	en API GET /pets/{petId}
+		removido el tipo de media `application/json; charset=utf-8` de la respuesta con estado `200`
+
+info	[api-version-not-bumped]
+	en info
+		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+
+info	[request-body-became-optional] en ./properties/rules/request-body-became-optional_revision.yaml
+	en API PATCH /pets/{petId}
+		el cuerpo de solicitud se volvió opcional
+
+

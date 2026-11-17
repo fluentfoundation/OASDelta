@@ -1,0 +1,21 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PUT /store/order
+- :warning: the request's body `type` changed from `object` to `array<string>`
+- :warning: removed the request property `...`
+- :warning: removed the request property `C:\path`
+- :warning: removed the request property `kind`
+-  removed the deprecated request property `id`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

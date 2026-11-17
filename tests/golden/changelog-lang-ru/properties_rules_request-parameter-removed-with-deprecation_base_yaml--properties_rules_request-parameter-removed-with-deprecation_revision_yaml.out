@@ -1,0 +1,15 @@
+3 изменений: 0 error, 1 warning, 2 info
+warning	[request-parameter-removed] в ./properties/rules/request-parameter-removed-with-deprecation_revision.yaml
+	в API GET /v1/items
+		удалён `query` параметр запроса `䔫䪐뫑襖`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+info	[new-optional-request-parameter] в ./properties/rules/request-parameter-removed-with-deprecation_revision.yaml
+	в API GET /pets/{petId}
+		добавлен новый необязательный `cookie` параметр зароса `**bold**`
+
+info	[request-parameter-removed-with-deprecation] в ./properties/rules/request-parameter-removed-with-deprecation_revision.yaml
+	в API GET /pets/{petId}
+		удален `query` параметр запроса `**bold**` с объявлением устаревшим
+
+

@@ -1,0 +1,2 @@
+::error title=request-parameter-max-set,file=./properties/rules/request-parameter-max-set_revision.yaml,line=50,col=21::in API DELETE /v1/items for the `header` request parameter `"quoted"`, the max was set to `21.00`
+

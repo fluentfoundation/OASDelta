@@ -1,0 +1,47 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    PUT:
+                        requestBody:
+                            content:
+                                modified:
+                                    '*/*':
+                                        schema:
+                                            type:
+                                                added:
+                                                    - array
+                                                deleted:
+                                                    - object
+                                            items:
+                                                schemaAdded: true
+                                            properties:
+                                                deleted:
+                                                    - '...'
+                                                    - C:\path
+                                                    - id
+                                                    - kind
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /store/order
+        :   requestBody:
+                content:
+                    modified:
+                        '*/*':
+                            schema:
+                                type:
+                                    added:
+                                        - array
+                                    deleted:
+                                        - object
+                                items:
+                                    schemaAdded: true
+                                properties:
+                                    deleted:
+                                        - '...'
+                                        - C:\path
+                                        - id
+                                        - kind
+

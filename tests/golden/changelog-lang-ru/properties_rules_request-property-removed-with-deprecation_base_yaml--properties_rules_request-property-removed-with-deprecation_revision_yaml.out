@@ -1,0 +1,26 @@
+6 изменений: 1 error, 3 warning, 2 info
+error	[request-body-type-changed] в ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+	в API PUT /store/order
+		`type` тела запроса изменён с `object` на `array<string>`
+
+warning	[request-property-removed] в ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+	в API PUT /store/order
+		удалено поле запроса `...`
+
+warning	[request-property-removed] в ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+	в API PUT /store/order
+		удалено поле запроса `C:\path`
+
+warning	[request-property-removed] в ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+	в API PUT /store/order
+		удалено поле запроса `kind`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-property-removed-with-deprecation] в ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+	в API PUT /store/order
+		удалено устаревшее поле запроса `id`
+
+

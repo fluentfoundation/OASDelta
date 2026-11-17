@@ -1,0 +1,25 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    POST:
+                        parameters:
+                            modified:
+                                header:
+                                    tag:
+                                        required:
+                                            from: true
+                                            to: false
+endpoints:
+    modified:
+        ?   method: POST
+            path: /v1/items
+        :   parameters:
+                modified:
+                    header:
+                        tag:
+                            required:
+                                from: true
+                                to: false
+

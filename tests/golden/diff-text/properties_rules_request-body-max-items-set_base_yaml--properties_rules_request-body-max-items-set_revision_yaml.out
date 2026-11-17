@@ -1,0 +1,24 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /pets
+- Request body changed
+  - Content changed
+    - Modified media type: application/vnd.api+json
+      - Schema changed
+        - MaxItems changed from null to 11
+- Responses changed
+  - Modified response: default
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Items changed
+            - Properties changed
+              - New property: 즤ꇔ缦䎖糀䱢렄꧑
+
+

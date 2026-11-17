@@ -1,0 +1,35 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "400":
+                                    content:
+                                        modified:
+                                            '*/*':
+                                                schema:
+                                                    enum:
+                                                        enumAdded: true
+                                                        added:
+                                                            - '**bold**-1'
+                                                            - '**bold**'
+endpoints:
+    modified:
+        ?   method: POST
+            path: /store/order
+        :   responses:
+                modified:
+                    "400":
+                        content:
+                            modified:
+                                '*/*':
+                                    schema:
+                                        enum:
+                                            enumAdded: true
+                                            added:
+                                                - '**bold**-1'
+                                                - '**bold**'
+

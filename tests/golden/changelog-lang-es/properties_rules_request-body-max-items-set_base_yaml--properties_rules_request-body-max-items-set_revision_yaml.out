@@ -1,0 +1,11 @@
+2 cambios: 0 error, 1 warning, 1 info
+warning	[request-body-max-items-set] en ./properties/rules/request-body-max-items-set_revision.yaml
+	en API PUT /pets
+		el número máximo de elementos del cuerpo de solicitud fue establecido en `11`
+		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels. Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+info	[response-optional-property-added] en ./properties/rules/request-body-max-items-set_revision.yaml
+	en API PUT /pets
+		agregada la propiedad opcional `items/즤ꇔ缦䎖糀䱢렄꧑` a la respuesta con estado `default`
+
+

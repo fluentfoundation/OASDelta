@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PATCH /ünïcode/ключ
+-  the `0x1f` response header's `type` changed from `string` to `object` for the status `200` (backward compatible)
+
+
+
+
+
+

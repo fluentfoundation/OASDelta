@@ -1,0 +1,117 @@
+# Fires request-property-enum-value-added (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        oauth:
+            flows:
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: "0x1F"
+    version: v1
+openapi: 3.1.0
+paths:
+    /store/order:
+        post:
+            operationId: post_store_order
+            parameters:
+                - in: query
+                  name: '!tag'
+                  schema:
+                    enum:
+                        - true
+                        - false
+                    type:
+                        - boolean
+                        - "null"
+                - description: kind
+                  in: query
+                  name: "yes"
+                  required: true
+                  schema:
+                    properties:
+                        id:
+                            description: '-'
+                            type: number
+                    type: object
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            items:
+                                allOf:
+                                    - minimum: -2
+                                      type:
+                                        - number
+                                        - "null"
+                                    - type:
+                                        - number
+                                        - "null"
+                                    - description: name
+                                      format: float
+                                      type: number
+                            minItems: 1
+                            type: array
+                    application/json; charset=utf-8:
+                        schema:
+                            properties:
+                                '''single''':
+                                    additionalProperties:
+                                        type: string
+                                    properties:
+                                        '| table |':
+                                            default: 67
+                                            type: integer
+                                        "0x1F":
+                                            format: date
+                                            type: string
+                                        Ünïcode:
+                                            example: created
+                                            maximum: 973
+                                            type:
+                                                - integer
+                                                - "null"
+                                        恝偒䴜귢:
+                                            format: custom
+                                            readOnly: true
+                                            type: boolean
+                                            writeOnly: true
+                                    required:
+                                        - "0x1F"
+                                        - Ünïcode
+                                        - '| table |'
+                                    type: object
+                                '@at':
+                                    anyOf:
+                                        - format: custom
+                                          type:
+                                            - boolean
+                                            - "null"
+                                        - format: date
+                                          type: string
+                                    discriminator:
+                                        propertyName: ⓘ
+                                "yes":
+                                    type:
+                                        - string
+                                        - "null"
+                            required:
+                                - '@at'
+                                - '''single'''
+                            type: object
+                required: false
+            responses:
+                "404":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                enum:
+                                    - 1
+                                    - 2
+                                readOnly: true
+                                type: integer
+                    description: '''single'''

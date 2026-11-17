@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-property-default-value-added] at ./properties/rules/response-property-default-value-added_revision.yaml
+	in API GET /ünïcode/ключ
+		the `` response's property default value `45.00` was added for the status `204`
+
+

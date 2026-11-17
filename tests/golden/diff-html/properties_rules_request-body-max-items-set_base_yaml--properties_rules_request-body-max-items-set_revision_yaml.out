@@ -1,0 +1,56 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PUT /pets</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/vnd.api+json
+<ul>
+<li>Schema changed
+<ul>
+<li>MaxItems changed from null to 11</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Modified response: default
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: text/plain
+<ul>
+<li>Schema changed
+<ul>
+<li>Items changed
+<ul>
+<li>Properties changed
+<ul>
+<li>New property: 즤ꇔ缦䎖糀䱢렄꧑</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

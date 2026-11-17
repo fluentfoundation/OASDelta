@@ -1,0 +1,1 @@
+[{"id":"request-body-default-value-added","text":"the request body `application/json` default value `---` was added","level":1,"operation":"PUT","operationId":"put_v1_items","path":"/v1/items","section":"paths","revisionSource":{"file":"./properties/rules/request-body-default-value-added_revision.yaml","line":24,"column":29},"fingerprint":"2937aa867793"}]

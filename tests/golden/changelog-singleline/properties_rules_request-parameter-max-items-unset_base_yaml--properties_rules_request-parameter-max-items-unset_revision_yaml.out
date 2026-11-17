@@ -1,0 +1,8 @@
+3 changes: 0 error, 0 warning, 3 info
+info at ./properties/rules/request-parameter-max-items-unset_revision.yaml, in API DELETE /search `cookie` request parameter `뻩씃쑶䘎冘` list-of-types was widened by adding types `string` [request-parameter-list-of-types-widened]. 
+
+info at ./properties/rules/request-parameter-max-items-unset_revision.yaml, in API DELETE /search for the `cookie` request parameter `뻩씃쑶䘎冘`, the maxItems was unset from `92` [request-parameter-max-items-unset]. 
+
+info at ./properties/rules/request-parameter-max-items-unset_revision.yaml, in API DELETE /search for the `cookie` request parameter `뻩씃쑶䘎冘`, the minItems was unset from `3` [request-parameter-min-items-unset]. 
+
+

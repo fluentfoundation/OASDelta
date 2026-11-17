@@ -1,0 +1,25 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+DELETE /items/{id}.json
+- Extensions changed
+  - New extension: x-sunset
+- Tags changed from '' to 'id'
+- Deprecated changed from false to true
+
+PUT /pets
+- Responses changed
+  - Modified response: 204
+    - Content changed
+      - Modified media type: application/vnd.api+json
+        - Schema changed
+          - Properties changed
+            - Modified property: owner
+              - Deleted enum values: [19]
+
+

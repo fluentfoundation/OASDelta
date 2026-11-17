@@ -1,0 +1,20 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /items/{id}.json
+- Request body changed
+  - Content changed
+    - Modified media type: text/plain
+      - Schema changed
+        - Properties changed
+          - Modified property: -
+            - Property 'AnyOf' changed
+              - Modified schema: subschema #2
+                - MaxItems changed from null to 1
+
+

@@ -1,0 +1,2 @@
+::notice title=response-body-max-properties-set,file=./properties/rules/response-body-max-properties-set_revision.yaml,line=28,col=33::in API GET /search the response's body maxProperties was set to `11`
+

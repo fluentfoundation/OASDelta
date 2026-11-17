@@ -1,0 +1,16 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /v1/items
+- :warning: the request's body became not nullable
+- :warning: the request's body `type` changed from `number, null` to `boolean`
+-  the request body `multipart/form-data` default value `-26.12` was removed
+-  the request's body min was unset from `-2.00`
+
+
+
+
+
+

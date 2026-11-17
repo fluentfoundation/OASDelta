@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                "404":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    enum:
+                                                        added:
+                                                            - created
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "404":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        enum:
+                                            added:
+                                                - created
+

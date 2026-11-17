@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                2XX:
+                                    headers:
+                                        modified:
+                                            owner:
+                                                schema:
+                                                    nullable:
+                                                        from: true
+                                                        to: false
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    2XX:
+                        headers:
+                            modified:
+                                owner:
+                                    schema:
+                                        nullable:
+                                            from: true
+                                            to: false
+

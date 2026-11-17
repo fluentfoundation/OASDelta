@@ -1,0 +1,13 @@
+- id: response-required-property-became-write-only
+  text: the response required property `名前/owner` became write-only for the status `204`
+  level: 3
+  operation: GET
+  operationId: 名前
+  path: /pets/{petId}
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-required-property-became-write-only_revision.yaml
+    line: 90
+    column: 49
+  fingerprint: ffb52cbc62ef
+

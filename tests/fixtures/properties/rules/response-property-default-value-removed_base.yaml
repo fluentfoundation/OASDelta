@@ -1,0 +1,316 @@
+{
+  "info": {
+    "title": "id",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/ünïcode/ключ": {
+      "patch": {
+        "parameters": [
+          {
+            "deprecated": true,
+            "in": "header",
+            "name": " ",
+            "schema": {
+              "nullable": true,
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "名前",
+            "required": true,
+            "schema": {
+              "format": "custom",
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "cookie",
+            "name": "status",
+            "required": false,
+            "schema": {
+              "deprecated": true,
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset=utf-8": {
+              "schema": {
+                "properties": {
+                  "ключ": {
+                    "default": true,
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  "名前": {
+                    "allOf": [
+                      {
+                        "deprecated": true,
+                        "format": "date",
+                        "maxLength": 240,
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      {
+                        "enum": [
+                          true,
+                          false
+                        ],
+                        "nullable": true,
+                        "type": "boolean"
+                      },
+                      {
+                        "nullable": true,
+                        "type": "integer"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "名前"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "properties": {
+                    "created": {
+                      "items": {
+                        "default": "pet",
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "ключ": {
+                      "minimum": -8,
+                      "nullable": true,
+                      "type": "integer"
+                    },
+                    "ꪎ": {
+                      "items": {
+                        "default": -9223372036854775808,
+                        "enum": [
+                          17,
+                          5,
+                          7
+                        ],
+                        "format": "int32",
+                        "minimum": -2,
+                        "type": "integer"
+                      },
+                      "maxItems": 68,
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "created",
+                    "ключ",
+                    "ꪎ"
+                  ],
+                  "type": "object"
+                }
+              },
+              "application/vnd.api+json": {
+                "schema": {
+                  "format": "date",
+                  "minLength": 4,
+                  "type": "string"
+                }
+              }
+            },
+            "description": "\"quoted\""
+          },
+          "2XX": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "tag": {
+                        "description": "kind",
+                        "example": "劶뚵뇆",
+                        "format": "custom",
+                        "readOnly": true,
+                        "type": "boolean",
+                        "writeOnly": true
+                      },
+                      "ключ": {
+                        "nullable": true,
+                        "type": "integer"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array",
+                  "uniqueItems": true
+                }
+              }
+            },
+            "description": "id"
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "ключ",
+                  "format": "date-time",
+                  "type": "string"
+                }
+              },
+              "application/vnd.api+json": {
+                "schema": {
+                  "nullable": true,
+                  "type": "boolean"
+                }
+              }
+            },
+            "description": "kind"
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_ünïcode_ключ",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "C:\\path",
+            "schema": {
+              "default": 52,
+              "deprecated": true,
+              "enum": [
+                4,
+                8
+              ],
+              "nullable": true,
+              "type": "integer",
+              "writeOnly": true
+            },
+            "style": "spaceDelimited"
+          },
+          {
+            "in": "header",
+            "name": "鋺ⵂ",
+            "schema": {
+              "items": {
+                "format": "uuid",
+                "nullable": true,
+                "type": "string"
+              },
+              "minItems": 0,
+              "type": "array"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "properties": {
+                    "tag": {
+                      "items": {
+                        "description": "id",
+                        "format": "float",
+                        "type": "number"
+                      },
+                      "maxItems": 96,
+                      "type": "array"
+                    },
+                    "x\ty": {
+                      "description": "id",
+                      "minimum": 2,
+                      "type": "integer"
+                    },
+                    "Ünïcode": {
+                      "format": "email",
+                      "readOnly": true,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "tag",
+                    "Ünïcode",
+                    "x\ty"
+                  ],
+                  "type": "object"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "default": false,
+                  "description": "名前",
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "nullable": true,
+                  "type": "boolean"
+                }
+              }
+            },
+            "description": "kind",
+            "headers": {
+              "no": {
+                "schema": {
+                  "nullable": true,
+                  "type": "boolean"
+                }
+              },
+              "名前": {
+                "schema": {
+                  "enum": [
+                    "a~b",
+                    "id",
+                    "pet",
+                    "@at"
+                  ],
+                  "example": "id",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "description": "%20",
+                      "properties": {
+                        "ключ": {
+                          "maximum": 307,
+                          "nullable": true,
+                          "type": "integer"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    {
+                      "format": "custom",
+                      "type": "boolean"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "name"
+          }
+        },
+        "summary": "{brace}"
+      }
+    }
+  }
+}

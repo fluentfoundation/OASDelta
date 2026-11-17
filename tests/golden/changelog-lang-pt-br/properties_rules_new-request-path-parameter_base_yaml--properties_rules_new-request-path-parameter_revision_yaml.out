@@ -1,0 +1,15 @@
+3 alterações: 1 error, 1 warning, 1 info
+error	[new-request-path-parameter] em ./properties/rules/new-request-path-parameter_revision.yaml
+	em API GET /store/order
+		adicionado o novo parâmetro de caminho da requisição `pet`
+
+warning	[request-parameter-removed] em ./properties/rules/new-request-path-parameter_revision.yaml
+	em API GET /store/order
+		parâmetro de requisição do tipo `cookie` e nome `pet` removido
+		Este é um aviso porque alguns aplicativos podem retornar um erro ao receber um parâmetro que não esperam. Recomenda-se depreciar o parâmetro primeiro.
+
+info	[api-version-not-bumped]
+	em info
+		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+
+

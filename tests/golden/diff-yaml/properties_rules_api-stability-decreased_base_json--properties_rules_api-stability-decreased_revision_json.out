@@ -1,0 +1,17 @@
+paths:
+    modified:
+        /ünïcode/ключ:
+            operations:
+                modified:
+                    DELETE:
+                        extensions:
+                            added:
+                                - x-stability-level
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /ünïcode/ключ
+        :   extensions:
+                added:
+                    - x-stability-level
+

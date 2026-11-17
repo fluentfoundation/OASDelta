@@ -1,0 +1,14 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /ünïcode/ключ
+- :warning: removed `subschema #1, subschema #2, subschema #3` from the response body `allOf` list for the response status `default`
+-  the response's body `type` was narrowed from `any` to `object` for status `default`
+
+
+
+
+
+

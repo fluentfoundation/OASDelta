@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /pets/{petId}
+-  added the new optional `cookie` request parameter `**bold**`
+-  deleted the `query` request parameter `**bold**` with deprecation
+
+
+### GET /v1/items
+- :warning: deleted the `query` request parameter `䔫䪐뫑襖`
+
+
+
+
+
+

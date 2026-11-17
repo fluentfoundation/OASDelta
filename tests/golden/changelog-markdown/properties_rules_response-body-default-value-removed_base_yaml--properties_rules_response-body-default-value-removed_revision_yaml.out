@@ -1,0 +1,18 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### GET /v1/items
+- :warning: the response's body `type` changed from `integer` to `string` for status `201`
+-  the response body `multipart/form-data` default value `14.00` was removed for the status `201`
+
+
+
+
+## Info
+-  a breaking change was detected but the version is still `1.0.0`
+
+
+
+

@@ -1,0 +1,10 @@
+2 changes: 2 error, 0 warning, 0 info
+error	[response-header-min-length-unset] at ./properties/rules/response-header-min-length-unset_revision.yaml
+	in API GET /store/order
+		the `id` response header's minLength was unset from `5` for the status `500`
+
+error	[response-header-type-changed] at ./properties/rules/response-header-min-length-unset_revision.yaml
+	in API GET /store/order
+		the `id` response header's `type` changed from `string, null` to `any` for the status `500`
+
+

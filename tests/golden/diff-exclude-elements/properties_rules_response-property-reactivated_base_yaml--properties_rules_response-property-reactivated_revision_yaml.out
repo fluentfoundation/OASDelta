@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets/{petId}":{"operations":{"modified":{"PATCH":{"responses":{"modified":{"default":{"content":{"modified":{"*/*":{"schema":{"items":{"deprecated":{"from":true,"to":false}}}}}}}}}}}}}}}}

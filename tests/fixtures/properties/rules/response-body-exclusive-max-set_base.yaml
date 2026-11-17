@@ -1,0 +1,198 @@
+# Fires response-body-exclusive-max-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            deprecated: true
+            enum:
+                - -38.375
+                - 1e-07
+                - 1e+300
+            type: number
+info:
+    title: owner
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /search:
+        get:
+            operationId: get_search
+            responses:
+                2XX:
+                    content:
+                        application/json:
+                            schema:
+                                properties:
+                                    "\a":
+                                        default: 5
+                                        deprecated: true
+                                        enum:
+                                            - -1
+                                        type:
+                                            - integer
+                                            - "null"
+                                    '*star':
+                                        additionalProperties: false
+                                        properties:
+                                            '| table |':
+                                                default: 66
+                                                description: ключ
+                                                maximum: 965
+                                                type: number
+                                            price:
+                                                example: price
+                                                maximum: 971
+                                                minimum: 4
+                                                type: number
+                                        required:
+                                            - price
+                                        type: object
+                                        x-extensible-enum:
+                                            - 名前
+                                type: object
+                        application/vnd.api+json:
+                            schema:
+                                $ref: '#/components/schemas/Owner'
+                    description: "0x1F"
+                    headers:
+                        名前:
+                            schema:
+                                description: '*star'
+                                enum:
+                                    - 14
+                                    - 7
+                                    - -1
+                                    - 1
+                                minimum: 1
+                                type:
+                                    - integer
+                                    - "null"
+                "204":
+                    description: tag
+                default:
+                    content:
+                        '*/*':
+                            schema:
+                                type: string
+                    description: '>'
+            summary: pet
+            x-stability-level: draft
+        put:
+            operationId: put_search
+            parameters:
+                - in: header
+                  name: Ünïcode
+                  schema:
+                    description: '...'
+                    type:
+                        - boolean
+                        - "null"
+                - in: query
+                  name: 名前
+                  schema:
+                    properties:
+                        name:
+                            type: string
+                        price:
+                            type: string
+                        Ünïcode:
+                            maxLength: 29
+                            pattern: '[^\n]'
+                            type:
+                                - string
+                                - "null"
+                    required:
+                        - price
+                    type: object
+                - description: ""
+                  in: query
+                  name: pet
+                  schema:
+                    maximum: 835
+                    type:
+                        - number
+                        - "null"
+            requestBody:
+                content:
+                    text/plain:
+                        schema:
+                            additionalProperties:
+                                type: string
+                            type: object
+                description: _under_
+            responses:
+                "500":
+                    description: price
+    /v1/items:
+        delete:
+            operationId: |-
+                line1
+                line2
+            parameters:
+                - in: cookie
+                  name: 孱
+                  required: false
+                  schema:
+                    items:
+                        enum:
+                            - 16
+                        type:
+                            - integer
+                            - "null"
+                    maxItems: 50
+                    type: array
+            responses:
+                "201":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                default: 79
+                                description: 돵뷬奁亲匒뫪
+                                format: double
+                                maximum: 60
+                                type: number
+                        application/vnd.api+json:
+                            schema:
+                                $ref: '#/components/schemas/Owner'
+                    description: kind
+                "400":
+                    content:
+                        application/xml:
+                            schema:
+                                type: object
+                    description: ꣻᨀ滇嵀腗掎
+                    headers:
+                        status:
+                            schema:
+                                deprecated: true
+                                enum:
+                                    - 98
+                                    - 41
+                                type: number
+                "500":
+                    description: owner
+        get:
+            operationId: Ünïcode
+            parameters:
+                - in: query
+                  name: created
+                  required: true
+                  schema:
+                    type:
+                        - number
+                        - "null"
+            responses:
+                "204":
+                    content:
+                        '*/*':
+                            schema:
+                                format: custom
+                                type: boolean
+                        application/json:
+                            schema:
+                                enum:
+                                    - kind
+                                    - status
+                                format: byte
+                                minLength: 4
+                                type: string
+                    description: tag

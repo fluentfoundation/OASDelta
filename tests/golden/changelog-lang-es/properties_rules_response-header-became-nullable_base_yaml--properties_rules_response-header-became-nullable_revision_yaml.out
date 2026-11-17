@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-header-became-nullable] en ./properties/rules/response-header-became-nullable_revision.yaml
+	en API PATCH /items/{id}.json
+		el encabezado de respuesta `id` se volvió nulable para el estado `2XX`
+
+

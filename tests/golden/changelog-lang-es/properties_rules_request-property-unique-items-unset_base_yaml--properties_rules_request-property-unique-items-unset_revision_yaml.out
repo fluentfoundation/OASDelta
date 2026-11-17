@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[request-property-unique-items-unset] en ./properties/rules/request-property-unique-items-unset_revision.yaml
+	en API PUT /store/order
+		el valor uniqueItems de la propiedad de solicitud `items/` fue removido
+
+

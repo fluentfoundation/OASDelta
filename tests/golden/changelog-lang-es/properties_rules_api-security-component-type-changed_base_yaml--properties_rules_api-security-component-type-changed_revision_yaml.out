@@ -1,0 +1,6 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[api-security-component-type-changed]
+	en components/securitySchemes
+		el tipo del esquema de seguridad `bearer` fue cambiado de `http` a ``
+
+

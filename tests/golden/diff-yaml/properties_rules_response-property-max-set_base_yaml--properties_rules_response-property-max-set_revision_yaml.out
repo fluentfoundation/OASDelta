@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "400":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    anyOf:
+                                                        modified:
+                                                            - base:
+                                                                index: 1
+                                                              revision:
+                                                                index: 1
+                                                              diff:
+                                                                max:
+                                                                    from: null
+                                                                    to: 1
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "400":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        anyOf:
+                                            modified:
+                                                - base:
+                                                    index: 1
+                                                  revision:
+                                                    index: 1
+                                                  diff:
+                                                    max:
+                                                        from: null
+                                                        to: 1
+

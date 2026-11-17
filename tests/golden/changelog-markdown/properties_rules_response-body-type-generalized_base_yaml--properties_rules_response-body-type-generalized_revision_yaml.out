@@ -1,0 +1,17 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### DELETE /ünïcode/ключ
+- :warning: the response's body max was unset from `886.00`
+- :warning: the response's body min was unset from `1.00`
+- :warning: the response's body `type/format` was widened from `integer/int64` to `number` for status `204`
+- :warning: removed the media type `text/plain` for the response with the status `default`
+-  the response's body `type` changed from `string` to `number` for status `default` (backward compatible)
+
+
+
+
+
+

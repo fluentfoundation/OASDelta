@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### GET /pets/{petId}
+- :warning: the response required property `名前/owner` became write-only for the status `204`
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+3 changes: 0 error, 0 warning, 3 info
+info at ./properties/rules/api-tag-added_base.yaml, in API DELETE /items/{id}.json api tag `id` added [api-tag-added]. 
+
+info at ./properties/rules/api-tag-added_revision.yaml, in API DELETE /items/{id}.json endpoint deprecated with sunset date `2099-12-31` [endpoint-deprecated-with-sunset]. 
+
+info at ./properties/rules/api-tag-added_revision.yaml, in API PUT /pets removed the `19.00` enum value from the `owner` response property for the response status `204` [response-property-enum-value-removed]. 
+
+

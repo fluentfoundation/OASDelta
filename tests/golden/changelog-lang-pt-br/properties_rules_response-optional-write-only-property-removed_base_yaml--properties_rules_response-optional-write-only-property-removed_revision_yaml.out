@@ -1,0 +1,26 @@
+6 alterações: 3 error, 0 warning, 3 info
+error	[response-body-type-changed] em ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+	em API PUT /pets/{petId}
+		o `type` do corpo da resposta foi alterado de `object` para `number` para o status `400`
+
+error	[response-required-property-removed] em ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+	em API PUT /pets/{petId}
+		a propriedade obrigatória `owner` foi removida da resposta com o status `400`
+
+error	[response-required-property-removed] em ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+	em API PUT /pets/{petId}
+		a propriedade obrigatória `薫鑈஼ห꼁洲㗔` foi removida da resposta com o status `400`
+
+info	[endpoint-deprecated] em ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+	em API PUT /pets/{petId}
+		endpoint depreciado
+
+info	[response-optional-write-only-property-removed] em ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+	em API PUT /pets/{petId}
+		a propriedade opcional somente escrita `<b>&amp;` foi removida da resposta com o status `400`
+
+info	[response-required-property-removed-with-deprecation] em ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+	em API PUT /pets/{petId}
+		a propriedade obrigatória depreciada `price` foi removida da resposta com o status `400`
+
+

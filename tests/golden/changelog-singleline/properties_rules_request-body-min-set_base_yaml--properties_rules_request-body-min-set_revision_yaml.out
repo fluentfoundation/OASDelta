@@ -1,0 +1,6 @@
+2 changes: 1 error, 0 warning, 1 info
+error at ./properties/rules/request-body-min-set_revision.yaml, in API PUT /pets/{petId} the request's body min was set to `5.00` [request-body-min-set]. Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+

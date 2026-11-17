@@ -1,0 +1,47 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            '*/*':
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - number
+                                                        deleted:
+                                                            - string
+                                                    format:
+                                                        from: date
+                                                        to: ""
+                                                    minLength:
+                                                        from: 2
+                                                        to: 0
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /items/{id}.json
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                '*/*':
+                                    schema:
+                                        type:
+                                            added:
+                                                - number
+                                            deleted:
+                                                - string
+                                        format:
+                                            from: date
+                                            to: ""
+                                        minLength:
+                                            from: 2
+                                            to: 0
+

@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-body-max-properties-set] at ./properties/rules/response-body-max-properties-set_revision.yaml
+	in API GET /search
+		the response's body maxProperties was set to `11`
+
+

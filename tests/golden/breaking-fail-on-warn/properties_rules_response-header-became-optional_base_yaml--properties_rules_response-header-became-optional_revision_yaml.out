@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[response-header-became-optional] at ./properties/rules/response-header-became-optional_revision.yaml
+	in API DELETE /owners/{ownerId}/pets
+		the response header `名前` became optional for the status `2XX`
+
+

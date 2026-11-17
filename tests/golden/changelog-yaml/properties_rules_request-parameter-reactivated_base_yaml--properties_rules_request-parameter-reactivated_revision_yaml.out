@@ -1,0 +1,32 @@
+- id: new-required-request-parameter
+  text: added the new required `header` request parameter `id`
+  level: 3
+  operation: POST
+  operationId: post_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  fingerprint: ccde7c3eb935
+- id: request-parameter-removed
+  text: deleted the `path` request parameter `id`
+  comment: This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+  level: 2
+  operation: POST
+  operationId: post_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-reactivated_base.yaml
+    line: 11
+    column: 19
+    endLine: 15
+    endColumn: 33
+  fingerprint: 6317055123f5
+- id: request-parameter-reactivated
+  text: '`query` request parameter `status` was reactivated'
+  level: 1
+  operation: POST
+  operationId: post_items_{id}.json
+  path: /items/{id}.json
+  section: paths
+  fingerprint: 93f175f31c63
+

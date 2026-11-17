@@ -1,0 +1,20 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /pets/{petId}
+- :warning: removed the media type `application/xml` from the request body
+- :warning: removed the request property `'single'`
+- :warning: removed the request property `id/no`
+- :warning: removed the request property `id/tag`
+- :warning: removed the request property `line1
+line2`
+- :warning: removed the request property `pet`
+-  the `id` request property `type` changed from `object` to `string` (backward compatible)
+
+
+
+
+
+

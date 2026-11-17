@@ -108,6 +108,17 @@ internal sealed class SpecPair
         return sb.ToString();
     }
 
+    private SpecPair(Map @base, Map revision, Edit[] edits, List<string> applied, bool baseJson, bool revisionJson, string stem)
+    {
+        (Base, Revision, Edits, Applied, BaseJson, RevisionJson, Stem) = (@base, revision, edits, applied, baseJson, revisionJson, stem);
+    }
+
+    /// <summary>The same two documents the other way round: the revision as the base.</summary>
+    public SpecPair Reversed() => new(Revision, Base, Edits, [.. Applied.Select(a => "reversed: " + a)], RevisionJson, BaseJson, Stem);
+
+    /// <summary>The same pair with the revision written in the base's encoding.</summary>
+    public SpecPair SameEncoding() => RevisionJson == BaseJson ? this : new(Base, Revision, Edits, Applied, BaseJson, BaseJson, Stem);
+
     public static string Serialize(Map doc, bool json) => json ? JsonEmitter.Emit(doc, indent: true) + "\n" : YamlEmitter.Emit(doc);
 }
 

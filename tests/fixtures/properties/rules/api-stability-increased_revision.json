@@ -1,0 +1,67 @@
+{
+  "components": {
+    "schemas": {
+      "Error": {
+        "items": {
+          "properties": {
+            "price": {
+              "description": "名前",
+              "enum": [
+                "pet"
+              ],
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "名前": {
+              "format": "custom",
+              "type": "boolean"
+            },
+            "嶴謙锵ꝝ䍤": {
+              "description": "名前",
+              "readOnly": true,
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "名前",
+            "嶴謙锵ꝝ䍤"
+          ],
+          "type": "object"
+        },
+        "maxItems": 82,
+        "type": "array"
+      },
+      "Item": {
+        "$ref": "#/components/schemas/Error"
+      }
+    }
+  },
+  "info": {
+    "title": "३荞",
+    "version": "2.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/store/order": {
+      "delete": {
+        "responses": {
+          "201": {
+            "description": "჻ө"
+          },
+          "2XX": {
+            "description": "owner"
+          }
+        },
+        "tags": [
+          "price",
+          "id"
+        ]
+      }
+    }
+  }
+}

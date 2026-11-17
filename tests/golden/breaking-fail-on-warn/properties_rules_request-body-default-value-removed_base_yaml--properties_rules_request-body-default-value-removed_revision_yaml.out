@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-body-type-changed] at ./properties/rules/request-body-default-value-removed_revision.yaml
+	in API PUT /search
+		the request's body `type/format` changed from `number/double` to `boolean`
+
+

@@ -1,0 +1,2 @@
+::notice title=api-security-component-bearer-format-changed,file=./properties/rules/api-security-component-bearer-format-changed_revision.yaml,line=8,col=9::in API   the component security scheme `oauth` bearer format changed from `` to `...`
+

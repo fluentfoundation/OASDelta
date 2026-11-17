@@ -1,0 +1,88 @@
+# Fires request-property-unique-items-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Owner:
+            properties:
+                "yes":
+                    additionalProperties: false
+                    description: Ünïcode
+                    type: object
+                覛嗖膝탳圄:
+                    additionalProperties: false
+                    type: object
+            required:
+                - "yes"
+            type: object
+info:
+    title: 蘋ㅶ쀻
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /pets:
+        delete:
+            parameters:
+                - in: query
+                  name: 㽥环㧪
+                  schema:
+                    format: date
+                    type: string
+            responses:
+                2XX:
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                description: status
+                                nullable: true
+                                type: boolean
+                        application/vnd.api+json:
+                            schema:
+                                type: object
+                    description: 蚁
+                "201":
+                    content:
+                        application/xml:
+                            schema:
+                                allOf:
+                                    - default: 33
+                                      type: integer
+                                    - type: object
+                                    - discriminator:
+                                        propertyName: tag
+                                      oneOf:
+                                        - enum:
+                                            - 0
+                                            - 5
+                                            - -1
+                                          maximum: 846
+                                          type: integer
+                                        - enum:
+                                            - 0
+                                            - 19
+                                          minimum: -10
+                                          readOnly: true
+                                          type: integer
+                    description: "~"
+                "400":
+                    description: ключ
+        put:
+            operationId: 짃ޚ濑ߋ䮸䓅흳
+            requestBody:
+                content:
+                    text/plain:
+                        schema:
+                            items:
+                                anyOf:
+                                    - format: custom
+                                      nullable: true
+                                      type: boolean
+                                    - enum:
+                                        - '**bold**'
+                                      nullable: true
+                                      type: string
+                            minItems: 1
+                            type: array
+                description: created
+                required: true
+            responses:
+                "400":
+                    description: name

@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PUT /search
+- :warning: the request's body `type/format` changed from `number/double` to `boolean`
+-  the request body `application/json; charset=utf-8` default value `14.00` was removed
+
+
+
+
+
+

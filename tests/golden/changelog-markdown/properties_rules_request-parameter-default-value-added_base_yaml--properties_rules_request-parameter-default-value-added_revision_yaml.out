@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PUT /v1/items
+-  for the `query` request parameter `created`, default value `731.00` was added
+
+
+
+
+
+

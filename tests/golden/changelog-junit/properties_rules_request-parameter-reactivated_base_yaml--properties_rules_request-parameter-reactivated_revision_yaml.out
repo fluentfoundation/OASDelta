@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="new-required-request-parameter" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new required `header` request parameter `id`</failure>
+    </testcase>
+    <testcase name="request-parameter-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">deleted the `path` request parameter `id`</failure>
+    </testcase>
+    <testcase name="request-parameter-reactivated" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">`query` request parameter `status` was reactivated</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

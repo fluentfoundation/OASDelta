@@ -1,0 +1,1 @@
+[{"id":"response-body-multiple-of-set","text":"the response's body multipleOf was set to `7.00`","level":1,"operation":"GET","operationId":"kind","path":"/store/order","section":"paths","fingerprint":"e8d9112750eb"}]

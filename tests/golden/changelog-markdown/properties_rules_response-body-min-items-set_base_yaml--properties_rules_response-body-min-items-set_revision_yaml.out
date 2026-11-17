@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PATCH /search
+- :warning: removed the request body
+-  the response's body minItems was set to `16`
+
+
+
+
+
+

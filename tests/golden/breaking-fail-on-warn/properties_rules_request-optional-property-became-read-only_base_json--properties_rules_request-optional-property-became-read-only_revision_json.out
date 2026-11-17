@@ -1,0 +1,7 @@
+1 changes: 0 error, 1 warning, 0 info
+warning	[request-optional-property-became-read-only] at ./properties/rules/request-optional-property-became-read-only_revision.json
+	in API PATCH /store/order
+		the request optional property `created/items/@at` became read-only (shared schema: `Pet`, also at `pet/name/items/@at`)
+		This is a warning because a read-only property should not be sent in a request, and the specification leaves it to the server whether to ignore it or reject the request. Clients that send it may be rejected, or find the value they send is no longer used.
+
+

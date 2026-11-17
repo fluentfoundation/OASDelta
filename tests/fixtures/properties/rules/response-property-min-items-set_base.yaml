@@ -1,0 +1,70 @@
+# Fires response-property-min-items-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            anyOf:
+                - anyOf:
+                    - $ref: '#/components/schemas/Error'
+                    - maxLength: 80
+                      type: string
+                - properties:
+                    "0x1F":
+                        type: boolean
+                        writeOnly: true
+                  type: object
+                - allOf:
+                    - example: '{brace}'
+                      type: number
+                    - enum:
+                        - true
+                        - false
+                      readOnly: true
+                      type: boolean
+    securitySchemes:
+        api_key:
+            in: query
+            name: 僑夡滬Ⴚ꬚
+            type: apiKey
+info:
+    title: id
+    version: v1
+openapi: 3.0.3
+paths:
+    /pets:
+        delete:
+            operationId: delete_pets
+            parameters:
+                - in: query
+                  name: tag
+                  schema:
+                    items:
+                        $ref: '#/components/schemas/Error'
+                    type: array
+                - in: query
+                  name: price
+                  schema:
+                    default: true
+                    deprecated: true
+                    description: ᥦ㤖潑杂鼩幪爃ꢐ
+                    enum:
+                        - true
+                        - false
+                    type: boolean
+            responses:
+                default:
+                    content:
+                        application/json:
+                            schema:
+                                description: a/b
+                                enum:
+                                    - 14
+                                    - 11
+                                    - 7
+                                maximum: 541
+                                type: integer
+                                writeOnly: true
+                        text/plain:
+                            schema:
+                                $ref: '#/components/schemas/Error'
+                    description: 名前
+            summary: Ünïcode

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
+    <testcase name="response-body-max-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body max was unset from `886.00`</failure>
+    </testcase>
+    <testcase name="response-body-min-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body min was unset from `1.00`</failure>
+    </testcase>
+    <testcase name="response-body-type-generalized" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body `type/format` was widened from `integer/int64` to `number` for status `204`</failure>
+    </testcase>
+    <testcase name="response-media-type-removed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">removed the media type `text/plain` for the response with the status `default`</failure>
+    </testcase>
+    <testcase name="response-body-type-compatible" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body `type` changed from `string` to `number` for status `default` (backward compatible)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

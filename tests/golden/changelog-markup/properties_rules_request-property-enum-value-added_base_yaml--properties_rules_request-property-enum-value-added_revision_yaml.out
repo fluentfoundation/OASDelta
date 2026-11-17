@@ -1,0 +1,15 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /store/order
+- :warning: request property `@at` was restricted to a list of enum values
+-  added the new `created` enum value to the request property `@at`
+-  added the new `created-1` enum value to the request property `@at`
+
+
+
+
+
+

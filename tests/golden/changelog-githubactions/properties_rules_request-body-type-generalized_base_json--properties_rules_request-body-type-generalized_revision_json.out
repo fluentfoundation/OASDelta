@@ -1,0 +1,2 @@
+::notice title=request-body-type-generalized,file=./properties/rules/request-body-type-generalized_revision.json::in API PUT /v1/items the request's body `format` was widened from `float` to `none`
+

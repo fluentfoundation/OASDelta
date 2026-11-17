@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+    <testcase name="response-body-max-length-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body maxLength was unset from `200` (media type: application/json)</failure>
+    </testcase>
+    <testcase name="response-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body `type` changed from `string, null` to `number` for status `201` (media type: application/json)</failure>
+    </testcase>
+    <testcase name="response-body-became-not-nullable" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body became not nullable (media type: application/json)</failure>
+    </testcase>
+    <testcase name="response-required-property-added" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the required property `짠㭬䔺豍ꨩ뽥/pet` to the response with the `201` status (media type: application/xml)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

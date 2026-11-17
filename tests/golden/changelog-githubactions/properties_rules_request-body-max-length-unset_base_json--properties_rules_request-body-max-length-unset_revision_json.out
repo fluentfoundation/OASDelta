@@ -1,0 +1,5 @@
+::error title=request-body-type-changed,file=./properties/rules/request-body-max-length-unset_revision.json::in API PUT /v1/items the request's body `type` changed from `string` to `number`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-body-max-length-unset,file=./properties/rules/request-body-max-length-unset_revision.json::in API PUT /v1/items the request's body maxLength was unset from `240`
+::notice title=request-body-min-length-unset,file=./properties/rules/request-body-max-length-unset_revision.json::in API PUT /v1/items the request's body minLength was unset from `5`
+

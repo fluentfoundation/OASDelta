@@ -1,0 +1,8 @@
+components:
+    securitySchemes:
+        modified:
+            oauth:
+                bearerFormat:
+                    from: ""
+                    to: '...'
+

@@ -1,0 +1,33 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>PUT /store/order</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/vnd.api+json
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'array' to 'string'</li>
+<li>UniqueItems changed from true to false</li>
+<li>Items changed
+<ul>
+<li>Schema deleted</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

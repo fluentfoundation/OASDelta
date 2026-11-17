@@ -1,0 +1,82 @@
+# Fires response-header-type-compatible (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            format: int64
+            minimum: -10
+            type:
+                - integer
+                - "null"
+    securitySchemes:
+        api_key:
+            in: cookie
+            name: 名前
+            type: apiKey
+        bearer:
+            scheme: bearer
+            type: http
+info:
+    title: created
+    version: "2.0"
+openapi: 3.1.0
+paths:
+    /ünïcode/ключ:
+        patch:
+            operationId: patch_ünïcode_ключ
+            parameters:
+                - in: cookie
+                  name: pet
+                  schema:
+                    items:
+                        description: 黟놑䣟宬┟묉㖙ଚ
+                        example: "0x1F"
+                        type:
+                            - integer
+                            - "null"
+                    type: array
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                description: "x\ty"
+                                enum:
+                                    - owner
+                                example: pet
+                                type: string
+                        multipart/form-data:
+                            schema:
+                                properties:
+                                    턄훑ㆁ:
+                                        enum:
+                                            - true
+                                            - false
+                                        format: custom
+                                        type:
+                                            - boolean
+                                            - "null"
+                                required:
+                                    - 턄훑ㆁ
+                                type: object
+                    description: name
+                    headers:
+                        "0x1F":
+                            schema:
+                                format: email
+                                pattern: '[^\n]'
+                                type: object
+                        owner:
+                            schema:
+                                deprecated: true
+                                format: int32
+                                type:
+                                    - integer
+                                    - "null"
+                "400":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                $ref: '#/components/schemas/Item'
+                    description: ключ
+                default:
+                    description: price

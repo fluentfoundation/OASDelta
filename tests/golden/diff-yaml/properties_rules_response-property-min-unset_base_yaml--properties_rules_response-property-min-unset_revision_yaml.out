@@ -1,0 +1,43 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            application/json:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            <b>&amp;:
+                                                                properties:
+                                                                    modified:
+                                                                        "1e3":
+                                                                            min:
+                                                                                from: 9
+                                                                                to: null
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /store/order
+        :   responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                application/json:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                <b>&amp;:
+                                                    properties:
+                                                        modified:
+                                                            "1e3":
+                                                                min:
+                                                                    from: 9
+                                                                    to: null
+

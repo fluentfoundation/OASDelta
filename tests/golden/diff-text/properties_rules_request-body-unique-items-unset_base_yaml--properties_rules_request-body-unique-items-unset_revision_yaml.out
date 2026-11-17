@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /store/order
+- Request body changed
+  - Content changed
+    - Modified media type: application/vnd.api+json
+      - Schema changed
+        - Type changed from 'array' to 'string'
+        - UniqueItems changed from true to false
+        - Items changed
+          - Schema deleted
+
+

@@ -1,0 +1,84 @@
+# Fires request-body-min-set (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            additionalProperties: false
+            properties:
+                status:
+                    format: custom
+                    type:
+                        - boolean
+                        - "null"
+            required:
+                - status
+            type: object
+        Owner:
+            format: password
+            maxLength: 220
+            type: string
+        Pet:
+            $ref: '#/components/schemas/Owner'
+info:
+    title: kind
+    version: 1.0.0
+openapi: 3.1.0
+paths:
+    /pets/{petId}:
+        put:
+            operationId: 㾊Ꝛ⁇ꈮ砖髰
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+                - description: ၩ榍콓뚈ꬳ㡌ꃤೀ
+                  in: query
+                  name: "yes"
+                  schema:
+                    oneOf:
+                        - example: '!tag'
+                          type:
+                            - boolean
+                            - "null"
+                          writeOnly: true
+                        - type:
+                            - number
+                            - "null"
+                - in: query
+                  name: Ünïcode
+                  schema:
+                    type:
+                        - number
+                        - "null"
+                    writeOnly: true
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            description: owner
+                            type: boolean
+                    application/xml:
+                        schema:
+                            description: tag
+                            type: object
+                required: true
+            responses:
+                2XX:
+                    content:
+                        application/xml:
+                            schema:
+                                type: object
+                    description: ключ
+                "204":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                type: boolean
+                                writeOnly: true
+                        multipart/form-data:
+                            schema:
+                                $ref: '#/components/schemas/Owner'
+                    description: kind
+            tags:
+                - kind

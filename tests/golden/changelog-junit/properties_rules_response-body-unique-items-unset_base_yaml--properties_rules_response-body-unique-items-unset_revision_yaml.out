@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="response-body-max-items-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body maxItems was unset from `83`</failure>
+    </testcase>
+    <testcase name="response-body-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body `type` changed from `array<object>` to `boolean` for status `default`</failure>
+    </testcase>
+    <testcase name="response-body-unique-items-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body uniqueItems was unset</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,137 @@
+# Fires request-body-max-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            items:
+                properties:
+                    ключ:
+                        nullable: true
+                        type: boolean
+                    䈜ㅴ:
+                        default: 97
+                        description: id
+                        enum:
+                            - 57.125
+                            - 72
+                        nullable: true
+                        type: number
+                required:
+                    - 䈜ㅴ
+                    - ключ
+                type: object
+            type: array
+        Item:
+            minimum: -5
+            nullable: true
+            type: integer
+        Owner:
+            items:
+                description: name
+                enum:
+                    - true
+                    - false
+                format: custom
+                readOnly: true
+                type: boolean
+            type: array
+            uniqueItems: true
+info:
+    title: price
+    version: "2.0"
+openapi: 3.0.3
+paths:
+    /search:
+        patch:
+            operationId: 풬㨑툜韭
+            parameters:
+                - deprecated: true
+                  in: query
+                  name: owner
+                  schema:
+                    properties:
+                        created:
+                            enum:
+                                - tag
+                                - "\U0001F600"
+                            maxLength: 45
+                            nullable: true
+                            type: string
+                    required:
+                        - created
+                    type: object
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            items:
+                                type: string
+                            type: array
+                    text/plain:
+                        schema:
+                            items:
+                                minimum: 0
+                                type: number
+                                writeOnly: true
+                            maxItems: 9
+                            type: array
+                description: price
+                required: false
+            responses:
+                2XX:
+                    content:
+                        application/json:
+                            schema:
+                                allOf:
+                                    - items:
+                                        format: custom
+                                        type: boolean
+                                      minItems: 1
+                                      type: array
+                                    - additionalProperties:
+                                        type: string
+                                      properties:
+                                        "\U0001F600":
+                                            $ref: '#/components/schemas/Owner'
+                                        ? "a\r\nb"
+                                        :   default: false
+                                            nullable: true
+                                            type: boolean
+                                        kind:
+                                            $ref: '#/components/schemas/Item'
+                                      required:
+                                        - "\U0001F600"
+                                      type: object
+                                    - default: false
+                                      type: boolean
+                        application/vnd.api+json:
+                            schema:
+                                enum:
+                                    - -52.25
+                                format: double
+                                nullable: true
+                                type: number
+                                writeOnly: true
+                    description: <b>&amp;
+                "400":
+                    content:
+                        application/vnd.api+json:
+                            schema:
+                                properties:
+                                    "\U0001F600":
+                                        anyOf:
+                                            - format: int64
+                                              type: integer
+                                            - nullable: true
+                                              type: integer
+                                required:
+                                    - "\U0001F600"
+                                type: object
+                    description: '[bracket]'
+                "500":
+                    description: 名前
+            summary: "x\ty"
+            tags:
+                - created
+servers:
+    - url: https://api.example.com
+    - url: https://api.example.com/v2

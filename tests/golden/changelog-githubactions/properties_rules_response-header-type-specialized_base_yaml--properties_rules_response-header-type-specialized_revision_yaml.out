@@ -1,0 +1,2 @@
+::notice title=response-header-type-specialized,file=./properties/rules/response-header-type-specialized_revision.yaml,line=68,col=25::in API PATCH /v1/items the `id` response header's `type` was narrowed from `string` to `any` for the status `2XX`
+

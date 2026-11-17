@@ -1,0 +1,258 @@
+{
+  "components": {
+    "schemas": {
+      "Pet": {
+        "properties": {
+          "owner": {
+            "$ref": "#/components/schemas/Pet"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "title": "怯뽨蠋㈺峊‎埃",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/ünïcode/ключ": {
+      "patch": {
+        "operationId": "patch_ünïcode_ключ",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Ünïcode",
+            "required": false,
+            "schema": {
+              "description": "名前",
+              "properties": {
+                "0x1F": {
+                  "$ref": "#/components/schemas/Pet"
+                },
+                "[bracket]": {
+                  "description": "id",
+                  "type": "string"
+                },
+                "pet": {
+                  "description": "Ünïcode",
+                  "format": "float",
+                  "nullable": true,
+                  "type": "number"
+                },
+                "ключ": {
+                  "description": "C:\\path",
+                  "enum": [
+                    true,
+                    false
+                  ],
+                  "nullable": true,
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "ключ",
+                "0x1F"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "description": "name",
+                      "type": "object"
+                    },
+                    {
+                      "$ref": "#/components/schemas/Pet"
+                    }
+                  ]
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "properties": {
+                    "kind": {
+                      "properties": {
+                        "created": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "readOnly": true,
+                          "type": "number"
+                        },
+                        "price": {
+                          "default": false,
+                          "enum": [
+                            true,
+                            false
+                          ],
+                          "format": "custom",
+                          "nullable": true,
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "price",
+                        "name"
+                      ],
+                      "type": "object"
+                    },
+                    "ⱦ銩⊞斊炢鏢": {
+                      "additionalProperties": true,
+                      "deprecated": true,
+                      "properties": {
+                        "status": {
+                          "description": "\u0007",
+                          "maximum": 877,
+                          "readOnly": true,
+                          "type": "number"
+                        },
+                        "ꐴ": {
+                          "description": "kind",
+                          "nullable": true,
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "ꐴ"
+                      ],
+                      "type": "object"
+                    },
+                    "줯⏜筙▤萍ⓡ䠅": {
+                      "description": "price",
+                      "format": "float",
+                      "maximum": 783,
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "줯⏜筙▤萍ⓡ䠅",
+                    "ⱦ銩⊞斊炢鏢"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "created"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "items": {
+                      "$ref": "#/components/schemas/Pet"
+                    },
+                    "type": "array"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "名前"
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_ünïcode_ключ",
+        "responses": {
+          "500": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pet"
+                }
+              },
+              "text/plain": {
+                "schema": {
+                  "description": "x\ty",
+                  "properties": {
+                    "C:\\path": {
+                      "properties": {
+                        "| table |": {
+                          "nullable": true,
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "a\r\nb": {
+                      "deprecated": true,
+                      "enum": [
+                        "ключ"
+                      ],
+                      "type": "string"
+                    },
+                    "owner": {
+                      "deprecated": true,
+                      "format": "date",
+                      "type": "string"
+                    },
+                    "pet": {
+                      "properties": {
+                        " leading": {
+                          "maximum": 145,
+                          "nullable": true,
+                          "type": "integer"
+                        },
+                        "_under_": {
+                          "format": "custom",
+                          "type": "boolean"
+                        },
+                        "owner": {
+                          "$ref": "#/components/schemas/Pet"
+                        },
+                        "ໃ": {
+                          "nullable": true,
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "ໃ",
+                        "owner"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "a\r\nb",
+                    "C:\\path"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "pet",
+            "headers": {
+              "status": {
+                "schema": {
+                  "description": "owner",
+                  "type": "boolean",
+                  "writeOnly": true
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "tag"
+    }
+  ]
+}

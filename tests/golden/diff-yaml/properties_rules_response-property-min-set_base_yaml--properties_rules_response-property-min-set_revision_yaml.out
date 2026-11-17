@@ -1,0 +1,78 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "500":
+                                    content:
+                                        modified:
+                                            text/plain:
+                                                schema:
+                                                    properties:
+                                                        modified:
+                                                            owner:
+                                                                properties:
+                                                                    modified:
+                                                                        price:
+                                                                            items:
+                                                                                properties:
+                                                                                    modified:
+                                                                                        名前:
+                                                                                            min:
+                                                                                                from: null
+                                                                                                to: 20
+                                                                        ключ:
+                                                                            items:
+                                                                                properties:
+                                                                                    modified:
+                                                                                        名前:
+                                                                                            min:
+                                                                                                from: null
+                                                                                                to: 20
+endpoints:
+    modified:
+        ?   method: POST
+            path: /v1/items
+        :   responses:
+                modified:
+                    "500":
+                        content:
+                            modified:
+                                text/plain:
+                                    schema:
+                                        properties:
+                                            modified:
+                                                owner:
+                                                    properties:
+                                                        modified:
+                                                            price:
+                                                                items:
+                                                                    properties:
+                                                                        modified:
+                                                                            名前:
+                                                                                min:
+                                                                                    from: null
+                                                                                    to: 20
+                                                            ключ:
+                                                                items:
+                                                                    properties:
+                                                                        modified:
+                                                                            名前:
+                                                                                min:
+                                                                                    from: null
+                                                                                    to: 20
+components:
+    schemas:
+        modified:
+            Item:
+                items:
+                    properties:
+                        modified:
+                            名前:
+                                min:
+                                    from: null
+                                    to: 20
+

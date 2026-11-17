@@ -1,0 +1,2 @@
+::notice title=request-optional-property-became-write-only,file=./properties/rules/request-optional-property-became-write-only_revision.yaml,line=20,col=41::in API POST /v1/items the request optional property `items/owner` became write-only
+

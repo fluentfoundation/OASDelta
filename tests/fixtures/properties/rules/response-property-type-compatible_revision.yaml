@@ -1,0 +1,115 @@
+{
+  "info": {
+    "title": "'single'",
+    "version": "v1"
+  },
+  "openapi": "3.0.3",
+  "paths": {
+    "/ünïcode/ключ": {
+      "put": {
+        "responses": {
+          "400": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "properties": {
+                    "\u0026anchor": {
+                      "properties": {
+                        "owner": {
+                          "nullable": true,
+                          "type": "boolean"
+                        },
+                        "|": {
+                          "description": "Ünïcode",
+                          "type": "string",
+                          "writeOnly": true
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "pet": {
+                      "type": "object"
+                    },
+                    "愐鋝玍朕悏뇡垻": {
+                      "maximum": 900,
+                      "minimum": -5,
+                      "nullable": true,
+                      "readOnly": true,
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "\u0026anchor"
+                  ],
+                  "type": "object"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "integer"
+                  },
+                  "description": "id",
+                  "properties": {
+                    "created": {
+                      "deprecated": true,
+                      "description": "ᶱ",
+                      "format": "custom",
+                      "nullable": true,
+                      "type": "boolean"
+                    },
+                    "kind": {
+                      "properties": {
+                        "pet": {
+                          "description": "x\ty",
+                          "enum": [
+                            "created",
+                            "name"
+                          ],
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "pet"
+                      ],
+                      "type": "object"
+                    }
+                  },
+                  "type": "object",
+                  "x-extensible-enum": [
+                    "!tag"
+                  ]
+                }
+              }
+            },
+            "description": "名前",
+            "headers": {
+              "Ⰿㅩ鬜徺␍䦻늫": {
+                "deprecated": true,
+                "required": true,
+                "schema": {
+                  "format": "int32",
+                  "maximum": 62,
+                  "nullable": true,
+                  "type": "integer"
+                }
+              },
+              "名前": {
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "created"
+          }
+        },
+        "tags": [
+          "pet",
+          "id"
+        ]
+      }
+    }
+  }
+}

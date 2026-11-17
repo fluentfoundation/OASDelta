@@ -1,0 +1,15 @@
+- id: new-required-request-parameter
+  text: added the new required `cookie` request parameter `*star`
+  level: 3
+  operation: POST
+  path: /pets/{petId}
+  section: paths
+  fingerprint: c30e784adddc
+- id: response-property-max-properties-set
+  text: the `items/` response property's maxProperties was set to `13` for the response status `200`
+  level: 1
+  operation: POST
+  path: /pets/{petId}
+  section: paths
+  fingerprint: 4daebf45d384
+

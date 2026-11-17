@@ -1,0 +1,47 @@
+paths:
+    modified:
+        /items/{id}.json:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    text/plain:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    '-':
+                                                        anyOf:
+                                                            modified:
+                                                                - base:
+                                                                    index: 1
+                                                                  revision:
+                                                                    index: 1
+                                                                  diff:
+                                                                    maxItems:
+                                                                        from: null
+                                                                        to: 1
+endpoints:
+    modified:
+        ?   method: POST
+            path: /items/{id}.json
+        :   requestBody:
+                content:
+                    modified:
+                        text/plain:
+                            schema:
+                                properties:
+                                    modified:
+                                        '-':
+                                            anyOf:
+                                                modified:
+                                                    - base:
+                                                        index: 1
+                                                      revision:
+                                                        index: 1
+                                                      diff:
+                                                        maxItems:
+                                                            from: null
+                                                            to: 1
+

@@ -1,0 +1,18 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /search
+- :warning: the `query` request parameter `pet` became required
+
+
+### DELETE /v1/items
+-  the `cookie` request parameter `孱` became nullable
+-  the response's body exclusiveMaximum was set to `23.00`
+
+
+
+
+
+

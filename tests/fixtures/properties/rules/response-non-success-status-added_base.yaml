@@ -1,0 +1,42 @@
+# Fires response-non-success-status-added (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: '...'
+    version: v1
+openapi: 3.1.0
+paths:
+    /store/order:
+        patch:
+            operationId: patch_store_order
+            parameters:
+                - description: name
+                  in: header
+                  name: '---'
+                  schema:
+                    description: '**bold**'
+                    properties:
+                        "\U0001F600":
+                            default: -45
+                            format: int64
+                            type:
+                                - integer
+                                - "null"
+                            writeOnly: true
+                        pet:
+                            minimum: -8
+                            type: integer
+                        틏犏륮♧帧൥:
+                            type: number
+                    required:
+                        - "\U0001F600"
+                        - pet
+                        - 틏犏륮♧帧൥
+                    type: object
+                - in: header
+                  name: tag
+                  schema:
+                    description: price
+                    type: number
+            responses:
+                "500":
+                    description: name
+            summary: <b>&amp;

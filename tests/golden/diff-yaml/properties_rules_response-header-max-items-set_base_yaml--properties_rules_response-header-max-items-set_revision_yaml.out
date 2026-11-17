@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "404":
+                                    headers:
+                                        modified:
+                                            kind:
+                                                schema:
+                                                    maxItems:
+                                                        from: null
+                                                        to: 11
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /pets/{petId}
+        :   responses:
+                modified:
+                    "404":
+                        headers:
+                            modified:
+                                kind:
+                                    schema:
+                                        maxItems:
+                                            from: null
+                                            to: 11
+

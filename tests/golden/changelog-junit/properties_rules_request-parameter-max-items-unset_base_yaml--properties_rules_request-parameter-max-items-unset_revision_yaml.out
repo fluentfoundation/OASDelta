@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="request-parameter-list-of-types-widened" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">`cookie` request parameter `뻩씃쑶䘎冘` list-of-types was widened by adding types `string`</failure>
+    </testcase>
+    <testcase name="request-parameter-max-items-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `cookie` request parameter `뻩씃쑶䘎冘`, the maxItems was unset from `92`</failure>
+    </testcase>
+    <testcase name="request-parameter-min-items-unset" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">for the `cookie` request parameter `뻩씃쑶䘎冘`, the minItems was unset from `3`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

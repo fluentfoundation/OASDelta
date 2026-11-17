@@ -1,0 +1,13 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### PATCH /pets/{petId}
+- :warning: the request required property `allOf[subschema #3]/릇䍱琨압蝪颯` became read-only
+
+
+
+
+
+

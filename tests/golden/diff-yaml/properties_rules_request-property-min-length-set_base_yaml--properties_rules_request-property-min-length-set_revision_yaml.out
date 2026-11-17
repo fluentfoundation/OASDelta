@@ -1,0 +1,39 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        operationID:
+                            from: ""
+                            to: price
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json; charset=utf-8:
+                                        schema:
+                                            properties:
+                                                modified:
+                                                    名前:
+                                                        minLength:
+                                                            from: 0
+                                                            to: 12
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   operationID:
+                from: ""
+                to: price
+            requestBody:
+                content:
+                    modified:
+                        application/json; charset=utf-8:
+                            schema:
+                                properties:
+                                    modified:
+                                        名前:
+                                            minLength:
+                                                from: 0
+                                                to: 12
+

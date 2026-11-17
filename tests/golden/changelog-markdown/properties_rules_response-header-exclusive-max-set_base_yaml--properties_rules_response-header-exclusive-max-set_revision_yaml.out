@@ -1,0 +1,14 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### PUT /store/order
+-  the response header ``tick`` became not nullable for the status `204`
+-  the ``tick`` response header's exclusiveMaximum was set to `38.00` for the status `204`
+
+
+
+
+
+

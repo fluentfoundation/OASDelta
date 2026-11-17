@@ -1,0 +1,33 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    PATCH:
+                        responses:
+                            modified:
+                                default:
+                                    content:
+                                        modified:
+                                            '*/*':
+                                                schema:
+                                                    items:
+                                                        deprecated:
+                                                            from: true
+                                                            to: false
+endpoints:
+    modified:
+        ?   method: PATCH
+            path: /pets/{petId}
+        :   responses:
+                modified:
+                    default:
+                        content:
+                            modified:
+                                '*/*':
+                                    schema:
+                                        items:
+                                            deprecated:
+                                                from: true
+                                                to: false
+

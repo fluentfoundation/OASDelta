@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/v1/items":{"operations":{"modified":{"GET":{"parameters":{"modified":{"cookie":{"ключ":{"schema":{"type":{"added":["object"],"deleted":["integer"]},"maxProps":{"from":null,"to":1}}}}}}}}}}}},"servers":{"added":["https://2.example.com"]}}

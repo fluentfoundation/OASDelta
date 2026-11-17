@@ -1,0 +1,14 @@
+- id: response-mediatype-enum-value-added
+  text: added the new `created` enum value to the response schema `text/plain` for the response status `404`
+  comment: The server may now return a value the previous contract excluded, so a client written against it may not handle the response. If the value set is meant to grow, declare it with x-extensible-enum.
+  level: 3
+  operation: PATCH
+  operationId: price
+  path: /items/{id}.json
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-mediatype-enum-value-added_revision.yaml
+    line: 70
+    column: 39
+  fingerprint: d8527683a1e8
+

@@ -1,0 +1,19 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PATCH /store/order
+- Modified header param: created
+  - Schema changed
+    - WriteOnly changed from false to true
+- Request body changed
+- Responses changed
+  - Modified response: 200
+    - Headers changed
+      - New header: *star
+
+

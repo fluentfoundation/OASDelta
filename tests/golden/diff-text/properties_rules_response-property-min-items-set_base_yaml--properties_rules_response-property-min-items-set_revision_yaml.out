@@ -1,0 +1,36 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+DELETE /pets
+- Modified query param: price
+  - Schema changed
+    - Schema deleted
+  - Content changed
+    - New media type: application/json
+- Modified query param: tag
+  - Schema changed
+    - Items changed
+      - Property 'AnyOf' changed
+        - Modified schema: subschema #2
+          - Properties changed
+            - Modified property: 0x1F
+              - MinItems changed from 0 to 10
+      - Format changed from '' to 'email'
+- Responses changed
+  - Modified response: default
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Property 'AnyOf' changed
+            - Modified schema: subschema #2
+              - Properties changed
+                - Modified property: 0x1F
+                  - MinItems changed from 0 to 10
+          - Format changed from '' to 'email'
+
+

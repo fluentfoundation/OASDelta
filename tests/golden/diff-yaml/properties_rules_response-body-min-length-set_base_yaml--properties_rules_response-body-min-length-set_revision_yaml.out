@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "500":
+                                    content:
+                                        modified:
+                                            application/vnd.api+json:
+                                                schema:
+                                                    minLength:
+                                                        from: 0
+                                                        to: 14
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   responses:
+                modified:
+                    "500":
+                        content:
+                            modified:
+                                application/vnd.api+json:
+                                    schema:
+                                        minLength:
+                                            from: 0
+                                            to: 14
+

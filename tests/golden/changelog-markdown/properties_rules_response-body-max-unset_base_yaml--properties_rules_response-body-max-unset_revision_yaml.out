@@ -1,0 +1,15 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### POST /pets
+- :warning: the response's body max was unset from `59.00`
+- :warning: the response's body `type/format` changed from `number, null/double` to `string` for status `200`
+-  the response's body became not nullable
+
+
+
+
+
+

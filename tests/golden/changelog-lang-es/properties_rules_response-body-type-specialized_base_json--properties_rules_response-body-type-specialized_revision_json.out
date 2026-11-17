@@ -1,0 +1,12 @@
+2 cambios: 0 error, 1 warning, 1 info
+warning	[response-body-all-of-removed] en ./properties/rules/response-body-type-specialized_revision.json
+	en API POST /ünïcode/ключ
+		`subschema #1, subschema #2, subschema #3` fue removido de la lista `allOf` del cuerpo de respuesta para el estado `default`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+info	[response-body-type-specialized] en ./properties/rules/response-body-type-specialized_revision.json
+	en API POST /ünïcode/ключ
+		el `type` del cuerpo de respuesta fue reducido de `any` a `object` para el estado `default`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+
+

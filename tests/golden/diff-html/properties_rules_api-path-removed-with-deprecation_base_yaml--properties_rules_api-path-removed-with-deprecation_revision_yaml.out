@@ -1,0 +1,9 @@
+<h3 id="new-endpoints-1">New Endpoints: 1</h3>
+<hr>
+<p>GET /v1/items/v2</p>
+<h3 id="deleted-endpoints-1">Deleted Endpoints: 1</h3>
+<hr>
+<p>GET /v1/items</p>
+<h3 id="modified-endpoints-none">Modified Endpoints: None</h3>
+<hr>
+

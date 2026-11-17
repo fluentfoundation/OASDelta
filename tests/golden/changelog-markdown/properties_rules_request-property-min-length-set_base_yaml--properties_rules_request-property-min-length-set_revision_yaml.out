@@ -1,0 +1,14 @@
+# API Changelog 1.0.0 vs. 1.0.0
+
+
+## API Changes
+
+### POST /pets
+- :warning: the `名前` request property's minLength was set to `12`
+-  api operation id `price` was added
+
+
+
+
+
+

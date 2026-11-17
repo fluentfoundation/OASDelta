@@ -1,0 +1,4 @@
+1 changes: 0 error, 0 warning, 1 info
+info at ./properties/rules/api-stability-increased_revision.json, in API DELETE /store/order endpoint stability level increased from `beta` to `stable` [api-stability-increased]. 
+
+

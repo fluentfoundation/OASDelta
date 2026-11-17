@@ -1,0 +1,6 @@
+1 changes: 1 error, 0 warning, 0 info
+error	[request-body-became-required] at ./properties/rules/response-property-became-enum_revision.yaml
+	in API PUT /search
+		request body became required
+
+

@@ -1,0 +1,10 @@
+2 alterações: 2 error, 0 warning, 0 info
+error	[new-required-request-header-property] em ./properties/rules/new-required-request-header-property_revision.json
+	em API DELETE /items/{id}.json
+		adicionada a nova propriedade obrigatória do cabeçalho de requisição `tag` `oneOf[subschema #2]/kind`
+
+error	[request-header-property-became-required] em ./properties/rules/new-required-request-header-property_revision.json
+	em API DELETE /items/{id}.json
+		a propriedade `tag` do cabeçalho de requisição `oneOf[subschema #2]/kind` tornou-se obrigatória
+
+

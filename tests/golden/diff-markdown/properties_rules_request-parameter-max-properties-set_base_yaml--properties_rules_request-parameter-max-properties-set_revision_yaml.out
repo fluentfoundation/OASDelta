@@ -1,0 +1,20 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /v1/items
+- Modified cookie param: ключ
+  - Schema changed
+    - Type changed from 'integer' to 'object'
+    - MaxProps changed from null to 1
+
+Other Changes
+-------------
+Servers changed
+- New server: https://2.example.com
+
+

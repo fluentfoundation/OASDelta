@@ -1,0 +1,7 @@
+::error title=response-body-type-changed,file=./properties/rules/response-required-property-removed-with-deprecation_revision.yaml,line=91,col=33::in API POST /search the response's body `type` changed from `object` to `boolean` for status `404`
+::error title=response-required-property-removed,file=./properties/rules/response-required-property-removed-with-deprecation_revision.yaml::in API POST /search removed the required property `owner` from the response with the `404` status
+::error title=response-required-property-removed,file=./properties/rules/response-required-property-removed-with-deprecation_revision.yaml::in API POST /search removed the required property `price` from the response with the `404` status
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=response-optional-property-removed,file=./properties/rules/response-required-property-removed-with-deprecation_revision.yaml::in API POST /search removed the optional property `ᵄ䐶憅᧤땵ᑒ` from the response with the `404` status
+::notice title=response-required-property-removed-with-deprecation,file=./properties/rules/response-required-property-removed-with-deprecation_revision.yaml::in API POST /search removed the deprecated required property `kind` from the response with the `404` status
+

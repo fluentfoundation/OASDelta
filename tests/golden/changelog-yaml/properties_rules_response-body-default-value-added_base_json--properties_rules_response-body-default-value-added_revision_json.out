@@ -1,0 +1,9 @@
+- id: response-body-default-value-added
+  text: the response body `application/json; charset=utf-8` default value `pet` was added for the status `2XX`
+  level: 1
+  operation: DELETE
+  operationId: delete_search
+  path: /search
+  section: paths
+  fingerprint: 3216c103039a
+

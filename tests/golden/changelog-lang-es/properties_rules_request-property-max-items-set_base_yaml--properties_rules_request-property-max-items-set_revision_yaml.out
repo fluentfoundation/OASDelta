@@ -1,0 +1,7 @@
+1 cambios: 1 error, 0 warning, 0 info
+error	[request-property-max-items-set] en ./properties/rules/request-property-max-items-set_revision.yaml
+	en API POST /items/{id}.json
+		el número máximo de elementos de la propiedad de solicitud `-/anyOf[subschema #2]/` fue establecido en `1`
+		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+
+

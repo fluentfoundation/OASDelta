@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[request-property-deprecated] at ./properties/rules/request-property-deprecated_revision.yaml
+	in API PUT /owners/{ownerId}/pets
+		request property `items/` deprecated
+
+

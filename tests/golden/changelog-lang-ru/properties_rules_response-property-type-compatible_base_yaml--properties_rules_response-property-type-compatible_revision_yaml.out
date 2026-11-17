@@ -1,0 +1,7 @@
+1 изменений: 0 error, 0 warning, 1 info
+info	[response-property-type-compatible] в ./properties/rules/response-property-type-compatible_revision.yaml
+	в API PUT /ünïcode/ключ
+		у свойства ответа `additionalProperties/` `type` изменён с `string` до `integer` для статуса `400` (обратно совместимо)
+		Это изменение обратно совместимо, потому что тип медиа не является строго типизированным (например XML), где любое значение может быть представлено как текст, поэтому тип не проверяется при передаче. При строго типизированном типе медиа, таком как JSON, это же изменение было бы ломающим.
+
+

@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-property-min-properties-set] en ./properties/rules/response-property-min-properties-set_revision.yaml
+	en API PATCH /owners/{ownerId}/pets
+		el valor minProperties de la propiedad de respuesta `anyOf[subschema #2]/a~b` fue establecido en `14` para el estado `201`
+
+

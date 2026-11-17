@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    DELETE:
+                        responses:
+                            modified:
+                                "400":
+                                    headers:
+                                        modified:
+                                            "null":
+                                                schema:
+                                                    format:
+                                                        from: float
+                                                        to: ""
+endpoints:
+    modified:
+        ?   method: DELETE
+            path: /owners/{ownerId}/pets
+        :   responses:
+                modified:
+                    "400":
+                        headers:
+                            modified:
+                                "null":
+                                    schema:
+                                        format:
+                                            from: float
+                                            to: ""
+

@@ -1,0 +1,47 @@
+paths:
+    modified:
+        /v1/items:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "201":
+                                    content:
+                                        modified:
+                                            multipart/form-data:
+                                                schema:
+                                                    type:
+                                                        added:
+                                                            - string
+                                                        deleted:
+                                                            - integer
+                                                    description:
+                                                        from: pet
+                                                        to: ""
+                                                    default:
+                                                        from: 14
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: GET
+            path: /v1/items
+        :   responses:
+                modified:
+                    "201":
+                        content:
+                            modified:
+                                multipart/form-data:
+                                    schema:
+                                        type:
+                                            added:
+                                                - string
+                                            deleted:
+                                                - integer
+                                        description:
+                                            from: pet
+                                            to: ""
+                                        default:
+                                            from: 14
+                                            to: null
+

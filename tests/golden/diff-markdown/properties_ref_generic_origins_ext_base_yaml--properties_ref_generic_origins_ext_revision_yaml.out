@@ -1,0 +1,29 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 2
+-------------------------
+GET /a
+- Modified query param: q
+  - Schema changed
+    - Type changed from 'integer' to 'number'
+- Modified query param: r
+  - Schema changed
+    - Type changed from 'integer' to 'number'
+
+GET /b
+- Modified query param: s
+  - Extensions changed
+    - Modified extension: x-shape
+      - Modified /type from 'integer' to 'number'
+- Responses changed
+  - Modified response: 200
+    - Headers changed
+      - Modified header: x-rate
+        - Schema changed
+          - Type changed from 'integer' to 'number'
+
+

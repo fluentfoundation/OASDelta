@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[api-removed-without-deprecation] в ./properties/yaml_line_breaks_base.yaml
+	в API GET /a
+		API удалён без deprecation
+
+

@@ -5,6 +5,8 @@ import BenchChart from './components/BenchChart.vue'
 import BenchTable from './components/BenchTable.vue'
 import BenchMeta from './components/BenchMeta.vue'
 import RuleCoverage from './components/RuleCoverage.vue'
+import OracleLatest from './components/OracleLatest.vue'
+import OracleHistory from './components/OracleHistory.vue'
 import './style.css'
 
 export default {
@@ -15,5 +17,7 @@ export default {
     app.component('BenchTable', BenchTable)
     app.component('BenchMeta', BenchMeta)
     app.component('RuleCoverage', RuleCoverage)
+    app.component('OracleLatest', OracleLatest)
+    app.component('OracleHistory', OracleHistory)
   },
 } satisfies Theme

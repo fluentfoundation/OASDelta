@@ -28,6 +28,7 @@ export default defineConfig({
           { text: 'Commands & flags', link: '/guide/usage' },
           { text: 'Compatibility with oasdiff', link: '/guide/compatibility' },
           { text: 'Checker-rule coverage', link: '/guide/coverage' },
+          { text: 'Nightly comparison', link: '/guide/nightly' },
         ],
       },
       {

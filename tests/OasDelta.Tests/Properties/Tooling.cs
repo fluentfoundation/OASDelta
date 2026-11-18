@@ -355,6 +355,10 @@ internal static partial class Support
 
     public static string Clip(string s, int max = 1500) => s.Length <= max ? s : s[..max] + $"\n... ({s.Length - max} more characters)";
 
+    /// <summary>The text with any unpaired surrogate (Clip can cut a pair in two) replaced by U+FFFD, which JSON can hold.</summary>
+    public static string WellFormed(string s) =>
+        s.Any(char.IsSurrogate) ? string.Concat(s.EnumerateRunes().Select(r => r.ToString())) : s;
+
     /// <summary>Rule ids in a changelog/breaking JSON array.</summary>
     public static IEnumerable<string> RuleIds(string json)
     {

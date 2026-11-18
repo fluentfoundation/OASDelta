@@ -1,6 +1,7 @@
 using System.Collections.Concurrent;
 using System.Globalization;
 using System.Text;
+using System.Text.Json;
 using CsCheck;
 using Xunit;
 using Xunit.Abstractions;
@@ -44,7 +45,9 @@ public class OracleProperties(ITestOutputHelper output)
 {
     private static readonly Lazy<string[][]> Commands = new(() => [.. GoldenTests.Commands().Values]);
 
-    private static readonly Gen<int[]> CommandChoice = Gen.Int[0, 1000].Array[3];
+    private const int CommandLinesPerCase = 3;
+
+    private static readonly Gen<int[]> CommandChoice = Gen.Int[0, 1000].Array[CommandLinesPerCase];
 
     private const int RoundSeconds = 60;
     private const int MaxShrunk = 5;
@@ -199,17 +202,18 @@ public class OracleProperties(ITestOutputHelper output)
         }
         finally
         {
-            Report(DateTime.UtcNow - started, cases, reordered, aliasNamed, loadErrors, oasdiffCrashes, danglingMappings, fired, promoted, mismatches, failure);
+            Report(started, cases, reordered, aliasNamed, loadErrors, oasdiffCrashes, danglingMappings, fired, promoted, mismatches, failure);
         }
     }
 
-    private void Report(TimeSpan took, int cases, int reordered, int aliasNamed, int loadErrors, int oasdiffCrashes, int danglingMappings, ConcurrentDictionary<string, int> fired,
+    private void Report(DateTime started, int cases, int reordered, int aliasNamed, int loadErrors, int oasdiffCrashes, int danglingMappings, ConcurrentDictionary<string, int> fired,
         ConcurrentDictionary<string, string> promoted, ConcurrentDictionary<string, Mismatch> mismatches, string? failure)
     {
         var inv = CultureInfo.InvariantCulture;
+        var took = DateTime.UtcNow - started;
         var sb = new StringBuilder();
         sb.Append("## Property-based comparison with oasdiff\n\n");
-        sb.Append(inv, $"- Cases: **{cases}** in {took.TotalSeconds:F0} s, 3 command lines each; same output up to order (oasdiff's nondeterminism): {reordered}\n");
+        sb.Append(inv, $"- Cases: **{cases}** in {took.TotalSeconds:F0} s, {CommandLinesPerCase} command lines each; same output up to order (oasdiff's nondeterminism): {reordered}\n");
         sb.Append(inv, $"- Command lines that differ only in which name of an aliased schema (`Item: {{$ref: Error}}`) is the shared schema (Go map order): {aliasNamed}\n");
         sb.Append(inv, $"- Cases neither tool could load (same exit code): {loadErrors}\n");
         sb.Append(inv, $"- Command lines on which oasdiff crashed (OasDelta reported an error or a result instead): {oasdiffCrashes}\n");
@@ -240,5 +244,64 @@ public class OracleProperties(ITestOutputHelper output)
         if (Environment.GetEnvironmentVariable("GITHUB_STEP_SUMMARY") is { Length: > 0 } summary) File.AppendAllText(summary, text);
         Directory.CreateDirectory(Support.OutDir);
         File.WriteAllText(Path.Combine(Support.OutDir, "summary.md"), text);
+        try
+        {
+            File.WriteAllBytes(Path.Combine(Support.OutDir, "oracle.json"),
+                Json(started, took, cases, reordered, aliasNamed, loadErrors, oasdiffCrashes, danglingMappings, fired, promoted, found, failure));
+        }
+        catch (Exception e) { output.WriteLine($"oracle.json not written: {e}"); } // the report above is what matters
+    }
+
+    /// <summary>The same report as data, for the site's nightly page (docs/data/oracle.data.ts reads it).</summary>
+    private static byte[] Json(DateTime started, TimeSpan took, int cases, int reordered, int aliasNamed, int loadErrors, int oasdiffCrashes, int danglingMappings,
+        ConcurrentDictionary<string, int> fired, ConcurrentDictionary<string, string> promoted, List<Mismatch> found, string? failure)
+    {
+        static string? Env(string name) => Environment.GetEnvironmentVariable(name) is { Length: > 0 } v ? v : null;
+        var run = Env("GITHUB_RUN_ID") is { } runId ? $"{Env("GITHUB_SERVER_URL") ?? "https://github.com"}/{Env("GITHUB_REPOSITORY")}/actions/runs/{runId}" : null;
+        using var buffer = new MemoryStream();
+        using (var w = new Utf8JsonWriter(buffer, new JsonWriterOptions { Indented = true }))
+        {
+            w.WriteStartObject();
+            w.WriteString("date", started.ToString("yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture));
+            w.WriteNumber("seconds", Math.Round(took.TotalSeconds));
+            w.WriteString("outcome", failure is null ? "pass" : "fail");
+            w.WriteString("seed_replayed", Env("CsCheck_Seed"));
+            w.WriteString("commit", Env("GITHUB_SHA"));
+            w.WriteString("run_url", run);
+            w.WriteString("oasdiff_version", Env("OASDIFF_VERSION"));
+            w.WriteNumber("cases", cases);
+            w.WriteNumber("command_lines_per_case", CommandLinesPerCase);
+            w.WriteNumber("reordered", reordered);
+            w.WriteNumber("alias_named", aliasNamed);
+            w.WriteNumber("load_errors", loadErrors);
+            w.WriteNumber("oasdiff_crashes", oasdiffCrashes);
+            w.WriteNumber("dangling_mappings", danglingMappings);
+            w.WriteNumber("rules_fired", fired.Count);
+            w.WriteStartArray("new_rules");
+            foreach (var rule in promoted.Keys.Order(StringComparer.Ordinal))
+            {
+                w.WriteStartObject();
+                w.WriteString("id", rule);
+                w.WriteNumber("fired", fired.GetValueOrDefault(rule));
+                w.WriteEndObject();
+            }
+            w.WriteEndArray();
+            w.WriteStartArray("mismatches");
+            foreach (var m in found)
+            {
+                w.WriteStartObject();
+                w.WriteString("kind", Support.WellFormed(m.Kind));
+                w.WriteNumber("seen_again", m.SeenAgain);
+                w.WriteString("seed", m.Seed);
+                w.WriteBoolean("shrunk", m.Shrunk);
+                w.WriteString("case", Support.WellFormed(Support.Clip(m.Case!, 12000)));
+                w.WriteEndObject();
+            }
+            w.WriteEndArray();
+            // a failure that is no kind of mismatch: OasDelta crashed, or a replayed seed mismatched
+            w.WriteString("failure", found.Count == 0 && failure is not null ? Support.WellFormed(Support.Clip(failure, 20000)) : null);
+            w.WriteEndObject();
+        }
+        return buffer.ToArray();
     }
 }

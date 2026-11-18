@@ -5,6 +5,7 @@ name: Properties
 # lines drawn from tools/golden-commands.txt. Mismatches are grouped by kind and each kind is shrunk to a small case;
 # a known one does not stop the run from finding others, and any mismatch fails it. Pairs that make a rule fire that
 # no golden does are kept as fixture candidates. Report only: nightly or on demand, never on pull requests.
+# Each scheduled run's report (oracle.json) is shown on the site's Nightly page, which benchmarks.yml rebuilds when this ends.
 #
 # The oracle-free properties (tests/OasDelta.Tests/Properties/SpecProperties.cs) run in CI with every build.
 
@@ -80,3 +81,13 @@ jobs:
           name: properties
           path: ${{ runner.temp }}/properties
           if-no-files-found: ignore
+
+      # the same report as data, for the site (benchmarks.yml downloads it when this run ends; tools/oracle-reports.sh)
+      - name: Upload the report for the site
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: oracle-report
+          path: ${{ runner.temp }}/properties/oracle.json
+          if-no-files-found: ignore
+          retention-days: 90

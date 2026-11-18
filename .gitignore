@@ -11,6 +11,7 @@ TestResults/
 node_modules/
 docs/.vitepress/dist/
 docs/.vitepress/cache/
+docs/data/oracle/
 
 # local notes, not committed
 .ignore/

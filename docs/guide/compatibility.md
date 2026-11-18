@@ -23,7 +23,8 @@ code as the Go binary.
   headers, media types, responses, security, paths. A nightly
   [workflow](https://github.com/fluentfoundation/OASDelta/actions/workflows/properties.yml) runs both binaries on
   thousands of such pairs, with command lines drawn from the golden set, and fails on any difference, shrunk to a
-  minimal case. Pairs that make a rule fire that no golden does are kept as new fixtures. Properties that need no
+  minimal case; the [nightly page](./nightly) shows the latest result. Pairs that make a rule fire that no golden does
+  are kept as new fixtures. Properties that need no
   oracle run with every `dotnet test`: a document has no changes against itself, YAML and JSON input give the same
   changes, `breaking` is the changelog's errors and warnings, differences are symmetric, and emitting, parsing and
   emitting again is stable. Each of these holds for oasdiff too.

@@ -2,6 +2,8 @@ name: Benchmarks & site
 
 # Benchmarks the NativeAOT oasdelta against the official Go oasdiff release on Linux and Windows,
 # then builds the VitePress site with those fresh results and deploys it to GitHub Pages.
+# It also rebuilds the site, without benchmarking, when a nightly Properties run ends, for the Nightly page: that build
+# shows the benchmark results the site last published.
 
 on:
   push:
@@ -13,6 +15,9 @@ on:
         default: "15"
   schedule:
     - cron: "0 6 * * 1" # weekly, so the numbers track runner-image and toolchain changes
+  workflow_run:
+    workflows: [Properties]
+    types: [completed]
 
 permissions:
   contents: read
@@ -29,6 +34,7 @@ env:
 jobs:
   bench:
     name: Benchmark (${{ matrix.name }})
+    if: github.event_name != 'workflow_run'
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -141,8 +147,12 @@ jobs:
   site:
     name: Build site
     needs: bench
-    # still publish the site if one platform's benchmark failed: the committed baseline fills the gap
-    if: ${{ !cancelled() }}
+    # still publish the site if one platform's benchmark failed: the committed baseline fills the gap. After a
+    # Properties run, only for a scheduled one (the Nightly page shows those) and with no benchmarks run.
+    if: ${{ !cancelled() && (github.event_name != 'workflow_run' || github.event.workflow_run.event == 'schedule') }}
+    permissions:
+      contents: read
+      actions: read # other runs' artifacts: the nightly reports, and the last published benchmark results
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -157,11 +167,31 @@ jobs:
           cache-dependency-path: docs/package-lock.json
 
       - name: Use fresh benchmark results
+        if: github.event_name != 'workflow_run'
         uses: actions/download-artifact@v8
         with:
           pattern: bench-*
           path: docs/data/benchmarks
           merge-multiple: true
+
+      # a rebuild for the Nightly page: the newest benchmark results from main, which the site already shows
+      - name: Use the benchmark results the site last published
+        if: github.event_name == 'workflow_run'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for slug in linux windows; do
+            id=$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=bench-$slug&per_page=30" \
+              --jq '[.artifacts[] | select((.expired | not) and .workflow_run.head_branch == "main")][0].workflow_run.id // empty')
+            if [ -n "$id" ]; then gh run download "$id" -R "$GITHUB_REPOSITORY" -n "bench-$slug" -D data/benchmarks
+            else echo "no bench-$slug artifact: the committed baseline stays"; fi
+          done
+
+      - name: Nightly comparison reports (tools/oracle-reports.sh)
+        continue-on-error: true # the page says there are none rather than the site not being published
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash ../tools/oracle-reports.sh data/oracle 14
 
       - run: npm ci
       - run: npm run build

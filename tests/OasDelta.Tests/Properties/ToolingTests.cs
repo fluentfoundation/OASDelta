@@ -100,4 +100,12 @@ public class MismatchKindTests
     [Fact]
     public void TheSeedOfACsCheckFailure() =>
         Assert.Equal("b1fwLTMaeFL7", Support.SeedOf("Set seed: \"b1fwLTMaeFL7\" or -e CsCheck_Seed=b1fwLTMaeFL7 to reproduce (0 shrinks, 47 skipped, 1,557 total)."));
+
+    [Fact]
+    public void AnUnpairedSurrogateBecomesTheReplacementCharacter()
+    {
+        Assert.Equal("a\uFFFDb", Support.WellFormed("a\uD83Db"));
+        Assert.Equal("\uD83D\uDE00\uFFFD", Support.WellFormed("\uD83D\uDE00\uDE00"));
+        Assert.Equal("plain", Support.WellFormed("plain"));
+    }
 }

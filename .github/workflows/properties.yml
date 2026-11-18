@@ -2,7 +2,8 @@ name: Properties
 
 # Property-based differential testing against oasdiff (issue #22). CsCheck generates OpenAPI document pairs (a base
 # document and edits that make the revision) and checks that OasDelta prints exactly what oasdiff prints, for command
-# lines drawn from tools/golden-commands.txt. A mismatch is shrunk to a small case. Pairs that make a rule fire that
+# lines drawn from tools/golden-commands.txt. Mismatches are grouped by kind and each kind is shrunk to a small case;
+# a known one does not stop the run from finding others, and any mismatch fails it. Pairs that make a rule fire that
 # no golden does are kept as fixture candidates. Report only: nightly or on demand, never on pull requests.
 #
 # The oracle-free properties (tests/OasDelta.Tests/Properties/SpecProperties.cs) run in CI with every build.
@@ -59,15 +60,16 @@ jobs:
       - name: Build
         run: dotnet build tests/OasDelta.Tests -c Release
 
-      # Runs for the whole budget unless it finds a mismatch: then it stops within a minute and fails, with the shrunk
-      # case in the job summary and the "properties" artifact. A failure here is a parity finding, not a timeout.
-      - name: Compare with oasdiff for ${{ github.event.inputs.minutes || '20' }} minutes (fails on the first mismatch)
+      # Runs for the whole budget. Each new kind of mismatch is shrunk (in its one-minute round, then from its seed for
+      # OASDELTA_SHRINK_TIME seconds), and sampling goes on to look for other kinds. Fails if anything mismatched, with
+      # a table of the kinds and each shrunk case in the job summary and the "properties" artifact.
+      - name: Compare with oasdiff for ${{ github.event.inputs.minutes || '20' }} minutes (fails if anything mismatches)
         env:
           MINUTES: ${{ github.event.inputs.minutes || '20' }}
           SEED: ${{ github.event.inputs.seed }}
         run: |
           export OASDIFF="$RUNNER_TEMP/oasdiff/oasdiff" OASDELTA_PROPERTIES_OUT="$RUNNER_TEMP/properties"
-          export CsCheck_Time=$((MINUTES * 60))
+          export CsCheck_Time=$((MINUTES * 60)) OASDELTA_SHRINK_TIME=180
           if [ -n "$SEED" ]; then export CsCheck_Seed="$SEED"; fi
           dotnet test tests/OasDelta.Tests -c Release --no-build --filter Category=Oracle --logger "console;verbosity=normal"
 

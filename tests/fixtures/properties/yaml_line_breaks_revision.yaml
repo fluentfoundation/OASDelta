@@ -1,0 +1,14 @@
+# A raw NEL, LS or PS in a quoted scalar is a line break to YAML (go-yaml and YamlDotNet count it), so source lines
+# after one are numbered past it. The port read the text of a later line by counting only line feeds, which gave a block
+# scalar at the end of an operation the wrong end column (the nightly of 2026-11-17).
+openapi: 3.0.3
+info:
+  title: line breaks
+  version: v1
+  description: 'NELLS PS end'
+paths:
+  /a:
+    post:
+      responses:
+        '200':
+          description: ok

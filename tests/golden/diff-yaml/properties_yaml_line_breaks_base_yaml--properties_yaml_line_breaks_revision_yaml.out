@@ -1,0 +1,11 @@
+paths:
+    modified:
+        /a:
+            operations:
+                deleted:
+                    - GET
+endpoints:
+    deleted:
+        - method: GET
+          path: /a
+

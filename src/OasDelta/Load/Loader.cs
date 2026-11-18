@@ -60,15 +60,15 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
 {
     private readonly LoaderOptions _opt = options ?? new LoaderOptions();
     private readonly Dictionary<string, Document> _docs = new(StringComparer.Ordinal);
-    private readonly Dictionary<(Node, Type), object> _cache = new(NodeTypeComparer.Instance);
+    private readonly Dictionary<(Node, Type, bool), object> _cache = new(NodeTypeComparer.Instance);
     private Document _root = null!;
     private bool _is31;
 
-    private sealed class NodeTypeComparer : IEqualityComparer<(Node, Type)>
+    private sealed class NodeTypeComparer : IEqualityComparer<(Node, Type, bool)>
     {
         public static readonly NodeTypeComparer Instance = new();
-        public bool Equals((Node, Type) a, (Node, Type) b) => ReferenceEquals(a.Item1, b.Item1) && a.Item2 == b.Item2;
-        public int GetHashCode((Node, Type) k) => HashCode.Combine(RuntimeHelpers.GetHashCode(k.Item1), k.Item2);
+        public bool Equals((Node, Type, bool) a, (Node, Type, bool) b) => ReferenceEquals(a.Item1, b.Item1) && a.Item2 == b.Item2 && a.Item3 == b.Item3;
+        public int GetHashCode((Node, Type, bool) k) => HashCode.Combine(RuntimeHelpers.GetHashCode(k.Item1), k.Item2, k.Item3);
     }
 
     public OpenApiDoc LoadFile(string path)
@@ -332,7 +332,8 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
         // nil, and the diff fails only if it compares such a schema on both sides ("base schema value is nil", 104)
         if (depth > 64) return result;
         var noOrigin = _noOrigin;
-        _noOrigin = 0; // the target is located where it is defined
+        // the target is located where it is defined, unless kin reaches it as a generic map and loses its origins
+        _noOrigin = _kinNoOrigin.Contains((doc, reference)) ? 1 : 0;
         try
         {
             var (tdoc, tnode) = ResolveRef(doc, reference);
@@ -349,17 +350,21 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
         return result;
     }
 
+    // one object per node, type and whether it has origins: kin gives what it reaches with and without origins
+    // (written under a header, or reached as a generic map) objects of their own
     private T Cached<T>(Document doc, Node n, Node? key, Builder<T> build) where T : class
     {
-        if (_cache.TryGetValue((n, typeof(T)), out var v)) return (T)v;
+        if (_cache.TryGetValue((n, typeof(T), _noOrigin > 0), out var v)) return (T)v;
         return build(doc, n, key);
     }
 
-    private void Register(Node n, object value) => _cache[(n, value.GetType())] = value;
+    private void Register(Node n, object value) => _cache[(n, value.GetType(), _noOrigin > 0)] = value;
 
-    /// <summary>Above zero while building what is written inline under a header: kin-openapi's Header embeds Parameter,
-    /// and its origin walk skips the embedded struct, so the header's schema, content and examples get no origin
-    /// (changes in them are located at the operation). Whatever they reach through $ref has its own origin.</summary>
+    /// <summary>Above zero while building what has no origin in kin-openapi. What is written inline under a header:
+    /// kin's Header embeds Parameter, and its origin walk skips the embedded struct, so the header's schema, content
+    /// and examples get none (changes in them are located at the operation). And the target of a $ref that kin
+    /// reaches as a generic map (<see cref="KinKeepsOrigins"/>). Whatever they reach through another $ref has its own
+    /// origin, unless that $ref loses it too.</summary>
     private int _noOrigin;
 
     private Origin? MakeOrigin(Document doc, Node n, Node? key)
@@ -578,6 +583,8 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
         if (_pathItemRefResults.TryGetValue(n, out var done)) return done;
         PathItem target;
         _pathItemRefs.Add(n);
+        var noOrigin = _noOrigin;
+        _noOrigin = _kinNoOrigin.Contains((doc, reference)) ? 1 : 0; // as in ReadRef
         try
         {
             var (tdoc, tnode) = ResolveRef(doc, reference);
@@ -586,7 +593,7 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
             // to it, also when kin comes to it directly
             target = _pathItemRefs.Contains(tnode) ? new PathItem { Origin = MakeOrigin(doc, n, key) } : BuildPathItemOrRef(tdoc, tnode, tdoc.KeyOf(tnode));
         }
-        finally { _pathItemRefs.Remove(n); }
+        finally { _pathItemRefs.Remove(n); _noOrigin = noOrigin; }
         var copy = target.ShallowClone();
         copy.Ref = reference;
         // siblings of $ref (summary/description) override

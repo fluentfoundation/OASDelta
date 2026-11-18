@@ -1,0 +1,40 @@
+# #60: a $ref that kin-openapi reaches as a generic map loses its origins (attachOriginToResolved), so oasdiff
+# locates changes in its target at the operation. Here: a schema $ref to a response header's schema (kin's typed
+# drill can't go through a Header) and one to an extension in a parameter.
+openapi: 3.1.0
+info:
+  title: refs reached as generic maps
+  version: 1.0.0
+paths:
+  /a:
+    get:
+      parameters:
+        - in: query
+          name: q
+          schema:
+            $ref: '#/paths/~1b/get/responses/200/headers/X-Rate/schema'
+        - in: query
+          name: r
+          schema:
+            $ref: '#/paths/~1b/get/parameters/0/x-shape'
+      responses:
+        '200':
+          description: ok
+  /b:
+    get:
+      parameters:
+        - in: query
+          name: s
+          schema:
+            type: string
+          x-shape:
+            type: integer
+            minimum: 1
+      responses:
+        '200':
+          description: ok
+          headers:
+            X-Rate:
+              schema:
+                type: integer
+                maximum: 10

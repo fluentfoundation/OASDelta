@@ -1,0 +1,14 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### POST /pets
+- :warning: the schema of the request property `first` became `false`: no value passes validation (shared schema: `Pet`, also at `second`)
+-  the schema of the response property `mine` became `false` for the status `200`: no value passes validation (shared schema: `Pet`, also at `yours`)
+
+
+
+
+
+

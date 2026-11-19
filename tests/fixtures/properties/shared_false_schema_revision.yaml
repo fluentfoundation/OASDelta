@@ -1,0 +1,34 @@
+# A component two properties share becomes the boolean schema `false` (nightly 2026-11-19): oasdiff reports it once,
+# at the first property, naming the shared schema, because every $ref to it resolves to the same schema.
+openapi: 3.1.0
+info:
+  title: shared false schema
+  version: "1"
+paths:
+  /pets:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first:
+                  $ref: '#/components/schemas/Pet'
+                second:
+                  $ref: '#/components/schemas/Pet'
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  mine:
+                    $ref: '#/components/schemas/Pet'
+                  yours:
+                    $ref: '#/components/schemas/Pet'
+components:
+  schemas:
+    Pet: false

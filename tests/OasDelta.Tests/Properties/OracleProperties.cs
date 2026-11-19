@@ -62,6 +62,8 @@ public class OracleProperties(ITestOutputHelper output)
         public int Kept;
         public string? Seed { get; set; }
         public string? Case { get; set; }
+        /// <summary>What differs in that case: the command line and both outputs (the case can be long enough to clip them).</summary>
+        public string? Difference { get; set; }
         public bool Shrunk { get; set; }
     }
 
@@ -126,7 +128,12 @@ public class OracleProperties(ITestOutputHelper output)
                         {
                             var kept = Support.Keep("mismatch-again", p, what);
                             // first seen while another kind was being shrunk: reported as it is, with no seed
-                            lock (m) m.Case ??= $"(found while another kind was being shrunk; not shrunk)\n{what}\n{p}\nkept in {kept}";
+                            lock (m)
+                                if (m.Case is null)
+                                {
+                                    m.Case = $"(found while another kind was being shrunk; not shrunk)\n{p}\nkept in {kept}";
+                                    m.Difference = what;
+                                }
                         }
                         continue;
                     }
@@ -156,6 +163,7 @@ public class OracleProperties(ITestOutputHelper output)
                 var r = mismatches.GetOrAdd(m.Kind, k => new Mismatch(k));
                 r.Seed = Support.SeedOf(e.Message) ?? r.Seed;
                 r.Case = e.Message;
+                r.Difference = m.Message;
             }
 
             var gen = Gen.Select(SpecPair.Gen, CommandChoice);
@@ -236,7 +244,8 @@ public class OracleProperties(ITestOutputHelper output)
                 sb.Append(inv, $"| `{id}` | {fired.GetValueOrDefault(id)} | `{Path.GetRelativePath(Support.OutDir, dir).Replace('\\', '/')}` |\n");
         }
         foreach (var m in found)
-            sb.Append("\n<details><summary>").Append(m.Kind).Append("</summary>\n\n```\n").Append(Support.Clip(m.Case!, 12000)).Append("\n```\n</details>\n");
+            sb.Append("\n<details><summary>").Append(m.Kind).Append("</summary>\n\n```\n").Append(m.Difference ?? "")
+              .Append("\n```\n\nThe case:\n\n```\n").Append(Support.Clip(m.Case!, 12000)).Append("\n```\n</details>\n");
         if (found.Count == 0 && failure is not null)
             sb.Append("\n<details><summary>Mismatch</summary>\n\n```\n").Append(Support.Clip(failure, 20000)).Append("\n```\n</details>\n");
         var text = sb.ToString();
@@ -294,6 +303,7 @@ public class OracleProperties(ITestOutputHelper output)
                 w.WriteNumber("seen_again", m.SeenAgain);
                 w.WriteString("seed", m.Seed);
                 w.WriteBoolean("shrunk", m.Shrunk);
+                w.WriteString("difference", m.Difference is null ? null : Support.WellFormed(m.Difference));
                 w.WriteString("case", Support.WellFormed(Support.Clip(m.Case!, 12000)));
                 w.WriteEndObject();
             }

@@ -183,7 +183,10 @@ jobs:
           for slug in linux windows; do
             id=$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=bench-$slug&per_page=30" \
               --jq '[.artifacts[] | select((.expired | not) and .workflow_run.head_branch == "main")][0].workflow_run.id // empty')
-            if [ -n "$id" ]; then gh run download "$id" -R "$GITHUB_REPOSITORY" -n "bench-$slug" -D data/benchmarks
+            # gh run download will not overwrite a file, and the committed baseline is there: download beside it
+            if [ -n "$id" ]; then
+              gh run download "$id" -R "$GITHUB_REPOSITORY" -n "bench-$slug" -D "$RUNNER_TEMP/bench-$slug"
+              cp -f "$RUNNER_TEMP/bench-$slug/$slug.json" data/benchmarks/
             else echo "no bench-$slug artifact: the committed baseline stays"; fi
           done
 

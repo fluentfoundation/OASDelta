@@ -12,7 +12,9 @@ export interface OracleMismatch {
   seed: string | null
   /** Shrinking from the seed found a smaller case. */
   shrunk: boolean
-  /** The case as CsCheck reports it: the pair, its edits, the command lines and both outputs. */
+  /** The command line and both outputs. Older reports omit it: their case, clipped, may not reach the outputs. */
+  difference?: string | null
+  /** The case as CsCheck reports it: the pair, its edits and the command lines (clipped). */
   case: string
 }
 

@@ -88,6 +88,11 @@ const counted = computed(() =>
         </p>
         <details v-for="m in r.mismatches" :key="m.kind + '-case'">
           <summary>{{ m.kind }}</summary>
+          <template v-if="m.difference">
+            <p class="part">What differs</p>
+            <pre>{{ m.difference }}</pre>
+            <p class="part">The case: the documents, the edits that made the revision, and the command lines</p>
+          </template>
           <pre>{{ m.case }}</pre>
         </details>
       </template>
@@ -151,6 +156,7 @@ table { margin: 8px 0; }
 details { margin: 8px 0; border: 1px solid var(--vp-c-divider); border-radius: 8px; padding: 8px 12px; }
 summary { cursor: pointer; font-weight: 500; }
 pre { margin: 8px 0 0; max-height: 480px; overflow: auto; font-size: 12px; line-height: 1.45; white-space: pre; background: var(--vp-c-bg-soft); padding: 12px; border-radius: 6px; }
+.part { margin: 12px 0 0; font-size: 13px; color: var(--vp-c-text-2); }
 .counted { font-size: 14px; color: var(--vp-c-text-2); }
 .counted b { color: var(--vp-c-text-1); font-variant-numeric: tabular-nums; }
 </style>

@@ -1,0 +1,4 @@
+::error title=request-parameter-type-changed,file=./properties/header_case_revision.yaml,line=7,col=45::in API GET /pets for the `header` request parameter `x-id`, the `type` was changed from `string` to `integer`
+::error title=response-header-type-changed,file=./properties/header_case_revision.yaml,line=13,col=13::in API GET /pets the `ꟓ-rate` response header's `type` changed from `integer` to `string` for the status `200`
+::notice title=request-parameter-became-optional,file=./properties/header_case_revision.yaml::in API GET /pets the `header` request parameter `ꟓ-trace` became optional
+

@@ -12,7 +12,10 @@
 // Both files are checked in, so the C# test runs without Go; CI reruns this program and fails if either file
 // changes. Both files are ASCII: every non-ASCII or control character is written as a \uXXXX escape.
 //
-// Usage (from this directory): go run .            (writes ../../tests/emitter-oracle/{corpus,expected}.json)
+// It also writes go-case.txt (case.go): what strings.ToLower, strings.ToUpper and strings.EqualFold do with each
+// rune, for src/OasDelta/GoText.cs.
+//
+// Usage (from this directory): go run .            (writes ../../tests/emitter-oracle/{corpus,expected}.json, go-case.txt)
 //
 //	go run . -dir <dir>
 package main
@@ -49,6 +52,7 @@ func main() {
 		fatal(err)
 	}
 	fmt.Fprintf(os.Stderr, "go-oracle: %d corpus entries written to %s\n", n, *dir)
+	fmt.Fprintf(os.Stderr, "go-oracle: %d runes in the case table\n", writeCaseTable(*dir))
 }
 
 func fatal(err error) {

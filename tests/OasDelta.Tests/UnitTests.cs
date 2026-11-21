@@ -1,5 +1,6 @@
 using OasDelta.Cli;
 using OasDelta.Load;
+using OasDelta.Model;
 using OasDelta.Yaml;
 using Xunit;
 
@@ -142,6 +143,37 @@ public class YamlTests
         Assert.Equal(JsonEmitter.Emit(doc), json.ToString());
         Assert.True(json.ToString().Length > 2 << 20, "the document should be large enough to flush several times");
     }
+
+    /// <summary>A double-quoted scalar's continuation line at or left of the block's indentation: YamlDotNet rejects
+    /// it, go-yaml folds it like any other (#65). A raw NEL folds like a line feed; a raw LS or PS stays in the value.</summary>
+    [Theory]
+    [InlineData("x: \"a\nb\"\n", "a b")]
+    [InlineData("x:\n  y: \"a\n\n b\n c\"\n", "a\nb c")]
+    [InlineData("x: \"a\\\nb\"\n", "ab")] // an escaped line break
+    [InlineData("x: \"a\u0085b\"\n", "a b")]
+    [InlineData("x: \"a\u2028b\"\n", "a\u2028b")]
+    [InlineData("x: \"a\u2029b\"\n", "a\u2029b")]
+    public void AQuotedScalarsContinuationNeedsNoIndentation(string yaml, string value)
+    {
+        var x = NodeReader.Parse(yaml)!["x"]!;
+        Assert.Equal(value, (x.IsMapping ? x["y"]! : x).Text);
+    }
+
+    /// <summary>Positions on such a line are those of the text as written.</summary>
+    [Fact]
+    public void PositionsAfterAnUnindentedContinuationAreAsWritten()
+    {
+        var root = NodeReader.Parse("x:\n  y: {a: \"1\n2\", b: [3]}\n  z: 4\n")!;
+        var b = root["x"]!["y"]!["b"]!;
+        Assert.Equal((3, 8), (b.Line, b.Column));
+        Assert.Equal((3, 11), (b.EndLine, b.EndColumn));
+        var z = root["x"]!["z"]!;
+        Assert.Equal((4, 6), (z.Line, z.Column));
+    }
+
+    [Fact]
+    public void AMultiLineQuotedKeyStillFails() =>
+        Assert.Throws<YamlParseException>(() => NodeReader.Parse("x:\n  \"a\nb\": 1\n")); // indented, still a multi-line key
 }
 
 public class SourceTests
@@ -495,4 +527,65 @@ public class KinRefTests
     [Fact]
     public void AParameterRefToAnExtensionMapIsAccepted() =>
         Assert.Null(LoadError("      parameters: [{$ref: '#/components/x-defs/D'}]\n      responses: {'200': {description: ok}}"));
+}
+
+/// <summary>A path item's $ref with fields beside it (compatibility.md): the fields add to the path item the $ref
+/// references, and win where both give one. kin-openapi 0.151.0 ignores the $ref instead, so oasdiff reports the
+/// referenced operations as deleted, or panics when an operation beside the $ref has a $ref of its own.</summary>
+public class PathItemRefTests
+{
+    private static PathItem Load(string a) =>
+        new SpecLoader().LoadFromText(
+            "openapi: 3.1.0\ninfo: {title: t, version: '1'}\npaths:\n" +
+            "  /b: {summary: b, get: {responses: {'200': {description: from b}}}, parameters: [{name: q, in: query}]}\n" +
+            "  /a: " + a + "\ncomponents: {parameters: {P: {name: p, in: query, schema: {type: string}}}}\n", "spec.yaml").Paths.Map["/a"];
+
+    [Fact]
+    public void ARefAloneIsTheReferencedPathItem()
+    {
+        var a = Load("{$ref: '#/paths/~1b'}");
+        Assert.Equal("from b", a.Get!.Responses!.Map["200"].Value!.Description);
+        Assert.Equal("b", a.Summary);
+        Assert.Single(a.Parameters);
+    }
+
+    [Fact]
+    public void FieldsBesideTheRefAddToIt()
+    {
+        var a = Load("{$ref: '#/paths/~1b', summary: a, post: {parameters: [{$ref: '#/components/parameters/P'}], responses: {'200': {description: from a}}}}");
+        Assert.Equal("from b", a.Get!.Responses!.Map["200"].Value!.Description);
+        Assert.Equal("p", a.Post!.Parameters[0].Value!.Name);
+        Assert.Equal("a", a.Summary);
+        Assert.Single(a.Parameters);
+    }
+
+    [Fact]
+    public void AFieldBesideTheRefWins()
+    {
+        var a = Load("{$ref: '#/paths/~1b', get: {responses: {'200': {description: from a}}}, parameters: []}");
+        Assert.Equal("from a", a.Get!.Responses!.Map["200"].Value!.Description);
+        Assert.Empty(a.Parameters);
+    }
+
+    [Fact]
+    public void TheReferencedPathItemIsUnchanged()
+    {
+        var spec = new SpecLoader().LoadFromText(
+            "openapi: 3.1.0\ninfo: {title: t, version: '1'}\npaths:\n" +
+            "  /b: {get: {responses: {'200': {description: ok}}}, additionalOperations: {COPY: {responses: {'200': {description: ok}}}}}\n" +
+            "  /a: {$ref: '#/paths/~1b', post: {responses: {'200': {description: ok}}}, additionalOperations: {MOVE: {responses: {'200': {description: ok}}}}}\n",
+            "spec.yaml");
+        var (a, b) = (spec.Paths.Map["/a"], spec.Paths.Map["/b"]);
+        Assert.NotNull(a.Post);
+        Assert.Null(b.Post);
+        Assert.Equal(["COPY", "MOVE"], a.AdditionalOperations!.Keys.Order(StringComparer.Ordinal));
+        Assert.Equal(["COPY"], b.AdditionalOperations!.Keys);
+    }
+
+    [Fact]
+    public void ARefThatReachesNothingFailsWithFieldsBesideIt()
+    {
+        var e = Assert.Throws<LoadException>(() => Load("{$ref: '#/paths/~1nope', summary: a}"));
+        Assert.Contains("path not found", e.Message);
+    }
 }

@@ -9,9 +9,9 @@ code as the Go binary.
   option combinations ([`tools/golden-commands.txt`](https://github.com/fluentfoundation/OASDelta/blob/main/tools/golden-commands.txt)):
   every output format of `diff`, `summary`, `changelog` and `breaking`; `--lang` es, pt-br and ru; and option sets
   such as `--level`, `--fail-on`, `--flatten-params`, `--include-path-params`, `--match-path`, `--prefix-revision`
-  and deprecation days. They run over 641 fixture pairs: the upstream test data paired by file name, the pairs
+  and deprecation days. They run over 643 fixture pairs: the upstream test data paired by file name, the pairs
   upstream's own checker tests compare (`tests/extra-pairs.txt`), and regression cases found by the property-based
-  tests. That is 21,153 comparisons, in which 733 of oasdiff's 778 checker rules fire. The
+  tests. That is 21,219 comparisons, in which 733 of oasdiff's 778 checker rules fire. The
   [coverage page](./coverage) lists the rules no golden fires. `dotnet test` replays them in
   process. CI replays them with the NativeAOT binary
   (`tools/check_golden.sh`) on Linux and Windows, and the release workflow replays them on all six release
@@ -59,6 +59,9 @@ of its size.
 - **HTML templates:** CSS comments are dropped the way `html/template` drops them; the diff report reproduces
   goldmark's HTML, including heading ids.
 - **Command line:** pflag usage text, cobra error messages and exit codes (100–123).
+- **Case mapping (Go's `strings.ToLower`, `ToUpper` and `EqualFold`):** header names, media types, URLs, ignore files and
+  flag values are case-mapped with the Unicode 17 tables of the Go that builds oasdiff, not .NET's: `İ` lowercases to
+  `i`, the Kelvin sign `K` matches `k`, and the case pairs Unicode added after .NET 10's tables are mapped.
 - **`$ref` resolution (kin-openapi):** what a `$ref` may point at. A `$ref` must reach the kind of object it stands
   for (a parameter pointing at a schema fails with `bad data in "#/components/schemas/Limit" (expecting ref to
   parameter object)`). It may go through another `$ref` (`#/components/schemas/Alias/properties/id`), and `#` names
@@ -109,6 +112,19 @@ of its size.
   mapping's local `$ref` (`mapping: {a: '#/components/schemas/A'}`), which it skips in the root document. So when `A`
   doesn't exist, oasdiff loads the base spec but fails on the revision (`map key "A" not found`, exit 102). The
   port loads both, as kin does for the first one.
+- **A path item's `$ref` with fields beside it.** OpenAPI takes the referenced path item and adds the fields beside the
+  `$ref` (which wins when both give a field is left undefined). kin-openapi 0.151.0 ignores the `$ref` instead whenever
+  anything but an extension sits beside it, and doesn't resolve that path item's own `$ref`s:
+  - `/a: {$ref: '#/paths/~1b', summary: A}` loses `/b`'s operations, so oasdiff reports them deleted from `/a`.
+  - An operation beside the `$ref` with a `$ref`'d parameter makes oasdiff 1.35.0 panic (exit 2).
+  - A `$ref` beside other fields that points at nothing loads without an error.
+
+  The port adds the fields beside the `$ref` to the referenced path item, the one beside it winning, and fails to
+  load a `$ref` that points at nothing (exit 102), with fields beside it or not.
+- **A chain of path item `$ref`s.** kin-openapi resolves the paths in sorted order and copies a `$ref`'s target as it
+  is at that moment, without following the target's own `$ref`. So with `/p: {$ref: '#/paths/~1q'}` and
+  `/q: {$ref: '#/paths/~1r'}`, `/p` has no operations in oasdiff (`/q` isn't resolved yet), while `/z → /y → /x` works.
+  The port follows the whole chain whatever the paths are called, so `/p` has `/r`'s operations.
 - **Crashes.** Where oasdiff crashes, the port reports an error or a result instead.
   - A parameter or response that is only a reference to itself (`P: {$ref: '#/components/parameters/P'}`) makes
     oasdiff 1.35.0 panic while it lowercases header names (exit 2, with a Go stack trace). The port fails with

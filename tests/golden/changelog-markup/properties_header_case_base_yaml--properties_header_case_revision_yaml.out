@@ -1,0 +1,15 @@
+# API Changelog 1 vs. 1
+
+
+## API Changes
+
+### GET /pets
+- :warning: for the `header` request parameter `x-id`, the `type` was changed from `string` to `integer`
+- :warning: the `ꟓ-rate` response header's `type` changed from `integer` to `string` for the status `200`
+-  the `header` request parameter `ꟓ-trace` became optional
+
+
+
+
+
+

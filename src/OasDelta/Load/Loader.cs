@@ -596,9 +596,24 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
         finally { _pathItemRefs.Remove(n); _noOrigin = noOrigin; }
         var copy = target.ShallowClone();
         copy.Ref = reference;
-        // siblings of $ref (summary/description) override
+        // The fields beside the $ref add to the path item it references. OpenAPI leaves a field given in both places
+        // undefined; the one beside the $ref wins. kin-openapi departs here (compatibility.md): it ignores the $ref
+        // when anything but extensions sits beside it, and then leaves that path item's own $refs unresolved.
         if (n["summary"] is { } s) copy.Summary = Str(s);
         if (n["description"] is { } d) copy.Description = Str(d);
+        if (n.Pairs!.Any(kv => kv.Key.KeyString is not ("$ref" or "summary" or "description") && PathItemKnown.Contains(kv.Key.KeyString)))
+        {
+            var beside = BuildPathItem(doc, n, key);
+            foreach (var m in PathItem.FixedMethods)
+                if (beside.GetOperation(m) is { } op) copy.SetOperation(m, op);
+            if (beside.AdditionalOperations is { } more)
+            {
+                copy.AdditionalOperations = copy.AdditionalOperations is null ? new(StringComparer.Ordinal) : new(copy.AdditionalOperations, StringComparer.Ordinal);
+                foreach (var (m, op) in more) copy.AdditionalOperations[m] = op;
+            }
+            if (n["servers"] is { IsSequence: true }) copy.Servers = beside.Servers;
+            if (n["parameters"] is { IsSequence: true }) copy.Parameters = beside.Parameters;
+        }
         return _pathItemRefResults[n] = copy;
     }
 

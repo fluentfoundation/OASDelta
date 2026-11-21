@@ -327,30 +327,59 @@ internal static partial class Support
     [GeneratedRegex(@"Set seed: ""([^""]+)""")]
     private static partial Regex CsCheckSeed();
 
+    /// <summary>Whether a local JSON pointer ("#/...") reaches a node of the document, and which.</summary>
+    private static bool TryResolve(Map doc, string pointer, out object? found)
+    {
+        found = doc;
+        if (!pointer.StartsWith("#/", StringComparison.Ordinal)) return false;
+        foreach (var raw in pointer[2..].Split('/'))
+        {
+            var token = Uri.UnescapeDataString(raw).Replace("~1", "/", StringComparison.Ordinal).Replace("~0", "~", StringComparison.Ordinal);
+            if (found is Map m && m.TryGetValue(token, out var next)) found = next;
+            else if (found is List<object?> l && int.TryParse(token, System.Globalization.CultureInfo.InvariantCulture, out var i) && i >= 0 && i < l.Count) found = l[i];
+            else return false;
+        }
+        return true;
+    }
+
     /// <summary>Whether a discriminator mapping of the document is a local JSON pointer ("#/...") to nothing.</summary>
     public static bool HasDanglingMapping(Map doc)
     {
-        bool Resolves(string pointer)
-        {
-            object? cur = doc;
-            foreach (var raw in pointer[2..].Split('/'))
-            {
-                var token = Uri.UnescapeDataString(raw).Replace("~1", "/", StringComparison.Ordinal).Replace("~0", "~", StringComparison.Ordinal);
-                if (cur is Map m && m.TryGetValue(token, out var next)) cur = next;
-                else if (cur is List<object?> l && int.TryParse(token, System.Globalization.CultureInfo.InvariantCulture, out var i) && i >= 0 && i < l.Count) cur = l[i];
-                else return false;
-            }
-            return true;
-        }
         bool Walk(object? node) => node switch
         {
             Map m when m.GetValueOrDefault("discriminator") is Map d && d.GetValueOrDefault("mapping") is Map mapping
-                && mapping.Values.OfType<string>().Any(v => v.StartsWith("#/", StringComparison.Ordinal) && !Resolves(v)) => true,
+                && mapping.Values.OfType<string>().Any(v => v.StartsWith("#/", StringComparison.Ordinal) && !TryResolve(doc, v, out _)) => true,
             Map m => m.Values.Any(Walk),
             List<object?> l => l.Any(Walk),
             _ => false,
         };
         return Walk(doc);
+    }
+
+    private static readonly HashSet<string> PathItemFields = new(StringComparer.Ordinal)
+    {
+        "summary", "description", "connect", "delete", "get", "head", "options", "patch", "post", "put", "trace", "query",
+        "servers", "parameters", "additionalOperations",
+    };
+
+    /// <summary>Whether a path item of the document (under paths, webhooks, components.pathItems or a callback) has a
+    /// $ref that kin-openapi reads differently (compatibility.md): one with a field beside it, which kin ignores, or one
+    /// to a path item that is a $ref too, which kin follows only if it resolved that one first.</summary>
+    public static bool HasPathItemRefKinMisreads(Map doc)
+    {
+        bool Misread(object? item) => item is Map m && m.GetValueOrDefault("$ref") is { } r
+            && (m.Keys.Any(PathItemFields.Contains) || (r is string s && TryResolve(doc, s, out var target) && target is Map t && t.ContainsKey("$ref")));
+        static IEnumerable<object?> Values(object? m) => m is Map map ? map.Values : [];
+        bool InCallbacks(object? node) => node switch
+        {
+            Map m when m.GetValueOrDefault("callbacks") is Map cbs && cbs.Values.SelectMany(Values).Any(Misread) => true,
+            Map m => m.Values.Any(InCallbacks),
+            List<object?> l => l.Any(InCallbacks),
+            _ => false,
+        };
+        return Values(doc.GetValueOrDefault("paths")).Any(Misread) || Values(doc.GetValueOrDefault("webhooks")).Any(Misread)
+            || (doc.GetValueOrDefault("components") is Map c && Values(c.GetValueOrDefault("pathItems")).Any(Misread))
+            || InCallbacks(doc);
     }
 
     public static string Clip(string s, int max = 1500) => s.Length <= max ? s : s[..max] + $"\n... ({s.Length - max} more characters)";

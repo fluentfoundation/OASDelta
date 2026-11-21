@@ -19,19 +19,19 @@ public static class SpecOptions
                 {
                     if (r.Value is null) continue;
                     var lowered = new Dictionary<string, Ref<Header>>(StringComparer.Ordinal);
-                    foreach (var (k, v) in r.Value.Headers) lowered[k.ToLowerInvariant()] = v;
+                    foreach (var (k, v) in r.Value.Headers) lowered[GoText.ToLower(k)] = v;
                     r.Value.Headers = lowered;
                 }
             }
         }
         if (spec.Components is null) return;
         foreach (var s in spec.Components.SecuritySchemes.Values)
-            if (s.Value is { Type: "apiKey", In: "header" } scheme) scheme.Name = scheme.Name.ToLowerInvariant();
+            if (s.Value is { Type: "apiKey", In: "header" } scheme) scheme.Name = GoText.ToLower(scheme.Name);
     }
 
     private static void LowerParam(Parameter? p)
     {
-        if (p is not null && p.In == Parameter.InHeader) p.Name = p.Name.ToLowerInvariant();
+        if (p is not null && p.In == Parameter.InHeader) p.Name = GoText.ToLower(p.Name);
     }
 
     /// <summary>flatten/commonparams.Move: copy path-level params into each operation.</summary>

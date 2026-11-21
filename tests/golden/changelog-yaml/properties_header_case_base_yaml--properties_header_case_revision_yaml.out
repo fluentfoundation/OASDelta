@@ -1,0 +1,46 @@
+- id: request-parameter-type-changed
+  text: for the `header` request parameter `x-id`, the `type` was changed from `string` to `integer`
+  level: 3
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/header_case_base.yaml
+    line: 7
+    column: 45
+  revisionSource:
+    file: ./properties/header_case_revision.yaml
+    line: 7
+    column: 45
+  fingerprint: 0dfcdbbcff15
+- id: response-header-type-changed
+  text: the `ꟓ-rate` response header's `type` changed from `integer` to `string` for the status `200`
+  level: 3
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/header_case_base.yaml
+    line: 13
+    column: 13
+    endLine: 13
+    endColumn: 48
+  revisionSource:
+    file: ./properties/header_case_revision.yaml
+    line: 13
+    column: 13
+    endLine: 13
+    endColumn: 47
+  fingerprint: a28feb268863
+- id: request-parameter-became-optional
+  text: the `header` request parameter `ꟓ-trace` became optional
+  level: 1
+  operation: GET
+  path: /pets
+  section: paths
+  baseSource:
+    file: ./properties/header_case_base.yaml
+    line: 8
+    column: 41
+  fingerprint: edf446fef7d7
+

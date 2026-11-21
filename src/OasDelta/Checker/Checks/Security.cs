@@ -156,7 +156,7 @@ public static partial class Checks
             void Report(string id, Level level, ValueDiff? vd) { if (vd is not null) result.Add(ComponentChange(id, level, [n, vd.From, vd.To], ComponentSecuritySchemes).WithSources(b, r)); }
             Report(Ids.APIComponentsSecurityApiKeyNameUpdated, Level.ERR, sd.NameDiff);
             Report(Ids.APIComponentsSecurityApiKeyInUpdated, Level.ERR, sd.InDiff);
-            if (sd.SchemeDiff is { } sch && !string.Equals(Fmt.InterfaceToString(sch.From), Fmt.InterfaceToString(sch.To), StringComparison.OrdinalIgnoreCase))
+            if (sd.SchemeDiff is { } sch && !GoText.EqualFold(Fmt.InterfaceToString(sch.From), Fmt.InterfaceToString(sch.To)))
                 Report(Ids.APIComponentsSecurityHttpSchemeUpdated, Level.ERR, sch);
             Report(Ids.APIComponentsSecurityBearerFormatUpdated, Level.INFO, sd.BearerFormatDiff);
             if (sd.OpenIDConnectURLDiff is { } ud && !Walkers.SameURL(ud.From, ud.To))

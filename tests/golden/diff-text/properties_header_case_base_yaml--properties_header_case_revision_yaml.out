@@ -1,0 +1,22 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /pets
+- Modified header param: x-id
+  - Schema changed
+    - Type changed from 'string' to 'integer'
+- Modified header param: ꟓ-trace
+  - Required changed from true to false
+- Responses changed
+  - Modified response: 200
+    - Headers changed
+      - Modified header: ꟓ-rate
+        - Schema changed
+          - Type changed from 'integer' to 'string'
+
+

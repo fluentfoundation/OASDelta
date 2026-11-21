@@ -354,7 +354,7 @@ public static class BackwardCompatibility
         var ignored = new bool[errs.Count];
         foreach (var raw in File.ReadAllLines(ignoreFile))
         {
-            var line = raw.ToLowerInvariant();
+            var line = GoText.ToLower(raw);
             var path = line.Split([' ', '\t'], StringSplitOptions.RemoveEmptyEntries).FirstOrDefault(c => c.StartsWith('/')) ?? "";
             for (int i = 0; i < errs.Count; i++)
                 if (errs[i].Level == level && errs[i].MatchIgnore(path, line, l)) ignored[i] = true;

@@ -180,7 +180,7 @@ public class EmitterOracleTests
         throw new InvalidDataException($"bad corpus value {e}");
     }
 
-    private static string FindDir()
+    internal static string FindDir()
     {
         var dir = AppContext.BaseDirectory;
         while (dir is not null && !Directory.Exists(Path.Combine(dir, "tests", "emitter-oracle"))) dir = Path.GetDirectoryName(dir);

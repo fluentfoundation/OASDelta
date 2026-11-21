@@ -387,10 +387,10 @@ public static class Walkers
         // minimal net/url semantics: scheme://host[:port]/path?query#fragment
         int schemeEnd = raw.IndexOf("://", StringComparison.Ordinal);
         if (schemeEnd <= 0) return NormalizePercentEncoding(raw);
-        var scheme = raw[..schemeEnd].ToLowerInvariant();
+        var scheme = GoText.ToLower(raw[..schemeEnd]);
         var rest = raw[(schemeEnd + 3)..];
         int pathStart = rest.IndexOfAny(['/', '?', '#']);
-        var host = (pathStart < 0 ? rest : rest[..pathStart]).ToLowerInvariant();
+        var host = GoText.ToLower(pathStart < 0 ? rest : rest[..pathStart]);
         var tail = pathStart < 0 ? "" : rest[pathStart..];
         if (host == "") return NormalizePercentEncoding(raw);
         int colon = host.LastIndexOf(':');

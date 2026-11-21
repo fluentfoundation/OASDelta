@@ -1,0 +1,14 @@
+openapi: 3.0.3
+info:
+  title: t
+  version: v
+  description: "first secondthird
+fourth
+
+  fifth"
+paths:
+  /p:
+    get: {summary: "a
+b
+", responses: {"200": {description: ok, content: {a/b: {schema: {type: integer}}}}}, tags: ["x
+y", "z"]}

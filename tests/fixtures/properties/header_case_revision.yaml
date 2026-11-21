@@ -1,0 +1,13 @@
+openapi: 3.0.3
+info: {title: header case, version: "1"}
+paths:
+  /pets:
+    get:
+      parameters:
+        - {name: x-id, in: header, schema: {type: integer}}
+        - {name: "ꟓ-trace", in: header, schema: {type: string}}
+      responses:
+        "200":
+          description: ok
+          headers:
+            "ꟓ-rate": {schema: {type: string}}

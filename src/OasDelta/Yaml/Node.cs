@@ -210,6 +210,49 @@ public static class NodeReader
     /// <summary>Parses YAML (or JSON) text into a node tree. Returns null for an empty document.</summary>
     public static Node? Parse(string text)
     {
+        var source = new SourceLines(text);
+        var parsed = text;
+        for (int attempt = 0; ; attempt++)
+        {
+            try { return Parse(parsed, source); }
+            catch (SyntaxErrorException e) when (e.Message == WrongIndentation && attempt < 10_000 && Pad(ref parsed, e, source))
+            {
+                // parse again with that line indented
+            }
+            catch (SyntaxErrorException e) when (e.Message == WrongIndentation)
+            {
+                throw new YamlParseException($"yaml: line {e.Start.Line}: {e.Message}");
+            }
+        }
+    }
+
+    private const string WrongIndentation = "While scanning a multi-line double-quoted scalar, found wrong indentation.";
+
+    /// <summary>
+    /// YamlDotNet requires a double-quoted scalar's continuation lines to be indented more than the block they are in, as
+    /// YAML 1.2 does; go-yaml (libyaml) doesn't check, so <c>description: "a⏎b"</c> with <c>b"</c> at column 1 loads in
+    /// oasdiff (as <c>a b</c>), and so does a raw NEL, LS or PS in such a scalar, which both count as a line break.
+    /// The leading blanks of a continuation line are no part of the value, so the line YamlDotNet rejects is indented
+    /// up to the opening quote's column and the text parsed again; marks on that line are moved back by as much.
+    /// </summary>
+    private static bool Pad(ref string parsed, SyntaxErrorException e, SourceLines source)
+    {
+        int at = (int)e.End.Index; // the first character of the continuation line that isn't blank
+        if (at <= 0 || at > parsed.Length) return false;
+        int lineStart = at;
+        while (lineStart > 0 && !IsLineBreak(parsed[lineStart - 1])) lineStart--;
+        int pad = (int)e.Start.Column - 1 - (at - lineStart);
+        if (pad <= 0) return false;
+        parsed = parsed.Insert(lineStart, new string(' ', pad));
+        source.Padded((int)e.End.Line, pad);
+        return true;
+    }
+
+    // the line breaks of YAML 1.1, which both go-yaml and YamlDotNet count
+    private static bool IsLineBreak(char c) => c == (char)0x0A || c == (char)0x0D || c == (char)0x85 || c == (char)0x2028 || c == (char)0x2029;
+
+    private static Node? Parse(string text, SourceLines source)
+    {
         var parser = new Parser(new StringReader(text));
         var anchors = new Dictionary<string, Node>(StringComparer.Ordinal);
         try
@@ -218,10 +261,10 @@ public static class NodeReader
             if (parser.Accept<StreamEnd>(out _)) return null;
             parser.Consume<DocumentStart>();
             if (parser.Accept<DocumentEnd>(out _)) return null;
-            var root = ReadNode(parser, anchors, new SourceLines(text));
+            var root = ReadNode(parser, anchors, source);
             return root;
         }
-        catch (YamlException e)
+        catch (YamlException e) when (e.Message != WrongIndentation)
         {
             throw new YamlParseException($"yaml: line {e.Start.Line}: {e.Message}");
         }
@@ -237,6 +280,17 @@ public static class NodeReader
     private sealed class SourceLines(string text)
     {
         private List<int>? _starts;
+        private Dictionary<int, int>? _padded;
+
+        /// <summary>The line was indented by <paramref name="pad"/> spaces before parsing (see Pad).</summary>
+        public void Padded(int line, int pad)
+        {
+            _padded ??= [];
+            _padded[line] = _padded.GetValueOrDefault(line) + pad;
+        }
+
+        /// <summary>A mark's column in the text as written.</summary>
+        public int Column(Mark m) => _padded is not null && _padded.TryGetValue((int)m.Line, out var pad) ? (int)m.Column - pad : (int)m.Column;
 
         // 1-based, without its line break. Lines are counted as YAML counts them, as YamlDotNet's marks and go-yaml do:
         // a raw NEL, LS or PS in a quoted scalar is a line break too, and so is a lone CR
@@ -285,14 +339,14 @@ public static class NodeReader
             {
                 var (endLine, endColumn) = s.Style is ScalarStyle.Literal or ScalarStyle.Folded
                     ? source.BlockScalarEnd(s)
-                    : ((int)s.End.Line, (int)s.End.Column);
+                    : ((int)s.End.Line, source.Column(s.End));
                 var n = new Node
                 {
                     Kind = NodeKind.Scalar,
                     Text = s.Value,
                     Plain = s.Style == ScalarStyle.Plain,
                     Tag = s.Tag.IsEmpty ? null : s.Tag.Value,
-                    Line = (int)s.Start.Line, Column = (int)s.Start.Column,
+                    Line = (int)s.Start.Line, Column = source.Column(s.Start),
                     EndLine = endLine, EndColumn = endColumn,
                 };
                 if (!s.Anchor.IsEmpty) anchors[s.Anchor.Value] = n;
@@ -300,18 +354,18 @@ public static class NodeReader
             }
             case SequenceStart ss:
             {
-                var n = new Node { Kind = NodeKind.Sequence, Items = [], Tag = ss.Tag.IsEmpty ? null : ss.Tag.Value, Line = (int)ss.Start.Line, Column = (int)ss.Start.Column };
+                var n = new Node { Kind = NodeKind.Sequence, Items = [], Tag = ss.Tag.IsEmpty ? null : ss.Tag.Value, Line = (int)ss.Start.Line, Column = source.Column(ss.Start) };
                 if (!ss.Anchor.IsEmpty) anchors[ss.Anchor.Value] = n;
                 while (parser.Current is not SequenceEnd)
                     n.Items.Add(ReadNode(parser, anchors, source));
                 var end = parser.Current!; parser.MoveNext();
                 if (ss.Style != SequenceStyle.Flow && n.Items.Count > 0) { n.EndLine = n.Items[^1].EndLine; n.EndColumn = n.Items[^1].EndColumn; }
-                else { n.EndLine = (int)end.Start.Line; n.EndColumn = (int)end.Start.Column + 1; }
+                else { n.EndLine = (int)end.Start.Line; n.EndColumn = source.Column(end.Start) + 1; }
                 return n;
             }
             case MappingStart ms:
             {
-                var n = new Node { Kind = NodeKind.Mapping, Pairs = [], Tag = ms.Tag.IsEmpty ? null : ms.Tag.Value, Line = (int)ms.Start.Line, Column = (int)ms.Start.Column };
+                var n = new Node { Kind = NodeKind.Mapping, Pairs = [], Tag = ms.Tag.IsEmpty ? null : ms.Tag.Value, Line = (int)ms.Start.Line, Column = source.Column(ms.Start) };
                 if (!ms.Anchor.IsEmpty) anchors[ms.Anchor.Value] = n;
                 List<KeyValuePair<Node, Node>>? merges = null;
                 Dictionary<string, int>? index = null;
@@ -335,7 +389,7 @@ public static class NodeReader
                 }
                 var end = parser.Current!; parser.MoveNext();
                 if (ms.Style != MappingStyle.Flow && n.Pairs.Count > 0) { n.EndLine = n.Pairs[^1].Value.EndLine; n.EndColumn = n.Pairs[^1].Value.EndColumn; }
-                else { n.EndLine = (int)end.Start.Line; n.EndColumn = (int)end.Start.Column + 1; }
+                else { n.EndLine = (int)end.Start.Line; n.EndColumn = source.Column(end.Start) + 1; }
                 if (merges is not null)
                     foreach (var p in merges)
                         if (IndexOf(n.Pairs, p.Key) < 0) n.Pairs.Add(p);

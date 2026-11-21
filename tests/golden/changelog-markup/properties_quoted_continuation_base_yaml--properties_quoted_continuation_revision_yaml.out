@@ -1,0 +1,15 @@
+# API Changelog v vs. v
+
+
+## API Changes
+
+### GET /p
+-  api tag `x y` added
+-  api tag `z` added
+-  the response's body `type` changed from `string` to `integer` for status `200` (backward compatible)
+
+
+
+
+
+

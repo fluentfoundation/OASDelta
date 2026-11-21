@@ -1,0 +1,5 @@
+openapi: 3.0.3
+info: {title: t, version: v}
+paths:
+  /p:
+    get: {summary: s, responses: {"200": {description: ok, content: {a/b: {schema: {type: string}}}}}}

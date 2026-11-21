@@ -1,0 +1,33 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>GET /p</p>
+<ul>
+<li>Tags changed from '' to 'x y, z'</li>
+<li>Summary changed from 's' to 'a b '</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: a/b
+<ul>
+<li>Schema changed
+<ul>
+<li>Type changed from 'string' to 'integer'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

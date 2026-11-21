@@ -1,0 +1,85 @@
+# Fires response-header-max-contains-unset (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            type: boolean
+        Item:
+            enum:
+                - "\U0001F600"
+                - tag
+                - '''single'''
+            nullable: true
+            type: string
+    securitySchemes:
+        bearer:
+            scheme: bearer
+            type: http
+        oauth:
+            flows:
+                clientCredentials:
+                    scopes:
+                        admin: admin access
+                        read: read access
+                        write: write access
+                    tokenUrl: https://auth.example.com/token
+            type: oauth2
+info:
+    title: 㢼狺羗畿䓺
+    version: v1
+openapi: 3.0.3
+paths:
+    /pets/{petId}:
+        put:
+            operationId: 'a: b'
+            parameters:
+                - in: path
+                  name: petId
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/xml:
+                        schema:
+                            description: name
+                            type: number
+            responses:
+                "204":
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                        application/json; charset=utf-8:
+                            schema:
+                                format: double
+                                maximum: 742
+                                type: number
+                    description: id
+                    headers:
+                        owner:
+                            schema:
+                                format: float
+                                type: number
+                "404":
+                    description: 볈䶂響䋔燃
+                    headers:
+                        "yes":
+                            schema:
+                                deprecated: true
+                                enum:
+                                    - true
+                                    - false
+                                example: ㄮ拓꾍⮭漿럈
+                                type: boolean
+                                x-owner: price
+                        ключ:
+                            schema:
+                                contains:
+                                    type: boolean
+                                example: '!tag'
+                                maxContains: 0
+                                type: boolean
+                                writeOnly: true
+            summary: status
+servers:
+    - url: https://api.example.com

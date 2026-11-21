@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        responses:
+                            modified:
+                                "404":
+                                    headers:
+                                        modified:
+                                            "~":
+                                                schema:
+                                                    exclusiveMin:
+                                                        from: 12
+                                                        to: -5
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   responses:
+                modified:
+                    "404":
+                        headers:
+                            modified:
+                                "~":
+                                    schema:
+                                        exclusiveMin:
+                                            from: 12
+                                            to: -5
+

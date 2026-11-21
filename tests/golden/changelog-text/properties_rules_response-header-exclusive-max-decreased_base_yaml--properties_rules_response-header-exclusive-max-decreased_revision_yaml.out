@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[response-header-exclusive-max-decreased] at ./properties/rules/response-header-exclusive-max-decreased_revision.yaml
+	in API PUT /owners/{ownerId}/pets
+		the `kind` response header's exclusiveMaximum was decreased from `1403.00` to `1402.00` for the status `404`
+
+

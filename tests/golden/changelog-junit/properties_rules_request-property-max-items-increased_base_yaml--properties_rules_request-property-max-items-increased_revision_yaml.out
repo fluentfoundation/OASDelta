@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
+    <testcase name="new-optional-request-property" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">added the new optional request property `items/ключ`</failure>
+    </testcase>
+    <testcase name="request-property-max-items-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `items/` request property's maxItems was increased from `50` to `53`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

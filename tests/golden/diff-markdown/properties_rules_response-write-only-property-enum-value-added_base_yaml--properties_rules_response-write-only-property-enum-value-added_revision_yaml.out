@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /v1/items
+- Responses changed
+  - Modified response: 400
+    - Content changed
+      - Modified media type: text/plain
+        - Schema changed
+          - Properties changed
+            - Modified property: 名前
+              - Properties changed
+                - Modified property: name
+                  - Properties changed
+                    - Modified property: tag
+                      - New enum values: [389.5]
+
+

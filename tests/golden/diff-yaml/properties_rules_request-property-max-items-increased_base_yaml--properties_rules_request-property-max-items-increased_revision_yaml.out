@@ -1,0 +1,41 @@
+paths:
+    modified:
+        /store/order:
+            operations:
+                modified:
+                    POST:
+                        extensions:
+                            added:
+                                - x-stability-level
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json:
+                                        schema:
+                                            items:
+                                                maxItems:
+                                                    from: 50
+                                                    to: 53
+                                                properties:
+                                                    added:
+                                                        - ключ
+endpoints:
+    modified:
+        ?   method: POST
+            path: /store/order
+        :   extensions:
+                added:
+                    - x-stability-level
+            requestBody:
+                content:
+                    modified:
+                        application/json:
+                            schema:
+                                items:
+                                    maxItems:
+                                        from: 50
+                                        to: 53
+                                    properties:
+                                        added:
+                                            - ключ
+

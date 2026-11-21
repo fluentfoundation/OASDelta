@@ -1,0 +1,6 @@
+1 cambios: 0 error, 0 warning, 1 info
+info	[response-write-only-property-enum-value-added] en ./properties/rules/response-write-only-property-enum-value-added_revision.yaml
+	en API POST /v1/items
+		agregado el nuevo valor enum `389.50` a la propiedad de solo escritura `名前/name/tag` para el estado `400`
+
+

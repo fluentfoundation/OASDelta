@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/owners/{ownerId}/pets":{"operations":{"modified":{"POST":{"requestBody":{"content":{"modified":{"application/json":{"schema":{"maxLength":{"from":40,"to":37}}}}}},"deprecated":{"from":false,"to":true}}}}}}}}

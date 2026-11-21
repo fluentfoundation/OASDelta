@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /v1/items
+-  added the new `389.50` enum value to the `名前/name/tag` response write-only property for the response status `400`
+
+
+
+
+
+

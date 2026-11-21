@@ -1,0 +1,21 @@
+- id: response-header-exclusive-max-decreased
+  text: the `kind` response header's exclusiveMaximum was decreased from `1403.00` to `1402.00` for the status `404`
+  level: 1
+  operation: PUT
+  operationId: put_owners_{ownerId}_pets
+  path: /owners/{ownerId}/pets
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-header-exclusive-max-decreased_base.yaml
+    line: 73
+    column: 9
+    endLine: 160
+    endColumn: 46
+  revisionSource:
+    file: ./properties/rules/response-header-exclusive-max-decreased_revision.yaml
+    line: 73
+    column: 9
+    endLine: 160
+    endColumn: 46
+  fingerprint: d71053c11659
+

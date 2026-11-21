@@ -1,0 +1,23 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+GET /search
+- Responses changed
+  - Modified response: 200
+    - Content changed
+      - Modified media type: application/xml
+        - Schema changed
+          - Min changed from null to 0
+  - Modified response: 201
+    - Headers changed
+      - Modified header: owner
+        - Schema changed
+          - Format changed from 'int32' to 'byte'
+          - ExclusiveMin changed from -9 to -7
+
+

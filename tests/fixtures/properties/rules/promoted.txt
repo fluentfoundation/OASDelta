@@ -301,3 +301,13 @@ request-property-multiple-of-changed request-property-multiple-of-changed
 response-property-exclusive-min-increased response-property-exclusive-min-increased
 request-read-only-property-enum-value-removed request-read-only-property-enum-value-removed
 request-body-max-items-decreased request-body-max-items-decreased
+response-body-min-length-decreased response-body-min-length-decreased
+response-header-max-contains-unset response-header-max-contains-unset
+response-header-exclusive-max-decreased response-header-exclusive-max-decreased
+response-header-exclusive-min-increased response-header-exclusive-min-increased
+response-header-exclusive-min-decreased response-header-exclusive-min-decreased
+request-body-max-length-increased request-body-max-length-increased
+request-property-max-items-increased request-property-max-items-increased
+response-write-only-property-enum-value-added response-write-only-property-enum-value-added
+request-property-min-properties-decreased request-property-min-properties-decreased
+request-body-max-length-decreased request-body-max-length-decreased

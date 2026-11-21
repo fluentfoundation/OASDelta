@@ -1,0 +1,6 @@
+1 изменений: 1 error, 0 warning, 0 info
+error	[response-header-max-contains-unset] в ./properties/rules/response-header-max-contains-unset_revision.yaml
+	в API PUT /pets/{petId}
+		значение maxContains у заголовка ответа `ключ` удалено, предыдущее значение - `0`, для статуса `404`
+
+

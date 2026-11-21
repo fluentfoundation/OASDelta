@@ -1,0 +1,14 @@
+3 changes: 1 error, 0 warning, 2 info
+error	[request-body-max-length-decreased] at ./properties/rules/request-body-max-length-decreased_revision.yaml
+	in API POST /owners/{ownerId}/pets
+		the request's body maxLength was decreased to `37`
+
+info	[api-version-not-bumped]
+	in info
+		a breaking change was detected but the version is still `1.0.0`
+
+info	[endpoint-deprecated] at ./properties/rules/request-body-max-length-decreased_revision.yaml
+	in API POST /owners/{ownerId}/pets
+		endpoint deprecated
+
+

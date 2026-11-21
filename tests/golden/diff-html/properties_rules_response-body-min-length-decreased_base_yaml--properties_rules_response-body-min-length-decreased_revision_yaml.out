@@ -1,0 +1,33 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>DELETE /pets/{petId}</p>
+<ul>
+<li>Deleted path param: petId</li>
+<li>Responses changed
+<ul>
+<li>Modified response: default
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: multipart/form-data
+<ul>
+<li>Schema changed
+<ul>
+<li>MinLength changed from 4 to 3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Deprecated changed from false to true</li>
+</ul>
+

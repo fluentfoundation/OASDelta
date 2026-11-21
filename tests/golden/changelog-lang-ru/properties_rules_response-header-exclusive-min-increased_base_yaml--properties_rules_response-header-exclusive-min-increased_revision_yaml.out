@@ -1,0 +1,14 @@
+3 изменений: 1 error, 0 warning, 2 info
+error	[response-header-type-changed] в ./properties/rules/response-header-exclusive-min-increased_revision.yaml
+	в API GET /search
+		у заголовка ответа `owner` `format` изменён с `int32` на `byte` для статуса `201`
+
+info	[response-body-min-set] в ./properties/rules/response-header-exclusive-min-increased_revision.yaml
+	в API GET /search
+		у тела ответа задано значение min в `0.00`
+
+info	[response-header-exclusive-min-increased] в ./properties/rules/response-header-exclusive-min-increased_revision.yaml
+	в API GET /search
+		значение exclusiveMinimum у заголовка ответа `owner` увеличено с `-9.00` до `-7.00` для статуса `201`
+
+

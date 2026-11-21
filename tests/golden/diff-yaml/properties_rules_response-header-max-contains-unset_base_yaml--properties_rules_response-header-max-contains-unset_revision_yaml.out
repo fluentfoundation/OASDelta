@@ -1,0 +1,45 @@
+paths:
+    modified:
+        /pets/{petId}:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "404":
+                                    headers:
+                                        modified:
+                                            "yes":
+                                                schema:
+                                                    extensions:
+                                                        deleted:
+                                                            - x-owner
+                                            ключ:
+                                                schema:
+                                                    contains:
+                                                        schemaDeleted: true
+                                                    maxContains:
+                                                        from: 0
+                                                        to: null
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /pets/{petId}
+        :   responses:
+                modified:
+                    "404":
+                        headers:
+                            modified:
+                                "yes":
+                                    schema:
+                                        extensions:
+                                            deleted:
+                                                - x-owner
+                                ключ:
+                                    schema:
+                                        contains:
+                                            schemaDeleted: true
+                                        maxContains:
+                                            from: 0
+                                            to: null
+

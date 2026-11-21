@@ -1,0 +1,10 @@
+2 изменений: 0 error, 0 warning, 2 info
+info	[new-optional-request-property] в ./properties/rules/request-property-max-items-increased_revision.yaml
+	в API POST /store/order
+		добавлено новое необязательное поле запроса `items/ключ`
+
+info	[request-property-max-items-increased] в ./properties/rules/request-property-max-items-increased_revision.yaml
+	в API POST /store/order
+		значение maxItems у поля запроса `items/` увеличено с `50` до `53`
+
+

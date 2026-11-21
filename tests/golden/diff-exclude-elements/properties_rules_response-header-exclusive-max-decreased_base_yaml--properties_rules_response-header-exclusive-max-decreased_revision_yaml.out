@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/owners/{ownerId}/pets":{"operations":{"modified":{"PUT":{"responses":{"modified":{"404":{"headers":{"modified":{"kind":{"schema":{"exclusiveMax":{"from":1403,"to":1402}}}}}}}}}}}}}}}

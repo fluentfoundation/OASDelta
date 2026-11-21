@@ -1,0 +1,118 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-2">Modified Endpoints: 2</h3>
+<hr>
+<p>PUT /pets</p>
+<ul>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/json
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: id
+<ul>
+<li>MinProps changed from 3 to 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>PUT /store/order</p>
+<ul>
+<li>Modified cookie param: created
+<ul>
+<li>Schema changed
+<ul>
+<li>Items changed
+<ul>
+<li>MinProps changed from 3 to 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Request body changed
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: text/plain
+<ul>
+<li>Schema changed
+<ul>
+<li>Properties changed
+<ul>
+<li>Modified property: C:\path
+<ul>
+<li>MinProps changed from 3 to 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responses changed
+<ul>
+<li>Modified response: 204
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: text/plain
+<ul>
+<li>Schema changed
+<ul>
+<li>Min changed from null to 3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified response: default
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: text/plain
+<ul>
+<li>Schema changed
+<ul>
+<li>Items changed
+<ul>
+<li>MinProps changed from 3 to 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

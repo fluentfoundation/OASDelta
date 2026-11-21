@@ -1,0 +1,40 @@
+# Fires response-header-exclusive-min-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: created
+    version: v1
+openapi: 3.1.0
+paths:
+    /search:
+        get:
+            operationId: 'a: b'
+            responses:
+                "200":
+                    content:
+                        application/json; charset=utf-8:
+                            schema:
+                                pattern: ^[a-z]+$
+                                type:
+                                    - string
+                                    - "null"
+                        application/xml:
+                            schema:
+                                description: ключ
+                                type: number
+                    description: pet
+                "201":
+                    description:  nbsp
+                    headers:
+                        owner:
+                            schema:
+                                exclusiveMinimum: -9
+                                format: int32
+                                type: integer
+                                writeOnly: true
+                "400":
+                    description: price
+            summary: price
+            tags:
+                - price
+servers:
+    - url: https://api.example.com/v2
+    - url: /relative

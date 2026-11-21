@@ -1,0 +1,4 @@
+::error title=response-body-min-length-decreased,file=./properties/rules/response-body-min-length-decreased_revision.yaml,line=41,col=33::in API DELETE /pets/{petId} the response's body minLength was decreased from `4` to `3`
+::warning title=request-parameter-removed,file=./properties/rules/response-body-min-length-decreased_revision.yaml::in API DELETE /pets/{petId} deleted the `path` request parameter `petId`
+::notice title=endpoint-deprecated,file=./properties/rules/response-body-min-length-decreased_revision.yaml,line=14,col=13::in API DELETE /pets/{petId} endpoint deprecated
+

@@ -68,6 +68,10 @@ public class RulePromotion(ITestOutputHelper output)
                 void Check(SpecPair p)
                 {
                     if (Support.HasDanglingMapping(p.Revision)) return; // a known difference (OracleProperties)
+                    if (Support.HasPathItemRefKinMisreads(p.Base) || Support.HasPathItemRefKinMisreads(p.Revision)) return; // another
+                    // an aliased schema (Item: {$ref: Owner}): which name oasdiff shows as a shared schema is random, so
+                    // its golden would be too
+                    if (Support.SchemaAliases(p.Base, p.Revision).Count > 0) return;
                     using var f = CaseFiles.Write(p);
                     var got = InProcess.Instance.Run("changelog", "-f", "json", f.Base, f.Revision);
                     if (got.Code != 0) return;

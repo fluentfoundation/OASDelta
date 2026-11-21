@@ -1,0 +1,6 @@
+::error title=response-property-min-properties-decreased,file=./properties/rules/request-property-min-properties-decreased_revision.yaml,line=5,col=13::in API PUT /store/order the `items/` response property's minProperties was decreased from `3` to `1` for the response status `default`
+::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::notice title=request-property-min-properties-decreased,file=./properties/rules/request-property-min-properties-decreased_revision.yaml,line=5,col=13::in API PUT /pets the `id` request property's minProperties was decreased from `3` to `1`
+::notice title=request-property-min-properties-decreased,file=./properties/rules/request-property-min-properties-decreased_revision.yaml,line=5,col=13::in API PUT /store/order the `C:\path` request property's minProperties was decreased from `3` to `1`
+::notice title=response-body-min-set,file=./properties/rules/request-property-min-properties-decreased_revision.yaml,line=241,col=33::in API PUT /store/order the response's body min was set to `3.00`
+

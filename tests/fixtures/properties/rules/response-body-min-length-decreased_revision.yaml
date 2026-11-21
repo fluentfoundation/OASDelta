@@ -1,0 +1,46 @@
+# Fires response-body-min-length-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    securitySchemes:
+        openid:
+            openIdConnectUrl: https://auth.example.com/.well-known/openid-configuration
+            type: openIdConnect
+info:
+    title: owner
+    version: v1
+openapi: 3.0.3
+paths:
+    /pets/{petId}:
+        delete:
+            deprecated: true
+            operationId: delete_pets_{petId}
+            parameters: []
+            responses:
+                2XX:
+                    description: pet
+                    headers:
+                        '...':
+                            schema:
+                                description: kind
+                                nullable: true
+                                type: boolean
+                        status:
+                            schema:
+                                description: tag
+                                enum:
+                                    - -43.875
+                                format: float
+                                minimum: 5
+                                nullable: true
+                                type: number
+                "400":
+                    description: status
+                default:
+                    content:
+                        multipart/form-data:
+                            schema:
+                                minLength: 3
+                                nullable: true
+                                type: string
+                    description: tag
+            security:
+                - openid: []

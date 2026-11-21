@@ -1,0 +1,16 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /pets
+- Request body changed
+  - Content changed
+    - Modified media type: application/json; charset=utf-8
+      - Schema changed
+        - MaxLength changed from 58 to 59
+
+

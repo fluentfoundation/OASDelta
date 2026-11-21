@@ -1,0 +1,21 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+POST /store/order
+- Extensions changed
+  - New extension: x-stability-level
+- Request body changed
+  - Content changed
+    - Modified media type: application/json
+      - Schema changed
+        - Items changed
+          - MaxItems changed from 50 to 53
+          - Properties changed
+            - New property: ключ
+
+

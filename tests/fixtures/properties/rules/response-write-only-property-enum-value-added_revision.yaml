@@ -1,0 +1,193 @@
+# Fires response-write-only-property-enum-value-added (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            anyOf:
+                - oneOf:
+                    - deprecated: true
+                      description: owner
+                      type: integer
+                    - enum:
+                        - 50
+                      format: double
+                      maximum: 641
+                      multipleOf: 10
+                      type:
+                        - number
+                        - "null"
+                    - exclusiveMaximum: 1918
+                      exclusiveMinimum: -5
+                      minimum: -4
+                      type:
+                        - integer
+                        - "null"
+                - description: <b>&amp;
+                  type:
+                    - boolean
+                    - "null"
+        Item:
+            description: '!tag'
+            properties:
+                id:
+                    properties:
+                        name:
+                            type:
+                                - integer
+                                - "null"
+                        Ⴚ黱琶:
+                            format: date
+                            type:
+                                - string
+                                - "null"
+                        名前:
+                            description: status
+                            readOnly: true
+                            type: integer
+                    required:
+                        - name
+                        - 名前
+                    type: object
+                tag:
+                    enum:
+                        - 7.625
+                        - -34.25
+                        - 9007199254740993
+                        - 389.5
+                    multipleOf: 2
+                    type: number
+                    writeOnly: true
+                Ünïcode:
+                    description: 名前
+                    maxProperties: 6
+                    properties:
+                        owner:
+                            type:
+                                - boolean
+                                - "null"
+                    type: object
+                儑퍜:
+                    items:
+                        $ref: '#/components/schemas/Item'
+                    type: array
+            required:
+                - 儑퍜
+                - Ünïcode
+                - id
+            type: object
+info:
+    title: '!tag'
+    version: v1
+openapi: 3.1.0
+paths:
+    /v1/items:
+        post:
+            operationId: post_v1_items
+            parameters:
+                - deprecated: true
+                  in: cookie
+                  name: 名前
+                  schema:
+                    description: kind
+                    properties:
+                        name:
+                            $ref: '#/components/schemas/Error'
+                        owner:
+                            enum:
+                                - 4
+                                - 5
+                                - 1
+                            exclusiveMaximum: 1996
+                            minimum: 6
+                            type:
+                                - integer
+                                - "null"
+                        ключ:
+                            format: float
+                            minimum: 6
+                            multipleOf: 5
+                            type: number
+                    required:
+                        - ключ
+                        - name
+                    type: object
+                - in: query
+                  name: "a\r\nb"
+                  required: true
+                  schema:
+                    properties:
+                        Ünïcode:
+                            type: boolean
+                    required:
+                        - Ünïcode
+                    type: object
+                - in: header
+                  name: empty
+                  schema:
+                    items:
+                        $ref: '#/components/schemas/Error'
+                    type: array
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            type:
+                                - string
+                                - "null"
+                    application/xml:
+                        schema:
+                            minLength: 3
+                            type: string
+                required: true
+            responses:
+                2XX:
+                    description: 名前
+                "400":
+                    content:
+                        text/plain:
+                            schema:
+                                properties:
+                                    'a: b':
+                                        format: int32
+                                        type:
+                                            - integer
+                                            - "null"
+                                    名前:
+                                        additionalProperties: false
+                                        properties:
+                                            "1e3":
+                                                default: 牬㊹寇䕶鈮蝷䃽鑴
+                                                description: 럑ꭘ갺퇣噔
+                                                type: string
+                                            name:
+                                                $ref: '#/components/schemas/Item'
+                                            price:
+                                                example: ႐㍑춅䣹ꁤ
+                                                format: custom
+                                                type: boolean
+                                        required:
+                                            - name
+                                            - price
+                                        type: object
+                                type: object
+                    description: '[bracket]'
+                default:
+                    description: ⦪罖ꜭ柝⵶䗥땀
+                    headers:
+                        id:
+                            required: true
+                            schema:
+                                type: string
+                        羡⡴尘䲭趖뉝Ꜷㆰ:
+                            required: true
+                            schema:
+                                description: 쾌쐍
+                                example: tag
+                                format: byte
+                                type:
+                                    - string
+                                    - "null"
+servers:
+    - url: /relative
+tags:
+    - name: pet
+    - name: status

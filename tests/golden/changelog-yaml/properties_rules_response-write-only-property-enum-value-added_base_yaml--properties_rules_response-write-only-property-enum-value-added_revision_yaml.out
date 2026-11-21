@@ -1,0 +1,13 @@
+- id: response-write-only-property-enum-value-added
+  text: added the new `389.50` enum value to the `名前/name/tag` response write-only property for the response status `400`
+  level: 1
+  operation: POST
+  operationId: post_v1_items
+  path: /v1/items
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-write-only-property-enum-value-added_revision.yaml
+    line: 55
+    column: 27
+  fingerprint: 15aa25ba9cd8
+

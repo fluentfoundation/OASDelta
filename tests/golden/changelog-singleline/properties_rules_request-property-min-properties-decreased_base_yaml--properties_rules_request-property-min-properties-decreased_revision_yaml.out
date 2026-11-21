@@ -1,0 +1,12 @@
+5 changes: 1 error, 0 warning, 4 info
+error at ./properties/rules/request-property-min-properties-decreased_revision.yaml, in API PUT /store/order the `items/` response property's minProperties was decreased from `3` to `1` for the response status `default` [response-property-min-properties-decreased]. 
+
+info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
+
+info at ./properties/rules/request-property-min-properties-decreased_revision.yaml, in API PUT /pets the `id` request property's minProperties was decreased from `3` to `1` [request-property-min-properties-decreased]. 
+
+info at ./properties/rules/request-property-min-properties-decreased_revision.yaml, in API PUT /store/order the `C:\path` request property's minProperties was decreased from `3` to `1` [request-property-min-properties-decreased]. 
+
+info at ./properties/rules/request-property-min-properties-decreased_revision.yaml, in API PUT /store/order the response's body min was set to `3.00` [response-body-min-set]. 
+
+

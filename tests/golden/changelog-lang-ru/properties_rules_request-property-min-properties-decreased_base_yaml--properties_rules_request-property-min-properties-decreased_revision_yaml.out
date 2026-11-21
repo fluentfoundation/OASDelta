@@ -1,0 +1,22 @@
+5 изменений: 1 error, 0 warning, 4 info
+error	[response-property-min-properties-decreased] в ./properties/rules/request-property-min-properties-decreased_revision.yaml
+	в API PUT /store/order
+		значение minProperties у поля ответа `items/` уменьшено с `3` до `1` для ответа со статусом `default`
+
+info	[api-version-not-bumped]
+	в info
+		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+
+info	[request-property-min-properties-decreased] в ./properties/rules/request-property-min-properties-decreased_revision.yaml
+	в API PUT /pets
+		значение minProperties у поля запроса `id` уменьшено с `3` до `1`
+
+info	[request-property-min-properties-decreased] в ./properties/rules/request-property-min-properties-decreased_revision.yaml
+	в API PUT /store/order
+		значение minProperties у поля запроса `C:\path` уменьшено с `3` до `1`
+
+info	[response-body-min-set] в ./properties/rules/request-property-min-properties-decreased_revision.yaml
+	в API PUT /store/order
+		у тела ответа задано значение min в `3.00`
+
+

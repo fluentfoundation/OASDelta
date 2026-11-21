@@ -833,9 +833,9 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
     {
         if (n.IsScalar)
         {
-            // boolean schema
-            var b = n.ToValue() is true;
-            return new Ref<Schema>(new Schema { Always = b });
+            // boolean schema: one object per node, like any other, so a component that is `false` is the same schema
+            // everywhere a $ref reaches it (kin resolves each $ref to the component's value)
+            return new Ref<Schema>(Cached(doc, n, key, BuildSchema));
         }
         var reference = RefOf(n);
         if (reference is null || !_is31)
@@ -1003,7 +1003,12 @@ public sealed partial class SpecLoader(LoaderOptions? options = null)
 
     private Schema BuildSchema(Document doc, Node n, Node? key)
     {
-        if (n.IsScalar) return new Schema { Always = n.ToValue() is true };
+        if (n.IsScalar)
+        {
+            var always = new Schema { Always = n.ToValue() is true };
+            Register(n, always);
+            return always;
+        }
         var s = new Schema { Origin = MakeOrigin(doc, n, key) };
         Register(n, s);
         SetExtensions(s, n, SchemaKnown);

@@ -1,0 +1,15 @@
+3 cambios: 0 error, 0 warning, 3 info
+info	[api-tag-added] en ./properties/quoted_continuation_base.yaml
+	en API GET /p
+		etiqueta de api `x y` agregada
+
+info	[api-tag-added] en ./properties/quoted_continuation_base.yaml
+	en API GET /p
+		etiqueta de api `z` agregada
+
+info	[response-body-type-compatible] en ./properties/quoted_continuation_revision.yaml
+	en API GET /p
+		el `type` del cuerpo de respuesta cambió de `string` a `integer` para el estado `200` (retrocompatible)
+		Este cambio es retrocompatible porque el tipo de medio no es fuertemente tipado (por ejemplo XML), donde cualquier valor puede representarse como texto, por lo que el tipo no se impone en la transmisión. Con un tipo de medio fuertemente tipado como JSON el mismo cambio sería incompatible.
+
+

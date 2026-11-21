@@ -143,6 +143,37 @@ public class YamlTests
         Assert.Equal(JsonEmitter.Emit(doc), json.ToString());
         Assert.True(json.ToString().Length > 2 << 20, "the document should be large enough to flush several times");
     }
+
+    /// <summary>A double-quoted scalar's continuation line at or left of the block's indentation: YamlDotNet rejects
+    /// it, go-yaml folds it like any other (#65). A raw NEL folds like a line feed; a raw LS or PS stays in the value.</summary>
+    [Theory]
+    [InlineData("x: \"a\nb\"\n", "a b")]
+    [InlineData("x:\n  y: \"a\n\n b\n c\"\n", "a\nb c")]
+    [InlineData("x: \"a\\\nb\"\n", "ab")] // an escaped line break
+    [InlineData("x: \"a\u0085b\"\n", "a b")]
+    [InlineData("x: \"a\u2028b\"\n", "a\u2028b")]
+    [InlineData("x: \"a\u2029b\"\n", "a\u2029b")]
+    public void AQuotedScalarsContinuationNeedsNoIndentation(string yaml, string value)
+    {
+        var x = NodeReader.Parse(yaml)!["x"]!;
+        Assert.Equal(value, (x.IsMapping ? x["y"]! : x).Text);
+    }
+
+    /// <summary>Positions on such a line are those of the text as written.</summary>
+    [Fact]
+    public void PositionsAfterAnUnindentedContinuationAreAsWritten()
+    {
+        var root = NodeReader.Parse("x:\n  y: {a: \"1\n2\", b: [3]}\n  z: 4\n")!;
+        var b = root["x"]!["y"]!["b"]!;
+        Assert.Equal((3, 8), (b.Line, b.Column));
+        Assert.Equal((3, 11), (b.EndLine, b.EndColumn));
+        var z = root["x"]!["z"]!;
+        Assert.Equal((4, 6), (z.Line, z.Column));
+    }
+
+    [Fact]
+    public void AMultiLineQuotedKeyStillFails() =>
+        Assert.Throws<YamlParseException>(() => NodeReader.Parse("x:\n  \"a\nb\": 1\n")); // indented, still a multi-line key
 }
 
 public class SourceTests

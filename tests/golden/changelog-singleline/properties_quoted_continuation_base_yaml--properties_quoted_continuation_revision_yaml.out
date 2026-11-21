@@ -1,0 +1,8 @@
+3 changes: 0 error, 0 warning, 3 info
+info at ./properties/quoted_continuation_base.yaml, in API GET /p api tag `x y` added [api-tag-added]. 
+
+info at ./properties/quoted_continuation_base.yaml, in API GET /p api tag `z` added [api-tag-added]. 
+
+info at ./properties/quoted_continuation_revision.yaml, in API GET /p the response's body `type` changed from `string` to `integer` for status `200` (backward compatible) [response-body-type-compatible]. This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking.
+
+

@@ -34,6 +34,8 @@ export interface OracleReport {
   load_errors: number
   oasdiff_crashes: number
   dangling_mappings: number
+  /** Absent in reports from before 2026-11-21. */
+  path_item_refs?: number
   rules_fired: number
   new_rules: { id: string; fired: number }[]
   mismatches: OracleMismatch[]

@@ -3,7 +3,8 @@ name: Emitter oracle
 # Differential tests of the YAML and JSON emitters (src/OasDelta/Yaml/Emit.cs) against the Go libraries oasdiff 1.35.0
 # uses: go.yaml.in/yaml/v3 v3.0.5 and encoding/json. tools/go-oracle generates a fixed-seed corpus and what yaml.Marshal
 # and json.Marshal print for it into tests/emitter-oracle; the xUnit EmitterOracleTests compare the C# emitters with
-# those files byte for byte, so they run everywhere without Go. This job reruns the Go program with the toolchain
+# those files byte for byte, so they run everywhere without Go. It also writes go-case.txt, Go's case mapping of every
+# rune, which GoTextTests checks src/OasDelta/GoText.cs against. This job reruns the Go program with the toolchain
 # pinned in tools/go-oracle/go.mod and fails if the checked-in files are stale, then runs the comparison.
 
 on:
@@ -56,5 +57,5 @@ jobs:
         with:
           dotnet-version: 10.0.x
 
-      - name: Compare the C# emitters with the Go outputs
-        run: dotnet test tests/OasDelta.Tests -c Release --filter "FullyQualifiedName~EmitterOracleTests"
+      - name: Compare the C# emitters and case mapping with the Go outputs
+        run: dotnet test tests/OasDelta.Tests -c Release --filter "FullyQualifiedName~EmitterOracleTests|FullyQualifiedName~GoTextTests"

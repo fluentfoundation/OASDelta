@@ -1,0 +1,14 @@
+3 изменений: 2 error, 0 warning, 1 info
+error	[request-parameter-type-changed] в ./properties/header_case_revision.yaml
+	в API GET /pets
+		в параметре запроса `header` `x-id` `type` изменён с `string` на `integer`
+
+error	[response-header-type-changed] в ./properties/header_case_revision.yaml
+	в API GET /pets
+		у заголовка ответа `ꟓ-rate` `type` изменён с `integer` на `string` для статуса `200`
+
+info	[request-parameter-became-optional] в ./properties/header_case_revision.yaml
+	в API GET /pets
+		ранее необязательный параметр запроса `header` `ꟓ-trace` теперь является необязательным
+
+

@@ -1,5 +1,6 @@
 using OasDelta.Cli;
 using OasDelta.Load;
+using OasDelta.Model;
 using OasDelta.Yaml;
 using Xunit;
 
@@ -495,4 +496,65 @@ public class KinRefTests
     [Fact]
     public void AParameterRefToAnExtensionMapIsAccepted() =>
         Assert.Null(LoadError("      parameters: [{$ref: '#/components/x-defs/D'}]\n      responses: {'200': {description: ok}}"));
+}
+
+/// <summary>A path item's $ref with fields beside it (compatibility.md): the fields add to the path item the $ref
+/// references, and win where both give one. kin-openapi 0.151.0 ignores the $ref instead, so oasdiff reports the
+/// referenced operations as deleted, or panics when an operation beside the $ref has a $ref of its own.</summary>
+public class PathItemRefTests
+{
+    private static PathItem Load(string a) =>
+        new SpecLoader().LoadFromText(
+            "openapi: 3.1.0\ninfo: {title: t, version: '1'}\npaths:\n" +
+            "  /b: {summary: b, get: {responses: {'200': {description: from b}}}, parameters: [{name: q, in: query}]}\n" +
+            "  /a: " + a + "\ncomponents: {parameters: {P: {name: p, in: query, schema: {type: string}}}}\n", "spec.yaml").Paths.Map["/a"];
+
+    [Fact]
+    public void ARefAloneIsTheReferencedPathItem()
+    {
+        var a = Load("{$ref: '#/paths/~1b'}");
+        Assert.Equal("from b", a.Get!.Responses!.Map["200"].Value!.Description);
+        Assert.Equal("b", a.Summary);
+        Assert.Single(a.Parameters);
+    }
+
+    [Fact]
+    public void FieldsBesideTheRefAddToIt()
+    {
+        var a = Load("{$ref: '#/paths/~1b', summary: a, post: {parameters: [{$ref: '#/components/parameters/P'}], responses: {'200': {description: from a}}}}");
+        Assert.Equal("from b", a.Get!.Responses!.Map["200"].Value!.Description);
+        Assert.Equal("p", a.Post!.Parameters[0].Value!.Name);
+        Assert.Equal("a", a.Summary);
+        Assert.Single(a.Parameters);
+    }
+
+    [Fact]
+    public void AFieldBesideTheRefWins()
+    {
+        var a = Load("{$ref: '#/paths/~1b', get: {responses: {'200': {description: from a}}}, parameters: []}");
+        Assert.Equal("from a", a.Get!.Responses!.Map["200"].Value!.Description);
+        Assert.Empty(a.Parameters);
+    }
+
+    [Fact]
+    public void TheReferencedPathItemIsUnchanged()
+    {
+        var spec = new SpecLoader().LoadFromText(
+            "openapi: 3.1.0\ninfo: {title: t, version: '1'}\npaths:\n" +
+            "  /b: {get: {responses: {'200': {description: ok}}}, additionalOperations: {COPY: {responses: {'200': {description: ok}}}}}\n" +
+            "  /a: {$ref: '#/paths/~1b', post: {responses: {'200': {description: ok}}}, additionalOperations: {MOVE: {responses: {'200': {description: ok}}}}}\n",
+            "spec.yaml");
+        var (a, b) = (spec.Paths.Map["/a"], spec.Paths.Map["/b"]);
+        Assert.NotNull(a.Post);
+        Assert.Null(b.Post);
+        Assert.Equal(["COPY", "MOVE"], a.AdditionalOperations!.Keys.Order(StringComparer.Ordinal));
+        Assert.Equal(["COPY"], b.AdditionalOperations!.Keys);
+    }
+
+    [Fact]
+    public void ARefThatReachesNothingFailsWithFieldsBesideIt()
+    {
+        var e = Assert.Throws<LoadException>(() => Load("{$ref: '#/paths/~1nope', summary: a}"));
+        Assert.Contains("path not found", e.Message);
+    }
 }

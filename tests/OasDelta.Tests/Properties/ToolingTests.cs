@@ -108,4 +108,20 @@ public class MismatchKindTests
         Assert.Equal("\uD83D\uDE00\uFFFD", Support.WellFormed("\uD83D\uDE00\uDE00"));
         Assert.Equal("plain", Support.WellFormed("plain"));
     }
+
+    [Fact]
+    public void APathItemRefWithAFieldBesideIt()
+    {
+        static Map Item(params (string, object?)[] fields) { var m = new Map(); foreach (var (k, v) in fields) m[k] = v; return m; }
+        var r = ("$ref", (object?)"#/paths/~1b");
+        Assert.True(Support.HasPathItemRefBesideFields(new Map { ["paths"] = new Map { ["/a"] = Item(r, ("summary", "s")) } }));
+        Assert.True(Support.HasPathItemRefBesideFields(new Map { ["webhooks"] = new Map { ["w"] = Item(r, ("get", new Map())) } }));
+        Assert.True(Support.HasPathItemRefBesideFields(new Map { ["components"] = new Map { ["pathItems"] = new Map { ["P"] = Item(r, ("parameters", new List<object?>())) } } }));
+        var callback = new Map { ["callbacks"] = new Map { ["c"] = new Map { ["{$url}"] = Item(r, ("post", new Map())) } } };
+        Assert.True(Support.HasPathItemRefBesideFields(new Map { ["paths"] = new Map { ["/a"] = new Map { ["get"] = callback } } }));
+        // a $ref alone, or with only extensions beside it, is what kin resolves
+        Assert.False(Support.HasPathItemRefBesideFields(new Map { ["paths"] = new Map { ["/a"] = Item(r, ("x-a", 1)) } }));
+        // a schema's $ref with siblings is no path item
+        Assert.False(Support.HasPathItemRefBesideFields(new Map { ["components"] = new Map { ["schemas"] = new Map { ["S"] = Item(r, ("description", "d")) } } }));
+    }
 }

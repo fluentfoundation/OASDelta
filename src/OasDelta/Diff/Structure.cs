@@ -662,7 +662,7 @@ public sealed class MediaTypeName
     public static MediaTypeName Parse(string mediaType)
     {
         var parts = mediaType.Split(';');
-        var bare = parts[0].Trim().ToLowerInvariant();
+        var bare = GoText.ToLower(parts[0].Trim());
         if (bare.Length == 0) throw new DiffException($"failed to parse media type '{mediaType}': mime: no media type");
         var r = new MediaTypeName { Name = mediaType };
         for (int i = 1; i < parts.Length; i++)
@@ -673,7 +673,7 @@ public sealed class MediaTypeName
             if (eq <= 0) throw new DiffException($"failed to parse media type '{mediaType}': mime: invalid media parameter");
             var v = p[(eq + 1)..].Trim();
             if (v.Length >= 2 && v[0] == '"' && v[^1] == '"') v = v[1..^1];
-            r.Parameters[p[..eq].Trim().ToLowerInvariant()] = v;
+            r.Parameters[GoText.ToLower(p[..eq].Trim())] = v;
         }
         var tp = bare.Split('/');
         if (tp.Length != 2) throw new DiffException($"invalid media type format (missing '/'): {bare}");

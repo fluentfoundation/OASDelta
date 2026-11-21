@@ -353,6 +353,30 @@ internal static partial class Support
         return Walk(doc);
     }
 
+    private static readonly HashSet<string> PathItemFields = new(StringComparer.Ordinal)
+    {
+        "summary", "description", "connect", "delete", "get", "head", "options", "patch", "post", "put", "trace", "query",
+        "servers", "parameters", "additionalOperations",
+    };
+
+    /// <summary>Whether a path item of the document (under paths, webhooks, components.pathItems or a callback) has a
+    /// $ref and a field beside it. kin-openapi then ignores the $ref (compatibility.md).</summary>
+    public static bool HasPathItemRefBesideFields(Map doc)
+    {
+        static bool Beside(object? item) => item is Map m && m.ContainsKey("$ref") && m.Keys.Any(PathItemFields.Contains);
+        static IEnumerable<object?> Values(object? m) => m is Map map ? map.Values : [];
+        bool InCallbacks(object? node) => node switch
+        {
+            Map m when m.GetValueOrDefault("callbacks") is Map cbs && cbs.Values.SelectMany(Values).Any(Beside) => true,
+            Map m => m.Values.Any(InCallbacks),
+            List<object?> l => l.Any(InCallbacks),
+            _ => false,
+        };
+        return Values(doc.GetValueOrDefault("paths")).Any(Beside) || Values(doc.GetValueOrDefault("webhooks")).Any(Beside)
+            || (doc.GetValueOrDefault("components") is Map c && Values(c.GetValueOrDefault("pathItems")).Any(Beside))
+            || InCallbacks(doc);
+    }
+
     public static string Clip(string s, int max = 1500) => s.Length <= max ? s : s[..max] + $"\n... ({s.Length - max} more characters)";
 
     /// <summary>The text with any unpaired surrogate (Clip can cut a pair in two) replaced by U+FFFD, which JSON can hold.</summary>

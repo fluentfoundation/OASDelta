@@ -14,6 +14,7 @@ const counted = computed(() =>
         [r.value.load_errors, 'cases neither tool could load (same exit code)'],
         [r.value.oasdiff_crashes, 'command lines on which oasdiff crashed (OasDelta gave an error or a result)'],
         [r.value.dangling_mappings, 'cases skipped: the revision\'s discriminator mapping points at nothing (a known difference)'],
+        ...(r.value.path_item_refs === undefined ? [] : [[r.value.path_item_refs, 'cases skipped: a path item has a $ref and a field beside it (a known difference)']]),
       ] as [number, string][]
     : [],
 )

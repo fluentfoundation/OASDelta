@@ -186,7 +186,7 @@ public sealed class FlagValues
                 _set[def.Name] = n;
                 return;
             case FlagKind.Enum:
-                var canon = def.Allowed.FirstOrDefault(x => string.Equals(x, value, StringComparison.OrdinalIgnoreCase))
+                var canon = def.Allowed.FirstOrDefault(x => GoText.EqualFold(x, value ?? ""))
                     ?? throw new FlagException($"invalid argument {Fmt(value!)} for {Fmt(Display(def))} flag: {value} is not one of the allowed values: {FlagDef.ListOf(def.Allowed)}");
                 _set[def.Name] = canon;
                 return;
@@ -198,7 +198,7 @@ public sealed class FlagValues
                     var bad = new List<string>();
                     for (int k = 0; k < items.Count; k++)
                     {
-                        var c = def.Allowed.FirstOrDefault(x => string.Equals(x, items[k], StringComparison.OrdinalIgnoreCase));
+                        var c = def.Allowed.FirstOrDefault(x => GoText.EqualFold(x, items[k]));
                         if (c is null) bad.Add(items[k]); else items[k] = c;
                     }
                     if (bad.Count > 0)

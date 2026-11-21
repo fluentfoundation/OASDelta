@@ -80,7 +80,7 @@ public class OracleProperties(ITestOutputHelper output)
         var fired = new ConcurrentDictionary<string, int>(StringComparer.Ordinal);
         var promoted = new ConcurrentDictionary<string, string>(StringComparer.Ordinal);
         var mismatches = new ConcurrentDictionary<string, Mismatch>(StringComparer.Ordinal);
-        int cases = 0, reordered = 0, loadErrors = 0, oasdiffCrashes = 0, aliasNamed = 0, danglingMappings = 0;
+        int cases = 0, reordered = 0, loadErrors = 0, oasdiffCrashes = 0, aliasNamed = 0, danglingMappings = 0, pathItemRefs = 0;
         string? failure = null;
         var started = DateTime.UtcNow;
         // which kinds of mismatch fail the current Sample (and so are shrunk); the others are counted and kept
@@ -92,6 +92,8 @@ public class OracleProperties(ITestOutputHelper output)
                 // a known difference (compatibility.md): oasdiff fails to load a revision whose discriminator mapping
                 // points at nothing, as its loader takes the revision for an external document
                 if (Support.HasDanglingMapping(p.Revision)) { Interlocked.Increment(ref danglingMappings); return; }
+                // another (compatibility.md): kin-openapi ignores a path item's $ref when a field sits beside it
+                if (Support.HasPathItemRefBesideFields(p.Base) || Support.HasPathItemRefBesideFields(p.Revision)) { Interlocked.Increment(ref pathItemRefs); return; }
                 using var f = CaseFiles.Write(p);
                 var aliases = new Lazy<Dictionary<string, string>>(() => Support.SchemaAliases(p.Base, p.Revision));
                 foreach (var i in choice)
@@ -210,11 +212,11 @@ public class OracleProperties(ITestOutputHelper output)
         }
         finally
         {
-            Report(started, cases, reordered, aliasNamed, loadErrors, oasdiffCrashes, danglingMappings, fired, promoted, mismatches, failure);
+            Report(started, cases, reordered, aliasNamed, loadErrors, oasdiffCrashes, danglingMappings, pathItemRefs, fired, promoted, mismatches, failure);
         }
     }
 
-    private void Report(DateTime started, int cases, int reordered, int aliasNamed, int loadErrors, int oasdiffCrashes, int danglingMappings, ConcurrentDictionary<string, int> fired,
+    private void Report(DateTime started, int cases, int reordered, int aliasNamed, int loadErrors, int oasdiffCrashes, int danglingMappings, int pathItemRefs, ConcurrentDictionary<string, int> fired,
         ConcurrentDictionary<string, string> promoted, ConcurrentDictionary<string, Mismatch> mismatches, string? failure)
     {
         var inv = CultureInfo.InvariantCulture;
@@ -226,6 +228,7 @@ public class OracleProperties(ITestOutputHelper output)
         sb.Append(inv, $"- Cases neither tool could load (same exit code): {loadErrors}\n");
         sb.Append(inv, $"- Command lines on which oasdiff crashed (OasDelta reported an error or a result instead): {oasdiffCrashes}\n");
         sb.Append(inv, $"- Cases skipped because the revision's discriminator mapping points at nothing (a known difference): {danglingMappings}\n");
+        sb.Append(inv, $"- Cases skipped because a path item has a `$ref` and a field beside it (a known difference): {pathItemRefs}\n");
         sb.Append(inv, $"- Rules fired by generated pairs: **{fired.Count}**; of those, not fired by any golden: **{promoted.Count}**\n");
         var found = mismatches.Values.Where(m => m.Case is not null).OrderBy(m => m.Kind, StringComparer.Ordinal).ToList();
         sb.Append(found.Count == 0 && failure is null ? "- Mismatches: **none**\n"
@@ -256,13 +259,13 @@ public class OracleProperties(ITestOutputHelper output)
         try
         {
             File.WriteAllBytes(Path.Combine(Support.OutDir, "oracle.json"),
-                Json(started, took, cases, reordered, aliasNamed, loadErrors, oasdiffCrashes, danglingMappings, fired, promoted, found, failure));
+                Json(started, took, cases, reordered, aliasNamed, loadErrors, oasdiffCrashes, danglingMappings, pathItemRefs, fired, promoted, found, failure));
         }
         catch (Exception e) { output.WriteLine($"oracle.json not written: {e}"); } // the report above is what matters
     }
 
     /// <summary>The same report as data, for the site's nightly page (docs/data/oracle.data.ts reads it).</summary>
-    private static byte[] Json(DateTime started, TimeSpan took, int cases, int reordered, int aliasNamed, int loadErrors, int oasdiffCrashes, int danglingMappings,
+    private static byte[] Json(DateTime started, TimeSpan took, int cases, int reordered, int aliasNamed, int loadErrors, int oasdiffCrashes, int danglingMappings, int pathItemRefs,
         ConcurrentDictionary<string, int> fired, ConcurrentDictionary<string, string> promoted, List<Mismatch> found, string? failure)
     {
         static string? Env(string name) => Environment.GetEnvironmentVariable(name) is { Length: > 0 } v ? v : null;
@@ -285,6 +288,7 @@ public class OracleProperties(ITestOutputHelper output)
             w.WriteNumber("load_errors", loadErrors);
             w.WriteNumber("oasdiff_crashes", oasdiffCrashes);
             w.WriteNumber("dangling_mappings", danglingMappings);
+            w.WriteNumber("path_item_refs", pathItemRefs);
             w.WriteNumber("rules_fired", fired.Count);
             w.WriteStartArray("new_rules");
             foreach (var rule in promoted.Keys.Order(StringComparer.Ordinal))

@@ -364,14 +364,14 @@ public sealed class Change
         {
             case ChangeSection.Api:
                 if (ignorePath == "") return false;
-                return string.Equals(ignorePath, Path.ToLowerInvariant(), StringComparison.Ordinal) && ignoreLine.Contains((Operation + " " + Path).ToLowerInvariant(), StringComparison.Ordinal)
-                    && ignoreLine.Contains(GetUncolorizedText(l).ToLowerInvariant(), StringComparison.Ordinal);
+                return string.Equals(ignorePath, GoText.ToLower(Path), StringComparison.Ordinal) && ignoreLine.Contains(GoText.ToLower(Operation + " " + Path), StringComparison.Ordinal)
+                    && ignoreLine.Contains(GoText.ToLower(GetUncolorizedText(l)), StringComparison.Ordinal);
             case ChangeSection.Component:
-                return ignoreLine.Contains(GetUncolorizedText(l).ToLowerInvariant(), StringComparison.Ordinal) && ignoreLine.Contains("components", StringComparison.Ordinal);
+                return ignoreLine.Contains(GoText.ToLower(GetUncolorizedText(l)), StringComparison.Ordinal) && ignoreLine.Contains("components", StringComparison.Ordinal);
             case ChangeSection.Security:
-                return ignoreLine.Contains(GetUncolorizedText(l).ToLowerInvariant(), StringComparison.Ordinal) && ignoreLine.Contains("security", StringComparison.Ordinal);
+                return ignoreLine.Contains(GoText.ToLower(GetUncolorizedText(l)), StringComparison.Ordinal) && ignoreLine.Contains("security", StringComparison.Ordinal);
             default:
-                return ignoreLine.Contains(GetUncolorizedText(l).ToLowerInvariant(), StringComparison.Ordinal) && ignoreLine.Contains("info", StringComparison.Ordinal);
+                return ignoreLine.Contains(GoText.ToLower(GetUncolorizedText(l)), StringComparison.Ordinal) && ignoreLine.Contains("info", StringComparison.Ordinal);
         }
     }
 

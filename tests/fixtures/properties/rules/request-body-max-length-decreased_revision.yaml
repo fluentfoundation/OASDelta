@@ -1,0 +1,184 @@
+# Fires request-body-max-length-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Item:
+            properties:
+                '*star':
+                    default: 74
+                    maximum: 114
+                    minimum: 7
+                    multipleOf: 5
+                    nullable: true
+                    type: integer
+                '---':
+                    format: email
+                    type: string
+                owner:
+                    type: integer
+                price:
+                    oneOf:
+                        - description: "0x1F"
+                          nullable: true
+                          type: integer
+                        - enum:
+                            - true
+                            - false
+                          type: boolean
+                        - minimum: 9
+                          readOnly: true
+                          type: integer
+            required:
+                - price
+                - '*star'
+                - '---'
+            type: object
+        Pet:
+            oneOf:
+                - description: 遤평蓪⣒鱥᠗
+                  maxProperties: 5
+                  properties:
+                    empty:
+                        default: 62.5
+                        format: int32
+                        minimum: -10
+                        nullable: true
+                        type: integer
+                    name:
+                        $ref: '#/components/schemas/Pet'
+                    "null":
+                        enum:
+                            - true
+                            - false
+                        nullable: true
+                        type: boolean
+                  required:
+                    - name
+                    - "null"
+                  type: object
+                - nullable: true
+                  type: boolean
+    securitySchemes:
+        api_key:
+            in: query
+            name: status
+            type: apiKey
+info:
+    title: Ünïcode
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /owners/{ownerId}/pets:
+        post:
+            deprecated: true
+            description: name
+            parameters:
+                - in: path
+                  name: ownerId
+                  required: true
+                  schema:
+                    type: string
+                - in: header
+                  name: "~"
+                  required: false
+                  schema:
+                    additionalProperties: false
+                    type: object
+                - in: header
+                  name: status
+                  schema:
+                    deprecated: true
+                    description: 名前
+                    enum:
+                        - true
+                        - false
+                    type: boolean
+                    writeOnly: true
+                - in: cookie
+                  name: tag
+                  schema:
+                    $ref: '#/components/schemas/Pet'
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            maxLength: 37
+                            type: string
+                    application/json; charset=utf-8:
+                        schema:
+                            deprecated: true
+                            description: "null"
+                            format: custom
+                            nullable: true
+                            type: boolean
+                required: false
+            responses:
+                "500":
+                    content:
+                        application/xml:
+                            schema:
+                                oneOf:
+                                    - allOf:
+                                        - format: date
+                                          minLength: 3
+                                          type: string
+                                        - format: email
+                                          maxLength: 80
+                                          type: string
+                                    - type: string
+                                    - maxProperties: 15
+                                      properties:
+                                        "\a":
+                                            description: '>'
+                                            type: string
+                                      required:
+                                        - "\a"
+                                      type: object
+                    description: Ünïcode
+                    headers:
+                        price:
+                            schema:
+                                description: ᒳ頡劤줥
+                                nullable: true
+                                type: number
+                default:
+                    content:
+                        application/json:
+                            schema:
+                                nullable: true
+                                type: integer
+                        multipart/form-data:
+                            schema:
+                                anyOf:
+                                    - description: id
+                                      maxProperties: 19
+                                      minProperties: 1
+                                      properties:
+                                        id:
+                                            $ref: '#/components/schemas/Pet'
+                                        ключ:
+                                            deprecated: true
+                                            description: tag
+                                            format: double
+                                            maximum: 306
+                                            nullable: true
+                                            type: number
+                                        佗켰숺奛璽遚:
+                                            default: 21
+                                            deprecated: true
+                                            type: integer
+                                      required:
+                                        - 佗켰숺奛璽遚
+                                      type: object
+                                    - items:
+                                        default: 7
+                                        enum:
+                                            - 0
+                                            - 1
+                                            - 8
+                                        maximum: 675
+                                        type: integer
+                                      type: array
+                                    - $ref: '#/components/schemas/Pet'
+                    description: created
+security:
+    - api_key: []

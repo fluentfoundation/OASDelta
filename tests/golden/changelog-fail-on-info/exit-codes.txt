@@ -204,6 +204,8 @@ properties_rules_request-body-max-increased_base_yaml--properties_rules_request-
 properties_rules_request-body-max-items-decreased_base_json--properties_rules_request-body-max-items-decreased_revision_json 1
 properties_rules_request-body-max-items-set_base_yaml--properties_rules_request-body-max-items-set_revision_yaml 1
 properties_rules_request-body-max-items-unset_base_yaml--properties_rules_request-body-max-items-unset_revision_yaml 1
+properties_rules_request-body-max-length-decreased_base_yaml--properties_rules_request-body-max-length-decreased_revision_yaml 1
+properties_rules_request-body-max-length-increased_base_yaml--properties_rules_request-body-max-length-increased_revision_yaml 1
 properties_rules_request-body-max-length-unset_base_json--properties_rules_request-body-max-length-unset_revision_json 1
 properties_rules_request-body-max-properties-decreased_base_yaml--properties_rules_request-body-max-properties-decreased_revision_yaml 1
 properties_rules_request-body-max-properties-increased_base_yaml--properties_rules_request-body-max-properties-increased_revision_yaml 1
@@ -275,6 +277,7 @@ properties_rules_request-property-exclusive-max-unset_base_json--properties_rule
 properties_rules_request-property-exclusive-min-unset_base_yaml--properties_rules_request-property-exclusive-min-unset_revision_yaml 1
 properties_rules_request-property-max-decreased_base_yaml--properties_rules_request-property-max-decreased_revision_yaml 1
 properties_rules_request-property-max-increased_base_yaml--properties_rules_request-property-max-increased_revision_yaml 1
+properties_rules_request-property-max-items-increased_base_yaml--properties_rules_request-property-max-items-increased_revision_yaml 1
 properties_rules_request-property-max-items-set_base_yaml--properties_rules_request-property-max-items-set_revision_yaml 1
 properties_rules_request-property-max-items-unset_base_yaml--properties_rules_request-property-max-items-unset_revision_yaml 1
 properties_rules_request-property-max-length-increased_base_yaml--properties_rules_request-property-max-length-increased_revision_yaml 1
@@ -288,6 +291,7 @@ properties_rules_request-property-min-items-unset_base_yaml--properties_rules_re
 properties_rules_request-property-min-length-decreased_base_json--properties_rules_request-property-min-length-decreased_revision_json 1
 properties_rules_request-property-min-length-set_base_yaml--properties_rules_request-property-min-length-set_revision_yaml 1
 properties_rules_request-property-min-length-unset_base_json--properties_rules_request-property-min-length-unset_revision_json 1
+properties_rules_request-property-min-properties-decreased_base_yaml--properties_rules_request-property-min-properties-decreased_revision_yaml 1
 properties_rules_request-property-min-properties-increased_base_yaml--properties_rules_request-property-min-properties-increased_revision_yaml 1
 properties_rules_request-property-min-properties-set_base_yaml--properties_rules_request-property-min-properties-set_revision_yaml 1
 properties_rules_request-property-min-properties-unset_base_yaml--properties_rules_request-property-min-properties-unset_revision_yaml 1
@@ -344,6 +348,7 @@ properties_rules_response-body-min-increased_base_yaml--properties_rules_respons
 properties_rules_response-body-min-items-decreased_base_yaml--properties_rules_response-body-min-items-decreased_revision_yaml 1
 properties_rules_response-body-min-items-increased_base_yaml--properties_rules_response-body-min-items-increased_revision_yaml 1
 properties_rules_response-body-min-items-set_base_yaml--properties_rules_response-body-min-items-set_revision_yaml 1
+properties_rules_response-body-min-length-decreased_base_yaml--properties_rules_response-body-min-length-decreased_revision_yaml 1
 properties_rules_response-body-min-length-set_base_yaml--properties_rules_response-body-min-length-set_revision_yaml 1
 properties_rules_response-body-min-length-unset_base_yaml--properties_rules_response-body-min-length-unset_revision_yaml 1
 properties_rules_response-body-min-properties-decreased_base_yaml--properties_rules_response-body-min-properties-decreased_revision_yaml 1
@@ -363,11 +368,15 @@ properties_rules_response-header-added_base_yaml--properties_rules_response-head
 properties_rules_response-header-became-not-nullable_base_yaml--properties_rules_response-header-became-not-nullable_revision_yaml 1
 properties_rules_response-header-became-nullable_base_yaml--properties_rules_response-header-became-nullable_revision_yaml 1
 properties_rules_response-header-became-optional_base_yaml--properties_rules_response-header-became-optional_revision_yaml 1
+properties_rules_response-header-exclusive-max-decreased_base_yaml--properties_rules_response-header-exclusive-max-decreased_revision_yaml 1
 properties_rules_response-header-exclusive-max-set_base_yaml--properties_rules_response-header-exclusive-max-set_revision_yaml 1
 properties_rules_response-header-exclusive-max-unset_base_yaml--properties_rules_response-header-exclusive-max-unset_revision_yaml 1
+properties_rules_response-header-exclusive-min-decreased_base_yaml--properties_rules_response-header-exclusive-min-decreased_revision_yaml 1
+properties_rules_response-header-exclusive-min-increased_base_yaml--properties_rules_response-header-exclusive-min-increased_revision_yaml 1
 properties_rules_response-header-exclusive-min-set_base_yaml--properties_rules_response-header-exclusive-min-set_revision_yaml 1
 properties_rules_response-header-exclusive-min-unset_base_yaml--properties_rules_response-header-exclusive-min-unset_revision_yaml 1
 properties_rules_response-header-max-contains-set_base_json--properties_rules_response-header-max-contains-set_revision_json 1
+properties_rules_response-header-max-contains-unset_base_yaml--properties_rules_response-header-max-contains-unset_revision_yaml 1
 properties_rules_response-header-max-decreased_base_yaml--properties_rules_response-header-max-decreased_revision_yaml 1
 properties_rules_response-header-max-increased_base_yaml--properties_rules_response-header-max-increased_revision_yaml 1
 properties_rules_response-header-max-items-set_base_yaml--properties_rules_response-header-max-items-set_revision_yaml 1
@@ -467,6 +476,7 @@ properties_rules_response-required-write-only-property-added_base_json--properti
 properties_rules_response-required-write-only-property-removed_base_yaml--properties_rules_response-required-write-only-property-removed_revision_yaml 1
 properties_rules_response-write-only-property-became-optional_base_yaml--properties_rules_response-write-only-property-became-optional_revision_yaml 1
 properties_rules_response-write-only-property-became-required_base_yaml--properties_rules_response-write-only-property-became-required_revision_yaml 1
+properties_rules_response-write-only-property-enum-value-added_base_yaml--properties_rules_response-write-only-property-enum-value-added_revision_yaml 1
 properties_rules_sunset-deleted_base_yaml--properties_rules_sunset-deleted_revision_yaml 1
 properties_shared_false_schema_base_yaml--properties_shared_false_schema_revision_yaml 1
 properties_sunset_base_yaml--properties_sunset_revision_yaml 1

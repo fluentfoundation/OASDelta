@@ -1,0 +1,118 @@
+# Fires response-header-exclusive-min-decreased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+components:
+    schemas:
+        Error:
+            $ref: '#/components/schemas/Owner'
+        Item:
+            description: '`tick`'
+            maximum: 95
+            type:
+                - integer
+                - "null"
+        Owner:
+            type: boolean
+info:
+    title: 삊휷ୄ畬ꔡ嚹婯෬
+    version: v1
+openapi: 3.1.0
+paths:
+    /pets:
+        get:
+            deprecated: true
+            operationId: get_pets
+            parameters:
+                - deprecated: true
+                  description: "0x1F"
+                  in: query
+                  name: Ünïcode
+                  schema:
+                    properties:
+                        pet:
+                            type:
+                                - boolean
+                                - "null"
+                        status:
+                            type: boolean
+                    required:
+                        - pet
+                    type: object
+            responses:
+                "201":
+                    description: kind
+        post:
+            parameters:
+                - description: tag
+                  in: header
+                  name: 紶凙骰靟
+                  schema:
+                    description: pet
+                    properties:
+                        price:
+                            $ref: '#/components/schemas/Item'
+                        tag:
+                            default: 54.625
+                            enum:
+                                - 12
+                            maximum: 621
+                            type:
+                                - integer
+                                - "null"
+                    type: object
+                - in: cookie
+                  name: price
+                  schema:
+                    $ref: '#/components/schemas/Error'
+                - in: cookie
+                  name: Ünïcode
+                  required: false
+                  schema:
+                    oneOf:
+                        - description: kind
+                          example: created
+                          maximum: 216
+                          type: integer
+                        - $ref: '#/components/schemas/Item'
+                        - type:
+                            - string
+                            - "null"
+            responses:
+                2XX:
+                    content:
+                        multipart/form-data:
+                            schema:
+                                const: "0x1F"
+                                default: tag
+                                type: string
+                        text/plain:
+                            schema:
+                                items:
+                                    maxProperties: 7
+                                    type: object
+                                type: array
+                    description: status
+                "404":
+                    description: ключ
+                    headers:
+                        "~":
+                            schema:
+                                default: -41
+                                description: id
+                                enum:
+                                    - 78.375
+                                exclusiveMinimum: 12
+                                format: double
+                                type:
+                                    - number
+                                    - "null"
+                        ключ:
+                            required: true
+                            schema:
+                                enum:
+                                    - 0.1
+                                    - 83
+                                type:
+                                    - number
+                                    - "null"
+                "500":
+                    description: created
+            summary: id

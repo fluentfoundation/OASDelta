@@ -1,0 +1,49 @@
+<h3 id="new-endpoints-none">New Endpoints: None</h3>
+<hr>
+<h3 id="deleted-endpoints-none">Deleted Endpoints: None</h3>
+<hr>
+<h3 id="modified-endpoints-1">Modified Endpoints: 1</h3>
+<hr>
+<p>GET /search</p>
+<ul>
+<li>Responses changed
+<ul>
+<li>Modified response: 200
+<ul>
+<li>Content changed
+<ul>
+<li>Modified media type: application/xml
+<ul>
+<li>Schema changed
+<ul>
+<li>Min changed from null to 0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Modified response: 201
+<ul>
+<li>Headers changed
+<ul>
+<li>Modified header: owner
+<ul>
+<li>Schema changed
+<ul>
+<li>Format changed from 'int32' to 'byte'</li>
+<li>ExclusiveMin changed from -9 to -7</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+

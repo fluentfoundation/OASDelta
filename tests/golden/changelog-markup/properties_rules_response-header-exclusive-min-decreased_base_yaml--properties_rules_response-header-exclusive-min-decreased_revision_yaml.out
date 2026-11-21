@@ -1,0 +1,13 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### POST /pets
+- :warning: the `~` response header's exclusiveMinimum was decreased from `12.00` to `-5.00` for the status `404`
+
+
+
+
+
+

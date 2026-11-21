@@ -1,0 +1,31 @@
+paths:
+    modified:
+        /owners/{ownerId}/pets:
+            operations:
+                modified:
+                    PUT:
+                        responses:
+                            modified:
+                                "404":
+                                    headers:
+                                        modified:
+                                            kind:
+                                                schema:
+                                                    exclusiveMax:
+                                                        from: 1403
+                                                        to: 1402
+endpoints:
+    modified:
+        ?   method: PUT
+            path: /owners/{ownerId}/pets
+        :   responses:
+                modified:
+                    "404":
+                        headers:
+                            modified:
+                                kind:
+                                    schema:
+                                        exclusiveMax:
+                                            from: 1403
+                                            to: 1402
+

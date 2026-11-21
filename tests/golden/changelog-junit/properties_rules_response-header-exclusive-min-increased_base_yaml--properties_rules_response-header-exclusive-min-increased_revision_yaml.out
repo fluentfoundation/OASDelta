@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+    <testcase name="response-header-type-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `owner` response header's `format` changed from `int32` to `byte` for the status `201`</failure>
+    </testcase>
+    <testcase name="response-body-min-set" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the response's body min was set to `0.00`</failure>
+    </testcase>
+    <testcase name="response-header-exclusive-min-increased" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the `owner` response header's exclusiveMinimum was increased from `-9.00` to `-7.00` for the status `201`</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

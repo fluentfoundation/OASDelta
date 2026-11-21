@@ -1,0 +1,10 @@
+2 changes: 0 error, 0 warning, 2 info
+info	[new-optional-request-property] at ./properties/rules/request-property-max-items-increased_revision.yaml
+	in API POST /store/order
+		added the new optional request property `items/ключ`
+
+info	[request-property-max-items-increased] at ./properties/rules/request-property-max-items-increased_revision.yaml
+	in API POST /store/order
+		the `items/` request property's maxItems was increased from `50` to `53`
+
+

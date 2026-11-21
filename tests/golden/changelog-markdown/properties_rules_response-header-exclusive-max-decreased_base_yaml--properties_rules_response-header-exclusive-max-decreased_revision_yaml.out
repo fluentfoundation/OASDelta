@@ -1,0 +1,13 @@
+# API Changelog 2.0 vs. 2.0
+
+
+## API Changes
+
+### PUT /owners/{ownerId}/pets
+-  the `kind` response header's exclusiveMaximum was decreased from `1403.00` to `1402.00` for the status `404`
+
+
+
+
+
+

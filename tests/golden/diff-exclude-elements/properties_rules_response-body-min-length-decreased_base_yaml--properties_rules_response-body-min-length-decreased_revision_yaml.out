@@ -1,0 +1,1 @@
+{"paths":{"modified":{"/pets/{petId}":{"operations":{"modified":{"DELETE":{"parameters":{"deleted":{"path":["petId"]}},"responses":{"modified":{"default":{"content":{"modified":{"multipart/form-data":{"schema":{"minLength":{"from":4,"to":3}}}}}}}},"deprecated":{"from":false,"to":true}}}}}}}}

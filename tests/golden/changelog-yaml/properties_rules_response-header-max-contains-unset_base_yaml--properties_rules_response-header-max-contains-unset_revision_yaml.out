@@ -1,0 +1,21 @@
+- id: response-header-max-contains-unset
+  text: the `ключ` response header's maxContains was unset from `0` for the status `404`
+  level: 3
+  operation: PUT
+  operationId: 'a: b'
+  path: /pets/{petId}
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-header-max-contains-unset_base.yaml
+    line: 32
+    column: 9
+    endLine: 83
+    endColumn: 28
+  revisionSource:
+    file: ./properties/rules/response-header-max-contains-unset_revision.yaml
+    line: 32
+    column: 9
+    endLine: 79
+    endColumn: 28
+  fingerprint: 62b3860c3646
+

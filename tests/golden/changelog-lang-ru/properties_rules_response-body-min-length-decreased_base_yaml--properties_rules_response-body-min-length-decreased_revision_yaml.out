@@ -1,0 +1,15 @@
+3 изменений: 1 error, 1 warning, 1 info
+error	[response-body-min-length-decreased] в ./properties/rules/response-body-min-length-decreased_revision.yaml
+	в API DELETE /pets/{petId}
+		значение minLength для тела ответа уменьшено с `4` до `3`
+
+warning	[request-parameter-removed] в ./properties/rules/response-body-min-length-decreased_revision.yaml
+	в API DELETE /pets/{petId}
+		удалён `path` параметр запроса `petId`
+		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
+
+info	[endpoint-deprecated] в ./properties/rules/response-body-min-length-decreased_revision.yaml
+	в API DELETE /pets/{petId}
+		эндпоинт устарел
+
+

@@ -1,0 +1,15 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### DELETE /pets/{petId}
+- :warning: the response's body minLength was decreased from `4` to `3`
+- :warning: deleted the `path` request parameter `petId`
+-  endpoint deprecated
+
+
+
+
+
+

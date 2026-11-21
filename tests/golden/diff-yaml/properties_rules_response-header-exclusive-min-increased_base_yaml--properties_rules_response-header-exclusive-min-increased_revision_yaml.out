@@ -1,0 +1,53 @@
+paths:
+    modified:
+        /search:
+            operations:
+                modified:
+                    GET:
+                        responses:
+                            modified:
+                                "200":
+                                    content:
+                                        modified:
+                                            application/xml:
+                                                schema:
+                                                    min:
+                                                        from: null
+                                                        to: 0
+                                "201":
+                                    headers:
+                                        modified:
+                                            owner:
+                                                schema:
+                                                    format:
+                                                        from: int32
+                                                        to: byte
+                                                    exclusiveMin:
+                                                        from: -9
+                                                        to: -7
+endpoints:
+    modified:
+        ?   method: GET
+            path: /search
+        :   responses:
+                modified:
+                    "200":
+                        content:
+                            modified:
+                                application/xml:
+                                    schema:
+                                        min:
+                                            from: null
+                                            to: 0
+                    "201":
+                        headers:
+                            modified:
+                                owner:
+                                    schema:
+                                        format:
+                                            from: int32
+                                            to: byte
+                                        exclusiveMin:
+                                            from: -9
+                                            to: -7
+

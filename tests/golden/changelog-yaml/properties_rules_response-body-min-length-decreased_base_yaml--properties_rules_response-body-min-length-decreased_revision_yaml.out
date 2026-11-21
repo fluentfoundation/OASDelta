@@ -1,0 +1,44 @@
+- id: response-body-min-length-decreased
+  text: the response's body minLength was decreased from `4` to `3`
+  level: 3
+  operation: DELETE
+  operationId: delete_pets_{petId}
+  path: /pets/{petId}
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-body-min-length-decreased_base.yaml
+    line: 45
+    column: 33
+  revisionSource:
+    file: ./properties/rules/response-body-min-length-decreased_revision.yaml
+    line: 41
+    column: 33
+  fingerprint: 85b79f9ffbb5
+- id: request-parameter-removed
+  text: deleted the `path` request parameter `petId`
+  comment: This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+  level: 2
+  operation: DELETE
+  operationId: delete_pets_{petId}
+  path: /pets/{petId}
+  section: paths
+  baseSource:
+    file: ./properties/rules/response-body-min-length-decreased_base.yaml
+    line: 16
+    column: 19
+    endLine: 20
+    endColumn: 33
+  fingerprint: 0f748795e2f2
+- id: endpoint-deprecated
+  text: endpoint deprecated
+  level: 1
+  operation: DELETE
+  operationId: delete_pets_{petId}
+  path: /pets/{petId}
+  section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-min-length-decreased_revision.yaml
+    line: 14
+    column: 13
+  fingerprint: f9436a4e2128
+

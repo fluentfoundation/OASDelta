@@ -1,0 +1,17 @@
+### New Endpoints: None
+-----------------------
+
+### Deleted Endpoints: None
+---------------------------
+
+### Modified Endpoints: 1
+-------------------------
+PUT /owners/{ownerId}/pets
+- Responses changed
+  - Modified response: 404
+    - Headers changed
+      - Modified header: kind
+        - Schema changed
+          - ExclusiveMax changed from 1403 to 1402
+
+

@@ -1,0 +1,232 @@
+# Fires request-body-max-length-increased (tests/OasDelta.Tests/Properties/RulePromotion.cs)
+info:
+    title: pet
+    version: 1.0.0
+openapi: 3.0.3
+paths:
+    /pets:
+        patch:
+            deprecated: true
+            operationId: patch_pets
+            parameters:
+                - in: header
+                  name: '`tick`'
+                  required: false
+                  schema:
+                    additionalProperties:
+                        type: string
+                    properties:
+                        '@at':
+                            maximum: 218
+                            nullable: true
+                            readOnly: true
+                            type: integer
+                        kind:
+                            enum:
+                                - '@at'
+                                - "a\r\nb"
+                            type: string
+                    required:
+                        - kind
+                    type: object
+                - in: query
+                  name: ዞ
+                  schema:
+                    allOf:
+                        - format: float
+                          minimum: -5
+                          nullable: true
+                          type: number
+                        - nullable: true
+                          type: number
+                        - type: number
+                - explode: true
+                  in: cookie
+                  name: name
+                  required: true
+                  schema:
+                    enum:
+                        - -3
+                        - 1
+                        - 7
+                    format: int64
+                    type: integer
+            responses:
+                2XX:
+                    description: pet
+                "200":
+                    description: |-
+                        line1
+                        line2
+                "400":
+                    description: price
+                    headers:
+                        status:
+                            required: false
+                            schema:
+                                type: number
+        post:
+            parameters:
+                - in: cookie
+                  name: pet
+                  required: false
+                  schema:
+                    items:
+                        format: uuid
+                        nullable: true
+                        type: string
+                    type: array
+                - in: cookie
+                  name: kind
+                  schema:
+                    example: 痜헼푫ꨵꬡ䢙ꃶ
+                    maximum: 653
+                    type: integer
+                - in: header
+                  name: status
+                  schema:
+                    anyOf:
+                        - type: number
+                        - nullable: true
+                          type: string
+            requestBody:
+                content:
+                    application/json; charset=utf-8:
+                        schema:
+                            format: binary
+                            maxLength: 59
+                            nullable: true
+                            pattern: (
+                            type: string
+                    multipart/form-data:
+                        schema:
+                            description: "~"
+                            format: float
+                            minimum: -3
+                            type: number
+                required: false
+            responses:
+                2XX:
+                    description: id
+                default:
+                    description: status
+        put:
+            parameters:
+                - in: header
+                  name: ' '
+                  schema:
+                    maxProperties: 11
+                    properties:
+                        owner:
+                            type: string
+                        "x\ty":
+                            format: int32
+                            nullable: true
+                            type: integer
+                        ключ:
+                            enum:
+                                - true
+                                - false
+                            nullable: true
+                            type: boolean
+                        名前:
+                            default: -0
+                            type: integer
+                    required:
+                        - owner
+                        - "x\ty"
+                    type: object
+                - in: cookie
+                  name: tag
+                  schema:
+                    description: id
+                    nullable: true
+                    type: number
+                - in: cookie
+                  name: 'a: b'
+                  schema:
+                    anyOf:
+                        - enum:
+                            - true
+                            - false
+                          type: boolean
+                        - nullable: true
+                          type: integer
+                    discriminator:
+                        propertyName: pet
+            requestBody:
+                content:
+                    multipart/form-data:
+                        schema:
+                            description: 꺝
+                            maxProperties: 18
+                            minProperties: 2
+                            properties:
+                                '| table |':
+                                    description: kind
+                                    type: string
+                                id:
+                                    items:
+                                        type: boolean
+                                    minItems: 3
+                                    type: array
+                                name:
+                                    items:
+                                        description: '#hash'
+                                        format: custom
+                                        type: boolean
+                                    type: array
+                            required:
+                                - '| table |'
+                            type: object
+            responses:
+                "500":
+                    description:  nbsp
+    /ünïcode/ключ:
+        patch:
+            operationId: patch_ünïcode_ключ
+            parameters:
+                - explode: false
+                  in: query
+                  name: 롈ꅪȡ䢤䌅岤蜇
+                  required: false
+                  schema:
+                    items:
+                        type: number
+                    maxItems: 14
+                    type: array
+                - in: header
+                  name: '---'
+                  schema:
+                    nullable: true
+                    readOnly: true
+                    type: boolean
+            requestBody:
+                content:
+                    '*/*':
+                        schema:
+                            nullable: true
+                            type: boolean
+                    text/plain:
+                        schema:
+                            readOnly: true
+                            type: boolean
+                required: true
+            responses:
+                2XX:
+                    description: kind
+                "404":
+                    content:
+                        text/plain:
+                            schema:
+                                nullable: true
+                                type: integer
+                    description: pet
+            tags:
+                - pet
+servers:
+    - url: https://api.example.com
+    - url: /relative
+tags:
+    - name: kind
+    - name: ключ

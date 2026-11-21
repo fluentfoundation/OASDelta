@@ -1,0 +1,27 @@
+paths:
+    modified:
+        /pets:
+            operations:
+                modified:
+                    POST:
+                        requestBody:
+                            content:
+                                modified:
+                                    application/json; charset=utf-8:
+                                        schema:
+                                            maxLength:
+                                                from: 58
+                                                to: 59
+endpoints:
+    modified:
+        ?   method: POST
+            path: /pets
+        :   requestBody:
+                content:
+                    modified:
+                        application/json; charset=utf-8:
+                            schema:
+                                maxLength:
+                                    from: 58
+                                    to: 59
+

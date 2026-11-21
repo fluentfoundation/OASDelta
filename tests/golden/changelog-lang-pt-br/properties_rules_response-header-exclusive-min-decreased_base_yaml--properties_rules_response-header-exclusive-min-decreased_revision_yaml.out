@@ -1,0 +1,6 @@
+1 alterações: 1 error, 0 warning, 0 info
+error	[response-header-exclusive-min-decreased] em ./properties/rules/response-header-exclusive-min-decreased_revision.yaml
+	em API POST /pets
+		o valor exclusiveMinimum do cabeçalho de resposta `~` foi reduzido de `12.00` para `-5.00` para o status `404`
+
+

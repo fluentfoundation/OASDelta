@@ -1,0 +1,15 @@
+# API Changelog v1 vs. v1
+
+
+## API Changes
+
+### GET /search
+- :warning: the `owner` response header's `format` changed from `int32` to `byte` for the status `201`
+-  the response's body min was set to `0.00`
+-  the `owner` response header's exclusiveMinimum was increased from `-9.00` to `-7.00` for the status `201`
+
+
+
+
+
+

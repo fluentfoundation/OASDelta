@@ -1,0 +1,6 @@
+1 changes: 0 error, 0 warning, 1 info
+info	[request-body-max-length-increased] at ./properties/rules/request-body-max-length-increased_revision.yaml
+	in API POST /pets
+		the request's body maxLength was increased from `58` to `59`
+
+

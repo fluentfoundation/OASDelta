@@ -92,8 +92,8 @@ public class OracleProperties(ITestOutputHelper output)
                 // a known difference (compatibility.md): oasdiff fails to load a revision whose discriminator mapping
                 // points at nothing, as its loader takes the revision for an external document
                 if (Support.HasDanglingMapping(p.Revision)) { Interlocked.Increment(ref danglingMappings); return; }
-                // another (compatibility.md): kin-openapi ignores a path item's $ref when a field sits beside it
-                if (Support.HasPathItemRefBesideFields(p.Base) || Support.HasPathItemRefBesideFields(p.Revision)) { Interlocked.Increment(ref pathItemRefs); return; }
+                // another (compatibility.md): kin-openapi ignores a path item's $ref beside a field, and follows a chain of them by path name
+                if (Support.HasPathItemRefKinMisreads(p.Base) || Support.HasPathItemRefKinMisreads(p.Revision)) { Interlocked.Increment(ref pathItemRefs); return; }
                 using var f = CaseFiles.Write(p);
                 var aliases = new Lazy<Dictionary<string, string>>(() => Support.SchemaAliases(p.Base, p.Revision));
                 foreach (var i in choice)
@@ -228,7 +228,7 @@ public class OracleProperties(ITestOutputHelper output)
         sb.Append(inv, $"- Cases neither tool could load (same exit code): {loadErrors}\n");
         sb.Append(inv, $"- Command lines on which oasdiff crashed (OasDelta reported an error or a result instead): {oasdiffCrashes}\n");
         sb.Append(inv, $"- Cases skipped because the revision's discriminator mapping points at nothing (a known difference): {danglingMappings}\n");
-        sb.Append(inv, $"- Cases skipped because a path item has a `$ref` and a field beside it (a known difference): {pathItemRefs}\n");
+        sb.Append(inv, $"- Cases skipped because kin-openapi misreads a path item's `$ref`: a field beside it, or a chain of them (a known difference): {pathItemRefs}\n");
         sb.Append(inv, $"- Rules fired by generated pairs: **{fired.Count}**; of those, not fired by any golden: **{promoted.Count}**\n");
         var found = mismatches.Values.Where(m => m.Case is not null).OrderBy(m => m.Kind, StringComparer.Ordinal).ToList();
         sb.Append(found.Count == 0 && failure is null ? "- Mismatches: **none**\n"

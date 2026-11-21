@@ -121,6 +121,10 @@ of its size.
 
   The port adds the fields beside the `$ref` to the referenced path item, the one beside it winning, and fails to
   load a `$ref` that points at nothing (exit 102), with fields beside it or not.
+- **A chain of path item `$ref`s.** kin-openapi resolves the paths in sorted order and copies a `$ref`'s target as it
+  is at that moment, without following the target's own `$ref`. So with `/p: {$ref: '#/paths/~1q'}` and
+  `/q: {$ref: '#/paths/~1r'}`, `/p` has no operations in oasdiff (`/q` isn't resolved yet), while `/z → /y → /x` works.
+  The port follows the whole chain whatever the paths are called, so `/p` has `/r`'s operations.
 - **Crashes.** Where oasdiff crashes, the port reports an error or a result instead.
   - A parameter or response that is only a reference to itself (`P: {$ref: '#/components/parameters/P'}`) makes
     oasdiff 1.35.0 panic while it lowercases header names (exit 2, with a Go stack trace). The port fails with

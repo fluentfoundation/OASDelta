@@ -145,6 +145,22 @@
     
 
     
+    <div class="section-title">info</div>
+    
+    <div class="endpoint">
+        
+    <ul class="endpoint-changes">
+        
+        <li class="change">
+        
+        the API version changed from `2.0` to `1.0`
+        </li>
+        
+    </ul>
+    
+    </div>
+    
+    
     
 </body>
 

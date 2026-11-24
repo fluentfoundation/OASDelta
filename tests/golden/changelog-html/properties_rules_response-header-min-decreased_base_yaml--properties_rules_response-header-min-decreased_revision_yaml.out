@@ -161,7 +161,7 @@
         
         <li class="change">
         
-        the `_under_/items/` response&#39;s property `format` was narrowed from `none` to `byte` for status `201`
+        the `_under_/items` response&#39;s property `format` was narrowed from `none` to `byte` for status `201`
         </li>
         
     </ul>
@@ -170,22 +170,6 @@
     
     
 
-    
-    <div class="section-title">info</div>
-    
-    <div class="endpoint">
-        
-    <ul class="endpoint-changes">
-        
-        <li class="change">
-        
-        a breaking change was detected but the version is still `1.0.0`
-        </li>
-        
-    </ul>
-    
-    </div>
-    
     
     
 </body>

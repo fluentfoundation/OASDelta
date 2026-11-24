@@ -4,7 +4,7 @@
 ## API Changes
 
 ### POST /items/{id}.json
-- :warning: the schema of the `items/` property of the `cookie` request parameter `name` became `false`: no value passes validation
+- :warning: the schema of the `items` property of the `cookie` request parameter `name` became `false`: no value passes validation
 
 
 

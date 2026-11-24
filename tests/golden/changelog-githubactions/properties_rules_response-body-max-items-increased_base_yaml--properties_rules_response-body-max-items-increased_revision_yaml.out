@@ -1,3 +1,2 @@
 ::error title=response-body-max-items-increased,file=./properties/rules/response-body-max-items-increased_revision.yaml,line=80,col=33::in API PATCH /pets the response's body maxItems was increased from `85` to `88`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 

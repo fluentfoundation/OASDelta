@@ -1,18 +1,18 @@
 4 alterações: 0 error, 0 warning, 4 info
-info	[request-property-default-value-removed] em ./properties/rules/request-property-default-value-removed_revision.yaml
+info	[request-property-default-value-removed] em ./properties/rules/request-property-default-value-removed_base.yaml
 	em API POST /pets
 		o valor padrão `` foi removido da propriedade de requisição `9007199254740992.00`
 
-info	[request-property-min-unset] em ./properties/rules/request-property-default-value-removed_revision.yaml
+info	[request-property-min-unset] em ./properties/rules/request-property-default-value-removed_base.yaml
 	em API POST /pets
-		o valor min da propriedade de requisição `status/oneOf[subschema #3]/` foi removido de `7.00`
+		o valor min da propriedade de requisição `status/oneOf[subschema #3]` foi removido de `7.00`
 
-info	[request-property-reactivated] em ./properties/rules/request-property-default-value-removed_revision.yaml
+info	[request-property-reactivated] em ./properties/rules/request-property-default-value-removed_base.yaml
 	em API POST /pets
-		propriedade de requisição `status/oneOf[subschema #3]/` reativada
+		propriedade de requisição `status/oneOf[subschema #3]` reativada
 
-info	[request-property-type-generalized] em ./properties/rules/request-property-default-value-removed_revision.yaml
+info	[request-property-type-generalized] em ./properties/rules/request-property-default-value-removed_base.yaml
 	em API POST /pets
-		o `status/oneOf[subschema #3]/` da propriedade de requisição `type/format` foi expandido de `integer, null/int64` para `any`
+		o `status/oneOf[subschema #3]` da propriedade de requisição `type/format` foi expandido de `integer, null/int64` para `any`
 
 

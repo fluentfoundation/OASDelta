@@ -33,6 +33,14 @@
   operationId: delete_store_order
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/response-body-max-length-unset_base.yaml
+    line: 19
+    column: 39
+  revisionSource:
+    file: ./properties/rules/response-body-max-length-unset_revision.yaml
+    line: 15
+    column: 33
   fingerprint: 1fc84d4a7d4c
 - id: response-required-property-added
   text: 'added the required property `짠㭬䔺豍ꨩ뽥/pet` to the response with the `201` status (media type: application/xml)'

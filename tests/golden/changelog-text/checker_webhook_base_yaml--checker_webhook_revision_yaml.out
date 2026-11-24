@@ -1,13 +1,9 @@
-3 changes: 1 error, 0 warning, 2 info
-error	[webhook-removed]
+2 changes: 1 error, 0 warning, 1 info
+error	[webhook-removed] at ./checker/webhook_base.yaml
 	in components/webhooks
 		webhook `orderDeleted` removed
 
-info	[api-version-not-bumped]
-	in info
-		a breaking change was detected but the version is still `1.0.0`
-
-info	[webhook-added]
+info	[webhook-added] at ./checker/webhook_revision.yaml
 	in components/webhooks
 		webhook `orderUpdated` added
 

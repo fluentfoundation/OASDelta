@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        request property `items/` deprecated
+        request property `items` deprecated
         </li>
         
     </ul>

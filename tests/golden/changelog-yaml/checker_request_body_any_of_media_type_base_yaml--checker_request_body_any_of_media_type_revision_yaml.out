@@ -26,11 +26,6 @@
     endLine: 21
     endColumn: 51
   fingerprint: 1cecfdef5213
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-body-any-of-added
   text: 'added `#/components/schemas/Rabbit` to the request body `anyOf` list (media type: application/json)'
   level: 1

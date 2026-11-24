@@ -1,19 +1,15 @@
-4 изменений: 1 error, 1 warning, 2 info
+3 изменений: 1 error, 1 warning, 1 info
 error	[response-header-min-decreased] в ./properties/rules/response-header-min-decreased_revision.yaml
 	в API PATCH /items/{id}.json
 		значение min у заголовка ответа `>` уменьшено с `4.00` до `2.00` для статуса `200`
 
-warning	[request-parameter-removed] в ./properties/rules/response-header-min-decreased_revision.yaml
+warning	[request-parameter-removed] в ./properties/rules/response-header-min-decreased_base.yaml
 	в API PUT /items/{id}.json
 		удалён `header` параметр запроса `owner`
 		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
 
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
-
 info	[response-property-type-specialized] в ./properties/rules/response-header-min-decreased_revision.yaml
 	в API PUT /items/{id}.json
-		у свойства ответа `_under_/items/` `format` сужен с `none` до `byte` для статуса `201`
+		у свойства ответа `_under_/items` `format` сужен с `none` до `byte` для статуса `201`
 
 

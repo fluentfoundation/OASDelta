@@ -1,7 +1,7 @@
 3 changes: 1 error, 1 warning, 1 info
 error at ./properties/rules/response-body-min-length-decreased_revision.yaml, in API DELETE /pets/{petId} the response's body minLength was decreased from `4` to `3` [response-body-min-length-decreased]. 
 
-warning at ./properties/rules/response-body-min-length-decreased_revision.yaml, in API DELETE /pets/{petId} deleted the `path` request parameter `petId` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
+warning at ./properties/rules/response-body-min-length-decreased_base.yaml, in API DELETE /pets/{petId} deleted the `path` request parameter `petId` [request-parameter-removed]. This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
 
 info at ./properties/rules/response-body-min-length-decreased_revision.yaml, in API DELETE /pets/{petId} endpoint deprecated [endpoint-deprecated]. 
 

@@ -13,5 +13,9 @@
     endColumn: 46
   revisionSource:
     file: ./properties/rules/response-header-became-not-nullable_revision.yaml
+    line: 213
+    column: 15
+    endLine: 216
+    endColumn: 36
   fingerprint: e7f906aa101f
 

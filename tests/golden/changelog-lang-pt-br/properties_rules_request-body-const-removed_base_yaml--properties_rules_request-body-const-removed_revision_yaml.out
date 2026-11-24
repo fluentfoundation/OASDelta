@@ -1,5 +1,5 @@
 1 alterações: 0 error, 0 warning, 1 info
-info	[request-body-const-removed] em ./properties/rules/request-body-const-removed_revision.yaml
+info	[request-body-const-removed] em ./properties/rules/request-body-const-removed_base.yaml
 	em API POST /items/{id}.json
 		o corpo da requisição `application/xml` teve o valor const `@at` removido
 

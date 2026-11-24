@@ -5,5 +5,9 @@
   operationId: put_v1_items
   path: /v1/items
   section: paths
+  revisionSource:
+    file: ./properties/rules/request-parameter-default-value-added_revision.yaml
+    line: 356
+    column: 15
   fingerprint: a9b340de584a
 

@@ -1,6 +1,6 @@
 ::error title=response-body-type-changed,file=./properties/rules/response-required-write-only-property-removed_revision.yaml,line=84,col=33::in API DELETE /v1/items the response's body `type` changed from `object` to `string` for status `500`
-::error title=response-required-property-removed,file=./properties/rules/response-required-write-only-property-removed_revision.yaml::in API DELETE /v1/items removed the required property `pet` from the response with the `500` status
-::error title=response-required-property-removed,file=./properties/rules/response-required-write-only-property-removed_revision.yaml::in API DELETE /v1/items removed the required property `瀒` from the response with the `500` status
+::error title=response-required-property-removed,file=./properties/rules/response-required-write-only-property-removed_base.yaml::in API DELETE /v1/items removed the required property `pet` from the response with the `500` status
+::error title=response-required-property-removed,file=./properties/rules/response-required-write-only-property-removed_base.yaml::in API DELETE /v1/items removed the required property `瀒` from the response with the `500` status
 ::notice title=endpoint-added,file=./properties/rules/response-required-write-only-property-removed_revision.yaml,line=14,col=9::in API GET /added/kind endpoint added
-::notice title=response-required-write-only-property-removed,file=./properties/rules/response-required-write-only-property-removed_revision.yaml::in API DELETE /v1/items removed the required write-only property `id` from the response with the `500` status
+::notice title=response-required-write-only-property-removed,file=./properties/rules/response-required-write-only-property-removed_base.yaml::in API DELETE /v1/items removed the required write-only property `id` from the response with the `500` status
 

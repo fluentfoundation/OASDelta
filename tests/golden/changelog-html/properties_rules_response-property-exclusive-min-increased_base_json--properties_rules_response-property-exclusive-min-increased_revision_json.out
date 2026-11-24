@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `anyOf[subschema #2]/items/` response property&#39;s exclusiveMinimum was increased from `-10.00` to `-7.00` for the response status `400`
+        the `anyOf[subschema #2]/items` response property&#39;s exclusiveMinimum was increased from `-10.00` to `-7.00` for the response status `400`
         </li>
         
     </ul>

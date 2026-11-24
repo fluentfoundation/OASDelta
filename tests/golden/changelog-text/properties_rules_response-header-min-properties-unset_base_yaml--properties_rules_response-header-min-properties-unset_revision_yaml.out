@@ -1,5 +1,5 @@
 1 changes: 1 error, 0 warning, 0 info
-error	[response-header-min-properties-unset] at ./properties/rules/response-header-min-properties-unset_revision.yaml
+error	[response-header-min-properties-unset] at ./properties/rules/response-header-min-properties-unset_base.yaml
 	in API POST /items/{id}.json
 		the `owner` response header's minProperties was unset from `8` for the status `default`
 

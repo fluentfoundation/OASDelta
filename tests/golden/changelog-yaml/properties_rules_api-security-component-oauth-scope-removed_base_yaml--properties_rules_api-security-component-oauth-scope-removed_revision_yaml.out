@@ -17,6 +17,10 @@
   section: paths
   revisionSource:
     file: ./properties/rules/api-security-component-oauth-scope-removed_revision.yaml
+    line: 83
+    column: 7
+    endLine: 87
+    endColumn: 12
   fingerprint: fdd877492ade
 - id: new-optional-request-parameter
   text: added the new optional `query` request parameter `㿢몜짐躘훕綏冔⌰`
@@ -24,6 +28,12 @@
   operation: PATCH
   path: /owners/{ownerId}/pets
   section: paths
+  revisionSource:
+    file: ./properties/rules/api-security-component-oauth-scope-removed_revision.yaml
+    line: 115
+    column: 13
+    endLine: 129
+    endColumn: 14
   fingerprint: 2c7bc5e01a73
 - id: request-parameter-removed-with-deprecation
   text: deleted the `query` request parameter `pet` with deprecation

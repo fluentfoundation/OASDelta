@@ -4,14 +4,15 @@
   operation: POST
   path: /payments/{id}
   section: paths
+  baseSource:
+    file: ./nullable/base-embedded-property.yaml
+    line: 19
+    column: 23
+    endLine: 20
+    endColumn: 37
   revisionSource:
     file: ./nullable/revision-embedded-property.yaml
     line: 21
     column: 25
   fingerprint: 01a9dbcfc04f
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 

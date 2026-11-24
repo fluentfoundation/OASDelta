@@ -24,13 +24,13 @@
     line: 13
     column: 13
     endLine: 13
-    endColumn: 48
+    endColumn: 50
   revisionSource:
     file: ./properties/header_case_revision.yaml
     line: 13
     column: 13
     endLine: 13
-    endColumn: 47
+    endColumn: 49
   fingerprint: a28feb268863
 - id: request-parameter-became-optional
   text: the `header` request parameter `ꟓ-trace` became optional

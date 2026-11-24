@@ -5,17 +5,9 @@
   operationId: delete_ünïcode_ключ
   path: /ünïcode/ключ
   section: paths
-  baseSource:
-    file: ./properties/rules/response-header-min-properties-set_base.yaml
-    line: 13
-    column: 9
-    endLine: 27
-    endColumn: 41
   revisionSource:
     file: ./properties/rules/response-header-min-properties-set_revision.yaml
-    line: 13
-    column: 9
-    endLine: 28
-    endColumn: 41
+    line: 25
+    column: 33
   fingerprint: b892e028496e
 

@@ -1,3 +1,2 @@
 ::error title=request-body-multiple-of-changed,file=./properties/rules/request-body-multiple-of-changed_revision.yaml,line=94,col=29::in API POST /ünïcode/ключ the request's body multipleOf was changed from `10.00` to `6.00`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 

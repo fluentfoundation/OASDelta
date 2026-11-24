@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `‮abc/anyOf[subschema #2]/` request property&#39;s multipleOf was generalized from `2.00` to `1.00`
+        the `‮abc/anyOf[subschema #2]` request property&#39;s multipleOf was generalized from `2.00` to `1.00`
         </li>
         
     </ul>

@@ -1,12 +1,12 @@
 2 изменений: 0 error, 1 warning, 1 info
-warning	[response-body-all-of-removed] в ./properties/rules/response-body-type-specialized_revision.json
+warning	[response-body-all-of-removed] в ./properties/rules/response-body-type-specialized_base.json
 	в API POST /ünïcode/ключ
 		удалён `subschema #1, subschema #2, subschema #3` из списка `allOf` тела ответа для статуса ответа `default`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 info	[response-body-type-specialized] в ./properties/rules/response-body-type-specialized_revision.json
 	в API POST /ünïcode/ключ
 		`type` тела ответа сужен с `any` до `object` для статуса `default`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
+		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может уже описывать то, что здесь изменилось, и объединённая схема останется той же. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 

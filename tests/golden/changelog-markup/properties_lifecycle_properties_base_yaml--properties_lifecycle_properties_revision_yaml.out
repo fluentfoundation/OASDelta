@@ -4,11 +4,11 @@
 ## API Changes
 
 ### POST /r
-- :warning: request property `invalid` deprecated with invalid sunset date: `sunset date doesn't conform with RFC3339: not a date`
+- :warning: request property `invalid` deprecated with a sunset date that doesn't conform with RFC3339: `"not a date"`
 - :warning: removed the request property `removed` before the sunset date `2099-12-31`
 - :warning: request property `decreased` stability level decreased from `stable` to `beta`
 - :warning: request property `too-small` sunset date `2020-01-01` is too small, must be at least `0` days from now
-- :warning: response property `invalid` deprecated with invalid sunset date: `sunset date doesn't conform with RFC3339: not a date`
+- :warning: response property `invalid` deprecated with a sunset date that doesn't conform with RFC3339: `"not a date"`
 - :warning: response property `decreased` stability level decreased from `stable` to `beta`
 - :warning: removed the required property `required-removed` from the response with the `200` status before the sunset date `2099-12-31`
 -  request property `missing` deprecated

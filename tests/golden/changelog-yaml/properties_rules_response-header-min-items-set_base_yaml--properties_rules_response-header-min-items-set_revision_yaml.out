@@ -5,17 +5,9 @@
   operationId: patch_store_order
   path: /store/order
   section: paths
-  baseSource:
-    file: ./properties/rules/response-header-min-items-set_base.yaml
-    line: 8
-    column: 9
-    endLine: 115
-    endColumn: 30
   revisionSource:
     file: ./properties/rules/response-header-min-items-set_revision.yaml
-    line: 8
-    column: 9
-    endLine: 116
-    endColumn: 30
+    line: 97
+    column: 33
   fingerprint: eeedcf3ca751
 

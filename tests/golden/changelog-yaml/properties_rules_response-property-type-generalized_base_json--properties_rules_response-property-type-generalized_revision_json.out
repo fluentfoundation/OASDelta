@@ -1,14 +1,17 @@
 - id: response-property-type-generalized
-  text: the `items/` response's property `type` was widened from `integer` to `number` for status `204`
+  text: the `items` response's property `type` was widened from `integer` to `number` for status `204`
   level: 3
   operation: PATCH
   operationId: patch_store_order
   path: /store/order
   section: paths
-  fingerprint: 81d652635457
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
+  baseSource:
+    file: ./properties/rules/response-property-type-generalized_base.json
+    line: 171
+    column: 21
+  revisionSource:
+    file: ./properties/rules/response-property-type-generalized_revision.json
+    line: 171
+    column: 21
+  fingerprint: 3fd9a97be7b1
 

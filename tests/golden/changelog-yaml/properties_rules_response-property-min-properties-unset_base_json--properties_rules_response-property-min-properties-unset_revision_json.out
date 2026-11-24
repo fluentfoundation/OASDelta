@@ -1,31 +1,39 @@
 - id: response-property-min-properties-unset
-  text: 'the `-/items/` response property''s minProperties was unset from `2` for the response status `default` (shared schema: `Owner`, also at `status/status/items/`)'
+  text: 'the `-/items` response property''s minProperties was unset from `2` for the response status `default` (shared schema: `Owner`, also at `status/status/items`)'
   sharedSchema:
     name: Owner
     properties:
-        - -/items/
-        - status/status/items/
+        - -/items
+        - status/status/items
     count: 2
   level: 3
   operation: DELETE
   operationId: delete_ünïcode_ключ
   path: /ünïcode/ключ
   section: paths
-  fingerprint: 3181a1156886
+  baseSource:
+    file: ./properties/rules/response-property-min-properties-unset_base.json
+    line: 10
+    column: 11
+  fingerprint: b382ef2c093e
 - id: response-property-type-changed
-  text: 'the `-/items/` response''s property `type` changed from `object` to `any` for status `default` (shared schema: `Owner`, also at `status/status/items/`)'
+  text: 'the `-/items` response''s property `type` changed from `object` to `any` for status `default` (shared schema: `Owner`, also at `status/status/items`)'
   sharedSchema:
     name: Owner
     properties:
-        - -/items/
-        - status/status/items/
+        - -/items
+        - status/status/items
     count: 2
   level: 3
   operation: DELETE
   operationId: delete_ünïcode_ключ
   path: /ünïcode/ключ
   section: paths
-  fingerprint: 0fa4ce338fdc
+  baseSource:
+    file: ./properties/rules/response-property-min-properties-unset_base.json
+    line: 36
+    column: 11
+  fingerprint: 3cf3e0924d0d
 - id: response-optional-property-removed
   text: 'removed the optional property `-/items/Ṁᨂ緛슺` from the response with the `default` status (shared schema: `Owner`, also at `status/status/items/Ṁᨂ緛슺`)'
   sharedSchema:
@@ -39,6 +47,12 @@
   operationId: delete_ünïcode_ключ
   path: /ünïcode/ключ
   section: paths
+  baseSource:
+    file: ./properties/rules/response-property-min-properties-unset_base.json
+    line: 24
+    column: 13
+    endLine: 29
+    endColumn: 32
   fingerprint: 3f359886fd0a
 - id: response-required-property-removed-with-deprecation
   text: 'removed the deprecated required property `-/items/#hash` from the response with the `default` status (shared schema: `Owner`, also at `status/status/items/#hash`)'
@@ -53,6 +67,12 @@
   operationId: delete_ünïcode_ключ
   path: /ünïcode/ключ
   section: paths
+  baseSource:
+    file: ./properties/rules/response-property-min-properties-unset_base.json
+    line: 12
+    column: 13
+    endLine: 16
+    endColumn: 23
   fingerprint: efc569561c49
 - id: response-required-property-removed-with-deprecation
   text: 'removed the deprecated required property `-/items/id` from the response with the `default` status (shared schema: `Owner`, also at `status/status/items/id`)'
@@ -67,5 +87,11 @@
   operationId: delete_ünïcode_ключ
   path: /ünïcode/ключ
   section: paths
+  baseSource:
+    file: ./properties/rules/response-property-min-properties-unset_base.json
+    line: 19
+    column: 13
+    endLine: 22
+    endColumn: 32
   fingerprint: 1133c802b1c6
 

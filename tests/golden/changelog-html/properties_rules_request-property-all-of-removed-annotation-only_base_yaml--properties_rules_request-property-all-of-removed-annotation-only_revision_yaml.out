@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        removed annotation-only `subschema #1` from the `a: b/oneOf[subschema #3]/` request property `allOf` list
+        removed annotation-only `subschema #1` from the `a: b/oneOf[subschema #3]` request property `allOf` list
         </li>
         
     </ul>

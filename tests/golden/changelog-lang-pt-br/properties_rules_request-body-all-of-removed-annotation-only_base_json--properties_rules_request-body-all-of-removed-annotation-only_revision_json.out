@@ -1,7 +1,6 @@
 1 alterações: 0 error, 0 warning, 1 info
-info	[request-body-all-of-removed-annotation-only] em ./properties/rules/request-body-all-of-removed-annotation-only_revision.json
+info	[request-body-all-of-removed-annotation-only] em ./properties/rules/request-body-all-of-removed-annotation-only_base.json
 	em API PATCH /store/order
 		`subschema #1` (apenas de anotação) foi removido da lista `allOf` do corpo da requisição
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
 

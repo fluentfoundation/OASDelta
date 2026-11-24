@@ -1,2 +1,2 @@
-::error title=request-parameter-min-contains-set,file=./properties/rules/request-parameter-min-contains-set_revision.json::in API POST /items/{id}.json for the `header` request parameter `~`, the minContains was set to `3`
+::error title=request-parameter-min-contains-set,file=./properties/rules/request-parameter-min-contains-set_revision.json,line=80,col=15::in API POST /items/{id}.json for the `header` request parameter `~`, the minContains was set to `3`
 

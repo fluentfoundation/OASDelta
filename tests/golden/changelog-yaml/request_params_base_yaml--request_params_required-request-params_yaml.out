@@ -53,11 +53,6 @@
     endLine: 72
     endColumn: 23
   fingerprint: ec75dc6f91b0
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: new-optional-request-default-parameter-to-existing-path
   text: added the new optional `query` request parameter `optionalQueryParam` to all path's operations
   level: 1

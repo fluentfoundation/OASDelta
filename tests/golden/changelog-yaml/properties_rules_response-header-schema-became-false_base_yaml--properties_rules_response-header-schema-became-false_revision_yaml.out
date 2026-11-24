@@ -7,15 +7,7 @@
   section: paths
   baseSource:
     file: ./properties/rules/response-header-schema-became-false_base.yaml
-    line: 65
-    column: 9
-    endLine: 98
-    endColumn: 21
-  revisionSource:
-    file: ./properties/rules/response-header-schema-became-false_revision.yaml
-    line: 65
-    column: 9
-    endLine: 94
-    endColumn: 21
+    line: 86
+    column: 33
   fingerprint: b5cca87fa2e3
 

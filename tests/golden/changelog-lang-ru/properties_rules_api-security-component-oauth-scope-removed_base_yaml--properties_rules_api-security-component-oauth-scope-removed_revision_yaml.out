@@ -1,5 +1,5 @@
 4 изменений: 0 error, 0 warning, 4 info
-info	[api-security-component-oauth-scope-removed]
+info	[api-security-component-oauth-scope-removed] в ./properties/rules/api-security-component-oauth-scope-removed_base.yaml
 	в components/securitySchemes
 		в схеме безопасности `oauth` из OAuth потока `clientCredentials` удалено разрешение `write`
 
@@ -11,7 +11,7 @@ info	[new-optional-request-parameter] в ./properties/rules/api-security-compone
 	в API PATCH /owners/{ownerId}/pets
 		добавлен новый необязательный `query` параметр зароса `㿢몜짐躘훕綏冔⌰`
 
-info	[request-parameter-removed-with-deprecation] в ./properties/rules/api-security-component-oauth-scope-removed_revision.yaml
+info	[request-parameter-removed-with-deprecation] в ./properties/rules/api-security-component-oauth-scope-removed_base.yaml
 	в API PATCH /owners/{ownerId}/pets
 		удален `query` параметр запроса `pet` с объявлением устаревшим
 

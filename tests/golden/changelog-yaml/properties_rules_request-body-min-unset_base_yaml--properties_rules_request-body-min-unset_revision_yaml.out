@@ -4,6 +4,14 @@
   operation: PATCH
   path: /v1/items
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-min-unset_base.yaml
+    line: 154
+    column: 35
+  revisionSource:
+    file: ./properties/rules/request-body-min-unset_revision.yaml
+    line: 222
+    column: 17
   fingerprint: 71954cc9a18e
 - id: request-body-type-changed
   text: the request's body `type` changed from `number, null` to `boolean`
@@ -15,6 +23,10 @@
     file: ./properties/rules/request-body-min-unset_base.yaml
     line: 152
     column: 29
+  revisionSource:
+    file: ./properties/rules/request-body-min-unset_revision.yaml
+    line: 222
+    column: 17
   fingerprint: ca6532b0f155
 - id: request-body-default-value-removed
   text: the request body `multipart/form-data` default value `-26.12` was removed

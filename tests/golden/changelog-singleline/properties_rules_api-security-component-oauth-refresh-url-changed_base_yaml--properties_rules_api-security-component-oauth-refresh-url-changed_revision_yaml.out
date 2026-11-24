@@ -1,6 +1,6 @@
 2 changes: 1 error, 1 warning, 0 info
 error at ./properties/rules/api-security-component-oauth-refresh-url-changed_revision.yaml, in API POST /owners/{ownerId}/pets the request's body `type` changed from `array<array<string/date-time>>` to `boolean` [request-body-type-changed]. 
 
-warning, in components/securitySchemes the component security scheme `oauth` oauth `clientCredentials` flow refresh url changed from `https://auth.example.com/refresh` to `` [api-security-component-oauth-refresh-url-changed]. This is a warning because the spec does not say whether credentials obtained through the previous URL are still accepted.
+warning at ./properties/rules/api-security-component-oauth-refresh-url-changed_revision.yaml, in components/securitySchemes the component security scheme `oauth` oauth `clientCredentials` flow refresh url changed from `https://auth.example.com/refresh` to `` [api-security-component-oauth-refresh-url-changed]. This is a warning because the spec does not say whether credentials obtained through the previous URL are still accepted.
 
 

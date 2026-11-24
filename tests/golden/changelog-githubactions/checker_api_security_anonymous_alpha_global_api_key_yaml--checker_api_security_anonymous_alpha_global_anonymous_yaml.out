@@ -1,2 +1,2 @@
-::notice title=api-global-security-removed::in API   the security scheme `apiKey` was removed from the API
+::notice title=api-global-security-removed,file=./checker/api_security_anonymous_alpha_global_api_key.yaml::in API   the security scheme `apiKey` was removed from the API
 

@@ -6,7 +6,7 @@ error	[request-body-became-enum] at ./properties/rules/request-body-min-length-s
 error	[request-body-min-length-set] at ./properties/rules/request-body-min-length-set_revision.yaml
 	in API POST /ünïcode/ключ
 		the request's body minLength was set to `5`
-		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+		Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
 info	[request-body-became-nullable] at ./properties/rules/request-body-min-length-set_revision.yaml
 	in API POST /ünïcode/ключ

@@ -2,7 +2,7 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
     <testcase name="request-parameter-property-type-specialized" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">for the `query` request parameter `tag`, the `format` of property `items/` was narrowed from `none` to `email`</failure>
+      <failure message="Breaking change detected">for the `query` request parameter `tag`, the `format` of property `items` was narrowed from `none` to `email`</failure>
     </testcase>
     <testcase name="response-body-type-specialized" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the response's body `format` was narrowed from `none` to `email` for status `default`</failure>

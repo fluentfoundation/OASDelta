@@ -4,10 +4,10 @@
 ## API Changes
 
 ### PATCH /ünïcode/ключ
--  added `subschema #1, subschema #2` to the `created/items/` response property `allOf` list for the response status `201`
--  the response property `created/items/` became not nullable for the status `201`
+-  added `subschema #1, subschema #2` to the `created/items` response property `allOf` list for the response status `201`
+-  the response property `created/items` became not nullable for the status `201`
 -  the `` response's property default value `pet` was removed for the status `201`
--  the `created/items/` response's property `type` was narrowed from `string` to `any` for status `201`
+-  the `created/items` response's property `type` was narrowed from `string` to `any` for status `201`
 
 
 

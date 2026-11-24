@@ -1,5 +1,4 @@
 ::error title=response-header-type-generalized,file=./properties/ref_generic_origins_ext_revision.yaml,line=39,col=13::in API GET /b the `x-rate` response header's `type` was widened from `integer` to `number` for the status `200`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 ::notice title=request-parameter-type-generalized,file=./properties/ref_generic_origins_ext_revision.yaml,line=41,col=17::in API GET /a for the `query` request parameter `q`, the `type` was widened from `integer` to `number`
 ::notice title=request-parameter-type-generalized,file=./properties/ref_generic_origins_ext_revision.yaml,line=12,col=5::in API GET /a for the `query` request parameter `r`, the `type` was widened from `integer` to `number`
 

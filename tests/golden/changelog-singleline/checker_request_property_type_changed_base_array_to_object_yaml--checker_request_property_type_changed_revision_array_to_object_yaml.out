@@ -1,4 +1,4 @@
-7 changes: 6 error, 0 warning, 1 info
+6 changes: 6 error, 0 warning, 0 info
 error at ./checker/request_property_type_changed_revision_array_to_object.yaml, in API POST /dogs added the new required request property `colors/blue` [new-required-request-property]. 
 
 error at ./checker/request_property_type_changed_revision_array_to_object.yaml, in API POST /dogs added the new required request property `colors/green` [new-required-request-property]. 
@@ -10,7 +10,5 @@ error at ./checker/request_property_type_changed_revision_array_to_object.yaml, 
 error at ./checker/request_property_type_changed_revision_array_to_object.yaml, in API POST /pets added the new required request property `data` [new-required-request-property]. 
 
 error at ./checker/request_property_type_changed_revision_array_to_object.yaml, in API POST /pets the request's body `type` changed from `array<object>` to `object` [request-body-type-changed]. 
-
-info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
 
 

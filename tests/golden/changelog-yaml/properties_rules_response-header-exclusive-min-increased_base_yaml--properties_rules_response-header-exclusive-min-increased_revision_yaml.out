@@ -39,15 +39,11 @@
   section: paths
   baseSource:
     file: ./properties/rules/response-header-exclusive-min-increased_base.yaml
-    line: 8
-    column: 9
-    endLine: 37
-    endColumn: 24
+    line: 29
+    column: 33
   revisionSource:
     file: ./properties/rules/response-header-exclusive-min-increased_revision.yaml
-    line: 8
-    column: 9
-    endLine: 38
-    endColumn: 24
+    line: 30
+    column: 33
   fingerprint: d2f1d35976a6
 

@@ -1,7 +1,7 @@
-::error title=api-path-removed-without-deprecation,file=./properties/rules/api-path-removed-before-sunset_base.yaml::in API GET /pets/{petId}/v2 api path removed without deprecation
-::error title=api-path-removed-before-sunset,file=./properties/rules/api-path-removed-before-sunset_base.yaml::in API POST /pets/{petId}/v2 api path removed before the sunset date `2099-12-31`
+::error title=api-path-removed-without-deprecation,file=./properties/rules/api-path-removed-before-sunset_base.yaml::in API GET /pets/{petId}/v2 API path removed without deprecation
+::error title=api-path-removed-before-sunset,file=./properties/rules/api-path-removed-before-sunset_base.yaml::in API POST /pets/{petId}/v2 API path removed before the sunset date `2099-12-31`
 ::notice title=endpoint-added,file=./properties/rules/api-path-removed-before-sunset_revision.yaml,line=130,col=9::in API DELETE /pets/{petId} endpoint added
 ::notice title=endpoint-added,file=./properties/rules/api-path-removed-before-sunset_revision.yaml,line=141,col=9::in API GET /pets/{petId} endpoint added
 ::notice title=endpoint-added,file=./properties/rules/api-path-removed-before-sunset_revision.yaml,line=178,col=9::in API POST /pets/{petId} endpoint added
-::notice title=api-path-removed-with-deprecation,file=./properties/rules/api-path-removed-before-sunset_base.yaml::in API DELETE /pets/{petId}/v2 api path removed with deprecation
+::notice title=api-path-removed-with-deprecation,file=./properties/rules/api-path-removed-before-sunset_base.yaml::in API DELETE /pets/{petId}/v2 API path removed with deprecation
 

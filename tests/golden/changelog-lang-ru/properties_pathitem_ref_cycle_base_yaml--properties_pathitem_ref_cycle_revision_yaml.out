@@ -7,11 +7,11 @@ error	[api-removed-without-deprecation] в ./properties/pathitem_ref_cycle_base.
 	в API GET /self
 		API удалён без deprecation
 
-error	[api-removed-without-deprecation] в 
+error	[api-removed-without-deprecation] в ./properties/pathitem_ref_cycle_base.yaml
 	в API POST webhook:w1
 		API удалён без deprecation
 
-info	[webhook-added]
+info	[webhook-added] в ./properties/pathitem_ref_cycle_revision.yaml
 	в components/webhooks
 		webhook `w2` добавлен
 

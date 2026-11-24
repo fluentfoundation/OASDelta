@@ -1,3 +1,2 @@
-::error title=response-body-max-length-increased,file=./properties/rules/response-body-max-length-increased_revision.json::in API DELETE /pets the response's body maxLength was increased from `11` to `14`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::error title=response-body-max-length-increased,file=./properties/rules/response-body-max-length-increased_revision.json,line=63,col=19::in API DELETE /pets the response's body maxLength was increased from `11` to `14`
 

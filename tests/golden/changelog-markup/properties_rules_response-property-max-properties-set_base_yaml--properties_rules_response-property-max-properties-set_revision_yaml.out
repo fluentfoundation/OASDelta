@@ -5,7 +5,7 @@
 
 ### POST /pets/{petId}
 - :warning: added the new required `cookie` request parameter `*star`
--  the `items/` response property's maxProperties was set to `13` for the response status `200`
+-  the `items` response property's maxProperties was set to `13` for the response status `200`
 
 
 

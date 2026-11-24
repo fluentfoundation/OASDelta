@@ -2,6 +2,5 @@
 info	[response-property-all-of-added-annotation-only] at ./properties/rules/response-property-all-of-added-annotation-only_revision.json
 	in API POST /store/order
 		added annotation-only `subschema #1` to the `items/name` response property `allOf` list for the response status `201`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 

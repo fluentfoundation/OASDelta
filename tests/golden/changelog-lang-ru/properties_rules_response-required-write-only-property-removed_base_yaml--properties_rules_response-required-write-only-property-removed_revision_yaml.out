@@ -3,11 +3,11 @@ error	[response-body-type-changed] в ./properties/rules/response-required-write
 	в API DELETE /v1/items
 		`type` тела ответа изменён с `object` на `string` для статуса `500`
 
-error	[response-required-property-removed] в ./properties/rules/response-required-write-only-property-removed_revision.yaml
+error	[response-required-property-removed] в ./properties/rules/response-required-write-only-property-removed_base.yaml
 	в API DELETE /v1/items
 		удалено обязательное поле ответа `pet` из ответа со статусом `500`
 
-error	[response-required-property-removed] в ./properties/rules/response-required-write-only-property-removed_revision.yaml
+error	[response-required-property-removed] в ./properties/rules/response-required-write-only-property-removed_base.yaml
 	в API DELETE /v1/items
 		удалено обязательное поле ответа `瀒` из ответа со статусом `500`
 
@@ -15,7 +15,7 @@ info	[endpoint-added] в ./properties/rules/response-required-write-only-propert
 	в API GET /added/kind
 		эндпоинт добавлен
 
-info	[response-required-write-only-property-removed] в ./properties/rules/response-required-write-only-property-removed_revision.yaml
+info	[response-required-write-only-property-removed] в ./properties/rules/response-required-write-only-property-removed_base.yaml
 	в API DELETE /v1/items
 		удалено обязательное свойство только для записи `id` из ответа со статусом `500`
 

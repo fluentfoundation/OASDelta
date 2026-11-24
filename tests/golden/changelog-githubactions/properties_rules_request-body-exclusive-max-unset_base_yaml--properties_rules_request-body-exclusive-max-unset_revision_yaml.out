@@ -1,6 +1,6 @@
-::error title=request-body-became-not-nullable,file=./properties/rules/request-body-exclusive-max-unset_revision.yaml::in API PUT /owners/{ownerId}/pets the request's body became not nullable
+::error title=request-body-became-not-nullable,file=./properties/rules/request-body-exclusive-max-unset_revision.yaml,line=45,col=29::in API PUT /owners/{ownerId}/pets the request's body became not nullable
 ::error title=request-body-type-changed,file=./properties/rules/request-body-exclusive-max-unset_revision.yaml,line=45,col=29::in API PUT /owners/{ownerId}/pets the request's body `type/format` changed from `integer, null/int64` to `number`
-::notice title=request-body-default-value-removed,file=./properties/rules/request-body-exclusive-max-unset_revision.yaml::in API PUT /owners/{ownerId}/pets the request body `multipart/form-data` default value `82.00` was removed
-::notice title=request-body-exclusive-max-unset,file=./properties/rules/request-body-exclusive-max-unset_revision.yaml::in API PUT /owners/{ownerId}/pets the request's body exclusiveMaximum was unset from `1585.00`
-::notice title=request-body-min-unset,file=./properties/rules/request-body-exclusive-max-unset_revision.yaml::in API PUT /owners/{ownerId}/pets the request's body min was unset from `5.00`
+::notice title=request-body-default-value-removed,file=./properties/rules/request-body-exclusive-max-unset_base.yaml::in API PUT /owners/{ownerId}/pets the request body `multipart/form-data` default value `82.00` was removed
+::notice title=request-body-exclusive-max-unset,file=./properties/rules/request-body-exclusive-max-unset_base.yaml::in API PUT /owners/{ownerId}/pets the request's body exclusiveMaximum was unset from `1585.00`
+::notice title=request-body-min-unset,file=./properties/rules/request-body-exclusive-max-unset_base.yaml::in API PUT /owners/{ownerId}/pets the request's body min was unset from `5.00`
 

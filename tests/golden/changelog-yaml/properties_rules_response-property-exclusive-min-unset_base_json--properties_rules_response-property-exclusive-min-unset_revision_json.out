@@ -1,8 +1,12 @@
 - id: response-property-exclusive-min-unset
-  text: the `items/` response property's exclusiveMinimum was unset from `true` for the response status `204`
+  text: the `items` response property's exclusiveMinimum was unset from `true` for the response status `204`
   level: 3
   operation: GET
   path: /ünïcode/ключ
   section: paths
-  fingerprint: f805fe78b442
+  baseSource:
+    file: ./properties/rules/response-property-exclusive-min-unset_base.json
+    line: 327
+    column: 21
+  fingerprint: 284084078a01
 

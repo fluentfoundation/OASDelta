@@ -22,11 +22,24 @@
     line: 22
     column: 14
   fingerprint: 73ba55fdfa9c
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
+- id: request-property-became-nullable
+  text: the request property `optionalEnum` became nullable
   level: 1
-  section: info
-  fingerprint: d3f96cd643c1
+  operation: POST
+  operationId: testOp
+  path: /test
+  section: paths
+  baseSource:
+    file: ./checker/nullable_wrap_narrowed_base.yaml
+    line: 20
+    column: 5
+    endLine: 22
+    endColumn: 35
+  revisionSource:
+    file: ./checker/nullable_wrap_narrowed_revision.yaml
+    line: 15
+    column: 19
+  fingerprint: 0c4e14a18e62
 - id: request-property-list-of-types-widened
   text: request property `optionalEnum` list-of-types was widened by adding types `null` to media type `application/json`
   level: 1

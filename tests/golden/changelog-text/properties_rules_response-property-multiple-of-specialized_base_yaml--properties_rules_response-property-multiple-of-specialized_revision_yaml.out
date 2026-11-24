@@ -1,19 +1,19 @@
 4 changes: 0 error, 1 warning, 3 info
-warning	[api-security-component-openid-connect-url-changed]
+warning	[api-security-component-openid-connect-url-changed] at ./properties/rules/response-property-multiple-of-specialized_revision.yaml
 	in components/securitySchemes
 		the component security scheme `openid` OpenID Connect url changed from `https://auth.example.com/.well-known/openid-configuration` to `https://id0.example.com/.well-known/openid-configuration`
 		This is a warning because the spec does not say whether credentials obtained through the previous URL are still accepted.
 
 info	[response-property-multiple-of-specialized] at ./properties/rules/response-property-multiple-of-specialized_revision.yaml
 	in API DELETE /pets
-		the `oneOf[subschema #1]/anyOf[subschema #2]/` response property's multipleOf was specialized from `2.00` to `4.00` for the response status `500`
+		the `oneOf[subschema #1]/anyOf[subschema #2]` response property's multipleOf was specialized from `2.00` to `4.00` for the response status `500`
 		This change is not breaking because the new multipleOf is an integer multiple of the old one, so every value the server may now produce was already valid before.
 
-info	[response-property-type-specialized] at ./properties/rules/response-property-multiple-of-specialized_revision.yaml
+info	[response-property-type-specialized]
 	in API DELETE /pets
-		the `oneOf[subschema #1]/` response's property `format` was narrowed from `none` to `float` for status `500`
+		the `oneOf[subschema #1]` response's property `format` was narrowed from `none` to `float` for status `500`
 
-info	[optional-response-header-removed] at ./properties/rules/response-property-multiple-of-specialized_revision.yaml
+info	[optional-response-header-removed] at ./properties/rules/response-property-multiple-of-specialized_base.yaml
 	in API PATCH /search
 		the optional response header `퉈祅闄췱` removed for the status `500`
 

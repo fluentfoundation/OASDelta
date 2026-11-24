@@ -5,5 +5,9 @@
   operationId: delete_search
   path: /search
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-exclusive-min-set_revision.json
+    line: 59
+    column: 19
   fingerprint: 5f7211fd2603
 

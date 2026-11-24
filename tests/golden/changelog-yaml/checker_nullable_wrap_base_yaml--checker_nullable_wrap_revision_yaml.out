@@ -5,6 +5,14 @@
   operationId: testOp
   path: /test
   section: paths
+  baseSource:
+    file: ./checker/nullable_wrap_base.yaml
+    line: 18
+    column: 7
+  revisionSource:
+    file: ./checker/nullable_wrap_revision.yaml
+    line: 30
+    column: 11
   fingerprint: 0c4e14a18e62
 - id: request-property-became-nullable
   text: the request property `optionalPrimitive` became nullable
@@ -13,6 +21,14 @@
   operationId: testOp
   path: /test
   section: paths
+  baseSource:
+    file: ./checker/nullable_wrap_base.yaml
+    line: 31
+    column: 29
+  revisionSource:
+    file: ./checker/nullable_wrap_revision.yaml
+    line: 38
+    column: 26
   fingerprint: abd811bf0f95
 - id: request-property-became-nullable
   text: the request property `optionalRef` became nullable
@@ -21,5 +37,13 @@
   operationId: testOp
   path: /test
   section: paths
+  baseSource:
+    file: ./checker/nullable_wrap_base.yaml
+    line: 21
+    column: 7
+  revisionSource:
+    file: ./checker/nullable_wrap_revision.yaml
+    line: 34
+    column: 11
   fingerprint: dd1929d7ee35
 

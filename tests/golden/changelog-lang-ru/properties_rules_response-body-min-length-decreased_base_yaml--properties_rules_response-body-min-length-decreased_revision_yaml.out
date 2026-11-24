@@ -3,7 +3,7 @@ error	[response-body-min-length-decreased] в ./properties/rules/response-body-m
 	в API DELETE /pets/{petId}
 		значение minLength для тела ответа уменьшено с `4` до `3`
 
-warning	[request-parameter-removed] в ./properties/rules/response-body-min-length-decreased_revision.yaml
+warning	[request-parameter-removed] в ./properties/rules/response-body-min-length-decreased_base.yaml
 	в API DELETE /pets/{petId}
 		удалён `path` параметр запроса `petId`
 		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.

@@ -1,5 +1,5 @@
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: POST
   path: /items/{id}.json
@@ -9,7 +9,7 @@
     line: 65
     column: 9
     endLine: 112
-    endColumn: 29
+    endColumn: 31
   fingerprint: 5d92ee35db3a
 - id: api-security-component-openid-connect-url-changed
   text: the component security scheme `openid` OpenID Connect url changed from `https://auth.example.com/.well-known/openid-configuration` to `https://id2.example.com/.well-known/openid-configuration`

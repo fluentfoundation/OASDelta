@@ -1,10 +1,10 @@
 2 alterações: 2 error, 0 warning, 0 info
-error	[response-property-content-media-type-changed] em ./properties/rules/response-property-content-schema-removed_revision.json
+error	[response-property-content-media-type-changed] em ./properties/rules/response-property-content-schema-removed_base.json
 	em API PUT /v1/items
-		o contentMediaType da propriedade de resposta `!tag/items/` foi alterado de `application/json` para `` para o status `500`
+		o contentMediaType da propriedade de resposta `!tag/items` foi alterado de `application/json` para `` para o status `500`
 
-error	[response-property-content-schema-removed] em ./properties/rules/response-property-content-schema-removed_revision.json
+error	[response-property-content-schema-removed] em ./properties/rules/response-property-content-schema-removed_base.json
 	em API PUT /v1/items
-		removido 'contentSchema' da propriedade de resposta `!tag/items/` para o status `500`
+		removido 'contentSchema' da propriedade de resposta `!tag/items` para o status `500`
 
 

@@ -15,13 +15,13 @@ error	[api-path-removed-without-deprecation] в openapi-test3.yaml
 	в API POST /subscribe
 		API path удалён без процедуры deprecation
 
-info	[api-security-component-removed]
+info	[api-security-component-removed] в openapi-test3.yaml
 	в components/securitySchemes
 		компонент схемы безопасности `OAuth` был удален
 
-info	[api-version-decreased]
+info	[api-version-changed] в openapi-test4.yaml
 	в info
-		обнаружено обратно несовместимое изменение, но версия уменьшилась с `1.0.1` до `1.0.0`
+		версия API изменилась с `1.0.1` до `1.0.0`
 
 info	[endpoint-added] в openapi-test4.yaml
 	в API GET /prefix/api/{domain}/{project}/badges/security-score

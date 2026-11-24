@@ -4,7 +4,7 @@
 ## API Changes
 
 ### DELETE /items/{id}.json
--  api tag `id` added
+-  API tag `id` added
 -  endpoint deprecated with sunset date `2099-12-31`
 
 

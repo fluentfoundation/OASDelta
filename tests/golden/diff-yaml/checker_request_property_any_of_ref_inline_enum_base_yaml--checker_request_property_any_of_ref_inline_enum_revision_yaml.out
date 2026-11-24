@@ -12,6 +12,18 @@ paths:
                                             properties:
                                                 modified:
                                                     role:
+                                                        anyOf:
+                                                            modified:
+                                                                - base:
+                                                                    index: 0
+                                                                  revision:
+                                                                    index: 0
+                                                                    component: UserRole
+                                                                    title: UserRole
+                                                                  diff:
+                                                                    title:
+                                                                        from: ""
+                                                                        to: UserRole
                                                         title:
                                                             from: Role
                                                             to: ""
@@ -27,6 +39,18 @@ endpoints:
                                 properties:
                                     modified:
                                         role:
+                                            anyOf:
+                                                modified:
+                                                    - base:
+                                                        index: 0
+                                                      revision:
+                                                        index: 0
+                                                        component: UserRole
+                                                        title: UserRole
+                                                      diff:
+                                                        title:
+                                                            from: ""
+                                                            to: UserRole
                                             title:
                                                 from: Role
                                                 to: ""
@@ -39,6 +63,18 @@ components:
                 properties:
                     modified:
                         role:
+                            anyOf:
+                                modified:
+                                    - base:
+                                        index: 0
+                                      revision:
+                                        index: 0
+                                        component: UserRole
+                                        title: UserRole
+                                      diff:
+                                        title:
+                                            from: ""
+                                            to: UserRole
                             title:
                                 from: Role
                                 to: ""

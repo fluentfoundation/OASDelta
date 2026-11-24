@@ -1,5 +1,5 @@
-::error title=request-body-became-not-nullable,file=./properties/rules/request-body-min-unset_revision.yaml::in API PATCH /v1/items the request's body became not nullable
-::error title=request-body-type-changed,file=./properties/rules/request-body-min-unset_revision.yaml::in API PATCH /v1/items the request's body `type` changed from `number, null` to `boolean`
-::notice title=request-body-default-value-removed,file=./properties/rules/request-body-min-unset_revision.yaml::in API PATCH /v1/items the request body `multipart/form-data` default value `-26.12` was removed
-::notice title=request-body-min-unset,file=./properties/rules/request-body-min-unset_revision.yaml::in API PATCH /v1/items the request's body min was unset from `-2.00`
+::error title=request-body-became-not-nullable,file=./properties/rules/request-body-min-unset_revision.yaml,line=222,col=17::in API PATCH /v1/items the request's body became not nullable
+::error title=request-body-type-changed,file=./properties/rules/request-body-min-unset_revision.yaml,line=222,col=17::in API PATCH /v1/items the request's body `type` changed from `number, null` to `boolean`
+::notice title=request-body-default-value-removed,file=./properties/rules/request-body-min-unset_base.yaml::in API PATCH /v1/items the request body `multipart/form-data` default value `-26.12` was removed
+::notice title=request-body-min-unset,file=./properties/rules/request-body-min-unset_base.yaml::in API PATCH /v1/items the request's body min was unset from `-2.00`
 

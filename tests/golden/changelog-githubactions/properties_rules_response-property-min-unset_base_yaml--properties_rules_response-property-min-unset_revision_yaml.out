@@ -1,2 +1,2 @@
-::error title=response-property-min-unset,file=./properties/rules/response-property-min-unset_revision.yaml::in API DELETE /store/order the `<b>&amp;/1e3` response property's min was unset from `9.00` for the response status `201`
+::error title=response-property-min-unset,file=./properties/rules/response-property-min-unset_base.yaml::in API DELETE /store/order the `<b>&amp;/1e3` response property's min was unset from `9.00` for the response status `201`
 

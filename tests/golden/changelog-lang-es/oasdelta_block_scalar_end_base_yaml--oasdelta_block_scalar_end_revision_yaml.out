@@ -1,4 +1,8 @@
-3 cambios: 0 error, 0 warning, 3 info
+4 cambios: 0 error, 0 warning, 4 info
+info	[api-version-changed] en ./oasdelta/block_scalar_end_revision.yaml
+	en info
+		la versión de la API cambió de `1.0.0` a `1.0.1`
+
 info	[new-optional-request-property] en ./oasdelta/block_scalar_end_revision.yaml
 	en API POST /budgets
 		agregada la nueva propiedad de solicitud opcional `expires_at`

@@ -4,15 +4,15 @@
 ## API Changes
 
 ### GET /a
-- :warning: api removed without deprecation
+- :warning: API removed without deprecation
 
 
 ### GET /self
-- :warning: api removed without deprecation
+- :warning: API removed without deprecation
 
 
 ### POST webhook:w1
-- :warning: api removed without deprecation
+- :warning: API removed without deprecation
 
 
 

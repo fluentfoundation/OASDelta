@@ -1,4 +1,4 @@
 1 changes: 0 error, 0 warning, 1 info
-info at ./properties/rules/request-property-min-items-unset_revision.yaml, in API PATCH /items/{id}.json the `additionalProperties/` request property's minItems was unset from `14` [request-property-min-items-unset]. 
+info at ./properties/rules/request-property-min-items-unset_base.yaml, in API PATCH /items/{id}.json the `additionalProperties` request property's minItems was unset from `14` [request-property-min-items-unset]. 
 
 

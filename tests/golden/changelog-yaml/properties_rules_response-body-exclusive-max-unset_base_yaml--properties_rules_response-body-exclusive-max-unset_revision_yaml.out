@@ -91,11 +91,6 @@
     endLine: 149
     endColumn: 42
   fingerprint: ffae5b186e70
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: response-body-became-not-nullable
   text: the response's body became not nullable
   level: 1
@@ -103,9 +98,17 @@
   operationId: post_v1_items
   path: /v1/items
   section: paths
+  baseSource:
+    file: ./properties/rules/response-body-exclusive-max-unset_base.yaml
+    line: 98
+    column: 39
+  revisionSource:
+    file: ./properties/rules/response-body-exclusive-max-unset_revision.yaml
+    line: 90
+    column: 33
   fingerprint: 6d090a739365
 - id: response-body-default-value-removed
-  text: the response body `multipart/form-data` default value `0.00` was removed for the status `204`
+  text: the response body `multipart/form-data` default value `-0.00` was removed for the status `204`
   level: 1
   operation: POST
   operationId: post_v1_items
@@ -115,7 +118,7 @@
     file: ./properties/rules/response-body-exclusive-max-unset_base.yaml
     line: 90
     column: 33
-  fingerprint: 97dfd8a9e399
+  fingerprint: c42a3a49bcdf
 - id: request-body-media-type-added
   text: added the media type `*/*` to the request body
   level: 1

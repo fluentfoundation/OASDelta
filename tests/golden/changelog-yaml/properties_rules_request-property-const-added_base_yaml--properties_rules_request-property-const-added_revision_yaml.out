@@ -11,7 +11,7 @@
     column: 37
   fingerprint: 4e5a09bff6ac
 - id: api-removed-without-deprecation
-  text: api removed without deprecation
+  text: API removed without deprecation
   level: 3
   operation: GET
   operationId: get_store_order
@@ -38,4 +38,22 @@
     endLine: 162
     endColumn: 51
   fingerprint: 35385057a048
+- id: response-body-became-not-nullable
+  text: the response's body became not nullable
+  level: 1
+  operation: PUT
+  operationId: put_store_order
+  path: /store/order
+  section: paths
+  baseSource:
+    file: ./properties/rules/request-property-const-added_base.yaml
+    line: 205
+    column: 25
+    endLine: 210
+    endColumn: 45
+  revisionSource:
+    file: ./properties/rules/request-property-const-added_revision.yaml
+    line: 161
+    column: 33
+  fingerprint: f37009f1c313
 

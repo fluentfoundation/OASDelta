@@ -5,5 +5,9 @@
   operationId: 名前
   path: /ünïcode/ключ
   section: paths
+  baseSource:
+    file: ./properties/rules/response-optional-property-became-not-write-only_base.json
+    line: 148
+    column: 23
   fingerprint: 83772cf7cd3b
 

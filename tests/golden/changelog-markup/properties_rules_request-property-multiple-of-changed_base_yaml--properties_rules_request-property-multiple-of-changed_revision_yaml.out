@@ -8,8 +8,8 @@
 
 
 ### PUT /owners/{ownerId}/pets
-- :warning: the `items/` request property's multipleOf was changed from `5.00` to `2.00`
--  added annotation-only `subschema #1` to the `items/` request property `allOf` list
+- :warning: the `items` request property's multipleOf was changed from `5.00` to `2.00`
+-  added annotation-only `subschema #1` to the `items` request property `allOf` list
 
 
 

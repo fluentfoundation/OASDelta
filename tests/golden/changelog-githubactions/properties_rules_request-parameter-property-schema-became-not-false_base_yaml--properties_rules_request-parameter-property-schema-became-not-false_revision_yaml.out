@@ -1,2 +1,3 @@
-::notice title=request-parameter-property-schema-became-not-false,file=./properties/rules/request-parameter-property-schema-became-not-false_revision.yaml,line=44,col=27::in API DELETE /pets/{petId} the schema of the `anyOf[subschema #2]/` property of the `query` request parameter `ключ` is no longer `false` and accepts values again
+::error title=request-parameter-became-not-nullable,file=./properties/rules/request-parameter-property-schema-became-not-false_revision.yaml,line=35,col=21::in API DELETE /pets/{petId} the `query` request parameter `ключ` became not nullable
+::notice title=request-parameter-property-schema-became-not-false,file=./properties/rules/request-parameter-property-schema-became-not-false_revision.yaml,line=44,col=27::in API DELETE /pets/{petId} the schema of the `anyOf[subschema #2]` property of the `query` request parameter `ключ` is no longer `false` and accepts values again
 

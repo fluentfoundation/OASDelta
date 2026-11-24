@@ -1,2 +1,2 @@
-::notice title=request-body-max-properties-unset,file=./properties/rules/request-body-max-properties-unset_revision.yaml::in API POST /pets the request's body maxProperties was unset from `11`
+::notice title=request-body-max-properties-unset,file=./properties/rules/request-body-max-properties-unset_base.yaml::in API POST /pets the request's body maxProperties was unset from `11`
 

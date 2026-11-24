@@ -1,7 +1,7 @@
 4 изменений: 1 error, 0 warning, 3 info
 error	[response-property-multiple-of-changed] в ./properties/rules/response-property-multiple-of-changed_revision.yaml
 	в API PUT /items/{id}.json
-		значение multipleOf у поля ответа `name/anyOf[subschema #1]/` изменено с `10.00` на `5.00` для ответа со статусом `204`
+		значение multipleOf у поля ответа `name/anyOf[subschema #1]` изменено с `10.00` на `5.00` для ответа со статусом `204`
 
 info	[endpoint-added] в ./properties/rules/response-property-multiple-of-changed_revision.yaml
 	в API PATCH /search

@@ -1,17 +1,13 @@
-4 alterações: 1 error, 0 warning, 3 info
+3 alterações: 1 error, 0 warning, 2 info
 error	[request-parameter-became-not-nullable] em ./properties/rules/request-parameter-max-unset_revision.yaml
 	em API PUT /pets
 		o parâmetro de requisição `query` `ключ` tornou-se não anulável
 
-info	[api-version-not-bumped]
-	em info
-		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
-
-info	[request-parameter-list-of-types-widened] em ./properties/rules/request-parameter-max-unset_revision.yaml
+info	[request-parameter-list-of-types-widened] em ./properties/rules/request-parameter-max-unset_base.yaml
 	em API PUT /pets
 		lista de tipos do parâmetro `query` `ключ` da requisição foi expandida adicionando tipos `boolean`
 
-info	[request-parameter-max-unset] em ./properties/rules/request-parameter-max-unset_revision.yaml
+info	[request-parameter-max-unset] em ./properties/rules/request-parameter-max-unset_base.yaml
 	em API PUT /pets
 		no parâmetro de requisição do tipo `query` e nome `ключ`, o valor max foi removido de `132.00`
 

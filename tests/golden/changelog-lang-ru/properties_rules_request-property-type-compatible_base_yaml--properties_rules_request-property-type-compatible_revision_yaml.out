@@ -1,26 +1,26 @@
 7 изменений: 1 error, 5 warning, 1 info
-error	[request-body-media-type-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+error	[request-body-media-type-removed] в ./properties/rules/request-property-type-compatible_base.yaml
 	в API POST /pets/{petId}
 		удален тип медиа для тела запроса `application/xml`
 
-warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_base.yaml
 	в API POST /pets/{petId}
 		удалено поле запроса `'single'`
 
-warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_base.yaml
 	в API POST /pets/{petId}
 		удалено поле запроса `id/no`
 
-warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_base.yaml
 	в API POST /pets/{petId}
 		удалено поле запроса `id/tag`
 
-warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_base.yaml
 	в API POST /pets/{petId}
 		удалено поле запроса `line1
 line2`
 
-warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] в ./properties/rules/request-property-type-compatible_base.yaml
 	в API POST /pets/{petId}
 		удалено поле запроса `pet`
 

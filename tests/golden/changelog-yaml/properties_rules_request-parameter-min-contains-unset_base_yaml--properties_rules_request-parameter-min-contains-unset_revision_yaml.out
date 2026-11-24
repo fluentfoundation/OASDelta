@@ -1,5 +1,5 @@
 - id: api-tag-removed
-  text: api tag `created` removed
+  text: API tag `created` removed
   level: 1
   operation: PATCH
   operationId: patch_pets

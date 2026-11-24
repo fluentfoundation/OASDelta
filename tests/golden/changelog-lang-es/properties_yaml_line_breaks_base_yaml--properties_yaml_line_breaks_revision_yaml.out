@@ -1,6 +1,6 @@
 1 cambios: 1 error, 0 warning, 0 info
 error	[api-removed-without-deprecation] en ./properties/yaml_line_breaks_base.yaml
 	en API GET /a
-		api removida sin deprecación
+		API removida sin deprecación
 
 

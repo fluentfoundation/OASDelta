@@ -1,6 +1,6 @@
 1 alterações: 0 error, 0 warning, 1 info
 info	[response-body-default-value-added] em ./properties/rules/response-body-default-value-added_revision.json
 	em API DELETE /search
-		o valor padrão `application/json; charset=utf-8` foi adicionado ao corpo da resposta para o status `pet`%!(EXTRA string=`2XX`)
+		o valor padrão `pet` foi adicionado ao corpo da resposta `application/json; charset=utf-8` para o status `2XX`
 
 

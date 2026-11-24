@@ -1,10 +1,10 @@
 2 изменений: 2 error, 0 warning, 0 info
-error	[response-property-content-media-type-changed] в ./properties/rules/response-property-content-schema-removed_revision.json
+error	[response-property-content-media-type-changed] в ./properties/rules/response-property-content-schema-removed_base.json
 	в API PUT /v1/items
-		у поля ответа `!tag/items/` contentMediaType изменился с `application/json` на `` для статуса `500`
+		у поля ответа `!tag/items` contentMediaType изменился с `application/json` на `` для статуса `500`
 
-error	[response-property-content-schema-removed] в ./properties/rules/response-property-content-schema-removed_revision.json
+error	[response-property-content-schema-removed] в ./properties/rules/response-property-content-schema-removed_base.json
 	в API PUT /v1/items
-		удалён 'contentSchema' из поля ответа `!tag/items/` для статуса `500`
+		удалён 'contentSchema' из поля ответа `!tag/items` для статуса `500`
 
 

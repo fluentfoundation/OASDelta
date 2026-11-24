@@ -1,18 +1,14 @@
-4 changes: 2 error, 0 warning, 2 info
-error	[response-media-type-removed] at ./properties/rules/request-read-only-property-min-increased_revision.json
+3 changes: 2 error, 0 warning, 1 info
+error	[response-media-type-removed] at ./properties/rules/request-read-only-property-min-increased_base.json
 	in API POST /pets
 		removed the media type `application/json` for the response with the status `500`
 
-error	[request-body-media-type-removed] at ./properties/rules/request-read-only-property-min-increased_revision.json
+error	[request-body-media-type-removed] at ./properties/rules/request-read-only-property-min-increased_base.json
 	in API PUT /ünïcode/ключ
 		removed the media type `application/json; charset=utf-8` from the request body
 
-info	[api-version-not-bumped]
-	in info
-		a breaking change was detected but the version is still `1.0.0`
-
 info	[request-read-only-property-min-increased] at ./properties/rules/request-read-only-property-min-increased_revision.json
 	in API PUT /ünïcode/ключ
-		the `叚։⋋媣塦/anyOf[subschema #2]/` request read-only property's min was increased to `-8.00`
+		the `叚։⋋媣塦/anyOf[subschema #2]` request read-only property's min was increased to `-8.00`
 
 

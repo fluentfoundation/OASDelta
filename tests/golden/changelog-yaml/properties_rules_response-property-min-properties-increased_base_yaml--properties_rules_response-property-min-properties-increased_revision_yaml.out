@@ -1,5 +1,5 @@
 - id: response-property-min-properties-increased
-  text: the `items/` response property's minProperties was increased from `1` to `6` for the response status `500`
+  text: the `items` response property's minProperties was increased from `1` to `6` for the response status `500`
   level: 1
   operation: DELETE
   path: /pets/{petId}
@@ -12,5 +12,5 @@
     file: ./properties/rules/response-property-min-properties-increased_revision.yaml
     line: 175
     column: 37
-  fingerprint: 339278290cf4
+  fingerprint: f9b522aed3ea
 

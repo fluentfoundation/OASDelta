@@ -9,13 +9,9 @@
 
 ### PUT /ünïcode/ключ
 - :warning: removed the media type `application/json; charset=utf-8` from the request body
--  the `叚։⋋媣塦/anyOf[subschema #2]/` request read-only property's min was increased to `-8.00`
+-  the `叚։⋋媣塦/anyOf[subschema #2]` request read-only property's min was increased to `-8.00`
 
 
-
-
-## Info
--  a breaking change was detected but the version is still `1.0.0`
 
 
 

@@ -1,9 +1,7 @@
-4 changes: 2 error, 0 warning, 2 info
+3 changes: 2 error, 0 warning, 1 info
 error at ./properties/rules/request-body-unique-items-set_revision.yaml, in API POST /store/order the request's body uniqueItems was set to true [request-body-unique-items-set]. 
 
 error at ./properties/rules/request-body-unique-items-set_revision.yaml, in API POST /store/order the response's body `type` changed from `number, null` to `array<string>` for status `201` [response-body-type-changed]. 
-
-info, in info a breaking change was detected but the version is still `1.0.0` [api-version-not-bumped]. 
 
 info at ./properties/rules/request-body-unique-items-set_revision.yaml, in API POST /store/order the response's body became not nullable [response-body-became-not-nullable]. 
 

@@ -4,13 +4,13 @@
 ## API Changes
 
 ### GET /owners/{ownerId}/pets
--  the `allOf[subschema #3]/` response property's maxProperties was decreased from `5` to `4` for the response status `204`
+-  the `allOf[subschema #3]` response property's maxProperties was decreased from `5` to `4` for the response status `204`
 
 
 
 
 ## Components
-- :warning: the component security scheme `api_key` api key name changed from `trailing ` to `id`
+- :warning: the component security scheme `api_key` API key name changed from `trailing ` to `id`
 
 
 

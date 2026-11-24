@@ -9,7 +9,7 @@
 
 ### POST /pets/{petId}
 - :warning: deleted the `cookie` request parameter `pet`
--  the `anyOf[subschema #1]/oneOf[subschema #3]/` request property's max was increased from `596.00` to `597.00`
+-  the `anyOf[subschema #1]/oneOf[subschema #3]` request property's max was increased from `596.00` to `597.00`
 
 
 

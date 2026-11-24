@@ -1,11 +1,11 @@
 3 cambios: 0 error, 0 warning, 3 info
-info	[api-tag-added] en ./properties/quoted_continuation_base.yaml
+info	[api-tag-added] en ./properties/quoted_continuation_revision.yaml
 	en API GET /p
-		etiqueta de api `x y` agregada
+		etiqueta de API `x y` agregada
 
-info	[api-tag-added] en ./properties/quoted_continuation_base.yaml
+info	[api-tag-added] en ./properties/quoted_continuation_revision.yaml
 	en API GET /p
-		etiqueta de api `z` agregada
+		etiqueta de API `z` agregada
 
 info	[response-body-type-compatible] en ./properties/quoted_continuation_revision.yaml
 	en API GET /p

@@ -3,7 +3,7 @@ error	[new-request-path-parameter] at ./properties/rules/new-request-path-parame
 	in API GET /store/order
 		added the new path request parameter `pet`
 
-warning	[request-parameter-removed] at ./properties/rules/new-request-path-parameter_revision.yaml
+warning	[request-parameter-removed] at ./properties/rules/new-request-path-parameter_base.yaml
 	in API GET /store/order
 		deleted the `cookie` request parameter `pet`
 		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.

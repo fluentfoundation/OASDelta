@@ -2,10 +2,10 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
     <testcase name="api-security-component-api-key-name-changed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the component security scheme `api_key` api key name changed from `trailing ` to `id`</failure>
+      <failure message="Breaking change detected">the component security scheme `api_key` API key name changed from `trailing ` to `id`</failure>
     </testcase>
     <testcase name="response-property-max-properties-decreased" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `allOf[subschema #3]/` response property's maxProperties was decreased from `5` to `4` for the response status `204`</failure>
+      <failure message="Breaking change detected">the `allOf[subschema #3]` response property's maxProperties was decreased from `5` to `4` for the response status `204`</failure>
     </testcase>
   </testsuite>
 </testsuites>

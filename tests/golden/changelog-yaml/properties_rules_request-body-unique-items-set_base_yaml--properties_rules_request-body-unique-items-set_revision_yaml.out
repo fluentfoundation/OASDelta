@@ -24,16 +24,19 @@
     line: 77
     column: 33
   fingerprint: 829e90ca8d65
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: response-body-became-not-nullable
   text: the response's body became not nullable
   level: 1
   operation: POST
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-unique-items-set_base.yaml
+    line: 75
+    column: 39
+  revisionSource:
+    file: ./properties/rules/request-body-unique-items-set_revision.yaml
+    line: 77
+    column: 33
   fingerprint: 48e48c00fe78
 

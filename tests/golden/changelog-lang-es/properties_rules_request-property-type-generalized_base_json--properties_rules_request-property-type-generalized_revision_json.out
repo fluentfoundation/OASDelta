@@ -1,6 +1,6 @@
 1 cambios: 0 error, 0 warning, 1 info
-info	[request-property-type-generalized] en ./properties/rules/request-property-type-generalized_revision.json
+info	[request-property-type-generalized] en ./properties/rules/request-property-type-generalized_base.json
 	en API PATCH /pets/{petId}
-		el `anyOf[subschema #1]/items/` de la propiedad de solicitud `type` fue ampliado de `string` a `any`
+		el `anyOf[subschema #1]/items` de la propiedad de solicitud `type` fue ampliado de `string` a `any`
 
 

@@ -1,2 +1,2 @@
-::notice title=api-stability-increased,file=./properties/rules/api-stability-increased_revision.json::in API DELETE /store/order endpoint stability level increased from `beta` to `stable`
+::notice title=api-stability-increased,file=./properties/rules/api-stability-increased_revision.json,line=51,col=7::in API DELETE /store/order endpoint stability level increased from `beta` to `stable`
 

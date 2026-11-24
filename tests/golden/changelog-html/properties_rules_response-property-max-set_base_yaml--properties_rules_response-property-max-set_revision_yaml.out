@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `anyOf[subschema #2]/` response property&#39;s max was set to `1.00` for the response status `400`
+        the `anyOf[subschema #2]` response property&#39;s max was set to `1.00` for the response status `400`
         </li>
         
     </ul>

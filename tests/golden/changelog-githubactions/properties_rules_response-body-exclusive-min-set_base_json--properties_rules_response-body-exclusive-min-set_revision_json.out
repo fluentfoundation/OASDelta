@@ -1,2 +1,2 @@
-::notice title=response-body-exclusive-min-set,file=./properties/rules/response-body-exclusive-min-set_revision.json::in API DELETE /search the response's body exclusiveMinimum was set to `-3.00`
+::notice title=response-body-exclusive-min-set,file=./properties/rules/response-body-exclusive-min-set_revision.json,line=59,col=19::in API DELETE /search the response's body exclusiveMinimum was set to `-3.00`
 

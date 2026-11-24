@@ -3,8 +3,8 @@ error at ./properties/rules/request-body-min-unset_revision.yaml, in API PATCH /
 
 error at ./properties/rules/request-body-min-unset_revision.yaml, in API PATCH /v1/items the request's body `type` changed from `number, null` to `boolean` [request-body-type-changed]. 
 
-info at ./properties/rules/request-body-min-unset_revision.yaml, in API PATCH /v1/items the request body `multipart/form-data` default value `-26.12` was removed [request-body-default-value-removed]. 
+info at ./properties/rules/request-body-min-unset_base.yaml, in API PATCH /v1/items the request body `multipart/form-data` default value `-26.12` was removed [request-body-default-value-removed]. 
 
-info at ./properties/rules/request-body-min-unset_revision.yaml, in API PATCH /v1/items the request's body min was unset from `-2.00` [request-body-min-unset]. 
+info at ./properties/rules/request-body-min-unset_base.yaml, in API PATCH /v1/items the request's body min was unset from `-2.00` [request-body-min-unset]. 
 
 

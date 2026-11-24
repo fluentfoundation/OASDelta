@@ -3,11 +3,11 @@ error	[response-body-type-changed] en ./properties/rules/response-required-write
 	en API DELETE /v1/items
 		el `type` del cuerpo de respuesta fue cambiado de `object` a `string` para el estado `500`
 
-error	[response-required-property-removed] en ./properties/rules/response-required-write-only-property-removed_revision.yaml
+error	[response-required-property-removed] en ./properties/rules/response-required-write-only-property-removed_base.yaml
 	en API DELETE /v1/items
 		removida la propiedad requerida `pet` de la respuesta con estado `500`
 
-error	[response-required-property-removed] en ./properties/rules/response-required-write-only-property-removed_revision.yaml
+error	[response-required-property-removed] en ./properties/rules/response-required-write-only-property-removed_base.yaml
 	en API DELETE /v1/items
 		removida la propiedad requerida `瀒` de la respuesta con estado `500`
 
@@ -15,7 +15,7 @@ info	[endpoint-added] en ./properties/rules/response-required-write-only-propert
 	en API GET /added/kind
 		endpoint agregado
 
-info	[response-required-write-only-property-removed] en ./properties/rules/response-required-write-only-property-removed_revision.yaml
+info	[response-required-write-only-property-removed] en ./properties/rules/response-required-write-only-property-removed_base.yaml
 	en API DELETE /v1/items
 		removida la propiedad requerida de solo escritura `id` de la respuesta con estado `500`
 

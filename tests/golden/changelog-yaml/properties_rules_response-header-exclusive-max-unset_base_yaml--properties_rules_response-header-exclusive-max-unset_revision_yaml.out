@@ -7,15 +7,7 @@
   section: paths
   baseSource:
     file: ./properties/rules/response-header-exclusive-max-unset_base.yaml
-    line: 63
-    column: 9
-    endLine: 122
-    endColumn: 22
-  revisionSource:
-    file: ./properties/rules/response-header-exclusive-max-unset_revision.yaml
-    line: 63
-    column: 9
-    endLine: 124
-    endColumn: 22
+    line: 118
+    column: 33
   fingerprint: 421a71f67031
 

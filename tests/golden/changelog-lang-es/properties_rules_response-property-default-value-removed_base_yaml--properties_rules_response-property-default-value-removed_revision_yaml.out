@@ -1,22 +1,21 @@
 4 cambios: 0 error, 0 warning, 4 info
 info	[response-property-all-of-added] en ./properties/rules/response-property-default-value-removed_revision.yaml
 	en API PATCH /ünïcode/ключ
-		`subschema #1, subschema #2` fue agregado a la lista `allOf` de la propiedad de respuesta `created/items/` para el estado `201`
-		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+		`subschema #1, subschema #2` fue agregado a la lista `allOf` de la propiedad de respuesta `created/items` para el estado `201`
 
 info	[response-property-became-not-nullable] en ./properties/rules/response-property-default-value-removed_revision.yaml
 	en API PATCH /ünïcode/ключ
-		la propiedad de respuesta `created/items/` se volvió no nulable para el estado `201`
-		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+		la propiedad de respuesta `created/items` se volvió no nulable para el estado `201`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama ya puede describir lo que cambió aquí, dejando igual el esquema fusionado. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
-info	[response-property-default-value-removed] en ./properties/rules/response-property-default-value-removed_revision.yaml
+info	[response-property-default-value-removed] en ./properties/rules/response-property-default-value-removed_base.yaml
 	en API PATCH /ünïcode/ключ
 		el valor por defecto `` fue removido de la propiedad de respuesta `pet` para el estado `201`
-		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+		Esto comparó las ramas de `allOf` una por una, así que otra rama ya puede describir lo que cambió aquí, dejando igual el esquema fusionado. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
-info	[response-property-type-specialized] en ./properties/rules/response-property-default-value-removed_revision.yaml
+info	[response-property-type-specialized] en ./properties/rules/response-property-default-value-removed_base.yaml
 	en API PATCH /ünïcode/ключ
-		el `created/items/` de la propiedad de respuesta `type` fue reducido de `string` a `any` para el estado `201`
-		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+		el `created/items` de la propiedad de respuesta `type` fue reducido de `string` a `any` para el estado `201`
+		Esto comparó las ramas de `allOf` una por una, así que otra rama ya puede describir lo que cambió aquí, dejando igual el esquema fusionado. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
 

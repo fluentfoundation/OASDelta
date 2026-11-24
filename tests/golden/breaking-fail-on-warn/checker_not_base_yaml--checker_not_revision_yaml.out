@@ -7,7 +7,7 @@ error	[request-property-max-length-decreased] at ./checker/not_revision.yaml
 	in API POST /products
 		the `/not/modified_prop` request property's maxLength was decreased to `5`
 
-warning	[request-property-removed] at ./checker/not_revision.yaml
+warning	[request-property-removed] at ./checker/not_base.yaml
 	in API POST /products
 		removed the request property `/not/removed_prop`
 

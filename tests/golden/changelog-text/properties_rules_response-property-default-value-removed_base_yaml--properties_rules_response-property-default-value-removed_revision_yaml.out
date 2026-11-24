@@ -1,22 +1,21 @@
 4 changes: 0 error, 0 warning, 4 info
 info	[response-property-all-of-added] at ./properties/rules/response-property-default-value-removed_revision.yaml
 	in API PATCH /ünïcode/ключ
-		added `subschema #1, subschema #2` to the `created/items/` response property `allOf` list for the response status `201`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		added `subschema #1, subschema #2` to the `created/items` response property `allOf` list for the response status `201`
 
 info	[response-property-became-not-nullable] at ./properties/rules/response-property-default-value-removed_revision.yaml
 	in API PATCH /ünïcode/ключ
-		the response property `created/items/` became not nullable for the status `201`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		the response property `created/items` became not nullable for the status `201`
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
-info	[response-property-default-value-removed] at ./properties/rules/response-property-default-value-removed_revision.yaml
+info	[response-property-default-value-removed] at ./properties/rules/response-property-default-value-removed_base.yaml
 	in API PATCH /ünïcode/ключ
 		the `` response's property default value `pet` was removed for the status `201`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
-info	[response-property-type-specialized] at ./properties/rules/response-property-default-value-removed_revision.yaml
+info	[response-property-type-specialized] at ./properties/rules/response-property-default-value-removed_base.yaml
 	in API PATCH /ünïcode/ключ
-		the `created/items/` response's property `type` was narrowed from `string` to `any` for status `201`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		the `created/items` response's property `type` was narrowed from `string` to `any` for status `201`
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 

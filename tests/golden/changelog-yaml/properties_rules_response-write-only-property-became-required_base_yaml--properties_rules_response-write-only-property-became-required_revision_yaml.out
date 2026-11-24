@@ -1,5 +1,5 @@
 - id: api-removed-without-deprecation
-  text: api removed without deprecation
+  text: API removed without deprecation
   level: 3
   operation: PUT
   path: /owners/{ownerId}/pets
@@ -9,7 +9,7 @@
     line: 41
     column: 9
     endLine: 73
-    endColumn: 21
+    endColumn: 25
   fingerprint: 5864ef6d5cc4
 - id: request-property-became-required
   text: the request property `items/Ünïcode/price` became required

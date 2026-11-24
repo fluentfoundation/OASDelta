@@ -1,6 +1,6 @@
 2 changes: 0 error, 0 warning, 2 info
-info at ./properties/rules/request-body-max-contains-unset_revision.json, in API PUT /search removed 'contains' constraint from the request body [request-body-contains-removed]. 
+info at ./properties/rules/request-body-max-contains-unset_base.json, in API PUT /search removed 'contains' constraint from the request body [request-body-contains-removed]. 
 
-info at ./properties/rules/request-body-max-contains-unset_revision.json, in API PUT /search the request's body maxContains was unset from `4` [request-body-max-contains-unset]. 
+info at ./properties/rules/request-body-max-contains-unset_base.json, in API PUT /search the request's body maxContains was unset from `4` [request-body-max-contains-unset]. 
 
 

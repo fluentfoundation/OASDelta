@@ -1,4 +1,4 @@
-10 изменений: 9 error, 0 warning, 1 info
+9 изменений: 9 error, 0 warning, 0 info
 error	[request-property-const-changed] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
 		у свойства запроса `kind` значение const изменено с `typeA` на `typeB`
@@ -9,11 +9,11 @@ error	[request-property-min-increased] в ./checker/sub_schema_traversal_revisio
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/contains/` была увеличена с `1` до `3`
+		минимальная длина свойства запроса `data/contains` была увеличена с `1` до `3`
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/contentSchema/` была увеличена с `1` до `3`
+		минимальная длина свойства запроса `data/contentSchema` была увеличена с `1` до `3`
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
@@ -21,22 +21,18 @@ error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/prefixItems[subschema #1]/` была увеличена с `1` до `3`
+		минимальная длина свойства запроса `data/prefixItems[subschema #1]` была увеличена с `1` до `3`
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/propertyNames/` была увеличена с `1` до `3`
+		минимальная длина свойства запроса `data/propertyNames` была увеличена с `1` до `3`
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/unevaluatedItems/` была увеличена с `1` до `3`
+		минимальная длина свойства запроса `data/unevaluatedItems` была увеличена с `1` до `3`
 
 error	[request-property-min-length-increased] в ./checker/sub_schema_traversal_revision.yaml
 	в API POST /products
-		минимальная длина свойства запроса `data/unevaluatedProperties/` была увеличена с `1` до `3`
-
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
+		минимальная длина свойства запроса `data/unevaluatedProperties` была увеличена с `1` до `3`
 
 

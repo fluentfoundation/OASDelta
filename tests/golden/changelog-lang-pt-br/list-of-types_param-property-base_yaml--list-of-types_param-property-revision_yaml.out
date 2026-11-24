@@ -1,10 +1,6 @@
-2 alterações: 1 error, 0 warning, 1 info
+1 alterações: 1 error, 0 warning, 0 info
 error	[request-parameter-property-list-of-types-narrowed] em ./list-of-types/param-property-revision.yaml
 	em API GET /test
 		lista de tipos da propriedade `mode` do parâmetro `query` `filter` da requisição foi restringida removendo tipos `integer and boolean`
-
-info	[api-version-not-bumped]
-	em info
-		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
 
 

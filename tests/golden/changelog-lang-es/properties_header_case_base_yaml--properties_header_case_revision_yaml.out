@@ -7,7 +7,7 @@ error	[response-header-type-changed] en ./properties/header_case_revision.yaml
 	en API GET /pets
 		el `ꟓ-rate` del encabezado de respuesta `type` fue cambiado de `integer` a `string` para el estado `200`
 
-info	[request-parameter-became-optional] en ./properties/header_case_revision.yaml
+info	[request-parameter-became-optional] en ./properties/header_case_base.yaml
 	en API GET /pets
 		el parámetro `header` de solicitud `ꟓ-trace` se volvió opcional
 

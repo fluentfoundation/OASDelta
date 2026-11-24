@@ -1,5 +1,5 @@
 - id: api-removed-without-deprecation
-  text: api removed without deprecation
+  text: API removed without deprecation
   level: 3
   operation: GET
   path: /a
@@ -12,7 +12,7 @@
     endColumn: 49
   fingerprint: 7810e7a96a98
 - id: api-removed-without-deprecation
-  text: api removed without deprecation
+  text: API removed without deprecation
   level: 3
   operation: GET
   path: /self
@@ -25,7 +25,7 @@
     endColumn: 49
   fingerprint: f84e52bff6ae
 - id: api-removed-without-deprecation
-  text: api removed without deprecation
+  text: API removed without deprecation
   level: 3
   operation: POST
   path: webhook:w1

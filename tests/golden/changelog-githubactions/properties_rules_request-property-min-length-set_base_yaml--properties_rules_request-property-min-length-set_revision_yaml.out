@@ -1,3 +1,3 @@
 ::warning title=request-property-min-length-set,file=./properties/rules/request-property-min-length-set_revision.yaml,line=98,col=37::in API POST /pets the `名前` request property's minLength was set to `12`
-::notice title=api-operation-id-added,file=./properties/rules/request-property-min-length-set_revision.yaml,line=9,col=13::in API POST /pets api operation id `price` was added
+::notice title=api-operation-id-added,file=./properties/rules/request-property-min-length-set_revision.yaml,line=9,col=13::in API POST /pets API operation id `price` was added
 

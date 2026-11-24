@@ -1,15 +1,15 @@
 3 alterações: 0 error, 1 warning, 2 info
-warning	[request-parameter-removed] em ./properties/rules/request-property-max-increased_revision.yaml
+warning	[request-parameter-removed] em ./properties/rules/request-property-max-increased_base.yaml
 	em API POST /pets/{petId}
 		parâmetro de requisição do tipo `cookie` e nome `pet` removido
 		Este é um aviso porque alguns aplicativos podem retornar um erro ao receber um parâmetro que não esperam. Recomenda-se depreciar o parâmetro primeiro.
 
 info	[new-optional-request-default-parameter-to-existing-path] em ./properties/rules/request-property-max-increased_revision.yaml
 	em API PUT /pets
-		o novo parâmetro opcional de requisição `query` foi adicionado a todas as operações do caminho%!(EXTRA string=`pet`)
+		o novo parâmetro opcional de requisição do tipo `query` e nome `pet` foi adicionado a todas as operações do caminho
 
 info	[request-property-max-increased] em ./properties/rules/request-property-max-increased_revision.yaml
 	em API POST /pets/{petId}
-		o valor máximo da propriedade de requisição `anyOf[subschema #1]/oneOf[subschema #3]/` foi aumentado de `596.00` para `597.00`
+		o valor máximo da propriedade de requisição `anyOf[subschema #1]/oneOf[subschema #3]` foi aumentado de `596.00` para `597.00`
 
 

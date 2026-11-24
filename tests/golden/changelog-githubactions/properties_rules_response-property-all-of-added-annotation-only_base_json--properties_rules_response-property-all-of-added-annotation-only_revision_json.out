@@ -1,2 +1,2 @@
-::notice title=response-property-all-of-added-annotation-only,file=./properties/rules/response-property-all-of-added-annotation-only_revision.json::in API POST /store/order added annotation-only `subschema #1` to the `items/name` response property `allOf` list for the response status `201`
+::notice title=response-property-all-of-added-annotation-only,file=./properties/rules/response-property-all-of-added-annotation-only_revision.json,line=48,col=29::in API POST /store/order added annotation-only `subschema #1` to the `items/name` response property `allOf` list for the response status `201`
 

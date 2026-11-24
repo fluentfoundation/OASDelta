@@ -2,6 +2,6 @@
 error	[request-body-min-properties-set] en ./properties/rules/request-body-min-properties-set_revision.yaml
 	en API PATCH /search
 		el valor minProperties del cuerpo de solicitud fue establecido en `2`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 

@@ -1,9 +1,9 @@
 2 changes: 2 error, 0 warning, 0 info
-error	[request-body-enum-value-removed] at ./properties/rules/request-body-enum-value-removed_revision.yaml
+error	[request-body-enum-value-removed] at ./properties/rules/request-body-enum-value-removed_base.yaml
 	in API POST /search
 		request body enum value removed `false`
 
-error	[request-body-enum-value-removed] at ./properties/rules/request-body-enum-value-removed_revision.yaml
+error	[request-body-enum-value-removed] at ./properties/rules/request-body-enum-value-removed_base.yaml
 	in API POST /search
 		request body enum value removed `true`
 

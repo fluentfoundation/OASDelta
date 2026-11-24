@@ -1,2 +1,2 @@
-::notice title=response-body-max-length-decreased,file=./properties/rules/response-body-max-length-decreased_revision.json::in API POST /items/{id}.json the response's body maxLength was decreased from `96` to `95`
+::notice title=response-body-max-length-decreased,file=./properties/rules/response-body-max-length-decreased_revision.json,line=57,col=19::in API POST /items/{id}.json the response's body maxLength was decreased from `96` to `95`
 

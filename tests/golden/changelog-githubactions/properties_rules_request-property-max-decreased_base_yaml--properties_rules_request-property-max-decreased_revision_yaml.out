@@ -1,3 +1,2 @@
 ::error title=request-property-max-decreased,file=./properties/rules/request-property-max-decreased_revision.yaml,line=78,col=37::in API PUT /pets the `>` request property's max was decreased to `237.00`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 

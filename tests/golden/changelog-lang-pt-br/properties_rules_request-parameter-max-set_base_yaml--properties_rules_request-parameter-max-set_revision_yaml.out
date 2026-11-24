@@ -2,6 +2,6 @@
 error	[request-parameter-max-set] em ./properties/rules/request-parameter-max-set_revision.yaml
 	em API DELETE /v1/items
 		no parâmetro de requisição do tipo `header` e nome `"quoted"`, o valor máximo foi definido como `21.00`
-		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels.
+		Definir um limite rejeita valores que o contrato anterior aceitava, a menos que seus clientes respeitem o novo limite.
 
 

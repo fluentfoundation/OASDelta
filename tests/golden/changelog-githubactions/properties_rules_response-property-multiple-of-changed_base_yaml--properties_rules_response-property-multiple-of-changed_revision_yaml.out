@@ -1,4 +1,4 @@
-::error title=response-property-multiple-of-changed,file=./properties/rules/response-property-multiple-of-changed_revision.yaml,line=305,col=47::in API PUT /items/{id}.json the `name/anyOf[subschema #1]/` response property's multipleOf was changed from `10.00` to `5.00` for the response status `204`
+::error title=response-property-multiple-of-changed,file=./properties/rules/response-property-multiple-of-changed_revision.yaml,line=305,col=47::in API PUT /items/{id}.json the `name/anyOf[subschema #1]` response property's multipleOf was changed from `10.00` to `5.00` for the response status `204`
 ::notice title=endpoint-added,file=./properties/rules/response-property-multiple-of-changed_revision.yaml,line=549,col=9::in API PATCH /search endpoint added
 ::notice title=endpoint-added,file=./properties/rules/response-property-multiple-of-changed_revision.yaml,line=665,col=9::in API POST /search endpoint added
 ::notice title=endpoint-added,file=./properties/rules/response-property-multiple-of-changed_revision.yaml,line=755,col=9::in API PUT /search endpoint added

@@ -1,4 +1,4 @@
-::notice title=api-tag-added,file=./properties/quoted_continuation_revision.yaml,line=15,col=93::in API GET /p api tag `x y` added
-::notice title=api-tag-added,file=./properties/quoted_continuation_revision.yaml,line=16,col=5::in API GET /p api tag `z` added
+::notice title=api-tag-added,file=./properties/quoted_continuation_revision.yaml,line=15,col=93::in API GET /p API tag `x y` added
+::notice title=api-tag-added,file=./properties/quoted_continuation_revision.yaml,line=16,col=5::in API GET /p API tag `z` added
 ::notice title=response-body-type-compatible,file=./properties/quoted_continuation_revision.yaml,line=15,col=66::in API GET /p the response's body `type` changed from `string` to `integer` for status `200` (backward compatible)
 

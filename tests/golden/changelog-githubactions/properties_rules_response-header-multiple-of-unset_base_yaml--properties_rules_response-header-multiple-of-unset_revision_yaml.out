@@ -1,2 +1,2 @@
-::error title=response-header-multiple-of-unset,file=./properties/rules/response-header-multiple-of-unset_revision.yaml,line=14,col=9::in API PATCH /items/{id}.json the `ünïcode` response header's multipleOf was unset from `7.00` for the status `201`
+::error title=response-header-multiple-of-unset,file=./properties/rules/response-header-multiple-of-unset_base.yaml::in API PATCH /items/{id}.json the `ünïcode` response header's multipleOf was unset from `7.00` for the status `201`
 

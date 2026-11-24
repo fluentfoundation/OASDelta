@@ -3,8 +3,8 @@ error	[request-property-became-not-nullable] at ./checker/request_property_becam
 	in API POST /products
 		the request property `name` became not nullable
 
-info	[api-version-decreased]
+info	[api-version-changed] at ./checker/request_property_became_nullable_base.yaml
 	in info
-		a breaking change was detected but the version decreased from `2.0.0` to `1.0.0`
+		the API version changed from `2.0.0` to `1.0.0`
 
 

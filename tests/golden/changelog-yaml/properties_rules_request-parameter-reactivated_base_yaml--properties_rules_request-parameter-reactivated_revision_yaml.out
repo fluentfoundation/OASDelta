@@ -5,6 +5,12 @@
   operationId: post_items_{id}.json
   path: /items/{id}.json
   section: paths
+  revisionSource:
+    file: ./properties/rules/request-parameter-reactivated_revision.yaml
+    line: 13
+    column: 13
+    endLine: 18
+    endColumn: 14
   fingerprint: ccde7c3eb935
 - id: request-parameter-removed
   text: deleted the `path` request parameter `id`
@@ -28,5 +34,9 @@
   operationId: post_items_{id}.json
   path: /items/{id}.json
   section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-reactivated_base.yaml
+    line: 35
+    column: 19
   fingerprint: 93f175f31c63
 

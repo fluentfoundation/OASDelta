@@ -1,1 +1,1 @@
-[]
+[{"id":"api-version-changed","text":"the API version changed from `2.0.0` to `1.0.0`","level":1,"section":"info","baseSource":{"file":"./checker/request_property_became_nullable_revision.yaml","line":4,"column":3},"revisionSource":{"file":"./checker/request_property_became_nullable_base.yaml","line":4,"column":3},"fingerprint":"c75f79f9775a"}]

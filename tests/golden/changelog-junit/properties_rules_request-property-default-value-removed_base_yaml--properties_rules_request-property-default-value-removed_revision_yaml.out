@@ -5,13 +5,13 @@
       <failure message="Breaking change detected">the `` request property default value `9007199254740992.00` was removed</failure>
     </testcase>
     <testcase name="request-property-min-unset" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `status/oneOf[subschema #3]/` request property's min was unset from `7.00`</failure>
+      <failure message="Breaking change detected">the `status/oneOf[subschema #3]` request property's min was unset from `7.00`</failure>
     </testcase>
     <testcase name="request-property-reactivated" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">request property `status/oneOf[subschema #3]/` reactivated</failure>
+      <failure message="Breaking change detected">request property `status/oneOf[subschema #3]` reactivated</failure>
     </testcase>
     <testcase name="request-property-type-generalized" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `status/oneOf[subschema #3]/` request property `type/format` was widened from `integer, null/int64` to `any`</failure>
+      <failure message="Breaking change detected">the `status/oneOf[subschema #3]` request property `type/format` was widened from `integer, null/int64` to `any`</failure>
     </testcase>
   </testsuite>
 </testsuites>

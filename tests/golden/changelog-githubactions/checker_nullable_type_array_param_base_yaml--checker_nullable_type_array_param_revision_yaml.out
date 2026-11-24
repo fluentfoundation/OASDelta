@@ -1,4 +1,3 @@
-::error title=request-parameter-became-not-nullable,file=./checker/nullable_type_array_param_revision.yaml::in API GET /t the `query` request parameter `q` became not nullable
-::error title=request-parameter-property-became-not-nullable,file=./checker/nullable_type_array_param_revision.yaml::in API GET /t the `tag` property of the `query` request parameter `filter` became not nullable
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::error title=request-parameter-became-not-nullable,file=./checker/nullable_type_array_param_revision.yaml,line=10,col=13::in API GET /t the `query` request parameter `q` became not nullable
+::error title=request-parameter-property-became-not-nullable,file=./checker/nullable_type_array_param_revision.yaml,line=17,col=17::in API GET /t the `tag` property of the `query` request parameter `filter` became not nullable
 

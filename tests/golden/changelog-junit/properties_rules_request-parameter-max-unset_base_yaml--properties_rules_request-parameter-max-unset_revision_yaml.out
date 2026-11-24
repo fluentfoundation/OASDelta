@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite package="com.oasdiff" time="0" tests="4" errors="0" failures="4" name="OASDiff">
+  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
     <testcase name="request-parameter-became-not-nullable" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the `query` request parameter `ключ` became not nullable</failure>
-    </testcase>
-    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
     </testcase>
     <testcase name="request-parameter-list-of-types-widened" classname="OASDiff" time="0">
       <failure message="Breaking change detected">`query` request parameter `ключ` list-of-types was widened by adding types `boolean`</failure>

@@ -2,10 +2,10 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
     <testcase name="request-property-max-properties-set" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `items/` request property's maxProperties was set to `7`</failure>
+      <failure message="Breaking change detected">the `items` request property's maxProperties was set to `7`</failure>
     </testcase>
     <testcase name="request-property-type-changed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `items/` request property `type` changed from `string` to `object`</failure>
+      <failure message="Breaking change detected">the `items` request property `type` changed from `string` to `object`</failure>
     </testcase>
   </testsuite>
 </testsuites>

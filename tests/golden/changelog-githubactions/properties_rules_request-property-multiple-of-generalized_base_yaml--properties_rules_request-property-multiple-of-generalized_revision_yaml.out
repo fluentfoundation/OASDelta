@@ -1,2 +1,2 @@
-::notice title=request-property-multiple-of-generalized,file=./properties/rules/request-property-multiple-of-generalized_revision.yaml,line=154,col=43::in API PUT /v1/items the `‮abc/anyOf[subschema #2]/` request property's multipleOf was generalized from `2.00` to `1.00`
+::notice title=request-property-multiple-of-generalized,file=./properties/rules/request-property-multiple-of-generalized_revision.yaml,line=154,col=43::in API PUT /v1/items the `‮abc/anyOf[subschema #2]` request property's multipleOf was generalized from `2.00` to `1.00`
 

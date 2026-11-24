@@ -1,6 +1,6 @@
 2 changes: 2 error, 0 warning, 0 info
-error at ./properties/rules/request-property-max-properties-set_revision.yaml, in API PUT /ünïcode/ключ the `items/` request property's maxProperties was set to `7` [request-property-max-properties-set]. Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+error at ./properties/rules/request-property-max-properties-set_revision.yaml, in API PUT /ünïcode/ключ the `items` request property's maxProperties was set to `7` [request-property-max-properties-set]. Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
-error at ./properties/rules/request-property-max-properties-set_revision.yaml, in API PUT /ünïcode/ключ the `items/` request property `type` changed from `string` to `object` [request-property-type-changed]. 
+error at ./properties/rules/request-property-max-properties-set_revision.yaml, in API PUT /ünïcode/ключ the `items` request property `type` changed from `string` to `object` [request-property-type-changed]. 
 
 

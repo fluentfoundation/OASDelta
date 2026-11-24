@@ -27,7 +27,7 @@ info	[endpoint-added] в ./oas32/revision.yaml
 	в API MOVE /search
 		эндпоинт добавлен
 
-info	[response-non-success-status-removed] в ./oas32/revision.yaml
+info	[response-non-success-status-removed] в ./oas32/base.yaml
 	в API QUERY /search
 		удален неуспешный (не 2xx) статус ответа `418`
 

@@ -136,7 +136,7 @@
         
         <li class="change">
         
-        the `items/` request property&#39;s maxItems was increased from `50` to `53`
+        the `items` request property&#39;s maxItems was increased from `50` to `53`
         </li>
         
     </ul>

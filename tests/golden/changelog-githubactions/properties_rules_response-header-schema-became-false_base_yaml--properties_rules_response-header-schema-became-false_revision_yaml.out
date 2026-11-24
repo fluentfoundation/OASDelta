@@ -1,2 +1,2 @@
-::notice title=response-header-schema-became-false,file=./properties/rules/response-header-schema-became-false_revision.yaml,line=65,col=9::in API GET /pets the schema of the response header ` leading` became `false` for the status `204`: no value passes validation
+::notice title=response-header-schema-became-false,file=./properties/rules/response-header-schema-became-false_base.yaml::in API GET /pets the schema of the response header ` leading` became `false` for the status `204`: no value passes validation
 

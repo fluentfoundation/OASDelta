@@ -1,6 +1,6 @@
 - id: request-property-min-properties-set
-  text: the `items/items/` request property's minProperties was set to `4`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  text: the `items/items` request property's minProperties was set to `4`
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   operationId: post_v1_items
@@ -10,5 +10,5 @@
     file: ./properties/rules/request-property-min-properties-set_revision.yaml
     line: 141
     column: 37
-  fingerprint: be228c10ecd1
+  fingerprint: 155bf8fbfe74
 

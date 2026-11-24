@@ -1,4 +1,4 @@
 1 changes: 0 error, 0 warning, 1 info
-info at ./properties/rules/request-property-min-properties-unset_revision.yaml, in API PUT /search the `"quoted"/price` request property's minProperties was unset from `8` [request-property-min-properties-unset]. 
+info at ./properties/rules/request-property-min-properties-unset_base.yaml, in API PUT /search the `"quoted"/price` request property's minProperties was unset from `8` [request-property-min-properties-unset]. 
 
 

@@ -1,3 +1,2 @@
-::error title=response-header-max-increased,file=./properties/rules/response-header-max-increased_revision.yaml,line=26,col=9::in API DELETE /search the `kind` response header's max was increased from `-4.00` to `973.00` for the status `default`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::error title=response-header-max-increased,file=./properties/rules/response-header-max-increased_revision.yaml,line=94,col=33::in API DELETE /search the `kind` response header's max was increased from `-4.00` to `973.00` for the status `default`
 

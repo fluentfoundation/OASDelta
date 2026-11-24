@@ -1,5 +1,5 @@
 1 изменений: 0 error, 0 warning, 1 info
-info	[request-body-const-removed] в ./properties/rules/request-body-const-removed_revision.yaml
+info	[request-body-const-removed] в ./properties/rules/request-body-const-removed_base.yaml
 	в API POST /items/{id}.json
 		у тела запроса `application/xml` удалено значение const `@at`
 

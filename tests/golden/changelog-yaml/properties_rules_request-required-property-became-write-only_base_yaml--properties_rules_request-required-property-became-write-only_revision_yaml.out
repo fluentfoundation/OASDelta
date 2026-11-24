@@ -5,6 +5,14 @@
   operationId: id
   path: /search
   section: paths
+  baseSource:
+    file: ./properties/rules/request-required-property-became-write-only_base.yaml
+    line: 70
+    column: 43
+  revisionSource:
+    file: ./properties/rules/request-required-property-became-write-only_revision.yaml
+    line: 63
+    column: 37
   fingerprint: aa99e24b0cc6
 - id: request-property-became-not-enum
   text: removed the enum constraint from the request property ``tick``

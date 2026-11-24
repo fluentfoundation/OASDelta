@@ -1,10 +1,6 @@
-2 cambios: 1 error, 0 warning, 1 info
-error	[response-media-type-removed] en ./response-media-type-revision.yaml
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-media-type-removed] en ./response-media-type-base.yaml
 	en API GET /products
 		removido el tipo de media `application/json` de la respuesta con estado `200`
-
-info	[api-version-not-bumped]
-	en info
-		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
 
 

@@ -1,2 +1,2 @@
-::notice title=response-property-exclusive-min-set,file=./properties/rules/response-property-exclusive-min-set_revision.json::in API DELETE /owners/{ownerId}/pets the `items/` response property's exclusiveMinimum was set to `17.00` for the response status `204`
+::notice title=response-property-exclusive-min-set,file=./properties/rules/response-property-exclusive-min-set_revision.json,line=69,col=21::in API DELETE /owners/{ownerId}/pets the `items` response property's exclusiveMinimum was set to `17.00` for the response status `204`
 

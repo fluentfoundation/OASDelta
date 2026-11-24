@@ -1,5 +1,5 @@
 - id: api-tag-added
-  text: api tag `id` added
+  text: API tag `id` added
   level: 1
   operation: DELETE
   operationId: delete_items_{id}.json

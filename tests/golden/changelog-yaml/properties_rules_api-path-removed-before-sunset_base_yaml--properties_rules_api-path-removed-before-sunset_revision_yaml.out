@@ -1,5 +1,5 @@
 - id: api-path-removed-without-deprecation
-  text: api path removed without deprecation
+  text: API path removed without deprecation
   level: 3
   operation: GET
   operationId: get_pets_{petId}
@@ -13,7 +13,7 @@
     endColumn: 29
   fingerprint: 32aa93812d51
 - id: api-path-removed-before-sunset
-  text: api path removed before the sunset date `2099-12-31`
+  text: API path removed before the sunset date `2099-12-31`
   level: 3
   operation: POST
   path: /pets/{petId}/v2
@@ -63,10 +63,10 @@
     line: 178
     column: 9
     endLine: 203
-    endColumn: 27
+    endColumn: 37
   fingerprint: 93315d753e27
 - id: api-path-removed-with-deprecation
-  text: api path removed with deprecation
+  text: API path removed with deprecation
   level: 1
   operation: DELETE
   path: /pets/{petId}/v2

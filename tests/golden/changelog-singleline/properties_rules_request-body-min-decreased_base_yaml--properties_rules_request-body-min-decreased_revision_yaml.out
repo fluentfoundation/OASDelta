@@ -3,7 +3,7 @@ error at ./properties/rules/request-body-min-decreased_revision.yaml, in API DEL
 
 error at ./properties/rules/request-body-min-decreased_revision.yaml, in API PUT /search the `tag/id` request property `type` changed from `string` to `object` (media type: application/xml) [request-property-type-changed]. 
 
-info, in components/securitySchemes the component security scheme `api_key` was added [api-security-component-added]. 
+info at ./properties/rules/request-body-min-decreased_revision.yaml, in components/securitySchemes the component security scheme `api_key` was added [api-security-component-added]. 
 
 info at ./properties/rules/request-body-min-decreased_revision.yaml, in API PUT /search the request's body min was decreased to from `0.00` to `-2.00` (media type: */*) [request-body-min-decreased]. 
 

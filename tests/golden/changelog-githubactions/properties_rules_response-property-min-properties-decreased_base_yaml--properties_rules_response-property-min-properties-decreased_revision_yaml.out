@@ -1,2 +1,2 @@
-::warning title=response-property-min-properties-decreased,file=./properties/rules/response-property-min-properties-decreased_revision.yaml,line=77,col=39::in API PATCH /v1/items the `allOf[subschema #2]/` response property's minProperties was decreased from `4` to `1` for the response status `400`
+::warning title=response-property-min-properties-decreased,file=./properties/rules/response-property-min-properties-decreased_revision.yaml,line=77,col=39::in API PATCH /v1/items the `allOf[subschema #2]` response property's minProperties was decreased from `4` to `1` for the response status `400`
 

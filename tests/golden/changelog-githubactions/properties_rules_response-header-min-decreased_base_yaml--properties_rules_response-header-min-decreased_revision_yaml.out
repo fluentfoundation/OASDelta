@@ -1,5 +1,4 @@
-::error title=response-header-min-decreased,file=./properties/rules/response-header-min-decreased_revision.yaml,line=46,col=9::in API PATCH /items/{id}.json the `>` response header's min was decreased from `4.00` to `2.00` for the status `200`
-::warning title=request-parameter-removed,file=./properties/rules/response-header-min-decreased_revision.yaml::in API PUT /items/{id}.json deleted the `header` request parameter `owner`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
-::notice title=response-property-type-specialized,file=./properties/rules/response-header-min-decreased_revision.yaml,line=183,col=45::in API PUT /items/{id}.json the `_under_/items/` response's property `format` was narrowed from `none` to `byte` for status `201`
+::error title=response-header-min-decreased,file=./properties/rules/response-header-min-decreased_revision.yaml,line=95,col=33::in API PATCH /items/{id}.json the `>` response header's min was decreased from `4.00` to `2.00` for the status `200`
+::warning title=request-parameter-removed,file=./properties/rules/response-header-min-decreased_base.yaml::in API PUT /items/{id}.json deleted the `header` request parameter `owner`
+::notice title=response-property-type-specialized,file=./properties/rules/response-header-min-decreased_revision.yaml,line=183,col=45::in API PUT /items/{id}.json the `_under_/items` response's property `format` was narrowed from `none` to `byte` for status `201`
 

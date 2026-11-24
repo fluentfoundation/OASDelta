@@ -5,5 +5,13 @@
   operationId: testOp
   path: /test
   section: paths
+  baseSource:
+    file: ./checker/nullable_wrap_param_base.yaml
+    line: 11
+    column: 13
+  revisionSource:
+    file: ./checker/nullable_wrap_param_revision.yaml
+    line: 11
+    column: 13
   fingerprint: cf173c9fd611
 

@@ -4,7 +4,7 @@
 ## API Changes
 
 ### POST /v1/items
-- :warning: the `items/items/` request property's minProperties was set to `4`
+- :warning: the `items/items` request property's minProperties was set to `4`
 
 
 

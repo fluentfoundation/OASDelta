@@ -12,11 +12,6 @@
     endLine: 36
     endColumn: 41
   fingerprint: 1ba8afbc1872
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-property-dependent-schema-removed
   text: removed the dependent schema `name` from the `details` request property
   level: 1

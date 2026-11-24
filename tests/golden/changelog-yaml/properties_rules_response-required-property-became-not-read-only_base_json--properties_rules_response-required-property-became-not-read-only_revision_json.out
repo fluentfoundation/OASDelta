@@ -4,5 +4,9 @@
   operation: PUT
   path: /owners/{ownerId}/pets
   section: paths
+  baseSource:
+    file: ./properties/rules/response-required-property-became-not-read-only_base.json
+    line: 95
+    column: 27
   fingerprint: 41a2ff15a552
 

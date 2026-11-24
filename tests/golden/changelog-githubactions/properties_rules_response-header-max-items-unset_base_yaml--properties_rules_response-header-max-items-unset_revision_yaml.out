@@ -1,2 +1,2 @@
-::error title=response-header-max-items-unset,file=./properties/rules/response-header-max-items-unset_revision.yaml,line=34,col=9::in API GET /owners/{ownerId}/pets the `kind` response header's maxItems was unset from `3` for the status `204`
+::error title=response-header-max-items-unset,file=./properties/rules/response-header-max-items-unset_base.yaml::in API GET /owners/{ownerId}/pets the `kind` response header's maxItems was unset from `3` for the status `204`
 

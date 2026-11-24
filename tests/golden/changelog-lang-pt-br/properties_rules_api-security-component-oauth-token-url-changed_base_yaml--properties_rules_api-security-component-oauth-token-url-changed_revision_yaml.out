@@ -1,15 +1,15 @@
 3 alterações: 0 error, 2 warning, 1 info
-warning	[api-security-component-oauth-token-url-changed]
+warning	[api-security-component-oauth-token-url-changed] em ./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml
 	em components/securitySchemes
 		no esquema de segurança `oauth`, a url do token do fluxo OAuth `authorizationCode` foi alterada de `https://auth.example.com/token` para `https://auth0.example.com/tokenUrl`
 		Este é um aviso porque a especificação não diz se as credenciais obtidas pela url anterior ainda são aceitas.
 
-warning	[api-security-component-oauth-token-url-changed]
+warning	[api-security-component-oauth-token-url-changed] em ./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml
 	em components/securitySchemes
 		no esquema de segurança `oauth`, a url do token do fluxo OAuth `clientCredentials` foi alterada de `https://auth.example.com/token` para `https://auth0.example.com/tokenUrl`
 		Este é um aviso porque a especificação não diz se as credenciais obtidas pela url anterior ainda são aceitas.
 
-info	[request-parameter-type-generalized] em ./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml
+info	[request-parameter-type-generalized] em ./properties/rules/api-security-component-oauth-token-url-changed_base.yaml
 	em API PATCH /search
 		no parâmetro de requisição do tipo `cookie` e nome `id`, o `type` foi expandido de `array<integer/int64>` para `any`
 

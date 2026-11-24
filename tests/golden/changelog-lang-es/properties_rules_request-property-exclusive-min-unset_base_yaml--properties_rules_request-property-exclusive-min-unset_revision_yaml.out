@@ -1,5 +1,5 @@
 1 cambios: 0 error, 0 warning, 1 info
-info	[request-property-exclusive-min-unset] en ./properties/rules/request-property-exclusive-min-unset_revision.yaml
+info	[request-property-exclusive-min-unset] en ./properties/rules/request-property-exclusive-min-unset_base.yaml
 	en API POST /owners/{ownerId}/pets
 		el valor exclusiveMinimum de la propiedad de solicitud `pet` fue removido de `true`
 

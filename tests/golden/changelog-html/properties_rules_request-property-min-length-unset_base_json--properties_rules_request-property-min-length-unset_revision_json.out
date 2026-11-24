@@ -135,17 +135,12 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
         </div>
         
-        the `pet/anyOf[subschema #3]/` response property&#39;s minLength was unset from `1` for the response status `404`
+        the `pet/anyOf[subschema #3]` response property&#39;s minLength was unset from `1` for the response status `404`
         </li>
         
         <li class="change">
         
-        the response property `pet/anyOf[subschema #3]/` became not nullable for the status `404`
-        </li>
-        
-        <li class="change">
-        
-        the `pet/anyOf[subschema #3]/` response&#39;s property `type` was narrowed from `string` to `any` for status `404`
+        the `pet/anyOf[subschema #3]` response&#39;s property `type` was narrowed from `string` to `any` for status `404`
         </li>
         
     </ul>
@@ -162,21 +157,12 @@
         
         <li class="change">
         
-        <div class="breaking tooltip" data-text="Breaking Change">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
-        </div>
-        
-        the request property `㺓崠讆/id/anyOf[subschema #3]/` became not nullable
+        the `㺓崠讆/id/anyOf[subschema #3]` request property&#39;s minLength was unset from `1`
         </li>
         
         <li class="change">
         
-        the `㺓崠讆/id/anyOf[subschema #3]/` request property&#39;s minLength was unset from `1`
-        </li>
-        
-        <li class="change">
-        
-        the `㺓崠讆/id/anyOf[subschema #3]/` request property `type` was widened from `string` to `any`
+        the `㺓崠讆/id/anyOf[subschema #3]` request property `type` was widened from `string` to `any`
         </li>
         
     </ul>

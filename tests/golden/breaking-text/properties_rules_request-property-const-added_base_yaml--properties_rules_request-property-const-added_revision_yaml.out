@@ -5,7 +5,7 @@ error	[request-property-const-added] at ./properties/rules/request-property-cons
 
 error	[api-removed-without-deprecation] at ./properties/rules/request-property-const-added_base.yaml
 	in API GET /store/order
-		api removed without deprecation
+		API removed without deprecation
 
 error	[response-body-one-of-added] at ./properties/rules/request-property-const-added_revision.yaml
 	in API PUT /store/order

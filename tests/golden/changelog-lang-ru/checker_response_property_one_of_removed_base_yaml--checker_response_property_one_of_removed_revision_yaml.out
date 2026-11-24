@@ -1,21 +1,21 @@
 5 изменений: 0 error, 0 warning, 5 info
-info	[api-schema-removed]
+info	[api-schema-removed] в ./checker/response_property_one_of_removed_base.yaml
 	в components/schemas
 		удалена схема `Breed3`
 
-info	[api-schema-removed]
+info	[api-schema-removed] в ./checker/response_property_one_of_removed_base.yaml
 	в components/schemas
 		удалена схема `Rabbit`
 
-info	[response-body-one-of-removed] в ./checker/response_property_one_of_removed_revision.yaml
+info	[response-body-one-of-removed] в ./checker/response_property_one_of_removed_base.yaml
 	в API GET /pets
 		удалён `#/components/schemas/Rabbit` из списка `oneOf` тела ответа для статуса ответа `200`
 
-info	[response-property-one-of-removed] в ./checker/response_property_one_of_removed_revision.yaml
+info	[response-property-one-of-removed] в ./checker/response_property_one_of_removed_base.yaml
 	в API GET /pets
 		удалён `#/components/schemas/Breed3` из списка `oneOf` свойства ответа `oneOf[#/components/schemas/Dog]/breed` для статуса ответа `200`
 
-info	[response-property-one-of-removed] в ./checker/response_property_one_of_removed_revision.yaml
+info	[response-property-one-of-removed] в ./checker/response_property_one_of_removed_base.yaml
 	в API GET /pets
 		удалён `subschema #2: Dark brown types` из списка `oneOf` свойства ответа `oneOf[#/components/schemas/Fox]/breed` для статуса ответа `200`
 

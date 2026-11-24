@@ -1,6 +1,6 @@
 2 changes: 0 error, 0 warning, 2 info
-info at ./properties/rules/request-body-min-contains-unset_revision.json, in API PUT /v1/items removed 'contains' constraint from the request body [request-body-contains-removed]. 
+info at ./properties/rules/request-body-min-contains-unset_base.json, in API PUT /v1/items removed 'contains' constraint from the request body [request-body-contains-removed]. 
 
-info at ./properties/rules/request-body-min-contains-unset_revision.json, in API PUT /v1/items the request's body minContains was unset from `2` [request-body-min-contains-unset]. 
+info at ./properties/rules/request-body-min-contains-unset_base.json, in API PUT /v1/items the request's body minContains was unset from `2` [request-body-min-contains-unset]. 
 
 

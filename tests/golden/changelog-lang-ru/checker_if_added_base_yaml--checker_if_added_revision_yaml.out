@@ -1,4 +1,4 @@
-7 изменений: 3 error, 0 warning, 4 info
+6 изменений: 3 error, 0 warning, 3 info
 error	[request-body-else-added] в ./checker/if_added_revision.yaml
 	в API POST /products
 		добавлена подсхема 'else' в тело запроса
@@ -10,10 +10,6 @@ error	[request-body-if-added] в ./checker/if_added_revision.yaml
 error	[request-body-then-added] в ./checker/if_added_revision.yaml
 	в API POST /products
 		добавлена подсхема 'then' в тело запроса
-
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
 
 info	[response-body-else-added] в ./checker/if_added_revision.yaml
 	в API POST /products

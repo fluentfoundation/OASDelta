@@ -1,2 +1,2 @@
-::notice title=response-required-property-became-read-only,file=./properties/rules/response-required-property-became-read-only_revision.yaml::in API DELETE /search the response required property `anyOf[subschema #1]/created` became read-only for the status `default`
+::notice title=response-required-property-became-read-only,file=./properties/rules/response-required-property-became-read-only_revision.yaml,line=106,col=27::in API DELETE /search the response required property `anyOf[subschema #1]/created` became read-only for the status `default`
 

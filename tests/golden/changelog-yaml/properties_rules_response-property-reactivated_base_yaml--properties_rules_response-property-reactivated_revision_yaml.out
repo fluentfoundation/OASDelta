@@ -1,5 +1,5 @@
 - id: response-property-reactivated
-  text: response property `items/` reactivated
+  text: response property `items` reactivated
   level: 1
   operation: PATCH
   operationId: patch_pets_{petId}
@@ -9,5 +9,5 @@
     file: ./properties/rules/response-property-reactivated_base.yaml
     line: 69
     column: 37
-  fingerprint: fbaad6e96af4
+  fingerprint: 378227ab6583
 

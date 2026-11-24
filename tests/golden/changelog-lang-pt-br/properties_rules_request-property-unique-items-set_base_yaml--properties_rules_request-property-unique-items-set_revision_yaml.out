@@ -1,10 +1,10 @@
 2 alterações: 2 error, 0 warning, 0 info
 error	[api-removed-without-deprecation] em ./properties/rules/request-property-unique-items-set_base.yaml
 	em API DELETE /pets
-		api removida sem depreciação
+		API removida sem depreciação
 
 error	[request-property-unique-items-set] em ./properties/rules/request-property-unique-items-set_revision.yaml
 	em API PUT /pets
-		o valor uniqueItems da propriedade de requisição `items/` foi definido como true
+		o valor uniqueItems da propriedade de requisição `items` foi definido como true
 
 

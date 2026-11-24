@@ -4,11 +4,11 @@
 ## API Changes
 
 ### DELETE /pets
-- :warning: api removed without deprecation
+- :warning: API removed without deprecation
 
 
 ### PUT /pets
-- :warning: the `items/` request property's uniqueItems was set to true
+- :warning: the `items` request property's uniqueItems was set to true
 
 
 

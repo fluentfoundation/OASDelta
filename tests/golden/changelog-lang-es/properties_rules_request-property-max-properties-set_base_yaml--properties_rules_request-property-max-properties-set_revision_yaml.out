@@ -1,11 +1,11 @@
 2 cambios: 2 error, 0 warning, 0 info
 error	[request-property-max-properties-set] en ./properties/rules/request-property-max-properties-set_revision.yaml
 	en API PUT /ünïcode/ключ
-		el número máximo de propiedades de la propiedad de solicitud `items/` fue establecido en `7`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		el número máximo de propiedades de la propiedad de solicitud `items` fue establecido en `7`
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 error	[request-property-type-changed] en ./properties/rules/request-property-max-properties-set_revision.yaml
 	en API PUT /ünïcode/ключ
-		el `items/` de la propiedad de solicitud `type` fue cambiado de `string` a `object`
+		el `items` de la propiedad de solicitud `type` fue cambiado de `string` a `object`
 
 

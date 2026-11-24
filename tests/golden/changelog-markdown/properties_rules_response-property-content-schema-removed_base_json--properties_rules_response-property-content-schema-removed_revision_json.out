@@ -4,8 +4,8 @@
 ## API Changes
 
 ### PUT /v1/items
-- :warning: the `!tag/items/` response property contentMediaType changed from `application/json` to `` for the status `500`
-- :warning: removed 'contentSchema' from the `!tag/items/` response property for the status `500`
+- :warning: the `!tag/items` response property contentMediaType changed from `application/json` to `` for the status `500`
+- :warning: removed 'contentSchema' from the `!tag/items` response property for the status `500`
 
 
 

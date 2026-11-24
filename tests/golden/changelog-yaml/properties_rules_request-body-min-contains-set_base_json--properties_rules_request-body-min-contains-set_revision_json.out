@@ -4,13 +4,21 @@
   operation: PATCH
   path: /v1/items
   section: paths
+  revisionSource:
+    file: ./properties/rules/request-body-min-contains-set_revision.json
+    line: 62
+    column: 17
   fingerprint: c96a14de45a6
 - id: request-body-min-contains-set
   text: the request's body minContains was set to `3`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: PATCH
   path: /v1/items
   section: paths
+  revisionSource:
+    file: ./properties/rules/request-body-min-contains-set_revision.json
+    line: 65
+    column: 17
   fingerprint: 143794c4b2da
 

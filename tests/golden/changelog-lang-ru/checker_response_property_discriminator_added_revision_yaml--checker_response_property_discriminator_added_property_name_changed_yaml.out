@@ -19,19 +19,19 @@ info	[response-optional-property-added] в ./checker/response_property_discrimin
 	в API POST /pets
 		добавлено необязательное свойство `oneOf[#/components/schemas/Dog]/petType2` в ответе со статусом `200`
 
-info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_revision.yaml
 	в API POST /pets
 		удалено необязательное поле `oneOf[#/components/schemas/Cat]/petType` из ответа со статусом `200`
 
-info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_revision.yaml
 	в API POST /pets
 		удалено необязательное поле `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name` из ответа со статусом `200`
 
-info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_revision.yaml
 	в API POST /pets
 		удалено необязательное поле `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name` из ответа со статусом `200`
 
-info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_property_name_changed.yaml
+info	[response-optional-property-removed] в ./checker/response_property_discriminator_added_revision.yaml
 	в API POST /pets
 		удалено необязательное поле `oneOf[#/components/schemas/Dog]/petType` из ответа со статусом `200`
 

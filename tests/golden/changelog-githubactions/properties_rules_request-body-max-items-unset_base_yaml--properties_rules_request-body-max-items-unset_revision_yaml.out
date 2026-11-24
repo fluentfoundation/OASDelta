@@ -1,3 +1,3 @@
-::notice title=request-body-max-items-unset,file=./properties/rules/request-body-max-items-unset_revision.yaml::in API POST /pets/{petId} the request's body maxItems was unset from `81`
-::notice title=request-property-type-compatible,file=./properties/rules/request-body-max-items-unset_revision.yaml,line=41,col=33::in API POST /pets/{petId} the `items/` request property `type` changed from `array<boolean/custom>` to `string` (backward compatible)
+::notice title=request-body-max-items-unset,file=./properties/rules/request-body-max-items-unset_base.yaml::in API POST /pets/{petId} the request's body maxItems was unset from `81`
+::notice title=request-property-type-compatible,file=./properties/rules/request-body-max-items-unset_revision.yaml,line=41,col=33::in API POST /pets/{petId} the `items` request property `type` changed from `array<boolean/custom>` to `string` (backward compatible)
 

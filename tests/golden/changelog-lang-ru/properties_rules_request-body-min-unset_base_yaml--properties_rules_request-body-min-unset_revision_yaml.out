@@ -7,11 +7,11 @@ error	[request-body-type-changed] в ./properties/rules/request-body-min-unset_r
 	в API PATCH /v1/items
 		`type` тела запроса изменён с `number, null` на `boolean`
 
-info	[request-body-default-value-removed] в ./properties/rules/request-body-min-unset_revision.yaml
+info	[request-body-default-value-removed] в ./properties/rules/request-body-min-unset_base.yaml
 	в API PATCH /v1/items
 		удалено значение по умолчанию `multipart/form-data` для тела запроса `-26.12`
 
-info	[request-body-min-unset] в ./properties/rules/request-body-min-unset_revision.yaml
+info	[request-body-min-unset] в ./properties/rules/request-body-min-unset_base.yaml
 	в API PATCH /v1/items
 		значение min у тела запроса удалено, предыдущее значение - `-2.00`
 

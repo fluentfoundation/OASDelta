@@ -3,15 +3,15 @@ info	[request-property-any-of-added] em ./properties/rules/request-required-prop
 	em API PUT /items/{id}.json
 		`subschema #1, subschema #2` foi adicionado à lista `anyOf` da propriedade de requisição `owner/status`
 
-info	[request-property-min-unset] em ./properties/rules/request-required-property-became-not-write-only_revision.yaml
+info	[request-property-min-unset] em ./properties/rules/request-required-property-became-not-write-only_base.yaml
 	em API PUT /items/{id}.json
 		o valor min da propriedade de requisição `owner/status` foi removido de `2.00`
 
-info	[request-property-type-generalized] em ./properties/rules/request-required-property-became-not-write-only_revision.yaml
+info	[request-property-type-generalized] em ./properties/rules/request-required-property-became-not-write-only_base.yaml
 	em API PUT /items/{id}.json
 		o `owner/status` da propriedade de requisição `type` foi expandido de `integer` para `any`
 
-info	[request-required-property-became-not-write-only] em ./properties/rules/request-required-property-became-not-write-only_revision.yaml
+info	[request-required-property-became-not-write-only] em ./properties/rules/request-required-property-became-not-write-only_base.yaml
 	em API PUT /items/{id}.json
 		a propriedade obrigatória de requisição `owner/status` deixou de ser somente escrita
 

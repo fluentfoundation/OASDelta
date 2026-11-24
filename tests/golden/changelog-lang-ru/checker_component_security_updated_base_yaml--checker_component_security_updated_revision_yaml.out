@@ -1,5 +1,5 @@
 1 изменений: 0 error, 0 warning, 1 info
-info	[api-security-component-added]
+info	[api-security-component-added] в ./checker/component_security_updated_revision.yaml
 	в components/securitySchemes
 		компонент схемы безопасности `BasicAuth` был добавлен
 

@@ -3,6 +3,6 @@ error at ./properties/header_case_revision.yaml, in API GET /pets for the `heade
 
 error at ./properties/header_case_revision.yaml, in API GET /pets the `ꟓ-rate` response header's `type` changed from `integer` to `string` for the status `200` [response-header-type-changed]. 
 
-info at ./properties/header_case_revision.yaml, in API GET /pets the `header` request parameter `ꟓ-trace` became optional [request-parameter-became-optional]. 
+info at ./properties/header_case_base.yaml, in API GET /pets the `header` request parameter `ꟓ-trace` became optional [request-parameter-became-optional]. 
 
 

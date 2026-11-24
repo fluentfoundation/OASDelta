@@ -1,10 +1,6 @@
-2 cambios: 1 error, 0 warning, 1 info
-error	[api-security-component-http-scheme-changed]
+1 cambios: 1 error, 0 warning, 0 info
+error	[api-security-component-http-scheme-changed] en ./properties/rules/api-security-component-http-scheme-changed_revision.yaml
 	en components/securitySchemes
 		el esquema http del esquema de seguridad `bearer` fue cambiado de `basic` a `bearer`
-
-info	[api-version-not-bumped]
-	en info
-		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
 
 

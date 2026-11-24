@@ -1,2 +1,2 @@
-::error title=request-property-became-not-nullable,file=./nullable/revision-req.yaml::in API POST /test the request property `id` became not nullable
+::error title=request-property-became-not-nullable,file=./nullable/revision-req.yaml,line=14,col=17::in API POST /test the request property `id` became not nullable
 

@@ -1,5 +1,5 @@
 - id: api-tag-added
-  text: api tag `x y` added
+  text: API tag `x y` added
   level: 1
   operation: GET
   path: /p
@@ -10,7 +10,7 @@
     column: 93
   fingerprint: 36689c87258d
 - id: api-tag-added
-  text: api tag `z` added
+  text: API tag `z` added
   level: 1
   operation: GET
   path: /p

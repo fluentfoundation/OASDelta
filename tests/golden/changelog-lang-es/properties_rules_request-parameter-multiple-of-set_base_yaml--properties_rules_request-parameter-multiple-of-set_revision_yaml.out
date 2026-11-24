@@ -2,6 +2,6 @@
 error	[request-parameter-multiple-of-set] en ./properties/rules/request-parameter-multiple-of-set_revision.yaml
 	en API DELETE /pets
 		para el parámetro `cookie` de solicitud `price`, el valor multipleOf fue establecido en `2.00`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 

@@ -19,17 +19,9 @@
   operation: GET
   path: /pets/{petId}
   section: paths
-  baseSource:
-    file: ./properties/rules/response-header-min-set_base.yaml
-    line: 14
-    column: 9
-    endLine: 93
-    endColumn: 24
   revisionSource:
     file: ./properties/rules/response-header-min-set_revision.yaml
-    line: 14
-    column: 9
-    endLine: 93
-    endColumn: 24
+    line: 68
+    column: 33
   fingerprint: f626adda4e49
 

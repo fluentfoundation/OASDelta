@@ -4,7 +4,7 @@
 ## API Changes
 
 ### PATCH /items/{id}.json
--  the `additionalProperties/` request property's minItems was unset from `14`
+-  the `additionalProperties` request property's minItems was unset from `14`
 
 
 

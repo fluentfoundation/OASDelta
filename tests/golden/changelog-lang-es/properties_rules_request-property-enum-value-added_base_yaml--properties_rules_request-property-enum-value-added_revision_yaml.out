@@ -1,7 +1,11 @@
-3 cambios: 1 error, 0 warning, 2 info
+4 cambios: 2 error, 0 warning, 2 info
 error	[request-property-became-enum] en ./properties/rules/request-property-enum-value-added_revision.yaml
 	en API POST /store/order
 		la propiedad de solicitud `@at` fue restringida a una lista de valores enum
+
+error	[request-property-became-not-nullable] en ./properties/rules/request-property-enum-value-added_revision.yaml
+	en API POST /store/order
+		la propiedad de solicitud `@at` se volvió no nulable
 
 info	[request-property-enum-value-added] en ./properties/rules/request-property-enum-value-added_revision.yaml
 	en API POST /store/order

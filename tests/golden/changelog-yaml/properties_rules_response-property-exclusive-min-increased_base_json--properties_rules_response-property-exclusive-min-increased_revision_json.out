@@ -1,9 +1,17 @@
 - id: response-property-exclusive-min-increased
-  text: 'the `anyOf[subschema #2]/items/` response property''s exclusiveMinimum was increased from `-10.00` to `-7.00` for the response status `400`'
+  text: 'the `anyOf[subschema #2]/items` response property''s exclusiveMinimum was increased from `-10.00` to `-7.00` for the response status `400`'
   level: 1
   operation: GET
   operationId: get_owners_{ownerId}_pets
   path: /owners/{ownerId}/pets
   section: paths
-  fingerprint: 67e278872e6c
+  baseSource:
+    file: ./properties/rules/response-property-exclusive-min-increased_base.json
+    line: 161
+    column: 25
+  revisionSource:
+    file: ./properties/rules/response-property-exclusive-min-increased_revision.json
+    line: 161
+    column: 25
+  fingerprint: dce7f6276e40
 

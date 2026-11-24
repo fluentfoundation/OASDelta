@@ -34,11 +34,6 @@
     line: 37
     column: 21
   fingerprint: 6380ef54d417
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-property-contains-removed
   text: removed 'contains' constraint from the request property `tags`
   level: 1

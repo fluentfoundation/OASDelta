@@ -5,5 +5,9 @@
   operationId: patch_pets_{petId}
   path: /pets/{petId}
   section: paths
+  revisionSource:
+    file: ./properties/rules/request-body-const-added_revision.json
+    line: 62
+    column: 17
   fingerprint: 9685bddcfcdd
 

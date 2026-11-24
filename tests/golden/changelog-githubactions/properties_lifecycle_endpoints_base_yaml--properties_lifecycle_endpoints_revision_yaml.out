@@ -1,8 +1,8 @@
-::error title=api-deprecated-sunset-parse,file=./properties/lifecycle_endpoints_revision.yaml,line=9,col=11::in API GET /deprecated-bad-sunset failed to parse sunset date: `sunset date doesn't conform with RFC3339: not a date`
-::error title=api-removed-before-sunset,file=./properties/lifecycle_endpoints_base.yaml::in API GET /removed-endpoint api removed before the sunset date `2099-12-31`
-::error title=api-path-removed-before-sunset,file=./properties/lifecycle_endpoints_base.yaml::in API GET /removed-path api path removed before the sunset date `2099-12-31`
-::error title=api-path-sunset-parse,file=./properties/lifecycle_endpoints_base.yaml::in API GET /removed-path-bad-sunset failed to parse sunset date: `sunset date doesn't conform with RFC3339: not a date`
-::error title=api-invalid-stability-level,file=./properties/lifecycle_endpoints_revision.yaml,line=11,col=11::in API GET /stability failed to parse stability level: `value is not one of draft, alpha, beta or stable: "experimental-ish"`
-::error title=sunset-deleted,file=./properties/lifecycle_endpoints_revision.yaml::in API GET /sunset-deleted api sunset date deleted, but deprecated=true kept
-::error title=api-sunset-date-changed-too-small,file=./properties/lifecycle_endpoints_revision.yaml,line=13,col=29::in API GET /sunset-earlier api sunset date changed to an earlier date, from `2099-12-31` to `2020-01-01`, new sunset date must be not earlier than `2099-12-31` and at least `0` days from now
+::error title=api-deprecated-sunset-parse,file=./properties/lifecycle_endpoints_revision.yaml,line=9,col=29::in API GET /deprecated-bad-sunset sunset date doesn't conform with RFC3339: `"not a date"`
+::error title=api-removed-before-sunset,file=./properties/lifecycle_endpoints_base.yaml::in API GET /removed-endpoint API removed before the sunset date `2099-12-31`
+::error title=api-path-removed-before-sunset,file=./properties/lifecycle_endpoints_base.yaml::in API GET /removed-path API path removed before the sunset date `2099-12-31`
+::error title=api-path-sunset-parse,file=./properties/lifecycle_endpoints_base.yaml::in API GET /removed-path-bad-sunset sunset date doesn't conform with RFC3339: `"not a date"`
+::error title=api-invalid-stability-level,file=./properties/lifecycle_endpoints_revision.yaml,line=11,col=11::in API GET /stability stability level `"experimental-ish"` is not one of `draft`, `alpha`, `beta` or `stable`
+::error title=sunset-deleted,file=./properties/lifecycle_endpoints_base.yaml::in API GET /sunset-deleted API sunset date deleted, but deprecated=true kept
+::error title=api-sunset-date-changed-too-small,file=./properties/lifecycle_endpoints_revision.yaml,line=13,col=29::in API GET /sunset-earlier API sunset date changed to an earlier date, from `2099-12-31` to `2020-01-01`, new sunset date must be not earlier than `2099-12-31` and at least `0` days from now
 

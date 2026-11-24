@@ -1,5 +1,5 @@
 1 изменений: 0 error, 0 warning, 1 info
-info	[request-property-multiple-of-unset] в ./properties/rules/request-property-multiple-of-unset_revision.json
+info	[request-property-multiple-of-unset] в ./properties/rules/request-property-multiple-of-unset_base.json
 	в API PATCH /v1/items
 		значение multipleOf у поля запроса `'single'` удалено, предыдущее значение - `8.00`
 

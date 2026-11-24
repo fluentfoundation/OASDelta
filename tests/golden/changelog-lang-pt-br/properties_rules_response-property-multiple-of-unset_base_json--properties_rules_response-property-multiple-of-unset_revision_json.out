@@ -1,5 +1,5 @@
 1 alterações: 1 error, 0 warning, 0 info
-error	[response-property-multiple-of-unset] em ./properties/rules/response-property-multiple-of-unset_revision.json
+error	[response-property-multiple-of-unset] em ./properties/rules/response-property-multiple-of-unset_base.json
 	em API GET /v1/items
 		o valor multipleOf da propriedade de resposta `pet` foi removido de `3.00` para o status `200`
 

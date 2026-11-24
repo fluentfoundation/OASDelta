@@ -1,1 +1,1 @@
-[]
+[{"id":"api-version-changed","text":"the API version changed from `1.0.0` to `1.0.1`","level":1,"section":"info","baseSource":{"file":"./oasdelta/yaml_scalars_base.json","line":3,"column":44},"fingerprint":"2bf536f01aba"}]

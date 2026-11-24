@@ -4,7 +4,7 @@
 ## API Changes
 
 ### PUT /pets
-- :warning: the `pet/allOf[subschema #1]/` response property's maxProperties was unset from `13` for the response status `201`
+- :warning: the `pet/allOf[subschema #1]` response property's maxProperties was unset from `13` for the response status `201`
 
 
 

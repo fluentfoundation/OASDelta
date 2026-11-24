@@ -12,7 +12,7 @@
     endColumn: 54
   fingerprint: 99e7b0e9a939
 - id: request-property-max-items-increased
-  text: the `items/` request property's maxItems was increased from `50` to `53`
+  text: the `items` request property's maxItems was increased from `50` to `53`
   level: 1
   operation: POST
   path: /store/order
@@ -25,5 +25,5 @@
     file: ./properties/rules/request-property-max-items-increased_revision.yaml
     line: 106
     column: 33
-  fingerprint: 395b82d923bc
+  fingerprint: ec76d397a6a0
 

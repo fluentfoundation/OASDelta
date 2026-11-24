@@ -1,5 +1,5 @@
 5 изменений: 5 error, 0 warning, 0 info
-error	[request-parameter-removed-before-sunset] в ./properties/lifecycle_parameters_revision.yaml
+error	[request-parameter-removed-before-sunset] в ./properties/lifecycle_parameters_base.yaml
 	в API GET /p
 		удален `query` параметр запроса `removed` до даты прекращения действия `2099-12-31`
 
@@ -11,12 +11,12 @@ error	[request-parameter-sunset-date-too-small] в ./properties/lifecycle_parame
 	в API GET /p
 		дата прекращения действия `query` параметра запроса `too-small` `2020-01-01` слишком ранняя, должно быть минимум `0` дней от текущего момента
 
-error	[request-parameter-sunset-deleted] в ./properties/lifecycle_parameters_revision.yaml
+error	[request-parameter-sunset-deleted] в ./properties/lifecycle_parameters_base.yaml
 	в API GET /p
 		дата прекращения действия `query` параметра запроса `deleted` удалена, но deprecated=true сохранено
 
 error	[request-parameter-sunset-parse] в ./properties/lifecycle_parameters_revision.yaml
 	в API GET /p
-		не удалось проанализировать дату прекращения действия для `query` параметра запроса `bad`: `sunset date doesn't conform with RFC3339: not a date`
+		дата прекращения действия `query` параметра запроса `bad` не соответствует RFC3339: `"not a date"`
 
 

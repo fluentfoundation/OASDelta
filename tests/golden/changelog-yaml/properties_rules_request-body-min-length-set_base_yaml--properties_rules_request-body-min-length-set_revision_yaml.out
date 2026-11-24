@@ -11,7 +11,7 @@
   fingerprint: 4a49d82ce151
 - id: request-body-min-length-set
   text: the request's body minLength was set to `5`
-  comment: Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+  comment: Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
   level: 3
   operation: POST
   path: /ünïcode/ключ
@@ -27,6 +27,12 @@
   operation: POST
   path: /ünïcode/ключ
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-min-length-set_base.yaml
+    line: 221
+    column: 21
+    endLine: 223
+    endColumn: 41
   revisionSource:
     file: ./properties/rules/request-body-min-length-set_revision.yaml
     line: 229

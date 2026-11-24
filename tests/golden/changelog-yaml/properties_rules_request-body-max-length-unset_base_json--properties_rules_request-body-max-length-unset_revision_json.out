@@ -5,12 +5,15 @@
   operationId: put_v1_items
   path: /v1/items
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-max-length-unset_base.json
+    line: 76
+    column: 17
+  revisionSource:
+    file: ./properties/rules/request-body-max-length-unset_revision.json
+    line: 74
+    column: 17
   fingerprint: fe832db7c57f
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-body-max-length-unset
   text: the request's body maxLength was unset from `240`
   level: 1
@@ -18,6 +21,10 @@
   operationId: put_v1_items
   path: /v1/items
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-max-length-unset_base.json
+    line: 74
+    column: 17
   fingerprint: 016ef2fa9dc5
 - id: request-body-min-length-unset
   text: the request's body minLength was unset from `5`
@@ -26,5 +33,9 @@
   operationId: put_v1_items
   path: /v1/items
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-max-length-unset_base.json
+    line: 75
+    column: 17
   fingerprint: 525414c1a8b3
 

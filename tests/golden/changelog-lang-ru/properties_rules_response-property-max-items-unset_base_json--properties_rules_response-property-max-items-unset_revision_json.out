@@ -1,18 +1,18 @@
 4 изменений: 4 error, 0 warning, 0 info
-error	[response-property-list-of-types-widened] в ./properties/rules/response-property-max-items-unset_revision.json
+error	[response-property-list-of-types-widened] в ./properties/rules/response-property-max-items-unset_base.json
 	в API DELETE /ünïcode/ключ
-		список типов свойства `items/` ответа был расширен добавлением типов `integer` к медиа-типу `multipart/form-data` ответа `500`
+		список типов свойства `items` ответа был расширен добавлением типов `integer` к медиа-типу `multipart/form-data` ответа `500`
 
-error	[response-property-max-items-unset] в ./properties/rules/response-property-max-items-unset_revision.json
+error	[response-property-max-items-unset] в ./properties/rules/response-property-max-items-unset_base.json
 	в API DELETE /ünïcode/ключ
-		значение maxItems у поля ответа `items/` удалено, предыдущее значение - `32`, для ответа со статусом `500`
+		значение maxItems у поля ответа `items` удалено, предыдущее значение - `32`, для ответа со статусом `500`
 
-error	[response-property-min-items-unset] в ./properties/rules/response-property-max-items-unset_revision.json
+error	[response-property-min-items-unset] в ./properties/rules/response-property-max-items-unset_base.json
 	в API DELETE /ünïcode/ключ
-		у поля ответа `items/` удалено значение minItems, предыдущее значение - `3`, для ответа со статусом `500`
+		у поля ответа `items` удалено значение minItems, предыдущее значение - `3`, для ответа со статусом `500`
 
-error	[response-property-unique-items-unset] в ./properties/rules/response-property-max-items-unset_revision.json
+error	[response-property-unique-items-unset] в ./properties/rules/response-property-max-items-unset_base.json
 	в API DELETE /ünïcode/ключ
-		значение uniqueItems у поля ответа `items/` удалено для ответа со статусом `500`
+		значение uniqueItems у поля ответа `items` удалено для ответа со статусом `500`
 
 

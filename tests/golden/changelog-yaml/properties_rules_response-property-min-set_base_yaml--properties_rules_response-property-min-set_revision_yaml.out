@@ -11,5 +11,9 @@
   operationId: id
   path: /v1/items
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-property-min-set_revision.yaml
+    line: 27
+    column: 15
   fingerprint: 779242b38beb
 

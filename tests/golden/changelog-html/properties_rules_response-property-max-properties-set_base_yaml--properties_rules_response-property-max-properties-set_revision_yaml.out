@@ -140,7 +140,7 @@
         
         <li class="change">
         
-        the `items/` response property&#39;s maxProperties was set to `13` for the response status `200`
+        the `items` response property&#39;s maxProperties was set to `13` for the response status `200`
         </li>
         
     </ul>

@@ -1,9 +1,9 @@
 2 изменений: 0 error, 0 warning, 2 info
-info	[api-security-component-added]
+info	[api-security-component-added] в ./properties/rules/request-body-media-type-item-schema-removed_revision.yaml
 	в components/securitySchemes
 		компонент схемы безопасности `oauth` был добавлен
 
-info	[request-body-media-type-item-schema-removed] в ./properties/rules/request-body-media-type-item-schema-removed_revision.yaml
+info	[request-body-media-type-item-schema-removed] в ./properties/rules/request-body-media-type-item-schema-removed_base.yaml
 	в API PUT /owners/{ownerId}/pets
 		схема элемента удалена из типа медиа `application/xml` тела запроса
 

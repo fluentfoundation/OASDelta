@@ -2,7 +2,7 @@
 error	[request-parameter-max-properties-set] en ./properties/rules/request-parameter-max-properties-set_revision.yaml
 	en API GET /v1/items
 		para el parámetro `cookie` de solicitud `ключ`, el valor maxProperties fue establecido en `1`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 error	[request-parameter-type-changed] en ./properties/rules/request-parameter-max-properties-set_revision.yaml
 	en API GET /v1/items

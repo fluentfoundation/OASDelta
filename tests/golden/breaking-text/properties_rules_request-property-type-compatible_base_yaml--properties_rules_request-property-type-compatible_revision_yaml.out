@@ -1,26 +1,26 @@
 6 changes: 1 error, 5 warning, 0 info
-error	[request-body-media-type-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+error	[request-body-media-type-removed] at ./properties/rules/request-property-type-compatible_base.yaml
 	in API POST /pets/{petId}
 		removed the media type `application/xml` from the request body
 
-warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_base.yaml
 	in API POST /pets/{petId}
 		removed the request property `'single'`
 
-warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_base.yaml
 	in API POST /pets/{petId}
 		removed the request property `id/no`
 
-warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_base.yaml
 	in API POST /pets/{petId}
 		removed the request property `id/tag`
 
-warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_base.yaml
 	in API POST /pets/{petId}
 		removed the request property `line1
 line2`
 
-warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] at ./properties/rules/request-property-type-compatible_base.yaml
 	in API POST /pets/{petId}
 		removed the request property `pet`
 

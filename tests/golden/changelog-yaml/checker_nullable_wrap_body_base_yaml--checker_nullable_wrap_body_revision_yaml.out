@@ -5,5 +5,13 @@
   operationId: testOp
   path: /test
   section: paths
+  baseSource:
+    file: ./checker/nullable_wrap_body_base.yaml
+    line: 18
+    column: 7
+  revisionSource:
+    file: ./checker/nullable_wrap_body_revision.yaml
+    line: 12
+    column: 15
   fingerprint: 466c95c47663
 

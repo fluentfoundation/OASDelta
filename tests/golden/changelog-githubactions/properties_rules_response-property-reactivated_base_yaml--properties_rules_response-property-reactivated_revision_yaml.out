@@ -1,2 +1,2 @@
-::notice title=response-property-reactivated,file=./properties/rules/response-property-reactivated_revision.yaml::in API PATCH /pets/{petId} response property `items/` reactivated
+::notice title=response-property-reactivated,file=./properties/rules/response-property-reactivated_base.yaml::in API PATCH /pets/{petId} response property `items` reactivated
 

@@ -3,10 +3,10 @@ error at ./properties/rules/request-body-exclusive-max-unset_revision.yaml, in A
 
 error at ./properties/rules/request-body-exclusive-max-unset_revision.yaml, in API PUT /owners/{ownerId}/pets the request's body `type/format` changed from `integer, null/int64` to `number` [request-body-type-changed]. 
 
-info at ./properties/rules/request-body-exclusive-max-unset_revision.yaml, in API PUT /owners/{ownerId}/pets the request body `multipart/form-data` default value `82.00` was removed [request-body-default-value-removed]. 
+info at ./properties/rules/request-body-exclusive-max-unset_base.yaml, in API PUT /owners/{ownerId}/pets the request body `multipart/form-data` default value `82.00` was removed [request-body-default-value-removed]. 
 
-info at ./properties/rules/request-body-exclusive-max-unset_revision.yaml, in API PUT /owners/{ownerId}/pets the request's body exclusiveMaximum was unset from `1585.00` [request-body-exclusive-max-unset]. 
+info at ./properties/rules/request-body-exclusive-max-unset_base.yaml, in API PUT /owners/{ownerId}/pets the request's body exclusiveMaximum was unset from `1585.00` [request-body-exclusive-max-unset]. 
 
-info at ./properties/rules/request-body-exclusive-max-unset_revision.yaml, in API PUT /owners/{ownerId}/pets the request's body min was unset from `5.00` [request-body-min-unset]. 
+info at ./properties/rules/request-body-exclusive-max-unset_base.yaml, in API PUT /owners/{ownerId}/pets the request's body min was unset from `5.00` [request-body-min-unset]. 
 
 

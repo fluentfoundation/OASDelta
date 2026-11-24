@@ -28,7 +28,7 @@
     line: 241
     column: 5
     endLine: 250
-    endColumn: 60
+    endColumn: 66
   fingerprint: 1611ea36b1f5
 - id: api-security-component-added
   text: the component security scheme `bearerAuth` was added
@@ -39,8 +39,21 @@
     line: 234
     column: 5
     endLine: 237
-    endColumn: 24
+    endColumn: 25
   fingerprint: 8b1e0fa5aee3
+- id: api-version-changed
+  text: the API version changed from `2.0.0` to `1.0.0`
+  level: 1
+  section: info
+  baseSource:
+    file: openapi-test7.yaml
+    line: 4
+    column: 3
+  revisionSource:
+    file: openapi-test701.yaml
+    line: 3
+    column: 3
+  fingerprint: c75f79f9775a
 - id: endpoint-added
   text: endpoint added
   level: 1

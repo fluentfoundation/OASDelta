@@ -74,11 +74,6 @@
     line: 27
     column: 17
   fingerprint: b1d2cbcb2e15
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-body-content-schema-removed
   text: removed 'contentSchema' from the request body
   level: 1

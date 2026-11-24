@@ -3,12 +3,12 @@ error	[new-required-request-parameter] в ./properties/rules/request-parameter-r
 	в API POST /items/{id}.json
 		добавлен новый обязательный `header` параметр зароса `id`
 
-warning	[request-parameter-removed] в ./properties/rules/request-parameter-reactivated_revision.yaml
+warning	[request-parameter-removed] в ./properties/rules/request-parameter-reactivated_base.yaml
 	в API POST /items/{id}.json
 		удалён `path` параметр запроса `id`
 		Это предупреждение, поскольку некоторые приложения могут возвращать ошибку при получении неожиданного параметра. Рекомендуется сначала объявить параметр устаревшим.
 
-info	[request-parameter-reactivated] в ./properties/rules/request-parameter-reactivated_revision.yaml
+info	[request-parameter-reactivated] в ./properties/rules/request-parameter-reactivated_base.yaml
 	в API POST /items/{id}.json
 		`query` параметр запроса `status` был реактивирован
 

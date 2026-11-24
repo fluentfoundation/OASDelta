@@ -1,5 +1,5 @@
 2 changes: 0 error, 0 warning, 2 info
-info	[api-schema-removed]
+info	[api-schema-removed] at ./component-renamed1.yaml
 	in components/schemas
 		removed the schema `Old`
 

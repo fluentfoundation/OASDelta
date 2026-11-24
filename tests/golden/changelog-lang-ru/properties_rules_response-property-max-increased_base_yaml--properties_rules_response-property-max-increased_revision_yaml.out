@@ -1,10 +1,6 @@
-2 изменений: 1 error, 0 warning, 1 info
+1 изменений: 1 error, 0 warning, 0 info
 error	[response-property-max-increased] в ./properties/rules/response-property-max-increased_revision.yaml
 	в API DELETE /search
 		у поля ответа `anyOf[subschema #2]/&anchor` max увеличен с `570.00` до `572.00` для ответа со статусом `default`
-
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
 
 

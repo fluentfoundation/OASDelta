@@ -2,7 +2,6 @@
 info	[response-body-all-of-added] en ./properties/rules/response-body-min-increased_revision.yaml
 	en API PUT /items/{id}.json
 		`subschema #1` fue agregado a la lista `allOf` del cuerpo de respuesta para el estado `201`
-		Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
 info	[response-body-min-increased] en ./properties/rules/response-body-min-increased_revision.yaml
 	en API PUT /items/{id}.json

@@ -10,7 +10,7 @@
 - :warning: the response's body `type` changed from `integer, null` to `string` for status `204`
 - :warning: removed the enum constraint from the response schema `multipart/form-data` for the response status `204`
 -  the response's body became not nullable
--  the response body `multipart/form-data` default value `0.00` was removed for the status `204`
+-  the response body `multipart/form-data` default value `-0.00` was removed for the status `204`
 
 
 ### PUT /ünïcode/ключ
@@ -19,10 +19,6 @@
 -  added the media type `*/*` to the request body
 
 
-
-
-## Info
--  a breaking change was detected but the version is still `1.0.0`
 
 
 

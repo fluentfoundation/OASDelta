@@ -25,17 +25,9 @@
   operationId: put_store_order
   path: /store/order
   section: paths
-  baseSource:
-    file: ./properties/rules/response-header-exclusive-max-set_base.yaml
-    line: 44
-    column: 9
-    endLine: 123
-    endColumn: 24
   revisionSource:
     file: ./properties/rules/response-header-exclusive-max-set_revision.yaml
-    line: 44
-    column: 9
-    endLine: 122
-    endColumn: 24
+    line: 96
+    column: 33
   fingerprint: 69bcf4263d20
 

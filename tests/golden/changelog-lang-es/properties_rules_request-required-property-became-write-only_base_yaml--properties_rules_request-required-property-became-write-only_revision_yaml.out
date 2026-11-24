@@ -3,11 +3,11 @@ error	[request-property-became-not-nullable] en ./properties/rules/request-requi
 	en API PATCH /search
 		la propiedad de solicitud ``tick`` se volvió no nulable
 
-info	[request-property-became-not-enum] en ./properties/rules/request-required-property-became-write-only_revision.yaml
+info	[request-property-became-not-enum] en ./properties/rules/request-required-property-became-write-only_base.yaml
 	en API PATCH /search
 		removida la restricción enum de la propiedad de solicitud ``tick``
 
-info	[request-property-reactivated] en ./properties/rules/request-required-property-became-write-only_revision.yaml
+info	[request-property-reactivated] en ./properties/rules/request-required-property-became-write-only_base.yaml
 	en API PATCH /search
 		propiedad de solicitud ``tick`` reactivada
 

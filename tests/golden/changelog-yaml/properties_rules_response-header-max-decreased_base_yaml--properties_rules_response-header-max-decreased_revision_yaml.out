@@ -7,15 +7,11 @@
   section: paths
   baseSource:
     file: ./properties/rules/response-header-max-decreased_base.yaml
-    line: 183
-    column: 9
-    endLine: 309
-    endColumn: 26
+    line: 306
+    column: 33
   revisionSource:
     file: ./properties/rules/response-header-max-decreased_revision.yaml
-    line: 183
-    column: 9
-    endLine: 309
-    endColumn: 26
+    line: 306
+    column: 33
   fingerprint: 8d673f206ea0
 

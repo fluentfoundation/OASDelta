@@ -149,6 +149,11 @@
         
         <li class="change">
         
+        the request property `optionalEnum` became nullable
+        </li>
+        
+        <li class="change">
+        
         request property `optionalEnum` list-of-types was widened by adding types `null` to media type `application/json`
         </li>
         
@@ -158,22 +163,6 @@
     
     
 
-    
-    <div class="section-title">info</div>
-    
-    <div class="endpoint">
-        
-    <ul class="endpoint-changes">
-        
-        <li class="change">
-        
-        a breaking change was detected but the version is still `1.0.0`
-        </li>
-        
-    </ul>
-    
-    </div>
-    
     
     
 </body>

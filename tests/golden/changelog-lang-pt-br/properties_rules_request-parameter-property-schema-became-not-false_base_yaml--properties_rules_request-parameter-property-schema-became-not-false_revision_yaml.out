@@ -1,6 +1,10 @@
-1 alterações: 0 error, 0 warning, 1 info
+2 alterações: 1 error, 0 warning, 1 info
+error	[request-parameter-became-not-nullable] em ./properties/rules/request-parameter-property-schema-became-not-false_revision.yaml
+	em API DELETE /pets/{petId}
+		o parâmetro de requisição `query` `ключ` tornou-se não anulável
+
 info	[request-parameter-property-schema-became-not-false] em ./properties/rules/request-parameter-property-schema-became-not-false_revision.yaml
 	em API DELETE /pets/{petId}
-		o esquema da propriedade `anyOf[subschema #2]/` do parâmetro de requisição `query` `ключ` não é mais `false` e volta a aceitar valores
+		o esquema da propriedade `anyOf[subschema #2]` do parâmetro de requisição `query` `ключ` não é mais `false` e volta a aceitar valores
 
 

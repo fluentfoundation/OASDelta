@@ -146,22 +146,6 @@ b` response header&#39;s maxProperties was unset from `1` for the status `defaul
     
 
     
-    <div class="section-title">info</div>
-    
-    <div class="endpoint">
-        
-    <ul class="endpoint-changes">
-        
-        <li class="change">
-        
-        a breaking change was detected but the version is still `1.0.0`
-        </li>
-        
-    </ul>
-    
-    </div>
-    
-    
     
 </body>
 

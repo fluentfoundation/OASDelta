@@ -7,15 +7,7 @@
   section: paths
   baseSource:
     file: ./properties/rules/response-header-multiple-of-unset_base.yaml
-    line: 14
-    column: 9
-    endLine: 67
-    endColumn: 26
-  revisionSource:
-    file: ./properties/rules/response-header-multiple-of-unset_revision.yaml
-    line: 14
-    column: 9
-    endLine: 66
-    endColumn: 26
+    line: 63
+    column: 33
   fingerprint: 3ef600e86e5c
 

@@ -1,6 +1,6 @@
 2 changes: 1 error, 0 warning, 1 info
 error at ./properties/rules/request-property-min-properties-increased_revision.yaml, in API POST /store/order the `name` request property's minProperties was increased to `3` [request-property-min-properties-increased]. 
 
-info at ./properties/rules/request-property-min-properties-increased_revision.yaml, in API POST /store/order the optional response header `ૉ硡쇲䦨員䒗` removed for the status `2XX` [optional-response-header-removed]. 
+info at ./properties/rules/request-property-min-properties-increased_base.yaml, in API POST /store/order the optional response header `ૉ硡쇲䦨員䒗` removed for the status `2XX` [optional-response-header-removed]. 
 
 

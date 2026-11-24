@@ -4,7 +4,7 @@
 ## API Changes
 
 ### PUT /ünïcode/ключ
--  the `additionalProperties/` response's property `type` changed from `string` to `integer` for status `400` (backward compatible)
+-  the `additionalProperties` response's property `type` changed from `string` to `integer` for status `400` (backward compatible)
 
 
 

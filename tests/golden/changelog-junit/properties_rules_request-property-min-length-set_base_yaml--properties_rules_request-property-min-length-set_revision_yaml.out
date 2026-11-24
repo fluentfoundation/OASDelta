@@ -5,7 +5,7 @@
       <failure message="Breaking change detected">the `名前` request property's minLength was set to `12`</failure>
     </testcase>
     <testcase name="api-operation-id-added" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api operation id `price` was added</failure>
+      <failure message="Breaking change detected">API operation id `price` was added</failure>
     </testcase>
   </testsuite>
 </testsuites>

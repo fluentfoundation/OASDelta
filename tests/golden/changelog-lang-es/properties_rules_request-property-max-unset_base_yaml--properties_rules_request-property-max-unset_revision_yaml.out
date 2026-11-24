@@ -1,6 +1,6 @@
 1 cambios: 0 error, 0 warning, 1 info
-info	[request-property-max-unset] en ./properties/rules/request-property-max-unset_revision.yaml
+info	[request-property-max-unset] en ./properties/rules/request-property-max-unset_base.yaml
 	en API PATCH /store/order
-		el valor max de la propiedad de solicitud `items/` fue removido de `-4.00`
+		el valor max de la propiedad de solicitud `items` fue removido de `-4.00`
 
 

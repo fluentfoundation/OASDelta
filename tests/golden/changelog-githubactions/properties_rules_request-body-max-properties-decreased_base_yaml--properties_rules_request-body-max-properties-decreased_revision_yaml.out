@@ -1,4 +1,3 @@
 ::error title=request-body-max-properties-decreased,file=./properties/rules/request-body-max-properties-decreased_revision.yaml,line=22,col=29::in API PUT /search the request's body maxProperties was decreased to `11`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 ::notice title=request-body-media-type-added,file=./properties/rules/request-body-max-properties-decreased_revision.yaml,line=31,col=21::in API PUT /search added the media type `application/vnd.api+json` to the request body
 

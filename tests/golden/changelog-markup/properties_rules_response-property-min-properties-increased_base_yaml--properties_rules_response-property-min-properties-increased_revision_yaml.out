@@ -4,7 +4,7 @@
 ## API Changes
 
 ### DELETE /pets/{petId}
--  the `items/` response property's minProperties was increased from `1` to `6` for the response status `500`
+-  the `items` response property's minProperties was increased from `1` to `6` for the response status `500`
 
 
 

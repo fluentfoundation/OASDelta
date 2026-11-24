@@ -1,3 +1,3 @@
-::notice title=request-body-contains-removed,file=./properties/rules/request-body-max-contains-unset_revision.json::in API PUT /search removed 'contains' constraint from the request body
-::notice title=request-body-max-contains-unset,file=./properties/rules/request-body-max-contains-unset_revision.json::in API PUT /search the request's body maxContains was unset from `4`
+::notice title=request-body-contains-removed,file=./properties/rules/request-body-max-contains-unset_base.json::in API PUT /search removed 'contains' constraint from the request body
+::notice title=request-body-max-contains-unset,file=./properties/rules/request-body-max-contains-unset_base.json::in API PUT /search the request's body maxContains was unset from `4`
 

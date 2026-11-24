@@ -14,13 +14,13 @@
       <failure message="Breaking change detected">removed the success response with the status `201`</failure>
     </testcase>
     <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api path removed without deprecation</failure>
+      <failure message="Breaking change detected">API path removed without deprecation</failure>
     </testcase>
     <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api path removed without deprecation</failure>
+      <failure message="Breaking change detected">API path removed without deprecation</failure>
     </testcase>
     <testcase name="api-path-removed-without-deprecation" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api path removed without deprecation</failure>
+      <failure message="Breaking change detected">API path removed without deprecation</failure>
     </testcase>
     <testcase name="request-parameter-pattern-changed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">changed the pattern of the `path` request parameter `domain` from `^(?:([a-z]+-)*([a-z]+)?)$` to `^(?:\d+)$`</failure>
@@ -33,9 +33,6 @@
     </testcase>
     <testcase name="request-parameter-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">deleted the `header` request parameter `x-auth-name`</failure>
-    </testcase>
-    <testcase name="api-major-version-not-bumped" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`</failure>
     </testcase>
     <testcase name="api-schema-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">removed the schema `network-policies`</failure>
@@ -52,14 +49,17 @@
     <testcase name="api-security-component-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the component security scheme `bearerAuth` was removed</failure>
     </testcase>
+    <testcase name="api-version-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the API version changed from `1.0.0` to `1.0.1`</failure>
+    </testcase>
     <testcase name="api-operation-id-removed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api operation id `GetSecurityScores` removed and replaced with ``</failure>
+      <failure message="Breaking change detected">API operation id `GetSecurityScores` removed and replaced with ``</failure>
     </testcase>
     <testcase name="api-security-anonymous-access-added" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the endpoint now allows anonymous access</failure>
     </testcase>
     <testcase name="api-tag-removed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api tag `security` removed</failure>
+      <failure message="Breaking change detected">API tag `security` removed</failure>
     </testcase>
     <testcase name="request-parameter-max-length-unset" classname="OASDiff" time="0">
       <failure message="Breaking change detected">for the `query` request parameter `token`, the maxLength was unset from `29`</failure>

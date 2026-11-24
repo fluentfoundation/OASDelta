@@ -1,10 +1,6 @@
-2 cambios: 1 error, 0 warning, 1 info
-error	[response-header-exclusive-min-unset] en ./properties/rules/response-header-exclusive-min-unset_revision.yaml
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-header-exclusive-min-unset] en ./properties/rules/response-header-exclusive-min-unset_base.yaml
 	en API PATCH /ünïcode/ключ
 		el valor exclusiveMinimum del encabezado de respuesta `owner` fue removido de `true` para el estado `2XX`
-
-info	[api-version-not-bumped]
-	en info
-		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
 
 

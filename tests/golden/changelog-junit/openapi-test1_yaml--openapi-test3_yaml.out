@@ -25,9 +25,6 @@
     <testcase name="request-parameter-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">deleted the `header` request parameter `network-policies`</failure>
     </testcase>
-    <testcase name="api-major-version-not-bumped" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`</failure>
-    </testcase>
     <testcase name="api-schema-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">removed the schema `network-policies`</failure>
     </testcase>
@@ -46,14 +43,17 @@
     <testcase name="api-security-component-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the component security scheme `bearerAuth` was removed</failure>
     </testcase>
+    <testcase name="api-version-changed" classname="OASDiff" time="0">
+      <failure message="Breaking change detected">the API version changed from `1.0.0` to `1.0.1`</failure>
+    </testcase>
     <testcase name="api-operation-id-removed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`</failure>
+      <failure message="Breaking change detected">API operation id `GetSecurityScores` removed and replaced with `GetSecurityScore`</failure>
     </testcase>
     <testcase name="api-security-anonymous-access-added" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the endpoint now allows anonymous access</failure>
     </testcase>
     <testcase name="api-tag-removed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">api tag `security` removed</failure>
+      <failure message="Breaking change detected">API tag `security` removed</failure>
     </testcase>
     <testcase name="request-parameter-max-length-increased" classname="OASDiff" time="0">
       <failure message="Breaking change detected">for the `query` request parameter `token`, the maxLength was increased from `29` to `30`</failure>

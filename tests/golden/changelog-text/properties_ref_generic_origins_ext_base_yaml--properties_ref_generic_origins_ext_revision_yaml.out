@@ -1,11 +1,7 @@
-4 changes: 1 error, 0 warning, 3 info
+3 changes: 1 error, 0 warning, 2 info
 error	[response-header-type-generalized] at ./properties/ref_generic_origins_ext_revision.yaml
 	in API GET /b
 		the `x-rate` response header's `type` was widened from `integer` to `number` for the status `200`
-
-info	[api-version-not-bumped]
-	in info
-		a breaking change was detected but the version is still `1.0.0`
 
 info	[request-parameter-type-generalized] at ./properties/ref_generic_origins_ext_revision.yaml
 	in API GET /a

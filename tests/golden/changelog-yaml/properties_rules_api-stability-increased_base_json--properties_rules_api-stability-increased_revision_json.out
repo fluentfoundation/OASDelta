@@ -4,5 +4,15 @@
   operation: DELETE
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/api-stability-increased_base.json
+    line: 64
+    column: 9
+  revisionSource:
+    file: ./properties/rules/api-stability-increased_revision.json
+    line: 51
+    column: 7
+    endLine: 62
+    endColumn: 15
   fingerprint: e45f0f9ac97b
 

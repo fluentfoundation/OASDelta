@@ -1,5 +1,5 @@
 1 cambios: 0 error, 0 warning, 1 info
-info	[response-required-property-became-not-write-only] en ./properties/rules/response-required-property-became-not-write-only_revision.json
+info	[response-required-property-became-not-write-only] en ./properties/rules/response-required-property-became-not-write-only_base.json
 	en API DELETE /pets/{petId}
 		la propiedad requerida de respuesta `ключ` dejó de ser de solo escritura para el estado `201`
 

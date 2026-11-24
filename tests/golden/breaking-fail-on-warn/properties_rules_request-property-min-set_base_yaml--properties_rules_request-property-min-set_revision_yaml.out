@@ -2,6 +2,6 @@
 error	[request-property-min-set] at ./properties/rules/request-property-min-set_revision.yaml
 	in API POST /ünïcode/ключ
 		the `items/null` request property's min was set to `-5.00`
-		Setting a bound rejects values the previous contract accepted. If your clients are known to stay within the new limit, lower this check with --severity-levels.
+		Setting a bound rejects values the previous contract accepted, unless your clients are known to stay within the new limit.
 
 

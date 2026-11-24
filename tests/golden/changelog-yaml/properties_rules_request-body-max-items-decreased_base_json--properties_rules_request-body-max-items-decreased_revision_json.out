@@ -5,5 +5,13 @@
   operationId: post_store_order
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/request-body-max-items-decreased_base.json
+    line: 1082
+    column: 17
+  revisionSource:
+    file: ./properties/rules/request-body-max-items-decreased_revision.json
+    line: 1089
+    column: 17
   fingerprint: 38cd89a9342b
 

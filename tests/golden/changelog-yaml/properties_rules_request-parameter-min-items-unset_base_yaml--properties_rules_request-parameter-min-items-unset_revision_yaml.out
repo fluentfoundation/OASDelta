@@ -4,6 +4,10 @@
   operation: PUT
   path: /search
   section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-min-items-unset_base.yaml
+    line: 93
+    column: 15
   fingerprint: 37ebb00ba625
 - id: request-parameter-min-items-unset
   text: for the `cookie` request parameter `!tag`, the minItems was unset from `3`
@@ -11,5 +15,9 @@
   operation: PUT
   path: /search
   section: paths
+  baseSource:
+    file: ./properties/rules/request-parameter-min-items-unset_base.yaml
+    line: 92
+    column: 15
   fingerprint: 32a636d806b7
 

@@ -5,6 +5,6 @@ error	[api-removed-without-deprecation] в ./properties/rules/request-property-u
 
 error	[request-property-unique-items-set] в ./properties/rules/request-property-unique-items-set_revision.yaml
 	в API PUT /pets
-		значение uniqueItems у поля запроса `items/` задано в true
+		значение uniqueItems у поля запроса `items` задано в true
 
 

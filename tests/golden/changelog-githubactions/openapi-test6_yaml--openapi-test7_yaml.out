@@ -1,4 +1,5 @@
-::error title=api-path-removed-without-deprecation,file=openapi-test6.yaml::in API GET /health api path removed without deprecation
-::error title=api-path-removed-without-deprecation,file=openapi-test6.yaml::in API GET /health/live api path removed without deprecation
-::error title=api-path-removed-without-deprecation,file=openapi-test6.yaml::in API GET /health/ready api path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test6.yaml::in API GET /health API path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test6.yaml::in API GET /health/live API path removed without deprecation
+::error title=api-path-removed-without-deprecation,file=openapi-test6.yaml::in API GET /health/ready API path removed without deprecation
+::notice title=api-version-changed,file=openapi-test7.yaml,line=4,col=3::in API   the API version changed from `1.0.0` to `2.0.0`
 

@@ -1,1 +1,1 @@
-[]
+[{"id":"api-version-changed","text":"the API version changed from `1` to `2`","level":1,"section":"info","baseSource":{"file":"./properties/null_media_type_base.yaml","line":2,"column":32},"revisionSource":{"file":"./properties/null_media_type_revision.yaml","line":4,"column":32},"fingerprint":"8bbcc99a38ce"}]

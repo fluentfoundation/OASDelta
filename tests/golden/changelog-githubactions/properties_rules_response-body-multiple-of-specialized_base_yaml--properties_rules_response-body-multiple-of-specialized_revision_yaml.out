@@ -1,3 +1,3 @@
 ::notice title=response-body-multiple-of-specialized,file=./properties/rules/response-body-multiple-of-specialized_revision.yaml,line=290,col=33::in API GET /ünïcode/ключ the response's body multipleOf was specialized from `5.00` to `10.00`
-::notice title=optional-response-header-removed,file=./properties/rules/response-body-multiple-of-specialized_revision.yaml::in API PUT /ünïcode/ключ the optional response header `x-added` removed for the status `200`
+::notice title=optional-response-header-removed,file=./properties/rules/response-body-multiple-of-specialized_base.yaml::in API PUT /ünïcode/ключ the optional response header `x-added` removed for the status `200`
 

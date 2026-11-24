@@ -7,15 +7,15 @@ error	[request-body-type-changed] at ./properties/rules/request-body-exclusive-m
 	in API PUT /owners/{ownerId}/pets
 		the request's body `type/format` changed from `integer, null/int64` to `number`
 
-info	[request-body-default-value-removed] at ./properties/rules/request-body-exclusive-max-unset_revision.yaml
+info	[request-body-default-value-removed] at ./properties/rules/request-body-exclusive-max-unset_base.yaml
 	in API PUT /owners/{ownerId}/pets
 		the request body `multipart/form-data` default value `82.00` was removed
 
-info	[request-body-exclusive-max-unset] at ./properties/rules/request-body-exclusive-max-unset_revision.yaml
+info	[request-body-exclusive-max-unset] at ./properties/rules/request-body-exclusive-max-unset_base.yaml
 	in API PUT /owners/{ownerId}/pets
 		the request's body exclusiveMaximum was unset from `1585.00`
 
-info	[request-body-min-unset] at ./properties/rules/request-body-exclusive-max-unset_revision.yaml
+info	[request-body-min-unset] at ./properties/rules/request-body-exclusive-max-unset_base.yaml
 	in API PUT /owners/{ownerId}/pets
 		the request's body min was unset from `5.00`
 

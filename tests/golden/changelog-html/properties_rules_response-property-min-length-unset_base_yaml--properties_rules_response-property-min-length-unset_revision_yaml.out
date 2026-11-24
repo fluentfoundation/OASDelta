@@ -135,7 +135,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
         </div>
         
-        the `oneOf[subschema #1]/` response property&#39;s minLength was unset from `1` for the response status `404`
+        the `oneOf[subschema #1]` response property&#39;s minLength was unset from `1` for the response status `404`
         </li>
         
         <li class="change">
@@ -144,27 +144,27 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" class="breaking-icon" role="img" aria-label="Important With Circle Icon"><path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM7 4.5a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm2 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"></path></svg>
         </div>
         
-        the `oneOf[subschema #1]/` response&#39;s property `type` changed from `string, null` to `any` for status `404`
+        the `oneOf[subschema #1]` response&#39;s property `type` changed from `string, null` to `any` for status `404`
         </li>
         
         <li class="change">
         
-        added `subschema #1, subschema #2` to the `oneOf[subschema #1]/` response property `allOf` list for the response status `404`
+        added `subschema #1, subschema #2` to the `oneOf[subschema #1]` response property `allOf` list for the response status `404`
         </li>
         
         <li class="change">
         
-        removed the ` leading` enum value from the `oneOf[subschema #1]/` response property for the response status `404`
+        removed the ` leading` enum value from the `oneOf[subschema #1]` response property for the response status `404`
         </li>
         
         <li class="change">
         
-        removed the `| table |` enum value from the `oneOf[subschema #1]/` response property for the response status `404`
+        removed the `| table |` enum value from the `oneOf[subschema #1]` response property for the response status `404`
         </li>
         
         <li class="change">
         
-        removed the `徴` enum value from the `oneOf[subschema #1]/` response property for the response status `404`
+        removed the `徴` enum value from the `oneOf[subschema #1]` response property for the response status `404`
         </li>
         
     </ul>

@@ -1,10 +1,6 @@
-2 cambios: 1 error, 0 warning, 1 info
+1 cambios: 1 error, 0 warning, 0 info
 error	[response-property-type-generalized] en ./properties/rules/response-property-type-generalized_revision.json
 	en API PATCH /store/order
-		el `items/` de la propiedad de respuesta `type` fue ampliado de `integer` a `number` para el estado `204`
-
-info	[api-version-not-bumped]
-	en info
-		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
+		el `items` de la propiedad de respuesta `type` fue ampliado de `integer` a `number` para el estado `204`
 
 

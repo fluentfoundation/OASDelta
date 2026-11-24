@@ -1,5 +1,5 @@
 1 changes: 1 error, 0 warning, 0 info
-error	[request-property-schema-became-false] at ./properties/shared_false_schema_revision.yaml
+error	[request-property-schema-became-false] at ./properties/shared_false_schema_base.yaml
 	in API POST /pets
 		the schema of the request property `first` became `false`: no value passes validation (shared schema: `Pet`, also at `second`)
 

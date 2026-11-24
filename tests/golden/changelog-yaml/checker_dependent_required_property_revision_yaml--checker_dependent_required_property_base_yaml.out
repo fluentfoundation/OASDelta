@@ -10,11 +10,6 @@
     line: 40
     column: 21
   fingerprint: a0e6203a48b2
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-property-dependent-required-removed
   text: 'the `address` request property dependentRequired was removed: when `street` was present, `city` were required'
   level: 1

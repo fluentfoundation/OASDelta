@@ -3,11 +3,11 @@ error	[response-body-type-changed] в ./properties/rules/response-optional-write
 	в API PUT /pets/{petId}
 		`type` тела ответа изменён с `object` на `number` для статуса `400`
 
-error	[response-required-property-removed] в ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+error	[response-required-property-removed] в ./properties/rules/response-optional-write-only-property-removed_base.yaml
 	в API PUT /pets/{petId}
 		удалено обязательное поле ответа `owner` из ответа со статусом `400`
 
-error	[response-required-property-removed] в ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+error	[response-required-property-removed] в ./properties/rules/response-optional-write-only-property-removed_base.yaml
 	в API PUT /pets/{petId}
 		удалено обязательное поле ответа `薫鑈஼ห꼁洲㗔` из ответа со статусом `400`
 
@@ -15,11 +15,11 @@ info	[endpoint-deprecated] в ./properties/rules/response-optional-write-only-pr
 	в API PUT /pets/{petId}
 		эндпоинт устарел
 
-info	[response-optional-write-only-property-removed] в ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+info	[response-optional-write-only-property-removed] в ./properties/rules/response-optional-write-only-property-removed_base.yaml
 	в API PUT /pets/{petId}
 		удалено необязательное свойство только для записи `<b>&amp;` из ответа со статусом `400`
 
-info	[response-required-property-removed-with-deprecation] в ./properties/rules/response-optional-write-only-property-removed_revision.yaml
+info	[response-required-property-removed-with-deprecation] в ./properties/rules/response-optional-write-only-property-removed_base.yaml
 	в API PUT /pets/{petId}
 		удалено устаревшее обязательное поле ответа `price` из ответа со статусом `400`
 

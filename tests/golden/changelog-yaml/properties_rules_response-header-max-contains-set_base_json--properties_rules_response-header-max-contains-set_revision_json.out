@@ -4,5 +4,9 @@
   operation: GET
   path: /pets/{petId}
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-header-max-contains-set_revision.json
+    line: 139
+    column: 19
   fingerprint: 423e034f875a
 

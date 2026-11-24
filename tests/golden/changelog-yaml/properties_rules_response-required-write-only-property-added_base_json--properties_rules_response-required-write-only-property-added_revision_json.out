@@ -5,5 +5,11 @@
   operationId: put_search
   path: /search
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-required-write-only-property-added_revision.json
+    line: 319
+    column: 21
+    endLine: 321
+    endColumn: 40
   fingerprint: 014e0eda4e8a
 

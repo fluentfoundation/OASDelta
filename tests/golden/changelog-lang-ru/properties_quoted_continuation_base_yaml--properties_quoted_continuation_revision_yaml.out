@@ -1,9 +1,9 @@
 3 изменений: 0 error, 0 warning, 3 info
-info	[api-tag-added] в ./properties/quoted_continuation_base.yaml
+info	[api-tag-added] в ./properties/quoted_continuation_revision.yaml
 	в API GET /p
 		тег API `x y` добавлен
 
-info	[api-tag-added] в ./properties/quoted_continuation_base.yaml
+info	[api-tag-added] в ./properties/quoted_continuation_revision.yaml
 	в API GET /p
 		тег API `z` добавлен
 

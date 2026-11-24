@@ -4,8 +4,8 @@
 ## API Changes
 
 ### DELETE /pets
--  the `oneOf[subschema #1]/anyOf[subschema #2]/` response property's multipleOf was specialized from `2.00` to `4.00` for the response status `500`
--  the `oneOf[subschema #1]/` response's property `format` was narrowed from `none` to `float` for status `500`
+-  the `oneOf[subschema #1]/anyOf[subschema #2]` response property's multipleOf was specialized from `2.00` to `4.00` for the response status `500`
+-  the `oneOf[subschema #1]` response's property `format` was narrowed from `none` to `float` for status `500`
 
 
 ### PATCH /search

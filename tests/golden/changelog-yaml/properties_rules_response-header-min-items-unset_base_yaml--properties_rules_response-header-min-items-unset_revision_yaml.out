@@ -7,15 +7,7 @@
   section: paths
   baseSource:
     file: ./properties/rules/response-header-min-items-unset_base.yaml
-    line: 17
-    column: 9
-    endLine: 107
-    endColumn: 22
-  revisionSource:
-    file: ./properties/rules/response-header-min-items-unset_revision.yaml
-    line: 17
-    column: 9
-    endLine: 106
-    endColumn: 22
+    line: 55
+    column: 33
   fingerprint: 7fdb70549d5e
 

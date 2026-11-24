@@ -1,15 +1,15 @@
 3 changes: 0 error, 2 warning, 1 info
-warning	[api-security-component-oauth-token-url-changed]
+warning	[api-security-component-oauth-token-url-changed] at ./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml
 	in components/securitySchemes
 		the component security scheme `oauth` oauth `authorizationCode` flow token url changed from `https://auth.example.com/token` to `https://auth0.example.com/tokenUrl`
 		This is a warning because the spec does not say whether credentials obtained through the previous URL are still accepted.
 
-warning	[api-security-component-oauth-token-url-changed]
+warning	[api-security-component-oauth-token-url-changed] at ./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml
 	in components/securitySchemes
 		the component security scheme `oauth` oauth `clientCredentials` flow token url changed from `https://auth.example.com/token` to `https://auth0.example.com/tokenUrl`
 		This is a warning because the spec does not say whether credentials obtained through the previous URL are still accepted.
 
-info	[request-parameter-type-generalized] at ./properties/rules/api-security-component-oauth-token-url-changed_revision.yaml
+info	[request-parameter-type-generalized] at ./properties/rules/api-security-component-oauth-token-url-changed_base.yaml
 	in API PATCH /search
 		for the `cookie` request parameter `id`, the `type` was widened from `array<integer/int64>` to `any`
 

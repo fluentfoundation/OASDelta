@@ -1,3 +1,3 @@
-::error title=request-body-contains-added,file=./properties/rules/request-body-min-contains-set_revision.json::in API PATCH /v1/items added 'contains' constraint to the request body
-::error title=request-body-min-contains-set,file=./properties/rules/request-body-min-contains-set_revision.json::in API PATCH /v1/items the request's body minContains was set to `3`
+::error title=request-body-contains-added,file=./properties/rules/request-body-min-contains-set_revision.json,line=62,col=17::in API PATCH /v1/items added 'contains' constraint to the request body
+::error title=request-body-min-contains-set,file=./properties/rules/request-body-min-contains-set_revision.json,line=65,col=17::in API PATCH /v1/items the request's body minContains was set to `3`
 

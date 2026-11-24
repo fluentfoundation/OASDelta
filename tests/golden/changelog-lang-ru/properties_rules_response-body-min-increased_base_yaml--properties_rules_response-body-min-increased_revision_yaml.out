@@ -2,7 +2,6 @@
 info	[response-body-all-of-added] в ./properties/rules/response-body-min-increased_revision.yaml
 	в API PUT /items/{id}.json
 		добавлено `subschema #1` в список `allOf` тела ответа для статуса ответа `201`
-		Ветви `allOf` сравнивались по отдельности, поэтому другая ветвь может по-прежнему гарантировать то, что утрачено в этой. Запустите с --flatten-allof, чтобы объединить ветви и сравнить то, что они описывают вместе.
 
 info	[response-body-min-increased] в ./properties/rules/response-body-min-increased_revision.yaml
 	в API PUT /items/{id}.json

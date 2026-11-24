@@ -2,7 +2,7 @@
 warning	[request-body-max-items-set] em ./properties/rules/request-body-max-items-set_revision.yaml
 	em API PUT /pets
 		o número máximo de itens do corpo da requisição foi definido como `11`
-		Definir um limite rejeita valores que o contrato anterior aceitava. Se seus clientes comprovadamente respeitam o novo limite, reduza a severidade desta verificação com --severity-levels. Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+		Definir um limite rejeita valores que o contrato anterior aceitava, a menos que seus clientes respeitem o novo limite. Isto comparou os ramos do `allOf` um a um, então outro ramo já pode descrever o que mudou aqui, deixando o esquema mesclado igual. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
 info	[response-optional-property-added] em ./properties/rules/request-body-max-items-set_revision.yaml
 	em API PUT /pets

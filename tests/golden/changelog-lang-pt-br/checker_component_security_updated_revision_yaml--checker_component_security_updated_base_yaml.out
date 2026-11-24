@@ -1,5 +1,5 @@
 1 alterações: 0 error, 0 warning, 1 info
-info	[api-security-component-removed]
+info	[api-security-component-removed] em ./checker/component_security_updated_revision.yaml
 	em components/securitySchemes
 		o esquema de segurança `BasicAuth` foi removido
 

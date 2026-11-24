@@ -1,2 +1,2 @@
-::notice title=response-required-write-only-property-added,file=./properties/rules/response-required-write-only-property-added_revision.json::in API PUT /search added the required write-only property `[bracket]` to the response with the `201` status
+::notice title=response-required-write-only-property-added,file=./properties/rules/response-required-write-only-property-added_revision.json,line=319,col=21::in API PUT /search added the required write-only property `[bracket]` to the response with the `201` status
 

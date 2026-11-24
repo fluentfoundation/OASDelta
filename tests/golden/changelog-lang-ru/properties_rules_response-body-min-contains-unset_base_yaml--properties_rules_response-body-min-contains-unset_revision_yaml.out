@@ -1,14 +1,10 @@
-3 изменений: 2 error, 0 warning, 1 info
-error	[response-body-contains-removed] в ./properties/rules/response-body-min-contains-unset_revision.yaml
+2 изменений: 2 error, 0 warning, 0 info
+error	[response-body-contains-removed] в ./properties/rules/response-body-min-contains-unset_base.yaml
 	в API PATCH /ünïcode/ключ
 		удалено ограничение 'contains' из тела ответа для статуса `default`
 
-error	[response-body-min-contains-unset] в ./properties/rules/response-body-min-contains-unset_revision.yaml
+error	[response-body-min-contains-unset] в ./properties/rules/response-body-min-contains-unset_base.yaml
 	в API PATCH /ünïcode/ключ
 		значение minContains у тела ответа удалено, предыдущее значение - `3`
-
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
 
 

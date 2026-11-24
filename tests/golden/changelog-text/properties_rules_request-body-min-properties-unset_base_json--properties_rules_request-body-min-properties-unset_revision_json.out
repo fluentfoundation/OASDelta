@@ -1,5 +1,5 @@
 1 changes: 0 error, 0 warning, 1 info
-info	[request-body-min-properties-unset] at ./properties/rules/request-body-min-properties-unset_revision.json
+info	[request-body-min-properties-unset] at ./properties/rules/request-body-min-properties-unset_base.json
 	in API POST /pets/{petId}
 		the request's body minProperties was unset from `2`
 

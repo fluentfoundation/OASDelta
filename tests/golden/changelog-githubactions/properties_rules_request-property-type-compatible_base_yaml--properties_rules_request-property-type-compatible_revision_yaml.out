@@ -1,8 +1,8 @@
-::error title=request-body-media-type-removed,file=./properties/rules/request-property-type-compatible_revision.yaml::in API POST /pets/{petId} removed the media type `application/xml` from the request body
-::warning title=request-property-removed,file=./properties/rules/request-property-type-compatible_revision.yaml::in API POST /pets/{petId} removed the request property `'single'`
-::warning title=request-property-removed,file=./properties/rules/request-property-type-compatible_revision.yaml::in API POST /pets/{petId} removed the request property `id/no`
-::warning title=request-property-removed,file=./properties/rules/request-property-type-compatible_revision.yaml::in API POST /pets/{petId} removed the request property `id/tag`
-::warning title=request-property-removed,file=./properties/rules/request-property-type-compatible_revision.yaml::in API POST /pets/{petId} removed the request property `line1%0Aline2`
-::warning title=request-property-removed,file=./properties/rules/request-property-type-compatible_revision.yaml::in API POST /pets/{petId} removed the request property `pet`
+::error title=request-body-media-type-removed,file=./properties/rules/request-property-type-compatible_base.yaml::in API POST /pets/{petId} removed the media type `application/xml` from the request body
+::warning title=request-property-removed,file=./properties/rules/request-property-type-compatible_base.yaml::in API POST /pets/{petId} removed the request property `'single'`
+::warning title=request-property-removed,file=./properties/rules/request-property-type-compatible_base.yaml::in API POST /pets/{petId} removed the request property `id/no`
+::warning title=request-property-removed,file=./properties/rules/request-property-type-compatible_base.yaml::in API POST /pets/{petId} removed the request property `id/tag`
+::warning title=request-property-removed,file=./properties/rules/request-property-type-compatible_base.yaml::in API POST /pets/{petId} removed the request property `line1%0Aline2`
+::warning title=request-property-removed,file=./properties/rules/request-property-type-compatible_base.yaml::in API POST /pets/{petId} removed the request property `pet`
 ::notice title=request-property-type-compatible,file=./properties/rules/request-property-type-compatible_revision.yaml,line=131,col=37::in API POST /pets/{petId} the `id` request property `type` changed from `object` to `string` (backward compatible)
 

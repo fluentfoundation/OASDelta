@@ -1,6 +1,6 @@
 1 alterações: 1 error, 0 warning, 0 info
-error	[request-parameter-property-schema-became-false] em ./properties/rules/request-parameter-property-schema-became-false_revision.yaml
+error	[request-parameter-property-schema-became-false] em ./properties/rules/request-parameter-property-schema-became-false_base.yaml
 	em API POST /items/{id}.json
-		o esquema da propriedade `items/` do parâmetro de requisição `cookie` `name` tornou-se `false`: nenhum valor passa na validação
+		o esquema da propriedade `items` do parâmetro de requisição `cookie` `name` tornou-se `false`: nenhum valor passa na validação
 
 

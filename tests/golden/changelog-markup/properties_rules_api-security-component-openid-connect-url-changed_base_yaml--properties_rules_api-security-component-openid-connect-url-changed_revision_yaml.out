@@ -4,7 +4,7 @@
 ## API Changes
 
 ### POST /items/{id}.json
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 

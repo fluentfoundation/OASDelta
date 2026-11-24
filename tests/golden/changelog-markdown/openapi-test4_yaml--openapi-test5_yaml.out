@@ -12,11 +12,11 @@
 
 
 ### GET /prefix/api/{domain}/{project}/badges/security-score
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 ### POST /prefix/api/{domain}/{project}/badges/security-score
-- :warning: api path removed without deprecation
+- :warning: API path removed without deprecation
 
 
 
@@ -27,7 +27,7 @@
 
 
 ## Info
--  a breaking change was detected but the major version did not increase, from `1.0.0` to `1.0.1`
+-  the API version changed from `1.0.0` to `1.0.1`
 
 
 

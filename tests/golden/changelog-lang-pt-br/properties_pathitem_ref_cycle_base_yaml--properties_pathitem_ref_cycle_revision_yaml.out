@@ -1,17 +1,17 @@
 4 alterações: 3 error, 0 warning, 1 info
 error	[api-removed-without-deprecation] em ./properties/pathitem_ref_cycle_base.yaml
 	em API GET /a
-		api removida sem depreciação
+		API removida sem depreciação
 
 error	[api-removed-without-deprecation] em ./properties/pathitem_ref_cycle_base.yaml
 	em API GET /self
-		api removida sem depreciação
+		API removida sem depreciação
 
-error	[api-removed-without-deprecation] em 
+error	[api-removed-without-deprecation] em ./properties/pathitem_ref_cycle_base.yaml
 	em API POST webhook:w1
-		api removida sem depreciação
+		API removida sem depreciação
 
-info	[webhook-added]
+info	[webhook-added] em ./properties/pathitem_ref_cycle_revision.yaml
 	em components/webhooks
 		webhook `w2` adicionado
 

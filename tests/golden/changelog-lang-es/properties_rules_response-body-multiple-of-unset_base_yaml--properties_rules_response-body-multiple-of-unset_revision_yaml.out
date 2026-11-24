@@ -1,5 +1,5 @@
 3 cambios: 2 error, 0 warning, 1 info
-error	[response-body-multiple-of-unset] en ./properties/rules/response-body-multiple-of-unset_revision.yaml
+error	[response-body-multiple-of-unset] en ./properties/rules/response-body-multiple-of-unset_base.yaml
 	en API PUT /pets
 		el valor multipleOf del cuerpo de respuesta fue removido de `5.00`
 

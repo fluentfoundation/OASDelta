@@ -1,19 +1,15 @@
-5 alterações: 1 error, 0 warning, 4 info
-error	[response-body-exclusive-min-unset] em ./properties/rules/response-body-exclusive-min-unset_revision.yaml
+4 alterações: 1 error, 0 warning, 3 info
+error	[response-body-exclusive-min-unset] em ./properties/rules/response-body-exclusive-min-unset_base.yaml
 	em API GET /ünïcode/ключ
 		o valor exclusiveMinimum do corpo da resposta foi removido de `-2.00`
-
-info	[api-version-not-bumped]
-	em info
-		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
 
 info	[response-body-became-not-nullable] em ./properties/rules/response-body-exclusive-min-unset_revision.yaml
 	em API GET /ünïcode/ключ
 		o corpo da resposta tornou-se não anulável
 
-info	[response-body-default-value-removed] em ./properties/rules/response-body-exclusive-min-unset_revision.yaml
+info	[response-body-default-value-removed] em ./properties/rules/response-body-exclusive-min-unset_base.yaml
 	em API GET /ünïcode/ключ
-		o valor padrão `application/xml` foi removido do corpo da resposta para o status `80.00`%!(EXTRA string=`404`)
+		o valor padrão `80.00` foi removido do corpo da resposta `application/xml` para o status `404`
 
 info	[response-body-type-specialized] em ./properties/rules/response-body-exclusive-min-unset_revision.yaml
 	em API GET /ünïcode/ключ

@@ -1,4 +1,4 @@
 1 changes: 0 error, 0 warning, 1 info
-info, in components/securitySchemes the component security scheme `oauth` bearer format changed from `` to `...` [api-security-component-bearer-format-changed]. 
+info at ./properties/rules/api-security-component-bearer-format-changed_revision.yaml, in components/securitySchemes the component security scheme `oauth` bearer format changed from `` to `...` [api-security-component-bearer-format-changed]. 
 
 

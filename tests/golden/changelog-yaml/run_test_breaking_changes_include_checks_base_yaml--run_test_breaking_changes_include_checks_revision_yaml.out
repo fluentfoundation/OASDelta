@@ -1,5 +1,5 @@
 - id: api-tag-removed
-  text: api tag `Group` removed
+  text: API tag `Group` removed
   level: 1
   operation: POST
   operationId: createOneGroup

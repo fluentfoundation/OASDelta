@@ -1,5 +1,5 @@
 ::error title=request-property-min-items-increased,file=./properties/rules/request-property-min-items-increased_revision.yaml,line=74,col=37::in API PATCH /items/{id}.json the `'single'` request property's minItems was increased to `2`
 ::error title=new-request-path-parameter,file=./properties/rules/request-property-min-items-increased_revision.yaml,line=174,col=19::in API DELETE /pets/{petId} added the new path request parameter `id`
-::warning title=request-parameter-removed,file=./properties/rules/request-property-min-items-increased_revision.yaml::in API DELETE /pets/{petId} deleted the `header` request parameter `id`
-::warning title=request-parameter-removed,file=./properties/rules/request-property-min-items-increased_revision.yaml::in API PATCH /pets/{petId} deleted the `path` request parameter `petId`
+::warning title=request-parameter-removed,file=./properties/rules/request-property-min-items-increased_base.yaml::in API DELETE /pets/{petId} deleted the `header` request parameter `id`
+::warning title=request-parameter-removed,file=./properties/rules/request-property-min-items-increased_base.yaml::in API PATCH /pets/{petId} deleted the `path` request parameter `petId`
 

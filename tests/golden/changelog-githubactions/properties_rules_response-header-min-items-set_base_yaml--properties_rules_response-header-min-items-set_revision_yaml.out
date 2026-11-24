@@ -1,2 +1,2 @@
-::notice title=response-header-min-items-set,file=./properties/rules/response-header-min-items-set_revision.yaml,line=8,col=9::in API PATCH /store/order the `kind` response header's minItems was set to `6` for the status `404`
+::notice title=response-header-min-items-set,file=./properties/rules/response-header-min-items-set_revision.yaml,line=97,col=33::in API PATCH /store/order the `kind` response header's minItems was set to `6` for the status `404`
 

@@ -1,2 +1,2 @@
-::error title=response-header-max-contains-unset,file=./properties/rules/response-header-max-contains-unset_revision.yaml,line=32,col=9::in API PUT /pets/{petId} the `ключ` response header's maxContains was unset from `0` for the status `404`
+::error title=response-header-max-contains-unset,file=./properties/rules/response-header-max-contains-unset_base.yaml::in API PUT /pets/{petId} the `ключ` response header's maxContains was unset from `0` for the status `404`
 

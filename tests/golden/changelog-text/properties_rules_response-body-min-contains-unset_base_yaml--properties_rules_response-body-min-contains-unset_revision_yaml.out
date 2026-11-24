@@ -1,14 +1,10 @@
-3 changes: 2 error, 0 warning, 1 info
-error	[response-body-contains-removed] at ./properties/rules/response-body-min-contains-unset_revision.yaml
+2 changes: 2 error, 0 warning, 0 info
+error	[response-body-contains-removed] at ./properties/rules/response-body-min-contains-unset_base.yaml
 	in API PATCH /ünïcode/ключ
 		removed 'contains' constraint from the response body for the status `default`
 
-error	[response-body-min-contains-unset] at ./properties/rules/response-body-min-contains-unset_revision.yaml
+error	[response-body-min-contains-unset] at ./properties/rules/response-body-min-contains-unset_base.yaml
 	in API PATCH /ünïcode/ключ
 		the response's body minContains was unset from `3`
-
-info	[api-version-not-bumped]
-	in info
-		a breaking change was detected but the version is still `1.0.0`
 
 

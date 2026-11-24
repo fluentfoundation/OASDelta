@@ -1,5 +1,5 @@
-::error title=api-removed-without-deprecation,file=./properties/pathitem_ref_cycle_base.yaml::in API GET /a api removed without deprecation
-::error title=api-removed-without-deprecation,file=./properties/pathitem_ref_cycle_base.yaml::in API GET /self api removed without deprecation
-::error title=api-removed-without-deprecation::in API POST webhook:w1 api removed without deprecation
+::error title=api-removed-without-deprecation,file=./properties/pathitem_ref_cycle_base.yaml::in API GET /a API removed without deprecation
+::error title=api-removed-without-deprecation,file=./properties/pathitem_ref_cycle_base.yaml::in API GET /self API removed without deprecation
+::error title=api-removed-without-deprecation,file=./properties/pathitem_ref_cycle_base.yaml::in API POST webhook:w1 API removed without deprecation
 ::notice title=webhook-added,file=./properties/pathitem_ref_cycle_revision.yaml,line=17,col=3::in API   webhook `w2` added
 

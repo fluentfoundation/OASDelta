@@ -5,10 +5,13 @@
   operationId: testOp
   path: /test
   section: paths
+  baseSource:
+    file: ./checker/nullable_wrap_response_base.yaml
+    line: 16
+    column: 21
+  revisionSource:
+    file: ./checker/nullable_wrap_response_revision.yaml
+    line: 16
+    column: 21
   fingerprint: 5b0959a90f2c
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 

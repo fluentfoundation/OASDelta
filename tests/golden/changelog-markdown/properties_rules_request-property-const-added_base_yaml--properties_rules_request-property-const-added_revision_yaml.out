@@ -8,11 +8,12 @@
 
 
 ### GET /store/order
-- :warning: api removed without deprecation
+- :warning: API removed without deprecation
 
 
 ### PUT /store/order
 - :warning: added `subschema #1` to the response body `oneOf` list for the response status `201`
+-  the response's body became not nullable
 
 
 

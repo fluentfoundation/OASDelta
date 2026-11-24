@@ -1,3 +1,3 @@
 ::error title=request-body-type-changed,file=./properties/rules/request-body-default-value-removed_revision.yaml,line=27,col=29::in API PUT /search the request's body `type/format` changed from `number/double` to `boolean`
-::notice title=request-body-default-value-removed,file=./properties/rules/request-body-default-value-removed_revision.yaml::in API PUT /search the request body `application/json; charset=utf-8` default value `14.00` was removed
+::notice title=request-body-default-value-removed,file=./properties/rules/request-body-default-value-removed_base.yaml::in API PUT /search the request body `application/json; charset=utf-8` default value `14.00` was removed
 

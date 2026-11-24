@@ -1,3 +1,2 @@
 ::error title=api-security-component-http-scheme-changed,file=./properties/rules/api-security-component-http-scheme-changed_revision.yaml,line=20,col=9::in API   the component security scheme `bearer` http scheme changed from `basic` to `bearer`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 

@@ -1,4 +1,4 @@
-3 изменений: 3 error, 0 warning, 0 info
+4 изменений: 3 error, 0 warning, 1 info
 error	[api-path-removed-without-deprecation] в openapi-test6.yaml
 	в API GET /health
 		API path удалён без процедуры deprecation
@@ -10,5 +10,9 @@ error	[api-path-removed-without-deprecation] в openapi-test6.yaml
 error	[api-path-removed-without-deprecation] в openapi-test6.yaml
 	в API GET /health/ready
 		API path удалён без процедуры deprecation
+
+info	[api-version-changed] в openapi-test7.yaml
+	в info
+		версия API изменилась с `1.0.0` до `2.0.0`
 
 

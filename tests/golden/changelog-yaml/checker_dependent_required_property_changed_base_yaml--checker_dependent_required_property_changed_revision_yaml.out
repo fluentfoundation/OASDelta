@@ -30,9 +30,4 @@
     line: 45
     column: 21
   fingerprint: 75544a2332d8
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 

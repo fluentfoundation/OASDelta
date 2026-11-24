@@ -5,7 +5,7 @@
       <failure message="Breaking change detected">added the new required `cookie` request parameter `*star`</failure>
     </testcase>
     <testcase name="response-property-max-properties-set" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `items/` response property's maxProperties was set to `13` for the response status `200`</failure>
+      <failure message="Breaking change detected">the `items` response property's maxProperties was set to `13` for the response status `200`</failure>
     </testcase>
   </testsuite>
 </testsuites>

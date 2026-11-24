@@ -5,5 +5,9 @@
   operationId: post_v1_items
   path: /v1/items
   section: paths
+  baseSource:
+    file: ./properties/rules/response-optional-property-became-not-read-only_base.json
+    line: 21
+    column: 17
   fingerprint: 52b91a6b9586
 

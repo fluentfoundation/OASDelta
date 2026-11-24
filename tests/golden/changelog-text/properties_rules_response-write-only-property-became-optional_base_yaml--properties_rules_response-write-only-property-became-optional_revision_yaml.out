@@ -2,81 +2,81 @@
 warning	[response-property-became-nullable] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	in API GET /pets
 		the response property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became nullable for the status `204`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 warning	[response-property-became-nullable] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	in API GET /pets
 		the response property `items/items/allOf[subschema #3]/ключ` became nullable for the status `404` (media type: application/vnd.api+json)
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 warning	[response-property-became-nullable] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	in API GET /pets
 		the response property `名前/items/allOf[subschema #3]/ключ` became nullable for the status `404` (media type: application/json; charset=utf-8)
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 warning	[response-property-type-generalized] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	in API GET /pets
 		the `items/items/allOf[subschema #3]/ключ` response's property `type/format` was widened from `string` to `string, null/byte` for status `404` (media type: application/vnd.api+json)
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 warning	[response-property-became-nullable] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	in API GET /ünïcode/ключ
 		the response property `名前/items/allOf[subschema #3]/ключ` became nullable for the status `404`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 info	[response-property-type-compatible] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	in API GET /pets
 		the `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` response's property `type/format` changed from `string` to `string, null/byte` for status `204` (backward compatible)
-		This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking. This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 info	[response-property-type-compatible] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	in API GET /pets
 		the `名前/items/allOf[subschema #3]/ключ` response's property `type/format` changed from `string` to `string, null/byte` for status `404` (backward compatible) (media type: application/json; charset=utf-8)
-		This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking. This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
-info	[response-required-property-became-not-write-only] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-required-property-became-not-write-only] at ./properties/rules/response-write-only-property-became-optional_base.yaml
 	in API GET /pets
 		the response required property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became not write-only for the status `204`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
-info	[response-required-property-became-not-write-only] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-required-property-became-not-write-only] at ./properties/rules/response-write-only-property-became-optional_base.yaml
 	in API GET /pets
 		the response required property `items/items/allOf[subschema #3]/ключ` became not write-only for the status `404` (media type: application/vnd.api+json)
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
-info	[response-required-property-became-not-write-only] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-required-property-became-not-write-only] at ./properties/rules/response-write-only-property-became-optional_base.yaml
 	in API GET /pets
 		the response required property `名前/items/allOf[subschema #3]/ключ` became not write-only for the status `404` (media type: application/json; charset=utf-8)
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
-info	[response-write-only-property-became-optional] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-write-only-property-became-optional] at ./properties/rules/response-write-only-property-became-optional_base.yaml
 	in API GET /pets
 		the response write-only property `!tag/anyOf[#/components/schemas/Pet]/allOf[subschema #3]/ключ` became optional for the status `204`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
-info	[response-write-only-property-became-optional] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-write-only-property-became-optional] at ./properties/rules/response-write-only-property-became-optional_base.yaml
 	in API GET /pets
 		the response write-only property `items/items/allOf[subschema #3]/ключ` became optional for the status `404` (media type: application/vnd.api+json)
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
-info	[response-write-only-property-became-optional] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-write-only-property-became-optional] at ./properties/rules/response-write-only-property-became-optional_base.yaml
 	in API GET /pets
 		the response write-only property `名前/items/allOf[subschema #3]/ключ` became optional for the status `404` (media type: application/json; charset=utf-8)
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 info	[response-property-type-compatible] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
 	in API GET /ünïcode/ключ
 		the `名前/items/allOf[subschema #3]/ключ` response's property `type/format` changed from `string` to `string, null/byte` for status `404` (backward compatible)
-		This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking. This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This change is backward compatible because the media type is not strongly typed (for example XML), where any value can be represented as text, so the type is not enforced on the wire. Under a strongly typed media type such as JSON the same change would be breaking. This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
-info	[response-required-property-became-not-write-only] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-required-property-became-not-write-only] at ./properties/rules/response-write-only-property-became-optional_base.yaml
 	in API GET /ünïcode/ключ
 		the response required property `名前/items/allOf[subschema #3]/ключ` became not write-only for the status `404`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
-info	[response-write-only-property-became-optional] at ./properties/rules/response-write-only-property-became-optional_revision.yaml
+info	[response-write-only-property-became-optional] at ./properties/rules/response-write-only-property-became-optional_base.yaml
 	in API GET /ünïcode/ключ
 		the response write-only property `名前/items/allOf[subschema #3]/ключ` became optional for the status `404`
-		This compared the `allOf` branches one at a time, so another branch may still guarantee what this one dropped. Run with --flatten-allof to merge the branches and compare what they describe together.
+		This compared the `allOf` branches one at a time, so another branch may already describe what changed here, leaving the merged schema the same. Run with --flatten-allof to merge the branches and compare what they describe together.
 
 

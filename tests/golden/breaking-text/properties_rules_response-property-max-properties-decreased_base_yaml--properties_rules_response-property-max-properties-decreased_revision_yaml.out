@@ -1,6 +1,6 @@
 1 changes: 1 error, 0 warning, 0 info
-error	[api-security-component-api-key-name-changed]
+error	[api-security-component-api-key-name-changed] at ./properties/rules/response-property-max-properties-decreased_revision.yaml
 	in components/securitySchemes
-		the component security scheme `api_key` api key name changed from `trailing ` to `id`
+		the component security scheme `api_key` API key name changed from `trailing ` to `id`
 
 

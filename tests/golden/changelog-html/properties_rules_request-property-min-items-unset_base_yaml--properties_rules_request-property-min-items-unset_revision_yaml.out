@@ -131,7 +131,7 @@
         
         <li class="change">
         
-        the `additionalProperties/` request property&#39;s minItems was unset from `14`
+        the `additionalProperties` request property&#39;s minItems was unset from `14`
         </li>
         
     </ul>

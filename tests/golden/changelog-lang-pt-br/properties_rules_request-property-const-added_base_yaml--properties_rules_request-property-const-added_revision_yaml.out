@@ -1,14 +1,18 @@
-3 alterações: 3 error, 0 warning, 0 info
+4 alterações: 3 error, 0 warning, 1 info
 error	[request-property-const-added] em ./properties/rules/request-property-const-added_revision.yaml
 	em API POST /pets/{petId}
 		a propriedade de requisição `price` teve o valor const `%20` adicionado
 
 error	[api-removed-without-deprecation] em ./properties/rules/request-property-const-added_base.yaml
 	em API GET /store/order
-		api removida sem depreciação
+		API removida sem depreciação
 
 error	[response-body-one-of-added] em ./properties/rules/request-property-const-added_revision.yaml
 	em API PUT /store/order
 		`subschema #1` foi adicionado à lista `oneOf` do corpo da resposta para o status `201`
+
+info	[response-body-became-not-nullable] em ./properties/rules/request-property-const-added_revision.yaml
+	em API PUT /store/order
+		o corpo da resposta tornou-se não anulável
 
 

@@ -4,7 +4,7 @@
 ## API Changes
 
 ### POST /api/v1.0/groups
--  api tag `Group` removed
+-  API tag `Group` removed
 -  removed the non-success response with the status `409`
 
 

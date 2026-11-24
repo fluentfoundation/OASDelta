@@ -1,4 +1,3 @@
-::error title=response-property-const-removed,file=./properties/rules/response-property-const-removed_revision.json::in API PATCH /store/order the `名前` response property const value `䞈ᗝ싋⋁쐾诚` was removed for the status `200`
-::warning title=request-property-removed,file=./properties/rules/response-property-const-removed_revision.json::in API PUT /store/order removed the request property `_under_`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
+::error title=response-property-const-removed,file=./properties/rules/response-property-const-removed_base.json::in API PATCH /store/order the `名前` response property const value `䞈ᗝ싋⋁쐾诚` was removed for the status `200`
+::warning title=request-property-removed,file=./properties/rules/response-property-const-removed_base.json::in API PUT /store/order removed the request property `_under_`
 

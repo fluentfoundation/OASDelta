@@ -2,10 +2,10 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="5" errors="0" failures="5" name="OASDiff">
     <testcase name="response-property-min-properties-unset" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `-/items/` response property's minProperties was unset from `2` for the response status `default` (shared schema: `Owner`, also at `status/status/items/`)</failure>
+      <failure message="Breaking change detected">the `-/items` response property's minProperties was unset from `2` for the response status `default` (shared schema: `Owner`, also at `status/status/items`)</failure>
     </testcase>
     <testcase name="response-property-type-changed" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `-/items/` response's property `type` changed from `object` to `any` for status `default` (shared schema: `Owner`, also at `status/status/items/`)</failure>
+      <failure message="Breaking change detected">the `-/items` response's property `type` changed from `object` to `any` for status `default` (shared schema: `Owner`, also at `status/status/items`)</failure>
     </testcase>
     <testcase name="response-optional-property-removed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">removed the optional property `-/items/Ṁᨂ緛슺` from the response with the `default` status (shared schema: `Owner`, also at `status/status/items/Ṁᨂ緛슺`)</failure>

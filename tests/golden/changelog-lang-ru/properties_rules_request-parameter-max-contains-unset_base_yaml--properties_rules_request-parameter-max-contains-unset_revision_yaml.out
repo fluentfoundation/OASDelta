@@ -1,5 +1,5 @@
 1 изменений: 0 error, 0 warning, 1 info
-info	[request-parameter-max-contains-unset] в ./properties/rules/request-parameter-max-contains-unset_revision.yaml
+info	[request-parameter-max-contains-unset] в ./properties/rules/request-parameter-max-contains-unset_base.yaml
 	в API POST /items/{id}.json
 		значение maxContains в `path` параметре запроса `id` удалено, предыдущее значение - `4`
 

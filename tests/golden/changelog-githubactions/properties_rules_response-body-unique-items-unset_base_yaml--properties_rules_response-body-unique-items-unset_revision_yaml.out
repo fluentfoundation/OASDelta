@@ -1,4 +1,4 @@
-::error title=response-body-max-items-unset,file=./properties/rules/response-body-unique-items-unset_revision.yaml::in API POST /items/{id}.json the response's body maxItems was unset from `83`
+::error title=response-body-max-items-unset,file=./properties/rules/response-body-unique-items-unset_base.yaml::in API POST /items/{id}.json the response's body maxItems was unset from `83`
 ::error title=response-body-type-changed,file=./properties/rules/response-body-unique-items-unset_revision.yaml,line=96,col=33::in API POST /items/{id}.json the response's body `type` changed from `array<object>` to `boolean` for status `default`
-::error title=response-body-unique-items-unset,file=./properties/rules/response-body-unique-items-unset_revision.yaml::in API POST /items/{id}.json the response's body uniqueItems was unset
+::error title=response-body-unique-items-unset,file=./properties/rules/response-body-unique-items-unset_base.yaml::in API POST /items/{id}.json the response's body uniqueItems was unset
 

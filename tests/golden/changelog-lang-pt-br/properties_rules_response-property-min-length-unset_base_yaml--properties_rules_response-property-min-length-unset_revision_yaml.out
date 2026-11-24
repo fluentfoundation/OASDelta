@@ -1,32 +1,31 @@
 6 alterações: 0 error, 2 warning, 4 info
-warning	[response-property-min-length-unset] em ./properties/rules/response-property-min-length-unset_revision.yaml
+warning	[response-property-min-length-unset] em ./properties/rules/response-property-min-length-unset_base.yaml
 	em API POST /items/{id}.json
-		o valor minLength da propriedade de resposta `oneOf[subschema #1]/` foi removido de `1` para o status `404`
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+		o valor minLength da propriedade de resposta `oneOf[subschema #1]` foi removido de `1` para o status `404`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo já pode descrever o que mudou aqui, deixando o esquema mesclado igual. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
-warning	[response-property-type-changed] em ./properties/rules/response-property-min-length-unset_revision.yaml
+warning	[response-property-type-changed] em ./properties/rules/response-property-min-length-unset_base.yaml
 	em API POST /items/{id}.json
-		o `oneOf[subschema #1]/` da propriedade de resposta `type` foi alterado de `string, null` para `any` para o status `404`
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+		o `oneOf[subschema #1]` da propriedade de resposta `type` foi alterado de `string, null` para `any` para o status `404`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo já pode descrever o que mudou aqui, deixando o esquema mesclado igual. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
 info	[response-property-all-of-added] em ./properties/rules/response-property-min-length-unset_revision.yaml
 	em API POST /items/{id}.json
-		`subschema #1, subschema #2` foi adicionado à lista `allOf` da propriedade de resposta `oneOf[subschema #1]/` para o status `404`
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+		`subschema #1, subschema #2` foi adicionado à lista `allOf` da propriedade de resposta `oneOf[subschema #1]` para o status `404`
 
-info	[response-property-enum-value-removed] em ./properties/rules/response-property-min-length-unset_revision.yaml
+info	[response-property-enum-value-removed] em ./properties/rules/response-property-min-length-unset_base.yaml
 	em API POST /items/{id}.json
-		o valor ` leading` do enum foi removido da propriedade de resposta `oneOf[subschema #1]/` para o status `404`
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+		o valor ` leading` do enum foi removido da propriedade de resposta `oneOf[subschema #1]` para o status `404`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo já pode descrever o que mudou aqui, deixando o esquema mesclado igual. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
-info	[response-property-enum-value-removed] em ./properties/rules/response-property-min-length-unset_revision.yaml
+info	[response-property-enum-value-removed] em ./properties/rules/response-property-min-length-unset_base.yaml
 	em API POST /items/{id}.json
-		o valor `| table |` do enum foi removido da propriedade de resposta `oneOf[subschema #1]/` para o status `404`
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+		o valor `| table |` do enum foi removido da propriedade de resposta `oneOf[subschema #1]` para o status `404`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo já pode descrever o que mudou aqui, deixando o esquema mesclado igual. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
-info	[response-property-enum-value-removed] em ./properties/rules/response-property-min-length-unset_revision.yaml
+info	[response-property-enum-value-removed] em ./properties/rules/response-property-min-length-unset_base.yaml
 	em API POST /items/{id}.json
-		o valor `徴` do enum foi removido da propriedade de resposta `oneOf[subschema #1]/` para o status `404`
-		Isto comparou os ramos do `allOf` um a um, então outro ramo ainda pode garantir o que este perdeu. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
+		o valor `徴` do enum foi removido da propriedade de resposta `oneOf[subschema #1]` para o status `404`
+		Isto comparou os ramos do `allOf` um a um, então outro ramo já pode descrever o que mudou aqui, deixando o esquema mesclado igual. Execute com --flatten-allof para mesclar os ramos e comparar o que eles descrevem em conjunto.
 
 

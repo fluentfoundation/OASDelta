@@ -1,1 +1,1 @@
-[{"id":"response-body-min-unset","text":"the response's body min was unset from `-8.00`","level":3,"operation":"DELETE","path":"/pets","section":"paths","fingerprint":"43088ebd3910"}]
+[{"id":"response-body-min-unset","text":"the response's body min was unset from `-8.00`","level":3,"operation":"DELETE","path":"/pets","section":"paths","baseSource":{"file":"./properties/rules/response-body-min-unset_base.yaml","line":51,"column":19},"fingerprint":"43088ebd3910"}]

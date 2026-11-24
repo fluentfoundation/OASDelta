@@ -5,6 +5,10 @@
   operationId: patch_store_order
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/response-property-const-removed_base.json
+    line: 139
+    column: 27
   fingerprint: 4c44e1502cca
 - id: request-property-removed
   text: removed the request property `_under_`
@@ -12,10 +16,11 @@
   operation: PUT
   path: /store/order
   section: paths
+  baseSource:
+    file: ./properties/rules/response-property-const-removed_base.json
+    line: 291
+    column: 19
+    endLine: 292
+    endColumn: 38
   fingerprint: 1a5ed7e64559
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 

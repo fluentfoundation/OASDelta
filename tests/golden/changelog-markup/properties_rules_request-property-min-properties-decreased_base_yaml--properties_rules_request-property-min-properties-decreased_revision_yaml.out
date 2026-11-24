@@ -8,15 +8,11 @@
 
 
 ### PUT /store/order
-- :warning: the `items/` response property's minProperties was decreased from `3` to `1` for the response status `default`
+- :warning: the `items` response property's minProperties was decreased from `3` to `1` for the response status `default`
 -  the `C:\path` request property's minProperties was decreased from `3` to `1`
 -  the response's body min was set to `3.00`
 
 
-
-
-## Info
--  a breaking change was detected but the version is still `1.0.0`
 
 
 

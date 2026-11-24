@@ -4,13 +4,9 @@
 ## API Changes
 
 ### PATCH /store/order
-- :warning: the `items/` response's property `type` was widened from `integer` to `number` for status `204`
+- :warning: the `items` response's property `type` was widened from `integer` to `number` for status `204`
 
 
-
-
-## Info
--  a breaking change was detected but the version is still `1.0.0`
 
 
 

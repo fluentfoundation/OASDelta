@@ -3,7 +3,7 @@ error	[request-body-type-changed] em ./properties/rules/api-security-component-o
 	em API POST /owners/{ownerId}/pets
 		o `type` do corpo da requisição foi alterado de `array<array<string/date-time>>` para `boolean`
 
-warning	[api-security-component-oauth-refresh-url-changed]
+warning	[api-security-component-oauth-refresh-url-changed] em ./properties/rules/api-security-component-oauth-refresh-url-changed_revision.yaml
 	em components/securitySchemes
 		no esquema de segurança `oauth`, a url de atualização do fluxo OAuth `clientCredentials` foi alterada de `https://auth.example.com/refresh` para ``
 		Este é um aviso porque a especificação não diz se as credenciais obtidas pela url anterior ainda são aceitas.

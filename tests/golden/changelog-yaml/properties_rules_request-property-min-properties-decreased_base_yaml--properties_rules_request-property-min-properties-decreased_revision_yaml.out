@@ -1,5 +1,5 @@
 - id: response-property-min-properties-decreased
-  text: the `items/` response property's minProperties was decreased from `3` to `1` for the response status `default`
+  text: the `items` response property's minProperties was decreased from `3` to `1` for the response status `default`
   level: 3
   operation: PUT
   operationId: '|'
@@ -13,12 +13,7 @@
     file: ./properties/rules/request-property-min-properties-decreased_revision.yaml
     line: 5
     column: 13
-  fingerprint: 455df1ab5f7f
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
+  fingerprint: b141008327b8
 - id: request-property-min-properties-decreased
   text: the `id` request property's minProperties was decreased from `3` to `1`
   level: 1

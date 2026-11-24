@@ -1,5 +1,5 @@
 1 изменений: 0 error, 0 warning, 1 info
-info	[response-required-property-became-not-write-only] в ./properties/rules/response-required-property-became-not-write-only_revision.json
+info	[response-required-property-became-not-write-only] в ./properties/rules/response-required-property-became-not-write-only_base.json
 	в API DELETE /pets/{petId}
 		обязательное поле ответа `ключ` перестало быть write-only для ответа со статусом `201`
 

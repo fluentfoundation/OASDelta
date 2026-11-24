@@ -1,5 +1,5 @@
 2 изменений: 0 error, 0 warning, 2 info
-info	[api-schema-removed]
+info	[api-schema-removed] в ./component-renamed1.yaml
 	в components/schemas
 		удалена схема `Old`
 

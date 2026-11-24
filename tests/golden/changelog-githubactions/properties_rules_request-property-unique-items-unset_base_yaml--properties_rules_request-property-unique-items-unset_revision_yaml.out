@@ -1,2 +1,2 @@
-::notice title=request-property-unique-items-unset,file=./properties/rules/request-property-unique-items-unset_revision.yaml::in API PUT /store/order the `items/` request property's uniqueItems was unset
+::notice title=request-property-unique-items-unset,file=./properties/rules/request-property-unique-items-unset_base.yaml::in API PUT /store/order the `items` request property's uniqueItems was unset
 

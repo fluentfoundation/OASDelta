@@ -1,11 +1,7 @@
-4 изменений: 1 error, 0 warning, 3 info
+3 изменений: 1 error, 0 warning, 2 info
 error	[response-header-type-generalized] в ./properties/ref_generic_origins_revision.yaml
 	в API GET /b
 		у заголовка ответа `x-rate` `type` расширен с `integer` до `number` для статуса `200`
-
-info	[api-version-not-bumped]
-	в info
-		обнаружено обратно несовместимое изменение, но версия осталась `1.0.0`
 
 info	[request-parameter-type-generalized] в ./properties/ref_generic_origins_revision.yaml
 	в API GET /a

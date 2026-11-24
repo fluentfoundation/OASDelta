@@ -1,5 +1,5 @@
 1 изменений: 0 error, 0 warning, 1 info
-info	[request-parameter-min-length-unset] в ./properties/rules/request-parameter-min-length-unset_revision.json
+info	[request-parameter-min-length-unset] в ./properties/rules/request-parameter-min-length-unset_base.json
 	в API GET /items/{id}.json
 		значение minLength в `cookie` параметре запроса `a/b` удалено, предыдущее значение - `5`
 

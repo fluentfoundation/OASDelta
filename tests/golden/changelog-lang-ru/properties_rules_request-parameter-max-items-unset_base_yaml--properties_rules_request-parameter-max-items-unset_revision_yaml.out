@@ -1,13 +1,13 @@
 3 изменений: 0 error, 0 warning, 3 info
-info	[request-parameter-list-of-types-widened] в ./properties/rules/request-parameter-max-items-unset_revision.yaml
+info	[request-parameter-list-of-types-widened] в ./properties/rules/request-parameter-max-items-unset_base.yaml
 	в API DELETE /search
 		список типов `cookie` параметра запроса `뻩씃쑶䘎冘` был расширен добавлением типов `string`
 
-info	[request-parameter-max-items-unset] в ./properties/rules/request-parameter-max-items-unset_revision.yaml
+info	[request-parameter-max-items-unset] в ./properties/rules/request-parameter-max-items-unset_base.yaml
 	в API DELETE /search
 		значение maxItems в `cookie` параметре запроса `뻩씃쑶䘎冘` удалено, предыдущее значение - `92`
 
-info	[request-parameter-min-items-unset] в ./properties/rules/request-parameter-max-items-unset_revision.yaml
+info	[request-parameter-min-items-unset] в ./properties/rules/request-parameter-max-items-unset_base.yaml
 	в API DELETE /search
 		значение minItems в `cookie` параметре запроса `뻩씃쑶䘎冘` удалено, предыдущее значение - `3`
 

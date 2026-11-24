@@ -1,5 +1,5 @@
 1 alterações: 0 error, 0 warning, 1 info
-info	[request-parameter-multiple-of-unset] em ./properties/rules/request-parameter-multiple-of-unset_revision.yaml
+info	[request-parameter-multiple-of-unset] em ./properties/rules/request-parameter-multiple-of-unset_base.yaml
 	em API GET /pets/{petId}
 		no parâmetro de requisição do tipo `header` e nome `name`, o valor multipleOf foi removido de `9.00`
 

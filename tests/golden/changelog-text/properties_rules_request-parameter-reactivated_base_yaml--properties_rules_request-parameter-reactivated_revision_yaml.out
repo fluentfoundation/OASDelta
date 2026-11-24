@@ -3,12 +3,12 @@ error	[new-required-request-parameter] at ./properties/rules/request-parameter-r
 	in API POST /items/{id}.json
 		added the new required `header` request parameter `id`
 
-warning	[request-parameter-removed] at ./properties/rules/request-parameter-reactivated_revision.yaml
+warning	[request-parameter-removed] at ./properties/rules/request-parameter-reactivated_base.yaml
 	in API POST /items/{id}.json
 		deleted the `path` request parameter `id`
 		This is a warning because some clients may return an error when receiving an unexpected parameter. It is recommended to deprecate the parameter first.
 
-info	[request-parameter-reactivated] at ./properties/rules/request-parameter-reactivated_revision.yaml
+info	[request-parameter-reactivated] at ./properties/rules/request-parameter-reactivated_base.yaml
 	in API POST /items/{id}.json
 		`query` request parameter `status` was reactivated
 

@@ -1,1 +1,1 @@
-[{"id":"request-property-multiple-of-unset","text":"the `'single'` request property's multipleOf was unset from `8.00`","level":1,"operation":"PATCH","path":"/v1/items","section":"paths","fingerprint":"2c1b54c6deb6"}]
+[{"id":"request-property-multiple-of-unset","text":"the `'single'` request property's multipleOf was unset from `8.00`","level":1,"operation":"PATCH","path":"/v1/items","section":"paths","baseSource":{"file":"./properties/rules/request-property-multiple-of-unset_base.json","line":96,"column":21},"fingerprint":"2c1b54c6deb6"}]

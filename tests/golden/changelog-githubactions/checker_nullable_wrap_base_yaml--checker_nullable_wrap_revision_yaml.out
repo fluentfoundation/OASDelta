@@ -1,4 +1,4 @@
-::notice title=request-property-became-nullable,file=./checker/nullable_wrap_revision.yaml::in API POST /test the request property `optionalEnum` became nullable
-::notice title=request-property-became-nullable,file=./checker/nullable_wrap_revision.yaml::in API POST /test the request property `optionalPrimitive` became nullable
-::notice title=request-property-became-nullable,file=./checker/nullable_wrap_revision.yaml::in API POST /test the request property `optionalRef` became nullable
+::notice title=request-property-became-nullable,file=./checker/nullable_wrap_revision.yaml,line=30,col=11::in API POST /test the request property `optionalEnum` became nullable
+::notice title=request-property-became-nullable,file=./checker/nullable_wrap_revision.yaml,line=38,col=26::in API POST /test the request property `optionalPrimitive` became nullable
+::notice title=request-property-became-nullable,file=./checker/nullable_wrap_revision.yaml,line=34,col=11::in API POST /test the request property `optionalRef` became nullable
 

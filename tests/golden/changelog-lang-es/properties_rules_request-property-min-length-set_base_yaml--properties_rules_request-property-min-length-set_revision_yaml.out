@@ -2,10 +2,10 @@
 warning	[request-property-min-length-set] en ./properties/rules/request-property-min-length-set_revision.yaml
 	en API POST /pets
 		el valor minLength de la propiedad de solicitud `名前` fue establecido en `12`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels. Esto comparó las ramas de `allOf` una por una, así que otra rama todavía puede garantizar lo que esta perdió. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite. Esto comparó las ramas de `allOf` una por una, así que otra rama ya puede describir lo que cambió aquí, dejando igual el esquema fusionado. Ejecute con --flatten-allof para fusionar las ramas y comparar lo que describen en conjunto.
 
 info	[api-operation-id-added] en ./properties/rules/request-property-min-length-set_revision.yaml
 	en API POST /pets
-		id de operación de api `price` fue agregado
+		id de operación de API `price` fue agregado
 
 

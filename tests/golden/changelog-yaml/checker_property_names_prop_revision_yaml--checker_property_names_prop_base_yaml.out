@@ -10,11 +10,6 @@
     line: 29
     column: 21
   fingerprint: 2a83b7721a5a
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 - id: request-property-property-names-removed
   text: removed 'propertyNames' constraint from the request property `details`
   level: 1

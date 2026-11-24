@@ -1,5 +1,5 @@
 1 изменений: 1 error, 0 warning, 0 info
-error	[response-header-min-contains-unset] в ./properties/rules/response-header-min-contains-unset_revision.yaml
+error	[response-header-min-contains-unset] в ./properties/rules/response-header-min-contains-unset_base.yaml
 	в API PATCH /search
 		значение minContains у заголовка ответа `name` удалено, предыдущее значение - `3`, для статуса `400`
 

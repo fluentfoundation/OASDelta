@@ -1,17 +1,17 @@
 10 alterações: 0 error, 4 warning, 6 info
-warning	[request-property-removed] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+warning	[request-property-removed] em ./checker/request_property_discriminator_added_revision.yaml
 	em API POST /pets
 		a propriedade de requisição `oneOf[#/components/schemas/Cat]/petType` foi removida
 
-warning	[request-property-removed] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+warning	[request-property-removed] em ./checker/request_property_discriminator_added_revision.yaml
 	em API POST /pets
 		a propriedade de requisição `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name` foi removida
 
-warning	[request-property-removed] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+warning	[request-property-removed] em ./checker/request_property_discriminator_added_revision.yaml
 	em API POST /pets
 		a propriedade de requisição `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name` foi removida
 
-warning	[request-property-removed] em ./checker/request_property_discriminator_added_property_name_changed.yaml
+warning	[request-property-removed] em ./checker/request_property_discriminator_added_revision.yaml
 	em API POST /pets
 		a propriedade de requisição `oneOf[#/components/schemas/Dog]/petType` foi removida
 

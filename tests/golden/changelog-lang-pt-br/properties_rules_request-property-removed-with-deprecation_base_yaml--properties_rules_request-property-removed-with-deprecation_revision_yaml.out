@@ -1,25 +1,21 @@
-6 alterações: 1 error, 3 warning, 2 info
+5 alterações: 1 error, 3 warning, 1 info
 error	[request-body-type-changed] em ./properties/rules/request-property-removed-with-deprecation_revision.yaml
 	em API PUT /store/order
 		o `type` do corpo da requisição foi alterado de `object` para `array<string>`
 
-warning	[request-property-removed] em ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+warning	[request-property-removed] em ./properties/rules/request-property-removed-with-deprecation_base.yaml
 	em API PUT /store/order
 		a propriedade de requisição `...` foi removida
 
-warning	[request-property-removed] em ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+warning	[request-property-removed] em ./properties/rules/request-property-removed-with-deprecation_base.yaml
 	em API PUT /store/order
 		a propriedade de requisição `C:\path` foi removida
 
-warning	[request-property-removed] em ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+warning	[request-property-removed] em ./properties/rules/request-property-removed-with-deprecation_base.yaml
 	em API PUT /store/order
 		a propriedade de requisição `kind` foi removida
 
-info	[api-version-not-bumped]
-	em info
-		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
-
-info	[request-property-removed-with-deprecation] em ./properties/rules/request-property-removed-with-deprecation_revision.yaml
+info	[request-property-removed-with-deprecation] em ./properties/rules/request-property-removed-with-deprecation_base.yaml
 	em API PUT /store/order
 		a propriedade de requisição depreciada `id` foi removida
 

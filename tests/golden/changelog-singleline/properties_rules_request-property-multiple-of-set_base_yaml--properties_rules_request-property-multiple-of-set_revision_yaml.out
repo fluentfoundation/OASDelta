@@ -1,4 +1,4 @@
 1 changes: 0 error, 0 warning, 1 info
-info at ./properties/rules/request-property-multiple-of-set_revision.yaml, in API PATCH /v1/items the `{brace}/oneOf[subschema #2]/` request property's multipleOf was set to `4.00` [request-property-multiple-of-set]. The property is read-only, so it never appears in requests and this change cannot invalidate one.
+info at ./properties/rules/request-property-multiple-of-set_revision.yaml, in API PATCH /v1/items the `{brace}/oneOf[subschema #2]` request property's multipleOf was set to `4.00` [request-property-multiple-of-set]. The property is read-only, so it never appears in requests and this change cannot invalidate one.
 
 

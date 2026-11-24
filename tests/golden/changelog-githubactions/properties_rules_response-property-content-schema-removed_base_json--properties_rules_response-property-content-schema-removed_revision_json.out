@@ -1,3 +1,3 @@
-::error title=response-property-content-media-type-changed,file=./properties/rules/response-property-content-schema-removed_revision.json::in API PUT /v1/items the `!tag/items/` response property contentMediaType changed from `application/json` to `` for the status `500`
-::error title=response-property-content-schema-removed,file=./properties/rules/response-property-content-schema-removed_revision.json::in API PUT /v1/items removed 'contentSchema' from the `!tag/items/` response property for the status `500`
+::error title=response-property-content-media-type-changed,file=./properties/rules/response-property-content-schema-removed_base.json::in API PUT /v1/items the `!tag/items` response property contentMediaType changed from `application/json` to `` for the status `500`
+::error title=response-property-content-schema-removed,file=./properties/rules/response-property-content-schema-removed_base.json::in API PUT /v1/items removed 'contentSchema' from the `!tag/items` response property for the status `500`
 

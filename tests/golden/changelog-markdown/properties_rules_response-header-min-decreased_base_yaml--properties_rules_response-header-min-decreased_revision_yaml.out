@@ -9,13 +9,9 @@
 
 ### PUT /items/{id}.json
 - :warning: deleted the `header` request parameter `owner`
--  the `_under_/items/` response's property `format` was narrowed from `none` to `byte` for status `201`
+-  the `_under_/items` response's property `format` was narrowed from `none` to `byte` for status `201`
 
 
-
-
-## Info
--  a breaking change was detected but the version is still `1.0.0`
 
 
 

@@ -4,7 +4,7 @@
 ## API Changes
 
 ### DELETE /owners/{ownerId}/pets
--  the `items/` response property's exclusiveMinimum was set to `17.00` for the response status `204`
+-  the `items` response property's exclusiveMinimum was set to `17.00` for the response status `204`
 
 
 

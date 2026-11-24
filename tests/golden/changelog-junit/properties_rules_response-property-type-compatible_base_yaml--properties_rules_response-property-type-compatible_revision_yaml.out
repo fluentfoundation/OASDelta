@@ -2,7 +2,7 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
     <testcase name="response-property-type-compatible" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">the `additionalProperties/` response's property `type` changed from `string` to `integer` for status `400` (backward compatible)</failure>
+      <failure message="Breaking change detected">the `additionalProperties` response's property `type` changed from `string` to `integer` for status `400` (backward compatible)</failure>
     </testcase>
   </testsuite>
 </testsuites>

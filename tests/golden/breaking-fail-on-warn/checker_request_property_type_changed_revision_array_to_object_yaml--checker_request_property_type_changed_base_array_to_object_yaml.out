@@ -7,19 +7,19 @@ error	[request-body-type-changed] at ./checker/request_property_type_changed_bas
 	in API POST /pets
 		the request's body `type` changed from `object` to `array<object>`
 
-warning	[request-property-removed] at ./checker/request_property_type_changed_base_array_to_object.yaml
+warning	[request-property-removed] at ./checker/request_property_type_changed_revision_array_to_object.yaml
 	in API POST /dogs
 		removed the request property `colors/blue`
 
-warning	[request-property-removed] at ./checker/request_property_type_changed_base_array_to_object.yaml
+warning	[request-property-removed] at ./checker/request_property_type_changed_revision_array_to_object.yaml
 	in API POST /dogs
 		removed the request property `colors/green`
 
-warning	[request-property-removed] at ./checker/request_property_type_changed_base_array_to_object.yaml
+warning	[request-property-removed] at ./checker/request_property_type_changed_revision_array_to_object.yaml
 	in API POST /dogs
 		removed the request property `colors/red`
 
-warning	[request-property-removed] at ./checker/request_property_type_changed_base_array_to_object.yaml
+warning	[request-property-removed] at ./checker/request_property_type_changed_revision_array_to_object.yaml
 	in API POST /pets
 		removed the request property `data`
 

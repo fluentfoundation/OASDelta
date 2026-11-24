@@ -1,1 +1,1 @@
-[{"id":"new-required-request-parameter","text":"added the new required `cookie` request parameter `*star`","level":3,"operation":"POST","path":"/pets/{petId}","section":"paths","fingerprint":"c30e784adddc"}]
+[{"id":"new-required-request-parameter","text":"added the new required `cookie` request parameter `*star`","level":3,"operation":"POST","path":"/pets/{petId}","section":"paths","revisionSource":{"file":"./properties/rules/response-property-max-properties-set_revision.yaml","line":100,"column":13,"endLine":105,"endColumn":14},"fingerprint":"c30e784adddc"}]

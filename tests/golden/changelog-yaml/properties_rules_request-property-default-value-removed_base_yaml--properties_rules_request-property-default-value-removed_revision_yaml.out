@@ -11,7 +11,7 @@
     column: 43
   fingerprint: b3245455f4a2
 - id: request-property-min-unset
-  text: 'the `status/oneOf[subschema #3]/` request property''s min was unset from `7.00`'
+  text: 'the `status/oneOf[subschema #3]` request property''s min was unset from `7.00`'
   level: 1
   operation: POST
   operationId: post_pets
@@ -21,9 +21,9 @@
     file: ./properties/rules/request-property-default-value-removed_base.yaml
     line: 68
     column: 43
-  fingerprint: fc50a0b2b3e9
+  fingerprint: 47f8c0d43e4a
 - id: request-property-reactivated
-  text: 'request property `status/oneOf[subschema #3]/` reactivated'
+  text: 'request property `status/oneOf[subschema #3]` reactivated'
   level: 1
   operation: POST
   operationId: post_pets
@@ -33,9 +33,9 @@
     file: ./properties/rules/request-property-default-value-removed_base.yaml
     line: 66
     column: 43
-  fingerprint: 91de1f54b82a
+  fingerprint: 24938ec4e271
 - id: request-property-type-generalized
-  text: 'the `status/oneOf[subschema #3]/` request property `type/format` was widened from `integer, null/int64` to `any`'
+  text: 'the `status/oneOf[subschema #3]` request property `type/format` was widened from `integer, null/int64` to `any`'
   level: 1
   operation: POST
   operationId: post_pets
@@ -45,5 +45,5 @@
     file: ./properties/rules/request-property-default-value-removed_base.yaml
     line: 69
     column: 43
-  fingerprint: 5a1c0933656d
+  fingerprint: b4bf57e239ba
 

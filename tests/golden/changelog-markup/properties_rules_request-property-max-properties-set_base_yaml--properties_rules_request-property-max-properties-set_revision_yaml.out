@@ -4,8 +4,8 @@
 ## API Changes
 
 ### PUT /ünïcode/ключ
-- :warning: the `items/` request property's maxProperties was set to `7`
-- :warning: the `items/` request property `type` changed from `string` to `object`
+- :warning: the `items` request property's maxProperties was set to `7`
+- :warning: the `items` request property `type` changed from `string` to `object`
 
 
 

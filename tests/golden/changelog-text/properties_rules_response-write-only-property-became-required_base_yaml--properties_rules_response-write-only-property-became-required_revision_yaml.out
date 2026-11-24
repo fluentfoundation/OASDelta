@@ -1,17 +1,17 @@
 19 changes: 2 error, 2 warning, 15 info
 error	[api-removed-without-deprecation] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API PUT /owners/{ownerId}/pets
-		api removed without deprecation
+		API removed without deprecation
 
 error	[request-property-became-required] at ./properties/rules/response-write-only-property-became-required_revision.yaml
 	in API POST /pets/{petId}
 		the request property `items/Ünïcode/price` became required
 
-warning	[request-property-removed] at ./properties/rules/response-write-only-property-became-required_revision.yaml
+warning	[request-property-removed] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API POST /pets/{petId}
 		removed the request property `items/Ünïcode/price/%20`
 
-warning	[request-property-removed] at ./properties/rules/response-write-only-property-became-required_revision.yaml
+warning	[request-property-removed] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API POST /pets/{petId}
 		removed the request property `items/Ünïcode/price/&anchor`
 
@@ -19,7 +19,7 @@ info	[request-optional-property-became-write-only] at ./properties/rules/respons
 	in API POST /pets/{petId}
 		the request optional property `items/Ünïcode/price` became write-only
 
-info	[request-property-removed-with-deprecation] at ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[request-property-removed-with-deprecation] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API POST /pets/{petId}
 		removed the deprecated request property `items/Ünïcode/price/id`
 
@@ -50,27 +50,27 @@ info	[response-property-type-changed] at ./properties/rules/response-write-only-
 		the `price` response's property `type` changed from `object` to `string` for status `204` (media type: application/json; charset=utf-8)
 		The property is write-only, so it never appears in responses and this change cannot invalidate one.
 
-info	[response-required-property-removed-with-deprecation] at ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-property-removed-with-deprecation] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API POST /pets/{petId}
 		removed the deprecated required property `no/items/price/id` from the response with the `204` status (media type: application/xml)
 
-info	[response-required-property-removed-with-deprecation] at ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-property-removed-with-deprecation] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API POST /pets/{petId}
 		removed the deprecated required property `price/id` from the response with the `204` status (media type: application/json; charset=utf-8)
 
-info	[response-required-write-only-property-removed] at ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-write-only-property-removed] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API POST /pets/{petId}
 		removed the required write-only property `no/items/price/%20` from the response with the `204` status (media type: application/xml)
 
-info	[response-required-write-only-property-removed] at ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-write-only-property-removed] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API POST /pets/{petId}
 		removed the required write-only property `no/items/price/&anchor` from the response with the `204` status (media type: application/xml)
 
-info	[response-required-write-only-property-removed] at ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-write-only-property-removed] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API POST /pets/{petId}
 		removed the required write-only property `price/%20` from the response with the `204` status (media type: application/json; charset=utf-8)
 
-info	[response-required-write-only-property-removed] at ./properties/rules/response-write-only-property-became-required_revision.yaml
+info	[response-required-write-only-property-removed] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API POST /pets/{petId}
 		removed the required write-only property `price/&anchor` from the response with the `204` status (media type: application/json; charset=utf-8)
 

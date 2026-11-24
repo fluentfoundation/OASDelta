@@ -6,20 +6,11 @@
   section: paths
   baseSource:
     file: ./properties/rules/response-header-max-increased_base.yaml
-    line: 26
-    column: 9
-    endLine: 102
-    endColumn: 46
+    line: 94
+    column: 33
   revisionSource:
     file: ./properties/rules/response-header-max-increased_revision.yaml
-    line: 26
-    column: 9
-    endLine: 102
-    endColumn: 46
+    line: 94
+    column: 33
   fingerprint: 3c5b616f702c
-- id: api-version-not-bumped
-  text: a breaking change was detected but the version is still `1.0.0`
-  level: 1
-  section: info
-  fingerprint: d3f96cd643c1
 

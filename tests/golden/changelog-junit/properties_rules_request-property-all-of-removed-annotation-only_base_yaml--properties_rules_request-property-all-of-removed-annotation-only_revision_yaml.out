@@ -2,7 +2,7 @@
 <testsuites>
   <testsuite package="com.oasdiff" time="0" tests="1" errors="0" failures="1" name="OASDiff">
     <testcase name="request-property-all-of-removed-annotation-only" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">removed annotation-only `subschema #1` from the `a: b/oneOf[subschema #3]/` request property `allOf` list</failure>
+      <failure message="Breaking change detected">removed annotation-only `subschema #1` from the `a: b/oneOf[subschema #3]` request property `allOf` list</failure>
     </testcase>
   </testsuite>
 </testsuites>

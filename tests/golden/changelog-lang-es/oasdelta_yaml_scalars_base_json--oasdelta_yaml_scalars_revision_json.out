@@ -1,2 +1,6 @@
-No changes to report, but the specs are different.
-Run 'oasdiff diff' to see structural differences.
+1 cambios: 0 error, 0 warning, 1 info
+info	[api-version-changed] en ./oasdelta/yaml_scalars_base.json
+	en info
+		la versión de la API cambió de `1.0.0` a `1.0.1`
+
+

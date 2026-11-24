@@ -2,7 +2,7 @@
 error	[request-parameter-max-properties-set] в ./properties/rules/request-parameter-max-properties-set_revision.yaml
 	в API GET /v1/items
 		в `cookie` параметре запроса `ключ` задано значение maxProperties в `1`
-		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+		Установка ограничения отклоняет значения, которые принимал прежний контракт, если только клиенты не укладываются в новое ограничение.
 
 error	[request-parameter-type-changed] в ./properties/rules/request-parameter-max-properties-set_revision.yaml
 	в API GET /v1/items

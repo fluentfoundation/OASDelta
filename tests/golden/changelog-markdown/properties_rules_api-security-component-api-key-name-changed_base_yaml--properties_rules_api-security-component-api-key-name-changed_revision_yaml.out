@@ -3,7 +3,7 @@
 
 
 ## Components
-- :warning: the component security scheme `api_key` api key name changed from `owner` to `status`
+- :warning: the component security scheme `api_key` API key name changed from `owner` to `status`
 
 
 

@@ -1,5 +1,5 @@
 - id: request-property-deprecated-sunset-invalid
-  text: 'request property `invalid` deprecated with invalid sunset date: `sunset date doesn''t conform with RFC3339: not a date`'
+  text: 'request property `invalid` deprecated with a sunset date that doesn''t conform with RFC3339: `"not a date"`'
   level: 3
   operation: POST
   path: /r
@@ -7,8 +7,8 @@
   revisionSource:
     file: ./properties/lifecycle_properties_revision.yaml
     line: 14
-    column: 41
-  fingerprint: 618799ae5c32
+    column: 59
+  fingerprint: cdc4aff28691
 - id: request-property-removed-before-sunset
   text: removed the request property `removed` before the sunset date `2099-12-31`
   level: 3
@@ -46,10 +46,10 @@
   revisionSource:
     file: ./properties/lifecycle_properties_revision.yaml
     line: 19
-    column: 43
+    column: 61
   fingerprint: 23b2b7f9aab3
 - id: response-property-deprecated-sunset-invalid
-  text: 'response property `invalid` deprecated with invalid sunset date: `sunset date doesn''t conform with RFC3339: not a date`'
+  text: 'response property `invalid` deprecated with a sunset date that doesn''t conform with RFC3339: `"not a date"`'
   level: 3
   operation: POST
   path: /r
@@ -57,8 +57,8 @@
   revisionSource:
     file: ./properties/lifecycle_properties_revision.yaml
     line: 29
-    column: 43
-  fingerprint: 540d682e88e1
+    column: 61
+  fingerprint: e748ab9f3908
 - id: response-property-stability-decreased
   text: response property `decreased` stability level decreased from `stable` to `beta`
   level: 3

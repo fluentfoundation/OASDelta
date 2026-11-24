@@ -7,12 +7,12 @@ error	[new-request-path-parameter] en ./properties/rules/request-property-min-it
 	en API DELETE /pets/{petId}
 		agregado nuevo parámetro de ruta de solicitud `id`
 
-warning	[request-parameter-removed] en ./properties/rules/request-property-min-items-increased_revision.yaml
+warning	[request-parameter-removed] en ./properties/rules/request-property-min-items-increased_base.yaml
 	en API DELETE /pets/{petId}
 		eliminado el parámetro `header` de solicitud `id`
 		Esto es una advertencia porque algunas aplicaciones pueden devolver un error al recibir un parámetro que no esperan. Se recomienda deprecar el parámetro primero.
 
-warning	[request-parameter-removed] en ./properties/rules/request-property-min-items-increased_revision.yaml
+warning	[request-parameter-removed] en ./properties/rules/request-property-min-items-increased_base.yaml
 	en API PATCH /pets/{petId}
 		eliminado el parámetro `path` de solicitud `petId`
 		Esto es una advertencia porque algunas aplicaciones pueden devolver un error al recibir un parámetro que no esperan. Se recomienda deprecar el parámetro primero.

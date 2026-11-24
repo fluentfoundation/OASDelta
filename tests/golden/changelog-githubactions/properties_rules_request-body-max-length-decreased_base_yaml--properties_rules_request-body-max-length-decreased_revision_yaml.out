@@ -1,4 +1,3 @@
 ::error title=request-body-max-length-decreased,file=./properties/rules/request-body-max-length-decreased_revision.yaml,line=104,col=29::in API POST /owners/{ownerId}/pets the request's body maxLength was decreased to `37`
-::notice title=api-version-not-bumped::in API   a breaking change was detected but the version is still `1.0.0`
 ::notice title=endpoint-deprecated,file=./properties/rules/request-body-max-length-decreased_revision.yaml,line=72,col=13::in API POST /owners/{ownerId}/pets endpoint deprecated
 

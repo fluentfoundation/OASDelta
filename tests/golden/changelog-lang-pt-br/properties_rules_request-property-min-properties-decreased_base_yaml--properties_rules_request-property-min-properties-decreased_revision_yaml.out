@@ -1,11 +1,7 @@
-5 alterações: 1 error, 0 warning, 4 info
+4 alterações: 1 error, 0 warning, 3 info
 error	[response-property-min-properties-decreased] em ./properties/rules/request-property-min-properties-decreased_revision.yaml
 	em API PUT /store/order
-		o número mínimo de propriedades da propriedade de resposta `items/` foi reduzido de `3` para `1` para o status `default`
-
-info	[api-version-not-bumped]
-	em info
-		uma mudança incompatível foi detectada mas a versão continua sendo `1.0.0`
+		o número mínimo de propriedades da propriedade de resposta `items` foi reduzido de `3` para `1` para o status `default`
 
 info	[request-property-min-properties-decreased] em ./properties/rules/request-property-min-properties-decreased_revision.yaml
 	em API PUT /pets

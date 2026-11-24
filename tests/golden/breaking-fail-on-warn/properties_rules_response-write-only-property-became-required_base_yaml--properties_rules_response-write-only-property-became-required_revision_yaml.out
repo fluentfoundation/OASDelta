@@ -1,17 +1,17 @@
 4 changes: 2 error, 2 warning, 0 info
 error	[api-removed-without-deprecation] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API PUT /owners/{ownerId}/pets
-		api removed without deprecation
+		API removed without deprecation
 
 error	[request-property-became-required] at ./properties/rules/response-write-only-property-became-required_revision.yaml
 	in API POST /pets/{petId}
 		the request property `items/Ünïcode/price` became required
 
-warning	[request-property-removed] at ./properties/rules/response-write-only-property-became-required_revision.yaml
+warning	[request-property-removed] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API POST /pets/{petId}
 		removed the request property `items/Ünïcode/price/%20`
 
-warning	[request-property-removed] at ./properties/rules/response-write-only-property-became-required_revision.yaml
+warning	[request-property-removed] at ./properties/rules/response-write-only-property-became-required_base.yaml
 	in API POST /pets/{petId}
 		removed the request property `items/Ünïcode/price/&anchor`
 

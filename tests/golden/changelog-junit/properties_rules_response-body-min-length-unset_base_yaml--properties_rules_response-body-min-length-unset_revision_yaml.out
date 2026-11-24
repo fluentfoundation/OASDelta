@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite package="com.oasdiff" time="0" tests="3" errors="0" failures="3" name="OASDiff">
+  <testsuite package="com.oasdiff" time="0" tests="2" errors="0" failures="2" name="OASDiff">
     <testcase name="response-body-min-length-unset" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the response's body minLength was unset from `2`</failure>
     </testcase>
     <testcase name="response-body-type-changed" classname="OASDiff" time="0">
       <failure message="Breaking change detected">the response's body `type/format` changed from `string/date` to `number` for status `200`</failure>
-    </testcase>
-    <testcase name="api-version-not-bumped" classname="OASDiff" time="0">
-      <failure message="Breaking change detected">a breaking change was detected but the version is still `1.0.0`</failure>
     </testcase>
   </testsuite>
 </testsuites>

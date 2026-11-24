@@ -1,10 +1,6 @@
-2 cambios: 1 error, 0 warning, 1 info
-error	[response-property-max-unset] en ./properties/rules/response-property-max-unset_revision.yaml
+1 cambios: 1 error, 0 warning, 0 info
+error	[response-property-max-unset] en ./properties/rules/response-property-max-unset_base.yaml
 	en API POST /ünïcode/ключ
 		el valor max de la propiedad de respuesta `pet/ leading` fue removido de `145.00` para el estado `500`
-
-info	[api-version-not-bumped]
-	en info
-		se detectó un cambio incompatible pero la versión sigue siendo `1.0.0`
 
 

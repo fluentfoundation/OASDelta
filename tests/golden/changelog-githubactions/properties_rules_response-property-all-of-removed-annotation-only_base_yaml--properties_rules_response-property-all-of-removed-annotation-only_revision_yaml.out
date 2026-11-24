@@ -1,2 +1,2 @@
-::notice title=response-property-all-of-removed-annotation-only,file=./properties/rules/response-property-all-of-removed-annotation-only_revision.yaml::in API PATCH /store/order removed annotation-only `subschema #1` from the `items/` response property `allOf` list for the response status `201`
+::notice title=response-property-all-of-removed-annotation-only,file=./properties/rules/response-property-all-of-removed-annotation-only_base.yaml::in API PATCH /store/order removed annotation-only `subschema #1` from the `items` response property `allOf` list for the response status `201`
 

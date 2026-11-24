@@ -1,2 +1,2 @@
-::notice title=response-property-type-compatible,file=./properties/rules/response-property-type-compatible_revision.yaml::in API PUT /ünïcode/ключ the `additionalProperties/` response's property `type` changed from `string` to `integer` for status `400` (backward compatible)
+::notice title=response-property-type-compatible,file=./properties/rules/response-property-type-compatible_revision.yaml,line=50,col=21::in API PUT /ünïcode/ключ the `additionalProperties` response's property `type` changed from `string` to `integer` for status `400` (backward compatible)
 

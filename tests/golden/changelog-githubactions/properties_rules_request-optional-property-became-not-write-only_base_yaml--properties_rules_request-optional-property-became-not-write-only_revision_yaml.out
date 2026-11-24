@@ -1,2 +1,2 @@
-::notice title=request-optional-property-became-not-write-only,file=./properties/rules/request-optional-property-became-not-write-only_revision.yaml::in API POST /items/{id}.json the request optional property `㸢` became not write-only
+::notice title=request-optional-property-became-not-write-only,file=./properties/rules/request-optional-property-became-not-write-only_base.yaml::in API POST /items/{id}.json the request optional property `㸢` became not write-only
 

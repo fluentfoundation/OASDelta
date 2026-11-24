@@ -5,5 +5,9 @@
   operationId: patch_owners_{ownerId}_pets
   path: /owners/{ownerId}/pets
   section: paths
+  revisionSource:
+    file: ./properties/rules/response-body-max-set_revision.json
+    line: 82
+    column: 19
   fingerprint: 92b8b76f7072
 

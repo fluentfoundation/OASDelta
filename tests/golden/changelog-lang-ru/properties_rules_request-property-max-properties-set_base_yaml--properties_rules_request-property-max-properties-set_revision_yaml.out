@@ -1,11 +1,11 @@
 2 изменений: 2 error, 0 warning, 0 info
 error	[request-property-max-properties-set] в ./properties/rules/request-property-max-properties-set_revision.yaml
 	в API PUT /ünïcode/ключ
-		значение maxProperties у поля запроса `items/` задано в `7`
-		Установка ограничения отклоняет значения, которые принимал прежний контракт. Если известно, что клиенты укладываются в новое ограничение, понизьте уровень этой проверки с помощью --severity-levels.
+		значение maxProperties у поля запроса `items` задано в `7`
+		Установка ограничения отклоняет значения, которые принимал прежний контракт, если только клиенты не укладываются в новое ограничение.
 
 error	[request-property-type-changed] в ./properties/rules/request-property-max-properties-set_revision.yaml
 	в API PUT /ünïcode/ключ
-		у поля запроса `items/` `type` изменён с `string` на `object`
+		у поля запроса `items` `type` изменён с `string` на `object`
 
 

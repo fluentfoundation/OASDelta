@@ -1,6 +1,6 @@
 1 changes: 1 error, 0 warning, 0 info
-error	[request-parameter-property-type-specialized] at ./properties/rules/response-property-min-items-set_revision.yaml
+error	[request-parameter-property-type-specialized]
 	in API DELETE /pets
-		for the `query` request parameter `tag`, the `format` of property `items/` was narrowed from `none` to `email`
+		for the `query` request parameter `tag`, the `format` of property `items` was narrowed from `none` to `email`
 
 

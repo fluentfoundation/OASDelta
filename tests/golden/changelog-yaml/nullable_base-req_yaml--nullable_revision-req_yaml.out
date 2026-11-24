@@ -8,5 +8,11 @@
     file: ./nullable/base-req.yaml
     line: 16
     column: 19
+  revisionSource:
+    file: ./nullable/revision-req.yaml
+    line: 14
+    column: 17
+    endLine: 15
+    endColumn: 31
   fingerprint: 687e28ef941c
 

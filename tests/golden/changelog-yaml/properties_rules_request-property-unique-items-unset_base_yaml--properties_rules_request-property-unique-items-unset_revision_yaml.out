@@ -1,5 +1,5 @@
 - id: request-property-unique-items-unset
-  text: the `items/` request property's uniqueItems was unset
+  text: the `items` request property's uniqueItems was unset
   level: 1
   operation: PUT
   operationId: put_store_order
@@ -9,5 +9,5 @@
     file: ./properties/rules/request-property-unique-items-unset_base.yaml
     line: 81
     column: 33
-  fingerprint: 06293878f020
+  fingerprint: d4e11b6fafb3
 

@@ -19,19 +19,19 @@ info	[response-optional-property-added] at ./checker/response_property_discrimin
 	in API POST /pets
 		added the optional property `oneOf[#/components/schemas/Dog]/petType2` to the response with the `200` status
 
-info	[response-optional-property-removed] at ./checker/response_property_discriminator_added_property_name_changed.yaml
+info	[response-optional-property-removed] at ./checker/response_property_discriminator_added_revision.yaml
 	in API POST /pets
 		removed the optional property `oneOf[#/components/schemas/Cat]/petType` from the response with the `200` status
 
-info	[response-optional-property-removed] at ./checker/response_property_discriminator_added_property_name_changed.yaml
+info	[response-optional-property-removed] at ./checker/response_property_discriminator_added_revision.yaml
 	in API POST /pets
 		removed the optional property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed1]/name` from the response with the `200` status
 
-info	[response-optional-property-removed] at ./checker/response_property_discriminator_added_property_name_changed.yaml
+info	[response-optional-property-removed] at ./checker/response_property_discriminator_added_revision.yaml
 	in API POST /pets
 		removed the optional property `oneOf[#/components/schemas/Dog]/breed/oneOf[#/components/schemas/Breed2]/name` from the response with the `200` status
 
-info	[response-optional-property-removed] at ./checker/response_property_discriminator_added_property_name_changed.yaml
+info	[response-optional-property-removed] at ./checker/response_property_discriminator_added_revision.yaml
 	in API POST /pets
 		removed the optional property `oneOf[#/components/schemas/Dog]/petType` from the response with the `200` status
 

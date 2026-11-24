@@ -6,15 +6,11 @@
   section: paths
   baseSource:
     file: ./properties/rules/response-header-exclusive-min-decreased_base.yaml
-    line: 42
-    column: 9
-    endLine: 118
-    endColumn: 24
+    line: 102
+    column: 33
   revisionSource:
     file: ./properties/rules/response-header-exclusive-min-decreased_revision.yaml
-    line: 42
-    column: 9
-    endLine: 118
-    endColumn: 24
+    line: 102
+    column: 33
   fingerprint: 12e284e9d8a7
 

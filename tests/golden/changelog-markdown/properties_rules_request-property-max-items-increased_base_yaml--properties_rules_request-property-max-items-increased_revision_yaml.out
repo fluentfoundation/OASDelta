@@ -5,7 +5,7 @@
 
 ### POST /store/order
 -  added the new optional request property `items/ключ`
--  the `items/` request property's maxItems was increased from `50` to `53`
+-  the `items` request property's maxItems was increased from `50` to `53`
 
 
 

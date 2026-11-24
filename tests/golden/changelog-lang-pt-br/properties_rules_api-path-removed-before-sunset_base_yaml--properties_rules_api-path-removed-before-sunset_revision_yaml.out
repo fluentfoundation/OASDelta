@@ -1,11 +1,11 @@
 6 alterações: 2 error, 0 warning, 4 info
 error	[api-path-removed-without-deprecation] em ./properties/rules/api-path-removed-before-sunset_base.yaml
 	em API GET /pets/{petId}/v2
-		caminho da api removido sem depreciação
+		caminho da API removido sem depreciação
 
 error	[api-path-removed-before-sunset] em ./properties/rules/api-path-removed-before-sunset_base.yaml
 	em API POST /pets/{petId}/v2
-		caminho da api removido antes da data de expiração `2099-12-31`
+		caminho da API removido antes da data de expiração `2099-12-31`
 
 info	[endpoint-added] em ./properties/rules/api-path-removed-before-sunset_revision.yaml
 	em API DELETE /pets/{petId}
@@ -21,6 +21,6 @@ info	[endpoint-added] em ./properties/rules/api-path-removed-before-sunset_revis
 
 info	[api-path-removed-with-deprecation] em ./properties/rules/api-path-removed-before-sunset_base.yaml
 	em API DELETE /pets/{petId}/v2
-		caminho da api removido com depreciação
+		caminho da API removido com depreciação
 
 

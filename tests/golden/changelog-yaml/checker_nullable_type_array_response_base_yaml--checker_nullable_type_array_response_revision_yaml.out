@@ -4,5 +4,13 @@
   operation: GET
   path: /t
   section: paths
+  baseSource:
+    file: ./checker/nullable_type_array_response_base.yaml
+    line: 15
+    column: 36
+  revisionSource:
+    file: ./checker/nullable_type_array_response_revision.yaml
+    line: 15
+    column: 21
   fingerprint: 15b32f834b55
 

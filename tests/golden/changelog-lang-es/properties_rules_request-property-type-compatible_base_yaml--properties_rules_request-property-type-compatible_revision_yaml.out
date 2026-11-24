@@ -1,26 +1,26 @@
 7 cambios: 1 error, 5 warning, 1 info
-error	[request-body-media-type-removed] en ./properties/rules/request-property-type-compatible_revision.yaml
+error	[request-body-media-type-removed] en ./properties/rules/request-property-type-compatible_base.yaml
 	en API POST /pets/{petId}
 		removido el tipo de media `application/xml` del cuerpo de solicitud
 
-warning	[request-property-removed] en ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] en ./properties/rules/request-property-type-compatible_base.yaml
 	en API POST /pets/{petId}
 		removida la propiedad de solicitud `'single'`
 
-warning	[request-property-removed] en ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] en ./properties/rules/request-property-type-compatible_base.yaml
 	en API POST /pets/{petId}
 		removida la propiedad de solicitud `id/no`
 
-warning	[request-property-removed] en ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] en ./properties/rules/request-property-type-compatible_base.yaml
 	en API POST /pets/{petId}
 		removida la propiedad de solicitud `id/tag`
 
-warning	[request-property-removed] en ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] en ./properties/rules/request-property-type-compatible_base.yaml
 	en API POST /pets/{petId}
 		removida la propiedad de solicitud `line1
 line2`
 
-warning	[request-property-removed] en ./properties/rules/request-property-type-compatible_revision.yaml
+warning	[request-property-removed] en ./properties/rules/request-property-type-compatible_base.yaml
 	en API POST /pets/{petId}
 		removida la propiedad de solicitud `pet`
 

@@ -4,7 +4,7 @@
 ## API Changes
 
 ### GET /api/test
--  api operation id `x` removed and replaced with ``
+-  API operation id `x` removed and replaced with ``
 
 
 

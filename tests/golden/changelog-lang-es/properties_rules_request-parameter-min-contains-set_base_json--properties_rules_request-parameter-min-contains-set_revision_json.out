@@ -2,6 +2,6 @@
 error	[request-parameter-min-contains-set] en ./properties/rules/request-parameter-min-contains-set_revision.json
 	en API POST /items/{id}.json
 		para el parámetro `header` de solicitud `~`, el valor minContains fue establecido en `3`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 

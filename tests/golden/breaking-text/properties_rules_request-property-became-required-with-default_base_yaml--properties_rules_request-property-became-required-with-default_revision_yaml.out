@@ -2,6 +2,6 @@
 error	[request-property-became-required-with-default] at ./properties/rules/request-property-became-required-with-default_revision.yaml
 	in API PUT /pets
 		the request property `created` with a default value became required
-		A request that omits this required property is invalid under the new contract, even though the property has a default. The default is a server-side fallback, it does not make the omitted property valid. Downgrade this check with --severity-levels if omitting the property is safe for your clients.
+		A request that omits this required property is invalid under the new contract, even though the property has a default. The default is a server-side fallback, it does not make the omitted property valid.
 
 

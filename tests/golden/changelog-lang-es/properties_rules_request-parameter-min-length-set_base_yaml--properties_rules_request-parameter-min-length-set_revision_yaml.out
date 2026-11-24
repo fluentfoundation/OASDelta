@@ -2,6 +2,6 @@
 error	[request-parameter-min-length-set] en ./properties/rules/request-parameter-min-length-set_revision.yaml
 	en API PATCH /v1/items
 		para el parámetro `query` de solicitud `price`, el valor minLength fue establecido en `18`
-		Establecer un límite rechaza valores que el contrato anterior aceptaba. Si sabe que sus clientes se mantienen dentro del nuevo límite, reduzca la severidad de esta verificación con --severity-levels.
+		Establecer un límite rechaza valores que el contrato anterior aceptaba, salvo que sus clientes se mantengan dentro del nuevo límite.
 
 
